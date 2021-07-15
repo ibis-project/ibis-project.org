@@ -1,0 +1,6 @@
+﻿ibis.expr.api.Expr.execute
+==========================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: Expr.execute

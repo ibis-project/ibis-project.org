@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.simplify
+======================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.simplify

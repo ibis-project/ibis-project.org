@@ -1,0 +1,6 @@
+﻿ibis.trailing\_window
+=====================
+
+.. currentmodule:: ibis
+
+.. autofunction:: trailing_window

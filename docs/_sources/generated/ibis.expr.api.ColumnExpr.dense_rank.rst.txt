@@ -1,0 +1,6 @@
+﻿ibis.expr.api.ColumnExpr.dense\_rank
+====================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: ColumnExpr.dense_rank

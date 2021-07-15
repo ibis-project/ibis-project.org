@@ -1,0 +1,6 @@
+﻿ibis.backends.mysql.Backend.connect
+===================================
+
+.. currentmodule:: ibis.backends.mysql
+
+.. automethod:: Backend.connect

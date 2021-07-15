@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.x\_min
+====================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.x_min

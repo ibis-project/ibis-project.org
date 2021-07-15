@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.is\_valid
+=======================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.is_valid

@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GroupedTableExpr.aggregate
+========================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GroupedTableExpr.aggregate

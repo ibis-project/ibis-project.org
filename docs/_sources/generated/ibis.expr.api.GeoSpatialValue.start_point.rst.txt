@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.start\_point
+==========================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.start_point

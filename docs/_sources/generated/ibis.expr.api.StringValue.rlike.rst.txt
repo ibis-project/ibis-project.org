@@ -1,0 +1,6 @@
+﻿ibis.expr.api.StringValue.rlike
+===============================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: StringValue.rlike

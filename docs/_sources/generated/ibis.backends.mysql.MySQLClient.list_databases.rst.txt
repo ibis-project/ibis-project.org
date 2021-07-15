@@ -1,0 +1,6 @@
+﻿ibis.backends.mysql.MySQLClient.list\_databases
+===============================================
+
+.. currentmodule:: ibis.backends.mysql
+
+.. automethod:: MySQLClient.list_databases

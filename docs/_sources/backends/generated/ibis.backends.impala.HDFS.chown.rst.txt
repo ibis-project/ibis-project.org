@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.HDFS.chown
+===============================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: HDFS.chown

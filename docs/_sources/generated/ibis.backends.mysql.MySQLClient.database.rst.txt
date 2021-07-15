@@ -1,0 +1,6 @@
+﻿ibis.backends.mysql.MySQLClient.database
+========================================
+
+.. currentmodule:: ibis.backends.mysql
+
+.. automethod:: MySQLClient.database

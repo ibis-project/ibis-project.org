@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.geometry\_type
+============================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.geometry_type

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Ibis: Python data analysis productivity framework</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='shortcut icon' type='image/x-icon' href='/static/img/favicon.ico'/>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        
+            <link rel="stylesheet"
+                  href="/static/css/ibis.css">
+        
+            <link rel="stylesheet"
+                  href="/static/css/codehilite.css">
+        
+        <script src="https://kit.fontawesome.com/79e5369384.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    
+                        <a class="navbar-brand" href="/">
+                            
+                                <img alt="" src="/static/img/logo_ibis.svg" class="header-logo"/>
+                            
+                            
+                                <span class="header-title">Ibis</span>
+                            
+                        </a>
+                    
+
+                    
+                        <div class="collapse navbar-collapse" id="nav-content">   
+                            <ul class="navbar-nav ml-auto">
+                                
+                                    
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle"
+                                               data-toggle="dropdown"
+                                               id="About us"
+                                               href="#"
+                                               role="button"
+                                               aria-haspopup="true"
+                                               aria-expanded="false">About us</a>
+                                            <div class="dropdown-menu" aria-labelledby="About us">
+                                            
+                                                <a class="dropdown-item" href="/about/index.html">About Ibis</a>
+                                            
+                                                <a class="dropdown-item" href="/about/team.html">Team</a>
+                                            
+                                                <a class="dropdown-item" href="/about/roadmap.html">Roadmap</a>
+                                            
+                                                <a class="dropdown-item" href="/about/license.html">License</a>
+                                            
+                                            </div>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/getting_started.html">Getting started</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/docs/">Documentation</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle"
+                                               data-toggle="dropdown"
+                                               id="Community"
+                                               href="#"
+                                               role="button"
+                                               aria-haspopup="true"
+                                               aria-expanded="false">Community</a>
+                                            <div class="dropdown-menu" aria-labelledby="Community">
+                                            
+                                                <a class="dropdown-item" href="https://stackoverflow.com/questions/tagged/ibis">Ask a question (StackOverflow)</a>
+                                            
+                                                <a class="dropdown-item" href="https://gitter.im/ibis-dev/Lobby">Chat (Gitter)</a>
+                                            
+                                                <a class="dropdown-item" href="/community/coc.html">Code of conduct</a>
+                                            
+                                                <a class="dropdown-item" href="/community/ecosystem.html">Ecosystem</a>
+                                            
+                                            </div>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/contribute.html">Contribute</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            <div class="container">
+                
+                               <h1 id="ibis-python-data-analysis-productivity-framework">Ibis: Python Data Analysis Productivity Framework</h1>
+<p>Ibis is a toolbox to bridge the gap between local Python environments (like
+pandas and scikit-learn) and remote storage and execution systems like Hadoop
+components (like HDFS, Impala, Hive, Spark) and SQL databases (Postgres,
+etc.). Its goal is to simplify analytical workflows and make you more
+productive.</p>
+<p>We have a handful of specific priority focus areas:</p>
+<ul>
+<li>Enable data analysts to translate local, single-node data idioms to scalable
+  computation representations (e.g. SQL or Spark)</li>
+<li>Integration with pandas and other Python data ecosystem components</li>
+<li>Provide high level analytics APIs and workflow tools to enhance productivity
+  and streamline common or tedious tasks.</li>
+<li>Integration with community standard data formats (e.g. Parquet and Avro)</li>
+<li>Abstract away database-specific SQL differences</li>
+</ul>
+<p>As the <a href="http://arrow.apache.org/">Apache Arrow</a> project develops, we will
+look to use Arrow to enable computational code written in Python to be executed
+natively within other systems like Apache Spark and Apache Impala (incubating).</p>
+<p>Source code is on GitHub: <a href="https://github.com/ibis-project/ibis">https://github.com/ibis-project/ibis</a>.</p>
+                               
+            </div>
+        </main>
+        <footer class="container pt-4 pt-md-5 border-top">
+            
+                <ul class="list-inline social-buttons float-right">
+                    
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/IbisData" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item">
+                            <a href="https://github.com/ibis-project/ibis/" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                    
+                </ul>
+            
+            
+                <p>© Copyright 2020, Ibis developers</p>
+            
+        </footer>
+                
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+    </body>
+</html>

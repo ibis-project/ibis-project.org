@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Ibis: Python data analysis productivity framework</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='shortcut icon' type='image/x-icon' href='/static/img/favicon.ico'/>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        
+            <link rel="stylesheet"
+                  href="/static/css/ibis.css">
+        
+            <link rel="stylesheet"
+                  href="/static/css/codehilite.css">
+        
+        <script src="https://kit.fontawesome.com/79e5369384.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    
+                        <a class="navbar-brand" href="/">
+                            
+                                <img alt="" src="/static/img/logo_ibis.svg" class="header-logo"/>
+                            
+                            
+                                <span class="header-title">Ibis</span>
+                            
+                        </a>
+                    
+
+                    
+                        <div class="collapse navbar-collapse" id="nav-content">   
+                            <ul class="navbar-nav ml-auto">
+                                
+                                    
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle"
+                                               data-toggle="dropdown"
+                                               id="About us"
+                                               href="#"
+                                               role="button"
+                                               aria-haspopup="true"
+                                               aria-expanded="false">About us</a>
+                                            <div class="dropdown-menu" aria-labelledby="About us">
+                                            
+                                                <a class="dropdown-item" href="/about/index.html">About Ibis</a>
+                                            
+                                                <a class="dropdown-item" href="/about/team.html">Team</a>
+                                            
+                                                <a class="dropdown-item" href="/about/roadmap.html">Roadmap</a>
+                                            
+                                                <a class="dropdown-item" href="/about/license.html">License</a>
+                                            
+                                            </div>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/getting_started.html">Getting started</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/docs/">Documentation</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle"
+                                               data-toggle="dropdown"
+                                               id="Community"
+                                               href="#"
+                                               role="button"
+                                               aria-haspopup="true"
+                                               aria-expanded="false">Community</a>
+                                            <div class="dropdown-menu" aria-labelledby="Community">
+                                            
+                                                <a class="dropdown-item" href="https://stackoverflow.com/questions/tagged/ibis">Ask a question (StackOverflow)</a>
+                                            
+                                                <a class="dropdown-item" href="https://gitter.im/ibis-dev/Lobby">Chat (Gitter)</a>
+                                            
+                                                <a class="dropdown-item" href="/community/coc.html">Code of conduct</a>
+                                            
+                                                <a class="dropdown-item" href="/community/ecosystem.html">Ecosystem</a>
+                                            
+                                            </div>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/contribute.html">Contribute</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            <div class="container">
+                
+                               <div class="row">
+    <div class="col">
+        <section class="jumbotron text-center home-jumbotron">
+            <p>
+                Write your analytics code once, run it everywhere.
+            </p>
+        </section>
+    </div>
+</div>
+
+<h2 id="main-features">Main features</h2>
+<p>Ibis provides a standard way to write analytics code, that then can be run in
+multiple engines.</p>
+<ul>
+<li><strong>Full coverage of SQL features</strong>: You can code in Ibis anything you can implement in a SQL SELECT</li>
+<li><strong>Transparent to SQL implementation differences</strong>: Write standard code that translate to any SQL syntax</li>
+<li><strong>High performance execution</strong>: Execute at the speed of your backend, not your local computer</li>
+<li><strong>Integration with community data formats and tools</strong> (e.g. pandas, Parquet, Avro...)</li>
+</ul>
+<h2 id="supported-engines">Supported engines</h2>
+<ul>
+<li>Standard DBMS: <a href="/docs/backends/postgres.html">PostgreSQL</a>, <a href="/docs/backends/mysql.html">MySQL</a>, <a href="/docs/backends/sqlite.html">SQLite</a></li>
+<li>Analytical DBMS: <a href="/docs/backends/omnisci.html">OmniSciDB</a>, <a href="/docs/backends/clickhouse.html">ClickHouse</a></li>
+<li>Distributed platforms: <a href="/docs/backends/impala.html">Impala</a>, <a href="/docs/backends/spark.html">Spark</a>, <a href="/docs/backends/bigquery.html">BigQuery</a></li>
+<li>In memory execution: <a href="/docs/backends/pandas.html">pandas</a></li>
+</ul>
+<h2 id="example">Example</h2>
+<p>The next example is all the code you need to connect to a database with a
+countries database, and compute the number of citizens per squared kilometer in Asia:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">db</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;geography.db&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">countries</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;countries&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">asian_countries</span> <span class="o">=</span> <span class="n">countries</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">countries</span><span class="p">[</span><span class="s1">&#39;continent&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;AS&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">density_in_asia</span> <span class="o">=</span> <span class="n">asian_countries</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">asian_countries</span><span class="p">[</span><span class="s1">&#39;area_km2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">density_in_asia</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+<span class="mf">130.7019141926602</span>
+</code></pre></div>
+
+<p>Learn more about Ibis in <a href="/docs/tutorial/">our tutorial</a>.</p>
+<h2 id="comparison-to-other-tools">Comparison to other tools</h2>
+<h3 id="why-not-use-pandas">Why not use <a href="https://pandas.pydata.org/">pandas</a>?</h3>
+<p>pandas is great for many use cases. But pandas loads the data into the
+memory of the local host, and performs the computations on it.</p>
+<p>Ibis instead, leaves the data in its storage, and performs the computations
+there. This means that even if your data is distributed, or it requires
+GPU accelarated speed, Ibis code will be able to benefit from your storage
+capabilities.</p>
+<h3 id="why-not-use-sql">Why not use SQL?</h3>
+<p>SQL is widely used and very convenient when writing simple queries. But as
+the complexity of operations grow, SQL can become very difficult to deal with.</p>
+<p>With Ibis, you can take fully advantage of software engineering techniques to
+keep your code readable and maintainable, while writing very complex analytics
+code.</p>
+<h3 id="why-not-use-sqlalchemy">Why not use <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>?</h3>
+<p>SQLAlchemy is very convenient as an ORM (Object Relational Mapper), providing
+a Python interface to SQL databases. Ibis uses SQLAlchemy internally, but aims
+to provide a friendlier syntax for analytics code. And Ibis is also not limited
+to SQL databases, but also can connect to distributed platforms and in-memory
+representations.</p>
+<h3 id="why-not-use-dask">Why not use <a href="https://dask.org/">Dask</a>?</h3>
+<p>Dask provides advanced parallelism, and can distribute pandas jobs. Ibis can
+process data in a similar way, but for a different number of backends. For
+example, given a Spark cluster, Ibis allows to perform analytics using it,
+with a familiar Python syntax. Ibis plans to add support for a Dask backend
+in the future.</p>
+                               
+            </div>
+        </main>
+        <footer class="container pt-4 pt-md-5 border-top">
+            
+                <ul class="list-inline social-buttons float-right">
+                    
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/IbisData" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item">
+                            <a href="https://github.com/ibis-project/ibis/" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                    
+                </ul>
+            
+            
+                <p>© Copyright 2020, Ibis developers</p>
+            
+        </footer>
+                
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+    </body>
+</html>
