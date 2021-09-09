@@ -1,0 +1,6 @@
+﻿ibis.expr.api.StringValue.parse\_url
+====================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: StringValue.parse_url

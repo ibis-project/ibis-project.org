@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.envelope
+======================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.envelope

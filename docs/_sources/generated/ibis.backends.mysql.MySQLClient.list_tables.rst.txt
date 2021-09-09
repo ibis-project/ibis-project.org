@@ -1,0 +1,6 @@
+﻿ibis.backends.mysql.MySQLClient.list\_tables
+============================================
+
+.. currentmodule:: ibis.backends.mysql
+
+.. automethod:: MySQLClient.list_tables

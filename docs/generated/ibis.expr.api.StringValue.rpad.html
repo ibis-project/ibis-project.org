@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>ibis.expr.api.StringValue.rpad &mdash; Ibis 1.4.0+230.gad7f4fba.dirty documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ibis.expr.api.StringValue.rlike" href="ibis.expr.api.StringValue.rlike.html" />
+    <link rel="prev" title="ibis.expr.api.StringValue.lpad" href="ibis.expr.api.StringValue.lpad.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Ibis
+          
+
+          
+            
+            <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0+230.gad7f4fba.dirty
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api.html#top-level-expression-apis">Top-level expression APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#backend-methods">Backend methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#general-expression-methods">General expression methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#table-methods">Table methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#generic-value-methods">Generic value methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#general-numeric-methods">General numeric methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#integer-methods">Integer methods</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#string-methods">String methods</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.convert_base.html">ibis.expr.api.StringValue.convert_base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.length.html">ibis.expr.api.StringValue.length</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.lower.html">ibis.expr.api.StringValue.lower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.upper.html">ibis.expr.api.StringValue.upper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.reverse.html">ibis.expr.api.StringValue.reverse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.ascii_str.html">ibis.expr.api.StringValue.ascii_str</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.strip.html">ibis.expr.api.StringValue.strip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.lstrip.html">ibis.expr.api.StringValue.lstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.rstrip.html">ibis.expr.api.StringValue.rstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.capitalize.html">ibis.expr.api.StringValue.capitalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.contains.html">ibis.expr.api.StringValue.contains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.like.html">ibis.expr.api.StringValue.like</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.to_timestamp.html">ibis.expr.api.StringValue.to_timestamp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.parse_url.html">ibis.expr.api.StringValue.parse_url</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.substr.html">ibis.expr.api.StringValue.substr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.left.html">ibis.expr.api.StringValue.left</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.right.html">ibis.expr.api.StringValue.right</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.repeat.html">ibis.expr.api.StringValue.repeat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.find.html">ibis.expr.api.StringValue.find</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.translate.html">ibis.expr.api.StringValue.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.find_in_set.html">ibis.expr.api.StringValue.find_in_set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.join.html">ibis.expr.api.StringValue.join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.replace.html">ibis.expr.api.StringValue.replace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.lpad.html">ibis.expr.api.StringValue.lpad</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ibis.expr.api.StringValue.rpad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.rlike.html">ibis.expr.api.StringValue.rlike</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.re_search.html">ibis.expr.api.StringValue.re_search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.re_extract.html">ibis.expr.api.StringValue.re_extract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibis.expr.api.StringValue.re_replace.html">ibis.expr.api.StringValue.re_replace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#timestamp-methods">Timestamp methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#date-methods">Date methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#day-of-week-methods">Day of week methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#time-methods">Time methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#interval-methods">Interval methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#boolean-methods">Boolean methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#category-methods">Category methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#decimal-methods">Decimal methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#struct-methods">Struct methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#geospatial-methods">Geospatial methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../backends/index.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release/index.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Ibis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../api.html">API Reference</a> &raquo;</li>
+        
+      <li>ibis.expr.api.StringValue.rpad</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/generated/ibis.expr.api.StringValue.rpad.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="ibis-expr-api-stringvalue-rpad">
+<h1>ibis.expr.api.StringValue.rpad<a class="headerlink" href="#ibis-expr-api-stringvalue-rpad" title="Permalink to this headline">¶</a></h1>
+<dl class="py method">
+<dt class="sig sig-object py" id="ibis.expr.api.StringValue.rpad">
+<span class="sig-prename descclassname"><span class="pre">StringValue.</span></span><span class="sig-name descname"><span class="pre">rpad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.expr.api.StringValue.rpad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns string of given length by truncating (on right)
+or padding (on right) original string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – </p></li>
+<li><p><strong>pad</strong> (<em>string</em><em>, </em><em>default is ' '</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ibis</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;string_col&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">string_col</span><span class="o">.</span><span class="n">rpad</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rpad</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>  <span class="c1"># &#39;a&#39; becomes &#39;a----&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="s1">&#39;abcdefg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rpad</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>  <span class="c1"># &#39;abcdefg&#39; becomes &#39;abcde&#39;  # noqa: E501</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>padded</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="ibis.expr.api.StringValue.rlike.html" class="btn btn-neutral float-right" title="ibis.expr.api.StringValue.rlike" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ibis.expr.api.StringValue.lpad.html" class="btn btn-neutral float-left" title="ibis.expr.api.StringValue.lpad" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ibis Developers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65303298-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

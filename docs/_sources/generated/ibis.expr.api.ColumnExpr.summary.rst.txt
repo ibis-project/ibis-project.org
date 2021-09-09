@@ -1,0 +1,6 @@
+﻿ibis.expr.api.ColumnExpr.summary
+================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: ColumnExpr.summary

@@ -1,0 +1,6 @@
+﻿ibis.backends.base.BaseBackend.list\_tables
+===========================================
+
+.. currentmodule:: ibis.backends.base
+
+.. automethod:: BaseBackend.list_tables

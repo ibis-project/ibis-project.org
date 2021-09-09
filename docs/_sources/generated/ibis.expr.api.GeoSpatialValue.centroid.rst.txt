@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.centroid
+======================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.centroid

@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.length
+====================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.length

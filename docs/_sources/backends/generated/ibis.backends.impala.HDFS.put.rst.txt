@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.HDFS.put
+=============================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: HDFS.put

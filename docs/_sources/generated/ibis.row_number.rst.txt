@@ -1,0 +1,6 @@
+﻿ibis.row\_number
+================
+
+.. currentmodule:: ibis
+
+.. autofunction:: row_number

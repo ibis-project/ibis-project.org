@@ -1,0 +1,6 @@
+﻿ibis.expr.api.ColumnExpr.cummax
+===============================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: ColumnExpr.cummax

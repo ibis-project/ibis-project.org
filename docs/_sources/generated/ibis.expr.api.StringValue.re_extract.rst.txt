@@ -1,0 +1,6 @@
+﻿ibis.expr.api.StringValue.re\_extract
+=====================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: StringValue.re_extract

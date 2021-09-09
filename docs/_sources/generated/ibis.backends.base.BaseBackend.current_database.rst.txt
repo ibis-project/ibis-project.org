@@ -1,0 +1,6 @@
+﻿ibis.backends.base.BaseBackend.current\_database
+================================================
+
+.. currentmodule:: ibis.backends.base
+
+.. autoproperty:: BaseBackend.current_database

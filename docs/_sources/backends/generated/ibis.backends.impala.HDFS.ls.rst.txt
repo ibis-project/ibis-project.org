@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.HDFS.ls
+============================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: HDFS.ls

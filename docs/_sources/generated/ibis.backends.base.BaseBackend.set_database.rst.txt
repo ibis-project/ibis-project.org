@@ -1,0 +1,6 @@
+﻿ibis.backends.base.BaseBackend.set\_database
+============================================
+
+.. currentmodule:: ibis.backends.base
+
+.. automethod:: BaseBackend.set_database

@@ -1,0 +1,6 @@
+﻿ibis.expr.api.DecimalValue.precision
+====================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: DecimalValue.precision

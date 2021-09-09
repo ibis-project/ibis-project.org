@@ -1,0 +1,991 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Ibis and Geospatial Operations &mdash; Ibis 1.4.0+230.gad7f4fba.dirty documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Design" href="design.html" />
+    <link rel="prev" title="User Defined Functions" href="udf.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Ibis
+          
+
+          
+            
+            <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0+230.gad7f4fba.dirty
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Configuring Ibis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sql.html">Ibis for SQL Programmers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topk.html">“Top-K” Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="self_joins.html">Self joins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udf.html">User Defined Functions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Ibis and Geospatial Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Preparation">Preparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Connecting-to-the-database">Connecting to the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Querying-the-data">Querying the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Making-a-spatial-join">Making a spatial join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Combining-the-results">Combining the results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="design.html">Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending/index.html">Extending Ibis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backends/index.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release/index.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Ibis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">User guide</a> &raquo;</li>
+        
+      <li>Ibis and Geospatial Operations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/user_guide/geospatial_analysis.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Ibis-and-Geospatial-Operations">
+<h1>Ibis and Geospatial Operations<a class="headerlink" href="#Ibis-and-Geospatial-Operations" title="Permalink to this headline">¶</a></h1>
+<p>One of the most popular extensions to PostgreSQL is PostGIS, which adds support for storing geospatial geometries, as well as functionality for reasoning about and performing operations on those geometries.</p>
+<p>This is a demo showing how to assemble ibis expressions for a PostGIS-enabled database. We will be using a database that has been loaded with an <a class="reference external" href="https://www.openstreetmap.org/">Open Street Map</a> extract for Southern California. This extract can be found <a class="reference external" href="https://download.geofabrik.de/north-america/us/california/socal.html">here</a>, and loaded into PostGIS using a tool like <a class="reference external" href="https://gdal.org/programs/ogr2ogr.html">ogr2ogr</a>.</p>
+<div class="section" id="Preparation">
+<h2>Preparation<a class="headerlink" href="#Preparation" title="Permalink to this headline">¶</a></h2>
+<p>We first need to set up a demonstration database and load it with the sample data. If you have Docker installed, you can download and launch a PostGIS database with the following:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Launch the postgis container.</span>
+<span class="c1"># This may take a bit of time if it needs to download the image.</span>
+<span class="o">!</span>docker run -d -p <span class="m">5432</span>:5432 --name postgis-db -e <span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>supersecret mdillon/postgis:9.6-alpine
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
+</pre></div></div>
+</div>
+<p>Next, we download our OSM extract (about 400 MB):</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="o">!</span>wget https://download.geofabrik.de/north-america/us/california/socal-latest.osm.pbf
+</pre></div>
+</div>
+</div>
+<p>Finally, we load it into the database using <code class="docutils literal notranslate"><span class="pre">ogr2ogr</span></code> (this may take some time):</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="o">!</span>ogr2ogr -f PostgreSQL PG:<span class="s2">&quot;dbname=&#39;postgres&#39; user=&#39;postgres&#39; password=&#39;supersecret&#39; port=5432 host=&#39;localhost&#39;&quot;</span> -lco <span class="nv">OVERWRITE</span><span class="o">=</span>yes --config PG_USE_COPY YES socal-latest.osm.pbf
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0...10...20...30...40...50...60...70...80...90...100 - done.
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Connecting-to-the-database">
+<h2>Connecting to the database<a class="headerlink" href="#Connecting-to-the-database" title="Permalink to this headline">¶</a></h2>
+<p>We first make the relevant imports, and connect to the PostGIS database:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">geopandas</span>
+<span class="kn">import</span> <span class="nn">ibis</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">postgres</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;postgres://postgres:supersecret@localhost:5432/postgres&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Let’s look at the tables available in the database:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">client</span><span class="o">.</span><span class="n">list_tables</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;geography_columns&#39;,
+ &#39;geometry_columns&#39;,
+ &#39;lines&#39;,
+ &#39;multilinestrings&#39;,
+ &#39;multipolygons&#39;,
+ &#39;other_relations&#39;,
+ &#39;points&#39;,
+ &#39;raster_columns&#39;,
+ &#39;raster_overviews&#39;,
+ &#39;spatial_ref_sys&#39;]
+</pre></div></div>
+</div>
+<p>As you can see, this Open Street Map extract stores its data according to the geometry type. Let’s grab references to the polygon and line tables:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">polygons</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;multipolygons&#39;</span><span class="p">)</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;lines&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Querying-the-data">
+<h2>Querying the data<a class="headerlink" href="#Querying-the-data" title="Permalink to this headline">¶</a></h2>
+<p>We query the polygons table for shapes with an administrative level of 8, which corresponds to municipalities.</p>
+<p>We also reproject some of the column names so we don’t have a name collision later.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cities</span> <span class="o">=</span> <span class="n">polygons</span><span class="p">[</span><span class="n">polygons</span><span class="o">.</span><span class="n">admin_level</span> <span class="o">==</span> <span class="s1">&#39;8&#39;</span><span class="p">]</span>
+
+<span class="n">cities</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span>
+    <span class="n">cities</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;city_name&#39;</span><span class="p">),</span>
+    <span class="n">cities</span><span class="o">.</span><span class="n">wkb_geometry</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;city_geometry&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>We can assemble a specific query for the city of Los Angeles, and execute it to get the geometry of the city. This will be useful later when reasoning about other geospatial relationships in the LA area:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">los_angeles</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span><span class="n">cities</span><span class="o">.</span><span class="n">city_name</span> <span class="o">==</span> <span class="s1">&#39;Los Angeles&#39;</span><span class="p">]</span>
+<span class="n">la_city</span> <span class="o">=</span> <span class="n">los_angeles</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+<span class="n">la_city_geom</span> <span class="o">=</span> <span class="n">la_city</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">city_geometry</span>
+<span class="n">la_city_geom</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/user_guide_geospatial_analysis_18_0.svg" src="../_images/user_guide_geospatial_analysis_18_0.svg" /></div>
+</div>
+<p>Let’s also extract freeways from the lines table, which are indicated by the value <code class="docutils literal notranslate"><span class="pre">'motorway'</span></code> in the highway column:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">highways</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[(</span><span class="n">lines</span><span class="o">.</span><span class="n">highway</span> <span class="o">==</span> <span class="s1">&#39;motorway&#39;</span><span class="p">)]</span>
+<span class="n">highways</span> <span class="o">=</span> <span class="n">highways</span><span class="p">[</span>
+    <span class="n">highways</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;highway_name&#39;</span><span class="p">),</span>
+    <span class="n">highways</span><span class="o">.</span><span class="n">wkb_geometry</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;highway_geometry&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Making-a-spatial-join">
+<h2>Making a spatial join<a class="headerlink" href="#Making-a-spatial-join" title="Permalink to this headline">¶</a></h2>
+<p>Let’s test a spatial join by selecting all the highways that intersect the city of Los Angeles, or one if its neighbors.</p>
+<p>We begin by assembling an expression for Los Angeles and its neighbors. We consider a city to be a neighbor if it has any point of intersection (by this critereon we also get Los Angeles itself).</p>
+<p>We can pass in the city geometry that we selected above when making our query by marking it as a literal value in <code class="docutils literal notranslate"><span class="pre">ibis</span></code>:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la_neighbors_expr</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span>
+    <span class="n">cities</span><span class="o">.</span><span class="n">city_geometry</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span>
+        <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="n">la_city_geom</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;multipolygon;4326:geometry&#39;</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la_neighbors</span> <span class="o">=</span> <span class="n">la_neighbors_expr</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">la_neighbors</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city_name</th>
+      <th>city_geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Inglewood</td>
+      <td>(POLYGON ((-118.346107 33.932694, -118.346076 ...</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Long Beach</td>
+      <td>(POLYGON ((-118.232975 33.714615, -118.231803 ...</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Vernon</td>
+      <td>(POLYGON ((-118.204281 33.988934, -118.204265 ...</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Simi Valley</td>
+      <td>(POLYGON ((-118.6334489 34.2697148, -118.63339...</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Los Angeles</td>
+      <td>(POLYGON ((-118.464911 34.330061, -118.457574 ...</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Gardena</td>
+      <td>(POLYGON ((-118.326689 33.91283, -118.326502 3...</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Commerce</td>
+      <td>(POLYGON ((-118.127398 34.008033, -118.127411 ...</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Glendale</td>
+      <td>(POLYGON ((-118.183869 34.148557, -118.18392 3...</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Rancho Palos Verdes</td>
+      <td>(POLYGON ((-118.417912 33.762329, -118.415164 ...</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Lomita</td>
+      <td>(POLYGON ((-118.30879 33.8022812, -118.308786 ...</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Torrance</td>
+      <td>(POLYGON ((-118.3404761 33.7862518, -118.33789...</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Hawthorne</td>
+      <td>(POLYGON ((-118.3787037 33.901905, -118.378660...</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Calabasas</td>
+      <td>(POLYGON ((-118.6097079 34.1472647, -118.61058...</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Hidden Hills</td>
+      <td>(POLYGON ((-118.6681703 34.1767732, -118.65858...</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Santa Monica</td>
+      <td>(POLYGON ((-118.5534678 33.9843349, -118.53781...</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Culver City</td>
+      <td>(POLYGON ((-118.3865712 33.9768672, -118.38547...</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>San Fernando</td>
+      <td>(POLYGON ((-118.454741 34.283709, -118.454756 ...</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Malibu</td>
+      <td>(POLYGON ((-118.9517221 33.9928639, -118.94901...</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>El Segundo</td>
+      <td>(POLYGON ((-118.4758021 33.8881822, -118.49898...</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Beverly Hills</td>
+      <td>(POLYGON ((-118.3897334 34.0765007, -118.38986...</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>West Hollywood</td>
+      <td>(POLYGON ((-118.3958762 34.091079, -118.395592...</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Carson</td>
+      <td>(POLYGON ((-118.286874 33.7978063, -118.287645...</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Lynwood</td>
+      <td>(POLYGON ((-118.187027 33.905485, -118.186491 ...</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>South Pasadena</td>
+      <td>(POLYGON ((-118.1552947 34.09859, -118.1567112...</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Burbank</td>
+      <td>(POLYGON ((-118.292761 34.221654, -118.337462 ...</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Pasadena</td>
+      <td>(POLYGON ((-118.197819 34.237289, -118.197804 ...</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Alhambra</td>
+      <td>(POLYGON ((-118.164835 34.062283, -118.164805 ...</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>Monterey Park</td>
+      <td>(POLYGON ((-118.164835 34.062283, -118.164735 ...</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>Huntington Park</td>
+      <td>(POLYGON ((-118.204281 33.988934, -118.204265 ...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Now we join the neighbors expression with the freeways expression, on the condition that the highways intersect any of the city geometries:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la_highways_expr</span> <span class="o">=</span> <span class="n">highways</span><span class="o">.</span><span class="n">inner_join</span><span class="p">(</span>
+    <span class="n">la_neighbors_expr</span><span class="p">,</span>
+    <span class="n">highways</span><span class="o">.</span><span class="n">highway_geometry</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">la_neighbors_expr</span><span class="o">.</span><span class="n">city_geometry</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">materialize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la_highways</span> <span class="o">=</span> <span class="n">la_highways_expr</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+<span class="n">la_highways</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x22ddaec08d0&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/user_guide_geospatial_analysis_26_1.png" src="../_images/user_guide_geospatial_analysis_26_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Combining-the-results">
+<h2>Combining the results<a class="headerlink" href="#Combining-the-results" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have made a number of queries and joins, let’s combine them into a single plot. To make the plot a bit nicer, we can also load some shapefiles for the coast and land:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ocean</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_ocean.zip&#39;</span><span class="p">)</span>
+<span class="n">land</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">la_neighbors</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_autoscale_on</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="n">land</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">ocean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;navy&#39;</span><span class="p">)</span>
+<span class="n">la_highways</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;maroon&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x22df02fb198&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/user_guide_geospatial_analysis_29_1.png" src="../_images/user_guide_geospatial_analysis_29_1.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="design.html" class="btn btn-neutral float-right" title="Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="udf.html" class="btn btn-neutral float-left" title="User Defined Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ibis Developers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65303298-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

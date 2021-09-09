@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pandas &mdash; Ibis 1.4.0+230.gad7f4fba.dirty documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dask" href="dask.html" />
+    <link rel="prev" title="ibis.backends.pyspark.PySparkClient.table" href="../generated/ibis.backends.pyspark.PySparkClient.table.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Ibis
+          
+
+          
+            
+            <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0+230.gad7f4fba.dirty
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Backends</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sqlite.html">SQLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgres.html">PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="impala.html">Impala</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clickhouse.html">Clickhouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyspark.html">PySpark</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pandas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#user-defined-functions-udf">User Defined functions (UDF)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#element-wise-functions">Element-wise Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reduction-functions">Reduction Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#analytic-functions">Analytic Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#details-of-pandas-udfs">Details of Pandas UDFs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dask.html">Dask</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../release/index.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Ibis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Backends</a> &raquo;</li>
+        
+      <li>pandas</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/backends/pandas.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="id1">
+<h1><a class="reference external" href="https://pandas.pydata.org/">pandas</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Ibis’s pandas backend is available in core Ibis:</p>
+<p>Create a client by supplying a dictionary of DataFrames using
+<code class="xref py py-func docutils literal notranslate"><span class="pre">ibis.pandas.connect()</span></code>. The keys become the table names:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="p">{</span>
+       <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">_testing</span><span class="o">.</span><span class="n">makeDataFrame</span><span class="p">(),</span>
+       <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">_testing</span><span class="o">.</span><span class="n">makeDataFrame</span><span class="p">(),</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="user-defined-functions-udf">
+<span id="udf-pandas"></span><h2>User Defined functions (UDF)<a class="headerlink" href="#user-defined-functions-udf" title="Permalink to this headline">¶</a></h2>
+<p>Ibis supports defining three kinds of user-defined functions for operations on
+expressions targeting the pandas backend: <strong>element-wise</strong>, <strong>reduction</strong>, and
+<strong>analytic</strong>.</p>
+<div class="section" id="element-wise-functions">
+<span id="udf-elementwise"></span><h3>Element-wise Functions<a class="headerlink" href="#element-wise-functions" title="Permalink to this headline">¶</a></h3>
+<p>An <strong>element-wise</strong> function is a function that takes N rows as input and
+produces N rows of output. <code class="docutils literal notranslate"><span class="pre">log</span></code>, <code class="docutils literal notranslate"><span class="pre">exp</span></code>, and <code class="docutils literal notranslate"><span class="pre">floor</span></code> are examples of
+element-wise functions.</p>
+<p>Here’s how to define an element-wise function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">from</span> <span class="nn">ibis.backends.pandas</span> <span class="kn">import</span> <span class="n">udf</span>
+
+<span class="nd">@udf</span><span class="o">.</span><span class="n">elementwise</span><span class="p">(</span><span class="n">input_type</span><span class="o">=</span><span class="p">[</span><span class="n">dt</span><span class="o">.</span><span class="n">int64</span><span class="p">],</span> <span class="n">output_type</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">add_one</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">1.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reduction-functions">
+<span id="udf-reduction"></span><h3>Reduction Functions<a class="headerlink" href="#reduction-functions" title="Permalink to this headline">¶</a></h3>
+<p>A <strong>reduction</strong> is a function that takes N rows as input and produces 1 row
+as output. <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">count</span></code> are examples of reductions. In
+the context of a <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, reductions produce 1 row of output <em>per
+group</em>.</p>
+<p>Here’s how to define a reduction function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">from</span> <span class="nn">ibis.backends.pandas</span> <span class="kn">import</span> <span class="n">udf</span>
+
+<span class="nd">@udf</span><span class="o">.</span><span class="n">reduction</span><span class="p">(</span><span class="n">input_type</span><span class="o">=</span><span class="p">[</span><span class="n">dt</span><span class="o">.</span><span class="n">double</span><span class="p">],</span> <span class="n">output_type</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">double_mean</span><span class="p">(</span><span class="n">series</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">series</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="analytic-functions">
+<span id="udf-analytic"></span><h3>Analytic Functions<a class="headerlink" href="#analytic-functions" title="Permalink to this headline">¶</a></h3>
+<p>An <strong>analytic</strong> function is like an <strong>element-wise</strong> function in that it
+takes N rows as input and produces N rows of output. The key difference is
+that analytic functions can be applied <em>per group</em> using window functions.
+Z-score is an example of an analytic function.</p>
+<p>Here’s how to define an analytic function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">from</span> <span class="nn">ibis.backends.pandas</span> <span class="kn">import</span> <span class="n">udf</span>
+
+<span class="nd">@udf</span><span class="o">.</span><span class="n">analytic</span><span class="p">(</span><span class="n">input_type</span><span class="o">=</span><span class="p">[</span><span class="n">dt</span><span class="o">.</span><span class="n">double</span><span class="p">],</span> <span class="n">output_type</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">zscore</span><span class="p">(</span><span class="n">series</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">series</span> <span class="o">-</span> <span class="n">series</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">series</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="details-of-pandas-udfs">
+<h3>Details of Pandas UDFs<a class="headerlink" href="#details-of-pandas-udfs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#udf-elementwise"><span class="std std-ref">Element-wise functions</span></a> automatically provide support
+for applying your UDF to any combination of scalar values and columns.</p></li>
+<li><p><a class="reference internal" href="#udf-reduction"><span class="std std-ref">Reduction functions</span></a> automatically provide support for
+whole column aggregations, grouped aggregations, and application of your
+function over a window.</p></li>
+<li><p><a class="reference internal" href="#udf-analytic"><span class="std std-ref">Analytic functions</span></a> work in both grouped and non-grouped
+settings</p></li>
+<li><p>The objects you receive as input arguments are either <code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code> or
+Python/NumPy scalars.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Any keyword arguments must be given a default value or the function <strong>will
+not work</strong>.</p>
+<p>A common Python convention is to set the default value to <code class="docutils literal notranslate"><span class="pre">None</span></code> and
+handle setting it to something not <code class="docutils literal notranslate"><span class="pre">None</span></code> in the body of the function.</p>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">add_one</span></code> from above as an example, the following call will receive a
+<code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code> for the <code class="docutils literal notranslate"><span class="pre">x</span></code> argument:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ibis</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]})</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">connect</span><span class="p">({</span><span class="s1">&#39;df&#39;</span><span class="p">:</span> <span class="n">df</span><span class="p">})</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;df&#39;</span><span class="p">)</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">add_one</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+<span class="n">expr</span>
+</pre></div>
+</div>
+<p>And this will receive the <code class="docutils literal notranslate"><span class="pre">int</span></code> 1:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">add_one</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">expr</span>
+</pre></div>
+</div>
+<p>Since the pandas backend passes around <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> you can accept <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>
+in your function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">from</span> <span class="nn">ibis.backends.pandas</span> <span class="kn">import</span> <span class="n">udf</span>
+
+<span class="nd">@udf</span><span class="o">.</span><span class="n">elementwise</span><span class="p">([</span><span class="n">dt</span><span class="o">.</span><span class="n">int64</span><span class="p">],</span> <span class="n">dt</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">add_two</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="c1"># do stuff with kwargs</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">2.0</span>
+</pre></div>
+</div>
+<p>Or you can leave them out as we did in the example above. You can also
+optionally accept specific keyword arguments.</p>
+<p>For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">from</span> <span class="nn">ibis.backends.pandas</span> <span class="kn">import</span> <span class="n">udf</span>
+
+<span class="nd">@udf</span><span class="o">.</span><span class="n">elementwise</span><span class="p">([</span><span class="n">dt</span><span class="o">.</span><span class="n">int64</span><span class="p">],</span> <span class="n">dt</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">add_two_with_none</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">y</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="mf">2.0</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="dask.html" class="btn btn-neutral float-right" title="Dask" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../generated/ibis.backends.pyspark.PySparkClient.table.html" class="btn btn-neutral float-left" title="ibis.backends.pyspark.PySparkClient.table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ibis Developers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65303298-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

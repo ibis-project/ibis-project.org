@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.HDFS.head
+==============================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: HDFS.head

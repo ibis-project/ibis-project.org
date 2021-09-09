@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.HDFS.chmod
+===============================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: HDFS.chmod

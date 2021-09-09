@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta content="IVqzkYiD5E35oD4kkVOcTYCTfqWKU1f6zOHCnLIPkUU" name="google-site-verification" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Ibis: Python Data Analysis Productivity Framework &mdash; Ibis 1.4.0+230.gad7f4fba.dirty documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial" href="tutorial/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Ibis
+          
+
+          
+            
+            <img src="_static/logo-wide.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0+230.gad7f4fba.dirty
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backends/index.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release/index.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Ibis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Ibis: Python Data Analysis Productivity Framework</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="ibis-python-data-analysis-productivity-framework">
+<h1>Ibis: Python Data Analysis Productivity Framework<a class="headerlink" href="#ibis-python-data-analysis-productivity-framework" title="Permalink to this headline">¶</a></h1>
+<p>Ibis is a toolbox to bridge the gap between local Python environments (like
+pandas and scikit-learn) and remote storage and execution systems like Hadoop
+components (like HDFS, Impala, Hive, Spark) and SQL databases (Postgres,
+etc.). Its goal is to simplify analytical workflows and make you more
+productive.</p>
+<p>We have a handful of specific priority focus areas:</p>
+<ul class="simple">
+<li><p>Enable data analysts to translate local, single-node data idioms to scalable
+computation representations (e.g. SQL or Spark)</p></li>
+<li><p>Integration with pandas and other Python data ecosystem components</p></li>
+<li><p>Provide high level analytics APIs and workflow tools to enhance productivity
+and streamline common or tedious tasks.</p></li>
+<li><p>Integration with community standard data formats (e.g. Parquet and Avro)</p></li>
+<li><p>Abstract away database-specific SQL differences</p></li>
+</ul>
+<p>As the <a class="reference external" href="http://arrow.apache.org/">Apache Arrow</a> project develops, we will
+look to use Arrow to enable computational code written in Python to be executed
+natively within other systems like Apache Spark and Apache Impala (incubating).</p>
+<p>To learn more about Ibis’s vision, roadmap, and updates, please follow
+<a class="reference external" href="http://ibis-project.org">http://ibis-project.org</a>.</p>
+<p>Source code is on GitHub: <a class="reference external" href="https://github.com/ibis-project/ibis">https://github.com/ibis-project/ibis</a></p>
+<div class="section" id="installation">
+<span id="install"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="system-dependencies">
+<h3>System Dependencies<a class="headerlink" href="#system-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>Ibis requires a working Python 3.7+ installation. We recommend using
+<a class="reference external" href="http://continuum.io/downloads">Anaconda</a> to manage Python versions and
+environments.</p>
+</div>
+<div class="section" id="installing-the-python-package">
+<h3>Installing the Python Package<a class="headerlink" href="#installing-the-python-package" title="Permalink to this headline">¶</a></h3>
+<p>Install Ibis from PyPI with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ibis</span><span class="o">-</span><span class="n">framework</span>
+</pre></div>
+</div>
+<p>Or from <a class="reference external" href="http://conda-forge.github.io">conda-forge</a> with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">ibis</span><span class="o">-</span><span class="n">framework</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+</pre></div>
+</div>
+<p>This installs the <code class="docutils literal notranslate"><span class="pre">ibis</span></code> library to your configured Python environment.</p>
+<p>Ibis can also be installed with Kerberos support for its HDFS functionality:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ibis</span><span class="o">-</span><span class="n">framework</span><span class="p">[</span><span class="n">kerberos</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Some platforms will require that you have Kerberos installed to build properly.</p>
+<ul class="simple">
+<li><p>Redhat / CentOS: <code class="docutils literal notranslate"><span class="pre">yum</span> <span class="pre">install</span> <span class="pre">krb5-devel</span></code></p></li>
+<li><p>Ubuntu / Debian: <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libkrb5-dev</span></code></p></li>
+<li><p>Arch Linux     : <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">krb5</span></code></p></li>
+</ul>
+<p>At this time, Ibis offers some level of support for the following systems:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://impala.apache.org/">Apache Impala</a></p></li>
+<li><p><a class="reference external" href="https://kudu.apache.org/">Apache Kudu</a></p></li>
+<li><p><a class="reference external" href="https://hadoop.apache.org/">Hadoop Distributed File System (HDFS)</a></p></li>
+<li><p><a class="reference external" href="https://www.postgresql.org/">PostgreSQL</a></p></li>
+<li><p><a class="reference external" href="https://www.mysql.com/">MySQL</a> (Experimental)</p></li>
+<li><p><a class="reference external" href="https://www.sqlite.org/">SQLite</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/bigquery/">Google BigQuery</a></p></li>
+<li><p><a class="reference external" href="https://clickhouse.yandex/">Yandex Clickhouse</a></p></li>
+<li><p>Direct execution of ibis expressions against <a class="reference external" href="http://pandas.pydata.org/">Pandas</a> objects</p></li>
+<li><p><a class="reference external" href="https://www.omnisci.com/">OmniSciDB</a></p></li>
+<li><p><a class="reference external" href="https://spark.apache.org/sql/">PySpark/Spark SQL</a> (Experimental)</p></li>
+</ul>
+<p>Coming from SQL? Check out <a class="reference internal" href="user_guide/sql.html#sql"><span class="std std-ref">Ibis for SQL Programmers</span></a>.</p>
+<p>Architecturally, Ibis features:</p>
+<ul class="simple">
+<li><p>A pandas-like domain specific language (DSL) designed specifically for
+analytics, aka <strong>Ibis expressions</strong>, that enable composable, reusable
+analytics on structured data. If you can express something with a SQL SELECT
+query, you can write it with Ibis.</p></li>
+<li><p>Integrated user interfaces to HDFS and other storage systems.</p></li>
+<li><p>An extensible translator-compiler system that targets multiple SQL systems</p></li>
+</ul>
+<p>SQL engine support needing code contributors:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://aws.amazon.com/redshift/">Redshift</a></p></li>
+<li><p><a class="reference external" href="https://www.vertica.com/">Vertica</a></p></li>
+<li><p><a class="reference external" href="https://prestosql.io/">Presto</a></p></li>
+<li><p><a class="reference external" href="https://hive.apache.org/">Hive</a></p></li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backends/index.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release/index.html">Release Notes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="learning-resources">
+<h2>Learning Resources<a class="headerlink" href="#learning-resources" title="Permalink to this headline">¶</a></h2>
+<p>We collect Jupyter notebooks for learning how to use ibis here:
+<a class="reference external" href="https://github.com/ibis-project/ibis/tree/master/docs/source/notebooks/tutorial">https://github.com/ibis-project/ibis/tree/master/docs/source/notebooks/tutorial</a>.
+Some of these notebooks will be reproduced as part of the documentation
+<a class="reference internal" href="tutorial/index.html#tutorial"><span class="std std-ref">in the tutorial section</span></a>.</p>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tutorial/index.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ibis Developers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65303298-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

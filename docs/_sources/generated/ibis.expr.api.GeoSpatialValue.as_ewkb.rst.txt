@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.as\_ewkb
+======================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.as_ewkb

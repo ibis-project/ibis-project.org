@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Self joins &mdash; Ibis 1.4.0+230.gad7f4fba.dirty documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="User Defined Functions" href="udf.html" />
+    <link rel="prev" title="“Top-K” Filtering" href="topk.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Ibis
+          
+
+          
+            
+            <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0+230.gad7f4fba.dirty
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Configuring Ibis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sql.html">Ibis for SQL Programmers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topk.html">“Top-K” Filtering</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Self joins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udf.html">User Defined Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geospatial_analysis.html">Ibis and Geospatial Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design.html">Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending/index.html">Extending Ibis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backends/index.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release/index.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Ibis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">User guide</a> &raquo;</li>
+        
+      <li>Self joins</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/user_guide/self_joins.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="self-joins">
+<span id="id1"></span><h1>Self joins<a class="headerlink" href="#self-joins" title="Permalink to this headline">¶</a></h1>
+<p>If you’re a relational data guru, you may have wondered how it’s
+possible to join tables with themselves, because joins clauses involve
+column references back to the original table.</p>
+<p>Consider the SQL</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">t1</span><span class="p">.</span><span class="k">key</span><span class="p">,</span> <span class="k">sum</span><span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="n">value</span> <span class="o">-</span> <span class="n">t2</span><span class="p">.</span><span class="n">value</span><span class="p">)</span> <span class="k">AS</span> <span class="n">metric</span>
+<span class="k">FROM</span> <span class="n">my_table</span> <span class="n">t1</span>
+  <span class="k">JOIN</span> <span class="n">my_table</span> <span class="n">t2</span>
+    <span class="k">ON</span> <span class="n">t1</span><span class="p">.</span><span class="k">key</span> <span class="o">=</span> <span class="n">t2</span><span class="p">.</span><span class="n">subkey</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Here, we have an unambiguous way to refer to each of the tables through
+aliasing.</p>
+<p>Let’s consider the TPC-H database, and support we want to compute
+year-over-year change in total order amounts by region using joins.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;tpch_region&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nation</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;tpch_nation&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">customer</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;tpch_customer&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">orders</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;tpch_orders&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">orders</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">   o_orderkey  o_custkey o_orderstatus o_totalprice o_orderdate  \</span>
+<span class="go">0           1      36901             O    173665.47  1996-01-02</span>
+<span class="go">1           2      78002             O     46929.18  1996-12-01</span>
+<span class="go">2           3     123314             F    193846.25  1993-10-14</span>
+<span class="go">3           4     136777             O     32151.78  1995-10-11</span>
+<span class="go">4           5      44485             F    144659.20  1994-07-30</span>
+
+<span class="go">  o_orderpriority          o_clerk  o_shippriority  \</span>
+<span class="go">0           5-LOW  Clerk#000000951               0</span>
+<span class="go">1        1-URGENT  Clerk#000000880               0</span>
+<span class="go">2           5-LOW  Clerk#000000955               0</span>
+<span class="go">3           5-LOW  Clerk#000000124               0</span>
+<span class="go">4           5-LOW  Clerk#000000925               0</span>
+
+<span class="go">                                           o_comment</span>
+<span class="go">0                 nstructions sleep furiously among</span>
+<span class="go">1   foxes. pending accounts at the pending, silen...</span>
+<span class="go">2  sly final accounts boost. carefully regular id...</span>
+<span class="go">3  sits. slyly regular warthogs cajole. regular, ...</span>
+<span class="go">4  quickly. bold deposits sleep slyly. packages u...</span>
+</pre></div>
+</div>
+<p>First, let’s join all the things and select the fields we care about:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fields_of_interest</span> <span class="o">=</span> <span class="p">[</span><span class="n">region</span><span class="o">.</span><span class="n">r_name</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;region&#39;</span><span class="p">),</span>
+<span class="gp">... </span>                      <span class="n">nation</span><span class="o">.</span><span class="n">n_name</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;nation&#39;</span><span class="p">),</span>
+<span class="gp">... </span>                      <span class="n">orders</span><span class="o">.</span><span class="n">o_totalprice</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;amount&#39;</span><span class="p">),</span>
+<span class="gp">... </span>                      <span class="n">orders</span><span class="o">.</span><span class="n">o_orderdate</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s1">&#39;timestamp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;odate&#39;</span><span class="p">)</span> <span class="c1"># these are strings</span>
+<span class="gp">... </span>                      <span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joined_all</span> <span class="o">=</span> <span class="p">(</span><span class="n">region</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">nation</span><span class="p">,</span> <span class="n">region</span><span class="o">.</span><span class="n">r_regionkey</span> <span class="o">==</span> <span class="n">nation</span><span class="o">.</span><span class="n">n_regionkey</span><span class="p">)</span>
+<span class="gp">... </span>              <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">customer</span><span class="p">,</span> <span class="n">customer</span><span class="o">.</span><span class="n">c_nationkey</span> <span class="o">==</span> <span class="n">nation</span><span class="o">.</span><span class="n">n_nationkey</span><span class="p">)</span>
+<span class="gp">... </span>              <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">orders</span><span class="p">,</span> <span class="n">orders</span><span class="o">.</span><span class="n">o_custkey</span> <span class="o">==</span> <span class="n">customer</span><span class="o">.</span><span class="n">c_custkey</span><span class="p">)</span>
+<span class="gp">... </span>              <span class="p">[</span><span class="n">fields_of_interest</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Okay, great, let’s have a look:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">joined_all</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">        region         nation     amount      odate</span>
+<span class="go">0      AMERICA  UNITED STATES  160843.35 1992-06-22</span>
+<span class="go">1  MIDDLE EAST           IRAN   78307.91 1996-04-19</span>
+<span class="go">2       EUROPE         FRANCE  103237.90 1994-10-12</span>
+<span class="go">3       EUROPE         FRANCE  201463.59 1997-09-12</span>
+<span class="go">4         ASIA          JAPAN  166098.86 1995-09-12</span>
+</pre></div>
+</div>
+<p>Sweet, now let’s aggregate by year and region:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">year</span> <span class="o">=</span> <span class="n">joined_all</span><span class="o">.</span><span class="n">odate</span><span class="o">.</span><span class="n">year</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">total</span> <span class="o">=</span> <span class="n">joined_all</span><span class="o">.</span><span class="n">amount</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s1">&#39;double&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;total&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">annual_amounts</span> <span class="o">=</span> <span class="p">(</span><span class="n">joined_all</span>
+<span class="gp">... </span>                  <span class="o">.</span><span class="n">group_by</span><span class="p">([</span><span class="s1">&#39;region&#39;</span><span class="p">,</span> <span class="n">year</span><span class="p">])</span>
+<span class="gp">... </span>                  <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
+<span class="go">    &gt;&gt;&gt; annual_amounts.limit(5)</span>
+<span class="go">         region  year         total</span>
+<span class="go">0        EUROPE  1994  6.979473e+09</span>
+<span class="go">1        EUROPE  1996  7.015421e+09</span>
+<span class="go">2          ASIA  1997  6.910663e+09</span>
+<span class="go">3          ASIA  1998  4.058824e+09</span>
+<span class="go">4        EUROPE  1992  6.926705e+09</span>
+</pre></div>
+</div>
+<p>Looking good so far. Now, we need to join this table on itself, by
+subtracting 1 from one of the year columns.</p>
+<p>We do this by creating a “joinable” view of a table that is considered a
+distinct object within Ibis. To do this, use the <code class="docutils literal notranslate"><span class="pre">view</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">current</span> <span class="o">=</span> <span class="n">annual_amounts</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prior</span> <span class="o">=</span> <span class="n">annual_amounts</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">yoy_change</span> <span class="o">=</span> <span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">total</span> <span class="o">-</span> <span class="n">prior</span><span class="o">.</span><span class="n">total</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;yoy_change&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">prior</span><span class="p">,</span> <span class="p">((</span><span class="n">current</span><span class="o">.</span><span class="n">region</span> <span class="o">==</span> <span class="n">prior</span><span class="o">.</span><span class="n">region</span><span class="p">)</span> <span class="o">&amp;</span>
+<span class="gp">... </span>                                <span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="p">(</span><span class="n">prior</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))))</span>
+<span class="gp">... </span>           <span class="p">[</span><span class="n">current</span><span class="o">.</span><span class="n">region</span><span class="p">,</span> <span class="n">current</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">yoy_change</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;yoy_pretty&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">yoy_change</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;$</span><span class="si">%.2f</span><span class="s1">mm&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mf">1000000.</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If you’re being fastidious and want to consider the first year occurring
+in the dataset for each region to have 0 for the prior year, you will
+instead need to do an outer join and treat nulls in the prior side of
+the join as zero:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">yoy_change</span> <span class="o">=</span> <span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">total</span> <span class="o">-</span> <span class="n">prior</span><span class="o">.</span><span class="n">total</span><span class="o">.</span><span class="n">zeroifnull</span><span class="p">())</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;yoy_change&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">outer_join</span><span class="p">(</span><span class="n">prior</span><span class="p">,</span> <span class="p">((</span><span class="n">current</span><span class="o">.</span><span class="n">region</span> <span class="o">==</span> <span class="n">prior</span><span class="o">.</span><span class="n">region</span><span class="p">)</span> <span class="o">&amp;</span>
+<span class="gp">... </span>                                      <span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="p">(</span><span class="n">prior</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))))</span>
+<span class="gp">... </span>           <span class="p">[</span><span class="n">current</span><span class="o">.</span><span class="n">region</span><span class="p">,</span> <span class="n">current</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">current</span><span class="o">.</span><span class="n">total</span><span class="p">,</span>
+<span class="gp">... </span>            <span class="n">prior</span><span class="o">.</span><span class="n">total</span><span class="o">.</span><span class="n">zeroifnull</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;prior_total&#39;</span><span class="p">),</span>
+<span class="gp">... </span>            <span class="n">yoy_change</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">        region  year         total   prior_total    yoy_change</span>
+<span class="go">0         ASIA  1998  4.058824e+09  0.000000e+00  4.058824e+09</span>
+<span class="go">1       AFRICA  1994  6.837587e+09  6.908429e+09 -7.084172e+07</span>
+<span class="go">2      AMERICA  1996  6.883057e+09  6.922465e+09 -3.940791e+07</span>
+<span class="go">3       AFRICA  1996  6.878112e+09  6.848983e+09  2.912979e+07</span>
+<span class="go">4       AFRICA  1992  6.873319e+09  6.859733e+09  1.358699e+07</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="udf.html" class="btn btn-neutral float-right" title="User Defined Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="topk.html" class="btn btn-neutral float-left" title="“Top-K” Filtering" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ibis Developers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65303298-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.transform
+=======================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.transform

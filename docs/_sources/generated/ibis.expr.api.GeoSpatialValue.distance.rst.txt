@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.distance
+======================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.distance

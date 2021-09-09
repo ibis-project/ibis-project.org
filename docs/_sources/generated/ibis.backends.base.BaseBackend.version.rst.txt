@@ -1,0 +1,6 @@
+﻿ibis.backends.base.BaseBackend.version
+======================================
+
+.. currentmodule:: ibis.backends.base
+
+.. autoproperty:: BaseBackend.version

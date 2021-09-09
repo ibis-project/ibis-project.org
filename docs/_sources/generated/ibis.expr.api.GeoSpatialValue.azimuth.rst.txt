@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.azimuth
+=====================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.azimuth

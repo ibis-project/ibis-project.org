@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.line\_locate\_point
+=================================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.line_locate_point

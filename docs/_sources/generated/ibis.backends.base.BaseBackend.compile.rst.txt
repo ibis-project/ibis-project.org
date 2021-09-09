@@ -1,0 +1,6 @@
+﻿ibis.backends.base.BaseBackend.compile
+======================================
+
+.. currentmodule:: ibis.backends.base
+
+.. automethod:: BaseBackend.compile

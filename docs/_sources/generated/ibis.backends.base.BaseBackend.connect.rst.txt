@@ -1,0 +1,6 @@
+﻿ibis.backends.base.BaseBackend.connect
+======================================
+
+.. currentmodule:: ibis.backends.base
+
+.. automethod:: BaseBackend.connect

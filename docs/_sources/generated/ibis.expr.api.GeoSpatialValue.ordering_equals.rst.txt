@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.ordering\_equals
+==============================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.ordering_equals

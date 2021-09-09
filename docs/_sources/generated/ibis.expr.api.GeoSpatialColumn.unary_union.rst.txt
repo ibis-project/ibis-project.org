@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialColumn.unary\_union
+===========================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialColumn.unary_union
