@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>API Reference &mdash; Ibis 0+untagged.1.gf58a062 documentation</title>
+  <title>API Reference &mdash; Ibis 0+untagged.1.g63fb5a2 documentation</title>
   
 
   
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                0+untagged.1.gf58a062
+                0+untagged.1.g63fb5a2
               </div>
             
           
@@ -131,7 +131,6 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.connect.html">ibis.backends.base.BaseBackend.connect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.database.html">ibis.backends.base.BaseBackend.database</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.current_database.html">ibis.backends.base.BaseBackend.current_database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.set_database.html">ibis.backends.base.BaseBackend.set_database</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.list_tables.html">ibis.backends.base.BaseBackend.list_tables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.table.html">ibis.backends.base.BaseBackend.table</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.version.html">ibis.backends.base.BaseBackend.version</a></li>
@@ -668,22 +667,19 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.current_database.html#ibis.backends.base.BaseBackend.current_database" title="ibis.backends.base.BaseBackend.current_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.current_database</span></code></a></p></td>
 <td><p>Name of the current database.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.set_database.html#ibis.backends.base.BaseBackend.set_database" title="ibis.backends.base.BaseBackend.set_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.set_database</span></code></a>(name)</p></td>
-<td><p>Set the current database.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.list_tables.html#ibis.backends.base.BaseBackend.list_tables" title="ibis.backends.base.BaseBackend.list_tables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.list_tables</span></code></a>([like, database])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.list_tables.html#ibis.backends.base.BaseBackend.list_tables" title="ibis.backends.base.BaseBackend.list_tables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.list_tables</span></code></a>([like, database])</p></td>
 <td><p>Return the list of table names in the current database.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.table.html#ibis.backends.base.BaseBackend.table" title="ibis.backends.base.BaseBackend.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.table</span></code></a>(name[, database])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.table.html#ibis.backends.base.BaseBackend.table" title="ibis.backends.base.BaseBackend.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.table</span></code></a>(name[, database])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.version.html#ibis.backends.base.BaseBackend.version" title="ibis.backends.base.BaseBackend.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.version</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.version.html#ibis.backends.base.BaseBackend.version" title="ibis.backends.base.BaseBackend.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.version</span></code></a></p></td>
 <td><p>Return the version of the backend engine.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.compile.html#ibis.backends.base.BaseBackend.compile" title="ibis.backends.base.BaseBackend.compile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.compile</span></code></a>(expr[, params])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.compile.html#ibis.backends.base.BaseBackend.compile" title="ibis.backends.base.BaseBackend.compile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.compile</span></code></a>(expr[, params])</p></td>
 <td><p>Compile the expression.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.execute.html#ibis.backends.base.BaseBackend.execute" title="ibis.backends.base.BaseBackend.execute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.execute</span></code></a>(expr)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.execute.html#ibis.backends.base.BaseBackend.execute" title="ibis.backends.base.BaseBackend.execute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.execute</span></code></a>(expr)</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
