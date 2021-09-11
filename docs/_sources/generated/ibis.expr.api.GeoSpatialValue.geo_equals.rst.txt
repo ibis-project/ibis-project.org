@@ -1,0 +1,6 @@
+﻿ibis.expr.api.GeoSpatialValue.geo\_equals
+=========================================
+
+.. currentmodule:: ibis.expr.api
+
+.. automethod:: GeoSpatialValue.geo_equals
