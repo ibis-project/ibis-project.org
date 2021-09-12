@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Impala &mdash; Ibis 0+untagged.1.g59f2eac documentation</title>
+  <title>Impala &mdash; Ibis 0+untagged.1.gb70bf1d documentation</title>
   
 
   
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                0+untagged.1.g59f2eac
+                0+untagged.1.gb70bf1d
               </div>
             
           
@@ -321,7 +321,7 @@ backend.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.connect.html#ibis.backends.impala.Backend.connect" title="ibis.backends.impala.Backend.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.connect</span></code></a>([host, port, database, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.connect.html#ibis.backends.impala.Backend.connect" title="ibis.backends.impala.Backend.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.connect</span></code></a>([host, port, database, ...])</p></td>
 <td><p>Create an ImpalaClient for use with Ibis.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.close.html#ibis.backends.impala.ImpalaClient.close" title="ibis.backends.impala.ImpalaClient.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.close</span></code></a>()</p></td>
@@ -403,28 +403,28 @@ the most methods on <code class="docutils literal notranslate"><span class="pre"
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.exists_table.html#ibis.backends.impala.ImpalaClient.exists_table" title="ibis.backends.impala.ImpalaClient.exists_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.exists_table</span></code></a>(name[, database])</p></td>
 <td><p>Determine if the indicated table or view exists</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.drop_table.html#ibis.backends.impala.ImpalaClient.drop_table" title="ibis.backends.impala.ImpalaClient.drop_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.drop_table</span></code></a>(table_name[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.drop_table.html#ibis.backends.impala.ImpalaClient.drop_table" title="ibis.backends.impala.ImpalaClient.drop_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.drop_table</span></code></a>(table_name[, ...])</p></td>
 <td><p>Drop an Impala table</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.create_table.html#ibis.backends.impala.ImpalaClient.create_table" title="ibis.backends.impala.ImpalaClient.create_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.create_table</span></code></a>(table_name[, obj, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.create_table.html#ibis.backends.impala.ImpalaClient.create_table" title="ibis.backends.impala.ImpalaClient.create_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.create_table</span></code></a>(table_name[, obj, ...])</p></td>
 <td><p>Create a new table in Impala using an Ibis table expression.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.insert.html#ibis.backends.impala.ImpalaClient.insert" title="ibis.backends.impala.ImpalaClient.insert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.insert</span></code></a>(table_name[, obj, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.insert.html#ibis.backends.impala.ImpalaClient.insert" title="ibis.backends.impala.ImpalaClient.insert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.insert</span></code></a>(table_name[, obj, ...])</p></td>
 <td><p>Insert into existing table.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.invalidate_metadata.html#ibis.backends.impala.ImpalaClient.invalidate_metadata" title="ibis.backends.impala.ImpalaClient.invalidate_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.invalidate_metadata</span></code></a>([name, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.invalidate_metadata.html#ibis.backends.impala.ImpalaClient.invalidate_metadata" title="ibis.backends.impala.ImpalaClient.invalidate_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.invalidate_metadata</span></code></a>([name, ...])</p></td>
 <td><p>Issue INVALIDATE METADATA command, optionally only applying to a particular table.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.truncate_table.html#ibis.backends.impala.ImpalaClient.truncate_table" title="ibis.backends.impala.ImpalaClient.truncate_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.truncate_table</span></code></a>(table_name[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.truncate_table.html#ibis.backends.impala.ImpalaClient.truncate_table" title="ibis.backends.impala.ImpalaClient.truncate_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.truncate_table</span></code></a>(table_name[, ...])</p></td>
 <td><p>Delete all rows from, but do not drop, an existing table</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.get_schema.html#ibis.backends.impala.ImpalaClient.get_schema" title="ibis.backends.impala.ImpalaClient.get_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.get_schema</span></code></a>(table_name[, database])</p></td>
 <td><p>Return a Schema object for the indicated table and database</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.cache_table.html#ibis.backends.impala.ImpalaClient.cache_table" title="ibis.backends.impala.ImpalaClient.cache_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.cache_table</span></code></a>(table_name[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.cache_table.html#ibis.backends.impala.ImpalaClient.cache_table" title="ibis.backends.impala.ImpalaClient.cache_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.cache_table</span></code></a>(table_name[, ...])</p></td>
 <td><p>Caches a table in cluster memory in the given pool.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.load_data.html#ibis.backends.impala.ImpalaClient.load_data" title="ibis.backends.impala.ImpalaClient.load_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.load_data</span></code></a>(table_name, path[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.load_data.html#ibis.backends.impala.ImpalaClient.load_data" title="ibis.backends.impala.ImpalaClient.load_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.load_data</span></code></a>(table_name, path[, ...])</p></td>
 <td><p>Wraps the LOAD DATA DDL statement.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.get_options.html#ibis.backends.impala.ImpalaClient.get_options" title="ibis.backends.impala.ImpalaClient.get_options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.get_options</span></code></a>()</p></td>
@@ -449,10 +449,10 @@ object you get back from <code class="docutils literal notranslate"><span class=
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.add_partition.html#ibis.backends.impala.ImpalaTable.add_partition" title="ibis.backends.impala.ImpalaTable.add_partition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.add_partition</span></code></a>(spec[, location])</p></td>
 <td><p>Add a new table partition, creating any new directories in HDFS if necessary.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.alter.html#ibis.backends.impala.ImpalaTable.alter" title="ibis.backends.impala.ImpalaTable.alter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.alter</span></code></a>([location, format, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.alter.html#ibis.backends.impala.ImpalaTable.alter" title="ibis.backends.impala.ImpalaTable.alter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.alter</span></code></a>([location, format, ...])</p></td>
 <td><p>Change setting and parameters of the table.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.alter_partition.html#ibis.backends.impala.ImpalaTable.alter_partition" title="ibis.backends.impala.ImpalaTable.alter_partition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.alter_partition</span></code></a>(spec[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.alter_partition.html#ibis.backends.impala.ImpalaTable.alter_partition" title="ibis.backends.impala.ImpalaTable.alter_partition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.alter_partition</span></code></a>(spec[, ...])</p></td>
 <td><p>Change setting and parameters of an existing partition</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.column_stats.html#ibis.backends.impala.ImpalaTable.column_stats" title="ibis.backends.impala.ImpalaTable.column_stats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.column_stats</span></code></a>()</p></td>
@@ -473,7 +473,7 @@ object you get back from <code class="docutils literal notranslate"><span class=
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.files.html#ibis.backends.impala.ImpalaTable.files" title="ibis.backends.impala.ImpalaTable.files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.files</span></code></a>()</p></td>
 <td><p>Return results of SHOW FILES statement</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.insert.html#ibis.backends.impala.ImpalaTable.insert" title="ibis.backends.impala.ImpalaTable.insert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.insert</span></code></a>([obj, overwrite, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.insert.html#ibis.backends.impala.ImpalaTable.insert" title="ibis.backends.impala.ImpalaTable.insert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.insert</span></code></a>([obj, overwrite, ...])</p></td>
 <td><p>Insert into Impala table.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.invalidate_metadata.html#ibis.backends.impala.ImpalaTable.invalidate_metadata" title="ibis.backends.impala.ImpalaTable.invalidate_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.invalidate_metadata</span></code></a>()</p></td>
@@ -482,7 +482,7 @@ object you get back from <code class="docutils literal notranslate"><span class=
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.is_partitioned.html#ibis.backends.impala.ImpalaTable.is_partitioned" title="ibis.backends.impala.ImpalaTable.is_partitioned"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.is_partitioned</span></code></a></p></td>
 <td><p>True if the table is partitioned</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.load_data.html#ibis.backends.impala.ImpalaTable.load_data" title="ibis.backends.impala.ImpalaTable.load_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.load_data</span></code></a>(path[, overwrite, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.load_data.html#ibis.backends.impala.ImpalaTable.load_data" title="ibis.backends.impala.ImpalaTable.load_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.load_data</span></code></a>(path[, overwrite, ...])</p></td>
 <td><p>Wraps the LOAD DATA DDL statement.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.metadata.html#ibis.backends.impala.ImpalaTable.metadata" title="ibis.backends.impala.ImpalaTable.metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.metadata</span></code></a>()</p></td>
@@ -492,7 +492,7 @@ object you get back from <code class="docutils literal notranslate"><span class=
 <td><p>For partitioned tables, return the schema (names and types) for the partition columns</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.partitions.html#ibis.backends.impala.ImpalaTable.partitions" title="ibis.backends.impala.ImpalaTable.partitions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.partitions</span></code></a>()</p></td>
-<td><p>Return a pandas.DataFrame giving information about this table’s partitions.</p></td>
+<td><p>Return a pandas.DataFrame giving information about this table's partitions.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.refresh.html#ibis.backends.impala.ImpalaTable.refresh" title="ibis.backends.impala.ImpalaTable.refresh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.refresh</span></code></a>()</p></td>
 <td><p></p></td>
@@ -521,7 +521,7 @@ object you get back from <code class="docutils literal notranslate"><span class=
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.drop_view.html#ibis.backends.impala.ImpalaClient.drop_view" title="ibis.backends.impala.ImpalaClient.drop_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.drop_view</span></code></a>(name[, database, force])</p></td>
 <td><p>Drop an Impala view</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.drop_table_or_view.html#ibis.backends.impala.ImpalaClient.drop_table_or_view" title="ibis.backends.impala.ImpalaClient.drop_table_or_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.drop_table_or_view</span></code></a>(name[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.drop_table_or_view.html#ibis.backends.impala.ImpalaClient.drop_table_or_view" title="ibis.backends.impala.ImpalaClient.drop_table_or_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.drop_table_or_view</span></code></a>(name[, ...])</p></td>
 <td><p>Attempt to drop a relation that may be a view or table</p></td>
 </tr>
 </tbody>
@@ -541,7 +541,7 @@ object you get back from <code class="docutils literal notranslate"><span class=
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.delimited_file.html#ibis.backends.impala.ImpalaClient.delimited_file" title="ibis.backends.impala.ImpalaClient.delimited_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.delimited_file</span></code></a>(hdfs_dir, schema)</p></td>
 <td><p>Interpret delimited text files (CSV / TSV / etc.) as an Ibis table.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.parquet_file.html#ibis.backends.impala.ImpalaClient.parquet_file" title="ibis.backends.impala.ImpalaClient.parquet_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.parquet_file</span></code></a>(hdfs_dir[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.parquet_file.html#ibis.backends.impala.ImpalaClient.parquet_file" title="ibis.backends.impala.ImpalaClient.parquet_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.parquet_file</span></code></a>(hdfs_dir[, ...])</p></td>
 <td><p>Make indicated parquet file in HDFS available as an Ibis table.</p></td>
 </tr>
 </tbody>
@@ -574,7 +574,7 @@ HDFS.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.impala.hdfs_connect.html#ibis.backends.impala.hdfs_connect" title="ibis.backends.impala.hdfs_connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hdfs_connect</span></code></a>([host, port, protocol, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.impala.hdfs_connect.html#ibis.backends.impala.hdfs_connect" title="ibis.backends.impala.hdfs_connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hdfs_connect</span></code></a>([host, port, protocol, ...])</p></td>
 <td><p>Connect to HDFS.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.impala.HDFS.ls.html#ibis.backends.impala.HDFS.ls" title="ibis.backends.impala.HDFS.ls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HDFS.ls</span></code></a>(hdfs_path[, status])</p></td>
@@ -592,10 +592,10 @@ HDFS.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.impala.HDFS.head.html#ibis.backends.impala.HDFS.head" title="ibis.backends.impala.HDFS.head"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HDFS.head</span></code></a>(hdfs_path[, nbytes, offset])</p></td>
 <td><p>Retrieve the requested number of bytes from a file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.impala.HDFS.put.html#ibis.backends.impala.HDFS.put" title="ibis.backends.impala.HDFS.put"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HDFS.put</span></code></a>(hdfs_path, resource[, overwrite, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.impala.HDFS.put.html#ibis.backends.impala.HDFS.put" title="ibis.backends.impala.HDFS.put"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HDFS.put</span></code></a>(hdfs_path, resource[, overwrite, ...])</p></td>
 <td><p>Write file or directory to HDFS.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.impala.HDFS.put_tarfile.html#ibis.backends.impala.HDFS.put_tarfile" title="ibis.backends.impala.HDFS.put_tarfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HDFS.put_tarfile</span></code></a>(hdfs_path, local_path[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.impala.HDFS.put_tarfile.html#ibis.backends.impala.HDFS.put_tarfile" title="ibis.backends.impala.HDFS.put_tarfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HDFS.put_tarfile</span></code></a>(hdfs_path, local_path[, ...])</p></td>
 <td><p>Write contents of tar archive to HDFS.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.impala.HDFS.rm.html#ibis.backends.impala.HDFS.rm" title="ibis.backends.impala.HDFS.rm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HDFS.rm</span></code></a>(path)</p></td>
@@ -735,7 +735,7 @@ top-level client connection or a database object.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.create_table.html#ibis.backends.impala.ImpalaClient.create_table" title="ibis.backends.impala.ImpalaClient.create_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.create_table</span></code></a>(table_name[, obj, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.create_table.html#ibis.backends.impala.ImpalaClient.create_table" title="ibis.backends.impala.ImpalaClient.create_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.create_table</span></code></a>(table_name[, obj, ...])</p></td>
 <td><p>Create a new table in Impala using an Ibis table expression.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaDatabase.create_table.html#ibis.backends.impala.ImpalaDatabase.create_table" title="ibis.backends.impala.ImpalaDatabase.create_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaDatabase.create_table</span></code></a>(table_name[, obj])</p></td>
@@ -862,7 +862,7 @@ getting information about the partition schema and any existing partition data:<
 <td><p>For partitioned tables, return the schema (names and types) for the partition columns</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.partitions.html#ibis.backends.impala.ImpalaTable.partitions" title="ibis.backends.impala.ImpalaTable.partitions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.partitions</span></code></a>()</p></td>
-<td><p>Return a pandas.DataFrame giving information about this table’s partitions.</p></td>
+<td><p>Return a pandas.DataFrame giving information about this table's partitions.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1033,10 +1033,10 @@ partition-specific metadata use <code class="docutils literal notranslate"><span
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.alter.html#ibis.backends.impala.ImpalaTable.alter" title="ibis.backends.impala.ImpalaTable.alter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.alter</span></code></a>([location, format, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.alter.html#ibis.backends.impala.ImpalaTable.alter" title="ibis.backends.impala.ImpalaTable.alter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.alter</span></code></a>([location, format, ...])</p></td>
 <td><p>Change setting and parameters of the table.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.alter_partition.html#ibis.backends.impala.ImpalaTable.alter_partition" title="ibis.backends.impala.ImpalaTable.alter_partition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.alter_partition</span></code></a>(spec[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.alter_partition.html#ibis.backends.impala.ImpalaTable.alter_partition" title="ibis.backends.impala.ImpalaTable.alter_partition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.alter_partition</span></code></a>(spec[, ...])</p></td>
 <td><p>Change setting and parameters of an existing partition</p></td>
 </tr>
 </tbody>
@@ -1176,7 +1176,7 @@ depend, of course, on the last <code class="docutils literal notranslate"><span 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.invalidate_metadata.html#ibis.backends.impala.ImpalaClient.invalidate_metadata" title="ibis.backends.impala.ImpalaClient.invalidate_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.invalidate_metadata</span></code></a>([name, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.invalidate_metadata.html#ibis.backends.impala.ImpalaClient.invalidate_metadata" title="ibis.backends.impala.ImpalaClient.invalidate_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.invalidate_metadata</span></code></a>([name, ...])</p></td>
 <td><p>Issue INVALIDATE METADATA command, optionally only applying to a particular table.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.invalidate_metadata.html#ibis.backends.impala.ImpalaTable.invalidate_metadata" title="ibis.backends.impala.ImpalaTable.invalidate_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.invalidate_metadata</span></code></a>()</p></td>
@@ -1216,10 +1216,10 @@ name conflicts so data is not lost in such cases.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.load_data.html#ibis.backends.impala.ImpalaClient.load_data" title="ibis.backends.impala.ImpalaClient.load_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.load_data</span></code></a>(table_name, path[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaClient.load_data.html#ibis.backends.impala.ImpalaClient.load_data" title="ibis.backends.impala.ImpalaClient.load_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaClient.load_data</span></code></a>(table_name, path[, ...])</p></td>
 <td><p>Wraps the LOAD DATA DDL statement.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.load_data.html#ibis.backends.impala.ImpalaTable.load_data" title="ibis.backends.impala.ImpalaTable.load_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.load_data</span></code></a>(path[, overwrite, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.load_data.html#ibis.backends.impala.ImpalaTable.load_data" title="ibis.backends.impala.ImpalaTable.load_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.load_data</span></code></a>(path[, overwrite, ...])</p></td>
 <td><p>Wraps the LOAD DATA DDL statement.</p></td>
 </tr>
 </tbody>

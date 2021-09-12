@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>API Reference &mdash; Ibis 0+untagged.1.g59f2eac documentation</title>
+  <title>API Reference &mdash; Ibis 0+untagged.1.gb70bf1d documentation</title>
   
 
   
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                0+untagged.1.g59f2eac
+                0+untagged.1.gb70bf1d
               </div>
             
           
@@ -629,10 +629,10 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.row_number.html#ibis.row_number" title="ibis.row_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">row_number</span></code></a>()</p></td>
 <td><p>Analytic function for the current row number, starting at 0.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.window.html#ibis.window" title="ibis.window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window</span></code></a>([preceding, following, group_by, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.window.html#ibis.window" title="ibis.window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window</span></code></a>([preceding, following, group_by, ...])</p></td>
 <td><p>Create a window clause for use with window functions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.range_window.html#ibis.range_window" title="ibis.range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">range_window</span></code></a>([preceding, following, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.range_window.html#ibis.range_window" title="ibis.range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">range_window</span></code></a>([preceding, following, ...])</p></td>
 <td><p>Create a range-based window clause for use with window functions.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.trailing_window.html#ibis.trailing_window" title="ibis.trailing_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_window</span></code></a>(preceding[, group_by, order_by])</p></td>
@@ -641,7 +641,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.cumulative_window.html#ibis.cumulative_window" title="ibis.cumulative_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cumulative_window</span></code></a>([group_by, order_by])</p></td>
 <td><p>Create a cumulative window for use with aggregate window functions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.trailing_range_window.html#ibis.trailing_range_window" title="ibis.trailing_range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_range_window</span></code></a>(preceding, order_by[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.trailing_range_window.html#ibis.trailing_range_window" title="ibis.trailing_range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_range_window</span></code></a>(preceding, order_by[, ...])</p></td>
 <td><p>Create a trailing time window for use with aggregate window functions.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.random.html#ibis.random" title="ibis.random"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random</span></code></a>()</p></td>
@@ -722,7 +722,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.aggregate.html#ibis.expr.api.TableExpr.aggregate" title="ibis.expr.api.TableExpr.aggregate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.aggregate</span></code></a>([metrics, by, having])</p></td>
 <td><p>Aggregate a table with a given set of reductions, with grouping expressions, and post-aggregation filters.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.asof_join.html#ibis.expr.api.TableExpr.asof_join" title="ibis.expr.api.TableExpr.asof_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.asof_join</span></code></a>(right[, predicates, by, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.asof_join.html#ibis.expr.api.TableExpr.asof_join" title="ibis.expr.api.TableExpr.asof_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.asof_join</span></code></a>(right[, predicates, by, ...])</p></td>
 <td><p>Perform an asof join between two tables.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.count.html#ibis.expr.api.TableExpr.count" title="ibis.expr.api.TableExpr.count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.count</span></code></a>()</p></td>
@@ -867,7 +867,7 @@
 <td><p>Check whether the value expression is contained within the indicated list of values.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.ValueExpr.notin.html#ibis.expr.api.ValueExpr.notin" title="ibis.expr.api.ValueExpr.notin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueExpr.notin</span></code></a>(values)</p></td>
-<td><p>Like isin, but checks whether this expression’s value(s) are not contained in the passed values.</p></td>
+<td><p>Like isin, but checks whether this expression's value(s) are not contained in the passed values.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.ValueExpr.nullif.html#ibis.expr.api.ValueExpr.nullif" title="ibis.expr.api.ValueExpr.nullif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueExpr.nullif</span></code></a>(null_if_expr)</p></td>
 <td><p>Set values to null if they match/equal a particular expression (scalar or array-valued).</p></td>
@@ -1075,10 +1075,10 @@
 </dl>
 </p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.NumericColumn.bucket.html#ibis.expr.api.NumericColumn.bucket" title="ibis.expr.api.NumericColumn.bucket"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumericColumn.bucket</span></code></a>(buckets[, closed, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.NumericColumn.bucket.html#ibis.expr.api.NumericColumn.bucket" title="ibis.expr.api.NumericColumn.bucket"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumericColumn.bucket</span></code></a>(buckets[, closed, ...])</p></td>
 <td><p>Compute a discrete binning of a numeric array</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.NumericColumn.histogram.html#ibis.expr.api.NumericColumn.histogram" title="ibis.expr.api.NumericColumn.histogram"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumericColumn.histogram</span></code></a>([nbins, binwidth, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.NumericColumn.histogram.html#ibis.expr.api.NumericColumn.histogram" title="ibis.expr.api.NumericColumn.histogram"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumericColumn.histogram</span></code></a>([nbins, binwidth, ...])</p></td>
 <td><p>Compute a histogram with fixed width bins</p></td>
 </tr>
 </tbody>
@@ -1163,7 +1163,7 @@
 <td><p>Parses a string and returns a timestamp.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.StringValue.parse_url.html#ibis.expr.api.StringValue.parse_url" title="ibis.expr.api.StringValue.parse_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StringValue.parse_url</span></code></a>(extract[, key])</p></td>
-<td><p>Returns the portion of a URL corresponding to a part specified by ‘extract’ Can optionally specify a key to retrieve an associated value if extract parameter is ‘QUERY’</p></td>
+<td><p>Returns the portion of a URL corresponding to a part specified by 'extract' Can optionally specify a key to retrieve an associated value if extract parameter is 'QUERY'</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.StringValue.substr.html#ibis.expr.api.StringValue.substr" title="ibis.expr.api.StringValue.substr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StringValue.substr</span></code></a>(start[, length])</p></td>
 <td><p>Pull substrings out of each string value by position and maximum length.</p></td>
@@ -1181,7 +1181,7 @@
 <td><p>Returns position (0 indexed) of first occurence of substring, optionally after a particular position (0 indexed)</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.StringValue.translate.html#ibis.expr.api.StringValue.translate" title="ibis.expr.api.StringValue.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StringValue.translate</span></code></a>(from_str, to_str)</p></td>
-<td><p>Returns string with set of ‘from’ characters replaced by set of ‘to’ characters.</p></td>
+<td><p>Returns string with set of 'from' characters replaced by set of 'to' characters.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.StringValue.find_in_set.html#ibis.expr.api.StringValue.find_in_set" title="ibis.expr.api.StringValue.find_in_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StringValue.find_in_set</span></code></a>(str_list)</p></td>
 <td><p>Returns postion (0 indexed) of first occurence of argument within a list of strings.</p></td>
@@ -1658,7 +1658,7 @@ are represented semantically as integers starting at 0.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.GeoSpatialValue.set_srid.html#ibis.expr.api.GeoSpatialValue.set_srid" title="ibis.expr.api.GeoSpatialValue.set_srid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeoSpatialValue.set_srid</span></code></a>(srid)</p></td>
 <td><p>Set the spatial reference identifier for the ST_Geometry</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.GeoSpatialValue.simplify.html#ibis.expr.api.GeoSpatialValue.simplify" title="ibis.expr.api.GeoSpatialValue.simplify"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeoSpatialValue.simplify</span></code></a>(tolerance, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.GeoSpatialValue.simplify.html#ibis.expr.api.GeoSpatialValue.simplify" title="ibis.expr.api.GeoSpatialValue.simplify"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeoSpatialValue.simplify</span></code></a>(tolerance, ...)</p></td>
 <td><p>Simplify a given geometry.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.GeoSpatialValue.srid.html#ibis.expr.api.GeoSpatialValue.srid" title="ibis.expr.api.GeoSpatialValue.srid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeoSpatialValue.srid</span></code></a>()</p></td>
