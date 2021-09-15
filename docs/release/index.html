@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Release Notes &mdash; Ibis 0+untagged.1.g1f84cf9 documentation</title>
+  <title>Release Notes &mdash; Ibis 0+untagged.1.gf6a345b documentation</title>
   
 
   
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                0+untagged.1.g1f84cf9
+                0+untagged.1.gf6a345b
               </div>
             
           
@@ -298,6 +298,7 @@ install it, and then use as before.</p></li>
 <li><p>[<span style="color: #4070A0;">Support</span>]<span> </span><a class="reference external" href="https://github.com/ibis-project/ibis/issues/2914">#2914</a><span>:</span> Removed <cite>log</cite> method of clients, in favor of <cite>verbose_log</cite> option</p></li>
 <li><p>[<span style="color: #4070A0;">Support</span>]<span> </span><a class="reference external" href="https://github.com/ibis-project/ibis/issues/2913">#2913</a><span>:</span> Method <cite>set_database</cite> has been deprecated, in favor of creating a new connection to a different database</p></li>
 <li><p>[<span style="color: #4070A0;">Support</span>]<span> </span><a class="reference external" href="https://github.com/ibis-project/ibis/issues/2962">#2962</a><span>:</span> Methods <cite>current_database</cite> and <cite>list_databases</cite> raise an exception for backends that do not support databases</p></li>
+<li><p>[<span style="color: #4070A0;">Support</span>]<span> </span><a class="reference external" href="https://github.com/ibis-project/ibis/issues/2977">#2977</a><span>:</span> Remove handwritten type parser; parsing errors that were previously <cite>IbisTypeError</cite> are now <cite>parsy.ParseError</cite>. <cite>parsy</cite> is now a hard requirement.</p></li>
 </ul>
 </div>
 <div class="section" id="Next 1.x bugfix release">
