@@ -1,0 +1,6 @@
+﻿ibis.backends.postgres.Backend.database
+=======================================
+
+.. currentmodule:: ibis.backends.postgres
+
+.. automethod:: Backend.database

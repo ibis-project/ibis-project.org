@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.truncate\_table
+============================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.truncate_table

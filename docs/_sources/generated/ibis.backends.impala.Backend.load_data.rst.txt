@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.load\_data
+=======================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.load_data

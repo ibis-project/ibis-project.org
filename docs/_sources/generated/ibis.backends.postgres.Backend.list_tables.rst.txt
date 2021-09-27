@@ -1,0 +1,6 @@
+﻿ibis.backends.postgres.Backend.list\_tables
+===========================================
+
+.. currentmodule:: ibis.backends.postgres
+
+.. automethod:: Backend.list_tables

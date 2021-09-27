@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.set\_database
+==========================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.set_database

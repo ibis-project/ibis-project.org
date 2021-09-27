@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.close
+==================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.close

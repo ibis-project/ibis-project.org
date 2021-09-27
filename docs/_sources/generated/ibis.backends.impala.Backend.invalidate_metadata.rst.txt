@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.invalidate\_metadata
+=================================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.invalidate_metadata

@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.insert
+===================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.insert

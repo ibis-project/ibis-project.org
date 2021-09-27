@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PostgreSQL &mdash; Ibis 0+untagged.1.gfc16d45 documentation</title>
+  <title>PostgreSQL &mdash; Ibis 0+untagged.1.gdce1945 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ibis.backends.postgres.Backend.connect" href="../generated/ibis.backends.postgres.Backend.connect.html" />
-    <link rel="prev" title="ibis.backends.sqlite.SQLiteClient.table" href="../generated/ibis.backends.sqlite.SQLiteClient.table.html" /> 
+    <link rel="prev" title="ibis.backends.sqlite.Backend.table" href="../generated/ibis.backends.sqlite.Backend.table.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +33,7 @@
             <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0+untagged.1.gfc16d45
+                0+untagged.1.gdce1945
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -52,10 +52,10 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">PostgreSQL</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#api">API</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.postgres.Backend.connect.html">ibis.backends.postgres.Backend.connect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.postgres.PostgreSQLClient.database.html">ibis.backends.postgres.PostgreSQLClient.database</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.postgres.PostgreSQLClient.list_tables.html">ibis.backends.postgres.PostgreSQLClient.list_tables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.postgres.PostgreSQLClient.list_databases.html">ibis.backends.postgres.PostgreSQLClient.list_databases</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.postgres.PostgreSQLClient.table.html">ibis.backends.postgres.PostgreSQLClient.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.postgres.Backend.database.html">ibis.backends.postgres.Backend.database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.postgres.Backend.list_tables.html">ibis.backends.postgres.Backend.list_tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.postgres.Backend.list_databases.html">ibis.backends.postgres.Backend.list_databases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.postgres.Backend.table.html">ibis.backends.postgres.Backend.table</a></li>
 </ul>
 </li>
 </ul>
@@ -154,16 +154,16 @@ create a client.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.postgres.Backend.connect.html#ibis.backends.postgres.Backend.connect" title="ibis.backends.postgres.Backend.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.connect</span></code></a>([host, user, password, ...])</p></td>
 <td><p>Create an Ibis client located at <cite>user</cite>:<cite>password`&#64;`host</cite>:<cite>port</cite> connected to a PostgreSQL database named <cite>database</cite>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.postgres.PostgreSQLClient.database.html#ibis.backends.postgres.PostgreSQLClient.database" title="ibis.backends.postgres.PostgreSQLClient.database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PostgreSQLClient.database</span></code></a>([name])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.postgres.Backend.database.html#ibis.backends.postgres.Backend.database" title="ibis.backends.postgres.Backend.database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.database</span></code></a>([name])</p></td>
+<td><p>Return a Database object for the <cite>name</cite> database.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.postgres.PostgreSQLClient.list_tables.html#ibis.backends.postgres.PostgreSQLClient.list_tables" title="ibis.backends.postgres.PostgreSQLClient.list_tables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PostgreSQLClient.list_tables</span></code></a>([like, database])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.postgres.Backend.list_tables.html#ibis.backends.postgres.Backend.list_tables" title="ibis.backends.postgres.Backend.list_tables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.list_tables</span></code></a>([like, database])</p></td>
+<td><p>Return the list of table names in the current database.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.postgres.PostgreSQLClient.list_databases.html#ibis.backends.postgres.PostgreSQLClient.list_databases" title="ibis.backends.postgres.PostgreSQLClient.list_databases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PostgreSQLClient.list_databases</span></code></a>([like])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.postgres.Backend.list_databases.html#ibis.backends.postgres.Backend.list_databases" title="ibis.backends.postgres.Backend.list_databases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.list_databases</span></code></a>([like])</p></td>
+<td><p>List databases in the current server.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.postgres.PostgreSQLClient.table.html#ibis.backends.postgres.PostgreSQLClient.table" title="ibis.backends.postgres.PostgreSQLClient.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PostgreSQLClient.table</span></code></a>(name[, database, schema])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.postgres.Backend.table.html#ibis.backends.postgres.Backend.table" title="ibis.backends.postgres.Backend.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.table</span></code></a>(name[, database, schema])</p></td>
 <td><p>Create a table expression that references a particular a table called <cite>name</cite> in a PostgreSQL database called <cite>database</cite>.</p></td>
 </tr>
 </tbody>
@@ -175,7 +175,7 @@ create a client.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../generated/ibis.backends.sqlite.SQLiteClient.table.html" class="btn btn-neutral float-left" title="ibis.backends.sqlite.SQLiteClient.table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../generated/ibis.backends.sqlite.Backend.table.html" class="btn btn-neutral float-left" title="ibis.backends.sqlite.Backend.table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../generated/ibis.backends.postgres.Backend.connect.html" class="btn btn-neutral float-right" title="ibis.backends.postgres.Backend.connect" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

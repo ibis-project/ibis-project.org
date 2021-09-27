@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SQLite &mdash; Ibis 0+untagged.1.gfc16d45 documentation</title>
+  <title>SQLite &mdash; Ibis 0+untagged.1.gdce1945 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -33,7 +33,7 @@
             <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0+untagged.1.gfc16d45
+                0+untagged.1.gdce1945
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -51,10 +51,10 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">SQLite</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#api">API</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.sqlite.Backend.connect.html">ibis.backends.sqlite.Backend.connect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.sqlite.SQLiteClient.attach.html">ibis.backends.sqlite.SQLiteClient.attach</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.sqlite.SQLiteClient.database.html">ibis.backends.sqlite.SQLiteClient.database</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.sqlite.SQLiteClient.list_tables.html">ibis.backends.sqlite.SQLiteClient.list_tables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.sqlite.SQLiteClient.table.html">ibis.backends.sqlite.SQLiteClient.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.sqlite.Backend.attach.html">ibis.backends.sqlite.Backend.attach</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.sqlite.Backend.database.html">ibis.backends.sqlite.Backend.database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.sqlite.Backend.list_tables.html">ibis.backends.sqlite.Backend.list_tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.sqlite.Backend.table.html">ibis.backends.sqlite.Backend.table</a></li>
 </ul>
 </li>
 </ul>
@@ -147,16 +147,16 @@ using SQLite.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.sqlite.Backend.connect.html#ibis.backends.sqlite.Backend.connect" title="ibis.backends.sqlite.Backend.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.connect</span></code></a>([path, create])</p></td>
 <td><p>Create an Ibis client connected to a SQLite database.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.sqlite.SQLiteClient.attach.html#ibis.backends.sqlite.SQLiteClient.attach" title="ibis.backends.sqlite.SQLiteClient.attach"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SQLiteClient.attach</span></code></a>(name, path[, create])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.sqlite.Backend.attach.html#ibis.backends.sqlite.Backend.attach" title="ibis.backends.sqlite.Backend.attach"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.attach</span></code></a>(name, path[, create])</p></td>
 <td><p>Connect another SQLite database file</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.sqlite.SQLiteClient.database.html#ibis.backends.sqlite.SQLiteClient.database" title="ibis.backends.sqlite.SQLiteClient.database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SQLiteClient.database</span></code></a>([name])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.sqlite.Backend.database.html#ibis.backends.sqlite.Backend.database" title="ibis.backends.sqlite.Backend.database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.database</span></code></a>([name])</p></td>
+<td><p>Return a Database object for the <cite>name</cite> database.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.sqlite.SQLiteClient.list_tables.html#ibis.backends.sqlite.SQLiteClient.list_tables" title="ibis.backends.sqlite.SQLiteClient.list_tables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SQLiteClient.list_tables</span></code></a>([like, database])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.sqlite.Backend.list_tables.html#ibis.backends.sqlite.Backend.list_tables" title="ibis.backends.sqlite.Backend.list_tables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.list_tables</span></code></a>([like, database])</p></td>
+<td><p>Return the list of table names in the current database.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.sqlite.SQLiteClient.table.html#ibis.backends.sqlite.SQLiteClient.table" title="ibis.backends.sqlite.SQLiteClient.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SQLiteClient.table</span></code></a>(name[, database])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.sqlite.Backend.table.html#ibis.backends.sqlite.Backend.table" title="ibis.backends.sqlite.Backend.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.table</span></code></a>(name[, database])</p></td>
 <td><p>Create a table expression that references a particular table in the SQLite database</p></td>
 </tr>
 </tbody>

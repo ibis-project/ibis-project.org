@@ -1,0 +1,6 @@
+﻿ibis.backends.pyspark.Backend.database
+======================================
+
+.. currentmodule:: ibis.backends.pyspark
+
+.. automethod:: Backend.database

@@ -1,0 +1,6 @@
+﻿ibis.backends.clickhouse.Backend.exists\_table
+==============================================
+
+.. currentmodule:: ibis.backends.clickhouse
+
+.. automethod:: Backend.exists_table

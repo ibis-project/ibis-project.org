@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.avro\_file
+=======================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.avro_file

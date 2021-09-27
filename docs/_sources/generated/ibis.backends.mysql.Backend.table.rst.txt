@@ -1,0 +1,6 @@
+﻿ibis.backends.mysql.Backend.table
+=================================
+
+.. currentmodule:: ibis.backends.mysql
+
+.. automethod:: Backend.table

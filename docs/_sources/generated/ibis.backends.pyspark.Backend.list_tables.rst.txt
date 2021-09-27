@@ -1,0 +1,6 @@
+﻿ibis.backends.pyspark.Backend.list\_tables
+==========================================
+
+.. currentmodule:: ibis.backends.pyspark
+
+.. automethod:: Backend.list_tables

@@ -1,0 +1,6 @@
+﻿ibis.backends.sqlite.Backend.database
+=====================================
+
+.. currentmodule:: ibis.backends.sqlite
+
+.. automethod:: Backend.database

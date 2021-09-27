@@ -1,0 +1,6 @@
+﻿ibis.backends.pyspark.Backend.list\_databases
+=============================================
+
+.. currentmodule:: ibis.backends.pyspark
+
+.. automethod:: Backend.list_databases

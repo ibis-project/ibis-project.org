@@ -1,0 +1,6 @@
+﻿ibis.backends.sqlite.Backend.attach
+===================================
+
+.. currentmodule:: ibis.backends.sqlite
+
+.. automethod:: Backend.attach

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MySQL &mdash; Ibis 0+untagged.1.gfc16d45 documentation</title>
+  <title>MySQL &mdash; Ibis 0+untagged.1.gdce1945 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ibis.backends.mysql.Backend.connect" href="../generated/ibis.backends.mysql.Backend.connect.html" />
-    <link rel="prev" title="ibis.backends.postgres.PostgreSQLClient.table" href="../generated/ibis.backends.postgres.PostgreSQLClient.table.html" /> 
+    <link rel="prev" title="ibis.backends.postgres.Backend.table" href="../generated/ibis.backends.postgres.Backend.table.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +33,7 @@
             <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0+untagged.1.gfc16d45
+                0+untagged.1.gdce1945
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -53,10 +53,10 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">MySQL</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#api">API</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.connect.html">ibis.backends.mysql.Backend.connect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.mysql.MySQLClient.database.html">ibis.backends.mysql.MySQLClient.database</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.mysql.MySQLClient.list_databases.html">ibis.backends.mysql.MySQLClient.list_databases</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.mysql.MySQLClient.list_tables.html">ibis.backends.mysql.MySQLClient.list_tables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.mysql.MySQLClient.table.html">ibis.backends.mysql.MySQLClient.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.database.html">ibis.backends.mysql.Backend.database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.list_databases.html">ibis.backends.mysql.Backend.list_databases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.list_tables.html">ibis.backends.mysql.Backend.list_tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.table.html">ibis.backends.mysql.Backend.table</a></li>
 </ul>
 </li>
 </ul>
@@ -151,16 +151,16 @@ create a client.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.connect.html#ibis.backends.mysql.Backend.connect" title="ibis.backends.mysql.Backend.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.connect</span></code></a>([host, user, password, ...])</p></td>
 <td><p>Create an Ibis client located at <cite>user</cite>:<cite>password`&#64;`host</cite>:<cite>port</cite> connected to a MySQL database named <cite>database</cite>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.MySQLClient.database.html#ibis.backends.mysql.MySQLClient.database" title="ibis.backends.mysql.MySQLClient.database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MySQLClient.database</span></code></a>([name])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.database.html#ibis.backends.mysql.Backend.database" title="ibis.backends.mysql.Backend.database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.database</span></code></a>([name])</p></td>
+<td><p>Return a Database object for the <cite>name</cite> database.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.MySQLClient.list_databases.html#ibis.backends.mysql.MySQLClient.list_databases" title="ibis.backends.mysql.MySQLClient.list_databases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MySQLClient.list_databases</span></code></a>([like])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.list_databases.html#ibis.backends.mysql.Backend.list_databases" title="ibis.backends.mysql.Backend.list_databases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.list_databases</span></code></a>([like])</p></td>
+<td><p>List databases in the current server.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.MySQLClient.list_tables.html#ibis.backends.mysql.MySQLClient.list_tables" title="ibis.backends.mysql.MySQLClient.list_tables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MySQLClient.list_tables</span></code></a>([like, database])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.list_tables.html#ibis.backends.mysql.Backend.list_tables" title="ibis.backends.mysql.Backend.list_tables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.list_tables</span></code></a>([like, database])</p></td>
+<td><p>Return the list of table names in the current database.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.MySQLClient.table.html#ibis.backends.mysql.MySQLClient.table" title="ibis.backends.mysql.MySQLClient.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MySQLClient.table</span></code></a>(name[, database, schema])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.table.html#ibis.backends.mysql.Backend.table" title="ibis.backends.mysql.Backend.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.table</span></code></a>(name[, database, schema])</p></td>
 <td><p>Create a table expression that references a particular a table called <cite>name</cite> in a MySQL database called <cite>database</cite>.</p></td>
 </tr>
 </tbody>
@@ -172,7 +172,7 @@ create a client.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../generated/ibis.backends.postgres.PostgreSQLClient.table.html" class="btn btn-neutral float-left" title="ibis.backends.postgres.PostgreSQLClient.table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../generated/ibis.backends.postgres.Backend.table.html" class="btn btn-neutral float-left" title="ibis.backends.postgres.Backend.table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../generated/ibis.backends.mysql.Backend.connect.html" class="btn btn-neutral float-right" title="ibis.backends.mysql.Backend.connect" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

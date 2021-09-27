@@ -1,0 +1,6 @@
+﻿ibis.backends.mysql.Backend.list\_databases
+===========================================
+
+.. currentmodule:: ibis.backends.mysql
+
+.. automethod:: Backend.list_databases

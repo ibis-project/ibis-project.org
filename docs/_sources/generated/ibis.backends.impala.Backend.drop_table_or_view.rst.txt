@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.drop\_table\_or\_view
+==================================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.drop_table_or_view

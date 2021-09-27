@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.set\_compression\_codec
+====================================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.set_compression_codec

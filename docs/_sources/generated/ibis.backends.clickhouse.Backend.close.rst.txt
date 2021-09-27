@@ -1,0 +1,6 @@
+﻿ibis.backends.clickhouse.Backend.close
+======================================
+
+.. currentmodule:: ibis.backends.clickhouse
+
+.. automethod:: Backend.close

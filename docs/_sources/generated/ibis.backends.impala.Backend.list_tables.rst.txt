@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.list\_tables
+=========================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.list_tables

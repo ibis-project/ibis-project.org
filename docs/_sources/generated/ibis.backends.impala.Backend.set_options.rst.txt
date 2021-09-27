@@ -1,0 +1,6 @@
+﻿ibis.backends.impala.Backend.set\_options
+=========================================
+
+.. currentmodule:: ibis.backends.impala
+
+.. automethod:: Backend.set_options
