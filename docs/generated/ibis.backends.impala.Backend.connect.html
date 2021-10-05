@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ibis.backends.impala.Backend.connect &mdash; Ibis 0+untagged.1.ga126241 documentation</title>
+  <title>ibis.backends.impala.Backend.connect &mdash; Ibis 0+untagged.1.g27f712c documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -33,7 +33,7 @@
             <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0+untagged.1.ga126241
+                0+untagged.1.g27f712c
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -146,7 +146,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ibis.backends.impala.Backend.connect">
 <span class="sig-prename descclassname"><span class="pre">Backend.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21050</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_ssl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ca_cert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auth_mechanism</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NOSASL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kerberos_service_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'impala'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdfs_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.backends.impala.Backend.connect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create an ImpalaClient for use with Ibis.</p>
+<dd><p>Create a Impala Backend for use with Ibis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -184,7 +184,7 @@ connections.  Use GSSAPI for Kerberos-secured clusters.</p></li>
 <span class="gp">... </span>    <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span><span class="p">,</span>
 <span class="gp">... </span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">client</span>  
-<span class="go">&lt;ibis.impala.client.ImpalaClient object at 0x...&gt;</span>
+<span class="go">&lt;ibis.backends.impala.Backend object at 0x...&gt;</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -192,7 +192,7 @@ connections.  Use GSSAPI for Kerberos-secured clusters.</p></li>
 <dd class="field-odd"><p></p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>ImpalaClient</p>
+<dd class="field-even"><p>Backend</p>
 </dd>
 </dl>
 </dd></dl>
