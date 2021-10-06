@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Release Notes &mdash; Ibis 0+untagged.1.g8208bba documentation</title>
+  <title>Release Notes &mdash; Ibis 0+untagged.1.g430b792 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -33,7 +33,7 @@
             <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0+untagged.1.g8208bba
+                0+untagged.1.g430b792
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -205,6 +205,11 @@ install it, and then use as before.</p></li>
 <li><p>[<span style="color: #4070A0;">Support</span>]<span> </span><a class="reference external" href="https://github.com/ibis-project/ibis/issues/2962">#2962</a><span>:</span> Methods <cite>current_database</cite> and <cite>list_databases</cite> raise an exception for backends that do not support databases</p></li>
 <li><p>[<span style="color: #4070A0;">Support</span>]<span> </span><a class="reference external" href="https://github.com/ibis-project/ibis/issues/2977">#2977</a><span>:</span> Remove handwritten type parser; parsing errors that were previously <cite>IbisTypeError</cite> are now <cite>parsy.ParseError</cite>. <cite>parsy</cite> is now a hard requirement.</p></li>
 <li><p>[<span style="color: #4070A0;">Support</span>]<span> </span><a class="reference external" href="https://github.com/ibis-project/ibis/issues/2905">#2905</a><span>:</span> Deprecate <cite>exists_table(table)</cite> in favor of <cite>table in list_tables()</cite></p></li>
+<li><p>[<span style="color: #4070A0;">Support</span>]<span> </span><a class="reference external" href="https://github.com/ibis-project/ibis/issues/2678">#2678</a><span>:</span> Improvement of the backend API. The former <cite>Client</cite> subclasses have been replaced by a <cite>Backend</cite> class that must
+subclass <cite>ibis.backends.base.BaseBackend</cite>. The <cite>BaseBackend</cite> class contains abstract methods for the minimum subset of methods that
+backends must implement, and their signatures have been standardized across backends. The Ibis compiler has been refactored, and
+backends don’t need to implement all compiler classes anymore if the default works for them. Only a subclass of
+<cite>ibis.backends.base.sql.compiler.Compiler</cite> is now required. Backends now need to register themselves as entry points.</p></li>
 </ul>
 </section>
 <section id="Next 1.x bugfix release">
