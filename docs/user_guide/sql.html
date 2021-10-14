@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ibis for SQL Programmers &mdash; Ibis 0+untagged.1.ge9707b4 documentation</title>
+  <title>Ibis for SQL Programmers &mdash; Ibis 0+untagged.1.gd94d938 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -33,7 +33,7 @@
             <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0+untagged.1.ge9707b4
+                0+untagged.1.gd94d938
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -865,8 +865,7 @@ boolean expression:</p>
 <span class="gp">In [89]: </span><span class="nb">print</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">expr</span><span class="p">))</span>
 <span class="go">SELECT *</span>
 <span class="go">FROM my_data</span>
-<span class="go">WHERE (`two` BETWEEN 10 AND 50) AND</span>
-<span class="go">      (`one` IS NOT NULL)</span>
+<span class="go">WHERE `two` BETWEEN 10 AND 50 AND (`one` IS NOT NULL)</span>
 </pre></div>
 </div>
 </section>
