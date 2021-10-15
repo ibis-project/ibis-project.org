@@ -1,17 +1,38 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Extending Ibis Part 2: Adding a New Reduction Expression &mdash; Ibis 0+untagged.1.gd94d938 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+  <title>Extending Ibis Part 2: Adding a New Reduction Expression &mdash; Ibis 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
@@ -19,24 +40,46 @@
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script src="../../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="API Reference" href="../../api.html" />
     <link rel="prev" title="Extending Ibis Part 1: Adding a New Elementwise Expression" href="extending_elementwise_expr.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../../index.html" class="icon icon-home"> Ibis
+          
+
+          
+            
             <img src="../../_static/logo-wide.svg" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
               <div class="version">
-                0+untagged.1.gd94d938
+                2.0.0
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -44,7 +87,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial/index.html">Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">User guide</a><ul class="current">
@@ -72,32 +126,75 @@
 <li class="toctree-l1"><a class="reference internal" href="../../release/index.html">Release Notes</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Ibis</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="../index.html">User guide</a> &raquo;</li>
+        
           <li><a href="index.html">Extending Ibis</a> &raquo;</li>
+        
       <li>Extending Ibis Part 2: Adding a New Reduction Expression</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../../_sources/user_guide/extending/extending_reduce_expr.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   
 <style>
 /* CSS for nbsphinx extension */
@@ -368,15 +465,15 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<section id="Extending-Ibis-Part-2:-Adding-a-New-Reduction-Expression">
+<div class="section" id="Extending-Ibis-Part-2:-Adding-a-New-Reduction-Expression">
 <h1>Extending Ibis Part 2: Adding a New Reduction Expression<a class="headerlink" href="#Extending-Ibis-Part-2:-Adding-a-New-Reduction-Expression" title="Permalink to this headline">¶</a></h1>
 <p>This notebook will show you how to add a new <em>reduction</em> operation <code class="docutils literal notranslate"><span class="pre">last_date</span></code> to the existing backend SQLite.</p>
 <p>A reduction operation is a function that maps <span class="math notranslate nohighlight">\(N\)</span> rows to 1 row, for example the <code class="docutils literal notranslate"><span class="pre">sum</span></code> function.</p>
-<section id="Description">
+<div class="section" id="Description">
 <h2>Description<a class="headerlink" href="#Description" title="Permalink to this headline">¶</a></h2>
 <p>We’re going to add a <strong>``last_date``</strong> function to ibis. <code class="docutils literal notranslate"><span class="pre">last_date</span></code> simply returns the latest date of a list of dates.</p>
-</section>
-<section id="Step-1:-Define-the-Operation">
+</div>
+<div class="section" id="Step-1:-Define-the-Operation">
 <h2>Step 1: Define the Operation<a class="headerlink" href="#Step-1:-Define-the-Operation" title="Permalink to this headline">¶</a></h2>
 <p>Let’s define the <code class="docutils literal notranslate"><span class="pre">last_date</span></code> operation as a function that takes any date column as input and returns a date:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
@@ -406,8 +503,8 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>We just defined a <code class="docutils literal notranslate"><span class="pre">LastDate</span></code> class that takes one date column as input, and returns a scalar output of the same type as the input. This matches both the requirements of a reduction and the spepcifics of the function that we want to implement.</p>
 <p><strong>Note</strong>: It is very important that you write the correct argument rules and output type here. The expression <em>will not work</em> otherwise.</p>
-</section>
-<section id="Step-2:-Define-the-API">
+</div>
+<div class="section" id="Step-2:-Define-the-API">
 <h2>Step 2: Define the API<a class="headerlink" href="#Step-2:-Define-the-API" title="Permalink to this headline">¶</a></h2>
 <p>Because every reduction in ibis has the ability to filter out values during aggregation (a typical feature in databases and analytics tools), to make an expression out of <code class="docutils literal notranslate"><span class="pre">LastDate</span></code> we need to pass an additional argument: <code class="docutils literal notranslate"><span class="pre">where</span></code> to our <code class="docutils literal notranslate"><span class="pre">LastDate</span></code> constructor.</p>
 <div class="nbinput nblast docutils container">
@@ -426,8 +523,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</section>
-<section id="Interlude:-Create-some-expressions-using-last_date">
+</div>
+<div class="section" id="Interlude:-Create-some-expressions-using-last_date">
 <h2>Interlude: Create some expressions using <code class="docutils literal notranslate"><span class="pre">last_date</span></code><a class="headerlink" href="#Interlude:-Create-some-expressions-using-last_date" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -461,8 +558,21 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/user_guide_extending_extending_reduce_expr_13_0.png" src="../../_images/user_guide_extending_extending_reduce_expr_13_0.png" />
-</div>
+<div class="highlight"><pre>
+ref_0
+UnboundTable[table]
+  name: people
+  schema:
+    name : string
+    country : string
+    date_of_birth : date
+
+LastDate[date]
+  date_of_birth = Column[date*] &#39;date_of_birth&#39; from table
+    ref_0
+  where:
+    None
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -478,11 +588,30 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/user_guide_extending_extending_reduce_expr_14_0.png" src="../../_images/user_guide_extending_extending_reduce_expr_14_0.png" />
+<div class="highlight"><pre>
+ref_0
+UnboundTable[table]
+  name: people
+  schema:
+    name : string
+    country : string
+    date_of_birth : date
+
+LastDate[date]
+  date_of_birth = Column[date*] &#39;date_of_birth&#39; from table
+    ref_0
+  where:
+    Equals[boolean*]
+      left:
+        country = Column[string*] &#39;country&#39; from table
+          ref_0
+      right:
+        Literal[string]
+          Indonesia
+</pre></div></div>
 </div>
 </div>
-</section>
-<section id="Step-3:-Turn-the-Expression-into-SQL">
+<div class="section" id="Step-3:-Turn-the-Expression-into-SQL">
 <h2>Step 3: Turn the Expression into SQL<a class="headerlink" href="#Step-3:-Turn-the-Expression-into-SQL" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -510,8 +639,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</section>
-<section id="Step-4:-Putting-it-all-Together">
+</div>
+<div class="section" id="Step-4:-Putting-it-all-Together">
 <h2>Step 4: Putting it all Together<a class="headerlink" href="#Step-4:-Putting-it-all-Together" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -527,7 +656,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<section id="Create-and-execute-a-bitwise_and-expression">
+<div class="section" id="Create-and-execute-a-bitwise_and-expression">
 <h3>Create and execute a <code class="docutils literal notranslate"><span class="pre">bitwise_and</span></code> expression<a class="headerlink" href="#Create-and-execute-a-bitwise_and-expression" title="Permalink to this headline">¶</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -544,8 +673,14 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/user_guide_extending_extending_reduce_expr_20_0.png" src="../../_images/user_guide_extending_extending_reduce_expr_20_0.png" />
-</div>
+<div class="highlight"><pre>
+AlchemyTable[table]
+  name: independence
+  schema:
+    country_code : string
+    independence_date : date
+    independence_from : string
+</pre></div></div>
 </div>
 <p>Last country to gain independence in our database:</p>
 <div class="nbinput docutils container">
@@ -563,8 +698,21 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/user_guide_extending_extending_reduce_expr_22_0.png" src="../../_images/user_guide_extending_extending_reduce_expr_22_0.png" />
-</div>
+<div class="highlight"><pre>
+ref_0
+AlchemyTable[table]
+  name: independence
+  schema:
+    country_code : string
+    independence_date : date
+    independence_from : string
+
+LastDate[date]
+  independence_date = Column[date*] &#39;independence_date&#39; from table
+    ref_0
+  where:
+    None
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -619,8 +767,27 @@ Timestamp(&#39;2011-07-09 00:00:00&#39;)
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/user_guide_extending_extending_reduce_expr_26_0.png" src="../../_images/user_guide_extending_extending_reduce_expr_26_0.png" />
-</div>
+<div class="highlight"><pre>
+ref_0
+AlchemyTable[table]
+  name: independence
+  schema:
+    country_code : string
+    independence_date : date
+    independence_from : string
+
+LastDate[date]
+  independence_date = Column[date*] &#39;independence_date&#39; from table
+    ref_0
+  where:
+    Equals[boolean*]
+      left:
+        independence_from = Column[string*] &#39;independence_from&#39; from table
+          ref_0
+      right:
+        Literal[string]
+          Spanish Empire
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -641,39 +808,56 @@ Timestamp(&#39;2011-07-09 00:00:00&#39;)
 Timestamp(&#39;1898-06-12 00:00:00&#39;)
 </pre></div></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="extending_elementwise_expr.html" class="btn btn-neutral float-left" title="Extending Ibis Part 1: Adding a New Elementwise Expression" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../../api.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="extending_elementwise_expr.html" class="btn btn-neutral float-left" title="Extending Ibis Part 1: Adding a New Elementwise Expression" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Ibis Developers.</p>
-  </div>
+    <p>
+        &#169; Copyright 2021, Ibis Developers.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -1,17 +1,38 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced Topics: Additional Filtering &mdash; Ibis 0+untagged.1.gd94d938 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+  <title>Advanced Topics: Additional Filtering &mdash; Ibis 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
@@ -19,24 +40,46 @@
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script src="../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Advanced Topics: Analytics Tools" href="07-Advanced-Topics-Analytics-Tools.html" />
     <link rel="prev" title="Creating and inserting data" href="05-IO-Create-Insert-External-Data.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../index.html" class="icon icon-home"> Ibis
+          
+
+          
+            
             <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
               <div class="version">
-                0+untagged.1.gd94d938
+                2.0.0
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -44,7 +87,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorial</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01-Introduction-to-Ibis.html">Introduction to Ibis</a></li>
@@ -69,31 +123,73 @@
 <li class="toctree-l1"><a class="reference internal" href="../release/index.html">Release Notes</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Ibis</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="index.html">Tutorial</a> &raquo;</li>
+        
       <li>Advanced Topics: Additional Filtering</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../_sources/tutorial/06-Advanced-Topics-ComplexFiltering.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   
 <style>
 /* CSS for nbsphinx extension */
@@ -364,7 +460,7 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<section id="Advanced-Topics:-Additional-Filtering">
+<div class="section" id="Advanced-Topics:-Additional-Filtering">
 <h1>Advanced Topics: Additional Filtering<a class="headerlink" href="#Advanced-Topics:-Additional-Filtering" title="Permalink to this headline">¶</a></h1>
 <p>The filtering examples we’ve shown to this point have been pretty simple, either comparisons between columns or fixed values, or set filter functions like <code class="docutils literal notranslate"><span class="pre">isin</span></code> and <code class="docutils literal notranslate"><span class="pre">notin</span></code>.</p>
 <p>Ibis supports a number of richer analytical filters that can involve one or more of:</p>
@@ -373,7 +469,7 @@ div.rendered_html tbody tr:hover {
 <li><p>Conditional aggregates (in SQL-speak these are similar to “correlated subqueries”)</p></li>
 <li><p>“Existence” set filters (equivalent to the SQL <code class="docutils literal notranslate"><span class="pre">EXISTS</span></code> and <code class="docutils literal notranslate"><span class="pre">NOT</span> <span class="pre">EXISTS</span></code> keywords)</p></li>
 </ul>
-<section id="Setup">
+<div class="section" id="Setup">
 <h2>Setup<a class="headerlink" href="#Setup" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -389,8 +485,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</section>
-<section id="Using-scalar-aggregates-in-filters">
+</div>
+<div class="section" id="Using-scalar-aggregates-in-filters">
 <h2>Using scalar aggregates in filters<a class="headerlink" href="#Using-scalar-aggregates-in-filters" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -469,8 +565,8 @@ div.rendered_html tbody tr:hover {
 1    45415596        EU
 </pre></div></div>
 </div>
-</section>
-<section id="Conditional-aggregates">
+</div>
+<div class="section" id="Conditional-aggregates">
 <h2>Conditional aggregates<a class="headerlink" href="#Conditional-aggregates" title="Permalink to this headline">¶</a></h2>
 <p>Suppose that we wish to filter using an aggregate computed conditional on some other expressions holding true.</p>
 <p>For example, we want to filter European countries larger than the average country size, but this time of the average in Africa. African countries have an smaller size compared to the world average, and France gets into the list:</p>
@@ -501,8 +597,8 @@ div.rendered_html tbody tr:hover {
 2    45415596        EU
 </pre></div></div>
 </div>
-</section>
-<section id="“Existence”-filters">
+</div>
+<div class="section" id="“Existence”-filters">
 <h2>“Existence” filters<a class="headerlink" href="#“Existence”-filters" title="Permalink to this headline">¶</a></h2>
 <p>Some filtering involves checking for the existence of a particular value in a column of another table, or amount the results of some value expression. This is common in many-to-many relationships, and can be performed in numerous different ways, but it’s nice to be able to express it with a single concise statement and let Ibis compute it optimally.</p>
 <p>An example could be finding all countries that had <strong>any</strong> year with a higher GDP than 3 trillion US dollars:</p>
@@ -565,8 +661,8 @@ Name: name, dtype: object
 </pre></div></div>
 </div>
 <p>Note how this is different than a join between <code class="docutils literal notranslate"><span class="pre">countries</span></code> and <code class="docutils literal notranslate"><span class="pre">gdp</span></code>, which would return one row per year. The method <code class="docutils literal notranslate"><span class="pre">.any()</span></code> is equivalent to filtering with a subquery.</p>
-</section>
-<section id="Filtering-in-aggregations">
+</div>
+<div class="section" id="Filtering-in-aggregations">
 <h2>Filtering in aggregations<a class="headerlink" href="#Filtering-in-aggregations" title="Permalink to this headline">¶</a></h2>
 <p>Suppose that you want to compute an aggregation with a subset of the data for <em>only one</em> of the metrics / aggregates in question, and the complete data set with the other aggregates. Most aggregation functions are thus equipped with a <code class="docutils literal notranslate"><span class="pre">where</span></code> argument. Let me show it to you in action:</p>
 <div class="nbinput docutils container">
@@ -608,38 +704,55 @@ Name: name, dtype: object
 6        SA           14         400143568                          NaN
 </pre></div></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="05-IO-Create-Insert-External-Data.html" class="btn btn-neutral float-left" title="Creating and inserting data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="07-Advanced-Topics-Analytics-Tools.html" class="btn btn-neutral float-right" title="Advanced Topics: Analytics Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="05-IO-Create-Insert-External-Data.html" class="btn btn-neutral float-left" title="Creating and inserting data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Ibis Developers.</p>
-  </div>
+    <p>
+        &#169; Copyright 2021, Ibis Developers.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

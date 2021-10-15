@@ -1,17 +1,38 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ibis and Geospatial Operations &mdash; Ibis 0+untagged.1.gd94d938 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+  <title>Ibis and Geospatial Operations &mdash; Ibis 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
@@ -19,24 +40,46 @@
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script src="../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Design" href="design.html" />
     <link rel="prev" title="User Defined Functions" href="udf.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../index.html" class="icon icon-home"> Ibis
+          
+
+          
+            
             <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
               <div class="version">
-                0+untagged.1.gd94d938
+                2.0.0
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -44,7 +87,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">User guide</a><ul class="current">
@@ -70,31 +124,73 @@
 <li class="toctree-l1"><a class="reference internal" href="../release/index.html">Release Notes</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Ibis</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="index.html">User guide</a> &raquo;</li>
+        
       <li>Ibis and Geospatial Operations</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../_sources/user_guide/geospatial_analysis.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   
 <style>
 /* CSS for nbsphinx extension */
@@ -365,11 +461,11 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<section id="Ibis-and-Geospatial-Operations">
+<div class="section" id="Ibis-and-Geospatial-Operations">
 <h1>Ibis and Geospatial Operations<a class="headerlink" href="#Ibis-and-Geospatial-Operations" title="Permalink to this headline">¶</a></h1>
 <p>One of the most popular extensions to PostgreSQL is PostGIS, which adds support for storing geospatial geometries, as well as functionality for reasoning about and performing operations on those geometries.</p>
 <p>This is a demo showing how to assemble ibis expressions for a PostGIS-enabled database. We will be using a database that has been loaded with an <a class="reference external" href="https://www.openstreetmap.org/">Open Street Map</a> extract for Southern California. This extract can be found <a class="reference external" href="https://download.geofabrik.de/north-america/us/california/socal.html">here</a>, and loaded into PostGIS using a tool like <a class="reference external" href="https://gdal.org/programs/ogr2ogr.html">ogr2ogr</a>.</p>
-<section id="Preparation">
+<div class="section" id="Preparation">
 <h2>Preparation<a class="headerlink" href="#Preparation" title="Permalink to this headline">¶</a></h2>
 <p>We first need to set up a demonstration database and load it with the sample data. If you have Docker installed, you can download and launch a PostGIS database with the following:</p>
 <div class="nbinput docutils container">
@@ -419,8 +515,8 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 0...10...20...30...40...50...60...70...80...90...100 - done.
 </pre></div></div>
 </div>
-</section>
-<section id="Connecting-to-the-database">
+</div>
+<div class="section" id="Connecting-to-the-database">
 <h2>Connecting to the database<a class="headerlink" href="#Connecting-to-the-database" title="Permalink to this headline">¶</a></h2>
 <p>We first make the relevant imports, and connect to the PostGIS database:</p>
 <div class="nbinput nblast docutils container">
@@ -486,8 +582,8 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 </pre></div>
 </div>
 </div>
-</section>
-<section id="Querying-the-data">
+</div>
+<div class="section" id="Querying-the-data">
 <h2>Querying the data<a class="headerlink" href="#Querying-the-data" title="Permalink to this headline">¶</a></h2>
 <p>We query the polygons table for shapes with an administrative level of 8, which corresponds to municipalities.</p>
 <p>We also reproject some of the column names so we don’t have a name collision later.</p>
@@ -539,8 +635,8 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 </pre></div>
 </div>
 </div>
-</section>
-<section id="Making-a-spatial-join">
+</div>
+<div class="section" id="Making-a-spatial-join">
 <h2>Making a spatial join<a class="headerlink" href="#Making-a-spatial-join" title="Permalink to this headline">¶</a></h2>
 <p>Let’s test a spatial join by selecting all the highways that intersect the city of Los Angeles, or one if its neighbors.</p>
 <p>We begin by assembling an expression for Los Angeles and its neighbors. We consider a city to be a neighbor if it has any point of intersection (by this critereon we also get Los Angeles itself).</p>
@@ -784,8 +880,8 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <img alt="../_images/user_guide_geospatial_analysis_26_1.png" src="../_images/user_guide_geospatial_analysis_26_1.png" />
 </div>
 </div>
-</section>
-<section id="Combining-the-results">
+</div>
+<div class="section" id="Combining-the-results">
 <h2>Combining the results<a class="headerlink" href="#Combining-the-results" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have made a number of queries and joins, let’s combine them into a single plot. To make the plot a bit nicer, we can also load some shapefiles for the coast and land:</p>
 <div class="nbinput nblast docutils container">
@@ -829,38 +925,55 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <img alt="../_images/user_guide_geospatial_analysis_29_1.png" src="../_images/user_guide_geospatial_analysis_29_1.png" />
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="udf.html" class="btn btn-neutral float-left" title="User Defined Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="design.html" class="btn btn-neutral float-right" title="Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="udf.html" class="btn btn-neutral float-left" title="User Defined Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Ibis Developers.</p>
-  </div>
+    <p>
+        &#169; Copyright 2021, Ibis Developers.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

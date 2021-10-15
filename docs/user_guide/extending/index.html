@@ -1,40 +1,83 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Extending Ibis &mdash; Ibis 0+untagged.1.gd94d938 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+  <title>Extending Ibis &mdash; Ibis 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Extending Ibis Part 1: Adding a New Elementwise Expression" href="extending_elementwise_expr.html" />
     <link rel="prev" title="Design" href="../design.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../../index.html" class="icon icon-home"> Ibis
+          
+
+          
+            
             <img src="../../_static/logo-wide.svg" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
               <div class="version">
-                0+untagged.1.gd94d938
+                2.0.0
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -42,7 +85,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial/index.html">Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">User guide</a><ul class="current">
@@ -70,31 +124,73 @@
 <li class="toctree-l1"><a class="reference internal" href="../../release/index.html">Release Notes</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Ibis</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="../index.html">User guide</a> &raquo;</li>
+        
       <li>Extending Ibis</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../../_sources/user_guide/extending/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   
 <style>
 /* CSS overrides for sphinx_rtd_theme */
@@ -119,7 +215,7 @@
     text-align: unset;
 }
 </style>
-<section id="extending-ibis">
+<div class="section" id="extending-ibis">
 <span id="extending"></span><h1>Extending Ibis<a class="headerlink" href="#extending-ibis" title="Permalink to this headline">¶</a></h1>
 <p>Users typically want to extend ibis in one of two ways:</p>
 <ol class="arabic simple">
@@ -127,7 +223,7 @@
 <li><p>Add a new backend</p></li>
 </ol>
 <p>Below we provide notebooks showing how to extend ibis in each of these ways.</p>
-<section id="adding-a-new-expression">
+<div class="section" id="adding-a-new-expression">
 <h2>Adding a New Expression<a class="headerlink" href="#adding-a-new-expression" title="Permalink to this headline">¶</a></h2>
 <p>Here we show how to add a <code class="docutils literal notranslate"><span class="pre">sha1</span></code> method to the PostgreSQL backend as well as
 how to add a new <code class="docutils literal notranslate"><span class="pre">bitwise_and</span></code> reduction operation:</p>
@@ -137,8 +233,8 @@ how to add a new <code class="docutils literal notranslate"><span class="pre">bi
 <li class="toctree-l1"><a class="reference internal" href="extending_reduce_expr.html">Extending Ibis Part 2: Adding a New Reduction Expression</a></li>
 </ul>
 </div>
-</section>
-<section id="adding-a-new-backend">
+</div>
+<div class="section" id="adding-a-new-backend">
 <h2>Adding a New Backend<a class="headerlink" href="#adding-a-new-backend" title="Permalink to this headline">¶</a></h2>
 <p>Ibis backends are accessed by users calling <code class="docutils literal notranslate"><span class="pre">ibis.backend_name</span></code>, for example
 in <code class="docutils literal notranslate"><span class="pre">ibis.sqlite.connect(fname)</span></code>.</p>
@@ -160,8 +256,8 @@ the <code class="docutils literal notranslate"><span class="pre">connect</span><
 <p>For third party packages it is recommended that the name of the Python package
 is <code class="docutils literal notranslate"><span class="pre">ibis-&lt;backend&gt;</span></code>, since Ibis will recommend users to run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ibis-&lt;backend&gt;</span></code>
 when a backend is not found.</p>
-</section>
-<section id="run-test-suite-for-separate-backend">
+</div>
+<div class="section" id="run-test-suite-for-separate-backend">
 <h2>Run test suite for separate Backend<a class="headerlink" href="#run-test-suite-for-separate-backend" title="Permalink to this headline">¶</a></h2>
 <p>To run the tests for specific backends you can use:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTEST_BACKENDS</span><span class="o">=</span><span class="s2">&quot;sqlite pandas&quot;</span> python -m pytest ibis/tests
@@ -172,38 +268,55 @@ when a backend is not found.</p>
 servers for all backends using docker images.</p>
 <p>The backends may need data to be loaded, run or check <cite>ci/setup.py</cite> to
 see how it is loaded in the CI, and loaded for your local containers.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../design.html" class="btn btn-neutral float-left" title="Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="extending_elementwise_expr.html" class="btn btn-neutral float-right" title="Extending Ibis Part 1: Adding a New Elementwise Expression" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../design.html" class="btn btn-neutral float-left" title="Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Ibis Developers.</p>
-  </div>
+    <p>
+        &#169; Copyright 2021, Ibis Developers.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

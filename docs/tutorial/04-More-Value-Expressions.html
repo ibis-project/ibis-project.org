@@ -1,17 +1,38 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>More Value Expressions &mdash; Ibis 0+untagged.1.gd94d938 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+  <title>More Value Expressions &mdash; Ibis 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
@@ -19,24 +40,46 @@
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script src="../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Creating and inserting data" href="05-IO-Create-Insert-External-Data.html" />
     <link rel="prev" title="Expressions, lazy mode and logging queries" href="03-Expressions-Lazy-Mode-Logging.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../index.html" class="icon icon-home"> Ibis
+          
+
+          
+            
             <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
               <div class="version">
-                0+untagged.1.gd94d938
+                2.0.0
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -44,7 +87,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorial</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01-Introduction-to-Ibis.html">Introduction to Ibis</a></li>
@@ -72,31 +126,73 @@
 <li class="toctree-l1"><a class="reference internal" href="../release/index.html">Release Notes</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Ibis</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="index.html">Tutorial</a> &raquo;</li>
+        
       <li>More Value Expressions</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../_sources/tutorial/04-More-Value-Expressions.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   
 <style>
 /* CSS for nbsphinx extension */
@@ -367,9 +463,9 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<section id="More-Value-Expressions">
+<div class="section" id="More-Value-Expressions">
 <h1>More Value Expressions<a class="headerlink" href="#More-Value-Expressions" title="Permalink to this headline">¶</a></h1>
-<section id="Setup">
+<div class="section" id="Setup">
 <h2>Setup<a class="headerlink" href="#Setup" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -385,8 +481,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</section>
-<section id="Type-casting">
+</div>
+<div class="section" id="Type-casting">
 <h2>Type casting<a class="headerlink" href="#Type-casting" title="Permalink to this headline">¶</a></h2>
 <p>The Ibis type system is pretty basic and will get better (and more documented over time). It maps directly onto the current Impala type system</p>
 <ul class="simple">
@@ -472,8 +568,8 @@ div.rendered_html tbody tr:hover {
 150012536
 </pre></div></div>
 </div>
-</section>
-<section id="Case-/-if-then-else-expressions">
+</div>
+<div class="section" id="Case-/-if-then-else-expressions">
 <h2>Case / if-then-else expressions<a class="headerlink" href="#Case-/-if-then-else-expressions" title="Permalink to this headline">¶</a></h2>
 <p>We support a number of variants of the SQL-equivalent <code class="docutils literal notranslate"><span class="pre">CASE</span></code> expression, and will add more API functions over time to meet different use cases and enhance the expressiveness of any branching-based value logic.</p>
 <div class="nbinput docutils container">
@@ -620,8 +716,8 @@ div.rendered_html tbody tr:hover {
 9            Antarctica        AN  Not Asia
 </pre></div></div>
 </div>
-</section>
-<section id="Set-membership">
+</div>
+<div class="section" id="Set-membership">
 <h2>Set membership<a class="headerlink" href="#Set-membership" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">isin</span></code> and <code class="docutils literal notranslate"><span class="pre">notin</span></code> functions are like their pandas counterparts. These can take:</p>
 <ul class="simple">
@@ -695,8 +791,8 @@ div.rendered_html tbody tr:hover {
 </pre></div></div>
 </div>
 <p>Cool, huh? More on <code class="docutils literal notranslate"><span class="pre">topk</span></code> later.</p>
-</section>
-<section id="Null-ness">
+</div>
+<div class="section" id="Null-ness">
 <h2>Null-ness<a class="headerlink" href="#Null-ness" title="Permalink to this headline">¶</a></h2>
 <p>Like their pandas equivalents, the <code class="docutils literal notranslate"><span class="pre">isnull</span></code> and <code class="docutils literal notranslate"><span class="pre">notnull</span></code> functions return True values if the values are null, or non-null, respectively. For example:</p>
 <div class="nbinput docutils container">
@@ -751,8 +847,8 @@ div.rendered_html tbody tr:hover {
 3  Other continent     89
 </pre></div></div>
 </div>
-</section>
-<section id="Distinct-based-operations">
+</div>
+<div class="section" id="Distinct-based-operations">
 <h2>Distinct-based operations<a class="headerlink" href="#Distinct-based-operations" title="Permalink to this headline">¶</a></h2>
 <p>Ibis supports using <code class="docutils literal notranslate"><span class="pre">distinct</span></code> to remove duplicate rows or values on tables or arrays. For example:</p>
 <div class="nbinput docutils container">
@@ -846,8 +942,8 @@ Name: continent, dtype: object
 7
 </pre></div></div>
 </div>
-</section>
-<section id="String-operations">
+</div>
+<div class="section" id="String-operations">
 <h2>String operations<a class="headerlink" href="#String-operations" title="Permalink to this headline">¶</a></h2>
 <p>What’s supported is pretty basic right now. We intend to support the full gamut of regular expression munging with a nice API, though in some cases some work will be required on SQLite’s backend to support everything.</p>
 <div class="nbinput docutils container">
@@ -984,8 +1080,8 @@ Name: name, dtype: object
 Name: name, dtype: object
 </pre></div></div>
 </div>
-</section>
-<section id="Timestamp-operations">
+</div>
+<div class="section" id="Timestamp-operations">
 <h2>Timestamp operations<a class="headerlink" href="#Timestamp-operations" title="Permalink to this headline">¶</a></h2>
 <p>Date and time functionality is relatively limited at present compared with pandas, but we’ll get there. The main things we have right now are</p>
 <ul class="simple">
@@ -1098,38 +1194,55 @@ Name: name, dtype: object
 </pre></div></div>
 </div>
 <p>Some backends support adding offsets, for example <code class="docutils literal notranslate"><span class="pre">independence.independence_date</span> <span class="pre">+</span> <span class="pre">ibis.interval(days=1)</span></code> or <code class="docutils literal notranslate"><span class="pre">ibis.now()</span> <span class="pre">-</span> <span class="pre">independence.independence_date</span></code>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="03-Expressions-Lazy-Mode-Logging.html" class="btn btn-neutral float-left" title="Expressions, lazy mode and logging queries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="05-IO-Create-Insert-External-Data.html" class="btn btn-neutral float-right" title="Creating and inserting data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="03-Expressions-Lazy-Mode-Logging.html" class="btn btn-neutral float-left" title="Expressions, lazy mode and logging queries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Ibis Developers.</p>
-  </div>
+    <p>
+        &#169; Copyright 2021, Ibis Developers.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
