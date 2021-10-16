@@ -215,6 +215,35 @@ You will then use that generated password on the command line for the <code>-P</
 argument.</p>
 <p>Access the <a href="https://github.com/ibis-project/ibis/wiki/Merging-PRs">Ibis "Merging PRs" wiki</a> page
 for more information.</p>
+<h3 id="updating-dependencies">Updating dependencies</h3>
+<h4 id="automatic-dependency-updates">Automatic dependency updates</h4>
+<p>WhiteSource Renovate will run every day (outside of traditional business hours)
+and submit PRs that attempt to update dependencies.</p>
+<p>These upgrades use a very conservative update strategy, which is only to
+<strong>widen</strong> the dependency range, as opposed to increasing the lower bound.</p>
+<p>The PRs will also automatically regenerate <code>poetry.lock</code> and <code>setup.py</code>, so
+that in most cases, maintainers and contributors do not have to remember to
+generate and commit these files.</p>
+<p>In case you need to manually update a dependency see the next section.</p>
+<h4 id="manually-updating-dependencies">Manually updating dependencies</h4>
+<p><strong>Do not manually edit <code>setup.py</code>, it is automatically generated from <code>pyproject.toml</code></strong></p>
+<ol>
+<li>Edit <code>pyproject.toml</code> as needed.</li>
+<li>Run <code>poetry update</code></li>
+<li>Run</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>$ <span class="nv">PYTHONHASHSEED</span><span class="o">=</span><span class="m">42</span> python ./dev/poetry2setup.py -o setup.py
+</code></pre></div>
+
+<p>from the repository root. <code>tomli</code> and <code>poetry-core</code> are necessary to run this
+script, they can be <code>pip install</code>ed.</p>
+<ol>
+<li>Commit your changes and make a pull request.</li>
+</ol>
+<p>Updates of minor versions of dependencies are handled automatically by
+<a href="https://github.com/renovatebot/renovate"><code>renovate</code></a>.</p>
+<p>Do not make PRs from changes resulting from running <code>poetry update</code> unless
+absolutely necessary.</p>
 <h3 id="releasing">Releasing</h3>
 <p>Ibis is released in two places:</p>
 <ul>
