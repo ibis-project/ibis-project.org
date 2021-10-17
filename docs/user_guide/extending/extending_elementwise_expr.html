@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Extending Ibis Part 1: Adding a New Elementwise Expression &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -367,12 +368,12 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Extending-Ibis-Part-1:-Adding-a-New-Elementwise-Expression">
+<section id="Extending-Ibis-Part-1:-Adding-a-New-Elementwise-Expression">
 <h1>Extending Ibis Part 1: Adding a New Elementwise Expression<a class="headerlink" href="#Extending-Ibis-Part-1:-Adding-a-New-Elementwise-Expression" title="Permalink to this headline">¶</a></h1>
 <p>This notebook will show you how to add a new elementwise operation to an existing backend.</p>
 <p>We are going to add <code class="docutils literal notranslate"><span class="pre">julianday</span></code>, a function supported by the SQLite database, to the SQLite Ibis backend.</p>
 <p>The Julian day of a date, is the number of days since January 1st, 4713 BC. For more information check the <a class="reference external" href="https://en.wikipedia.org/wiki/Julian_day">Julian day</a> wikipedia page.</p>
-<div class="section" id="Step-1:-Define-the-Operation">
+<section id="Step-1:-Define-the-Operation">
 <h2>Step 1: Define the Operation<a class="headerlink" href="#Step-1:-Define-the-Operation" title="Permalink to this headline">¶</a></h2>
 <p>Let’s define the <code class="docutils literal notranslate"><span class="pre">julianday</span></code> operation as a function that takes one string input argument and returns a float.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">julianday</span><span class="p">(</span><span class="n">date</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -397,8 +398,8 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <p>We just defined a <code class="docutils literal notranslate"><span class="pre">JulianDay</span></code> class that takes one argument of type string or binary, and returns a float.</p>
-</div>
-<div class="section" id="Step-2:-Define-the-API">
+</section>
+<section id="Step-2:-Define-the-API">
 <h2>Step 2: Define the API<a class="headerlink" href="#Step-2:-Define-the-API" title="Permalink to this headline">¶</a></h2>
 <p>Because we know the output type of the operation, to make an expression out of <code class="docutils literal notranslate"><span class="pre">JulianDay</span></code> we simply need to construct it and call its <code class="docutils literal notranslate"><span class="pre">ibis.expr.types.Node.to_expr</span></code> method.</p>
 <p>We still need to add a method to <code class="docutils literal notranslate"><span class="pre">StringValue</span></code> and <code class="docutils literal notranslate"><span class="pre">BinaryValue</span></code> (this needs to work on both scalars and columns).</p>
@@ -420,8 +421,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Interlude:-Create-some-expressions-with-sha1">
+</section>
+<section id="Interlude:-Create-some-expressions-with-sha1">
 <h2>Interlude: Create some expressions with <code class="docutils literal notranslate"><span class="pre">sha1</span></code><a class="headerlink" href="#Interlude:-Create-some-expressions-with-sha1" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -453,8 +454,8 @@ JulianDay[float32*]
     ref_0
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Step-3:-Turn-the-Expression-into-SQL">
+</section>
+<section id="Step-3:-Turn-the-Expression-into-SQL">
 <h2>Step 3: Turn the Expression into SQL<a class="headerlink" href="#Step-3:-Turn-the-Expression-into-SQL" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -477,8 +478,8 @@ JulianDay[float32*]
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Step-4:-Putting-it-all-Together">
+</section>
+<section id="Step-4:-Putting-it-all-Together">
 <h2>Step 4: Putting it all Together<a class="headerlink" href="#Step-4:-Putting-it-all-Together" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -494,7 +495,7 @@ JulianDay[float32*]
 </pre></div>
 </div>
 </div>
-<div class="section" id="Create-and-execute-a-julianday-expression">
+<section id="Create-and-execute-a-julianday-expression">
 <h3>Create and execute a <code class="docutils literal notranslate"><span class="pre">julianday</span></code> expression<a class="headerlink" href="#Create-and-execute-a-julianday-expression" title="Permalink to this headline">¶</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -674,9 +675,9 @@ Literal[string]
 2455269.5
 </pre></div></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

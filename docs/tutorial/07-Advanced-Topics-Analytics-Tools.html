@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advanced Topics: Analytics Tools &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -361,9 +362,9 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Advanced-Topics:-Analytics-Tools">
+<section id="Advanced-Topics:-Analytics-Tools">
 <h1>Advanced Topics: Analytics Tools<a class="headerlink" href="#Advanced-Topics:-Analytics-Tools" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Setup">
+<section id="Setup">
 <h2>Setup<a class="headerlink" href="#Setup" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -379,8 +380,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Frequency-tables">
+</section>
+<section id="Frequency-tables">
 <h2>Frequency tables<a class="headerlink" href="#Frequency-tables" title="Permalink to this headline">¶</a></h2>
 <p>Ibis provides the <code class="docutils literal notranslate"><span class="pre">value_counts</span></code> API, just like pandas, for computing a frequency table for a table column or array expression. You might have seen it used already earlier in the tutorial.</p>
 <div class="nbinput docutils container">
@@ -438,8 +439,8 @@ div.rendered_html tbody tr:hover {
 6        SA           14         400143568
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Binning-and-histograms">
+</section>
+<section id="Binning-and-histograms">
 <h2>Binning and histograms<a class="headerlink" href="#Binning-and-histograms" title="Permalink to this headline">¶</a></h2>
 <p>Numeric array expressions (columns with numeric type and other array expressions) have <code class="docutils literal notranslate"><span class="pre">bucket</span></code> and <code class="docutils literal notranslate"><span class="pre">histogram</span></code> methods which produce different kinds of binning. These produce category values (the computed bins) that can be used in grouping and other analytics.</p>
 <p>Some backends implement the <code class="docutils literal notranslate"><span class="pre">.summary()</span></code> method, which can be used to see the general distribution of a column.</p>
@@ -569,8 +570,8 @@ Category(cardinality=5)
 </div>
 <p>Nice, huh?</p>
 <p>Some backends implement <code class="docutils literal notranslate"><span class="pre">histogram(num_bins)</span></code>, a linear (fixed size bin) equivalent.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

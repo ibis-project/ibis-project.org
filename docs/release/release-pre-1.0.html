@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Release Notes (pre 1.0) &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -173,18 +174,18 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="release-notes-pre-1-0">
+<section id="release-notes-pre-1-0">
 <h1>Release Notes (pre 1.0)<a class="headerlink" href="#release-notes-pre-1-0" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These release notes are for versions of ibis <strong>prior to 1.0</strong>. For 1.0 and
 later release notes see <a class="reference internal" href="index.html"><span class="doc">Release Notes</span></a>.</p>
 </div>
-<div class="section" id="v0-14-0-august-23rd-2018">
+<section id="v0-14-0-august-23rd-2018">
 <h2>v0.14.0 (August 23rd, 2018)<a class="headerlink" href="#v0-14-0-august-23rd-2018" title="Permalink to this headline">¶</a></h2>
 <p>This release brings refactored, more composable core components and rule system
 to ibis. We also focused quite heavily on the BigQuery backend this release.</p>
-<div class="section" id="new-features">
+<section id="new-features">
 <h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Allow keyword arguments in Node subclasses (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/968">#968</a>)</p></li>
@@ -213,8 +214,8 @@ UDF docs for more details.</p></li>
 <li><p>Speed up grouped and rolling operations in the pandas backend (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1549">#1549</a>)</p></li>
 <li><p>Implement <code class="docutils literal notranslate"><span class="pre">TimestampNow</span></code> for BigQuery and pandas (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1575">#1575</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="bug-fixes">
+</section>
+<section id="bug-fixes">
 <h3>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Nullable property is now propagated through value types (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1289">#1289</a>)</p></li>
@@ -229,9 +230,9 @@ UDF docs for more details.</p></li>
 (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1496">#1496</a>)</p></li>
 <li><p>Fix output type for some decimal operations (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1541">#1541</a>)</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="api-changes">
+</section>
+</section>
+<section id="api-changes">
 <h2>API Changes<a class="headerlink" href="#api-changes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>The previous, private rules API has been rewritten (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1366">#1366</a>)</p></li>
@@ -242,22 +243,22 @@ instead of the previous <cite>input_type</cite> list.</p></li>
 <li><p>BigQuery division defaults to using <code class="docutils literal notranslate"><span class="pre">IEEE_DIVIDE</span></code> (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1390">#1390</a>)</p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">asof_join</span></code> (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1443">#1443</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="v0-13-0-march-30-2018">
+</section>
+<section id="v0-13-0-march-30-2018">
 <h2>v0.13.0 (March 30, 2018)<a class="headerlink" href="#v0-13-0-march-30-2018" title="Permalink to this headline">¶</a></h2>
 <p>This release brings new backends, including support for executing against
 files, MySQL, Pandas user defined scalar and aggregations along with a number
 of bug fixes and reliability enhancements. We recommend that all users upgrade
 from earlier versions of Ibis.</p>
-<div class="section" id="new-backends">
+<section id="new-backends">
 <h3>New Backends<a class="headerlink" href="#new-backends" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>File Support for CSV &amp; HDF5 (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1165">#1165</a>, <a class="reference external" href="https://github.com/ibis-project/ibis/issues/1194">#1194</a>)</p></li>
 <li><p>File Support for Parquet Format (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1175">#1175</a>, <a class="reference external" href="https://github.com/ibis-project/ibis/issues/1194">#1194</a>)</p></li>
 <li><p>Experimental support for <code class="docutils literal notranslate"><span class="pre">MySQL</span></code> thanks to &#64;kszucs (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1224">#1224</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h3>New Features<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Support for Unsigned Integer Types (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1194">#1194</a>)</p></li>
@@ -297,8 +298,8 @@ thanks to &#64;kszucs (<a class="reference external" href="https://github.com/ib
 <li><p><code class="docutils literal notranslate"><span class="pre">day_of_week</span></code> API (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/306">#306</a>, <a class="reference external" href="https://github.com/ibis-project/ibis/issues/1047">#1047</a>)</p></li>
 <li><p>Design documentation for ibis (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1351">#1351</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h3>Bug Fixes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Unbound parameters were failing in the simple case of a
@@ -314,29 +315,29 @@ thanks to &#64;kszucs (<a class="reference external" href="https://github.com/ib
 <code class="xref py py-class docutils literal notranslate"><span class="pre">NotContains</span></code>.</p></li>
 <li><p>Support <code class="docutils literal notranslate"><span class="pre">REGEX_EXTRACT</span></code> in PostgreSQL 10 (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1276">#1276</a>, <a class="reference external" href="https://github.com/ibis-project/ibis/issues/1278">#1278</a>)</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="id3">
+</section>
+</section>
+<section id="id3">
 <h2>API Changes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Fixing <a class="reference external" href="https://github.com/ibis-project/ibis/issues/1378">#1378</a> required the removal of the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter to the
 <code class="xref py py-func docutils literal notranslate"><span class="pre">param()</span></code> function. Use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">name()</span></code>
 method instead.</p></li>
 </ul>
-</div>
-<div class="section" id="v0-12-0-october-28-2017">
+</section>
+<section id="v0-12-0-october-28-2017">
 <h2>v0.12.0 (October 28, 2017)<a class="headerlink" href="#v0-12-0-october-28-2017" title="Permalink to this headline">¶</a></h2>
 <p>This release brings Clickhouse and BigQuery SQL support along with a number of
 bug fixes and reliability enhancements. We recommend that all users upgrade
 from earlier versions of Ibis.</p>
-<div class="section" id="id4">
+<section id="id4">
 <h3>New Backends<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>BigQuery backend (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1170">#1170</a>), thanks to &#64;tsdlovell.</p></li>
 <li><p>Clickhouse backend (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1127">#1127</a>), thanks to &#64;kszucs.</p></li>
 </ul>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h3>New Features<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Add support for <code class="docutils literal notranslate"><span class="pre">Binary</span></code> data type (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1183">#1183</a>)</p></li>
@@ -363,8 +364,8 @@ from earlier versions of Ibis.</p>
 <li><p>Allow like operation to accept a list of conditions to match (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1061">#1061</a>)</p></li>
 <li><p>Add a pre_execute step in pandas backend (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1189">#1189</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="id6">
+</section>
+<section id="id6">
 <h3>Bug Fixes<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Remove global expression caching to ensure repeatable code generation
@@ -387,8 +388,8 @@ properly (<a class="reference external" href="https://github.com/ibis-project/ib
 <li><p>BUG/TST: Make hdfs an optional dependency (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1082">#1082</a>)</p></li>
 <li><p>Memoization should include expression name where available (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1080">#1080</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="performance-enhancements">
+</section>
+<section id="performance-enhancements">
 <h3>Performance Enhancements<a class="headerlink" href="#performance-enhancements" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Speed up imports (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1074">#1074</a>)</p></li>
@@ -396,8 +397,8 @@ properly (<a class="reference external" href="https://github.com/ibis-project/ib
 <li><p>Use normalize for casting to dates in pandas (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1070">#1070</a>)</p></li>
 <li><p>Speed up pandas groupby (<a class="reference external" href="https://github.com/ibis-project/ibis/issues/1067">#1067</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="contributors">
+</section>
+<section id="contributors">
 <h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h3>
 <p>The following people contributed to the 0.12.0 release</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git shortlog -sn --no-merges v0.11.2..v0.12.0
@@ -411,14 +412,14 @@ properly (<a class="reference external" href="https://github.com/ibis-project/ib
  1  kwangin
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="june-28-2017">
+</section>
+</section>
+<section id="june-28-2017">
 <h2>0.11.0 (June 28, 2017)<a class="headerlink" href="#june-28-2017" title="Permalink to this headline">¶</a></h2>
 <p>This release brings initial Pandas backend support along with a number of
 bug fixes and reliability enhancements. We recommend that all users upgrade
 from earlier versions of Ibis.</p>
-<div class="section" id="id7">
+<section id="id7">
 <h3>New Features<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Experimental pandas backend to allow execution of ibis expression against
@@ -437,8 +438,8 @@ rather than only by name</p></li>
 <li><p>Added a <code class="docutils literal notranslate"><span class="pre">type</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">ibis.literal</span></code> to allow user specification of
 literal types</p></li>
 </ul>
-</div>
-<div class="section" id="id8">
+</section>
+<section id="id8">
 <h3>Bug Fixes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Fix broken conda recipe</p></li>
@@ -448,16 +449,16 @@ literal types</p></li>
 <li><p>Fix equality of nested types and construction of nested types when the value
 type is specified as a string</p></li>
 </ul>
-</div>
-<div class="section" id="id9">
+</section>
+<section id="id9">
 <h3>API Changes<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Deprecate passing integer values to the <code class="docutils literal notranslate"><span class="pre">ibis.timestamp</span></code> literal
 constructor, this will be removed in 0.12.0</p></li>
 <li><p>Added the <code class="docutils literal notranslate"><span class="pre">admin_timeout</span></code> parameter to the kudu client <code class="docutils literal notranslate"><span class="pre">connect</span></code> function</p></li>
 </ul>
-</div>
-<div class="section" id="id10">
+</section>
+<section id="id10">
 <h3>Contributors<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git shortlog --summary --numbered v0.10.0..v0.11.0
 
@@ -468,22 +469,22 @@ constructor, this will be removed in 0.12.0</p></li>
    1 Wes McKinney
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="may-19-2016">
+</section>
+</section>
+<section id="may-19-2016">
 <h2>0.8 (May 19, 2016)<a class="headerlink" href="#may-19-2016" title="Permalink to this headline">¶</a></h2>
 <p>This release brings initial PostgreSQL backend support along with a number of
 critical bug fixes and usability improvements. As several correctness bugs with
 the SQL compiler were fixed, we recommend that all users upgrade from earlier
 versions of Ibis.</p>
-<div class="section" id="id11">
+<section id="id11">
 <h3>New Features<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Initial PostgreSQL backend contributed by Phillip Cloud.</p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">groupby</span></code> as an alias for <code class="docutils literal notranslate"><span class="pre">group_by</span></code> to table expressions</p></li>
 </ul>
-</div>
-<div class="section" id="id12">
+</section>
+<section id="id12">
 <h3>Bug Fixes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Fix an expression error when filtering based on a new field</p></li>
@@ -492,20 +493,20 @@ versions of Ibis.</p>
 <li><p>Fix CTE (<code class="docutils literal notranslate"><span class="pre">WITH</span></code>) extraction inside <code class="docutils literal notranslate"><span class="pre">UNION</span> <span class="pre">ALL</span></code> expressions.</p></li>
 <li><p>Fix <code class="docutils literal notranslate"><span class="pre">ImportError</span></code> on Python 2 when <code class="docutils literal notranslate"><span class="pre">mock</span></code> library not installed</p></li>
 </ul>
-</div>
-<div class="section" id="id13">
+</section>
+<section id="id13">
 <h3>API Changes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>The deprecated <code class="docutils literal notranslate"><span class="pre">ibis.impala_connect</span></code> and <code class="docutils literal notranslate"><span class="pre">ibis.make_client</span></code> APIs have
 been removed</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="march-16-2016">
+</section>
+</section>
+<section id="march-16-2016">
 <h2>0.7 (March 16, 2016)<a class="headerlink" href="#march-16-2016" title="Permalink to this headline">¶</a></h2>
 <p>This release brings initial Kudu-Impala integration and improved Impala and
 SQLite support, along with several critical bug fixes.</p>
-<div class="section" id="id14">
+<section id="id14">
 <h3>New Features<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Apache Kudu (incubating) integration for Impala users. See the <a class="reference external" href="http://blog.ibis-project.org/kudu-impala-ibis">blog post</a> for now. Will add some documentation here when possible.</p></li>
@@ -541,8 +542,8 @@ secure (Kerberized) clusters without SSL enabled.</p></li>
   <span class="p">)</span> <span class="n">t1</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id15">
+</section>
+<section id="id15">
 <h3>Bug Fixes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CHAR(n)</span></code> and <code class="docutils literal notranslate"><span class="pre">VARCHAR(n)</span></code> Impala types now correctly map to Ibis string
@@ -561,8 +562,8 @@ attributes.</p></li>
 <li><p>Fix handling of fully-materialized joins (aka <code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">*</span></code> joins) in
 SQLAlchemy / SQLite.</p></li>
 </ul>
-</div>
-<div class="section" id="id16">
+</section>
+<section id="id16">
 <h3>Contributors<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <p>Thank you to all who contributed patches to this release.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git log v0.6.0..v0.7.0 --pretty=format:%aN | sort | uniq -c | sort -rn
@@ -571,9 +572,9 @@ SQLAlchemy / SQLite.</p></li>
      1 Kristopher Overholt
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="december-1-2015">
+</section>
+</section>
+<section id="december-1-2015">
 <h2>0.6 (December 1, 2015)<a class="headerlink" href="#december-1-2015" title="Permalink to this headline">¶</a></h2>
 <p>This release brings expanded pandas and Impala integration, including support
 for managing partitioned tables in Impala. See the new <a class="reference internal" href="../backends/impala.html#backends-impala"><span class="std std-ref">Ibis for Impala
@@ -582,7 +583,7 @@ Users</span></a> guide for more on using Ibis with Impala.</p>
 release.</p>
 <p>This release also includes bug fixes affecting generated SQL correctness. All
 users should upgrade as soon as possible.</p>
-<div class="section" id="id17">
+<section id="id17">
 <h3>New Features<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>New integrated Impala functionality. See <a class="reference internal" href="../backends/impala.html#backends-impala"><span class="std std-ref">Ibis for Impala Users</span></a> for more details on these things.</p>
@@ -623,14 +624,14 @@ appropriate <code class="docutils literal notranslate"><span class="pre">CAST</s
 <li><p>Passing <code class="docutils literal notranslate"><span class="pre">limit=None</span></code> to the <code class="docutils literal notranslate"><span class="pre">execute</span></code> method on expressions disables any
 default row limits.</p></li>
 </ul>
-</div>
-<div class="section" id="id18">
+</section>
+<section id="id18">
 <h3>API Changes<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ImpalaTable.rename</span></code> no longer mutates the calling table expression.</p></li>
 </ul>
-</div>
-<div class="section" id="id19">
+</section>
+<section id="id19">
 <h3>Contributors<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git log v0.5.0..v0.6.0 --pretty=format:%aN | sort | uniq -c | sort -rn
 46 Wes McKinney
@@ -640,14 +641,14 @@ default row limits.</p></li>
  1 Kristopher Overholt
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="september-10-2015">
+</section>
+</section>
+<section id="september-10-2015">
 <h2>0.5 (September 10, 2015)<a class="headerlink" href="#september-10-2015" title="Permalink to this headline">¶</a></h2>
 <p>Highlights in this release are the SQLite, Python 3, Impala UDA support, and an
 asynchronous execution API. There are also many usability improvements, bug
 fixes, and other new features.</p>
-<div class="section" id="id20">
+<section id="id20">
 <h3>New Features<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>SQLite client and built-in function support</p></li>
@@ -670,15 +671,15 @@ metastore)</p></li>
 and ability to compile (since many operations are unavailable in SQLite, for
 example)</p></li>
 </ul>
-</div>
-<div class="section" id="id21">
+</section>
+<section id="id21">
 <h3>API Changes<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Impala Ibis client creation now uses only <code class="docutils literal notranslate"><span class="pre">ibis.impala.connect</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">ibis.make_client</span></code> has been deprecated</p></li>
 </ul>
-</div>
-<div class="section" id="id22">
+</section>
+<section id="id22">
 <h3>Contributors<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git log v0.4.0..v0.5.0 --pretty=format:%aN | sort | uniq -c | sort -rn
       55 Wes McKinney
@@ -686,11 +687,11 @@ example)</p></li>
       1 Kristopher Overholt
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="august-14-2015">
+</section>
+</section>
+<section id="august-14-2015">
 <h2>0.4 (August 14, 2015)<a class="headerlink" href="#august-14-2015" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id23">
+<section id="id23">
 <h3>New Features<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Add tooling to use Impala C++ scalar UDFs within Ibis (#262, #195)</p></li>
@@ -719,8 +720,8 @@ tables</p></li>
 to cluster, for better usability.</p></li>
 <li><p>Add conda installation recipes</p></li>
 </ul>
-</div>
-<div class="section" id="id24">
+</section>
+<section id="id24">
 <h3>Contributors<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git log v0.3.0..v0.4.0 --pretty=format:%aN | sort | uniq -c | sort -rn
      38 Wes McKinney
@@ -730,12 +731,12 @@ to cluster, for better usability.</p></li>
       1 Marius van Niekerk
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="july-20-2015">
+</section>
+</section>
+<section id="july-20-2015">
 <h2>0.3 (July 20, 2015)<a class="headerlink" href="#july-20-2015" title="Permalink to this headline">¶</a></h2>
 <p>First public release. See <a class="reference external" href="http://ibis-project.org">http://ibis-project.org</a> for more.</p>
-<div class="section" id="id25">
+<section id="id25">
 <h3>New Features<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Implement window / analytic function support</p></li>
@@ -759,8 +760,8 @@ supports it).</p></li>
 <li><p>Add an internal operation type signature API to enhance developer
 productivity.</p></li>
 </ul>
-</div>
-<div class="section" id="id26">
+</section>
+<section id="id26">
 <h3>Contributors<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git log v0.2.0..v0.3.0 --pretty=format:%aN | sort | uniq -c | sort -rn
      59 Wes McKinney
@@ -769,11 +770,11 @@ productivity.</p></li>
       2 Meghana Vuyyuru
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="june-16-2015">
+</section>
+</section>
+<section id="june-16-2015">
 <h2>0.2 (June 16, 2015)<a class="headerlink" href="#june-16-2015" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id27">
+<section id="id27">
 <h3>New Features<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">insert</span></code> method on Ibis client for inserting data into existing tables.</p></li>
@@ -821,21 +822,21 @@ callback function for improved query logging and visibility</p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">sub</span></code>, and other explicit arithmetic methods to value
 expressions</p></li>
 </ul>
-</div>
-<div class="section" id="id28">
+</section>
+<section id="id28">
 <h3>API Changes<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>New Ibis client and Impala connection workflow. Client now combined from an
 Impala connection and an optional HDFS connection</p></li>
 </ul>
-</div>
-<div class="section" id="id29">
+</section>
+<section id="id29">
 <h3>Bug Fixes<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Numerous expression API bug fixes and rough edges fixed</p></li>
 </ul>
-</div>
-<div class="section" id="id30">
+</section>
+<section id="id30">
 <h3>Contributors<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git log v0.1.0..v0.2.0 --pretty=format:%aN | sort | uniq -c | sort -rn
      71 Wes McKinney
@@ -843,9 +844,9 @@ Impala connection and an optional HDFS connection</p></li>
       1 Isaac Hodes
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="march-26-2015">
+</section>
+</section>
+<section id="march-26-2015">
 <h2>0.1 (March 26, 2015)<a class="headerlink" href="#march-26-2015" title="Permalink to this headline">¶</a></h2>
 <p>First Ibis release.</p>
 <ul class="simple">
@@ -859,8 +860,8 @@ Impala connection and an optional HDFS connection</p></li>
      1 Henry Robinson
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Expressions, lazy mode and logging queries &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -359,7 +360,7 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Expressions,-lazy-mode-and-logging-queries">
+<section id="Expressions,-lazy-mode-and-logging-queries">
 <h1>Expressions, lazy mode and logging queries<a class="headerlink" href="#Expressions,-lazy-mode-and-logging-queries" title="Permalink to this headline">¶</a></h1>
 <p>So far, we have seen Ibis in interactive mode. Interactive mode (also known as eager mode) makes Ibis return the results of an operation immediately.</p>
 <p>In most cases, instead of using interactive mode, it makes more sense to use the default lazy mode. In lazy mode, Ibis won’t be executing the operations automatically, but instead, will generate an expression to be executed at a later time.</p>
@@ -579,7 +580,7 @@ ibis.expr.types.FloatingColumn
 </div>
 </div>
 <p>Since we are in lazy mode (not interactive), those expressions don’t request any data from the database unless explicitly requested with <code class="docutils literal notranslate"><span class="pre">.execute()</span></code>.</p>
-<div class="section" id="Logging-queries">
+<section id="Logging-queries">
 <h2>Logging queries<a class="headerlink" href="#Logging-queries" title="Permalink to this headline">¶</a></h2>
 <p>For SQL backends (and for others when it makes sense), the query sent to the database can be logged. This can be done by setting the <code class="docutils literal notranslate"><span class="pre">verbose</span></code> option to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="nbinput docutils container">
@@ -765,8 +766,8 @@ FROM base.countries AS t0
 2020-07-02 17:51:03.779023 - SELECT t0.name, t0.continent, t0.population / CAST(? AS REAL) AS population_in_millions \nFROM base.countries AS t0\n LIMIT ? OFFSET ?
 </pre></div></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pandas &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -118,7 +119,7 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="id1">
+<section id="id1">
 <h1><a class="reference external" href="https://pandas.pydata.org/">pandas</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>Ibis’s pandas backend is available in core Ibis:</p>
 <p>Create a client by supplying a dictionary of DataFrames using
@@ -132,12 +133,12 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="user-defined-functions-udf">
+<section id="user-defined-functions-udf">
 <span id="udf-pandas"></span><h2>User Defined functions (UDF)<a class="headerlink" href="#user-defined-functions-udf" title="Permalink to this headline">¶</a></h2>
 <p>Ibis supports defining three kinds of user-defined functions for operations on
 expressions targeting the pandas backend: <strong>element-wise</strong>, <strong>reduction</strong>, and
 <strong>analytic</strong>.</p>
-<div class="section" id="element-wise-functions">
+<section id="element-wise-functions">
 <span id="udf-elementwise"></span><h3>Element-wise Functions<a class="headerlink" href="#element-wise-functions" title="Permalink to this headline">¶</a></h3>
 <p>An <strong>element-wise</strong> function is a function that takes N rows as input and
 produces N rows of output. <code class="docutils literal notranslate"><span class="pre">log</span></code>, <code class="docutils literal notranslate"><span class="pre">exp</span></code>, and <code class="docutils literal notranslate"><span class="pre">floor</span></code> are examples of
@@ -151,8 +152,8 @@ element-wise functions.</p>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">1.0</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="reduction-functions">
+</section>
+<section id="reduction-functions">
 <span id="udf-reduction"></span><h3>Reduction Functions<a class="headerlink" href="#reduction-functions" title="Permalink to this headline">¶</a></h3>
 <p>A <strong>reduction</strong> is a function that takes N rows as input and produces 1 row
 as output. <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">count</span></code> are examples of reductions. In
@@ -167,8 +168,8 @@ group</em>.</p>
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">series</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="analytic-functions">
+</section>
+<section id="analytic-functions">
 <span id="udf-analytic"></span><h3>Analytic Functions<a class="headerlink" href="#analytic-functions" title="Permalink to this headline">¶</a></h3>
 <p>An <strong>analytic</strong> function is like an <strong>element-wise</strong> function in that it
 takes N rows as input and produces N rows of output. The key difference is
@@ -183,8 +184,8 @@ Z-score is an example of an analytic function.</p>
     <span class="k">return</span> <span class="p">(</span><span class="n">series</span> <span class="o">-</span> <span class="n">series</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">series</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="details-of-pandas-udfs">
+</section>
+<section id="details-of-pandas-udfs">
 <h3>Details of Pandas UDFs<a class="headerlink" href="#details-of-pandas-udfs" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#udf-elementwise"><span class="std std-ref">Element-wise functions</span></a> automatically provide support
@@ -244,9 +245,9 @@ optionally accept specific keyword arguments.</p>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

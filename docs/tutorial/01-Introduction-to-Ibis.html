@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Introduction to Ibis &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -361,14 +362,14 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Introduction-to-Ibis">
+<section id="Introduction-to-Ibis">
 <h1>Introduction to Ibis<a class="headerlink" href="#Introduction-to-Ibis" title="Permalink to this headline">¶</a></h1>
 <p>Ibis is a Python framework to access data and perform analytical computations from different sources, in a standard way.</p>
 <p>In a way, you can think of Ibis as writing SQL in Python, with a focus on analytics, more than simply accessing data. And aside from SQL databases, you can use it with other backends, including big data systems.</p>
 <p>Why not simply use SQL instead? SQL is great and widely used. However, SQL has different flavors for different database engines, and SQL is very difficult to maintain when your queries are very complex. Ibis solves both problems by standardizing your code across backends and making it maintainable. Since Ibis is Python, you can structure your code in different files, functions, name variables, write tests, etc.</p>
 <p>This tutorial will guide you through Ibis features and provide practical examples. Some knowledge of Python is assumed and knowledge of SQL will be helpful but not required.</p>
 <p>Ibis is open source - if anything can be improved in this tutorial, or in Ibis itself, please open an issue in the <a class="reference external" href="https://github.com/ibis-project/ibis/">Ibis GitHub repository</a> or open a pull request with the fix.</p>
-<div class="section" id="Getting-started">
+<section id="Getting-started">
 <h2>Getting started<a class="headerlink" href="#Getting-started" title="Permalink to this headline">¶</a></h2>
 <p>To start using Ibis, you need a Python environment with Ibis installed. If you don’t know how to create an environment, we recommend following the <a class="reference external" href="https://ibis-project.org/getting_started.html">setup instructions</a> in the Ibis website.</p>
 <p>Once you have your environment ready, to start using Ibis simply import the <code class="docutils literal notranslate"><span class="pre">ibis</span></code> module:</p>
@@ -410,8 +411,8 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <p>Note that if you installed Ibis with <code class="docutils literal notranslate"><span class="pre">pip</span></code> instead of <code class="docutils literal notranslate"><span class="pre">conda</span></code>, you may need to install the SQLite backend separately with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">'ibis-framework[sqlite]'</span></code>.</p>
-</div>
-<div class="section" id="Exploring-the-data">
+</section>
+<section id="Exploring-the-data">
 <h2>Exploring the data<a class="headerlink" href="#Exploring-the-data" title="Permalink to this headline">¶</a></h2>
 <p>To list the tables in the <code class="docutils literal notranslate"><span class="pre">connection</span></code> object, we can use the <code class="docutils literal notranslate"><span class="pre">.list_tables()</span></code> method. If you are using Jupyter, you can see all the methods and attributes of the <code class="docutils literal notranslate"><span class="pre">connection</span></code> object by writing <code class="docutils literal notranslate"><span class="pre">connection.</span></code> and pressing the <code class="docutils literal notranslate"><span class="pre">&lt;TAB&gt;</span></code> key.</p>
 <div class="nbinput docutils container">
@@ -546,8 +547,8 @@ div.rendered_html tbody tr:hover {
 2           Afghanistan        AS    29121286
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Filters-and-order">
+</section>
+<section id="Filters-and-order">
 <h2>Filters and order<a class="headerlink" href="#Filters-and-order" title="Permalink to this headline">¶</a></h2>
 <p>Now that we’ve got an intuition of the data available in the table <code class="docutils literal notranslate"><span class="pre">countries</span></code>, we will extract some information from it by applying filters and sorting the data.</p>
 <p>Let’s focus on a single continent. We can see a list of unique continents in the table using the <code class="docutils literal notranslate"><span class="pre">.distinct()</span></code> method:</p>
@@ -758,8 +759,8 @@ Name: tmp, Length: 252, dtype: bool
 </div>
 <p>This is the list of the 10 most populated countries based on the data from <a class="reference external" href="https://www.geonames.org/">GeoNames</a>.</p>
 <p>To learn more about Ibis, continue to the next tutorial.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

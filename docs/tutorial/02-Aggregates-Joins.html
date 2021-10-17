@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aggregating and joining data &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -361,7 +362,7 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Aggregating-and-joining-data">
+<section id="Aggregating-and-joining-data">
 <h1>Aggregating and joining data<a class="headerlink" href="#Aggregating-and-joining-data" title="Permalink to this headline">¶</a></h1>
 <p>This is the second introductory tutorial to Ibis. If you are new to Ibis, you may want to start by the first tutorial, <em>01-Introduction-to-Ibis</em>.</p>
 <p>In the first tutorial, we saw how to operate on the data of a table. We will work again with the <code class="docutils literal notranslate"><span class="pre">countries</span></code> table as we did previously.</p>
@@ -405,7 +406,7 @@ div.rendered_html tbody tr:hover {
 [252 rows x 4 columns]
 </pre></div></div>
 </div>
-<div class="section" id="Expressions">
+<section id="Expressions">
 <h2>Expressions<a class="headerlink" href="#Expressions" title="Permalink to this headline">¶</a></h2>
 <p>We will continue by exploring the data by continent. We will start by creating an expression with the continent names, since our table only contains the abbreviations.</p>
 <p>An expression is one or more operations performed over the data. They can be used to retrieve the data or to build more complex operations.</p>
@@ -538,8 +539,8 @@ ibis.expr.types.StringColumn
 [252 rows x 4 columns]
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Aggregating-data">
+</section>
+<section id="Aggregating-data">
 <h2>Aggregating data<a class="headerlink" href="#Aggregating-data" title="Permalink to this headline">¶</a></h2>
 <p>Now, let’s group our data by continent, and let’s find the total population of each.</p>
 <div class="nbinput docutils container">
@@ -644,8 +645,8 @@ ibis.expr.types.StringColumn
 6        SA         400143568  1.272751e+06
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Joining-data">
+</section>
+<section id="Joining-data">
 <h2>Joining data<a class="headerlink" href="#Joining-data" title="Permalink to this headline">¶</a></h2>
 <p>Now we are going to get the total gross domestic product (GDP) for each continent. In this case, the GDP data is not in the same table <code class="docutils literal notranslate"><span class="pre">countries</span></code>, but in a table <code class="docutils literal notranslate"><span class="pre">gdp</span></code>.</p>
 <div class="nbinput docutils container">
@@ -860,8 +861,8 @@ ibis.expr.types.StringColumn
 </div>
 <p>We have called the <code class="docutils literal notranslate"><span class="pre">inner_join</span></code> method of the <code class="docutils literal notranslate"><span class="pre">countries</span></code> table and passed the <code class="docutils literal notranslate"><span class="pre">gdp</span></code> table as a parameter. The method receives a second parameter, <code class="docutils literal notranslate"><span class="pre">predicates</span></code>, that is used to specify how the join will be performed. In this case we want the <code class="docutils literal notranslate"><span class="pre">iso_alpha3</span></code> column in <code class="docutils literal notranslate"><span class="pre">countries</span></code> to match the <code class="docutils literal notranslate"><span class="pre">country_code</span></code> column in <code class="docutils literal notranslate"><span class="pre">gdp</span></code>. This is specified with the expression <code class="docutils literal notranslate"><span class="pre">countries['iso_alpha3']</span> <span class="pre">==</span> <span class="pre">gdp['country_code']</span></code>.</p>
 <p>In the example <code class="docutils literal notranslate"><span class="pre">countries_and_gdp</span></code> is not an expression that can be executed directly. The result of a join can cause conflicts if both tables have column names in common. Before we can execute the query, we need to materialize the join, by calling the <code class="docutils literal notranslate"><span class="pre">.materialize()</span></code> method, or by selecting the columns to be returned.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

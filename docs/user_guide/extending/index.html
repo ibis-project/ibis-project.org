@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Extending Ibis &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -118,7 +119,7 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="extending-ibis">
+<section id="extending-ibis">
 <span id="extending"></span><h1>Extending Ibis<a class="headerlink" href="#extending-ibis" title="Permalink to this headline">¶</a></h1>
 <p>Users typically want to extend ibis in one of two ways:</p>
 <ol class="arabic simple">
@@ -126,7 +127,7 @@
 <li><p>Add a new backend</p></li>
 </ol>
 <p>Below we provide notebooks showing how to extend ibis in each of these ways.</p>
-<div class="section" id="adding-a-new-expression">
+<section id="adding-a-new-expression">
 <h2>Adding a New Expression<a class="headerlink" href="#adding-a-new-expression" title="Permalink to this headline">¶</a></h2>
 <p>Here we show how to add a <code class="docutils literal notranslate"><span class="pre">sha1</span></code> method to the PostgreSQL backend as well as
 how to add a new <code class="docutils literal notranslate"><span class="pre">bitwise_and</span></code> reduction operation:</p>
@@ -136,8 +137,8 @@ how to add a new <code class="docutils literal notranslate"><span class="pre">bi
 <li class="toctree-l1"><a class="reference internal" href="extending_reduce_expr.html">Extending Ibis Part 2: Adding a New Reduction Expression</a></li>
 </ul>
 </div>
-</div>
-<div class="section" id="adding-a-new-backend">
+</section>
+<section id="adding-a-new-backend">
 <h2>Adding a New Backend<a class="headerlink" href="#adding-a-new-backend" title="Permalink to this headline">¶</a></h2>
 <p>Ibis backends are accessed by users calling <code class="docutils literal notranslate"><span class="pre">ibis.backend_name</span></code>, for example
 in <code class="docutils literal notranslate"><span class="pre">ibis.sqlite.connect(fname)</span></code>.</p>
@@ -159,8 +160,8 @@ the <code class="docutils literal notranslate"><span class="pre">connect</span><
 <p>For third party packages it is recommended that the name of the Python package
 is <code class="docutils literal notranslate"><span class="pre">ibis-&lt;backend&gt;</span></code>, since Ibis will recommend users to run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ibis-&lt;backend&gt;</span></code>
 when a backend is not found.</p>
-</div>
-<div class="section" id="run-test-suite-for-separate-backend">
+</section>
+<section id="run-test-suite-for-separate-backend">
 <h2>Run test suite for separate Backend<a class="headerlink" href="#run-test-suite-for-separate-backend" title="Permalink to this headline">¶</a></h2>
 <p>To run the tests for specific backends you can use:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTEST_BACKENDS</span><span class="o">=</span><span class="s2">&quot;sqlite pandas&quot;</span> python -m pytest ibis/tests
@@ -171,8 +172,8 @@ when a backend is not found.</p>
 servers for all backends using docker images.</p>
 <p>The backends may need data to be loaded, run or check <cite>ci/setup.py</cite> to
 see how it is loaded in the CI, and loaded for your local containers.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

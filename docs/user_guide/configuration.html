@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Configuring Ibis &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -121,13 +122,13 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="configuring-ibis">
+<section id="configuring-ibis">
 <span id="configuration"></span><h1>Configuring Ibis<a class="headerlink" href="#configuring-ibis" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="ibis-global-configuration">
+<section id="ibis-global-configuration">
 <h2>Ibis global configuration<a class="headerlink" href="#ibis-global-configuration" title="Permalink to this headline">¶</a></h2>
 <p>Ibis global configuration happens through the <code class="docutils literal notranslate"><span class="pre">ibis.options</span></code>
 attribute. Attributes can be get and set like class attributes.</p>
-<div class="section" id="interactive-mode">
+<section id="interactive-mode">
 <h3>Interactive mode<a class="headerlink" href="#interactive-mode" title="Permalink to this headline">¶</a></h3>
 <p>Ibis out of the box is in <em>developer mode</em>. Expressions display their internal
 details when printed to the console. For a better interactive experience, set
@@ -137,8 +138,8 @@ the <code class="docutils literal notranslate"><span class="pre">interactive</sp
 </div>
 <p>This will cause expressions to be executed immediately when printed to the
 console (or in IPython or the IPython notebook).</p>
-</div>
-<div class="section" id="sql-query-execution">
+</section>
+<section id="sql-query-execution">
 <h3>SQL query execution<a class="headerlink" href="#sql-query-execution" title="Permalink to this headline">¶</a></h3>
 <p>If an Ibis table expression has no row limit set using the <code class="docutils literal notranslate"><span class="pre">limit</span></code> API, a
 default one is applied to prevent too much data from being retrieved from the
@@ -151,8 +152,8 @@ with the <code class="docutils literal notranslate"><span class="pre">sql.defaul
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ibis</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">default_limit</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="verbose-option-and-logging">
+</section>
+<section id="verbose-option-and-logging">
 <h3>Verbose option and Logging<a class="headerlink" href="#verbose-option-and-logging" title="Permalink to this headline">¶</a></h3>
 <p>To see all internal Ibis activity (like queries being executed) set
 <cite>ibis.options.verbose</cite>:</p>
@@ -167,9 +168,9 @@ other logging function:</p>
 <span class="n">ibis</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">verbose_log</span> <span class="o">=</span> <span class="n">cowsay</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="working-with-secure-clusters-kerberos">
+</section>
+</section>
+<section id="working-with-secure-clusters-kerberos">
 <h2>Working with secure clusters (Kerberos)<a class="headerlink" href="#working-with-secure-clusters-kerberos" title="Permalink to this headline">¶</a></h2>
 <p>Ibis is compatible with Hadoop clusters that are secured with Kerberos (as well
 as SSL and LDAP).  Just like the Impala shell and ODBC/JDBC connectors, Ibis
@@ -192,16 +193,16 @@ certificates (which may be helpful in testing).  Ibis will assume <code class="d
 when connecting to a Kerberized cluster. Because some Ibis commands create HDFS
 directories as well as new Impala databases and/or tables, your user will
 require the necessary privileges.</p>
-<div class="section" id="default-configuation-values-for-cdh-components">
+<section id="default-configuation-values-for-cdh-components">
 <h3>Default Configuation Values for CDH Components<a class="headerlink" href="#default-configuation-values-for-cdh-components" title="Permalink to this headline">¶</a></h3>
 <p>Cloudera CDH ships with HDFS, Impala, Hive and many other components.
 Sometimes it’s not obvious what default configuration values these tools are
 using or should be using.</p>
 <p>This url <a class="reference external" href="https://www.cloudera.com/documentation/enterprise/latest/topics/cdh_ig_ports_cdh5.html#topic_9_1">https://www.cloudera.com/documentation/enterprise/latest/topics/cdh_ig_ports_cdh5.html#topic_9_1</a>
 shows the default configuration values for every component of CDH.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

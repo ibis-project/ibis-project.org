@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PySpark &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -119,7 +120,7 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="install-pyspark">
+<section id="install-pyspark">
 <span id="id1"></span><h1><a class="reference external" href="https://spark.apache.org/sql/">PySpark</a><a class="headerlink" href="#install-pyspark" title="Permalink to this headline">¶</a></h1>
 <p>Install dependencies for Ibis’s PySpark dialect:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">&#39;ibis-framework[pyspark]&#39;</span>
@@ -131,7 +132,7 @@
 need to set <code class="docutils literal notranslate"><span class="pre">ARROW_PRE_0_15_IPC_FORMAT=1</span></code>. See <a class="reference external" href="https://spark.apache.org/docs/latest/api/python/user_guide/arrow_pandas.html#compatibility-setting-for-pyarrow-0-15-0-and-spark-2-3-x-2-4-x">here</a>
 for details</p>
 </div>
-<div class="section" id="pyspark-client">
+<section id="pyspark-client">
 <span id="api-pyspark"></span><h2>PySpark client<a class="headerlink" href="#pyspark-client" title="Permalink to this headline">¶</a></h2>
 <p>The PySpark client is accessible through the <code class="docutils literal notranslate"><span class="pre">ibis.pyspark</span></code> namespace.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">ibis.pyspark.connect</span></code> to create a client.</p>
@@ -158,8 +159,8 @@ for details</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impala &mdash; Ibis 2.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -181,7 +182,7 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="impala">
+<section id="impala">
 <span id="backends-impala"></span><h1>Impala<a class="headerlink" href="#impala" title="Permalink to this headline">¶</a></h1>
 <p>One goal of Ibis is to provide an integrated Python API for an Impala cluster
 without requiring you to switch back and forth between Python code and the
@@ -191,7 +192,7 @@ touch on the <a class="reference external" href="http://github.com/pandas-dev/ib
 <p>While interoperability between the Hadoop / Spark ecosystems and pandas / the
 PyData stack is overall poor (but improving), we also show some ways that you
 can use pandas with Ibis and Impala.</p>
-<div class="section" id="impala-quickstart">
+<section id="impala-quickstart">
 <span id="install-impala"></span><h2><a class="reference external" href="https://impala.apache.org/">Impala</a> Quickstart<a class="headerlink" href="#impala-quickstart" title="Permalink to this headline">¶</a></h2>
 <p>Install dependencies for Ibis’s Impala dialect:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">&#39;ibis-framework[impala]&#39;</span>
@@ -211,8 +212,8 @@ client using <code class="xref py py-func docutils literal notranslate"><span cl
 <code class="docutils literal notranslate"><span class="pre">auth_mechanism='LDAP'</span></code> to connect to Kerberos clusters.  Depending on your
 cluster setup, this may also include SSL. See the <a class="reference internal" href="../api.html#api"><span class="std std-ref">API reference</span></a> for more, along with the Impala shell reference, as the
 connection semantics are identical.</p>
-</div>
-<div class="section" id="api">
+</section>
+<section id="api">
 <h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <p>These methods are available on the Impala client object after connecting to
 your HDFS cluster (<code class="docutils literal notranslate"><span class="pre">ibis.impala.hdfs_connect</span></code>) and connecting to Impala with
@@ -235,7 +236,7 @@ backend.</p>
 </tr>
 </tbody>
 </table>
-<div class="section" id="database-methods">
+<section id="database-methods">
 <h3>Database methods<a class="headerlink" href="#database-methods" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -277,8 +278,8 @@ backend.</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="table-methods">
+</section>
+<section id="table-methods">
 <h3>Table methods<a class="headerlink" href="#table-methods" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">Backend</span></code> object itself has many helper utility methods. You’ll find
 the most methods on <code class="docutils literal notranslate"><span class="pre">ImpalaTable</span></code>.</p>
@@ -429,8 +430,8 @@ object you get back from <code class="docutils literal notranslate"><span class=
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="accessing-data-formats-in-hdfs">
+</section>
+<section id="accessing-data-formats-in-hdfs">
 <h3>Accessing data formats in HDFS<a class="headerlink" href="#accessing-data-formats-in-hdfs" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -449,8 +450,8 @@ object you get back from <code class="docutils literal notranslate"><span class=
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="executing-expressions">
+</section>
+<section id="executing-expressions">
 <h3>Executing expressions<a class="headerlink" href="#executing-expressions" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -466,8 +467,8 @@ object you get back from <code class="docutils literal notranslate"><span class=
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="hdfs">
+</section>
+<section id="hdfs">
 <span id="api-hdfs"></span><h3>HDFS<a class="headerlink" href="#hdfs" title="Permalink to this headline">¶</a></h3>
 <p>Client objects have an <code class="docutils literal notranslate"><span class="pre">hdfs</span></code> attribute you can use to interact directly with
 HDFS.</p>
@@ -515,9 +516,9 @@ HDFS.</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="the-impala-client-object">
+</section>
+</section>
+<section id="the-impala-client-object">
 <h2>The Impala client object<a class="headerlink" href="#the-impala-client-object" title="Permalink to this headline">¶</a></h2>
 <p>To use Ibis with Impala, you first must connect to a cluster using the
 <code class="xref py py-func docutils literal notranslate"><span class="pre">ibis.impala.connect()</span></code> function, optionally supplying an HDFS
@@ -541,8 +542,8 @@ using docker:</p>
 <p>You can accomplish many tasks directly through the client object, but we
 additionally provide APIs to streamline tasks involving a single Impala table
 or database.</p>
-</div>
-<div class="section" id="database-and-table-objects">
+</section>
+<section id="database-and-table-objects">
 <h2>Database and Table objects<a class="headerlink" href="#database-and-table-objects" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -607,8 +608,8 @@ table itself has a method <code class="docutils literal notranslate"><span class
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="expression-execution">
+</section>
+<section id="expression-execution">
 <h2>Expression execution<a class="headerlink" href="#expression-execution" title="Permalink to this headline">¶</a></h2>
 <p>Ibis expressions have an <code class="docutils literal notranslate"><span class="pre">execute</span></code> method with compiles and runs the
 expressions on Impala or whichever backend is being referenced.</p>
@@ -621,8 +622,8 @@ expressions on Impala or whichever backend is being referenced.</p>
 </div>
 <p>For longer-running queries, Ibis will attempt to cancel the query in progress
 if an interrupt is received.</p>
-</div>
-<div class="section" id="creating-tables">
+</section>
+<section id="creating-tables">
 <h2>Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this headline">¶</a></h2>
 <p>There are several ways to create new Impala tables:</p>
 <ul class="simple">
@@ -646,7 +647,7 @@ top-level client connection or a database object.</p>
 </tr>
 </tbody>
 </table>
-<div class="section" id="creating-tables-from-a-table-expression">
+<section id="creating-tables-from-a-table-expression">
 <h3>Creating tables from a table expression<a class="headerlink" href="#creating-tables-from-a-table-expression" title="Permalink to this headline">¶</a></h3>
 <p>If you pass an Ibis expression to <code class="docutils literal notranslate"><span class="pre">create_table</span></code>, Ibis issues a <code class="docutils literal notranslate"><span class="pre">CREATE</span>
 <span class="pre">TABLE</span> <span class="pre">..</span> <span class="pre">AS</span> <span class="pre">SELECT</span></code> (CTAS) statement:</p>
@@ -677,8 +678,8 @@ top-level client connection or a database object.</p>
 </pre></div>
 </div>
 <p>You can also choose to create an empty table and use <code class="docutils literal notranslate"><span class="pre">insert</span></code> (see below).</p>
-</div>
-<div class="section" id="creating-an-empty-table">
+</section>
+<section id="creating-an-empty-table">
 <h3>Creating an empty table<a class="headerlink" href="#creating-an-empty-table" title="Permalink to this headline">¶</a></h3>
 <p>To create an empty table, you must declare an Ibis schema that will be
 translated to the appopriate Impala schema and data types.</p>
@@ -724,8 +725,8 @@ method to get a schema object:</p>
 <span class="go">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="creating-a-partitioned-table">
+</section>
+<section id="creating-a-partitioned-table">
 <h3>Creating a partitioned table<a class="headerlink" href="#creating-a-partitioned-table" title="Permalink to this headline">¶</a></h3>
 <p>To create an empty partitioned table, include a list of columns to be used as
 the partition keys.</p>
@@ -736,9 +737,9 @@ the partition keys.</p>
 <span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="partitioned-tables">
+</section>
+</section>
+<section id="partitioned-tables">
 <h2>Partitioned tables<a class="headerlink" href="#partitioned-tables" title="Permalink to this headline">¶</a></h2>
 <p>Ibis enables you to manage partitioned tables in various ways. Since each
 partition behaves as its own “subtable” sharing a common schema, each partition
@@ -788,8 +789,8 @@ of the partition values:</p>
 </pre></div>
 </div>
 <p>We’ll cover partition metadata management and data loading below.</p>
-</div>
-<div class="section" id="inserting-data-into-tables">
+</section>
+<section id="inserting-data-into-tables">
 <h2>Inserting data into tables<a class="headerlink" href="#inserting-data-into-tables" title="Permalink to this headline">¶</a></h2>
 <p>If the schemas are compatible, you can insert into a table directly from an
 Ibis table expression:</p>
@@ -824,11 +825,11 @@ into:</p>
 <span class="n">table</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="n">part</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="managing-table-metadata">
+</section>
+<section id="managing-table-metadata">
 <h2>Managing table metadata<a class="headerlink" href="#managing-table-metadata" title="Permalink to this headline">¶</a></h2>
 <p>Ibis has functions that wrap many of the DDL commands for Impala table metadata.</p>
-<div class="section" id="detailed-table-metadata-describe-formatted">
+<section id="detailed-table-metadata-describe-formatted">
 <h3>Detailed table metadata: <code class="docutils literal notranslate"><span class="pre">DESCRIBE</span> <span class="pre">FORMATTED</span></code><a class="headerlink" href="#detailed-table-metadata-describe-formatted" title="Permalink to this headline">¶</a></h3>
 <p>To get a handy wrangled version of <code class="docutils literal notranslate"><span class="pre">DESCRIBE</span> <span class="pre">FORMATTED</span></code> use the <code class="docutils literal notranslate"><span class="pre">metadata</span></code>
 method.</p>
@@ -924,8 +925,8 @@ files backing a table:</p>
 <span class="go">4  ss_sold_date_sk=2451741</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="modifying-table-metadata">
+</section>
+<section id="modifying-table-metadata">
 <h3>Modifying table metadata<a class="headerlink" href="#modifying-table-metadata" title="Permalink to this headline">¶</a></h3>
 <p>For unpartitioned tables, you can use the <code class="docutils literal notranslate"><span class="pre">alter</span></code> method to change its
 location, file format, and other properties. For partitioned tables, to change
@@ -967,11 +968,11 @@ partition:</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="table-statistics">
+</section>
+</section>
+<section id="table-statistics">
 <h2>Table statistics<a class="headerlink" href="#table-statistics" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="computing-table-and-partition-statistics">
+<section id="computing-table-and-partition-statistics">
 <h3>Computing table and partition statistics<a class="headerlink" href="#computing-table-and-partition-statistics" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -996,8 +997,8 @@ loading new data:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">compute_stats</span><span class="p">(</span><span class="n">incremental</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="seeing-table-and-column-statistics">
+</section>
+<section id="seeing-table-and-column-statistics">
 <h3>Seeing table and column statistics<a class="headerlink" href="#seeing-table-and-column-statistics" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -1069,8 +1070,8 @@ depend, of course, on the last <code class="docutils literal notranslate"><span 
 <span class="go">22        ss_sold_date_sk        BIGINT               120       0       NaN         8</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="refresh-and-invalidate-metadata">
+</section>
+<section id="refresh-and-invalidate-metadata">
 <h3><code class="docutils literal notranslate"><span class="pre">REFRESH</span></code> and <code class="docutils literal notranslate"><span class="pre">INVALIDATE</span> <span class="pre">METADATA</span></code><a class="headerlink" href="#refresh-and-invalidate-metadata" title="Permalink to this headline">¶</a></h3>
 <p>These DDL commands are available as table-level and client-level methods:</p>
 <table class="longtable docutils align-default">
@@ -1103,9 +1104,9 @@ using <code class="docutils literal notranslate"><span class="pre">invalidate_me
 </div>
 <p>These methods are often used in conjunction with the <code class="docutils literal notranslate"><span class="pre">LOAD</span> <span class="pre">DATA</span></code> commands and
 <code class="docutils literal notranslate"><span class="pre">COMPUTE</span> <span class="pre">STATS</span></code>. See the Impala documentation for full details.</p>
-</div>
-</div>
-<div class="section" id="issuing-load-data-commands">
+</section>
+</section>
+<section id="issuing-load-data-commands">
 <h2>Issuing <code class="docutils literal notranslate"><span class="pre">LOAD</span> <span class="pre">DATA</span></code> commands<a class="headerlink" href="#issuing-load-data-commands" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">LOAD</span> <span class="pre">DATA</span></code> DDL physically moves a single data file or a directory of
 files into the correct location for a table or table partition. It is
@@ -1140,8 +1141,8 @@ particular partition with the <code class="docutils literal notranslate"><span c
 <span class="n">table</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="n">part</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="parquet-and-other-session-options">
+</section>
+<section id="parquet-and-other-session-options">
 <h2>Parquet and other session options<a class="headerlink" href="#parquet-and-other-session-options" title="Permalink to this headline">¶</a></h2>
 <p>Ibis gives you access to Impala session-level variables that affect query
 execution:</p>
@@ -1224,8 +1225,8 @@ execution:</p>
 <span class="go">&#39;SNAPPY&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="ingesting-data-from-pandas">
+</section>
+<section id="ingesting-data-from-pandas">
 <h2>Ingesting data from pandas<a class="headerlink" href="#ingesting-data-from-pandas" title="Permalink to this headline">¶</a></h2>
 <p>Overall interoperability between the Hadoop / Spark ecosystems and pandas / the
 PyData stack is poor, but it will improve in time (this is a major part of the
@@ -1295,8 +1296,8 @@ ingest route.</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">to_insert</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="uploading-downloading-data-from-hdfs">
+</section>
+<section id="uploading-downloading-data-from-hdfs">
 <h2>Uploading / downloading data from HDFS<a class="headerlink" href="#uploading-downloading-data-from-hdfs" title="Permalink to this headline">¶</a></h2>
 <p>If you’ve set up an HDFS connection, you can use the Ibis HDFS interface
 to look through your data and read and write files to and from HDFS:</p>
@@ -1369,8 +1370,8 @@ directory. We need only do:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -rf parquet_dir/
 </pre></div>
 </div>
-</div>
-<div class="section" id="queries-on-parquet-avro-and-delimited-files-in-hdfs">
+</section>
+<section id="queries-on-parquet-avro-and-delimited-files-in-hdfs">
 <h2>Queries on Parquet, Avro, and Delimited files in HDFS<a class="headerlink" href="#queries-on-parquet-avro-and-delimited-files-in-hdfs" title="Permalink to this headline">¶</a></h2>
 <p>Ibis can easily create temporary or persistent Impala tables that
 reference data in the following formats:</p>
@@ -1496,8 +1497,8 @@ schema:</p>
 <span class="go">Index: []</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="other-helper-functions-for-interacting-with-the-database">
+</section>
+<section id="other-helper-functions-for-interacting-with-the-database">
 <h2>Other helper functions for interacting with the database<a class="headerlink" href="#other-helper-functions-for-interacting-with-the-database" title="Permalink to this headline">¶</a></h2>
 <p>We’re adding a growing list of useful utility functions for interacting
 with an Impala cluster on the client object. The idea is that you should
@@ -1568,8 +1569,8 @@ you want for the data files</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">drop_database</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="faster-queries-on-small-data-in-impala">
+</section>
+<section id="faster-queries-on-small-data-in-impala">
 <h2>Faster queries on small data in Impala<a class="headerlink" href="#faster-queries-on-small-data-in-impala" title="Permalink to this headline">¶</a></h2>
 <p>Since Impala internally uses LLVM to compile parts of queries (aka
 “codegen”) to make them faster on large data sets there is a certain
@@ -1595,13 +1596,13 @@ may significantly speed up queries on smaller datasets:</p>
 </div>
 <p>It’s important to remember that codegen is a fixed overhead and will
 significantly speed up queries on big data</p>
-</div>
-<div class="section" id="user-defined-functions-udf">
+</section>
+<section id="user-defined-functions-udf">
 <span id="udf-impala"></span><h2>User Defined functions (UDF)<a class="headerlink" href="#user-defined-functions-udf" title="Permalink to this headline">¶</a></h2>
 <p>Impala currently supports user-defined scalar functions (known henceforth as
 <em>UDFs</em>) and aggregate functions (respectively <em>UDAs</em>) via a C++ extension API.</p>
 <p>Initial support for using C++ UDFs in Ibis came in version 0.4.0.</p>
-<div class="section" id="using-scalar-functions-udfs">
+<section id="using-scalar-functions-udfs">
 <h3>Using scalar functions (UDFs)<a class="headerlink" href="#using-scalar-functions-udfs" title="Permalink to this headline">¶</a></h3>
 <p>Let’s take an example to illustrate how to make a C++ UDF available to
 Ibis. Here is a function that computes an approximate equality between floating
@@ -1671,8 +1672,8 @@ must take place each time you load your Ibis session.</p>
 use Ibis. If you have a lot of UDFs, I suggest you create a file with all of
 your wrapper declarations and user APIs that you load with your Ibis session to
 plug in all your own functions.</p>
-</div>
-<div class="section" id="adding-documentation-to-new-functions">
+</section>
+<section id="adding-documentation-to-new-functions">
 <h3>Adding documentation to new functions<a class="headerlink" href="#adding-documentation-to-new-functions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fuzzy_equal</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
 <span class="s2">Approximate equals UDF</span>
@@ -1689,9 +1690,9 @@ plug in all your own functions.</p>
 <span class="s2">&quot;&quot;&quot;</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
