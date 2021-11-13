@@ -148,14 +148,15 @@
 <h1>ibis.expr.api.ColumnExpr.summary<a class="headerlink" href="#ibis-expr-api-columnexpr-summary" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ibis.expr.api.ColumnExpr.summary">
-<span class="sig-prename descclassname"><span class="pre">ColumnExpr.</span></span><span class="sig-name descname"><span class="pre">summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exact_nunique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.expr.api.ColumnExpr.summary" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ColumnExpr.</span></span><span class="sig-name descname"><span class="pre">summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exact_nunique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.expr.api.ColumnExpr.summary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute a set of summary metrics from the input value expression</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>arg</strong> (<em>value expression</em>) – </p></li>
 <li><p><strong>exact_nunique</strong> (<em>boolean</em><em>, </em><em>default False</em>) – Compute the exact number of distinct values (slower)</p></li>
-<li><p><strong>prefix</strong> (<em>string</em><em>, </em><em>default None</em>) – String prefix for metric names</p></li>
+<li><p><strong>prefix</strong> (<em>string</em><em>, </em><em>default &quot;&quot;</em>) – String prefix for metric names</p></li>
+<li><p><strong>suffix</strong> (<em>string</em><em>, </em><em>default &quot;&quot;</em>) – String suffix for metric names</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

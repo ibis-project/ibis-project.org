@@ -212,6 +212,8 @@ backends must implement, and their signatures have been standardized across back
 backends don’t need to implement all compiler classes anymore if the default works for them. Only a subclass of
 <cite>ibis.backends.base.sql.compiler.Compiler</cite> is now required. Backends now need to register themselves as entry points.</p></li>
 <li><p>[<span style="color: #4070A0;">Support</span>]<span> </span><a class="reference external" href="https://github.com/ibis-project/ibis/issues/3088">#3088</a><span>:</span> Added <cite>atpublic</cite> dependency for adding APIs to modules’ <cite>__all__</cite></p></li>
+<li><p>[<span style="color: #4070A0;">Support</span>]<span> </span><a class="reference external" href="https://github.com/ibis-project/ibis/issues/3112">#3112</a><span>:</span> Remove ir.ExprList, ops.ExpressionList and ibis.expr_list().
+From now on <cite>column.summary()</cite> returns with a list of expression objects instead of a single expression.</p></li>
 </ul>
 </section>
 <section id="Next 1.x bugfix release">

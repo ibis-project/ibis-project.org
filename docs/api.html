@@ -63,7 +63,6 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.now.html">ibis.now</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.NA.html">ibis.NA</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.null.html">ibis.null</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/ibis.expr_list.html">ibis.expr_list</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.row_number.html">ibis.row_number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.window.html">ibis.window</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ibis.range_window.html">ibis.range_window</a></li>
@@ -528,28 +527,25 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.null.html#ibis.null" title="ibis.null"><code class="xref py py-obj docutils literal notranslate"><span class="pre">null</span></code></a>()</p></td>
 <td><p>Create a NULL/NA scalar</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr_list.html#ibis.expr_list" title="ibis.expr_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expr_list</span></code></a>(exprs)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.row_number.html#ibis.row_number" title="ibis.row_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">row_number</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.row_number.html#ibis.row_number" title="ibis.row_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">row_number</span></code></a>()</p></td>
 <td><p>Analytic function for the current row number, starting at 0.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.window.html#ibis.window" title="ibis.window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window</span></code></a>([preceding, following, group_by, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.window.html#ibis.window" title="ibis.window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window</span></code></a>([preceding, following, group_by, ...])</p></td>
 <td><p>Create a window clause for use with window functions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.range_window.html#ibis.range_window" title="ibis.range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">range_window</span></code></a>([preceding, following, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.range_window.html#ibis.range_window" title="ibis.range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">range_window</span></code></a>([preceding, following, ...])</p></td>
 <td><p>Create a range-based window clause for use with window functions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.trailing_window.html#ibis.trailing_window" title="ibis.trailing_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_window</span></code></a>(preceding[, group_by, order_by])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.trailing_window.html#ibis.trailing_window" title="ibis.trailing_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_window</span></code></a>(preceding[, group_by, order_by])</p></td>
 <td><p>Create a trailing window for use with aggregate window functions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.cumulative_window.html#ibis.cumulative_window" title="ibis.cumulative_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cumulative_window</span></code></a>([group_by, order_by])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.cumulative_window.html#ibis.cumulative_window" title="ibis.cumulative_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cumulative_window</span></code></a>([group_by, order_by])</p></td>
 <td><p>Create a cumulative window for use with aggregate window functions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.trailing_range_window.html#ibis.trailing_range_window" title="ibis.trailing_range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_range_window</span></code></a>(preceding, order_by[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.trailing_range_window.html#ibis.trailing_range_window" title="ibis.trailing_range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_range_window</span></code></a>(preceding, order_by[, ...])</p></td>
 <td><p>Create a trailing time window for use with aggregate window functions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.random.html#ibis.random" title="ibis.random"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.random.html#ibis.random" title="ibis.random"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random</span></code></a>()</p></td>
 <td><p>Return a random floating point number in the range [0.0, 1.0).</p></td>
 </tr>
 </tbody>
@@ -836,7 +832,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.ColumnExpr.nunique.html#ibis.expr.api.ColumnExpr.nunique" title="ibis.expr.api.ColumnExpr.nunique"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ColumnExpr.nunique</span></code></a>([where])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.ColumnExpr.summary.html#ibis.expr.api.ColumnExpr.summary" title="ibis.expr.api.ColumnExpr.summary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ColumnExpr.summary</span></code></a>([exact_nunique, prefix])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.ColumnExpr.summary.html#ibis.expr.api.ColumnExpr.summary" title="ibis.expr.api.ColumnExpr.summary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ColumnExpr.summary</span></code></a>([exact_nunique, prefix, ...])</p></td>
 <td><p>Compute a set of summary metrics from the input value expression</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.ColumnExpr.value_counts.html#ibis.expr.api.ColumnExpr.value_counts" title="ibis.expr.api.ColumnExpr.value_counts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ColumnExpr.value_counts</span></code></a>([metric_name])</p></td>
