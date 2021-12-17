@@ -148,29 +148,14 @@
 <h1>ibis.schema<a class="headerlink" href="#ibis-schema" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="ibis.schema">
-<span class="sig-prename descclassname"><span class="pre">ibis.</span></span><span class="sig-name descname"><span class="pre">schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pairs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.schema" title="Permalink to this definition">¶</a></dt>
-<dd><p>Validate and return an Ibis Schema object</p>
-<p>Ibis uses its own type aliases that map onto database types. See, for
-example, the correspondence between Ibis type names and Impala type names:</p>
-<p>Ibis type      Impala Type
-~~~~~~~~~      ~~~~~~~~~~~
-int8           TINYINT
-int16          SMALLINT
-int32          INT
-int64          BIGINT
-float          FLOAT
-double         DOUBLE
-boolean        BOOLEAN
-string         STRING
-timestamp      TIMESTAMP
-decimal(p, s)  DECIMAL(p,s)
-interval(u)    INTERVAL(u)</p>
+<span class="sig-prename descclassname"><span class="pre">ibis.</span></span><span class="sig-name descname"><span class="pre">schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pairs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dt.DataType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dt.DataType</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">sch.Schema</span></span></span><a class="headerlink" href="#ibis.schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate and return an <code class="xref py py-class docutils literal notranslate"><span class="pre">Schema</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pairs</strong> (<em>list of</em><em> (</em><em>name</em><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.10)"><em>type</em></a><em>) </em><em>tuples</em>) – Mutually exclusive with names/types</p></li>
-<li><p><strong>names</strong> (<em>list of string</em>) – Field names</p></li>
-<li><p><strong>types</strong> (<em>list of string</em>) – Field types</p></li>
+<li><p><strong>pairs</strong> – List of name, type pairs. Mutually exclusive with <cite>names</cite> and <cite>types</cite>.</p></li>
+<li><p><strong>names</strong> – Field names. Mutually exclusive with <cite>pairs</cite>.</p></li>
+<li><p><strong>types</strong> – Field types. Mutually exclusive with <cite>pairs</cite>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -183,14 +168,6 @@ interval(u)    INTERVAL(u)</p>
 <span class="gp">... </span>             <span class="n">types</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">,</span> <span class="s1">&#39;boolean&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>schema</strong></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Schema</p>
-</dd>
-</dl>
 </dd></dl>
 
 </section>

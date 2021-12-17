@@ -146,35 +146,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ibis.expr.api.ValueExpr.cast">
 <span class="sig-prename descclassname"><span class="pre">ValueExpr.</span></span><span class="sig-name descname"><span class="pre">cast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.expr.api.ValueExpr.cast" title="Permalink to this definition">¶</a></dt>
-<dd><p>Cast value(s) to indicated data type. Values that cannot be
-successfully casted</p>
+<dd><p>Cast value(s) to indicated data type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>target_type</strong> (<em>data type name</em>) – </p>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>Ibis uses its own type aliases that map onto database types. See, for
-example, the correspondence between Ibis type names and Impala type names:</p>
-<p>Ibis type      Impala Type
-~~~~~~~~~      ~~~~~~~~~~~
-int8           TINYINT
-int16          SMALLINT
-int32          INT
-int64          BIGINT
-float          FLOAT
-double         DOUBLE
-boolean        BOOLEAN
-string         STRING
-timestamp      TIMESTAMP
-decimal(p, s)  DECIMAL(p,s)
-interval(u)    INTERVAL(u)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>cast_expr</strong></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>ValueExpr</p>
+<dd class="field-odd"><p><strong>target_type</strong> – Type to cast to</p>
 </dd>
 </dl>
 </dd></dl>
