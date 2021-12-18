@@ -559,8 +559,8 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.connect.html#ibis.backends.base.BaseBackend.connect" title="ibis.backends.base.BaseBackend.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.connect</span></code></a>(**options)</p></td>
-<td><p>Connect to the underlying database and return a client object.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.connect.html#ibis.backends.base.BaseBackend.connect" title="ibis.backends.base.BaseBackend.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.connect</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Return new client object with saved args/kwargs, having called .reconnect() on it.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.backends.base.BaseBackend.database.html#ibis.backends.base.BaseBackend.database" title="ibis.backends.base.BaseBackend.database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBackend.database</span></code></a>([name])</p></td>
 <td><p>Return a Database object for the <cite>name</cite> database.</p></td>

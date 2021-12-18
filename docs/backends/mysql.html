@@ -148,8 +148,8 @@ create a client.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.connect.html#ibis.backends.mysql.Backend.connect" title="ibis.backends.mysql.Backend.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.connect</span></code></a>([host, user, password, ...])</p></td>
-<td><p>Create an Ibis client located at <cite>user</cite>:<cite>password`&#64;`host</cite>:<cite>port</cite> connected to a MySQL database named <cite>database</cite>.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.connect.html#ibis.backends.mysql.Backend.connect" title="ibis.backends.mysql.Backend.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.connect</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Return new client object with saved args/kwargs, having called .reconnect() on it.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../generated/ibis.backends.mysql.Backend.database.html#ibis.backends.mysql.Backend.database" title="ibis.backends.mysql.Backend.database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.database</span></code></a>([name])</p></td>
 <td><p>Return a Database object for the <cite>name</cite> database.</p></td>

@@ -134,8 +134,9 @@
 <h1>ibis.backends.base.BaseBackend.connect<a class="headerlink" href="#ibis-backends-base-basebackend-connect" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ibis.backends.base.BaseBackend.connect">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">BaseBackend.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.backends.base.BaseBackend.connect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Connect to the underlying database and return a client object.</p>
+<span class="sig-prename descclassname"><span class="pre">BaseBackend.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ibis.backends.base.BaseBackend</span></span></span><a class="headerlink" href="#ibis.backends.base.BaseBackend.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new client object with saved args/kwargs, having called
+.reconnect() on it.</p>
 </dd></dl>
 
 </section>

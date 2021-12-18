@@ -125,67 +125,9 @@
 <h1>ibis.backends.postgres.Backend.connect<a class="headerlink" href="#ibis-backends-postgres-backend-connect" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ibis.backends.postgres.Backend.connect">
-<span class="sig-prename descclassname"><span class="pre">Backend.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5432</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'psycopg2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.backends.postgres.Backend.connect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create an Ibis client located at <cite>user</cite>:<cite>password`&#64;`host</cite>:<cite>port</cite>
-connected to a PostgreSQL database named <cite>database</cite>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>host</strong> (<em>string</em><em>, </em><em>default 'localhost'</em>) – </p></li>
-<li><p><strong>user</strong> (<em>string</em><em>, </em><em>default None</em>) – </p></li>
-<li><p><strong>password</strong> (<em>string</em><em>, </em><em>default None</em>) – </p></li>
-<li><p><strong>port</strong> (<em>string</em><em> or </em><em>integer</em><em>, </em><em>default 5432</em>) – </p></li>
-<li><p><strong>database</strong> (<em>string</em><em>, </em><em>default None</em>) – </p></li>
-<li><p><strong>url</strong> (<em>string</em><em>, </em><em>default None</em>) – Complete SQLAlchemy connection string. If passed, the other
-connection arguments are ignored.</p></li>
-<li><p><strong>driver</strong> (<em>string</em><em>, </em><em>default 'psycopg2'</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Backend</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">getpass</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">host</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_POSTGRES_HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">user</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_POSTGRES_USER&#39;</span><span class="p">,</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">())</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_POSTGRES_PASSWORD&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">database</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_POSTGRES_DATABASE&#39;</span><span class="p">,</span>
-<span class="gp">... </span>                          <span class="s1">&#39;ibis_testing&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">con</span> <span class="o">=</span> <span class="n">connect</span><span class="p">(</span>
-<span class="gp">... </span>    <span class="n">database</span><span class="o">=</span><span class="n">database</span><span class="p">,</span>
-<span class="gp">... </span>    <span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span>
-<span class="gp">... </span>    <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span>
-<span class="gp">... </span>    <span class="n">password</span><span class="o">=</span><span class="n">password</span>
-<span class="gp">... </span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">list_tables</span><span class="p">()</span>  
-<span class="go">[...]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;functional_alltypes&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span>
-<span class="go">PostgreSQLTable[table]</span>
-<span class="go">  name: functional_alltypes</span>
-<span class="go">  schema:</span>
-<span class="go">    index : int64</span>
-<span class="go">    Unnamed: 0 : int64</span>
-<span class="go">    id : int32</span>
-<span class="go">    bool_col : boolean</span>
-<span class="go">    tinyint_col : int16</span>
-<span class="go">    smallint_col : int16</span>
-<span class="go">    int_col : int32</span>
-<span class="go">    bigint_col : int64</span>
-<span class="go">    float_col : float32</span>
-<span class="go">    double_col : float64</span>
-<span class="go">    date_string_col : string</span>
-<span class="go">    string_col : string</span>
-<span class="go">    timestamp_col : timestamp</span>
-<span class="go">    year : int32</span>
-<span class="go">    month : int32</span>
-</pre></div>
-</div>
+<span class="sig-prename descclassname"><span class="pre">Backend.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ibis.backends.base.BaseBackend</span></span></span><a class="headerlink" href="#ibis.backends.postgres.Backend.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new client object with saved args/kwargs, having called
+.reconnect() on it.</p>
 </dd></dl>
 
 </section>

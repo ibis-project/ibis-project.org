@@ -145,56 +145,9 @@
 <h1>ibis.backends.impala.Backend.connect<a class="headerlink" href="#ibis-backends-impala-backend-connect" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ibis.backends.impala.Backend.connect">
-<span class="sig-prename descclassname"><span class="pre">Backend.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21050</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_ssl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ca_cert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auth_mechanism</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NOSASL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kerberos_service_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'impala'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdfs_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.backends.impala.Backend.connect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Impala Backend for use with Ibis.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>host</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – Host name of the impalad or HiveServer2 in Hive</p></li>
-<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>optional</em>) – Impala’s HiveServer2 port</p></li>
-<li><p><strong>database</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – Default database when obtaining new cursors</p></li>
-<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>optional</em>) – Connection timeout in seconds when communicating with HiveServer2</p></li>
-<li><p><strong>use_ssl</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – Use SSL when connecting to HiveServer2</p></li>
-<li><p><strong>ca_cert</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – Local path to 3rd party CA certificate or copy of server
-certificate for self-signed certificates. If SSL is enabled, but
-this argument is <code class="docutils literal notranslate"><span class="pre">None</span></code>, then certificate validation is skipped.</p></li>
-<li><p><strong>user</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – LDAP user to authenticate</p></li>
-<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – LDAP password to authenticate</p></li>
-<li><p><strong>auth_mechanism</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – {‘NOSASL’ &lt;- default, ‘PLAIN’, ‘GSSAPI’, ‘LDAP’}.
-Use NOSASL for non-secured Impala connections.  Use PLAIN for
-non-secured Hive clusters.  Use LDAP for LDAP authenticated
-connections.  Use GSSAPI for Kerberos-secured clusters.</p></li>
-<li><p><strong>kerberos_service_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – Specify particular impalad service principal.</p></li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ibis</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs_host</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_NN_HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs_port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_NN_PORT&#39;</span><span class="p">,</span> <span class="mi">50070</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">impala_host</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_IMPALA_HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">impala_port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_IMPALA_PORT&#39;</span><span class="p">,</span> <span class="mi">21050</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">hdfs_connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">hdfs_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">hdfs_port</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span>  
-<span class="go">&lt;ibis.filesystems.WebHDFS object at 0x...&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-<span class="gp">... </span>    <span class="n">host</span><span class="o">=</span><span class="n">impala_host</span><span class="p">,</span>
-<span class="gp">... </span>    <span class="n">port</span><span class="o">=</span><span class="n">impala_port</span><span class="p">,</span>
-<span class="gp">... </span>    <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span><span class="p">,</span>
-<span class="gp">... </span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span>  
-<span class="go">&lt;ibis.backends.impala.Backend object at 0x...&gt;</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Backend</p>
-</dd>
-</dl>
+<span class="sig-prename descclassname"><span class="pre">Backend.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ibis.backends.base.BaseBackend</span></span></span><a class="headerlink" href="#ibis.backends.impala.Backend.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new client object with saved args/kwargs, having called
+.reconnect() on it.</p>
 </dd></dl>
 
 </section>

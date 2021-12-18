@@ -125,19 +125,9 @@
 <h1>ibis.backends.sqlite.Backend.connect<a class="headerlink" href="#ibis-backends-sqlite-backend-connect" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ibis.backends.sqlite.Backend.connect">
-<span class="sig-prename descclassname"><span class="pre">Backend.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.backends.sqlite.Backend.connect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create an Ibis client connected to a SQLite database.</p>
-<p>Multiple database files can be created using the attach() method</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>path</strong> (<em>string</em><em>, </em><em>default None</em>) – File path to the SQLite database file. If None, creates an
-in-memory transient database and you can use attach() to add more
-files</p></li>
-<li><p><strong>create</strong> (<em>boolean</em><em>, </em><em>default False</em>) – If file does not exist, create it</p></li>
-</ul>
-</dd>
-</dl>
+<span class="sig-prename descclassname"><span class="pre">Backend.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ibis.backends.base.BaseBackend</span></span></span><a class="headerlink" href="#ibis.backends.sqlite.Backend.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new client object with saved args/kwargs, having called
+.reconnect() on it.</p>
 </dd></dl>
 
 </section>
