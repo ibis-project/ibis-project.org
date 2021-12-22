@@ -138,23 +138,22 @@
 </ul>
 <p>Installing both <code>nix</code> and <code>conda</code> is fine, but you should use one or the other for contributing, not both.</p>
 <p>Use <code>gh</code> to fork and clone the <code>ibis-project/ibis</code> repository:</p>
-<div class="codehilite"><pre><span></span><code> :::sh
- gh repo fork --clone --remote ibis-project/ibis
- cd ibis
+<div class="codehilite"><pre><span></span><code>    gh repo fork --clone --remote ibis-project/ibis
+    cd ibis
 </code></pre></div>
 
 <h3 id="nix">Nix</h3>
 <ol>
 <li><a href="https://nixos.org/guides/install-nix.html">Download and install <code>nix</code></a></li>
-<li>Run <code>nix-shell</code> in the checkout directory:<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ibis
+<li>Run <code>nix-shell</code> in the checkout directory:<div class="codehilite"><pre><span></span><code><span class="n">cd</span> <span class="n">ibis</span>
 
 <span class="c1"># set up the cache to avoid building everything from scratch</span>
-nix-shell -p cachix --run <span class="s1">&#39;cachix use ibis&#39;</span>
+<span class="n">nix</span><span class="o">-</span><span class="n">shell</span> <span class="o">-</span><span class="n">p</span> <span class="n">cachix</span> <span class="o">--</span><span class="n">run</span> <span class="s1">&#39;cachix use ibis&#39;</span>
 
 <span class="c1"># start a nix-shell</span>
 <span class="c1">#</span>
 <span class="c1"># this may take awhile to download artifacts from the cache</span>
-nix-shell
+<span class="n">nix</span><span class="o">-</span><span class="n">shell</span>
 </code></pre></div>
 
 </li>
@@ -165,7 +164,7 @@ nix-shell
 <li><a href="https://github.com/ibis-project/ibis/releases/latest/download/environment.yaml">Download the latest <code>environment.yaml</code></a></li>
 <li>
 <p>Create a Conda environment suitable for ibis development:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ibis
+<div class="codehilite"><pre><span></span><code>cd ibis
 conda create -n ibis-dev -f conda-lock/&lt;platform-64-pyver&gt;.lock
 </code></pre></div>
 
@@ -185,25 +184,24 @@ conda create -n ibis-dev -f conda-lock/&lt;platform-64-pyver&gt;.lock
 </ol>
 <h3 id="general-workflow">General workflow</h3>
 <h4 id="find-an-issue-to-work-on">Find an issue to work on</h4>
-<p>If you are working with Ibis, and find a bug, or you are reading the documentation and see something
-wrong, or that could be clearer, you can work on that.</p>
-<p>But sometimes, you may want to contribute to Ibis, but you don't have anything in mind. In that case,
-you can check the GitHub issue tracker for Ibis, and look for issues with the label
-<a href="https://github.com/ibis-project/ibis/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">good first issue</a>.
-Feel free to also help with other issues that don't have the label, but they may be more challenging,
-and require knowledge of Ibis internals.</p>
-<p>Once you found an issue you want to work on, write a comment with the text <code>/take</code>, and GitHub will
-assign the issue to yourself. This way, nobody else will work on it at the same time. If you find an
-issue that someone else is assigned to, please contact the assignee to know if they are still working
-on it.</p>
+<p>All contributions are welcome! Code, docs, and constructive feedback are all
+great contributions to the project.</p>
+<p>If you don't have a particular issue in mind head over to the GitHub issue
+tracker for Ibis and look for open issues with the label <a href="https://github.com/ibis-project/ibis/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22"><code>good first
+issue</code></a>.</p>
+<p>Feel free to help with other issues that aren't labeled as such, but they may be more challenging.</p>
+<p>Once you find an issue you want to work on, write a comment with the text
+<code>/take</code> on the issue. GitHub will then assign the issue to you.</p>
+<p>This lets people know you're working on the issue. If you find an issue that
+has an assignee, comment on the issue and ask whether the assignee is still
+working on the issue.</p>
 <h4 id="make-a-branch">Make a branch</h4>
 <p><strong>Dependencies:</strong></p>
 <ul>
 <li>required: <code>git</code></li>
 </ul>
 <p>The first thing you want to do is make a branch. Let's call it <code>useful-bugfix</code>.</p>
-<div class="codehilite"><pre><span></span><code>   :::sh
-   git checkout -b useful-bugfix
+<div class="codehilite"><pre><span></span><code>    git checkout -b useful-bugfix
 </code></pre></div>
 
 <h4 id="make-the-desired-change">Make the desired change</h4>
@@ -213,8 +211,7 @@ on it.</p>
 </ul>
 <p>Let's say you've made a change to <code>ibis/expr/types.py</code> to fix a bug reported in issue #424242 (not actually an issue).</p>
 <p>Running <code>git status</code> should give output similar to this:</p>
-<div class="codehilite"><pre><span></span><code>    :::<span class="nv">sh</span>
-    $ <span class="nv">git</span> <span class="nv">status</span>
+<div class="codehilite"><pre><span></span><code>    $ <span class="nv">git</span> <span class="nv">status</span>
     <span class="nv">On</span> <span class="nv">branch</span> <span class="nv">useful</span><span class="o">-</span><span class="nv">bugfix</span>
     <span class="nv">Your</span> <span class="nv">branch</span> <span class="nv">is</span> <span class="nv">up</span> <span class="nv">to</span> <span class="nv">date</span> <span class="nv">with</span> <span class="s1">&#39;</span><span class="s">origin/useful-bugfix</span><span class="s1">&#39;</span>.
 
@@ -254,23 +251,22 @@ necessary to follow outlined in this table in <a href="https://github.com/semant
 table</a>.</p>
 <p><code>cz</code> is already configured and ready to go if you've setup an environment, so
 stage your changes and run <code>cz commit</code>:</p>
-<div class="codehilite"><pre><span></span><code>    :::sh
-    $ git add .
-    $ cz commit
+<div class="codehilite"><pre><span></span><code>    git add .
+    cz commit
 </code></pre></div>
 
 <p>You should see a series of prompts about actions to take next:</p>
 <ol>
-<li>Select the type of change you're committing. In this case, we're committing a bug fix, so we'll select fix:<div class="codehilite"><pre><span></span><code>? Select the <span class="nb">type</span> of change you are committing <span class="o">(</span>Use arrow keys<span class="o">)</span>
- » fix: A bug fix. Correlates with PATCH <span class="k">in</span> SemVer
-   feat: A new feature. Correlates with MINOR <span class="k">in</span> SemVer
-   docs: Documentation only changes
-   style: Changes that <span class="k">do</span> not affect the meaning of the code <span class="o">(</span>white-space, formatting, missing semi-colons, etc<span class="o">)</span>
-   refactor: A code change that neither fixes a bug nor adds a feature
-   perf: A code change that improves performance
-   test: Adding missing or correcting existing tests
-   build: Changes that affect the build system or external dependencies <span class="o">(</span>example scopes: pip, docker, npm<span class="o">)</span>
-   ci: Changes to our CI configuration files and scripts <span class="o">(</span>example scopes: GitLabCI<span class="o">)</span>
+<li>Select the type of change you're committing. In this case, we're committing a bug fix, so we'll select fix:<div class="codehilite"><pre><span></span><code>? <span class="nv">Select</span> <span class="nv">the</span> <span class="nv">type</span> <span class="nv">of</span> <span class="nv">change</span> <span class="nv">you</span> <span class="nv">are</span> <span class="nv">committing</span> <span class="ss">(</span><span class="nv">Use</span> <span class="nv">arrow</span> <span class="nv">keys</span><span class="ss">)</span>
+ » <span class="nv">fix</span>: <span class="nv">A</span> <span class="nv">bug</span> <span class="nv">fix</span>. <span class="nv">Correlates</span> <span class="nv">with</span> <span class="nv">PATCH</span> <span class="nv">in</span> <span class="nv">SemVer</span>
+   <span class="nv">feat</span>: <span class="nv">A</span> <span class="nv">new</span> <span class="nv">feature</span>. <span class="nv">Correlates</span> <span class="nv">with</span> <span class="nv">MINOR</span> <span class="nv">in</span> <span class="nv">SemVer</span>
+   <span class="nv">docs</span>: <span class="nv">Documentation</span> <span class="nv">only</span> <span class="nv">changes</span>
+   <span class="nv">style</span>: <span class="nv">Changes</span> <span class="nv">that</span> <span class="k">do</span> <span class="nv">not</span> <span class="nv">affect</span> <span class="nv">the</span> <span class="nv">meaning</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">code</span> <span class="ss">(</span><span class="nv">white</span><span class="o">-</span><span class="nv">space</span>, <span class="nv">formatting</span>, <span class="nv">missing</span> <span class="nv">semi</span><span class="o">-</span><span class="nv">colons</span>, <span class="nv">etc</span><span class="ss">)</span>
+   <span class="nv">refactor</span>: <span class="nv">A</span> <span class="nv">code</span> <span class="nv">change</span> <span class="nv">that</span> <span class="nv">neither</span> <span class="nv">fixes</span> <span class="nv">a</span> <span class="nv">bug</span> <span class="nv">nor</span> <span class="nv">adds</span> <span class="nv">a</span> <span class="nv">feature</span>
+   <span class="nv">perf</span>: <span class="nv">A</span> <span class="nv">code</span> <span class="nv">change</span> <span class="nv">that</span> <span class="nv">improves</span> <span class="nv">performance</span>
+   <span class="nv">test</span>: <span class="nv">Adding</span> <span class="nv">missing</span> <span class="nv">or</span> <span class="nv">correcting</span> <span class="nv">existing</span> <span class="nv">tests</span>
+   <span class="nv">build</span>: <span class="nv">Changes</span> <span class="nv">that</span> <span class="nv">affect</span> <span class="nv">the</span> <span class="nv">build</span> <span class="nv">system</span> <span class="nv">or</span> <span class="nv">external</span> <span class="nv">dependencies</span> <span class="ss">(</span><span class="nv">example</span> <span class="nv">scopes</span>: <span class="nv">pip</span>, <span class="nv">docker</span>, <span class="nv">npm</span><span class="ss">)</span>
+   <span class="nv">ci</span>: <span class="nv">Changes</span> <span class="nv">to</span> <span class="nv">our</span> <span class="nv">CI</span> <span class="nv">configuration</span> <span class="nv">files</span> <span class="nv">and</span> <span class="nv">scripts</span> <span class="ss">(</span><span class="nv">example</span> <span class="nv">scopes</span>: <span class="nv">GitLabCI</span><span class="ss">)</span>
 </code></pre></div>
 
 </li>
@@ -285,7 +281,7 @@ stage your changes and run <code>cz commit</code>:</p>
 </li>
 <li>
 <p>Next, you're asked what the scope of this change is:</p>
-<div class="codehilite"><pre><span></span><code>? What is the scope of this change? <span class="o">(</span>class or file name<span class="o">)</span>: <span class="o">(</span>press <span class="o">[</span>enter<span class="o">]</span> to skip<span class="o">)</span>
+<div class="codehilite"><pre><span></span><code><span class="vm">?</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">scope</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">change</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="k">class</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="p">(</span><span class="n">press</span><span class="w"> </span><span class="o">[</span><span class="n">enter</span><span class="o">]</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">skip</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 </li>
@@ -294,8 +290,8 @@ stage your changes and run <code>cz commit</code>:</p>
    modified you should put it. In our case, let's assume the bug fixed a type
    inference problem, so we'd type in <code>type-inference</code> at this prompt.</p>
 <ol>
-<li>You'll then be asked to type in a short description of the change which will be the commit message title:<div class="codehilite"><pre><span></span><code>? Write a short and imperative summary of the code changes: <span class="o">(</span>lower <span class="k">case</span> and no period<span class="o">)</span>
- fix a <span class="nb">type</span> inference issue where floats were incorrectly cast to ints
+<li>You'll then be asked to type in a short description of the change which will be the commit message title:<div class="codehilite"><pre><span></span><code>? Write a short and imperative summary of the code changes: (lower case and no period)
+ fix a type inference issue where floats were incorrectly cast to ints
 </code></pre></div>
 
 </li>
@@ -305,8 +301,8 @@ stage your changes and run <code>cz commit</code>:</p>
    length of description you've typed in.</p>
 <ol>
 <li>Next you'll be asked for a longer description, which is entirely optional
-   <strong>unless the change is a breaking change</strong>, or you feel like a bit of prose<div class="codehilite"><pre><span></span><code>? Provide additional contextual information about the code changes: <span class="o">(</span>press <span class="o">[</span>enter<span class="o">]</span> to skip<span class="o">)</span>
- A bug was triggered by some incorrect code that caused floats to be incorrectly cast to integers.
+   <strong>unless the change is a breaking change</strong>, or you feel like a bit of prose<div class="codehilite"><pre><span></span><code><span class="vm">?</span><span class="w"> </span><span class="n">Provide</span><span class="w"> </span><span class="n">additional</span><span class="w"> </span><span class="n">contextual</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="n">about</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="nl">changes</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="n">press</span><span class="w"> </span><span class="o">[</span><span class="n">enter</span><span class="o">]</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">skip</span><span class="p">)</span><span class="w"></span>
+<span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">bug</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">triggered</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="ow">some</span><span class="w"> </span><span class="n">incorrect</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">caused</span><span class="w"> </span><span class="n">floats</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">incorrectly</span><span class="w"> </span><span class="nf">cast</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">integers</span><span class="p">.</span><span class="w"></span>
 </code></pre></div>
 
 </li>
@@ -315,7 +311,7 @@ stage your changes and run <code>cz commit</code>:</p>
    helpful when a change is large, obscure, or complex. For this example let's just reiterate
    most of what the commit title says.</p>
 <ol>
-<li>Next you're asked about breaking changes:<div class="codehilite"><pre><span></span><code>? Is this a BREAKING CHANGE? Correlates with MAJOR <span class="k">in</span> SemVer <span class="o">(</span>y/N<span class="o">)</span>
+<li>Next you're asked about breaking changes:<div class="codehilite"><pre><span></span><code>? Is this a BREAKING CHANGE? Correlates with MAJOR in SemVer (y/N)
 </code></pre></div>
 
 </li>
@@ -326,8 +322,8 @@ stage your changes and run <code>cz commit</code>:</p>
    Let's say this bug fix does <strong>not</strong> introduce a breaking change.</p>
 <ol>
 <li>Finally, you're asked whether this change affects any open issues (ignore
-   the bit about breaking changes) and if yes then to reference them:<div class="codehilite"><pre><span></span><code>? Footer. Information about Breaking Changes and reference issues that this commit closes: <span class="o">(</span>press <span class="o">[</span>enter<span class="o">]</span> to skip<span class="o">)</span>
- fixes <span class="c1">#424242</span>
+   the bit about breaking changes) and if yes then to reference them:<div class="codehilite"><pre><span></span><code><span class="vm">?</span><span class="w"> </span><span class="n">Footer</span><span class="p">.</span><span class="w"> </span><span class="n">Information</span><span class="w"> </span><span class="n">about</span><span class="w"> </span><span class="n">Breaking</span><span class="w"> </span><span class="n">Changes</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">reference</span><span class="w"> </span><span class="n">issues</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="k">commit</span><span class="w"> </span><span class="nl">closes</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="n">press</span><span class="w"> </span><span class="o">[</span><span class="n">enter</span><span class="o">]</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">skip</span><span class="p">)</span><span class="w"></span>
+<span class="w"> </span><span class="n">fixes</span><span class="w"> </span><span class="n">#424242</span><span class="w"></span>
 </code></pre></div>
 
 </li>
@@ -348,8 +344,7 @@ that you should have a commit that looks roughly like this, ready to be automati
 
 <h4 id="push-your-changes">Push your changes</h4>
 <p>Now that you've got a commit, you're ready to push your changes and make a pull request!</p>
-<div class="codehilite"><pre><span></span><code>    :::sh
-    $ gh pr create
+<div class="codehilite"><pre><span></span><code>    $ gh pr create
 </code></pre></div>
 
 <p>Follow the prompts, and <code>gh</code> will print a link to your PR upon successfuly submission.</p>
@@ -419,8 +414,7 @@ as much as possible:</p>
   and publish them to a public cache</li>
 </ul>
 <p>Occasionally you may need to manually lock poetry dependencies, which can be done by running</p>
-<div class="codehilite"><pre><span></span><code>    :::sh
-    poetry update --lock
+<div class="codehilite"><pre><span></span><code>    poetry update --lock
 </code></pre></div>
 
 <p>If a dependency was updated, you'll see changes to <code>poetry.lock</code> in the current directory.</p>
