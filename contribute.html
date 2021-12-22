@@ -106,6 +106,12 @@
                                         </li>
                                     
                                 
+                                    
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/release_notes.html">Release Notes</a>
+                                        </li>
+                                    
+                                
                             </ul>
                         </div>
                     
@@ -117,16 +123,46 @@
                 
                                <h1 id="contributing-to-ibis">Contributing to Ibis</h1>
 <h2 id="set-up-a-development-environment">Set up a development environment</h2>
+<p>There are two primary ways to setup a development environment.</p>
+<ul>
+<li><a href="#nix"><code>nix</code></a>: fewer steps, isolated</li>
+<li><a href="#miniconda"><code>conda</code></a>: more steps, not isolated</li>
+</ul>
+<h3 id="initial-steps">Initial steps</h3>
+<p><strong>Dependencies:</strong></p>
+<ul>
+<li>required: <a href="https://git-scm.com/"><code>git</code></a></li>
+<li>required: <a href="https://github.com/cli/cli"><code>gh</code></a></li>
+<li>optional: <a href="https://nixos.org/download.html#nix-quick-install"><code>nix</code></a></li>
+<li>optional: <a href="https://docs.conda.io/en/latest/"><code>conda</code></a></li>
+</ul>
+<p>Installing both <code>nix</code> and <code>conda</code> is fine, but you should use one or the other for contributing, not both.</p>
+<p>Use <code>gh</code> to fork and clone the <code>ibis-project/ibis</code> repository:</p>
+<div class="codehilite"><pre><span></span><code> :::sh
+ gh repo fork --clone --remote ibis-project/ibis
+ cd ibis
+</code></pre></div>
+
+<h3 id="nix">Nix</h3>
 <ol>
-<li>
-<p>Create a fork of the <a href="https://github.com/ibis-project/ibis">Ibis repository</a>, and clone it.</p>
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/&lt;your-github-username&gt;/ibis
+<li><a href="https://nixos.org/guides/install-nix.html">Download and install <code>nix</code></a></li>
+<li>Run <code>nix-shell</code> in the checkout directory:<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ibis
+
+<span class="c1"># set up the cache to avoid building everything from scratch</span>
+nix-shell -p cachix --run <span class="s1">&#39;cachix use ibis&#39;</span>
+
+<span class="c1"># start a nix-shell</span>
+<span class="c1">#</span>
+<span class="c1"># this may take awhile to download artifacts from the cache</span>
+nix-shell
 </code></pre></div>
 
 </li>
-<li>
-<p><a href="https://docs.conda.io/en/latest/miniconda.html">Download</a> and install Miniconda</p>
-</li>
+</ol>
+<h3 id="miniconda">Miniconda</h3>
+<ol>
+<li><a href="https://docs.conda.io/en/latest/miniconda.html">Download</a> and install Miniconda</li>
+<li><a href="https://github.com/ibis-project/ibis/releases/latest/download/environment.yaml">Download the latest <code>environment.yaml</code></a></li>
 <li>
 <p>Create a Conda environment suitable for ibis development:</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ibis
@@ -141,13 +177,14 @@ conda create -n ibis-dev -f conda-lock/&lt;platform-64-pyver&gt;.lock
 
 </li>
 <li>
-<p>Install your local copy of Ibis into the Conda environment. In the root of the project run:</p>
+<p>Install your local copy of <code>ibis</code> into the Conda environment. In the root of the project run:</p>
 <div class="codehilite"><pre><span></span><code>pip install -e .
 </code></pre></div>
 
 </li>
 </ol>
-<h2 id="find-an-issue-to-work-on">Find an issue to work on</h2>
+<h3 id="general-workflow">General workflow</h3>
+<h4 id="find-an-issue-to-work-on">Find an issue to work on</h4>
 <p>If you are working with Ibis, and find a bug, or you are reading the documentation and see something
 wrong, or that could be clearer, you can work on that.</p>
 <p>But sometimes, you may want to contribute to Ibis, but you don't have anything in mind. In that case,
@@ -159,72 +196,173 @@ and require knowledge of Ibis internals.</p>
 assign the issue to yourself. This way, nobody else will work on it at the same time. If you find an
 issue that someone else is assigned to, please contact the assignee to know if they are still working
 on it.</p>
-<h2 id="working-with-backends">Working with backends</h2>
-<p>Ibis comes with several backends. If you want to work with a specific backend, you will have to install
-the dependencies for the backend with <code>conda install -n ibis-dev -c conda-forge --file="ci/deps/&lt;backend&gt;.yml"</code>.</p>
-<p>If you don't have a database for the backend you want to work on, you can check the configuration of the
-continuos integration, where docker images are used for different backend. This is defined in
-<code>.github/workflows/main.yml</code>.</p>
-<h2 id="run-the-test-suite">Run the test suite</h2>
-<p>To run Ibis tests use the next command:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">PYTEST_BACKENDS</span><span class="o">=</span><span class="s2">&quot;sqlite pandas&quot;</span> python -m pytest ibis/tests
+<h4 id="make-a-branch">Make a branch</h4>
+<p><strong>Dependencies:</strong></p>
+<ul>
+<li>required: <code>git</code></li>
+</ul>
+<p>The first thing you want to do is make a branch. Let's call it <code>useful-bugfix</code>.</p>
+<div class="codehilite"><pre><span></span><code>   :::sh
+   git checkout -b useful-bugfix
 </code></pre></div>
 
-<p>You can change <code>sqlite pandas</code> by the backend or backends (space separated) that
-you want to test.</p>
-<h2 id="style-and-formatting">Style and formatting</h2>
-<p>We use <a href="http://flake8.pycqa.org/en/latest/">flake8</a>,
-<a href="https://github.com/psf/black">black</a> and
-<a href="https://github.com/pre-commit/mirrors-isort">isort</a> to ensure our code
-is formatted and linted properly. If you have properly set up your development
-environment by running <code>make develop</code>, the pre-commit hooks should check
-that your proposed changes continue to conform to our style guide.</p>
-<p>We use <a href="https://numpydoc.readthedocs.io/en/latest/format.html">numpydoc</a> as
-our standard format for docstrings.</p>
-<h2 id="commit-philosophy">Commit philosophy</h2>
-<p>We aim to make our individual commits small and tightly focused on the feature
-they are implementing. If you find yourself making functional changes to
-different areas of the codebase, we prefer you break up your changes into
-separate Pull Requests. In general, a philosophy of one Github Issue per
-Pull Request is a good rule of thumb, though that isn't always possible.</p>
-<p>We avoid merge commits (and in fact they are disabled in the Github repository)
-so you may be asked to rebase your changes on top of the latest commits to
-master if there have been changes since you last updated a Pull Request.
-Rebasing your changes is usually as simple as running
-<code>git pull upstream master --rebase</code> and then force-pushing to your branch:
-<code>git push origin &lt;branch-name&gt; -f</code>.</p>
-<h2 id="commitpr-messages">Commit/PR messages</h2>
-<p>Well-structed commit messages allow us to generate comprehensive release notes
-and make it very easy to understand what a commit/PR contributes to our
-codebase. Commit messages and PR titles should be prefixed with a standard
-code the states what kind of change it is. They fall broadly into 3 categories:
-<code>FEAT (feature)</code>, <code>BUG (bug)</code>, and <code>SUPP (support)</code>. The <code>SUPP</code>
-category has some more fine-grained aliases that you can use, such as <code>BLD</code>
-(build), <code>CI</code> (continuous integration), <code>DOC</code> (documentation), <code>TST</code>
-(testing), and <code>RLS</code> (releases).</p>
-<h2 id="maintainers-guide">Maintainer's guide</h2>
-<p>Maintainers generally perform two roles, merging PRs and making official
-releases.</p>
-<h3 id="merging-prs">Merging PRs</h3>
-<p>We have a CLI script that will merge Pull Requests automatically once they have
-been reviewed and approved. See the help message in <code>dev/merge-pr.py</code> for
-full details. If you have two-factor authentication turned on in Github, you
-will have to generate an application-specific password by following this
-<a href="https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line">guide</a>.
-You will then use that generated password on the command line for the <code>-P</code>
-argument.</p>
-<p>Access the <a href="https://github.com/ibis-project/ibis/wiki/Merging-PRs">Ibis "Merging PRs" wiki</a> page
-for more information.</p>
+<h4 id="make-the-desired-change">Make the desired change</h4>
+<p><strong>Dependencies:</strong></p>
+<ul>
+<li>required: <code>git</code></li>
+</ul>
+<p>Let's say you've made a change to <code>ibis/expr/types.py</code> to fix a bug reported in issue #424242 (not actually an issue).</p>
+<p>Running <code>git status</code> should give output similar to this:</p>
+<div class="codehilite"><pre><span></span><code>    :::<span class="nv">sh</span>
+    $ <span class="nv">git</span> <span class="nv">status</span>
+    <span class="nv">On</span> <span class="nv">branch</span> <span class="nv">useful</span><span class="o">-</span><span class="nv">bugfix</span>
+    <span class="nv">Your</span> <span class="nv">branch</span> <span class="nv">is</span> <span class="nv">up</span> <span class="nv">to</span> <span class="nv">date</span> <span class="nv">with</span> <span class="s1">&#39;</span><span class="s">origin/useful-bugfix</span><span class="s1">&#39;</span>.
+
+    <span class="nv">Changes</span> <span class="nv">not</span> <span class="nv">staged</span> <span class="k">for</span> <span class="nv">commit</span>:
+      <span class="ss">(</span><span class="nv">use</span> <span class="s2">&quot;</span><span class="s">git add &lt;file&gt;...</span><span class="s2">&quot;</span> <span class="nv">to</span> <span class="nv">update</span> <span class="nv">what</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">committed</span><span class="ss">)</span>
+      <span class="ss">(</span><span class="nv">use</span> <span class="s2">&quot;</span><span class="s">git restore &lt;file&gt;...</span><span class="s2">&quot;</span> <span class="nv">to</span> <span class="nv">discard</span> <span class="nv">changes</span> <span class="nv">in</span> <span class="nv">working</span> <span class="nv">directory</span><span class="ss">)</span>
+            <span class="nv">modified</span>:   <span class="nv">ibis</span><span class="o">/</span><span class="nv">expr</span><span class="o">/</span><span class="nv">types</span>.<span class="nv">py</span>
+
+    <span class="nv">no</span> <span class="nv">changes</span> <span class="nv">added</span> <span class="nv">to</span> <span class="nv">commit</span> <span class="ss">(</span><span class="nv">use</span> <span class="s2">&quot;</span><span class="s">git add</span><span class="s2">&quot;</span> <span class="nv">and</span><span class="o">/</span><span class="nv">or</span> <span class="s2">&quot;</span><span class="s">git commit -a</span><span class="s2">&quot;</span><span class="ss">)</span>
+</code></pre></div>
+
+<h4 id="run-the-test-suite">Run the test suite</h4>
+<p>Next, you'll want to run a subset of the test suite.</p>
+<p><strong>Dependencies:</strong></p>
+<ul>
+<li>required: <a href="#nix"><code>nix</code></a> environment or <a href="#miniconda"><code>conda</code></a> environment</li>
+</ul>
+<p>To run a subset of the ibis tests use the following command:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">PYTEST_BACKENDS</span><span class="o">=</span><span class="s2">&quot;sqlite pandas&quot;</span> pytest ibis/tests ibis/backends/tests
+</code></pre></div>
+
+<p>You can change <code>"sqlite pandas"</code> to include one or more space-separated
+supported backends that you want to test.</p>
+<p>It isn't necessary to provide <code>PYTEST_BACKENDS</code> at all, but it's useful for
+exercising more of the library's test suite.</p>
+<h4 id="commit-your-changes">Commit your changes</h4>
+<p><strong>Dependencies:</strong></p>
+<ul>
+<li>required: <code>git</code></li>
+<li>optional: <a href="https://commitizen-tools.github.io/commitizen/"><code>cz</code></a></li>
+</ul>
+<p>Next, you'll want to commit your changes.</p>
+<p>Ibis's commit message structure follows <a href="https://github.com/semantic-release/semantic-release"><code>semantic-release</code>
+conventions</a>.</p>
+<p><strong>NOTE:</strong> It isn't necessary to use <code>cz commit</code> to make commits, but it is
+necessary to follow outlined in this table in <a href="https://github.com/semantic-release/semantic-release">this
+table</a>.</p>
+<p><code>cz</code> is already configured and ready to go if you've setup an environment, so
+stage your changes and run <code>cz commit</code>:</p>
+<div class="codehilite"><pre><span></span><code>    :::sh
+    $ git add .
+    $ cz commit
+</code></pre></div>
+
+<p>You should see a series of prompts about actions to take next:</p>
+<ol>
+<li>Select the type of change you're committing. In this case, we're committing a bug fix, so we'll select fix:<div class="codehilite"><pre><span></span><code>? Select the <span class="nb">type</span> of change you are committing <span class="o">(</span>Use arrow keys<span class="o">)</span>
+ » fix: A bug fix. Correlates with PATCH <span class="k">in</span> SemVer
+   feat: A new feature. Correlates with MINOR <span class="k">in</span> SemVer
+   docs: Documentation only changes
+   style: Changes that <span class="k">do</span> not affect the meaning of the code <span class="o">(</span>white-space, formatting, missing semi-colons, etc<span class="o">)</span>
+   refactor: A code change that neither fixes a bug nor adds a feature
+   perf: A code change that improves performance
+   test: Adding missing or correcting existing tests
+   build: Changes that affect the build system or external dependencies <span class="o">(</span>example scopes: pip, docker, npm<span class="o">)</span>
+   ci: Changes to our CI configuration files and scripts <span class="o">(</span>example scopes: GitLabCI<span class="o">)</span>
+</code></pre></div>
+
+</li>
+</ol>
+<p>Generally you don't need to think too hard about what category to select, but note that:</p>
+<ul>
+<li><code>feat</code> will cause a minor version bump</li>
+<li><code>fix</code> will cause a patch version bump</li>
+<li>
+<p>everything else will not cause a version bump, <strong>unless it's a breaking
+       change</strong> (continue reading these instructions for more info on that)</p>
+</li>
+<li>
+<p>Next, you're asked what the scope of this change is:</p>
+<div class="codehilite"><pre><span></span><code>? What is the scope of this change? <span class="o">(</span>class or file name<span class="o">)</span>: <span class="o">(</span>press <span class="o">[</span>enter<span class="o">]</span> to skip<span class="o">)</span>
+</code></pre></div>
+
+</li>
+</ul>
+<p>This is optional, but if there's a clear component or single file that is
+   modified you should put it. In our case, let's assume the bug fixed a type
+   inference problem, so we'd type in <code>type-inference</code> at this prompt.</p>
+<ol>
+<li>You'll then be asked to type in a short description of the change which will be the commit message title:<div class="codehilite"><pre><span></span><code>? Write a short and imperative summary of the code changes: <span class="o">(</span>lower <span class="k">case</span> and no period<span class="o">)</span>
+ fix a <span class="nb">type</span> inference issue where floats were incorrectly cast to ints
+</code></pre></div>
+
+</li>
+</ol>
+<p>Let's say there was a problem with spurious casting of float to integers, so
+   we type in the message above.  That number on the left (here <code>(69)</code>) is the
+   length of description you've typed in.</p>
+<ol>
+<li>Next you'll be asked for a longer description, which is entirely optional
+   <strong>unless the change is a breaking change</strong>, or you feel like a bit of prose<div class="codehilite"><pre><span></span><code>? Provide additional contextual information about the code changes: <span class="o">(</span>press <span class="o">[</span>enter<span class="o">]</span> to skip<span class="o">)</span>
+ A bug was triggered by some incorrect code that caused floats to be incorrectly cast to integers.
+</code></pre></div>
+
+</li>
+</ol>
+<p>For non breaking changes, this isn't strictly necessary but it can be very
+   helpful when a change is large, obscure, or complex. For this example let's just reiterate
+   most of what the commit title says.</p>
+<ol>
+<li>Next you're asked about breaking changes:<div class="codehilite"><pre><span></span><code>? Is this a BREAKING CHANGE? Correlates with MAJOR <span class="k">in</span> SemVer <span class="o">(</span>y/N<span class="o">)</span>
+</code></pre></div>
+
+</li>
+</ol>
+<p>If you answer <code>y</code>, then you'll get an additional prompt asking you to
+   describe the breaking changes. This description will ultimately make its way
+   into the user-facing release notes. If there aren't any breaking changes, press enter.
+   Let's say this bug fix does <strong>not</strong> introduce a breaking change.</p>
+<ol>
+<li>Finally, you're asked whether this change affects any open issues (ignore
+   the bit about breaking changes) and if yes then to reference them:<div class="codehilite"><pre><span></span><code>? Footer. Information about Breaking Changes and reference issues that this commit closes: <span class="o">(</span>press <span class="o">[</span>enter<span class="o">]</span> to skip<span class="o">)</span>
+ fixes <span class="c1">#424242</span>
+</code></pre></div>
+
+</li>
+</ol>
+<p>Here we typed <code>fixes #424242</code> to indicate that we fixed issue #9000.</p>
+<p>Whew! Seems like a lot, but it's rather quick once you get used to it. After
+that you should have a commit that looks roughly like this, ready to be automatically rolled into the next release:</p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">commit</span><span class="w"> </span><span class="mi">4049</span><span class="n">adbd66b0df48e37ca105da0b9139101a1318</span><span class="w"> </span><span class="p">(</span><span class="n">HEAD</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">useful</span><span class="o">-</span><span class="n">bugfix</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nl">Author</span><span class="p">:</span><span class="w"> </span><span class="n">Phillip</span><span class="w"> </span><span class="n">Cloud</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">417981</span><span class="o">+</span><span class="n">cpcloud</span><span class="nv">@users</span><span class="p">.</span><span class="n">noreply</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="nc">Date</span><span class="err">:</span><span class="w">   </span><span class="n">Tue</span><span class="w"> </span><span class="k">Dec</span><span class="w"> </span><span class="mi">21</span><span class="w"> </span><span class="mi">10</span><span class="err">:</span><span class="mi">30</span><span class="err">:</span><span class="mi">50</span><span class="w"> </span><span class="mi">2021</span><span class="w"> </span><span class="o">-</span><span class="mi">0500</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">fix</span><span class="p">(</span><span class="n">type</span><span class="o">-</span><span class="n">inference</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">fix</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">inference</span><span class="w"> </span><span class="n">issue</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">floats</span><span class="w"> </span><span class="n">were</span><span class="w"> </span><span class="n">incorrectly</span><span class="w"> </span><span class="nf">cast</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">ints</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">A</span><span class="w"> </span><span class="n">bug</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">triggered</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="ow">some</span><span class="w"> </span><span class="n">incorrect</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">caused</span><span class="w"> </span><span class="n">floats</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">incorrectly</span><span class="w"> </span><span class="nf">cast</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">integers</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">fixes</span><span class="w"> </span><span class="n">#424242</span><span class="w"></span>
+</code></pre></div>
+
+<h4 id="push-your-changes">Push your changes</h4>
+<p>Now that you've got a commit, you're ready to push your changes and make a pull request!</p>
+<div class="codehilite"><pre><span></span><code>    :::sh
+    $ gh pr create
+</code></pre></div>
+
+<p>Follow the prompts, and <code>gh</code> will print a link to your PR upon successfuly submission.</p>
 <h3 id="updating-dependencies">Updating dependencies</h3>
 <h4 id="automatic-dependency-updates">Automatic dependency updates</h4>
-<p>WhiteSource Renovate will run every day (outside of traditional business hours)
-and submit PRs that attempt to update dependencies.</p>
-<p>These upgrades use a very conservative update strategy, which is only to
-<strong>widen</strong> the dependency range, as opposed to increasing the lower bound.</p>
-<p>The PRs will also automatically regenerate <code>poetry.lock</code> and <code>setup.py</code>, so
-that in most cases, maintainers and contributors do not have to remember to
-generate and commit these files.</p>
-<p>In case you need to manually update a dependency see the next section.</p>
+<p><a href="https://www.whitesourcesoftware.com/free-developer-tools/renovate/">WhiteSource
+Renovate</a>
+will run at some cadence (outside of traditional business hours) and submit PRs
+that update dependencies.</p>
+<p>These upgrades use a conservative update strategy, which is currently to
+increase the upper bound of a dependency's range.</p>
+<p>The PRs it generates will regenerate a number of other files so that in most
+cases contributors do not have to remember to generate and commit these files.</p>
 <h4 id="manually-updating-dependencies">Manually updating dependencies</h4>
 <p><strong>Do not manually edit <code>setup.py</code>, it is automatically generated from <code>pyproject.toml</code></strong></p>
 <ol>
@@ -232,71 +370,78 @@ generate and commit these files.</p>
 <li>Run <code>poetry update</code></li>
 <li>Run</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ <span class="nv">PYTHONHASHSEED</span><span class="o">=</span><span class="m">42</span> python ./dev/poetry2setup.py -o setup.py
+<div class="codehilite"><pre><span></span><code><span class="c1"># if using nix</span>
+$ ./dev/poetry2setup -o setup.py
+
+<span class="c1"># it not using nix, requires installation of tomli and poetry-core</span>
+$ <span class="nv">PYTHONHASHSEED</span><span class="o">=</span><span class="m">42</span> python ./dev/poetry2setup.py -o setup.py
 </code></pre></div>
 
-<p>from the repository root. <code>tomli</code> and <code>poetry-core</code> are necessary to run this
-script, they can be <code>pip install</code>ed.</p>
-<ol>
-<li>Commit your changes and make a pull request.</li>
-</ol>
-<p>Updates of minor versions of dependencies are handled automatically by
+<p>from the repository root.</p>
+<p>Updates of minor and patch versions of dependencies are handled automatically by
 <a href="https://github.com/renovatebot/renovate"><code>renovate</code></a>.</p>
-<p>Do not make PRs from changes resulting from running <code>poetry update</code> unless
-absolutely necessary.</p>
 <h3 id="releasing">Releasing</h3>
+<h2 id="style-and-formatting">Style and formatting</h2>
+<p>The following tools are run in both CI and pre-commit checks to check various
+kinds of code style and lint rules:</p>
+<ul>
+<li><a href="https://github.com/psf/black">black</a> for general formatting of Python code</li>
+<li><a href="https://github.com/PyCQA/isort">isort</a> for formatting and sorting Python <code>import</code> statements</li>
+<li><a href="https://flake8.pycqa.org/en/latest/">flake8</a> for linting Python code</li>
+<li><a href="https://github.com/Synthetica9/nix-linter">nix-linter</a> for linting nix files</li>
+<li><a href="https://github.com/nix-community/nixpkgs-fmt">nixpkgs-fmt</a> for formatting nix files</li>
+<li><a href="https://prettier.io/">prettier</a> for formatting handwritten TOML, YAML, and JSON files in the repo</li>
+<li><a href="https://github.com/koalaman/shellcheck">shellcheck</a> for linting various shell script things</li>
+<li><a href="https://github.com/mvdan/sh">shfmt</a> for formatting shell scripts</li>
+</ul>
+<p><strong>Note:</strong> If you use <code>nix-shell</code> all of these are setup for you and ready to use, you don't
+need to install any of these tools.</p>
+<p>We use <a href="https://numpydoc.readthedocs.io/en/latest/format.html">numpydoc</a> as our
+standard format for docstrings.</p>
+<h2 id="commit-philosophy">Commit philosophy</h2>
+<p>We aim to make our individual commits small and tightly focused on the feature
+they are implementing or bug being fixed. If you find yourself making
+functional changes to different areas of the codebase, we prefer you break up
+your changes into separate Pull Requests. In general, a philosophy of one
+Github Issue per Pull Request is a good rule of thumb.</p>
+<h2 id="maintainers-guide">Maintainer's guide</h2>
+<p>Maintainers should be performing a minimum number of tasks, deferring to automation
+as much as possible:</p>
+<ul>
+<li>Merging pull requests</li>
+<li>Making releases to conda-forge</li>
+</ul>
+<p>A number of tasks that are typically associated with maintenance are either partially or fully automated:</p>
+<ul>
+<li>Updating library dependencies: this is handled automatically by WhiteSource Renovate</li>
+<li>Updating github-actions: this is handled automatically by WhiteSource Renovate</li>
+<li>Updating nix dependencies: this is a job run at a regular cadence to update nix dependencies
+  and publish them to a public cache</li>
+</ul>
+<p>Occasionally you may need to manually lock poetry dependencies, which can be done by running</p>
+<div class="codehilite"><pre><span></span><code>    :::sh
+    poetry update --lock
+</code></pre></div>
+
+<p>If a dependency was updated, you'll see changes to <code>poetry.lock</code> in the current directory.</p>
+<h3 id="merging-prs">Merging PRs</h3>
+<p>PRs can be merged using the <a href="https://github.com/cli/cli"><code>gh</code> command line tool</a>
+or with the GitHub web UI.</p>
+<h3 id="release">Release</h3>
+<h4 id="pypi">PyPI</h4>
+<p>Releases to PyPI are handled automatically using a <a href="https://python-semantic-release.readthedocs.io/en/latest/">Python
+implementation</a> of
+<a href="https://egghead.io/lessons/javascript-automating-releases-with-semantic-release">semantic
+release</a>.</p>
 <p>Ibis is released in two places:</p>
 <ul>
 <li><a href="https://pypi.org/">PyPI</a> (the <strong>PY</strong>thon <strong>P</strong>ackage <strong>I</strong>ndex), to enable <code>pip install ibis-framework</code></li>
 <li><a href="https://conda-forge.org/">Conda Forge</a>, to enable <code>conda install ibis-framework</code></li>
 </ul>
-<p>Steps to release:</p>
-<h4 id="create-a-new-version">Create a new version</h4>
-<p>In the <code>master</code> branch, after the last commit to include in the release, create a tag:</p>
-<ul>
-<li><code>git tag &lt;version&gt;</code> (e.g. <code>git tag 2.0.0</code>)</li>
-</ul>
-<p>Originally, Ibis used a version like <code>v0.0.1</code>, but the <code>v</code> was eventually dropped, and recently we
-have been using just the <code>0.0.1</code> format.</p>
-<p>Push the tag to the remote branch:</p>
-<ul>
-<li><code>git push --tags upstream master</code></li>
-</ul>
-<p>The remote <code>upstream</code> is assumed to be the main Ibis repo (i.e. https://github.com/ibis-project/ibis).</p>
-<h4 id="release-to-pypi">Release to PyPI</h4>
-<p>Just after the tag (without pulling new commits from master, build the Python package:</p>
-<ul>
-<li><code>python setup.py sdist bdist_wheel</code></li>
-</ul>
-<p>This requires <code>twine</code> and <code>wheel</code> installed, which you should have if you created your environment
-with the repo <code>environment.yml</code> file.</p>
-<p>The package will be built in the <code>dist/</code> directory. To upload it to the PyPI server, use:</p>
-<ul>
-<li><code>twine upload dist/*</code></li>
-</ul>
-<p>This will create the new package, and will be available immediately via <code>pip install ibis-framework</code>.</p>
-<h4 id="release-to-conda-forge">Release to conda-forge</h4>
+<h4 id="conda-forge"><code>conda-forge</code></h4>
 <p>The conda-forge package is released using the conda-forge feedstock repository: https://github.com/conda-forge/ibis-framework-feedstock/</p>
-<p>We need to update its recipe in a pull request, and the new version will be automatically released.
-After cloning the feedstock repository, update its recipe with the one in the main Ibis repository:</p>
-<ul>
-<li><code>cp &lt;ibis-repo&gt;/ci/recipe/meta.yaml &lt;feedstock-repo/recipe/meta.yaml</code></li>
-</ul>
-<p>Remove the comment at the header of the <code>meta.yaml</code> file. And update the next yaml values:</p>
-<ul>
-<li>Add at the beginning <code></code> (replace <code>2.0.0</code> by the version being released)</li>
-<li>Set <code>number</code> in the <code>build</code> section to <code>0</code> (unless it's a different build for the previous release, then increase by one)</li>
-<li>Add the <code>sha256</code> value in the <code>source</code> section. Use <code>sha256sum</code> of the <code>tar.gz</code> file in <code>dist/</code> to know the value.</li>
-</ul>
-<p>Once the recipe is final, run:</p>
-<ul>
-<li><code>conda smithy rerender</code></li>
-</ul>
-<p>This will update the azure configuration files in the feedstock repository, and possibly other files. Open a pull request with all the changes.</p>
-<p>The conda-forge package should be ready not long after the pull request is merged, and it can
-be installed with <code>conda install -c conda-forge ibis-framework</code>.</p>
-<p>Finally, if extra changes have been required to the recipe, besides the version, build and sha256
-mentioned before, copy the recipe to the Ibis repository. Keeping the header.</p>
+<p>After a release to PyPI, the conda-forge bot automatically update the ibis
+package.</p>
                                
             </div>
         </main>
