@@ -130,22 +130,28 @@
 </ul>
 <h3 id="initial-steps">Initial steps</h3>
 <p><strong>Dependencies:</strong></p>
+<h4 id="required">Required</h4>
 <ul>
-<li>required: <a href="https://git-scm.com/"><code>git</code></a></li>
-<li>required: <a href="https://github.com/cli/cli"><code>gh</code></a></li>
-<li>optional: <a href="https://nixos.org/download.html#nix-quick-install"><code>nix</code></a></li>
-<li>optional: <a href="https://docs.conda.io/en/latest/"><code>conda</code></a></li>
+<li><a href="https://git-scm.com/"><code>git</code></a></li>
 </ul>
-<p>Installing both <code>nix</code> and <code>conda</code> is fine, but you should use one or the other for contributing, not both.</p>
-<p>Use <code>gh</code> to fork and clone the <code>ibis-project/ibis</code> repository:</p>
-<div class="codehilite"><pre><span></span><code>    gh repo fork --clone --remote ibis-project/ibis
-    cd ibis
-</code></pre></div>
-
+<h4 id="package-management">Package Management</h4>
+<p>At least one of <code>nix</code> or <code>conda</code> is required to contribute to ibis.</p>
+<ul>
+<li><a href="https://docs.conda.io/en/latest/"><code>conda</code></a></li>
+</ul>
 <h3 id="nix">Nix</h3>
 <ol>
-<li><a href="https://nixos.org/guides/install-nix.html">Download and install <code>nix</code></a></li>
-<li>Run <code>nix-shell</code> in the checkout directory:<div class="codehilite"><pre><span></span><code><span class="n">cd</span> <span class="n">ibis</span>
+<li><a href="https://nixos.org/download.html">Download and install <code>nix</code></a></li>
+<li>Install <code>gh</code>: <code>nix-shell -p gh</code> <strong>or</strong> <code>nix-env -iA gh</code></li>
+<li>
+<p>Fork and clone the ibis repository:</p>
+<div class="codehilite"><pre><span></span><code>gh repo fork --clone --remote ibis-project/ibis
+</code></pre></div>
+
+</li>
+<li>
+<p>Run <code>nix-shell</code> in the checkout directory:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">cd</span> <span class="n">ibis</span>
 
 <span class="c1"># set up the cache to avoid building everything from scratch</span>
 <span class="n">nix</span><span class="o">-</span><span class="n">shell</span> <span class="o">-</span><span class="n">p</span> <span class="n">cachix</span> <span class="o">--</span><span class="n">run</span> <span class="s1">&#39;cachix use ibis&#39;</span>
@@ -161,7 +167,13 @@
 <h3 id="miniconda">Miniconda</h3>
 <ol>
 <li><a href="https://docs.conda.io/en/latest/miniconda.html">Download</a> and install Miniconda</li>
-<li><a href="https://github.com/ibis-project/ibis/releases/latest/download/environment.yaml">Download the latest <code>environment.yaml</code></a></li>
+<li>Install <code>gh</code>: <code>conda install -c conda-forge gh</code></li>
+<li>
+<p>Fork and clone the ibis repository:</p>
+<div class="codehilite"><pre><span></span><code>gh repo fork --clone --remote ibis-project/ibis
+</code></pre></div>
+
+</li>
 <li>
 <p>Create a Conda environment suitable for ibis development:</p>
 <div class="codehilite"><pre><span></span><code>cd ibis
