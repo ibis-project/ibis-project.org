@@ -302,7 +302,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -370,8 +370,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">ibis</span>
 
 <span class="n">ibis</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">interactive</span> <span class="o">=</span> <span class="kc">True</span>
@@ -388,8 +387,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">countries</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;countries&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;countries&#39;</span><span class="p">)</span>
 
 <span class="n">continent_name</span> <span class="o">=</span> <span class="p">(</span><span class="n">countries</span><span class="o">.</span><span class="n">continent</span>
                            <span class="o">.</span><span class="n">case</span><span class="p">()</span>
@@ -430,8 +428,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">connection</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;continents&#39;</span><span class="p">,</span> <span class="n">expr</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">connection</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;continents&#39;</span><span class="p">,</span> <span class="n">expr</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -439,8 +436,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">continents</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;continents&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">continents</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;continents&#39;</span><span class="p">)</span>
 <span class="n">continents</span>
 </pre></div>
 </div>
@@ -466,8 +462,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">connection</span><span class="o">.</span><span class="n">drop_table</span><span class="p">(</span><span class="s1">&#39;continents&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">connection</span><span class="o">.</span><span class="n">drop_table</span><span class="p">(</span><span class="s1">&#39;continents&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

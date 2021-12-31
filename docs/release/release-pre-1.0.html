@@ -529,17 +529,17 @@ secure (Kerberized) clusters without SSL enabled.</p></li>
 </pre></div>
 </div>
 <p>The last expression now generates the correct Impala or SQLite SQL:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">t0</span><span class="p">.</span><span class="o">`</span><span class="n">tmp</span><span class="o">`</span> <span class="o">-</span> <span class="n">t1</span><span class="p">.</span><span class="o">`</span><span class="n">tmp</span><span class="o">`</span> <span class="k">AS</span> <span class="o">`</span><span class="n">tmp</span><span class="o">`</span>
-<span class="k">FROM</span> <span class="p">(</span>
-  <span class="k">SELECT</span> <span class="k">avg</span><span class="p">(</span><span class="o">`</span><span class="n">value</span><span class="o">`</span><span class="p">)</span> <span class="o">/</span> <span class="k">sum</span><span class="p">(</span><span class="o">`</span><span class="n">value</span><span class="o">`</span><span class="p">)</span> <span class="k">AS</span> <span class="o">`</span><span class="n">tmp</span><span class="o">`</span>
-  <span class="k">FROM</span> <span class="n">tbl</span>
-  <span class="k">WHERE</span> <span class="o">`</span><span class="n">flag</span><span class="o">`</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
-<span class="p">)</span> <span class="n">t0</span>
-  <span class="k">CROSS</span> <span class="k">JOIN</span> <span class="p">(</span>
-    <span class="k">SELECT</span> <span class="k">avg</span><span class="p">(</span><span class="o">`</span><span class="n">value</span><span class="o">`</span><span class="p">)</span> <span class="o">/</span> <span class="k">sum</span><span class="p">(</span><span class="o">`</span><span class="n">value</span><span class="o">`</span><span class="p">)</span> <span class="k">AS</span> <span class="o">`</span><span class="n">tmp</span><span class="o">`</span>
-    <span class="k">FROM</span> <span class="n">tbl</span>
-    <span class="k">WHERE</span> <span class="o">`</span><span class="n">flag</span><span class="o">`</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-  <span class="p">)</span> <span class="n">t1</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">t0</span><span class="p">.</span><span class="o">`</span><span class="n">tmp</span><span class="o">`</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="o">`</span><span class="n">tmp</span><span class="o">`</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="o">`</span><span class="n">tmp</span><span class="o">`</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="o">`</span><span class="n">value</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="o">`</span><span class="n">value</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="o">`</span><span class="n">tmp</span><span class="o">`</span><span class="w"></span>
+<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">tbl</span><span class="w"></span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">flag</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="w"></span>
+<span class="p">)</span><span class="w"> </span><span class="n">t0</span><span class="w"></span>
+<span class="w">  </span><span class="k">CROSS</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="o">`</span><span class="n">value</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="o">`</span><span class="n">value</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="o">`</span><span class="n">tmp</span><span class="o">`</span><span class="w"></span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">tbl</span><span class="w"></span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">flag</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;0&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="n">t1</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

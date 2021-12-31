@@ -116,11 +116,11 @@
 possible to join tables with themselves, because joins clauses involve
 column references back to the original table.</p>
 <p>Consider the SQL</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">t1</span><span class="p">.</span><span class="k">key</span><span class="p">,</span> <span class="k">sum</span><span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="n">value</span> <span class="o">-</span> <span class="n">t2</span><span class="p">.</span><span class="n">value</span><span class="p">)</span> <span class="k">AS</span> <span class="n">metric</span>
-<span class="k">FROM</span> <span class="n">my_table</span> <span class="n">t1</span>
-  <span class="k">JOIN</span> <span class="n">my_table</span> <span class="n">t2</span>
-    <span class="k">ON</span> <span class="n">t1</span><span class="p">.</span><span class="k">key</span> <span class="o">=</span> <span class="n">t2</span><span class="p">.</span><span class="n">subkey</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="mi">1</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="k">key</span><span class="p">,</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">metric</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">my_table</span><span class="w"> </span><span class="n">t1</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">my_table</span><span class="w"> </span><span class="n">t2</span><span class="w"></span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">subkey</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Here, we have an unambiguous way to refer to each of the tables through

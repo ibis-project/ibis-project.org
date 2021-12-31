@@ -305,7 +305,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -376,8 +376,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># Launch the postgis container.</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Launch the postgis container.</span>
 <span class="c1"># This may take a bit of time if it needs to download the image.</span>
 <span class="o">!</span>docker run -d -p <span class="m">5432</span>:5432 --name postgis-db -e <span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>supersecret mdillon/postgis:9.6-alpine
 </pre></div>
@@ -396,8 +395,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="o">!</span>wget https://download.geofabrik.de/north-america/us/california/socal-latest.osm.pbf
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget https://download.geofabrik.de/north-america/us/california/socal-latest.osm.pbf
 </pre></div>
 </div>
 </div>
@@ -406,8 +404,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="o">!</span>ogr2ogr -f PostgreSQL PG:<span class="s2">&quot;dbname=&#39;postgres&#39; user=&#39;postgres&#39; password=&#39;supersecret&#39; port=5432 host=&#39;localhost&#39;&quot;</span> -lco <span class="nv">OVERWRITE</span><span class="o">=</span>yes --config PG_USE_COPY YES socal-latest.osm.pbf
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ogr2ogr -f PostgreSQL PG:<span class="s2">&quot;dbname=&#39;postgres&#39; user=&#39;postgres&#39; password=&#39;supersecret&#39; port=5432 host=&#39;localhost&#39;&quot;</span> -lco <span class="nv">OVERWRITE</span><span class="o">=</span>yes --config PG_USE_COPY YES socal-latest.osm.pbf
 </pre></div>
 </div>
 </div>
@@ -427,8 +424,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">geopandas</span>
 <span class="kn">import</span> <span class="nn">ibis</span>
 
@@ -440,8 +436,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">postgres</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">postgres</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
     <span class="n">url</span><span class="o">=</span><span class="s1">&#39;postgres://postgres:supersecret@localhost:5432/postgres&#39;</span>
 <span class="p">)</span>
 </pre></div>
@@ -452,8 +447,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">client</span><span class="o">.</span><span class="n">list_tables</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">list_tables</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -480,8 +474,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">polygons</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;multipolygons&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">polygons</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;multipolygons&#39;</span><span class="p">)</span>
 <span class="n">lines</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;lines&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -495,8 +488,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cities</span> <span class="o">=</span> <span class="n">polygons</span><span class="p">[</span><span class="n">polygons</span><span class="o">.</span><span class="n">admin_level</span> <span class="o">==</span> <span class="s1">&#39;8&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="n">polygons</span><span class="p">[</span><span class="n">polygons</span><span class="o">.</span><span class="n">admin_level</span> <span class="o">==</span> <span class="s1">&#39;8&#39;</span><span class="p">]</span>
 
 <span class="n">cities</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span>
     <span class="n">cities</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;city_name&#39;</span><span class="p">),</span>
@@ -510,8 +502,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">los_angeles</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span><span class="n">cities</span><span class="o">.</span><span class="n">city_name</span> <span class="o">==</span> <span class="s1">&#39;Los Angeles&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">los_angeles</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span><span class="n">cities</span><span class="o">.</span><span class="n">city_name</span> <span class="o">==</span> <span class="s1">&#39;Los Angeles&#39;</span><span class="p">]</span>
 <span class="n">la_city</span> <span class="o">=</span> <span class="n">los_angeles</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 <span class="n">la_city_geom</span> <span class="o">=</span> <span class="n">la_city</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">city_geometry</span>
 <span class="n">la_city_geom</span>
@@ -530,8 +521,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">highways</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[(</span><span class="n">lines</span><span class="o">.</span><span class="n">highway</span> <span class="o">==</span> <span class="s1">&#39;motorway&#39;</span><span class="p">)]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">highways</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[(</span><span class="n">lines</span><span class="o">.</span><span class="n">highway</span> <span class="o">==</span> <span class="s1">&#39;motorway&#39;</span><span class="p">)]</span>
 <span class="n">highways</span> <span class="o">=</span> <span class="n">highways</span><span class="p">[</span>
     <span class="n">highways</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;highway_name&#39;</span><span class="p">),</span>
     <span class="n">highways</span><span class="o">.</span><span class="n">wkb_geometry</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;highway_geometry&#39;</span><span class="p">)</span>
@@ -549,8 +539,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la_neighbors_expr</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la_neighbors_expr</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span>
     <span class="n">cities</span><span class="o">.</span><span class="n">city_geometry</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span>
         <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="n">la_city_geom</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;multipolygon;4326:geometry&#39;</span><span class="p">)</span>
     <span class="p">)</span>
@@ -562,8 +551,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la_neighbors</span> <span class="o">=</span> <span class="n">la_neighbors_expr</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la_neighbors</span> <span class="o">=</span> <span class="n">la_neighbors_expr</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
 <span class="n">la_neighbors</span>
 </pre></div>
 </div>
@@ -750,8 +738,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la_highways_expr</span> <span class="o">=</span> <span class="n">highways</span><span class="o">.</span><span class="n">inner_join</span><span class="p">(</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la_highways_expr</span> <span class="o">=</span> <span class="n">highways</span><span class="o">.</span><span class="n">inner_join</span><span class="p">(</span>
     <span class="n">la_neighbors_expr</span><span class="p">,</span>
     <span class="n">highways</span><span class="o">.</span><span class="n">highway_geometry</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">la_neighbors_expr</span><span class="o">.</span><span class="n">city_geometry</span><span class="p">)</span>
 <span class="p">)</span><span class="o">.</span><span class="n">materialize</span><span class="p">()</span>
@@ -762,8 +749,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la_highways</span> <span class="o">=</span> <span class="n">la_highways_expr</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la_highways</span> <span class="o">=</span> <span class="n">la_highways_expr</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 <span class="n">la_highways</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -792,8 +778,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">ocean</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_ocean.zip&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ocean</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_ocean.zip&#39;</span><span class="p">)</span>
 <span class="n">land</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -802,8 +787,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">la_neighbors</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">la_neighbors</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_autoscale_on</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
 <span class="n">land</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
