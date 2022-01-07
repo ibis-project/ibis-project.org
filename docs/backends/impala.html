@@ -1,189 +1,328 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impala &mdash; Ibis 2.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../_static/js/theme.js"></script>
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Impala &#8212; Ibis 2.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ibis.backends.impala.Backend.connect" href="../generated/ibis.backends.impala.Backend.connect.html" />
-    <link rel="prev" title="ibis.backends.mysql.Backend.table" href="../generated/ibis.backends.mysql.Backend.table.html" /> 
-</head>
+    <link rel="prev" title="ibis.backends.mysql.Backend.table" href="../generated/ibis.backends.mysql.Backend.table.html" />
+  
+   
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Ibis
-            <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
-          </a>
-              <div class="version">
-                2.0.0
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/index.html">User guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Backends</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="sqlite.html">SQLite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postgres.html">PostgreSQL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mysql.html">MySQL</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Impala</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#impala-quickstart">Impala Quickstart</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#api">API</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.connect.html">ibis.backends.impala.Backend.connect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.close.html">ibis.backends.impala.Backend.close</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.database.html">ibis.backends.impala.Backend.database</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#database-methods">Database methods</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#table-methods">Table methods</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#accessing-data-formats-in-hdfs">Accessing data formats in HDFS</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#executing-expressions">Executing expressions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#hdfs">HDFS</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#the-impala-client-object">The Impala client object</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#database-and-table-objects">Database and Table objects</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.database.html">ibis.backends.impala.Backend.database</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.table.html">ibis.backends.impala.Backend.table</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.schema.html">ibis.backends.impala.ImpalaTable.schema</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#expression-execution">Expression execution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creating-tables">Creating tables</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.create_table.html">ibis.backends.impala.Backend.create_table</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaDatabase.create_table.html">ibis.backends.impala.ImpalaDatabase.create_table</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#creating-tables-from-a-table-expression">Creating tables from a table expression</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#creating-an-empty-table">Creating an empty table</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#creating-a-partitioned-table">Creating a partitioned table</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#partitioned-tables">Partitioned tables</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.add_partition.html">ibis.backends.impala.ImpalaTable.add_partition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.drop_partition.html">ibis.backends.impala.ImpalaTable.drop_partition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.is_partitioned.html">ibis.backends.impala.ImpalaTable.is_partitioned</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.partition_schema.html">ibis.backends.impala.ImpalaTable.partition_schema</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.partitions.html">ibis.backends.impala.ImpalaTable.partitions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#inserting-data-into-tables">Inserting data into tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#managing-table-metadata">Managing table metadata</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#detailed-table-metadata-describe-formatted">Detailed table metadata: <code class="docutils literal notranslate"><span class="pre">DESCRIBE</span> <span class="pre">FORMATTED</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#modifying-table-metadata">Modifying table metadata</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#table-statistics">Table statistics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#computing-table-and-partition-statistics">Computing table and partition statistics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#seeing-table-and-column-statistics">Seeing table and column statistics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#refresh-and-invalidate-metadata"><code class="docutils literal notranslate"><span class="pre">REFRESH</span></code> and <code class="docutils literal notranslate"><span class="pre">INVALIDATE</span> <span class="pre">METADATA</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#issuing-load-data-commands">Issuing <code class="docutils literal notranslate"><span class="pre">LOAD</span> <span class="pre">DATA</span></code> commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.load_data.html">ibis.backends.impala.Backend.load_data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.load_data.html">ibis.backends.impala.ImpalaTable.load_data</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#parquet-and-other-session-options">Parquet and other session options</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.disable_codegen.html">ibis.backends.impala.Backend.disable_codegen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.get_options.html">ibis.backends.impala.Backend.get_options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.set_options.html">ibis.backends.impala.Backend.set_options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../generated/ibis.backends.impala.Backend.set_compression_codec.html">ibis.backends.impala.Backend.set_compression_codec</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#ingesting-data-from-pandas">Ingesting data from pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#uploading-downloading-data-from-hdfs">Uploading / downloading data from HDFS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#queries-on-parquet-avro-and-delimited-files-in-hdfs">Queries on Parquet, Avro, and Delimited files in HDFS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#other-helper-functions-for-interacting-with-the-database">Other helper functions for interacting with the database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#faster-queries-on-small-data-in-impala">Faster queries on small data in Impala</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#user-defined-functions-udf">User Defined functions (UDF)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#using-scalar-functions-udfs">Using scalar functions (UDFs)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-documentation-to-new-functions">Adding documentation to new functions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="clickhouse.html">Clickhouse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyspark.html">PySpark</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pandas.html">pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dask.html">Dask</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../release/index.html">Release Notes</a></li>
-</ul>
-
+  </head>
+  <body dir=ltr
+        data-md-color-primary=indigo data-md-color-accent=blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#backends/impala" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="Ibis 2.0.0 documentation"
+           class="md-header-nav__button md-logo">
+          
+              <img src="../_static/logo-wide.svg" height="26"
+                   alt="Ibis 2.0.0 documentation logo">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">Ibis 2.0.0 documentation</span>
+          <span class="md-header-nav__topic"> Impala </span>
         </div>
       </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Ibis</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">Backends</a> &raquo;</li>
-      <li>Impala</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/backends/impala.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+      </div>
+      
+      
   
-<style>
-/* CSS overrides for sphinx_rtd_theme */
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
 
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
+    </div>
+  </nav>
+</header>
 
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">Ibis 2.0.0 documentation</a></li>
+          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">Backends</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="Ibis 2.0.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/logo-wide.svg" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="Ibis 2.0.0 documentation">Ibis 2.0.0 documentation</a>
+  </label>
+  
 
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+    
+      <a href="../tutorial/index.html" class="md-nav__link">Tutorial</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../user_guide/index.html" class="md-nav__link">User guide</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../api.html" class="md-nav__link">API Reference</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="index.html" class="md-nav__link">Backends</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../release/index.html" class="md-nav__link">Release Notes</a>
+      
+    
+    </li>
+  </ul>
+  
 
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<section id="impala">
-<span id="backends-impala"></span><h1>Impala<a class="headerlink" href="#impala" title="Permalink to this headline">¶</a></h1>
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#backends-impala--page-root" class="md-nav__link">Impala</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#impala-quickstart" class="md-nav__link">Impala Quickstart</a>
+        </li>
+        <li class="md-nav__item"><a href="#api" class="md-nav__link">API</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#database-methods" class="md-nav__link">Database methods</a>
+        </li>
+        <li class="md-nav__item"><a href="#table-methods" class="md-nav__link">Table methods</a>
+        </li>
+        <li class="md-nav__item"><a href="#accessing-data-formats-in-hdfs" class="md-nav__link">Accessing data formats in HDFS</a>
+        </li>
+        <li class="md-nav__item"><a href="#executing-expressions" class="md-nav__link">Executing expressions</a>
+        </li>
+        <li class="md-nav__item"><a href="#hdfs" class="md-nav__link">HDFS</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#the-impala-client-object" class="md-nav__link">The Impala client object</a>
+        </li>
+        <li class="md-nav__item"><a href="#database-and-table-objects" class="md-nav__link">Database and Table objects</a>
+        </li>
+        <li class="md-nav__item"><a href="#expression-execution" class="md-nav__link">Expression execution</a>
+        </li>
+        <li class="md-nav__item"><a href="#creating-tables" class="md-nav__link">Creating tables</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#creating-tables-from-a-table-expression" class="md-nav__link">Creating tables from a table expression</a>
+        </li>
+        <li class="md-nav__item"><a href="#creating-an-empty-table" class="md-nav__link">Creating an empty table</a>
+        </li>
+        <li class="md-nav__item"><a href="#creating-a-partitioned-table" class="md-nav__link">Creating a partitioned table</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#partitioned-tables" class="md-nav__link">Partitioned tables</a>
+        </li>
+        <li class="md-nav__item"><a href="#inserting-data-into-tables" class="md-nav__link">Inserting data into tables</a>
+        </li>
+        <li class="md-nav__item"><a href="#managing-table-metadata" class="md-nav__link">Managing table metadata</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#detailed-table-metadata-describe-formatted" class="md-nav__link">Detailed table metadata: <code class="docutils literal notranslate"><span class="pre">DESCRIBE</span> <span class="pre">FORMATTED</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#modifying-table-metadata" class="md-nav__link">Modifying table metadata</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#table-statistics" class="md-nav__link">Table statistics</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#computing-table-and-partition-statistics" class="md-nav__link">Computing table and partition statistics</a>
+        </li>
+        <li class="md-nav__item"><a href="#seeing-table-and-column-statistics" class="md-nav__link">Seeing table and column statistics</a>
+        </li>
+        <li class="md-nav__item"><a href="#refresh-and-invalidate-metadata" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">REFRESH</span></code> and <code class="docutils literal notranslate"><span class="pre">INVALIDATE</span> <span class="pre">METADATA</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#issuing-load-data-commands" class="md-nav__link">Issuing <code class="docutils literal notranslate"><span class="pre">LOAD</span> <span class="pre">DATA</span></code> commands</a>
+        </li>
+        <li class="md-nav__item"><a href="#parquet-and-other-session-options" class="md-nav__link">Parquet and other session options</a>
+        </li>
+        <li class="md-nav__item"><a href="#ingesting-data-from-pandas" class="md-nav__link">Ingesting data from pandas</a>
+        </li>
+        <li class="md-nav__item"><a href="#uploading-downloading-data-from-hdfs" class="md-nav__link">Uploading / downloading data from HDFS</a>
+        </li>
+        <li class="md-nav__item"><a href="#queries-on-parquet-avro-and-delimited-files-in-hdfs" class="md-nav__link">Queries on Parquet, Avro, and Delimited files in HDFS</a>
+        </li>
+        <li class="md-nav__item"><a href="#other-helper-functions-for-interacting-with-the-database" class="md-nav__link">Other helper functions for interacting with the database</a>
+        </li>
+        <li class="md-nav__item"><a href="#faster-queries-on-small-data-in-impala" class="md-nav__link">Faster queries on small data in Impala</a>
+        </li>
+        <li class="md-nav__item"><a href="#user-defined-functions-udf" class="md-nav__link">User Defined functions (UDF)</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#using-scalar-functions-udfs" class="md-nav__link">Using scalar functions (UDFs)</a>
+        </li>
+        <li class="md-nav__item"><a href="#adding-documentation-to-new-functions" class="md-nav__link">Adding documentation to new functions</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/backends/impala.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="impala">
+<span id="backends-impala"></span><h1 id="backends-impala--page-root">Impala<a class="headerlink" href="#backends-impala--page-root" title="Permalink to this headline">¶</a></h1>
 <p>One goal of Ibis is to provide an integrated Python API for an Impala cluster
 without requiring you to switch back and forth between Python code and the
 Impala shell (where one would be using a mix of DDL and SQL statements).</p>
@@ -193,18 +332,18 @@ touch on the <a class="reference external" href="http://github.com/pandas-dev/ib
 PyData stack is overall poor (but improving), we also show some ways that you
 can use pandas with Ibis and Impala.</p>
 <section id="impala-quickstart">
-<span id="install-impala"></span><h2><a class="reference external" href="https://impala.apache.org/">Impala</a> Quickstart<a class="headerlink" href="#impala-quickstart" title="Permalink to this headline">¶</a></h2>
+<span id="install-impala"></span><h2 id="impala-quickstart"><a class="reference external" href="https://impala.apache.org/">Impala</a> Quickstart<a class="headerlink" href="#impala-quickstart" title="Permalink to this headline">¶</a></h2>
 <p>Install dependencies for Ibis’s Impala dialect:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">&#39;ibis-framework[impala]&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">'ibis-framework[impala]'</span>
 </pre></div>
 </div>
 <p>To create an Ibis client, you must first connect your services and assemble the
 client using <code class="xref py py-func docutils literal notranslate"><span class="pre">ibis.impala.connect()</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ibis</span>
 
-<span class="n">hdfs</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">hdfs_connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;impala&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50070</span><span class="p">)</span>
+<span class="n">hdfs</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">hdfs_connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">'impala'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50070</span><span class="p">)</span>
 <span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;impala&#39;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;ibis_testing&#39;</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span>
+    <span class="n">host</span><span class="o">=</span><span class="s1">'impala'</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">'ibis_testing'</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -214,15 +353,15 @@ cluster setup, this may also include SSL. See the <a class="reference internal" 
 connection semantics are identical.</p>
 </section>
 <section id="api">
-<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<h2 id="api">API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <p>These methods are available on the Impala client object after connecting to
 your HDFS cluster (<code class="docutils literal notranslate"><span class="pre">ibis.impala.hdfs_connect</span></code>) and connecting to Impala with
 <code class="docutils literal notranslate"><span class="pre">ibis.impala.connect</span></code>. See <a class="reference internal" href="#backends-impala"><span class="std std-ref">Impala</span></a> for a tutorial on using this
 backend.</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.connect.html#ibis.backends.impala.Backend.connect" title="ibis.backends.impala.Backend.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.connect</span></code></a>(*args, **kwargs)</p></td>
@@ -237,11 +376,11 @@ backend.</p>
 </tbody>
 </table>
 <section id="database-methods">
-<h3>Database methods<a class="headerlink" href="#database-methods" title="Permalink to this headline">¶</a></h3>
+<h3 id="database-methods">Database methods<a class="headerlink" href="#database-methods" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.set_database.html#ibis.backends.impala.Backend.set_database" title="ibis.backends.impala.Backend.set_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.set_database</span></code></a>(name)</p></td>
@@ -263,8 +402,8 @@ backend.</p>
 </table>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaDatabase.create_table.html#ibis.backends.impala.ImpalaDatabase.create_table" title="ibis.backends.impala.ImpalaDatabase.create_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaDatabase.create_table</span></code></a>(table_name[, obj])</p></td>
@@ -280,13 +419,13 @@ backend.</p>
 </table>
 </section>
 <section id="table-methods">
-<h3>Table methods<a class="headerlink" href="#table-methods" title="Permalink to this headline">¶</a></h3>
+<h3 id="table-methods">Table methods<a class="headerlink" href="#table-methods" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">Backend</span></code> object itself has many helper utility methods. You’ll find
 the most methods on <code class="docutils literal notranslate"><span class="pre">ImpalaTable</span></code>.</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.database.html#ibis.backends.impala.Backend.database" title="ibis.backends.impala.Backend.database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.database</span></code></a>([name])</p></td>
@@ -346,8 +485,8 @@ the most methods on <code class="docutils literal notranslate"><span class="pre"
 object you get back from <code class="docutils literal notranslate"><span class="pre">Backend.table</span></code>.</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.add_partition.html#ibis.backends.impala.ImpalaTable.add_partition" title="ibis.backends.impala.ImpalaTable.add_partition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.add_partition</span></code></a>(spec[, location])</p></td>
@@ -415,8 +554,8 @@ object you get back from <code class="docutils literal notranslate"><span class=
 <p>Creating views is also possible:</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.create_view.html#ibis.backends.impala.Backend.create_view" title="ibis.backends.impala.Backend.create_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.create_view</span></code></a>(name, expr[, database])</p></td>
@@ -432,11 +571,11 @@ object you get back from <code class="docutils literal notranslate"><span class=
 </table>
 </section>
 <section id="accessing-data-formats-in-hdfs">
-<h3>Accessing data formats in HDFS<a class="headerlink" href="#accessing-data-formats-in-hdfs" title="Permalink to this headline">¶</a></h3>
+<h3 id="accessing-data-formats-in-hdfs">Accessing data formats in HDFS<a class="headerlink" href="#accessing-data-formats-in-hdfs" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.avro_file.html#ibis.backends.impala.Backend.avro_file" title="ibis.backends.impala.Backend.avro_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.avro_file</span></code></a>(hdfs_dir, avro_schema[, ...])</p></td>
@@ -452,11 +591,11 @@ object you get back from <code class="docutils literal notranslate"><span class=
 </table>
 </section>
 <section id="executing-expressions">
-<h3>Executing expressions<a class="headerlink" href="#executing-expressions" title="Permalink to this headline">¶</a></h3>
+<h3 id="executing-expressions">Executing expressions<a class="headerlink" href="#executing-expressions" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.execute.html#ibis.backends.impala.Backend.execute" title="ibis.backends.impala.Backend.execute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.execute</span></code></a>(expr[, params, limit])</p></td>
@@ -469,13 +608,13 @@ object you get back from <code class="docutils literal notranslate"><span class=
 </table>
 </section>
 <section id="hdfs">
-<span id="api-hdfs"></span><h3>HDFS<a class="headerlink" href="#hdfs" title="Permalink to this headline">¶</a></h3>
+<span id="api-hdfs"></span><h3 id="hdfs">HDFS<a class="headerlink" href="#hdfs" title="Permalink to this headline">¶</a></h3>
 <p>Client objects have an <code class="docutils literal notranslate"><span class="pre">hdfs</span></code> attribute you can use to interact directly with
 HDFS.</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.backends.impala.hdfs_connect.html#ibis.backends.impala.hdfs_connect" title="ibis.backends.impala.hdfs_connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hdfs_connect</span></code></a>([host, port, protocol, ...])</p></td>
@@ -519,7 +658,7 @@ HDFS.</p>
 </section>
 </section>
 <section id="the-impala-client-object">
-<h2>The Impala client object<a class="headerlink" href="#the-impala-client-object" title="Permalink to this headline">¶</a></h2>
+<h2 id="the-impala-client-object">The Impala client object<a class="headerlink" href="#the-impala-client-object" title="Permalink to this headline">¶</a></h2>
 <p>To use Ibis with Impala, you first must connect to a cluster using the
 <code class="xref py py-func docutils literal notranslate"><span class="pre">ibis.impala.connect()</span></code> function, optionally supplying an HDFS
 connection:</p>
@@ -534,7 +673,7 @@ connection:</p>
 <p>All examples here use the following block of code to connect to impala
 using docker:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ibis</span>
-<span class="n">host</span> <span class="o">=</span> <span class="s1">&#39;impala&#39;</span>
+<span class="n">host</span> <span class="o">=</span> <span class="s1">'impala'</span>
 <span class="n">hdfs</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">hdfs_connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">)</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span><span class="p">)</span>
 </pre></div>
@@ -544,11 +683,11 @@ additionally provide APIs to streamline tasks involving a single Impala table
 or database.</p>
 </section>
 <section id="database-and-table-objects">
-<h2>Database and Table objects<a class="headerlink" href="#database-and-table-objects" title="Permalink to this headline">¶</a></h2>
+<h2 id="database-and-table-objects">Database and Table objects<a class="headerlink" href="#database-and-table-objects" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.database.html#ibis.backends.impala.Backend.database" title="ibis.backends.impala.Backend.database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.database</span></code></a>([name])</p></td>
@@ -561,30 +700,30 @@ or database.</p>
 </table>
 <p>The client’s <code class="docutils literal notranslate"><span class="pre">table</span></code> method allows you to create an Ibis table expression
 referencing a physical Impala table:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;functional_alltypes&#39;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;ibis_testing&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'functional_alltypes'</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">'ibis_testing'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>While you can get by fine with only table and client objects, Ibis has a notion
 of a database object that simplifies interactions with a single Impala
 database. It also gives you IPython tab completion of table names (that are
 valid Python variable names):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">database</span><span class="p">(</span><span class="s1">&#39;ibis_testing&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">database</span><span class="p">(</span><span class="s1">'ibis_testing'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">db</span>
-<span class="go">ImpalaDatabase(&#39;ibis_testing&#39;)</span>
+<span class="go">ImpalaDatabase('ibis_testing')</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">functional_alltypes</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">list_tables</span><span class="p">()</span>
-<span class="go">[&#39;alltypes&#39;,</span>
-<span class="go"> &#39;functional_alltypes&#39;,</span>
-<span class="go"> &#39;tpch_customer&#39;,</span>
-<span class="go"> &#39;tpch_lineitem&#39;,</span>
-<span class="go"> &#39;tpch_nation&#39;,</span>
-<span class="go"> &#39;tpch_orders&#39;,</span>
-<span class="go"> &#39;tpch_part&#39;,</span>
-<span class="go"> &#39;tpch_partsupp&#39;,</span>
-<span class="go"> &#39;tpch_region&#39;,</span>
-<span class="go"> &#39;tpch_region_avro&#39;,</span>
-<span class="go"> &#39;tpch_supplier&#39;]</span>
+<span class="go">['alltypes',</span>
+<span class="go"> 'functional_alltypes',</span>
+<span class="go"> 'tpch_customer',</span>
+<span class="go"> 'tpch_lineitem',</span>
+<span class="go"> 'tpch_nation',</span>
+<span class="go"> 'tpch_orders',</span>
+<span class="go"> 'tpch_part',</span>
+<span class="go"> 'tpch_partsupp',</span>
+<span class="go"> 'tpch_region',</span>
+<span class="go"> 'tpch_region_avro',</span>
+<span class="go"> 'tpch_supplier']</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">ImpalaTable</span></code> is a Python subclass of the more general Ibis <code class="docutils literal notranslate"><span class="pre">TableExpr</span></code>
@@ -594,8 +733,8 @@ with any code expecting a <code class="docutils literal notranslate"><span class
 can use to examine its schema:</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.schema.html#ibis.backends.impala.ImpalaTable.schema" title="ibis.backends.impala.ImpalaTable.schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.schema</span></code></a>()</p></td>
@@ -610,7 +749,7 @@ table itself has a method <code class="docutils literal notranslate"><span class
 </div>
 </section>
 <section id="expression-execution">
-<h2>Expression execution<a class="headerlink" href="#expression-execution" title="Permalink to this headline">¶</a></h2>
+<h2 id="expression-execution">Expression execution<a class="headerlink" href="#expression-execution" title="Permalink to this headline">¶</a></h2>
 <p>Ibis expressions have an <code class="docutils literal notranslate"><span class="pre">execute</span></code> method with compiles and runs the
 expressions on Impala or whichever backend is being referenced.</p>
 <p>For example:</p>
@@ -624,7 +763,7 @@ expressions on Impala or whichever backend is being referenced.</p>
 if an interrupt is received.</p>
 </section>
 <section id="creating-tables">
-<h2>Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this headline">¶</a></h2>
+<h2 id="creating-tables">Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this headline">¶</a></h2>
 <p>There are several ways to create new Impala tables:</p>
 <ul class="simple">
 <li><p>From an Ibis table expression</p></li>
@@ -635,8 +774,8 @@ if an interrupt is received.</p>
 top-level client connection or a database object.</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.create_table.html#ibis.backends.impala.Backend.create_table" title="ibis.backends.impala.Backend.create_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.create_table</span></code></a>(table_name[, obj, ...])</p></td>
@@ -648,14 +787,14 @@ top-level client connection or a database object.</p>
 </tbody>
 </table>
 <section id="creating-tables-from-a-table-expression">
-<h3>Creating tables from a table expression<a class="headerlink" href="#creating-tables-from-a-table-expression" title="Permalink to this headline">¶</a></h3>
+<h3 id="creating-tables-from-a-table-expression">Creating tables from a table expression<a class="headerlink" href="#creating-tables-from-a-table-expression" title="Permalink to this headline">¶</a></h3>
 <p>If you pass an Ibis expression to <code class="docutils literal notranslate"><span class="pre">create_table</span></code>, Ibis issues a <code class="docutils literal notranslate"><span class="pre">CREATE</span>
 <span class="pre">TABLE</span> <span class="pre">..</span> <span class="pre">AS</span> <span class="pre">SELECT</span></code> (CTAS) statement:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;functional_alltypes&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s1">&#39;string_col&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;string_freqs&#39;</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;parquet&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'functional_alltypes'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s1">'string_col'</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">'string_freqs'</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'parquet'</span><span class="p">)</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">freqs</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;string_freqs&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">freqs</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'string_freqs'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">freqs</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 <span class="go">  string_col  count</span>
 <span class="go">0          9    730</span>
@@ -680,33 +819,33 @@ top-level client connection or a database object.</p>
 <p>You can also choose to create an empty table and use <code class="docutils literal notranslate"><span class="pre">insert</span></code> (see below).</p>
 </section>
 <section id="creating-an-empty-table">
-<h3>Creating an empty table<a class="headerlink" href="#creating-an-empty-table" title="Permalink to this headline">¶</a></h3>
+<h3 id="creating-an-empty-table">Creating an empty table<a class="headerlink" href="#creating-an-empty-table" title="Permalink to this headline">¶</a></h3>
 <p>To create an empty table, you must declare an Ibis schema that will be
 translated to the appopriate Impala schema and data types.</p>
 <p>As Ibis types are simplified compared with Impala types, this may expand in the
 future to include a more fine-grained schema declaration.</p>
 <p>You can use the <code class="docutils literal notranslate"><span class="pre">create_table</span></code> method either on a database or client object.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
-                      <span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">),</span>
-                      <span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;int16&#39;</span><span class="p">)])</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;new_table&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'string'</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">'year'</span><span class="p">,</span> <span class="s1">'int32'</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">'month'</span><span class="p">,</span> <span class="s1">'int16'</span><span class="p">)])</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'new_table'</span>
 <span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>By default, this stores the data files in the database default location. You
 can force a particular path with the <code class="docutils literal notranslate"><span class="pre">location</span></code> option.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getuser</span>
-<span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
-                      <span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">),</span>
-                      <span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;int16&#39;</span><span class="p">)])</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;new_table&#39;</span>
-<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;/home/</span><span class="si">{}</span><span class="s1">/new-table-data&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">getuser</span><span class="p">())</span>
+<span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'string'</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">'year'</span><span class="p">,</span> <span class="s1">'int32'</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">'month'</span><span class="p">,</span> <span class="s1">'int16'</span><span class="p">)])</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'new_table'</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s1">'/home/</span><span class="si">{}</span><span class="s1">/new-table-data'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">getuser</span><span class="p">())</span>
 <span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>If the schema matches a known table schema, you can always use the <code class="docutils literal notranslate"><span class="pre">schema</span></code>
 method to get a schema object:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;functional_alltypes&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'functional_alltypes'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">schema</span><span class="p">()</span>
 <span class="go">ibis.Schema {</span>
 <span class="go">  id               int32</span>
@@ -727,20 +866,20 @@ method to get a schema object:</p>
 </div>
 </section>
 <section id="creating-a-partitioned-table">
-<h3>Creating a partitioned table<a class="headerlink" href="#creating-a-partitioned-table" title="Permalink to this headline">¶</a></h3>
+<h3 id="creating-a-partitioned-table">Creating a partitioned table<a class="headerlink" href="#creating-a-partitioned-table" title="Permalink to this headline">¶</a></h3>
 <p>To create an empty partitioned table, include a list of columns to be used as
 the partition keys.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
-                      <span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">),</span>
-                      <span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;int16&#39;</span><span class="p">)])</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;new_table&#39;</span>
-<span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">])</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'string'</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">'year'</span><span class="p">,</span> <span class="s1">'int32'</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">'month'</span><span class="p">,</span> <span class="s1">'int16'</span><span class="p">)])</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'new_table'</span>
+<span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="p">[</span><span class="s1">'year'</span><span class="p">,</span> <span class="s1">'month'</span><span class="p">])</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="partitioned-tables">
-<h2>Partitioned tables<a class="headerlink" href="#partitioned-tables" title="Permalink to this headline">¶</a></h2>
+<h2 id="partitioned-tables">Partitioned tables<a class="headerlink" href="#partitioned-tables" title="Permalink to this headline">¶</a></h2>
 <p>Ibis enables you to manage partitioned tables in various ways. Since each
 partition behaves as its own “subtable” sharing a common schema, each partition
 can have its own file format, directory path, serialization properties, and so
@@ -749,8 +888,8 @@ forth.</p>
 getting information about the partition schema and any existing partition data:</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.add_partition.html#ibis.backends.impala.ImpalaTable.add_partition" title="ibis.backends.impala.ImpalaTable.add_partition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.add_partition</span></code></a>(spec[, location])</p></td>
@@ -773,15 +912,15 @@ getting information about the partition schema and any existing partition data:<
 <p>To address a specific partition in any method that is partition specific, you
 can either use a dict with the partition key names and values, or pass a list
 of the partition values:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
-                      <span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">),</span>
-                      <span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;int16&#39;</span><span class="p">)])</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;new_table&#39;</span>
-<span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">])</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'string'</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">'year'</span><span class="p">,</span> <span class="s1">'int32'</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">'month'</span><span class="p">,</span> <span class="s1">'int16'</span><span class="p">)])</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'new_table'</span>
+<span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="p">[</span><span class="s1">'year'</span><span class="p">,</span> <span class="s1">'month'</span><span class="p">])</span>
 
 <span class="n">table</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
-<span class="n">table</span><span class="o">.</span><span class="n">add_partition</span><span class="p">({</span><span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2007</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">})</span>
+<span class="n">table</span><span class="o">.</span><span class="n">add_partition</span><span class="p">({</span><span class="s1">'year'</span><span class="p">:</span> <span class="mi">2007</span><span class="p">,</span> <span class="s1">'month'</span><span class="p">,</span> <span class="mi">4</span><span class="p">})</span>
 <span class="n">table</span><span class="o">.</span><span class="n">add_partition</span><span class="p">([</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 <span class="n">table</span><span class="o">.</span><span class="n">add_partition</span><span class="p">([</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 
@@ -791,12 +930,12 @@ of the partition values:</p>
 <p>We’ll cover partition metadata management and data loading below.</p>
 </section>
 <section id="inserting-data-into-tables">
-<h2>Inserting data into tables<a class="headerlink" href="#inserting-data-into-tables" title="Permalink to this headline">¶</a></h2>
+<h2 id="inserting-data-into-tables">Inserting data into tables<a class="headerlink" href="#inserting-data-into-tables" title="Permalink to this headline">¶</a></h2>
 <p>If the schemas are compatible, you can insert into a table directly from an
 Ibis table expression:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">functional_alltypes</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;insert_test&#39;</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">schema</span><span class="p">())</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">target</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;insert_test&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">'insert_test'</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">schema</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">target</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'insert_test'</span><span class="p">)</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">target</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">t</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">target</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">t</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
@@ -821,22 +960,22 @@ Ibis table expression:</p>
 </div>
 <p>If the table is partitioned, you must indicate the partition you are inserting
 into:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">part</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2007</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">part</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'year'</span><span class="p">:</span> <span class="mi">2007</span><span class="p">,</span> <span class="s1">'month'</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
 <span class="n">table</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="n">part</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="managing-table-metadata">
-<h2>Managing table metadata<a class="headerlink" href="#managing-table-metadata" title="Permalink to this headline">¶</a></h2>
+<h2 id="managing-table-metadata">Managing table metadata<a class="headerlink" href="#managing-table-metadata" title="Permalink to this headline">¶</a></h2>
 <p>Ibis has functions that wrap many of the DDL commands for Impala table metadata.</p>
 <section id="detailed-table-metadata-describe-formatted">
-<h3>Detailed table metadata: <code class="docutils literal notranslate"><span class="pre">DESCRIBE</span> <span class="pre">FORMATTED</span></code><a class="headerlink" href="#detailed-table-metadata-describe-formatted" title="Permalink to this headline">¶</a></h3>
+<h3 id="detailed-table-metadata-describe-formatted">Detailed table metadata: <code class="docutils literal notranslate"><span class="pre">DESCRIBE</span> <span class="pre">FORMATTED</span></code><a class="headerlink" href="#detailed-table-metadata-describe-formatted" title="Permalink to this headline">¶</a></h3>
 <p>To get a handy wrangled version of <code class="docutils literal notranslate"><span class="pre">DESCRIBE</span> <span class="pre">FORMATTED</span></code> use the <code class="docutils literal notranslate"><span class="pre">metadata</span></code>
 method.</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.metadata.html#ibis.backends.impala.ImpalaTable.metadata" title="ibis.backends.impala.ImpalaTable.metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.metadata</span></code></a>()</p></td>
@@ -846,49 +985,49 @@ method.</p>
 </table>
 <p>The <code class="docutils literal notranslate"><span class="pre">TableMetadata</span></code> object that is returned has a nicer console output and
 many attributes set that you can explore in IPython:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;ibis_testing.functional_alltypes&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'ibis_testing.functional_alltypes'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">meta</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">metadata</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">meta</span>
-<span class="go">&lt;class &#39;ibis.backends.impala.metadata.TableMetadata&#39;&gt;</span>
-<span class="go">{&#39;info&#39;: {&#39;CreateTime&#39;: datetime.datetime(2021, 1, 14, 21, 23, 8),</span>
-<span class="go">          &#39;Database&#39;: &#39;ibis_testing&#39;,</span>
-<span class="go">          &#39;LastAccessTime&#39;: &#39;UNKNOWN&#39;,</span>
-<span class="go">          &#39;Location&#39;: &#39;hdfs://impala:8020/__ibis/ibis-testing-data/parquet/functional_alltypes&#39;,</span>
-<span class="go">          &#39;Owner&#39;: &#39;root&#39;,</span>
-<span class="go">          &#39;Protect Mode&#39;: &#39;None&#39;,</span>
-<span class="go">          &#39;Retention&#39;: 0,</span>
-<span class="go">          &#39;Table Parameters&#39;: {&#39;COLUMN_STATS_ACCURATE&#39;: False,</span>
-<span class="go">                               &#39;EXTERNAL&#39;: True,</span>
-<span class="go">                               &#39;STATS_GENERATED_VIA_STATS_TASK&#39;: True,</span>
-<span class="go">                               &#39;numFiles&#39;: 3,</span>
-<span class="go">                               &#39;numRows&#39;: 7300,</span>
-<span class="go">                               &#39;rawDataSize&#39;: &#39;-1&#39;,</span>
-<span class="go">                               &#39;totalSize&#39;: 106278,</span>
-<span class="go">                               &#39;transient_lastDdlTime&#39;: datetime.datetime(2021, 1, 14, 21, 23, 17)},</span>
-<span class="go">          &#39;Table Type&#39;: &#39;EXTERNAL_TABLE&#39;},</span>
-<span class="go"> &#39;schema&#39;: [(&#39;id&#39;, &#39;int&#39;),</span>
-<span class="go">            (&#39;bool_col&#39;, &#39;boolean&#39;),</span>
-<span class="go">            (&#39;tinyint_col&#39;, &#39;tinyint&#39;),</span>
-<span class="go">            (&#39;smallint_col&#39;, &#39;smallint&#39;),</span>
-<span class="go">            (&#39;int_col&#39;, &#39;int&#39;),</span>
-<span class="go">            (&#39;bigint_col&#39;, &#39;bigint&#39;),</span>
-<span class="go">            (&#39;float_col&#39;, &#39;float&#39;),</span>
-<span class="go">            (&#39;double_col&#39;, &#39;double&#39;),</span>
-<span class="go">            (&#39;date_string_col&#39;, &#39;string&#39;),</span>
-<span class="go">            (&#39;string_col&#39;, &#39;string&#39;),</span>
-<span class="go">            (&#39;timestamp_col&#39;, &#39;timestamp&#39;),</span>
-<span class="go">            (&#39;year&#39;, &#39;int&#39;),</span>
-<span class="go">            (&#39;month&#39;, &#39;int&#39;)],</span>
-<span class="go"> &#39;storage info&#39;: {&#39;Bucket Columns&#39;: &#39;[]&#39;,</span>
-<span class="go">                  &#39;Compressed&#39;: False,</span>
-<span class="go">                  &#39;InputFormat&#39;: &#39;org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat&#39;,</span>
-<span class="go">                  &#39;Num Buckets&#39;: 0,</span>
-<span class="go">                  &#39;OutputFormat&#39;: &#39;org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat&#39;,</span>
-<span class="go">                  &#39;SerDe Library&#39;: &#39;org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe&#39;,</span>
-<span class="go">                  &#39;Sort Columns&#39;: &#39;[]&#39;}}</span>
+<span class="go">&lt;class 'ibis.backends.impala.metadata.TableMetadata'&gt;</span>
+<span class="go">{'info': {'CreateTime': datetime.datetime(2021, 1, 14, 21, 23, 8),</span>
+<span class="go">          'Database': 'ibis_testing',</span>
+<span class="go">          'LastAccessTime': 'UNKNOWN',</span>
+<span class="go">          'Location': 'hdfs://impala:8020/__ibis/ibis-testing-data/parquet/functional_alltypes',</span>
+<span class="go">          'Owner': 'root',</span>
+<span class="go">          'Protect Mode': 'None',</span>
+<span class="go">          'Retention': 0,</span>
+<span class="go">          'Table Parameters': {'COLUMN_STATS_ACCURATE': False,</span>
+<span class="go">                               'EXTERNAL': True,</span>
+<span class="go">                               'STATS_GENERATED_VIA_STATS_TASK': True,</span>
+<span class="go">                               'numFiles': 3,</span>
+<span class="go">                               'numRows': 7300,</span>
+<span class="go">                               'rawDataSize': '-1',</span>
+<span class="go">                               'totalSize': 106278,</span>
+<span class="go">                               'transient_lastDdlTime': datetime.datetime(2021, 1, 14, 21, 23, 17)},</span>
+<span class="go">          'Table Type': 'EXTERNAL_TABLE'},</span>
+<span class="go"> 'schema': [('id', 'int'),</span>
+<span class="go">            ('bool_col', 'boolean'),</span>
+<span class="go">            ('tinyint_col', 'tinyint'),</span>
+<span class="go">            ('smallint_col', 'smallint'),</span>
+<span class="go">            ('int_col', 'int'),</span>
+<span class="go">            ('bigint_col', 'bigint'),</span>
+<span class="go">            ('float_col', 'float'),</span>
+<span class="go">            ('double_col', 'double'),</span>
+<span class="go">            ('date_string_col', 'string'),</span>
+<span class="go">            ('string_col', 'string'),</span>
+<span class="go">            ('timestamp_col', 'timestamp'),</span>
+<span class="go">            ('year', 'int'),</span>
+<span class="go">            ('month', 'int')],</span>
+<span class="go"> 'storage info': {'Bucket Columns': '[]',</span>
+<span class="go">                  'Compressed': False,</span>
+<span class="go">                  'InputFormat': 'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat',</span>
+<span class="go">                  'Num Buckets': 0,</span>
+<span class="go">                  'OutputFormat': 'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat',</span>
+<span class="go">                  'SerDe Library': 'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe',</span>
+<span class="go">                  'Sort Columns': '[]'}}</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">meta</span><span class="o">.</span><span class="n">location</span>
-<span class="go">&#39;hdfs://impala:8020/__ibis/ibis-testing-data/parquet/functional_alltypes&#39;</span>
+<span class="go">'hdfs://impala:8020/__ibis/ibis-testing-data/parquet/functional_alltypes'</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">meta</span><span class="o">.</span><span class="n">create_time</span>
 <span class="go">datetime.datetime(2021, 1, 14, 21, 23, 8)</span>
@@ -898,8 +1037,8 @@ many attributes set that you can explore in IPython:</p>
 files backing a table:</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.files.html#ibis.backends.impala.ImpalaTable.files" title="ibis.backends.impala.ImpalaTable.files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.files</span></code></a>()</p></td>
@@ -907,7 +1046,7 @@ files backing a table:</p>
 </tr>
 </tbody>
 </table>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;tpcds_parquet.store_sales&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'tpcds_parquet.store_sales'</span><span class="p">)</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span><span class="o">.</span><span class="n">files</span><span class="p">()[:</span><span class="mi">5</span><span class="p">]</span>
 <span class="go">                                                path      size  \</span>
@@ -927,14 +1066,14 @@ files backing a table:</p>
 </div>
 </section>
 <section id="modifying-table-metadata">
-<h3>Modifying table metadata<a class="headerlink" href="#modifying-table-metadata" title="Permalink to this headline">¶</a></h3>
+<h3 id="modifying-table-metadata">Modifying table metadata<a class="headerlink" href="#modifying-table-metadata" title="Permalink to this headline">¶</a></h3>
 <p>For unpartitioned tables, you can use the <code class="docutils literal notranslate"><span class="pre">alter</span></code> method to change its
 location, file format, and other properties. For partitioned tables, to change
 partition-specific metadata use <code class="docutils literal notranslate"><span class="pre">alter_partition</span></code>.</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.alter.html#ibis.backends.impala.ImpalaTable.alter" title="ibis.backends.impala.ImpalaTable.alter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.alter</span></code></a>([location, format, ...])</p></td>
@@ -950,20 +1089,20 @@ files, you could run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getuser</span>
 
 <span class="n">csv_props</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;serialization.format&#39;</span><span class="p">:</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;field.delim&#39;</span><span class="p">:</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span>
+    <span class="s1">'serialization.format'</span><span class="p">:</span> <span class="s1">','</span><span class="p">,</span>
+    <span class="s1">'field.delim'</span><span class="p">:</span> <span class="s1">','</span><span class="p">,</span>
 <span class="p">}</span>
-<span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;/home/</span><span class="si">{}</span><span class="s1">/my-csv-files&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">getuser</span><span class="p">())</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="s1">'/home/</span><span class="si">{}</span><span class="s1">/my-csv-files'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">getuser</span><span class="p">())</span>
 
-<span class="n">table</span><span class="o">.</span><span class="n">alter</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">data_dir</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">serde_properties</span><span class="o">=</span><span class="n">csv_props</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">alter</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">data_dir</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'text'</span><span class="p">,</span> <span class="n">serde_properties</span><span class="o">=</span><span class="n">csv_props</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>If the table is partitioned, you can modify only the properties of a particular
 partition:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">alter_partition</span><span class="p">(</span>
-    <span class="p">{</span><span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2007</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'year'</span><span class="p">:</span> <span class="mi">2007</span><span class="p">,</span> <span class="s1">'month'</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
     <span class="n">location</span><span class="o">=</span><span class="n">data_dir</span><span class="p">,</span>
-    <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s1">'text'</span><span class="p">,</span>
     <span class="n">serde_properties</span><span class="o">=</span><span class="n">csv_props</span>
 <span class="p">)</span>
 </pre></div>
@@ -971,13 +1110,13 @@ partition:</p>
 </section>
 </section>
 <section id="table-statistics">
-<h2>Table statistics<a class="headerlink" href="#table-statistics" title="Permalink to this headline">¶</a></h2>
+<h2 id="table-statistics">Table statistics<a class="headerlink" href="#table-statistics" title="Permalink to this headline">¶</a></h2>
 <section id="computing-table-and-partition-statistics">
-<h3>Computing table and partition statistics<a class="headerlink" href="#computing-table-and-partition-statistics" title="Permalink to this headline">¶</a></h3>
+<h3 id="computing-table-and-partition-statistics">Computing table and partition statistics<a class="headerlink" href="#computing-table-and-partition-statistics" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.compute_stats.html#ibis.backends.impala.ImpalaTable.compute_stats" title="ibis.backends.impala.ImpalaTable.compute_stats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.compute_stats</span></code></a>([incremental])</p></td>
@@ -999,11 +1138,11 @@ loading new data:</p>
 </div>
 </section>
 <section id="seeing-table-and-column-statistics">
-<h3>Seeing table and column statistics<a class="headerlink" href="#seeing-table-and-column-statistics" title="Permalink to this headline">¶</a></h3>
+<h3 id="seeing-table-and-column-statistics">Seeing table and column statistics<a class="headerlink" href="#seeing-table-and-column-statistics" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.ImpalaTable.column_stats.html#ibis.backends.impala.ImpalaTable.column_stats" title="ibis.backends.impala.ImpalaTable.column_stats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImpalaTable.column_stats</span></code></a>()</p></td>
@@ -1017,7 +1156,7 @@ loading new data:</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">compute_stats</span></code> and <code class="docutils literal notranslate"><span class="pre">stats</span></code> functions return the results of <code class="docutils literal notranslate"><span class="pre">SHOW</span>
 <span class="pre">COLUMN</span> <span class="pre">STATS</span></code> and <code class="docutils literal notranslate"><span class="pre">SHOW</span> <span class="pre">TABLE</span> <span class="pre">STATS</span></code>, respectively, and their output will
 depend, of course, on the last <code class="docutils literal notranslate"><span class="pre">COMPUTE</span> <span class="pre">STATS</span></code> call.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;tpcds_parquet.store_sales&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'tpcds_parquet.store_sales'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span><span class="o">.</span><span class="n">compute_stats</span><span class="p">(</span><span class="n">incremental</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stats</span> <span class="o">=</span> <span class="n">ss</span><span class="o">.</span><span class="n">stats</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stats</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
@@ -1072,12 +1211,12 @@ depend, of course, on the last <code class="docutils literal notranslate"><span 
 </div>
 </section>
 <section id="refresh-and-invalidate-metadata">
-<h3><code class="docutils literal notranslate"><span class="pre">REFRESH</span></code> and <code class="docutils literal notranslate"><span class="pre">INVALIDATE</span> <span class="pre">METADATA</span></code><a class="headerlink" href="#refresh-and-invalidate-metadata" title="Permalink to this headline">¶</a></h3>
+<h3 id="refresh-and-invalidate-metadata"><code class="docutils literal notranslate"><span class="pre">REFRESH</span></code> and <code class="docutils literal notranslate"><span class="pre">INVALIDATE</span> <span class="pre">METADATA</span></code><a class="headerlink" href="#refresh-and-invalidate-metadata" title="Permalink to this headline">¶</a></h3>
 <p>These DDL commands are available as table-level and client-level methods:</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.invalidate_metadata.html#ibis.backends.impala.Backend.invalidate_metadata" title="ibis.backends.impala.Backend.invalidate_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.invalidate_metadata</span></code></a>([name, database])</p></td>
@@ -1107,7 +1246,7 @@ using <code class="docutils literal notranslate"><span class="pre">invalidate_me
 </section>
 </section>
 <section id="issuing-load-data-commands">
-<h2>Issuing <code class="docutils literal notranslate"><span class="pre">LOAD</span> <span class="pre">DATA</span></code> commands<a class="headerlink" href="#issuing-load-data-commands" title="Permalink to this headline">¶</a></h2>
+<h2 id="issuing-load-data-commands">Issuing <code class="docutils literal notranslate"><span class="pre">LOAD</span> <span class="pre">DATA</span></code> commands<a class="headerlink" href="#issuing-load-data-commands" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">LOAD</span> <span class="pre">DATA</span></code> DDL physically moves a single data file or a directory of
 files into the correct location for a table or table partition. It is
 especially useful for partitioned tables as you do not have to construct the
@@ -1116,8 +1255,8 @@ manually moving files with low level HDFS commands. It also deals with file
 name conflicts so data is not lost in such cases.</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.load_data.html#ibis.backends.impala.Backend.load_data" title="ibis.backends.impala.Backend.load_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.load_data</span></code></a>(table_name, path[, ...])</p></td>
@@ -1143,13 +1282,13 @@ particular partition with the <code class="docutils literal notranslate"><span c
 </div>
 </section>
 <section id="parquet-and-other-session-options">
-<h2>Parquet and other session options<a class="headerlink" href="#parquet-and-other-session-options" title="Permalink to this headline">¶</a></h2>
+<h2 id="parquet-and-other-session-options">Parquet and other session options<a class="headerlink" href="#parquet-and-other-session-options" title="Permalink to this headline">¶</a></h2>
 <p>Ibis gives you access to Impala session-level variables that affect query
 execution:</p>
 <table class="longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../generated/ibis.backends.impala.Backend.disable_codegen.html#ibis.backends.impala.Backend.disable_codegen" title="ibis.backends.impala.Backend.disable_codegen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backend.disable_codegen</span></code></a>([disabled])</p></td>
@@ -1168,66 +1307,66 @@ execution:</p>
 </table>
 <p>For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">get_options</span><span class="p">()</span>
-<span class="go">{&#39;ABORT_ON_ERROR&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;APPX_COUNT_DISTINCT&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;BUFFER_POOL_LIMIT&#39;: &#39;&#39;,</span>
-<span class="go"> &#39;COMPRESSION_CODEC&#39;: &#39;&#39;,</span>
-<span class="go"> &#39;COMPUTE_STATS_MIN_SAMPLE_SIZE&#39;: &#39;1073741824&#39;,</span>
-<span class="go"> &#39;DEFAULT_JOIN_DISTRIBUTION_MODE&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;DEFAULT_SPILLABLE_BUFFER_SIZE&#39;: &#39;2097152&#39;,</span>
-<span class="go"> &#39;DISABLE_CODEGEN&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;DISABLE_CODEGEN_ROWS_THRESHOLD&#39;: &#39;50000&#39;,</span>
-<span class="go"> &#39;DISABLE_ROW_RUNTIME_FILTERING&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;DISABLE_STREAMING_PREAGGREGATIONS&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;DISABLE_UNSAFE_SPILLS&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;ENABLE_EXPR_REWRITES&#39;: &#39;1&#39;,</span>
-<span class="go"> &#39;EXEC_SINGLE_NODE_ROWS_THRESHOLD&#39;: &#39;100&#39;,</span>
-<span class="go"> &#39;EXEC_TIME_LIMIT_S&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;EXPLAIN_LEVEL&#39;: &#39;1&#39;,</span>
-<span class="go"> &#39;HBASE_CACHE_BLOCKS&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;HBASE_CACHING&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;IDLE_SESSION_TIMEOUT&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;MAX_ERRORS&#39;: &#39;100&#39;,</span>
-<span class="go"> &#39;MAX_NUM_RUNTIME_FILTERS&#39;: &#39;10&#39;,</span>
-<span class="go"> &#39;MAX_ROW_SIZE&#39;: &#39;524288&#39;,</span>
-<span class="go"> &#39;MEM_LIMIT&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;MIN_SPILLABLE_BUFFER_SIZE&#39;: &#39;65536&#39;,</span>
-<span class="go"> &#39;MT_DOP&#39;: &#39;&#39;,</span>
-<span class="go"> &#39;NUM_SCANNER_THREADS&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;OPTIMIZE_PARTITION_KEY_SCANS&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;PARQUET_ANNOTATE_STRINGS_UTF8&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;PARQUET_ARRAY_RESOLUTION&#39;: &#39;2&#39;,</span>
-<span class="go"> &#39;PARQUET_DICTIONARY_FILTERING&#39;: &#39;1&#39;,</span>
-<span class="go"> &#39;PARQUET_FALLBACK_SCHEMA_RESOLUTION&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;PARQUET_FILE_SIZE&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;PARQUET_READ_STATISTICS&#39;: &#39;1&#39;,</span>
-<span class="go"> &#39;PREFETCH_MODE&#39;: &#39;1&#39;,</span>
-<span class="go"> &#39;QUERY_TIMEOUT_S&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;REPLICA_PREFERENCE&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;REQUEST_POOL&#39;: &#39;&#39;,</span>
-<span class="go"> &#39;RUNTIME_BLOOM_FILTER_SIZE&#39;: &#39;1048576&#39;,</span>
-<span class="go"> &#39;RUNTIME_FILTER_MAX_SIZE&#39;: &#39;16777216&#39;,</span>
-<span class="go"> &#39;RUNTIME_FILTER_MIN_SIZE&#39;: &#39;1048576&#39;,</span>
-<span class="go"> &#39;RUNTIME_FILTER_MODE&#39;: &#39;2&#39;,</span>
-<span class="go"> &#39;RUNTIME_FILTER_WAIT_TIME_MS&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;S3_SKIP_INSERT_STAGING&#39;: &#39;1&#39;,</span>
-<span class="go"> &#39;SCHEDULE_RANDOM_REPLICA&#39;: &#39;0&#39;,</span>
-<span class="go"> &#39;SCRATCH_LIMIT&#39;: &#39;-1&#39;,</span>
-<span class="go"> &#39;SEQ_COMPRESSION_MODE&#39;: &#39;&#39;,</span>
-<span class="go"> &#39;SYNC_DDL&#39;: &#39;0&#39;}</span>
+<span class="go">{'ABORT_ON_ERROR': '0',</span>
+<span class="go"> 'APPX_COUNT_DISTINCT': '0',</span>
+<span class="go"> 'BUFFER_POOL_LIMIT': '',</span>
+<span class="go"> 'COMPRESSION_CODEC': '',</span>
+<span class="go"> 'COMPUTE_STATS_MIN_SAMPLE_SIZE': '1073741824',</span>
+<span class="go"> 'DEFAULT_JOIN_DISTRIBUTION_MODE': '0',</span>
+<span class="go"> 'DEFAULT_SPILLABLE_BUFFER_SIZE': '2097152',</span>
+<span class="go"> 'DISABLE_CODEGEN': '0',</span>
+<span class="go"> 'DISABLE_CODEGEN_ROWS_THRESHOLD': '50000',</span>
+<span class="go"> 'DISABLE_ROW_RUNTIME_FILTERING': '0',</span>
+<span class="go"> 'DISABLE_STREAMING_PREAGGREGATIONS': '0',</span>
+<span class="go"> 'DISABLE_UNSAFE_SPILLS': '0',</span>
+<span class="go"> 'ENABLE_EXPR_REWRITES': '1',</span>
+<span class="go"> 'EXEC_SINGLE_NODE_ROWS_THRESHOLD': '100',</span>
+<span class="go"> 'EXEC_TIME_LIMIT_S': '0',</span>
+<span class="go"> 'EXPLAIN_LEVEL': '1',</span>
+<span class="go"> 'HBASE_CACHE_BLOCKS': '0',</span>
+<span class="go"> 'HBASE_CACHING': '0',</span>
+<span class="go"> 'IDLE_SESSION_TIMEOUT': '0',</span>
+<span class="go"> 'MAX_ERRORS': '100',</span>
+<span class="go"> 'MAX_NUM_RUNTIME_FILTERS': '10',</span>
+<span class="go"> 'MAX_ROW_SIZE': '524288',</span>
+<span class="go"> 'MEM_LIMIT': '0',</span>
+<span class="go"> 'MIN_SPILLABLE_BUFFER_SIZE': '65536',</span>
+<span class="go"> 'MT_DOP': '',</span>
+<span class="go"> 'NUM_SCANNER_THREADS': '0',</span>
+<span class="go"> 'OPTIMIZE_PARTITION_KEY_SCANS': '0',</span>
+<span class="go"> 'PARQUET_ANNOTATE_STRINGS_UTF8': '0',</span>
+<span class="go"> 'PARQUET_ARRAY_RESOLUTION': '2',</span>
+<span class="go"> 'PARQUET_DICTIONARY_FILTERING': '1',</span>
+<span class="go"> 'PARQUET_FALLBACK_SCHEMA_RESOLUTION': '0',</span>
+<span class="go"> 'PARQUET_FILE_SIZE': '0',</span>
+<span class="go"> 'PARQUET_READ_STATISTICS': '1',</span>
+<span class="go"> 'PREFETCH_MODE': '1',</span>
+<span class="go"> 'QUERY_TIMEOUT_S': '0',</span>
+<span class="go"> 'REPLICA_PREFERENCE': '0',</span>
+<span class="go"> 'REQUEST_POOL': '',</span>
+<span class="go"> 'RUNTIME_BLOOM_FILTER_SIZE': '1048576',</span>
+<span class="go"> 'RUNTIME_FILTER_MAX_SIZE': '16777216',</span>
+<span class="go"> 'RUNTIME_FILTER_MIN_SIZE': '1048576',</span>
+<span class="go"> 'RUNTIME_FILTER_MODE': '2',</span>
+<span class="go"> 'RUNTIME_FILTER_WAIT_TIME_MS': '0',</span>
+<span class="go"> 'S3_SKIP_INSERT_STAGING': '1',</span>
+<span class="go"> 'SCHEDULE_RANDOM_REPLICA': '0',</span>
+<span class="go"> 'SCRATCH_LIMIT': '-1',</span>
+<span class="go"> 'SEQ_COMPRESSION_MODE': '',</span>
+<span class="go"> 'SYNC_DDL': '0'}</span>
 </pre></div>
 </div>
 <p>To enable Snappy compression for Parquet files, you could do either of:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">set_options</span><span class="p">({</span><span class="s1">&#39;COMPRESSION_CODEC&#39;</span><span class="p">:</span> <span class="s1">&#39;snappy&#39;</span><span class="p">})</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">set_compression_codec</span><span class="p">(</span><span class="s1">&#39;snappy&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">set_options</span><span class="p">({</span><span class="s1">'COMPRESSION_CODEC'</span><span class="p">:</span> <span class="s1">'snappy'</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">set_compression_codec</span><span class="p">(</span><span class="s1">'snappy'</span><span class="p">)</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">get_options</span><span class="p">()[</span><span class="s1">&#39;COMPRESSION_CODEC&#39;</span><span class="p">]</span>
-<span class="go">&#39;SNAPPY&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">get_options</span><span class="p">()[</span><span class="s1">'COMPRESSION_CODEC'</span><span class="p">]</span>
+<span class="go">'SNAPPY'</span>
 </pre></div>
 </div>
 </section>
 <section id="ingesting-data-from-pandas">
-<h2>Ingesting data from pandas<a class="headerlink" href="#ingesting-data-from-pandas" title="Permalink to this headline">¶</a></h2>
+<h2 id="ingesting-data-from-pandas">Ingesting data from pandas<a class="headerlink" href="#ingesting-data-from-pandas" title="Permalink to this headline">¶</a></h2>
 <p>Overall interoperability between the Hadoop / Spark ecosystems and pandas / the
 PyData stack is poor, but it will improve in time (this is a major part of the
 Ibis roadmap).</p>
@@ -1242,9 +1381,9 @@ ingest route.</p></li>
 <p>For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'foo'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s1">'bar'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">]})</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;pandas_table&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">'pandas_table'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">pandas_table</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 <span class="go">  bar  foo</span>
@@ -1255,7 +1394,7 @@ ingest route.</p></li>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;empty_for_insert&#39;</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">schema</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">'empty_for_insert'</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">schema</span><span class="p">())</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">to_insert</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">empty_for_insert</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">to_insert</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -1271,9 +1410,9 @@ ingest route.</p></li>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'foo'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s1">'bar'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">]})</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;pandas_table&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">'pandas_table'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">pandas_table</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 <span class="go">   foo bar</span>
@@ -1283,7 +1422,7 @@ ingest route.</p></li>
 <span class="go">3    4   d</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;empty_for_insert&#39;</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">schema</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">'empty_for_insert'</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">schema</span><span class="p">())</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">to_insert</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">empty_for_insert</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">to_insert</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">to_insert</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
@@ -1298,36 +1437,36 @@ ingest route.</p></li>
 </div>
 </section>
 <section id="uploading-downloading-data-from-hdfs">
-<h2>Uploading / downloading data from HDFS<a class="headerlink" href="#uploading-downloading-data-from-hdfs" title="Permalink to this headline">¶</a></h2>
+<h2 id="uploading-downloading-data-from-hdfs">Uploading / downloading data from HDFS<a class="headerlink" href="#uploading-downloading-data-from-hdfs" title="Permalink to this headline">¶</a></h2>
 <p>If you’ve set up an HDFS connection, you can use the Ibis HDFS interface
 to look through your data and read and write files to and from HDFS:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">hdfs</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">&#39;/__ibis/ibis-testing-data&#39;</span><span class="p">)</span>
-<span class="go">[&#39;README.md&#39;,</span>
-<span class="go"> &#39;avro&#39;,</span>
-<span class="go"> &#39;awards_players.csv&#39;,</span>
-<span class="go"> &#39;batting.csv&#39;,</span>
-<span class="go"> &#39;csv&#39;,</span>
-<span class="go"> &#39;diamonds.csv&#39;,</span>
-<span class="go"> &#39;functional_alltypes.csv&#39;,</span>
-<span class="go"> &#39;functional_alltypes.parquet&#39;,</span>
-<span class="go"> &#39;geo.csv&#39;,</span>
-<span class="go"> &#39;ibis_testing.db&#39;,</span>
-<span class="go"> &#39;parquet&#39;,</span>
-<span class="go"> &#39;struct_table.avro&#39;,</span>
-<span class="go"> &#39;udf&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">'/__ibis/ibis-testing-data'</span><span class="p">)</span>
+<span class="go">['README.md',</span>
+<span class="go"> 'avro',</span>
+<span class="go"> 'awards_players.csv',</span>
+<span class="go"> 'batting.csv',</span>
+<span class="go"> 'csv',</span>
+<span class="go"> 'diamonds.csv',</span>
+<span class="go"> 'functional_alltypes.csv',</span>
+<span class="go"> 'functional_alltypes.parquet',</span>
+<span class="go"> 'geo.csv',</span>
+<span class="go"> 'ibis_testing.db',</span>
+<span class="go"> 'parquet',</span>
+<span class="go"> 'struct_table.avro',</span>
+<span class="go"> 'udf']</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">&#39;/__ibis/ibis-testing-data/parquet&#39;</span><span class="p">)</span>
-<span class="go">[&#39;functional_alltypes&#39;,</span>
-<span class="go"> &#39;tpch_customer&#39;,</span>
-<span class="go"> &#39;tpch_lineitem&#39;,</span>
-<span class="go"> &#39;tpch_nation&#39;,</span>
-<span class="go"> &#39;tpch_orders&#39;,</span>
-<span class="go"> &#39;tpch_part&#39;,</span>
-<span class="go"> &#39;tpch_partsupp&#39;,</span>
-<span class="go"> &#39;tpch_region&#39;,</span>
-<span class="go"> &#39;tpch_supplier&#39;]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">'/__ibis/ibis-testing-data/parquet'</span><span class="p">)</span>
+<span class="go">['functional_alltypes',</span>
+<span class="go"> 'tpch_customer',</span>
+<span class="go"> 'tpch_lineitem',</span>
+<span class="go"> 'tpch_nation',</span>
+<span class="go"> 'tpch_orders',</span>
+<span class="go"> 'tpch_part',</span>
+<span class="go"> 'tpch_partsupp',</span>
+<span class="go"> 'tpch_region',</span>
+<span class="go"> 'tpch_supplier']</span>
 </pre></div>
 </div>
 <p>Suppose we wanted to download
@@ -1336,9 +1475,9 @@ directory. We need only do:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ rm -rf parquet_dir/
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/__ibis/ibis-testing-data/parquet/functional_alltypes&#39;</span><span class="p">,</span>
-<span class="gp">... </span>         <span class="s1">&#39;parquet_dir&#39;</span><span class="p">)</span>
-<span class="go">&#39;/ibis/docs/source/tutorial/parquet_dir&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'/__ibis/ibis-testing-data/parquet/functional_alltypes'</span><span class="p">,</span>
+<span class="gp">... </span>         <span class="s1">'parquet_dir'</span><span class="p">)</span>
+<span class="go">'/ibis/docs/source/tutorial/parquet_dir'</span>
 </pre></div>
 </div>
 <p>Now we have that directory locally:</p>
@@ -1350,21 +1489,21 @@ directory. We need only do:</p>
 </div>
 <p>Files and directories can be written to HDFS just as easily using
 <code class="docutils literal notranslate"><span class="pre">put</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/__ibis/dir-write-example&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">'/__ibis/dir-write-example'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
 <span class="gp">... </span>   <span class="n">hdfs</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;parquet_dir&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">&#39;/__ibis/dir-write-example&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">'parquet_dir'</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">'/__ibis/dir-write-example'</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">&#39;/__ibis/dir-write-example&#39;</span><span class="p">)</span>
-<span class="go">[&#39;9a41de519352ab07-4e76bc4d9fb5a789_1624886651_data.0.parq&#39;,</span>
-<span class="go"> &#39;9a41de519352ab07-4e76bc4d9fb5a78a_778826485_data.0.parq&#39;,</span>
-<span class="go"> &#39;9a41de519352ab07-4e76bc4d9fb5a78b_1277612014_data.0.parq&#39;]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">'/__ibis/dir-write-example'</span><span class="p">)</span>
+<span class="go">['9a41de519352ab07-4e76bc4d9fb5a789_1624886651_data.0.parq',</span>
+<span class="go"> '9a41de519352ab07-4e76bc4d9fb5a78a_778826485_data.0.parq',</span>
+<span class="go"> '9a41de519352ab07-4e76bc4d9fb5a78b_1277612014_data.0.parq']</span>
 </pre></div>
 </div>
 <p>Delete files with <code class="docutils literal notranslate"><span class="pre">rm</span></code> or directories with <code class="docutils literal notranslate"><span class="pre">rmdir</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;/__ibis/dir-write-example&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">'/__ibis/dir-write-example'</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -rf parquet_dir/
@@ -1372,7 +1511,7 @@ directory. We need only do:</p>
 </div>
 </section>
 <section id="queries-on-parquet-avro-and-delimited-files-in-hdfs">
-<h2>Queries on Parquet, Avro, and Delimited files in HDFS<a class="headerlink" href="#queries-on-parquet-avro-and-delimited-files-in-hdfs" title="Permalink to this headline">¶</a></h2>
+<h2 id="queries-on-parquet-avro-and-delimited-files-in-hdfs">Queries on Parquet, Avro, and Delimited files in HDFS<a class="headerlink" href="#queries-on-parquet-avro-and-delimited-files-in-hdfs" title="Permalink to this headline">¶</a></h2>
 <p>Ibis can easily create temporary or persistent Impala tables that
 reference data in the following formats:</p>
 <ul class="simple">
@@ -1382,7 +1521,7 @@ reference data in the following formats:</p>
 </ul>
 <p>Parquet is the easiest because the schema can be read from the data
 files:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/__ibis/ibis-testing-data/parquet/tpch_lineitem&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">'/__ibis/ibis-testing-data/parquet/tpch_lineitem'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lineitem</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">parquet_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lineitem</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="go">   l_orderkey  l_partkey  l_suppkey  l_linenumber l_quantity l_extendedprice  \</span>
@@ -1403,32 +1542,32 @@ files:</p>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lineitem</span><span class="o">.</span><span class="n">l_extendedprice</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="go">Decimal(&#39;229577310901.20&#39;)</span>
+<span class="go">Decimal('229577310901.20')</span>
 </pre></div>
 </div>
 <p>If you want to query a Parquet file and also create a table in Impala
 that remains after your session, you can pass more information to
 <code class="docutils literal notranslate"><span class="pre">parquet_file</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">parquet_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_parquet_table&#39;</span><span class="p">,</span>
-<span class="gp">... </span>                         <span class="n">database</span><span class="o">=</span><span class="s1">&#39;ibis_testing&#39;</span><span class="p">,</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">parquet_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'my_parquet_table'</span><span class="p">,</span>
+<span class="gp">... </span>                         <span class="n">database</span><span class="o">=</span><span class="s1">'ibis_testing'</span><span class="p">,</span>
 <span class="gp">... </span>                         <span class="n">persist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">table</span><span class="o">.</span><span class="n">l_extendedprice</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="go">Decimal(&#39;229577310901.20&#39;)</span>
+<span class="go">Decimal('229577310901.20')</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;my_parquet_table&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">l_extendedprice</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="go">Decimal(&#39;229577310901.20&#39;)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'my_parquet_table'</span><span class="p">)</span><span class="o">.</span><span class="n">l_extendedprice</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="go">Decimal('229577310901.20')</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">drop_table</span><span class="p">(</span><span class="s1">&#39;my_parquet_table&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">drop_table</span><span class="p">(</span><span class="s1">'my_parquet_table'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To query delimited files, you need to write down an Ibis schema. At some
 point we’d like to build some helper tools that will infer the schema
 for you, all in good time.</p>
 <p>There’s some CSV files in the test folder, so let’s use those:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/__ibis/ibis-testing-data/csv&#39;</span><span class="p">,</span> <span class="s1">&#39;csv-files&#39;</span><span class="p">)</span>
-<span class="go">&#39;/ibis/docs/source/tutorial/csv-files&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'/__ibis/ibis-testing-data/csv'</span><span class="p">,</span> <span class="s1">'csv-files'</span><span class="p">)</span>
+<span class="go">'/ibis/docs/source/tutorial/csv-files'</span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cat csv-files/0.csv
@@ -1448,11 +1587,11 @@ KsfjPyDf5e,-0.578930506363,70
 </pre></div>
 </div>
 <p>The schema here is pretty simple (see <code class="docutils literal notranslate"><span class="pre">ibis.schema</span></code> for more):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
-<span class="gp">... </span>                      <span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">),</span>
-<span class="gp">... </span>                      <span class="p">(</span><span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">)])</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'string'</span><span class="p">),</span>
+<span class="gp">... </span>                      <span class="p">(</span><span class="s1">'bar'</span><span class="p">,</span> <span class="s1">'double'</span><span class="p">),</span>
+<span class="gp">... </span>                      <span class="p">(</span><span class="s1">'baz'</span><span class="p">,</span> <span class="s1">'int32'</span><span class="p">)])</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">delimited_file</span><span class="p">(</span><span class="s1">&#39;/__ibis/ibis-testing-data/csv&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">delimited_file</span><span class="p">(</span><span class="s1">'/__ibis/ibis-testing-data/csv'</span><span class="p">,</span>
 <span class="gp">... </span>                           <span class="n">schema</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">table</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="go">          foo       bar  baz</span>
@@ -1479,15 +1618,15 @@ later) and the directory must contain files all having the same schema.</p>
 <p>If you have Avro data, you can query it too if you have the full avro
 schema:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">avro_schema</span> <span class="o">=</span> <span class="p">{</span>
-<span class="gp">... </span>    <span class="s2">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="gp">... </span>        <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;int&quot;</span><span class="p">,</span> <span class="s2">&quot;null&quot;</span><span class="p">],</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;R_REGIONKEY&quot;</span><span class="p">},</span>
-<span class="gp">... </span>        <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="s2">&quot;null&quot;</span><span class="p">],</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;R_NAME&quot;</span><span class="p">},</span>
-<span class="gp">... </span>        <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="s2">&quot;null&quot;</span><span class="p">],</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;R_COMMENT&quot;</span><span class="p">}],</span>
-<span class="gp">... </span>    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;record&quot;</span><span class="p">,</span>
-<span class="gp">... </span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;a&quot;</span>
+<span class="gp">... </span>    <span class="s2">"fields"</span><span class="p">:</span> <span class="p">[</span>
+<span class="gp">... </span>        <span class="p">{</span><span class="s2">"type"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"int"</span><span class="p">,</span> <span class="s2">"null"</span><span class="p">],</span> <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"R_REGIONKEY"</span><span class="p">},</span>
+<span class="gp">... </span>        <span class="p">{</span><span class="s2">"type"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"string"</span><span class="p">,</span> <span class="s2">"null"</span><span class="p">],</span> <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"R_NAME"</span><span class="p">},</span>
+<span class="gp">... </span>        <span class="p">{</span><span class="s2">"type"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"string"</span><span class="p">,</span> <span class="s2">"null"</span><span class="p">],</span> <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"R_COMMENT"</span><span class="p">}],</span>
+<span class="gp">... </span>    <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"record"</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"a"</span>
 <span class="gp">... </span><span class="p">}</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/__ibis/ibis-testing-data/avro/tpch.region&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">'/__ibis/ibis-testing-data/avro/tpch.region'</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">avro_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">avro_schema</span><span class="p">)</span>
@@ -1499,7 +1638,7 @@ schema:</p>
 </div>
 </section>
 <section id="other-helper-functions-for-interacting-with-the-database">
-<h2>Other helper functions for interacting with the database<a class="headerlink" href="#other-helper-functions-for-interacting-with-the-database" title="Permalink to this headline">¶</a></h2>
+<h2 id="other-helper-functions-for-interacting-with-the-database">Other helper functions for interacting with the database<a class="headerlink" href="#other-helper-functions-for-interacting-with-the-database" title="Permalink to this headline">¶</a></h2>
 <p>We’re adding a growing list of useful utility functions for interacting
 with an Impala cluster on the client object. The idea is that you should
 be able to do any database-admin-type work with Ibis and not have to
@@ -1511,23 +1650,23 @@ pleasant, please let us know.</p>
 <li><p>Creating and dropping databases</p></li>
 <li><p>Getting table schemas</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">list_databases</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s1">&#39;ibis*&#39;</span><span class="p">)</span>
-<span class="go">[&#39;ibis_testing&#39;, &#39;ibis_testing_tmp_db&#39;]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">list_databases</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s1">'ibis*'</span><span class="p">)</span>
+<span class="go">['ibis_testing', 'ibis_testing_tmp_db']</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">list_tables</span><span class="p">(</span><span class="n">database</span><span class="o">=</span><span class="s1">&#39;ibis_testing&#39;</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="s1">&#39;tpch*&#39;</span><span class="p">)</span>
-<span class="go">[&#39;tpch_customer&#39;,</span>
-<span class="go"> &#39;tpch_lineitem&#39;,</span>
-<span class="go"> &#39;tpch_nation&#39;,</span>
-<span class="go"> &#39;tpch_orders&#39;,</span>
-<span class="go"> &#39;tpch_part&#39;,</span>
-<span class="go"> &#39;tpch_partsupp&#39;,</span>
-<span class="go"> &#39;tpch_region&#39;,</span>
-<span class="go"> &#39;tpch_region_avro&#39;,</span>
-<span class="go"> &#39;tpch_supplier&#39;]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">list_tables</span><span class="p">(</span><span class="n">database</span><span class="o">=</span><span class="s1">'ibis_testing'</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="s1">'tpch*'</span><span class="p">)</span>
+<span class="go">['tpch_customer',</span>
+<span class="go"> 'tpch_lineitem',</span>
+<span class="go"> 'tpch_nation',</span>
+<span class="go"> 'tpch_orders',</span>
+<span class="go"> 'tpch_part',</span>
+<span class="go"> 'tpch_partsupp',</span>
+<span class="go"> 'tpch_region',</span>
+<span class="go"> 'tpch_region_avro',</span>
+<span class="go"> 'tpch_supplier']</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">schema</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">get_schema</span><span class="p">(</span><span class="s1">&#39;functional_alltypes&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">schema</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">get_schema</span><span class="p">(</span><span class="s1">'functional_alltypes'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">schema</span>
 <span class="go">ibis.Schema {</span>
 <span class="go">  id               int32</span>
@@ -1548,20 +1687,20 @@ pleasant, please let us know.</p>
 </div>
 <p>Databases can be created, too, and you can set the storage path in HDFS
 you want for the data files</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">db</span> <span class="o">=</span> <span class="s1">&#39;ibis_testing2&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">create_database</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;/__ibis/my-test-database&#39;</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">db</span> <span class="o">=</span> <span class="s1">'ibis_testing2'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">create_database</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">'/__ibis/my-test-database'</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># you may or may not have to give the impala user write and execute permissions to &#39;/__ibis/my-test-database&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">chmod</span><span class="p">(</span><span class="s1">&#39;/__ibis/my-test-database&#39;</span><span class="p">,</span> <span class="s1">&#39;777&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># you may or may not have to give the impala user write and execute permissions to '/__ibis/my-test-database'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">chmod</span><span class="p">(</span><span class="s1">'/__ibis/my-test-database'</span><span class="p">,</span> <span class="s1">'777'</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;example_table&#39;</span><span class="p">,</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;functional_alltypes&#39;</span><span class="p">),</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">'example_table'</span><span class="p">,</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'functional_alltypes'</span><span class="p">),</span>
 <span class="gp">... </span>                 <span class="n">database</span><span class="o">=</span><span class="n">db</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Hopefully, there will be data files in the indicated spot in HDFS:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">&#39;/__ibis/my-test-database&#39;</span><span class="p">)</span>
-<span class="go">[&#39;example_table&#39;]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hdfs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">'/__ibis/my-test-database'</span><span class="p">)</span>
+<span class="go">['example_table']</span>
 </pre></div>
 </div>
 <p>To drop a database, including all tables in it, you can use
@@ -1571,7 +1710,7 @@ you want for the data files</p>
 </div>
 </section>
 <section id="faster-queries-on-small-data-in-impala">
-<h2>Faster queries on small data in Impala<a class="headerlink" href="#faster-queries-on-small-data-in-impala" title="Permalink to this headline">¶</a></h2>
+<h2 id="faster-queries-on-small-data-in-impala">Faster queries on small data in Impala<a class="headerlink" href="#faster-queries-on-small-data-in-impala" title="Permalink to this headline">¶</a></h2>
 <p>Since Impala internally uses LLVM to compile parts of queries (aka
 “codegen”) to make them faster on large data sets there is a certain
 amount of overhead with running many kinds of queries, even on small
@@ -1579,10 +1718,10 @@ datasets. You can disable LLVM code generation when using Ibis, which
 may significantly speed up queries on smaller datasets:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">rand</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">disable_codegen</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;ibis_testing.functional_alltypes&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'ibis_testing.functional_alltypes'</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">time</span> python -c <span class="s2">&quot;(t.double_col + rand()).sum().execute()&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">time</span> python -c <span class="s2">"(t.double_col + rand()).sum().execute()"</span>
 <span class="m">27</span>.7 ms ± <span class="m">996</span> µs per loop <span class="o">(</span>mean ± std. dev. of <span class="m">7</span> runs, <span class="m">10</span> loops each<span class="o">)</span>
 </pre></div>
 </div>
@@ -1590,7 +1729,7 @@ may significantly speed up queries on smaller datasets:</p>
 <span class="n">con</span><span class="o">.</span><span class="n">disable_codegen</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">time</span> python -c <span class="s2">&quot;(t.double_col + rand()).sum().execute()&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">time</span> python -c <span class="s2">"(t.double_col + rand()).sum().execute()"</span>
 <span class="m">27</span> ms ± <span class="m">1</span>.62 ms per loop <span class="o">(</span>mean ± std. dev. of <span class="m">7</span> runs, <span class="m">10</span> loops each<span class="o">)</span>
 </pre></div>
 </div>
@@ -1598,16 +1737,16 @@ may significantly speed up queries on smaller datasets:</p>
 significantly speed up queries on big data</p>
 </section>
 <section id="user-defined-functions-udf">
-<span id="udf-impala"></span><h2>User Defined functions (UDF)<a class="headerlink" href="#user-defined-functions-udf" title="Permalink to this headline">¶</a></h2>
+<span id="udf-impala"></span><h2 id="user-defined-functions-udf">User Defined functions (UDF)<a class="headerlink" href="#user-defined-functions-udf" title="Permalink to this headline">¶</a></h2>
 <p>Impala currently supports user-defined scalar functions (known henceforth as
 <em>UDFs</em>) and aggregate functions (respectively <em>UDAs</em>) via a C++ extension API.</p>
 <p>Initial support for using C++ UDFs in Ibis came in version 0.4.0.</p>
 <section id="using-scalar-functions-udfs">
-<h3>Using scalar functions (UDFs)<a class="headerlink" href="#using-scalar-functions-udfs" title="Permalink to this headline">¶</a></h3>
+<h3 id="using-scalar-functions-udfs">Using scalar functions (UDFs)<a class="headerlink" href="#using-scalar-functions-udfs" title="Permalink to this headline">¶</a></h3>
 <p>Let’s take an example to illustrate how to make a C++ UDF available to
 Ibis. Here is a function that computes an approximate equality between floating
 point values:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;impala_udf/udf.h&quot;</span><span class="cp"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">"impala_udf/udf.h"</span><span class="cp"></span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cctype&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
@@ -1624,12 +1763,12 @@ point values:</p>
 bitcode with clang (a <code class="docutils literal notranslate"><span class="pre">.ll</span></code> file). Skipping that step for now (will add some
 more detailed instructions here later, promise).</p>
 <p>To make this function callable, we use <code class="docutils literal notranslate"><span class="pre">ibis.impala.wrap_udf</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">library</span> <span class="o">=</span> <span class="s1">&#39;/ibis/udfs/udftest.ll&#39;</span>
-<span class="n">inputs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;double&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">]</span>
-<span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;boolean&#39;</span>
-<span class="n">symbol</span> <span class="o">=</span> <span class="s1">&#39;FuzzyEquals&#39;</span>
-<span class="n">udf_db</span> <span class="o">=</span> <span class="s1">&#39;ibis_testing&#39;</span>
-<span class="n">udf_name</span> <span class="o">=</span> <span class="s1">&#39;fuzzy_equals&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">library</span> <span class="o">=</span> <span class="s1">'/ibis/udfs/udftest.ll'</span>
+<span class="n">inputs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'double'</span><span class="p">,</span> <span class="s1">'double'</span><span class="p">]</span>
+<span class="n">output</span> <span class="o">=</span> <span class="s1">'boolean'</span>
+<span class="n">symbol</span> <span class="o">=</span> <span class="s1">'FuzzyEquals'</span>
+<span class="n">udf_db</span> <span class="o">=</span> <span class="s1">'ibis_testing'</span>
+<span class="n">udf_name</span> <span class="o">=</span> <span class="s1">'fuzzy_equals'</span>
 
 <span class="n">fuzzy_equals</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">wrap_udf</span><span class="p">(</span>
     <span class="n">library</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">udf_name</span>
@@ -1648,7 +1787,7 @@ must take place each time you load your Ibis session.</p>
 </pre></div>
 </div>
 <p>The object <code class="docutils literal notranslate"><span class="pre">fuzzy_equals</span></code> is callable and works with Ibis expressions:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">db</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">database</span><span class="p">(</span><span class="s1">&#39;ibis_testing&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">db</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">database</span><span class="p">(</span><span class="s1">'ibis_testing'</span><span class="p">)</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">functional_alltypes</span>
 
@@ -1674,8 +1813,8 @@ your wrapper declarations and user APIs that you load with your Ibis session to
 plug in all your own functions.</p>
 </section>
 <section id="adding-documentation-to-new-functions">
-<h3>Adding documentation to new functions<a class="headerlink" href="#adding-documentation-to-new-functions" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fuzzy_equal</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<h3 id="adding-documentation-to-new-functions">Adding documentation to new functions<a class="headerlink" href="#adding-documentation-to-new-functions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fuzzy_equal</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">"""</span><span class="se">\</span>
 <span class="s2">Approximate equals UDF</span>
 
 <span class="s2">Parameters</span>
@@ -1687,7 +1826,7 @@ plug in all your own functions.</p>
 <span class="s2">-------</span>
 <span class="s2">bool</span>
 
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 </pre></div>
 </div>
 </section>
@@ -1695,35 +1834,63 @@ plug in all your own functions.</p>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../generated/ibis.backends.mysql.Backend.table.html" class="btn btn-neutral float-left" title="ibis.backends.mysql.Backend.table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../generated/ibis.backends.impala.Backend.connect.html" class="btn btn-neutral float-right" title="ibis.backends.impala.Backend.connect" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Ibis Developers.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+          </article>
         </div>
       </div>
-    </section>
+    </main>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
- 
+
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="../generated/ibis.backends.mysql.Backend.table.html" title="ibis.backends.mysql.Backend.table"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> ibis.backends.mysql.Backend.table </span>
+              </div>
+            </a>
+          
+          
+            <a href="../generated/ibis.backends.impala.Backend.connect.html" title="ibis.backends.impala.Backend.connect"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> ibis.backends.impala.Backend.connect </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 1980, Ibis Developers.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -1735,6 +1902,5 @@ plug in all your own functions.</p>
 
 </script>
 
-
-</body>
+  </body>
 </html>

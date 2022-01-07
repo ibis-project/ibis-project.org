@@ -1,100 +1,262 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ibis and Geospatial Operations &mdash; Ibis 2.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script src="../_static/js/theme.js"></script>
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Ibis and Geospatial Operations &#8212; Ibis 2.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Design" href="design.html" />
-    <link rel="prev" title="User Defined Functions" href="udf.html" /> 
-</head>
+    <link rel="prev" title="User Defined Functions" href="udf.html" />
+  
+   
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Ibis
-            <img src="../_static/logo-wide.svg" class="logo" alt="Logo"/>
-          </a>
-              <div class="version">
-                2.0.0
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">User guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="configuration.html">Configuring Ibis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sql.html">Ibis for SQL Programmers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="topk.html">“Top-K” Filtering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="self_joins.html">Self joins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udf.html">User Defined Functions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Ibis and Geospatial Operations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Preparation">Preparation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Connecting-to-the-database">Connecting to the database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Querying-the-data">Querying the data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Making-a-spatial-join">Making a spatial join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Combining-the-results">Combining the results</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="design.html">Design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extending/index.html">Extending Ibis</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../backends/index.html">Backends</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../release/index.html">Release Notes</a></li>
-</ul>
-
+  </head>
+  <body dir=ltr
+        data-md-color-primary=indigo data-md-color-accent=blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#user_guide/geospatial_analysis" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="Ibis 2.0.0 documentation"
+           class="md-header-nav__button md-logo">
+          
+              <img src="../_static/logo-wide.svg" height="26"
+                   alt="Ibis 2.0.0 documentation logo">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">Ibis 2.0.0 documentation</span>
+          <span class="md-header-nav__topic"> Ibis and Geospatial Operations </span>
         </div>
       </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Ibis</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">User guide</a> &raquo;</li>
-      <li>Ibis and Geospatial Operations</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/user_guide/geospatial_analysis.ipynb.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+      </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">Ibis 2.0.0 documentation</a></li>
+          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">User guide</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="Ibis 2.0.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/logo-wide.svg" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="Ibis 2.0.0 documentation">Ibis 2.0.0 documentation</a>
+  </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+    
+      <a href="../tutorial/index.html" class="md-nav__link">Tutorial</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="index.html" class="md-nav__link">User guide</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../api.html" class="md-nav__link">API Reference</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../backends/index.html" class="md-nav__link">Backends</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../release/index.html" class="md-nav__link">Release Notes</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#user-guide-geospatial-analysis--page-root" class="md-nav__link">Ibis and Geospatial Operations</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#Preparation" class="md-nav__link">Preparation</a>
+        </li>
+        <li class="md-nav__item"><a href="#Connecting-to-the-database" class="md-nav__link">Connecting to the database</a>
+        </li>
+        <li class="md-nav__item"><a href="#Querying-the-data" class="md-nav__link">Querying the data</a>
+        </li>
+        <li class="md-nav__item"><a href="#Making-a-spatial-join" class="md-nav__link">Making a spatial join</a>
+        </li>
+        <li class="md-nav__item"><a href="#Combining-the-results" class="md-nav__link">Combining the results</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/user_guide/geospatial_analysis.ipynb.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
   
 <style>
 /* CSS for nbsphinx extension */
@@ -342,35 +504,13 @@ div.rendered_html tbody tr:nth-child(odd) {
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
-
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
 </style>
 <section id="Ibis-and-Geospatial-Operations">
-<h1>Ibis and Geospatial Operations<a class="headerlink" href="#Ibis-and-Geospatial-Operations" title="Permalink to this headline">¶</a></h1>
+<h1 id="user-guide-geospatial-analysis--page-root">Ibis and Geospatial Operations<a class="headerlink" href="#user-guide-geospatial-analysis--page-root" title="Permalink to this headline">¶</a></h1>
 <p>One of the most popular extensions to PostgreSQL is PostGIS, which adds support for storing geospatial geometries, as well as functionality for reasoning about and performing operations on those geometries.</p>
 <p>This is a demo showing how to assemble ibis expressions for a PostGIS-enabled database. We will be using a database that has been loaded with an <a class="reference external" href="https://www.openstreetmap.org/">Open Street Map</a> extract for Southern California. This extract can be found <a class="reference external" href="https://download.geofabrik.de/north-america/us/california/socal.html">here</a>, and loaded into PostGIS using a tool like <a class="reference external" href="https://gdal.org/programs/ogr2ogr.html">ogr2ogr</a>.</p>
 <section id="Preparation">
-<h2>Preparation<a class="headerlink" href="#Preparation" title="Permalink to this headline">¶</a></h2>
+<h2 id="Preparation">Preparation<a class="headerlink" href="#Preparation" title="Permalink to this headline">¶</a></h2>
 <p>We first need to set up a demonstration database and load it with the sample data. If you have Docker installed, you can download and launch a PostGIS database with the following:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -404,7 +544,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ogr2ogr -f PostgreSQL PG:<span class="s2">&quot;dbname=&#39;postgres&#39; user=&#39;postgres&#39; password=&#39;supersecret&#39; port=5432 host=&#39;localhost&#39;&quot;</span> -lco <span class="nv">OVERWRITE</span><span class="o">=</span>yes --config PG_USE_COPY YES socal-latest.osm.pbf
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ogr2ogr -f PostgreSQL PG:<span class="s2">"dbname='postgres' user='postgres' password='supersecret' port=5432 host='localhost'"</span> -lco <span class="nv">OVERWRITE</span><span class="o">=</span>yes --config PG_USE_COPY YES socal-latest.osm.pbf
 </pre></div>
 </div>
 </div>
@@ -418,7 +558,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 </div>
 </section>
 <section id="Connecting-to-the-database">
-<h2>Connecting to the database<a class="headerlink" href="#Connecting-to-the-database" title="Permalink to this headline">¶</a></h2>
+<h2 id="Connecting-to-the-database">Connecting to the database<a class="headerlink" href="#Connecting-to-the-database" title="Permalink to this headline">¶</a></h2>
 <p>We first make the relevant imports, and connect to the PostGIS database:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -437,7 +577,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">postgres</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;postgres://postgres:supersecret@localhost:5432/postgres&#39;</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">'postgres://postgres:supersecret@localhost:5432/postgres'</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -457,16 +597,16 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&#39;geography_columns&#39;,
- &#39;geometry_columns&#39;,
- &#39;lines&#39;,
- &#39;multilinestrings&#39;,
- &#39;multipolygons&#39;,
- &#39;other_relations&#39;,
- &#39;points&#39;,
- &#39;raster_columns&#39;,
- &#39;raster_overviews&#39;,
- &#39;spatial_ref_sys&#39;]
+['geography_columns',
+ 'geometry_columns',
+ 'lines',
+ 'multilinestrings',
+ 'multipolygons',
+ 'other_relations',
+ 'points',
+ 'raster_columns',
+ 'raster_overviews',
+ 'spatial_ref_sys']
 </pre></div></div>
 </div>
 <p>As you can see, this Open Street Map extract stores its data according to the geometry type. Let’s grab references to the polygon and line tables:</p>
@@ -474,25 +614,25 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">polygons</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;multipolygons&#39;</span><span class="p">)</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;lines&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">polygons</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'multipolygons'</span><span class="p">)</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'lines'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </section>
 <section id="Querying-the-data">
-<h2>Querying the data<a class="headerlink" href="#Querying-the-data" title="Permalink to this headline">¶</a></h2>
+<h2 id="Querying-the-data">Querying the data<a class="headerlink" href="#Querying-the-data" title="Permalink to this headline">¶</a></h2>
 <p>We query the polygons table for shapes with an administrative level of 8, which corresponds to municipalities.</p>
 <p>We also reproject some of the column names so we don’t have a name collision later.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="n">polygons</span><span class="p">[</span><span class="n">polygons</span><span class="o">.</span><span class="n">admin_level</span> <span class="o">==</span> <span class="s1">&#39;8&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="n">polygons</span><span class="p">[</span><span class="n">polygons</span><span class="o">.</span><span class="n">admin_level</span> <span class="o">==</span> <span class="s1">'8'</span><span class="p">]</span>
 
 <span class="n">cities</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span>
-    <span class="n">cities</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;city_name&#39;</span><span class="p">),</span>
-    <span class="n">cities</span><span class="o">.</span><span class="n">wkb_geometry</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;city_geometry&#39;</span><span class="p">)</span>
+    <span class="n">cities</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">'city_name'</span><span class="p">),</span>
+    <span class="n">cities</span><span class="o">.</span><span class="n">wkb_geometry</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">'city_geometry'</span><span class="p">)</span>
 <span class="p">]</span>
 </pre></div>
 </div>
@@ -502,7 +642,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">los_angeles</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span><span class="n">cities</span><span class="o">.</span><span class="n">city_name</span> <span class="o">==</span> <span class="s1">&#39;Los Angeles&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">los_angeles</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span><span class="n">cities</span><span class="o">.</span><span class="n">city_name</span> <span class="o">==</span> <span class="s1">'Los Angeles'</span><span class="p">]</span>
 <span class="n">la_city</span> <span class="o">=</span> <span class="n">los_angeles</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 <span class="n">la_city_geom</span> <span class="o">=</span> <span class="n">la_city</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">city_geometry</span>
 <span class="n">la_city_geom</span>
@@ -514,24 +654,24 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/user_guide_geospatial_analysis_18_0.svg" src="../_images/user_guide_geospatial_analysis_18_0.svg" /></div>
+<img alt="../_images/user_guide_geospatial_analysis_18_0.svg" src="../_images/user_guide_geospatial_analysis_18_0.svg"/></div>
 </div>
 <p>Let’s also extract freeways from the lines table, which are indicated by the value <code class="docutils literal notranslate"><span class="pre">'motorway'</span></code> in the highway column:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">highways</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[(</span><span class="n">lines</span><span class="o">.</span><span class="n">highway</span> <span class="o">==</span> <span class="s1">&#39;motorway&#39;</span><span class="p">)]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">highways</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[(</span><span class="n">lines</span><span class="o">.</span><span class="n">highway</span> <span class="o">==</span> <span class="s1">'motorway'</span><span class="p">)]</span>
 <span class="n">highways</span> <span class="o">=</span> <span class="n">highways</span><span class="p">[</span>
-    <span class="n">highways</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;highway_name&#39;</span><span class="p">),</span>
-    <span class="n">highways</span><span class="o">.</span><span class="n">wkb_geometry</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;highway_geometry&#39;</span><span class="p">)</span>
+    <span class="n">highways</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">'highway_name'</span><span class="p">),</span>
+    <span class="n">highways</span><span class="o">.</span><span class="n">wkb_geometry</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">'highway_geometry'</span><span class="p">)</span>
 <span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </section>
 <section id="Making-a-spatial-join">
-<h2>Making a spatial join<a class="headerlink" href="#Making-a-spatial-join" title="Permalink to this headline">¶</a></h2>
+<h2 id="Making-a-spatial-join">Making a spatial join<a class="headerlink" href="#Making-a-spatial-join" title="Permalink to this headline">¶</a></h2>
 <p>Let’s test a spatial join by selecting all the highways that intersect the city of Los Angeles, or one if its neighbors.</p>
 <p>We begin by assembling an expression for Los Angeles and its neighbors. We consider a city to be a neighbor if it has any point of intersection (by this critereon we also get Los Angeles itself).</p>
 <p>We can pass in the city geometry that we selected above when making our query by marking it as a literal value in <code class="docutils literal notranslate"><span class="pre">ibis</span></code>:</p>
@@ -541,7 +681,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la_neighbors_expr</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span>
     <span class="n">cities</span><span class="o">.</span><span class="n">city_geometry</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span>
-        <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="n">la_city_geom</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;multipolygon;4326:geometry&#39;</span><span class="p">)</span>
+        <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="n">la_city_geom</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">'multipolygon;4326:geometry'</span><span class="p">)</span>
     <span class="p">)</span>
 <span class="p">]</span>
 </pre></div>
@@ -562,7 +702,7 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 </div>
 <div class="output_area rendered_html docutils container">
 <div>
-<style scoped>
+<style scoped="">
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -576,160 +716,160 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
     }
 </style>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>city_name</th>
-      <th>city_geometry</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>Inglewood</td>
-      <td>(POLYGON ((-118.346107 33.932694, -118.346076 ...</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Long Beach</td>
-      <td>(POLYGON ((-118.232975 33.714615, -118.231803 ...</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Vernon</td>
-      <td>(POLYGON ((-118.204281 33.988934, -118.204265 ...</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Simi Valley</td>
-      <td>(POLYGON ((-118.6334489 34.2697148, -118.63339...</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Los Angeles</td>
-      <td>(POLYGON ((-118.464911 34.330061, -118.457574 ...</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Gardena</td>
-      <td>(POLYGON ((-118.326689 33.91283, -118.326502 3...</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Commerce</td>
-      <td>(POLYGON ((-118.127398 34.008033, -118.127411 ...</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Glendale</td>
-      <td>(POLYGON ((-118.183869 34.148557, -118.18392 3...</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Rancho Palos Verdes</td>
-      <td>(POLYGON ((-118.417912 33.762329, -118.415164 ...</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>Lomita</td>
-      <td>(POLYGON ((-118.30879 33.8022812, -118.308786 ...</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>Torrance</td>
-      <td>(POLYGON ((-118.3404761 33.7862518, -118.33789...</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>Hawthorne</td>
-      <td>(POLYGON ((-118.3787037 33.901905, -118.378660...</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>Calabasas</td>
-      <td>(POLYGON ((-118.6097079 34.1472647, -118.61058...</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>Hidden Hills</td>
-      <td>(POLYGON ((-118.6681703 34.1767732, -118.65858...</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>Santa Monica</td>
-      <td>(POLYGON ((-118.5534678 33.9843349, -118.53781...</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>Culver City</td>
-      <td>(POLYGON ((-118.3865712 33.9768672, -118.38547...</td>
-    </tr>
-    <tr>
-      <td>16</td>
-      <td>San Fernando</td>
-      <td>(POLYGON ((-118.454741 34.283709, -118.454756 ...</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td>Malibu</td>
-      <td>(POLYGON ((-118.9517221 33.9928639, -118.94901...</td>
-    </tr>
-    <tr>
-      <td>18</td>
-      <td>El Segundo</td>
-      <td>(POLYGON ((-118.4758021 33.8881822, -118.49898...</td>
-    </tr>
-    <tr>
-      <td>19</td>
-      <td>Beverly Hills</td>
-      <td>(POLYGON ((-118.3897334 34.0765007, -118.38986...</td>
-    </tr>
-    <tr>
-      <td>20</td>
-      <td>West Hollywood</td>
-      <td>(POLYGON ((-118.3958762 34.091079, -118.395592...</td>
-    </tr>
-    <tr>
-      <td>21</td>
-      <td>Carson</td>
-      <td>(POLYGON ((-118.286874 33.7978063, -118.287645...</td>
-    </tr>
-    <tr>
-      <td>22</td>
-      <td>Lynwood</td>
-      <td>(POLYGON ((-118.187027 33.905485, -118.186491 ...</td>
-    </tr>
-    <tr>
-      <td>23</td>
-      <td>South Pasadena</td>
-      <td>(POLYGON ((-118.1552947 34.09859, -118.1567112...</td>
-    </tr>
-    <tr>
-      <td>24</td>
-      <td>Burbank</td>
-      <td>(POLYGON ((-118.292761 34.221654, -118.337462 ...</td>
-    </tr>
-    <tr>
-      <td>25</td>
-      <td>Pasadena</td>
-      <td>(POLYGON ((-118.197819 34.237289, -118.197804 ...</td>
-    </tr>
-    <tr>
-      <td>26</td>
-      <td>Alhambra</td>
-      <td>(POLYGON ((-118.164835 34.062283, -118.164805 ...</td>
-    </tr>
-    <tr>
-      <td>27</td>
-      <td>Monterey Park</td>
-      <td>(POLYGON ((-118.164835 34.062283, -118.164735 ...</td>
-    </tr>
-    <tr>
-      <td>28</td>
-      <td>Huntington Park</td>
-      <td>(POLYGON ((-118.204281 33.988934, -118.204265 ...</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>city_name</th>
+<th>city_geometry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Inglewood</td>
+<td>(POLYGON ((-118.346107 33.932694, -118.346076 ...</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Long Beach</td>
+<td>(POLYGON ((-118.232975 33.714615, -118.231803 ...</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Vernon</td>
+<td>(POLYGON ((-118.204281 33.988934, -118.204265 ...</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Simi Valley</td>
+<td>(POLYGON ((-118.6334489 34.2697148, -118.63339...</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Los Angeles</td>
+<td>(POLYGON ((-118.464911 34.330061, -118.457574 ...</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Gardena</td>
+<td>(POLYGON ((-118.326689 33.91283, -118.326502 3...</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Commerce</td>
+<td>(POLYGON ((-118.127398 34.008033, -118.127411 ...</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Glendale</td>
+<td>(POLYGON ((-118.183869 34.148557, -118.18392 3...</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Rancho Palos Verdes</td>
+<td>(POLYGON ((-118.417912 33.762329, -118.415164 ...</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Lomita</td>
+<td>(POLYGON ((-118.30879 33.8022812, -118.308786 ...</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Torrance</td>
+<td>(POLYGON ((-118.3404761 33.7862518, -118.33789...</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Hawthorne</td>
+<td>(POLYGON ((-118.3787037 33.901905, -118.378660...</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Calabasas</td>
+<td>(POLYGON ((-118.6097079 34.1472647, -118.61058...</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Hidden Hills</td>
+<td>(POLYGON ((-118.6681703 34.1767732, -118.65858...</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Santa Monica</td>
+<td>(POLYGON ((-118.5534678 33.9843349, -118.53781...</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Culver City</td>
+<td>(POLYGON ((-118.3865712 33.9768672, -118.38547...</td>
+</tr>
+<tr>
+<td>16</td>
+<td>San Fernando</td>
+<td>(POLYGON ((-118.454741 34.283709, -118.454756 ...</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Malibu</td>
+<td>(POLYGON ((-118.9517221 33.9928639, -118.94901...</td>
+</tr>
+<tr>
+<td>18</td>
+<td>El Segundo</td>
+<td>(POLYGON ((-118.4758021 33.8881822, -118.49898...</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Beverly Hills</td>
+<td>(POLYGON ((-118.3897334 34.0765007, -118.38986...</td>
+</tr>
+<tr>
+<td>20</td>
+<td>West Hollywood</td>
+<td>(POLYGON ((-118.3958762 34.091079, -118.395592...</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Carson</td>
+<td>(POLYGON ((-118.286874 33.7978063, -118.287645...</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Lynwood</td>
+<td>(POLYGON ((-118.187027 33.905485, -118.186491 ...</td>
+</tr>
+<tr>
+<td>23</td>
+<td>South Pasadena</td>
+<td>(POLYGON ((-118.1552947 34.09859, -118.1567112...</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Burbank</td>
+<td>(POLYGON ((-118.292761 34.221654, -118.337462 ...</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Pasadena</td>
+<td>(POLYGON ((-118.197819 34.237289, -118.197804 ...</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Alhambra</td>
+<td>(POLYGON ((-118.164835 34.062283, -118.164805 ...</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Monterey Park</td>
+<td>(POLYGON ((-118.164835 34.062283, -118.164735 ...</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Huntington Park</td>
+<td>(POLYGON ((-118.204281 33.988934, -118.204265 ...</td>
+</tr>
+</tbody>
 </table>
 </div></div>
 </div>
@@ -767,19 +907,19 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/user_guide_geospatial_analysis_26_1.png" src="../_images/user_guide_geospatial_analysis_26_1.png" />
+<img alt="../_images/user_guide_geospatial_analysis_26_1.png" src="../_images/user_guide_geospatial_analysis_26_1.png"/>
 </div>
 </div>
 </section>
 <section id="Combining-the-results">
-<h2>Combining the results<a class="headerlink" href="#Combining-the-results" title="Permalink to this headline">¶</a></h2>
+<h2 id="Combining-the-results">Combining the results<a class="headerlink" href="#Combining-the-results" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have made a number of queries and joins, let’s combine them into a single plot. To make the plot a bit nicer, we can also load some shapefiles for the coast and land:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ocean</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_ocean.zip&#39;</span><span class="p">)</span>
-<span class="n">land</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ocean</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">'https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_ocean.zip'</span><span class="p">)</span>
+<span class="n">land</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">'https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -787,13 +927,13 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">la_neighbors</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">la_neighbors</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'rainbow'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_autoscale_on</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
-<span class="n">land</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">land</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'tan'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
 
-<span class="n">ax</span> <span class="o">=</span> <span class="n">ocean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;navy&#39;</span><span class="p">)</span>
-<span class="n">la_highways</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;maroon&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">ocean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'navy'</span><span class="p">)</span>
+<span class="n">la_highways</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'maroon'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -810,42 +950,70 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/user_guide_geospatial_analysis_29_1.png" src="../_images/user_guide_geospatial_analysis_29_1.png" />
+<img alt="../_images/user_guide_geospatial_analysis_29_1.png" src="../_images/user_guide_geospatial_analysis_29_1.png"/>
 </div>
 </div>
 </section>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="udf.html" class="btn btn-neutral float-left" title="User Defined Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="design.html" class="btn btn-neutral float-right" title="Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Ibis Developers.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+          </article>
         </div>
       </div>
-    </section>
+    </main>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
- 
+
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="udf.html" title="User Defined Functions"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> User Defined Functions </span>
+              </div>
+            </a>
+          
+          
+            <a href="design.html" title="Design"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> Design </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 1980, Ibis Developers.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -857,6 +1025,5 @@ cd5e5e60822770ddc628adce3f4d26975fa4cfe0325d81925a6fe70b088253cc
 
 </script>
 
-
-</body>
+  </body>
 </html>

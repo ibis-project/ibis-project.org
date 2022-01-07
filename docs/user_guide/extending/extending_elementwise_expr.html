@@ -1,103 +1,267 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Extending Ibis Part 1: Adding a New Elementwise Expression &mdash; Ibis 2.0.0 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script src="../../_static/js/theme.js"></script>
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Extending Ibis Part 1: Adding a New Elementwise Expression &#8212; Ibis 2.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/material.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Extending Ibis Part 2: Adding a New Reduction Expression" href="extending_reduce_expr.html" />
-    <link rel="prev" title="Extending Ibis" href="index.html" /> 
-</head>
+    <link rel="prev" title="Extending Ibis" href="index.html" />
+  
+   
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Ibis
-            <img src="../../_static/logo-wide.svg" class="logo" alt="Logo"/>
-          </a>
-              <div class="version">
-                2.0.0
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../tutorial/index.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../configuration.html">Configuring Ibis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sql.html">Ibis for SQL Programmers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../topk.html">“Top-K” Filtering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../self_joins.html">Self joins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../udf.html">User Defined Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../geospatial_analysis.html">Ibis and Geospatial Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html">Design</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Extending Ibis</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#adding-a-new-expression">Adding a New Expression</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Extending Ibis Part 1: Adding a New Elementwise Expression</a></li>
-<li class="toctree-l4"><a class="reference internal" href="extending_reduce_expr.html">Extending Ibis Part 2: Adding a New Reduction Expression</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#adding-a-new-backend">Adding a New Backend</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#run-test-suite-for-separate-backend">Run test suite for separate Backend</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../backends/index.html">Backends</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../release/index.html">Release Notes</a></li>
-</ul>
-
+  </head>
+  <body dir=ltr
+        data-md-color-primary=indigo data-md-color-accent=blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#user_guide/extending/extending_elementwise_expr" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="Ibis 2.0.0 documentation"
+           class="md-header-nav__button md-logo">
+          
+              <img src="../../_static/logo-wide.svg" height="26"
+                   alt="Ibis 2.0.0 documentation logo">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">Ibis 2.0.0 documentation</span>
+          <span class="md-header-nav__topic"> Extending Ibis Part 1: Adding a New Elementwise Expression </span>
         </div>
       </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Ibis</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">User guide</a> &raquo;</li>
-          <li><a href="index.html">Extending Ibis</a> &raquo;</li>
-      <li>Extending Ibis Part 1: Adding a New Elementwise Expression</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/user_guide/extending/extending_elementwise_expr.ipynb.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+      </div>
+      
+      
+  
+  <script src="../../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../../"versions.json"",
+        target_loc = "../../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../../index.html" class="md-tabs__link">Ibis 2.0.0 documentation</a></li>
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">User guide</a></li>
+          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">Extending Ibis</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="Ibis 2.0.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="../../_static/logo-wide.svg" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../../index.html"
+       title="Ibis 2.0.0 documentation">Ibis 2.0.0 documentation</a>
+  </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+    
+      <a href="../../tutorial/index.html" class="md-nav__link">Tutorial</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../index.html" class="md-nav__link">User guide</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../../api.html" class="md-nav__link">API Reference</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../../backends/index.html" class="md-nav__link">Backends</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../../release/index.html" class="md-nav__link">Release Notes</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#user-guide-extending-extending-elementwise-expr--page-root" class="md-nav__link">Extending Ibis Part 1: Adding a New Elementwise Expression</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#Step-1:-Define-the-Operation" class="md-nav__link">Step 1: Define the Operation</a>
+        </li>
+        <li class="md-nav__item"><a href="#Step-2:-Define-the-API" class="md-nav__link">Step 2: Define the API</a>
+        </li>
+        <li class="md-nav__item"><a href="#Interlude:-Create-some-expressions-with-sha1" class="md-nav__link">Interlude: Create some expressions with <code class="docutils literal notranslate"><span class="pre">sha1</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#Step-3:-Turn-the-Expression-into-SQL" class="md-nav__link">Step 3: Turn the Expression into SQL</a>
+        </li>
+        <li class="md-nav__item"><a href="#Step-4:-Putting-it-all-Together" class="md-nav__link">Step 4: Putting it all Together</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#Create-and-execute-a-julianday-expression" class="md-nav__link">Create and execute a <code class="docutils literal notranslate"><span class="pre">julianday</span></code> expression</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../../_sources/user_guide/extending/extending_elementwise_expr.ipynb.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
   
 <style>
 /* CSS for nbsphinx extension */
@@ -345,39 +509,17 @@ div.rendered_html tbody tr:nth-child(odd) {
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
-
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
 </style>
 <section id="Extending-Ibis-Part-1:-Adding-a-New-Elementwise-Expression">
-<h1>Extending Ibis Part 1: Adding a New Elementwise Expression<a class="headerlink" href="#Extending-Ibis-Part-1:-Adding-a-New-Elementwise-Expression" title="Permalink to this headline">¶</a></h1>
+<h1 id="user-guide-extending-extending-elementwise-expr--page-root">Extending Ibis Part 1: Adding a New Elementwise Expression<a class="headerlink" href="#user-guide-extending-extending-elementwise-expr--page-root" title="Permalink to this headline">¶</a></h1>
 <p>This notebook will show you how to add a new elementwise operation to an existing backend.</p>
 <p>We are going to add <code class="docutils literal notranslate"><span class="pre">julianday</span></code>, a function supported by the SQLite database, to the SQLite Ibis backend.</p>
 <p>The Julian day of a date, is the number of days since January 1st, 4713 BC. For more information check the <a class="reference external" href="https://en.wikipedia.org/wiki/Julian_day">Julian day</a> wikipedia page.</p>
 <section id="Step-1:-Define-the-Operation">
-<h2>Step 1: Define the Operation<a class="headerlink" href="#Step-1:-Define-the-Operation" title="Permalink to this headline">¶</a></h2>
+<h2 id="Step-1:-Define-the-Operation">Step 1: Define the Operation<a class="headerlink" href="#Step-1:-Define-the-Operation" title="Permalink to this headline">¶</a></h2>
 <p>Let’s define the <code class="docutils literal notranslate"><span class="pre">julianday</span></code> operation as a function that takes one string input argument and returns a float.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">julianday</span><span class="p">(</span><span class="n">date</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Julian date&quot;&quot;&quot;</span>
+    <span class="sd">"""Julian date"""</span>
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -393,14 +535,14 @@ div.rendered_html tbody tr:hover {
 
 <span class="k">class</span> <span class="nc">JulianDay</span><span class="p">(</span><span class="n">ValueOp</span><span class="p">):</span>
     <span class="n">arg</span> <span class="o">=</span> <span class="n">Arg</span><span class="p">(</span><span class="n">rlz</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
-    <span class="n">output_type</span> <span class="o">=</span> <span class="n">rlz</span><span class="o">.</span><span class="n">shape_like</span><span class="p">(</span><span class="s1">&#39;arg&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">)</span>
+    <span class="n">output_type</span> <span class="o">=</span> <span class="n">rlz</span><span class="o">.</span><span class="n">shape_like</span><span class="p">(</span><span class="s1">'arg'</span><span class="p">,</span> <span class="s1">'float'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <p>We just defined a <code class="docutils literal notranslate"><span class="pre">JulianDay</span></code> class that takes one argument of type string or binary, and returns a float.</p>
 </section>
 <section id="Step-2:-Define-the-API">
-<h2>Step 2: Define the API<a class="headerlink" href="#Step-2:-Define-the-API" title="Permalink to this headline">¶</a></h2>
+<h2 id="Step-2:-Define-the-API">Step 2: Define the API<a class="headerlink" href="#Step-2:-Define-the-API" title="Permalink to this headline">¶</a></h2>
 <p>Because we know the output type of the operation, to make an expression out of <code class="docutils literal notranslate"><span class="pre">JulianDay</span></code> we simply need to construct it and call its <code class="docutils literal notranslate"><span class="pre">ibis.expr.types.Node.to_expr</span></code> method.</p>
 <p>We still need to add a method to <code class="docutils literal notranslate"><span class="pre">StringValue</span></code> and <code class="docutils literal notranslate"><span class="pre">BinaryValue</span></code> (this needs to work on both scalars and columns).</p>
 <p>When you add a method to any of the expression classes whose name matches <code class="docutils literal notranslate"><span class="pre">*Value</span></code> both the scalar and column child classes will pick it up, making it easy to define operations for both scalars and columns in one place.</p>
@@ -422,14 +564,14 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Interlude:-Create-some-expressions-with-sha1">
-<h2>Interlude: Create some expressions with <code class="docutils literal notranslate"><span class="pre">sha1</span></code><a class="headerlink" href="#Interlude:-Create-some-expressions-with-sha1" title="Permalink to this headline">¶</a></h2>
+<h2 id="Interlude:-Create-some-expressions-with-sha1">Interlude: Create some expressions with <code class="docutils literal notranslate"><span class="pre">sha1</span></code><a class="headerlink" href="#Interlude:-Create-some-expressions-with-sha1" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ibis</span>
 
-<span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;string_col&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">'string_col'</span><span class="p">,</span> <span class="s1">'string'</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s1">'t'</span><span class="p">)</span>
 
 <span class="n">t</span><span class="o">.</span><span class="n">string_col</span><span class="o">.</span><span class="n">julianday</span><span class="p">()</span>
 </pre></div>
@@ -440,22 +582,13 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-ref_0
-UnboundTable[table]
-  name: t
-  schema:
-    string_col : string
-
-JulianDay[float32*]
-  string_col = Column[string*] &#39;string_col&#39; from table
-    ref_0
-</pre></div></div>
+<img alt="../../_images/user_guide_extending_extending_elementwise_expr_10_0.png" src="../../_images/user_guide_extending_extending_elementwise_expr_10_0.png"/>
+</div>
 </div>
 </section>
 <section id="Step-3:-Turn-the-Expression-into-SQL">
-<h2>Step 3: Turn the Expression into SQL<a class="headerlink" href="#Step-3:-Turn-the-Expression-into-SQL" title="Permalink to this headline">¶</a></h2>
-<div class="nbinput nblast docutils container">
+<h2 id="Step-3:-Turn-the-Expression-into-SQL">Step 3: Turn the Expression into SQL<a class="headerlink" href="#Step-3:-Turn-the-Expression-into-SQL" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -475,9 +608,18 @@ JulianDay[float32*]
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/nix/store/2r8n92sk62cc5ip0bb8760835786hpl9-python3-3.9.9-env/lib/python3.9/site-packages/pyproj/__init__.py:91: UserWarning: Valid PROJ data directory not found. Either set the path using the environmental variable PROJ_LIB or with `pyproj.datadir.set_data_dir`.
+  warnings.warn(str(err))
+</pre></div></div>
+</div>
 </section>
 <section id="Step-4:-Putting-it-all-Together">
-<h2>Step 4: Putting it all Together<a class="headerlink" href="#Step-4:-Putting-it-all-Together" title="Permalink to this headline">¶</a></h2>
+<h2 id="Step-4:-Putting-it-all-Together">Step 4: Putting it all Together<a class="headerlink" href="#Step-4:-Putting-it-all-Together" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
@@ -485,19 +627,19 @@ JulianDay[float32*]
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pathlib</span>
 <span class="kn">import</span> <span class="nn">ibis</span>
 
-<span class="n">db_fname</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s1">&#39;tutorial&#39;</span> <span class="o">/</span> <span class="s1">&#39;data&#39;</span> <span class="o">/</span> <span class="s1">&#39;geography.db&#39;</span><span class="p">)</span>
+<span class="n">db_fname</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s1">'tutorial'</span> <span class="o">/</span> <span class="s1">'data'</span> <span class="o">/</span> <span class="s1">'geography.db'</span><span class="p">)</span>
 
 <span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_fname</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <section id="Create-and-execute-a-julianday-expression">
-<h3>Create and execute a <code class="docutils literal notranslate"><span class="pre">julianday</span></code> expression<a class="headerlink" href="#Create-and-execute-a-julianday-expression" title="Permalink to this headline">¶</a></h3>
+<h3 id="Create-and-execute-a-julianday-expression">Create and execute a <code class="docutils literal notranslate"><span class="pre">julianday</span></code> expression<a class="headerlink" href="#Create-and-execute-a-julianday-expression" title="Permalink to this headline">¶</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">independence</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;independence&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">independence</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'independence'</span><span class="p">)</span>
 <span class="n">independence</span>
 </pre></div>
 </div>
@@ -507,20 +649,14 @@ JulianDay[float32*]
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-AlchemyTable[table]
-  name: independence
-  schema:
-    country_code : string
-    independence_date : date
-    independence_from : string
-</pre></div></div>
+<img alt="../../_images/user_guide_extending_extending_elementwise_expr_16_0.png" src="../../_images/user_guide_extending_extending_elementwise_expr_16_0.png"/>
+</div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="n">independence</span><span class="o">.</span><span class="n">independence_date</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="n">independence</span><span class="o">.</span><span class="n">independence_date</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s1">'string'</span><span class="p">)</span>
 <span class="n">day</span>
 </pre></div>
 </div>
@@ -530,21 +666,8 @@ AlchemyTable[table]
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-ref_0
-AlchemyTable[table]
-  name: independence
-  schema:
-    country_code : string
-    independence_date : date
-    independence_from : string
-
-cast(independence_date, string) = Cast[string*]
-  independence_date = Column[date*] &#39;independence_date&#39; from table
-    ref_0
-  to:
-    string
-</pre></div></div>
+<img alt="../../_images/user_guide_extending_extending_elementwise_expr_17_0.png" src="../../_images/user_guide_extending_extending_elementwise_expr_17_0.png"/>
+</div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -560,22 +683,8 @@ cast(independence_date, string) = Cast[string*]
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-ref_0
-AlchemyTable[table]
-  name: independence
-  schema:
-    country_code : string
-    independence_date : date
-    independence_from : string
-
-JulianDay[float32*]
-  cast(independence_date, string) = Cast[string*]
-    independence_date = Column[date*] &#39;independence_date&#39; from table
-      ref_0
-    to:
-      string
-</pre></div></div>
+<img alt="../../_images/user_guide_extending_extending_elementwise_expr_18_0.png" src="../../_images/user_guide_extending_extending_elementwise_expr_18_0.png"/>
+</div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -623,7 +732,7 @@ Name: tmp, dtype: float32
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scalar</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="s1">&#39;2010-03-14&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scalar</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="s1">'2010-03-14'</span><span class="p">)</span>
 <span class="n">scalar</span>
 </pre></div>
 </div>
@@ -633,10 +742,8 @@ Name: tmp, dtype: float32
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-Literal[string]
-  2010-03-14
-</pre></div></div>
+<img alt="../../_images/user_guide_extending_extending_elementwise_expr_22_0.png" src="../../_images/user_guide_extending_extending_elementwise_expr_22_0.png"/>
+</div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
@@ -668,35 +775,63 @@ Literal[string]
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Extending Ibis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="extending_reduce_expr.html" class="btn btn-neutral float-right" title="Extending Ibis Part 2: Adding a New Reduction Expression" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Ibis Developers.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+          </article>
         </div>
       </div>
-    </section>
+    </main>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
- 
+
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="index.html" title="Extending Ibis"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Extending Ibis </span>
+              </div>
+            </a>
+          
+          
+            <a href="extending_reduce_expr.html" title="Extending Ibis Part 2: Adding a New Reduction Expression"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> Extending Ibis Part 2: Adding a New Reduction Expression </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 1980, Ibis Developers.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -708,6 +843,5 @@ Literal[string]
 
 </script>
 
-
-</body>
+  </body>
 </html>
