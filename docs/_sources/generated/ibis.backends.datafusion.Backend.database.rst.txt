@@ -1,0 +1,6 @@
+﻿ibis.backends.datafusion.Backend.database
+=========================================
+
+.. currentmodule:: ibis.backends.datafusion
+
+.. automethod:: Backend.database

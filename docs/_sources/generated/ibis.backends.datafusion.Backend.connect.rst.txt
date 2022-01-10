@@ -1,0 +1,6 @@
+﻿ibis.backends.datafusion.Backend.connect
+========================================
+
+.. currentmodule:: ibis.backends.datafusion
+
+.. automethod:: Backend.connect

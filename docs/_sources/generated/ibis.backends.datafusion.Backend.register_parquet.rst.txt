@@ -1,0 +1,6 @@
+﻿ibis.backends.datafusion.Backend.register\_parquet
+==================================================
+
+.. currentmodule:: ibis.backends.datafusion
+
+.. automethod:: Backend.register_parquet
