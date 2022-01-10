@@ -229,6 +229,10 @@
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#backends-clickhouse--page-root" class="md-nav__link">Clickhouse</a><nav class="md-nav">
               <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#install" class="md-nav__link">Install</a>
+        </li>
+        <li class="md-nav__item"><a href="#connect" class="md-nav__link">Connect</a>
+        </li>
         <li class="md-nav__item"><a href="#api" class="md-nav__link">API</a>
         </li></ul>
             </nav>
@@ -249,15 +253,25 @@
             
   <section id="install-clickhouse">
 <span id="id1"></span><h1 id="backends-clickhouse--page-root"><a class="reference external" href="#backends-clickhouse--page-root">Clickhouse</a><a class="headerlink" href="#backends-clickhouse--page-root" title="Permalink to this headline">¶</a></h1>
+<section id="install">
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
 <p>Install dependencies for Ibis’s Clickhouse dialect(minimal supported version is <cite>0.1.3</cite>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">'ibis-framework[clickhouse]'</span>
 </pre></div>
 </div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">ibis</span><span class="o">-</span><span class="n">clickhouse</span>
+</pre></div>
+</div>
+</section>
+<section id="connect">
+<h2 id="connect">Connect<a class="headerlink" href="#connect" title="Permalink to this headline">¶</a></h2>
 <p>Create a client by passing in database connection parameters such as <code class="docutils literal notranslate"><span class="pre">host</span></code>,
 <code class="docutils literal notranslate"><span class="pre">port</span></code>, <code class="docutils literal notranslate"><span class="pre">database</span></code>, and <code class="docutils literal notranslate"><span class="pre">user</span></code> to <code class="xref py py-func docutils literal notranslate"><span class="pre">ibis.clickhouse.connect()</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">clickhouse</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">'clickhouse'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">9000</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
 <section id="api">
 <span id="api-clickhouse"></span><h2 id="api">API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <p>The ClickHouse client is accessible through the <code class="docutils literal notranslate"><span class="pre">ibis.clickhouse</span></code> namespace.</p>

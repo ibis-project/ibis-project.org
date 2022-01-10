@@ -229,7 +229,9 @@
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#backends-impala--page-root" class="md-nav__link">Impala</a><nav class="md-nav">
               <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#impala-quickstart" class="md-nav__link">Impala Quickstart</a>
+        <li class="md-nav__item"><a href="#install" class="md-nav__link">Install</a>
+        </li>
+        <li class="md-nav__item"><a href="#connect" class="md-nav__link">Connect</a>
         </li>
         <li class="md-nav__item"><a href="#api" class="md-nav__link">API</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -321,22 +323,29 @@
         <div class="md-content">
           <article class="md-content__inner md-typeset" role="main">
             
-  <section id="impala">
-<span id="backends-impala"></span><h1 id="backends-impala--page-root">Impala<a class="headerlink" href="#backends-impala--page-root" title="Permalink to this headline">¶</a></h1>
+  <section id="backends-impala">
+<span id="id1"></span><h1 id="backends-impala--page-root"><a class="reference external" href="#backends-impala--page-root">Impala</a><a class="headerlink" href="#backends-impala--page-root" title="Permalink to this headline">¶</a></h1>
 <p>One goal of Ibis is to provide an integrated Python API for an Impala cluster
 without requiring you to switch back and forth between Python code and the
 Impala shell (where one would be using a mix of DDL and SQL statements).</p>
 <p>If you find an Impala task that you cannot perform with Ibis, please get in
-touch on the <a class="reference external" href="http://github.com/pandas-dev/ibis">GitHub issue tracker</a>.</p>
+touch on the <a class="reference external" href="http://github.com/ibis-project/ibis">GitHub issue tracker</a>.</p>
 <p>While interoperability between the Hadoop / Spark ecosystems and pandas / the
 PyData stack is overall poor (but improving), we also show some ways that you
 can use pandas with Ibis and Impala.</p>
-<section id="impala-quickstart">
-<span id="install-impala"></span><h2 id="impala-quickstart"><a class="reference external" href="https://impala.apache.org/">Impala</a> Quickstart<a class="headerlink" href="#impala-quickstart" title="Permalink to this headline">¶</a></h2>
+<section id="install">
+<span id="install-impala"></span><h2 id="install">Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
 <p>Install dependencies for Ibis’s Impala dialect:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">'ibis-framework[impala]'</span>
 </pre></div>
 </div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">ibis</span><span class="o">-</span><span class="n">impala</span>
+</pre></div>
+</div>
+</section>
+<section id="connect">
+<h2 id="connect">Connect<a class="headerlink" href="#connect" title="Permalink to this headline">¶</a></h2>
 <p>To create an Ibis client, you must first connect your services and assemble the
 client using <code class="xref py py-func docutils literal notranslate"><span class="pre">ibis.impala.connect()</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ibis</span>

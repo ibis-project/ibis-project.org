@@ -229,7 +229,9 @@
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#backends-pyspark--page-root" class="md-nav__link">PySpark</a><nav class="md-nav">
               <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#pyspark-client" class="md-nav__link">PySpark client</a>
+        <li class="md-nav__item"><a href="#install" class="md-nav__link">Install</a>
+        </li>
+        <li class="md-nav__item"><a href="#connect" class="md-nav__link">Connect</a>
         </li></ul>
             </nav>
         </li>
@@ -249,18 +251,25 @@
             
   <section id="install-pyspark">
 <span id="id1"></span><h1 id="backends-pyspark--page-root"><a class="reference external" href="#backends-pyspark--page-root">PySpark</a><a class="headerlink" href="#backends-pyspark--page-root" title="Permalink to this headline">¶</a></h1>
+<section id="install">
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
 <p>Install dependencies for Ibis’s PySpark dialect:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">'ibis-framework[pyspark]'</span>
 </pre></div>
 </div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">ibis</span><span class="o">-</span><span class="n">pyspark</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When using the PySpark backend with PySpark 2.4.x and pyarrow &gt;= 0.15.0, you
-need to set <code class="docutils literal notranslate"><span class="pre">ARROW_PRE_0_15_IPC_FORMAT=1</span></code>. See <a class="reference external" href="https://spark.apache.org/docs/latest/api/python/user_guide/arrow_pandas.html#compatibility-setting-for-pyarrow-0-15-0-and-spark-2-3-x-2-4-x">here</a>
+<p>When using the PySpark backend with PySpark 2.3.x, 2.4.x and pyarrow &gt;= 0.15.0, you
+need to set <code class="docutils literal notranslate"><span class="pre">ARROW_PRE_0_15_IPC_FORMAT=1</span></code>. See <a class="reference external" href="https://spark.apache.org/docs/3.0.1/sql-pyspark-pandas-with-arrow.html#compatibility-setting-for-pyarrow--0150-and-spark-23x-24x">here</a>
 for details</p>
 </div>
-<section id="pyspark-client">
-<span id="api-pyspark"></span><h2 id="pyspark-client">PySpark client<a class="headerlink" href="#pyspark-client" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="connect">
+<span id="api-pyspark"></span><h2 id="connect">Connect<a class="headerlink" href="#connect" title="Permalink to this headline">¶</a></h2>
 <p>The PySpark client is accessible through the <code class="docutils literal notranslate"><span class="pre">ibis.pyspark</span></code> namespace.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">ibis.pyspark.connect</span></code> to create a client.</p>
 <table class="longtable docutils align-default">
