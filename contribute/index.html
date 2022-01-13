@@ -1163,8 +1163,7 @@ conda create -n ibis-dev -f conda-lock/&lt;platform-64-pyver&gt;.lock
 <p>All contributions are welcome! Code, docs, and constructive feedback are all
 great contributions to the project.</p>
 <p>If you don't have a particular issue in mind head over to the GitHub issue
-tracker for Ibis and look for open issues with the label <a href="https://github.com/ibis-project/ibis/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22"><code>good first
-issue</code></a>.</p>
+tracker for Ibis and look for open issues with the label <a href="https://github.com/ibis-project/ibis/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22"><code>good first issue</code></a>.</p>
 <p>Feel free to help with other issues that aren't labeled as such, but they may be more challenging.</p>
 <p>Once you find an issue you want to work on, write a comment with the text
 <code>/take</code> on the issue. GitHub will then assign the issue to you.</p>
@@ -1229,8 +1228,8 @@ $ cz commit
 </code></pre></div>
 <p>You should see a series of prompts about actions to take next:</p>
 <ol>
-<li>
-<p>Select the type of change you're committing. In this case, we're committing a bug fix, so we'll select fix:</p>
+<li>Select the type of change you're committing. In this case, we're committing a bug fix, so we'll select fix:</li>
+</ol>
 <div class="highlight"><pre><span></span><code><span class="go">? Select the type of change you are committing (Use arrow keys)</span>
 <span class="go"> » fix: A bug fix. Correlates with PATCH in SemVer</span>
 <span class="go">   feat: A new feature. Correlates with MINOR in SemVer</span>
@@ -1246,55 +1245,55 @@ $ cz commit
 <ul>
 <li><code>feat</code> will cause a minor version bump</li>
 <li><code>fix</code> will cause a patch version bump</li>
-<li>everything else will <strong>not</strong> cause a version bump, <strong>unless it's a breaking
-   change</strong> (continue reading these instructions for more info on that)</li>
-</ul>
+<li>
+<p>everything else will <strong>not</strong> cause a version bump, <strong>unless it's a breaking
+     change</strong> (continue reading these instructions for more info on that)</p>
 </li>
 <li>
 <p>Next, you're asked what the scope of this change is:</p>
+</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="go">? What is the scope of this change? (class or file name): (press [enter] to skip)</span>
 </code></pre></div>
 <p>This is optional, but if there's a clear component or single file that is
-modified you should put it. In our case, let's assume the bug fixed a type
-inference problem, so we'd type in <code>type-inference</code> at this prompt.</p>
-</li>
-<li>
-<p>You'll then be asked to type in a short description of the change which will be the commit message title:</p>
+   modified you should put it. In our case, let's assume the bug fixed a type
+   inference problem, so we'd type in <code>type-inference</code> at this prompt.</p>
+<ol>
+<li>You'll then be asked to type in a short description of the change which will be the commit message title:</li>
+</ol>
 <div class="highlight"><pre><span></span><code><span class="go">? Write a short and imperative summary of the code changes: (lower case and no period)</span>
 <span class="go"> fix a type inference issue where floats were incorrectly cast to ints</span>
 </code></pre></div>
 <p>Let's say there was a problem with spurious casting of float to integers, so
-we type in the message above.  That number on the left (here <code>(69)</code>) is the
-length of description you've typed in.</p>
-</li>
-<li>
-<p>Next you'll be asked for a longer description, which is entirely optional
-   <strong>unless the change is a breaking change</strong>, or you feel like a bit of prose</p>
+   we type in the message above. That number on the left (here <code>(69)</code>) is the
+   length of description you've typed in.</p>
+<ol>
+<li>Next you'll be asked for a longer description, which is entirely optional
+   <strong>unless the change is a breaking change</strong>, or you feel like a bit of prose</li>
+</ol>
 <div class="highlight"><pre><span></span><code><span class="go">? Provide additional contextual information about the code changes: (press [enter] to skip)</span>
 <span class="go"> A bug was triggered by some incorrect code that caused floats to be incorrectly cast to integers.</span>
 </code></pre></div>
 <p>For non breaking changes, this isn't strictly necessary but it can be very
-helpful when a change is large, obscure, or complex. For this example let's just reiterate
-most of what the commit title says.</p>
-</li>
-<li>
-<p>Next you're asked about breaking changes:</p>
+   helpful when a change is large, obscure, or complex. For this example let's just reiterate
+   most of what the commit title says.</p>
+<ol>
+<li>Next you're asked about breaking changes:</li>
+</ol>
 <div class="highlight"><pre><span></span><code><span class="go">? Is this a BREAKING CHANGE? Correlates with MAJOR in SemVer (y/N)</span>
 </code></pre></div>
 <p>If you answer <code>y</code>, then you'll get an additional prompt asking you to
-describe the breaking changes. This description will ultimately make its way
-into the user-facing release notes. If there aren't any breaking changes, press enter.
-Let's say this bug fix does <strong>not</strong> introduce a breaking change.</p>
-</li>
-<li>
-<p>Finally, you're asked whether this change affects any open issues (ignore
-   the bit about breaking changes) and if yes then to reference them:</p>
+   describe the breaking changes. This description will ultimately make its way
+   into the user-facing release notes. If there aren't any breaking changes, press enter.
+   Let's say this bug fix does <strong>not</strong> introduce a breaking change.</p>
+<ol>
+<li>Finally, you're asked whether this change affects any open issues (ignore
+   the bit about breaking changes) and if yes then to reference them:</li>
+</ol>
 <div class="highlight"><pre><span></span><code><span class="go">? Footer. Information about Breaking Changes and reference issues that this commit closes: (press [enter] to skip)</span>
 <span class="go"> fixes #424242</span>
 </code></pre></div>
 <p>Here we typed <code>fixes #424242</code> to indicate that we fixed issue #9000.</p>
-</li>
-</ol>
 <p>Whew! Seems like a lot, but it's rather quick once you get used to it. After
 that you should have a commit that looks roughly like this, ready to be automatically rolled into the next release:</p>
 <div class="highlight"><pre><span></span><code><span class="go">commit 4049adbd66b0df48e37ca105da0b9139101a1318 (HEAD -&gt; useful-bugfix)</span>
