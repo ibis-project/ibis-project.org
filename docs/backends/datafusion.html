@@ -268,7 +268,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ibis</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data_sources</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"t"</span><span class="p">:</span> <span class="s2">"path/to/file.parquet"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">:</span> <span class="s2">"path/to/file.csv"</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">datafusion</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">data_sources</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">clien</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"t"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"t"</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
