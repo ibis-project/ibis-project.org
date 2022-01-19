@@ -338,19 +338,14 @@ ibis. Each node corresponds to a particular operation.</p>
 their node’s input arguments directly in the class body.</p>
 <p>Additionally the <code class="docutils literal notranslate"><span class="pre">output_type</span></code> member of the class is a rule or method that
 defines the shape (scalar or column) and element type of the operation.</p>
-<p>Each input argument’s rule should be passed to the
-<code class="docutils literal notranslate"><span class="pre">ibis.expr.signature.Argument</span></code> class (often aliased to <code class="docutils literal notranslate"><span class="pre">Arg</span></code> for
-convenience in the ibis codebase).</p>
 <p>An example of usage is a node that representats a logarithm operation:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [9]: </span><span class="kn">import</span> <span class="nn">ibis.expr.rules</span> <span class="k">as</span> <span class="nn">rlz</span>
 
 <span class="gp">In [10]: </span><span class="kn">from</span> <span class="nn">ibis.expr.operations</span> <span class="kn">import</span> <span class="n">ValueOp</span>
 
-<span class="gp">In [11]: </span><span class="kn">from</span> <span class="nn">ibis.expr.signature</span> <span class="kn">import</span> <span class="n">Argument</span> <span class="k">as</span> <span class="n">Arg</span>
-
-<span class="gp">In [12]: </span><span class="k">class</span> <span class="nc">Log</span><span class="p">(</span><span class="n">ValueOp</span><span class="p">):</span>
-<span class="gp">   ....: </span>    <span class="n">arg</span> <span class="o">=</span> <span class="n">Arg</span><span class="p">(</span><span class="n">rlz</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>  <span class="c1"># A double scalar or column</span>
-<span class="gp">   ....: </span>    <span class="n">base</span> <span class="o">=</span> <span class="n">Arg</span><span class="p">(</span><span class="n">rlz</span><span class="o">.</span><span class="n">double</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Optional argument</span>
+<span class="gp">In [11]: </span><span class="k">class</span> <span class="nc">Log</span><span class="p">(</span><span class="n">ValueOp</span><span class="p">):</span>
+<span class="gp">   ....: </span>    <span class="n">arg</span> <span class="o">=</span> <span class="n">rlz</span><span class="o">.</span><span class="n">double</span>  <span class="c1"># A double scalar or column</span>
+<span class="gp">   ....: </span>    <span class="n">base</span> <span class="o">=</span> <span class="n">rlz</span><span class="o">.</span><span class="n">optional</span><span class="p">(</span><span class="n">rlz</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>  <span class="c1"># Optional argument, defaults to None</span>
 <span class="gp">   ....: </span>    <span class="n">output_type</span> <span class="o">=</span> <span class="n">rlz</span><span class="o">.</span><span class="n">typeof</span><span class="p">(</span><span class="s1">'arg'</span><span class="p">)</span>
 <span class="gp">   ....: </span>
 </pre></div>
@@ -361,11 +356,11 @@ or column named <code class="docutils literal notranslate"><span class="pre">bas
 argument is <code class="docutils literal notranslate"><span class="pre">None</span></code> by default so that the expression will behave as the
 underlying database does.</p>
 <p>Similar objects are instantiated when you use ibis APIs:</p>
-<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [13]: </span><span class="kn">import</span> <span class="nn">ibis</span>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [12]: </span><span class="kn">import</span> <span class="nn">ibis</span>
 
-<span class="gp">In [14]: </span><span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'double'</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s1">'t'</span><span class="p">)</span>
+<span class="gp">In [13]: </span><span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'double'</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s1">'t'</span><span class="p">)</span>
 
-<span class="gp">In [15]: </span><span class="n">log_1p</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">log</span><span class="p">()</span>  <span class="c1"># an Add and a Log are instantiated here</span>
+<span class="gp">In [14]: </span><span class="n">log_1p</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">log</span><span class="p">()</span>  <span class="c1"># an Add and a Log are instantiated here</span>
 </pre></div>
 </div>
 </section>
