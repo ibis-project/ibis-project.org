@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://ibis-project.org/about/roadmap/">
+        <link rel="canonical" href="https://ibis-project.org/contribute/environment/">
       
       <link rel="icon" href="../../static/img/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
     
     
       
-        <title>Roadmap - Ibis Project</title>
+        <title>Development Environment - Ibis Project</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#roadmap" class="md-skip">
+        <a href="#setting-up-a-development-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Roadmap
+              Development Environment
             
           </span>
         </div>
@@ -246,14 +246,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -276,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -290,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../team/" class="md-nav__link">
+      <a href="../../about/team/" class="md-nav__link">
         Team
       </a>
     </li>
@@ -302,179 +300,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Roadmap
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../about/roadmap/" class="md-nav__link">
         Roadmap
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#long-term-goals" class="md-nav__link">
-    Long Term Goals
-  </a>
-  
-    <nav class="md-nav" aria-label="Long Term Goals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#compiler-structure" class="md-nav__link">
-    Compiler Structure
-  </a>
-  
-    <nav class="md-nav" aria-label="Compiler Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#separation-of-concerns" class="md-nav__link">
-    Separation of Concerns
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unifying-table-and-column-compilation" class="md-nav__link">
-    Unifying Table and Column Compilation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#depth" class="md-nav__link">
-    Depth
-  </a>
-  
-    <nav class="md-nav" aria-label="Depth">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#backend-specific-operations" class="md-nav__link">
-    Backend-Specific Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#standardize-udfs-user-defined-functions" class="md-nav__link">
-    Standardize UDFs (User Defined Functions)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breadth" class="md-nav__link">
-    Breadth
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backend-specific-goals" class="md-nav__link">
-    Backend-Specific Goals
-  </a>
-  
-    <nav class="md-nav" aria-label="Backend-Specific Goals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pandas" class="md-nav__link">
-    pandas
-  </a>
-  
-    <nav class="md-nav" aria-label="pandas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#speed-up-grouped-rolling-and-simple-aggregations-using-numba" class="md-nav__link">
-    Speed up grouped, rolling, and simple aggregations using numba
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dask" class="md-nav__link">
-    Dask
-  </a>
-  
-    <nav class="md-nav" aria-label="Dask">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#implement-a-dask-backend" class="md-nav__link">
-    Implement a Dask backend
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spark" class="md-nav__link">
-    Spark
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -486,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../license/" class="md-nav__link">
+      <a href="../../about/license/" class="md-nav__link">
         License
       </a>
     </li>
@@ -626,12 +456,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -652,11 +484,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../contribute/environment/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Development Environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Development Environment
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-dependencies" class="md-nav__link">
+    Required Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-management" class="md-nav__link">
+    Package Management
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -668,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/workflow/" class="md-nav__link">
+      <a href="../workflow/" class="md-nav__link">
         Commit Workflow
       </a>
     </li>
@@ -682,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/style/" class="md-nav__link">
+      <a href="../style/" class="md-nav__link">
         Development Style
       </a>
     </li>
@@ -696,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/backend_test_suite/" class="md-nav__link">
+      <a href="../backend_test_suite/" class="md-nav__link">
         Backend Test Suite
       </a>
     </li>
@@ -710,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/maintainers_guide/" class="md-nav__link">
+      <a href="../maintainers_guide/" class="md-nav__link">
         Maintainer's Guide
       </a>
     </li>
@@ -766,136 +646,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#long-term-goals" class="md-nav__link">
-    Long Term Goals
+  <a href="#required-dependencies" class="md-nav__link">
+    Required Dependencies
   </a>
-  
-    <nav class="md-nav" aria-label="Long Term Goals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#compiler-structure" class="md-nav__link">
-    Compiler Structure
-  </a>
-  
-    <nav class="md-nav" aria-label="Compiler Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#separation-of-concerns" class="md-nav__link">
-    Separation of Concerns
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unifying-table-and-column-compilation" class="md-nav__link">
-    Unifying Table and Column Compilation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#depth" class="md-nav__link">
-    Depth
-  </a>
-  
-    <nav class="md-nav" aria-label="Depth">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#backend-specific-operations" class="md-nav__link">
-    Backend-Specific Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#standardize-udfs-user-defined-functions" class="md-nav__link">
-    Standardize UDFs (User Defined Functions)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breadth" class="md-nav__link">
-    Breadth
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#backend-specific-goals" class="md-nav__link">
-    Backend-Specific Goals
+  <a href="#package-management" class="md-nav__link">
+    Package Management
   </a>
-  
-    <nav class="md-nav" aria-label="Backend-Specific Goals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pandas" class="md-nav__link">
-    pandas
-  </a>
-  
-    <nav class="md-nav" aria-label="pandas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#speed-up-grouped-rolling-and-simple-aggregations-using-numba" class="md-nav__link">
-    Speed up grouped, rolling, and simple aggregations using numba
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dask" class="md-nav__link">
-    Dask
-  </a>
-  
-    <nav class="md-nav" aria-label="Dask">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#implement-a-dask-backend" class="md-nav__link">
-    Implement a Dask backend
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spark" class="md-nav__link">
-    Spark
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -911,92 +671,110 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/ibis-project/ibis/edit/master/docs/about/roadmap.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/ibis-project/ibis/edit/master/docs/contribute/environment.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="roadmap">Roadmap</h1>
-<p>This document is an outline of the next set of major efforts within ibis.</p>
-<h2 id="long-term-goals">Long Term Goals</h2>
-<p>This section outlines broader, longer-term goals for the project alongside a
-few short-term goals and provides information and direction for a few key areas
-of focus over the next 1-2 years, possibly longer depending on the amount of
-time the developers of Ibis can devote to the project.</p>
-<h3 id="compiler-structure">Compiler Structure</h3>
-<h4 id="separation-of-concerns">Separation of Concerns</h4>
-<p>The current architecture of the ibis compiler has a few key problems that need
-to be addressed to ensure longevity and maintainability of the project going
-forward.</p>
-<p>The main structural problem is that there isn’t one place where expression
-optimizations and transformations happen. Sometimes optimizations occur as an
-expression is being built, and other times they occur on a whole expression.</p>
-<p>The solution is to separate the expression construction and optimization into
-two phases, and guarantee that a constructed expression, if compiled without
-optimization, maps clearly to SQL constructs.</p>
-<p>The optimization pass would happen just before compilation and would be free to
-optimize whole expression trees.</p>
-<p>This approach lets us optimize queries piece by piece, as opposed to having to
-provide all optimization implementations in a single pull request.</p>
-<h4 id="unifying-table-and-column-compilation">Unifying Table and Column Compilation</h4>
-<p>Right now, it is very difficult to customize the way the operations underlying
-table expressions are compiled. The logic to compile them is hard-coded in each
-backend (or the compiler’s parent class). This needs to be addressed, if only
-to ease the burden of implementing the UNNEST operation and make the codebase
-easier to understand and maintain.</p>
-<h3 id="depth">Depth</h3>
-<p>"Depth" goals relate to enhancing Ibis to provide better support for
-backend-specific functionality.</p>
-<h4 id="backend-specific-operations">Backend-Specific Operations</h4>
-<p>As the number of ibis users and use cases grows there will be an increasing
-need for individual backends to support more exotic operations. Many SQL
-databases have features that are unique only to themselves and often this is
-why people will choose that technology over another. Ibis should support an API
-that reflects the backend that underlies an expression and expose the
-functionality of that specific backend.</p>
-<p>A concrete example of this is the <a href="https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#farm_fingerprint">FARM_FINGERPRINT</a>
-function in BigQuery.</p>
-<p>It is unlikely that the main ValueExpr API will ever grow such a method, but a
-BigQuery user shouldn’t be restricted to using only the methods this API
-provides. Moreover, users should be able to bring their own methods to this API
-without having to consult the ibis developers and without the addition of such
-operations polluting the namespace of the main API.</p>
-<p>One drawback to enabling this is that it provides an incentive for people to
-define operations with a backend-specific spelling (presumably in the name of
-expediency) that may actually be easily generalizable to or useful for other
-backends. This behavior should be discouraged to the extent possible.</p>
-<h4 id="standardize-udfs-user-defined-functions">Standardize UDFs (User Defined Functions)</h4>
-<p>A few backends have support for UDFs. Impala, Pandas and BigQuery all have at
-least some level of support for user-defined functions. This mechanism should
-be extended to other backends where possible. We outline different approaches
-to adding UDFs to the backends that are well-supported but currently do not
-have a UDF implementation. Development of a standard interface for UDFs is
-ideal, so that it’s easy for new backends to implement the interface.</p>
-<h3 id="breadth">Breadth</h3>
-<p>The major breadth-related question ibis is facing is how to grow the number of
-backends in ibis in a scalable, minimum-maintenance way is an open question.</p>
-<p>Currently there is a test suite that runs across all backends that xfails tests
-when a backend doesn’t implement a particular operation.</p>
-<p>At minimum we need a way to display which backends implement which operations.
-With the ability to provide custom operations we also need a way to display the
-custom operations that each backend provides.</p>
-<h2 id="backend-specific-goals">Backend-Specific Goals</h2>
-<p>These goals relate to specific backends</p>
-<h3 id="pandas">pandas</h3>
-<h4 id="speed-up-grouped-rolling-and-simple-aggregations-using-numba">Speed up grouped, rolling, and simple aggregations using numba</h4>
-<p>pandas aggregations are quite slow relative to an equivalent numba
-implementation, for various reasons. Since ibis hides the implementation
-details of a particular expression we can experiment with using different
-aggregation implementations.</p>
-<h3 id="dask">Dask</h3>
-<h4 id="implement-a-dask-backend">Implement a Dask backend</h4>
-<p>There is currently no way in ibis to easily parallelize a computation on a
-single machine, let alone distribute a computation across machines.</p>
-<p>Dask provides APIs for doing such things.</p>
-<h3 id="spark">Spark</h3>
-<p>Implement a SparkSQL backend</p>
-<p>SparkSQL provides a way to execute distributed SQL queries similar to other
-backends supported by ibis such as Impala and BigQuery.</p>
+<h1 id="setting-up-a-development-environment">Setting up a Development Environment</h1>
+<p>There are two primary ways to setup a development environment.</p>
+<ul>
+<li><code>nix</code>: fewer steps, isolated</li>
+<li><code>conda</code>: more steps, not isolated</li>
+</ul>
+<h2 id="required-dependencies">Required Dependencies</h2>
+<ul>
+<li><a href="https://git-scm.com/"><code>git</code></a></li>
+</ul>
+<h2 id="package-management">Package Management</h2>
+<div class="admonition warning">
+<p class="admonition-title">You need at least one package manager</p>
+<p>At least one of <code>nix</code> or <code>conda</code> is required to contribute to ibis.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Python 3.10 is supported on a best-effort basis</p>
+<p>As of 2022-01-05 there is <em>experimental</em> support for Python 3.10.
+However, there are a number of problems with dependencies and development
+tools that ibis uses and we cannot offically support Python 3.10 until
+those are fixed.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Nix (Linux, Python 3.7-3.9)</label><label for="__tabbed_1_2">Miniconda (Linux, Mac, Windows, Python 3.7-3.9)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li><a href="https://nixos.org/download.html">Download and install <code>nix</code></a></li>
+<li>
+<p>Install <code>gh</code>:
+    <div class="highlight"><pre><span></span><code>nix-shell -p gh
+<span class="c1"># or</span>
+nix-env -iA gh
+</code></pre></div></p>
+</li>
+<li>
+<p>Fork and clone the ibis repository:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># you will likely need to auth, gh will guide you through the steps</span>
+gh repo fork --clone --remote ibis-project/ibis
+</code></pre></div>
+</li>
+<li>
+<p>Run <code>nix-shell</code> in the checkout directory:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ibis
+
+<span class="c1"># set up the cache to avoid building everything from scratch</span>
+nix-shell -p cachix --run <span class="s1">&#39;cachix use ibis&#39;</span>
+
+<span class="c1"># start a nix-shell</span>
+<span class="c1">#</span>
+<span class="c1"># this may take awhile to download artifacts from the cache</span>
+nix-shell
+</code></pre></div>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="admonition tip">
+<p class="admonition-title">Mamba is supported as well</p>
+<p><a href="https://github.com/mamba-org/mamba">Mamba</a> and <a href="https://github.com/conda-forge/miniforge#mambaforge">Mambaforge</a> can be used in place of <code>conda</code>.</p>
+</div>
+<ol>
+<li>
+<p><a href="https://docs.conda.io/en/latest/miniconda.html">Download</a> and install Miniconda</p>
+</li>
+<li>
+<p>Install <code>gh</code></p>
+<div class="highlight"><pre><span></span><code>conda install -c conda-forge gh
+</code></pre></div>
+</li>
+<li>
+<p>Fork and clone the ibis repository:</p>
+<div class="highlight"><pre><span></span><code>gh repo fork --clone --remote ibis-project/ibis
+</code></pre></div>
+</li>
+<li>
+<p>Create a Conda environment from a lock file in the repo:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ibis
+conda create -n ibis-dev -f conda-lock/&lt;platform-64-pyver&gt;.lock
+</code></pre></div>
+</li>
+<li>
+<p>Activate the environment</p>
+<div class="highlight"><pre><span></span><code>conda activate ibis-dev
+</code></pre></div>
+</li>
+<li>
+<p>Install your local copy of <code>ibis</code> into the Conda environment. In the root of the project run:</p>
+<div class="highlight"><pre><span></span><code>pip install -e .
+</code></pre></div>
+</li>
+<li>
+<p>If you want to run the backend test suite you'll need to install <code>docker-compose</code>:</p>
+<div class="highlight"><pre><span></span><code>conda install docker-compose -c conda-forge
+</code></pre></div>
+</li>
+</ol>
+</div>
+</div>
+</div>
 
               
             </article>
@@ -1010,7 +788,7 @@ backends supported by ibis such as Impala and BigQuery.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../team/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Team" rel="prev">
+        <a href="../../community/ecosystem/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ecosystem" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1019,20 +797,20 @@ backends supported by ibis such as Impala and BigQuery.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Team
+              Ecosystem
             </div>
           </div>
         </a>
       
       
         
-        <a href="../license/" class="md-footer__link md-footer__link--next" aria-label="Next: License" rel="next">
+        <a href="../workflow/" class="md-footer__link md-footer__link--next" aria-label="Next: Commit Workflow" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              License
+              Commit Workflow
             </div>
           </div>
           <div class="md-footer__button md-icon">

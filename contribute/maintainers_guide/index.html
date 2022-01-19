@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://ibis-project.org/about/roadmap/">
+        <link rel="canonical" href="https://ibis-project.org/contribute/maintainers_guide/">
       
       <link rel="icon" href="../../static/img/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
     
     
       
-        <title>Roadmap - Ibis Project</title>
+        <title>Maintainer's Guide - Ibis Project</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#roadmap" class="md-skip">
+        <a href="#maintaining-the-codebase" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Roadmap
+              Maintainer's Guide
             
           </span>
         </div>
@@ -246,14 +246,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -276,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -290,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../team/" class="md-nav__link">
+      <a href="../../about/team/" class="md-nav__link">
         Team
       </a>
     </li>
@@ -302,179 +300,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Roadmap
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../about/roadmap/" class="md-nav__link">
         Roadmap
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#long-term-goals" class="md-nav__link">
-    Long Term Goals
-  </a>
-  
-    <nav class="md-nav" aria-label="Long Term Goals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#compiler-structure" class="md-nav__link">
-    Compiler Structure
-  </a>
-  
-    <nav class="md-nav" aria-label="Compiler Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#separation-of-concerns" class="md-nav__link">
-    Separation of Concerns
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unifying-table-and-column-compilation" class="md-nav__link">
-    Unifying Table and Column Compilation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#depth" class="md-nav__link">
-    Depth
-  </a>
-  
-    <nav class="md-nav" aria-label="Depth">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#backend-specific-operations" class="md-nav__link">
-    Backend-Specific Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#standardize-udfs-user-defined-functions" class="md-nav__link">
-    Standardize UDFs (User Defined Functions)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breadth" class="md-nav__link">
-    Breadth
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backend-specific-goals" class="md-nav__link">
-    Backend-Specific Goals
-  </a>
-  
-    <nav class="md-nav" aria-label="Backend-Specific Goals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pandas" class="md-nav__link">
-    pandas
-  </a>
-  
-    <nav class="md-nav" aria-label="pandas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#speed-up-grouped-rolling-and-simple-aggregations-using-numba" class="md-nav__link">
-    Speed up grouped, rolling, and simple aggregations using numba
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dask" class="md-nav__link">
-    Dask
-  </a>
-  
-    <nav class="md-nav" aria-label="Dask">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#implement-a-dask-backend" class="md-nav__link">
-    Implement a Dask backend
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spark" class="md-nav__link">
-    Spark
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -486,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../license/" class="md-nav__link">
+      <a href="../../about/license/" class="md-nav__link">
         License
       </a>
     </li>
@@ -626,12 +456,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -654,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/environment/" class="md-nav__link">
+      <a href="../environment/" class="md-nav__link">
         Development Environment
       </a>
     </li>
@@ -668,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/workflow/" class="md-nav__link">
+      <a href="../workflow/" class="md-nav__link">
         Commit Workflow
       </a>
     </li>
@@ -682,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/style/" class="md-nav__link">
+      <a href="../style/" class="md-nav__link">
         Development Style
       </a>
     </li>
@@ -696,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contribute/backend_test_suite/" class="md-nav__link">
+      <a href="../backend_test_suite/" class="md-nav__link">
         Backend Test Suite
       </a>
     </li>
@@ -708,11 +540,106 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../contribute/maintainers_guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Maintainer's Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Maintainer's Guide
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#updating-dependencies" class="md-nav__link">
+    Updating dependencies
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic-dependency-updates" class="md-nav__link">
+    Automatic dependency updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-updating-dependencies" class="md-nav__link">
+    Manually updating dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merging-prs" class="md-nav__link">
+    Merging PRs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release" class="md-nav__link">
+    Release
+  </a>
+  
+    <nav class="md-nav" aria-label="Release">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pypi" class="md-nav__link">
+    PyPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-forge" class="md-nav__link">
+    conda-forge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -766,70 +693,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#long-term-goals" class="md-nav__link">
-    Long Term Goals
+  <a href="#updating-dependencies" class="md-nav__link">
+    Updating dependencies
   </a>
   
-    <nav class="md-nav" aria-label="Long Term Goals">
+    <nav class="md-nav" aria-label="Updating dependencies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#compiler-structure" class="md-nav__link">
-    Compiler Structure
-  </a>
-  
-    <nav class="md-nav" aria-label="Compiler Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#separation-of-concerns" class="md-nav__link">
-    Separation of Concerns
+  <a href="#automatic-dependency-updates" class="md-nav__link">
+    Automatic dependency updates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#unifying-table-and-column-compilation" class="md-nav__link">
-    Unifying Table and Column Compilation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#depth" class="md-nav__link">
-    Depth
-  </a>
-  
-    <nav class="md-nav" aria-label="Depth">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#backend-specific-operations" class="md-nav__link">
-    Backend-Specific Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#standardize-udfs-user-defined-functions" class="md-nav__link">
-    Standardize UDFs (User Defined Functions)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breadth" class="md-nav__link">
-    Breadth
+  <a href="#manually-updating-dependencies" class="md-nav__link">
+    Manually updating dependencies
   </a>
   
 </li>
@@ -840,56 +720,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#backend-specific-goals" class="md-nav__link">
-    Backend-Specific Goals
+  <a href="#merging-prs" class="md-nav__link">
+    Merging PRs
   </a>
   
-    <nav class="md-nav" aria-label="Backend-Specific Goals">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release" class="md-nav__link">
+    Release
+  </a>
+  
+    <nav class="md-nav" aria-label="Release">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pandas" class="md-nav__link">
-    pandas
-  </a>
-  
-    <nav class="md-nav" aria-label="pandas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#speed-up-grouped-rolling-and-simple-aggregations-using-numba" class="md-nav__link">
-    Speed up grouped, rolling, and simple aggregations using numba
+  <a href="#pypi" class="md-nav__link">
+    PyPI
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#dask" class="md-nav__link">
-    Dask
-  </a>
-  
-    <nav class="md-nav" aria-label="Dask">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#implement-a-dask-backend" class="md-nav__link">
-    Implement a Dask backend
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spark" class="md-nav__link">
-    Spark
+  <a href="#conda-forge" class="md-nav__link">
+    conda-forge
   </a>
   
 </li>
@@ -911,92 +765,74 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/ibis-project/ibis/edit/master/docs/about/roadmap.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/ibis-project/ibis/edit/master/docs/contribute/maintainers_guide.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="roadmap">Roadmap</h1>
-<p>This document is an outline of the next set of major efforts within ibis.</p>
-<h2 id="long-term-goals">Long Term Goals</h2>
-<p>This section outlines broader, longer-term goals for the project alongside a
-few short-term goals and provides information and direction for a few key areas
-of focus over the next 1-2 years, possibly longer depending on the amount of
-time the developers of Ibis can devote to the project.</p>
-<h3 id="compiler-structure">Compiler Structure</h3>
-<h4 id="separation-of-concerns">Separation of Concerns</h4>
-<p>The current architecture of the ibis compiler has a few key problems that need
-to be addressed to ensure longevity and maintainability of the project going
-forward.</p>
-<p>The main structural problem is that there isn’t one place where expression
-optimizations and transformations happen. Sometimes optimizations occur as an
-expression is being built, and other times they occur on a whole expression.</p>
-<p>The solution is to separate the expression construction and optimization into
-two phases, and guarantee that a constructed expression, if compiled without
-optimization, maps clearly to SQL constructs.</p>
-<p>The optimization pass would happen just before compilation and would be free to
-optimize whole expression trees.</p>
-<p>This approach lets us optimize queries piece by piece, as opposed to having to
-provide all optimization implementations in a single pull request.</p>
-<h4 id="unifying-table-and-column-compilation">Unifying Table and Column Compilation</h4>
-<p>Right now, it is very difficult to customize the way the operations underlying
-table expressions are compiled. The logic to compile them is hard-coded in each
-backend (or the compiler’s parent class). This needs to be addressed, if only
-to ease the burden of implementing the UNNEST operation and make the codebase
-easier to understand and maintain.</p>
-<h3 id="depth">Depth</h3>
-<p>"Depth" goals relate to enhancing Ibis to provide better support for
-backend-specific functionality.</p>
-<h4 id="backend-specific-operations">Backend-Specific Operations</h4>
-<p>As the number of ibis users and use cases grows there will be an increasing
-need for individual backends to support more exotic operations. Many SQL
-databases have features that are unique only to themselves and often this is
-why people will choose that technology over another. Ibis should support an API
-that reflects the backend that underlies an expression and expose the
-functionality of that specific backend.</p>
-<p>A concrete example of this is the <a href="https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#farm_fingerprint">FARM_FINGERPRINT</a>
-function in BigQuery.</p>
-<p>It is unlikely that the main ValueExpr API will ever grow such a method, but a
-BigQuery user shouldn’t be restricted to using only the methods this API
-provides. Moreover, users should be able to bring their own methods to this API
-without having to consult the ibis developers and without the addition of such
-operations polluting the namespace of the main API.</p>
-<p>One drawback to enabling this is that it provides an incentive for people to
-define operations with a backend-specific spelling (presumably in the name of
-expediency) that may actually be easily generalizable to or useful for other
-backends. This behavior should be discouraged to the extent possible.</p>
-<h4 id="standardize-udfs-user-defined-functions">Standardize UDFs (User Defined Functions)</h4>
-<p>A few backends have support for UDFs. Impala, Pandas and BigQuery all have at
-least some level of support for user-defined functions. This mechanism should
-be extended to other backends where possible. We outline different approaches
-to adding UDFs to the backends that are well-supported but currently do not
-have a UDF implementation. Development of a standard interface for UDFs is
-ideal, so that it’s easy for new backends to implement the interface.</p>
-<h3 id="breadth">Breadth</h3>
-<p>The major breadth-related question ibis is facing is how to grow the number of
-backends in ibis in a scalable, minimum-maintenance way is an open question.</p>
-<p>Currently there is a test suite that runs across all backends that xfails tests
-when a backend doesn’t implement a particular operation.</p>
-<p>At minimum we need a way to display which backends implement which operations.
-With the ability to provide custom operations we also need a way to display the
-custom operations that each backend provides.</p>
-<h2 id="backend-specific-goals">Backend-Specific Goals</h2>
-<p>These goals relate to specific backends</p>
-<h3 id="pandas">pandas</h3>
-<h4 id="speed-up-grouped-rolling-and-simple-aggregations-using-numba">Speed up grouped, rolling, and simple aggregations using numba</h4>
-<p>pandas aggregations are quite slow relative to an equivalent numba
-implementation, for various reasons. Since ibis hides the implementation
-details of a particular expression we can experiment with using different
-aggregation implementations.</p>
-<h3 id="dask">Dask</h3>
-<h4 id="implement-a-dask-backend">Implement a Dask backend</h4>
-<p>There is currently no way in ibis to easily parallelize a computation on a
-single machine, let alone distribute a computation across machines.</p>
-<p>Dask provides APIs for doing such things.</p>
-<h3 id="spark">Spark</h3>
-<p>Implement a SparkSQL backend</p>
-<p>SparkSQL provides a way to execute distributed SQL queries similar to other
-backends supported by ibis such as Impala and BigQuery.</p>
+<h1 id="maintaining-the-codebase">Maintaining the Codebase</h1>
+<p>Maintainers should be performing a minimum number of tasks, deferring to automation
+as much as possible:</p>
+<ul>
+<li>Reviewing pull requests</li>
+<li>Merging pull requests</li>
+</ul>
+<p>A number of tasks that are typically associated with maintenance are partially
+or fully automated:</p>
+<ul>
+<li>Updating library dependencies: this is handled automatically by WhiteSource Renovate</li>
+<li>Updating github-actions: this is handled automatically by WhiteSource Renovate</li>
+<li>Updating nix dependencies: this is a job run at a regular cadence to update nix dependencies</li>
+</ul>
+<h2 id="updating-dependencies">Updating dependencies</h2>
+<p>Occasionally you may need to manually lock poetry dependencies, which can be done by running</p>
+<div class="highlight"><pre><span></span><code>poetry update --lock
+</code></pre></div>
+<p>If a dependency was updated, you'll see changes to <code>poetry.lock</code> in the current directory.</p>
+<h3 id="automatic-dependency-updates">Automatic dependency updates</h3>
+<p><a href="https://www.whitesourcesoftware.com/free-developer-tools/renovate/">WhiteSource
+Renovate</a>
+will run at some cadence (outside of traditional business hours) and submit PRs
+that update dependencies.</p>
+<p>These upgrades use a conservative update strategy, which is currently to
+increase the upper bound of a dependency's range.</p>
+<p>The PRs it generates will regenerate a number of other files so that in most
+cases contributors do not have to remember to generate and commit these files.</p>
+<h3 id="manually-updating-dependencies">Manually updating dependencies</h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Do not manually edit <code>setup.py</code>, it is automatically generated from <code>pyproject.toml</code></p>
+</div>
+<ol>
+<li>Edit <code>pyproject.toml</code> as needed.</li>
+<li>Run <code>poetry update</code></li>
+<li>Run</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># if using nix</span>
+./dev/poetry2setup -o setup.py
+
+<span class="c1"># it not using nix, requires installation of tomli and poetry-core</span>
+<span class="nv">PYTHONHASHSEED</span><span class="o">=</span><span class="m">42</span> python ./dev/poetry2setup.py -o setup.py
+</code></pre></div>
+<p>from the repository root.</p>
+<p>Updates of minor and patch versions of dependencies are handled automatically by
+<a href="https://github.com/renovatebot/renovate"><code>renovate</code></a>.</p>
+<h2 id="merging-prs">Merging PRs</h2>
+<p>PRs can be merged using the <a href="https://github.com/cli/cli"><code>gh</code> command line tool</a>
+or with the GitHub web UI.</p>
+<h2 id="release">Release</h2>
+<h3 id="pypi">PyPI</h3>
+<p>Releases to PyPI are handled automatically using <a href="https://egghead.io/lessons/javascript-automating-releases-with-semantic-release">semantic
+release</a>.</p>
+<p>Ibis is released in two places:</p>
+<ul>
+<li><a href="https://pypi.org/">PyPI</a>, to enable <code>pip install ibis-framework</code></li>
+<li><a href="https://conda-forge.org/">Conda Forge</a>, to enable <code>mamba install ibis-framework</code></li>
+</ul>
+<h3 id="conda-forge"><code>conda-forge</code></h3>
+<p>The conda-forge package is released using the <a href="https://github.com/conda-forge/ibis-framework-feedstock">conda-forge feedstock repository</a></p>
+<p>After a release to PyPI, the conda-forge bot automatically updates the ibis
+package.</p>
 
               
             </article>
@@ -1010,7 +846,7 @@ backends supported by ibis such as Impala and BigQuery.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../team/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Team" rel="prev">
+        <a href="../backend_test_suite/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Backend Test Suite" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1019,20 +855,20 @@ backends supported by ibis such as Impala and BigQuery.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Team
+              Backend Test Suite
             </div>
           </div>
         </a>
       
       
         
-        <a href="../license/" class="md-footer__link md-footer__link--next" aria-label="Next: License" rel="next">
+        <a href="../../release_notes/" class="md-footer__link md-footer__link--next" aria-label="Next: Release Notes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              License
+              Release Notes
             </div>
           </div>
           <div class="md-footer__button md-icon">
