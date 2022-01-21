@@ -780,8 +780,8 @@ deployment models:</p>
 with the backend test suite.</p>
 <h2 id="systems-that-can-be-tested-without-any-additional-infrastructure">Systems that can be tested without any additional infrastructure</h2>
 <p>Many backends can be tested without <code>docker-compose</code>.</p>
-<p>The SQLite, datafusion, and any pandas-based backends can all be tested without
-needing to do anything except loading data.</p>
+<p>The <code>sqlite</code>, <code>datafusion</code>, and any <code>pandas</code>-based backends can all be tested
+without needing to do anything except loading data.</p>
 <h2 id="backend-testing-with-compose">Backend Testing with Compose</h2>
 <p>Here is the list of backends that can be tested using <code>docker-compose</code>.</p>
 <table>
@@ -815,31 +815,26 @@ needing to do anything except loading data.</p>
 </tbody>
 </table>
 <h3 id="testing-a-compose-service">Testing a Compose Service</h3>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<div class="admonition check">
+<p class="admonition-title">Check your current directory</p>
 <p>Make sure you're inside of your clone of the ibis GitHub repository</p>
 </div>
 <p>Let's fire up a PostgreSQL server and run tests against it.</p>
 <h4 id="start-the-service">Start the Service</h4>
 <p>Open a new shell and run</p>
-<div class="highlight"><pre><span></span><code>docker-compose up ibis-postgres
+<div class="highlight"><pre><span></span><code>docker-compose up --build ibis-postgres
 </code></pre></div>
-<p>Test the connection using</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PGPORT</span><span class="o">=</span><span class="m">5433</span>
-<span class="nv">PGPASSWORD</span><span class="o">=</span>postgres psql -t -A -h localhost -U postgres -d ibis_testing -c <span class="s2">&quot;select &#39;success&#39;&quot;</span>
+<p>Test the connection in a different shell using</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PGPASSWORD</span><span class="o">=</span>postgres
+psql -t -A -h localhost -U postgres -d ibis_testing -c <span class="s2">&quot;select &#39;success&#39;&quot;</span>
 </code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The password for the <code>ibis_testing</code> database is <code>postgres</code></p>
-</div>
 <p>You should see this output:</p>
 <div class="highlight"><pre><span></span><code><span class="go">success</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Why are we setting <code>PGPORT</code>?</p>
-<p><code>PGPORT</code> is set to <code>5433</code> to allow testing the impala and postgres backends together,
-because the impala backend uses a different postgres container for its Hive metastore and
-requires its postgres server to be listening on port <code>5432</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">PostgreSQL doesn't start up instantly</p>
+<p>It takes a few seconds for postgres to start, so if the previous
+command fails wait a few seconds and try again</p>
 </div>
 <p>Congrats, you now have a PostgreSQL server running and are ready to run tests!</p>
 <p>First we need to load some data:</p>
