@@ -798,7 +798,7 @@ without needing to do anything except loading data.</p>
 </tr>
 <tr>
 <td>PostgreSQL</td>
-<td><code>ibis-postgres</code></td>
+<td><code>postgres</code></td>
 </tr>
 <tr>
 <td>impala</td>
@@ -822,7 +822,7 @@ without needing to do anything except loading data.</p>
 <p>Let's fire up a PostgreSQL server and run tests against it.</p>
 <h4 id="start-the-service">Start the Service</h4>
 <p>Open a new shell and run</p>
-<div class="highlight"><pre><span></span><code>docker-compose up --build ibis-postgres
+<div class="highlight"><pre><span></span><code>docker-compose up --build postgres
 </code></pre></div>
 <p>Test the connection in a different shell using</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PGPASSWORD</span><span class="o">=</span>postgres
