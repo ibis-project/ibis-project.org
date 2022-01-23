@@ -1727,20 +1727,23 @@ joining an aggregated table on itself after filtering:</p>
 </div>
 <p>Ibis automatically creates a CTE for <code class="docutils literal notranslate"><span class="pre">agged</span></code>:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [170]: </span><span class="nb">print</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
-<span class="go">SELECT t0.`region`, t0.`total` - t1.`total` AS `diff`</span>
-<span class="go">FROM (</span>
+<span class="go">WITH t0 AS (</span>
 <span class="go">  SELECT `region`, `kind`, sum(`amount`) AS `total`</span>
 <span class="go">  FROM purchases</span>
-<span class="go">  WHERE `kind` = 'foo'</span>
 <span class="go">  GROUP BY 1, 2</span>
-<span class="go">) t0</span>
+<span class="go">)</span>
+<span class="go">SELECT t1.`region`, t1.`total` - t2.`total` AS `diff`</span>
+<span class="go">FROM (</span>
+<span class="go">  SELECT *</span>
+<span class="go">  FROM t0</span>
+<span class="go">  WHERE `kind` = 'foo'</span>
+<span class="go">) t1</span>
 <span class="go">  INNER JOIN (</span>
-<span class="go">    SELECT `region`, `kind`, sum(`amount`) AS `total`</span>
-<span class="go">    FROM purchases</span>
+<span class="go">    SELECT *</span>
+<span class="go">    FROM t0</span>
 <span class="go">    WHERE `kind` = 'bar'</span>
-<span class="go">    GROUP BY 1, 2</span>
-<span class="go">  ) t1</span>
-<span class="go">    ON t0.`region` = t1.`region`</span>
+<span class="go">  ) t2</span>
+<span class="go">    ON t1.`region` = t2.`region`</span>
 </pre></div>
 </div>
 </section>
