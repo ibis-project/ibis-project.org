@@ -237,31 +237,18 @@
 <h1 id="generated-ibis-expr-api-tableexpr-join--page-root">ibis.expr.api.TableExpr.join<a class="headerlink" href="#generated-ibis-expr-api-tableexpr-join--page-root" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ibis.expr.api.TableExpr.join">
-<span class="sig-prename descclassname"><span class="pre">TableExpr.</span></span><span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">how</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inner'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.expr.api.TableExpr.join" title="Permalink to this definition">¶</a></dt>
-<dd><p>Perform a relational join between two tables. Does not resolve resulting
-table schema.</p>
+<span class="sig-prename descclassname"><span class="pre">TableExpr.</span></span><span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ibis.expr.types.TableExpr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">how</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'inner'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffixes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">('_x',</span> <span class="pre">'_y')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.expr.api.TableExpr.join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join two tables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>left</strong> (<em>TableExpr</em>) – </p></li>
-<li><p><strong>right</strong> (<em>TableExpr</em>) – </p></li>
-<li><p><strong>predicates</strong> (<em>join expression</em><em>(</em><em>s</em><em>)</em>) – </p></li>
-<li><p><strong>how</strong> (<em>string</em><em>, </em><em>default 'inner'</em>) – <ul>
-<li><p>‘inner’: inner join</p></li>
-<li><p>’left’: left join</p></li>
-<li><p>’outer’: full outer join</p></li>
-<li><p>’right’: right outer join</p></li>
-<li><p>’semi’ or ‘left_semi’: left semi join</p></li>
-<li><p>’anti’: anti join</p></li>
+<li><p><strong>left</strong> – Left table to join</p></li>
+<li><p><strong>right</strong> – Right table to join</p></li>
+<li><p><strong>predicates</strong> – Boolean or column names to join on</p></li>
+<li><p><strong>how</strong> – Join method</p></li>
+<li><p><strong>suffixes</strong> – Left and right suffixes that will be used to rename overlapping
+columns.</p></li>
 </ul>
-</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>joined</strong> – Note that the schema is not materialized yet</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>TableExpr</p>
 </dd>
 </dl>
 </dd></dl>

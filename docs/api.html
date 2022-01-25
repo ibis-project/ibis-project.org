@@ -598,26 +598,26 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.view.html#ibis.expr.api.TableExpr.view" title="ibis.expr.api.TableExpr.view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.view</span></code></a>()</p></td>
 <td><p>Create a new table expression that is semantically equivalent to the current one, but is considered a distinct relation for evaluation purposes (e.g.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.join.html#ibis.expr.api.TableExpr.join" title="ibis.expr.api.TableExpr.join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.join</span></code></a>(right[, predicates, how])</p></td>
-<td><p>Perform a relational join between two tables.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.join.html#ibis.expr.api.TableExpr.join" title="ibis.expr.api.TableExpr.join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.join</span></code></a>(right[, predicates, how, ...])</p></td>
+<td><p>Join two tables.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.cross_join.html#ibis.expr.api.TableExpr.cross_join" title="ibis.expr.api.TableExpr.cross_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.cross_join</span></code></a>(right, *rest, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.cross_join.html#ibis.expr.api.TableExpr.cross_join" title="ibis.expr.api.TableExpr.cross_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.cross_join</span></code></a>(right, *rest[, suffixes])</p></td>
 <td><p>Perform a cross join (cartesian product) amongst a list of tables, with optional set of prefixes to apply to overlapping column names</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.inner_join.html#ibis.expr.api.TableExpr.inner_join" title="ibis.expr.api.TableExpr.inner_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.inner_join</span></code></a>(other[, predicates])</p></td>
-<td><p>Perform a relational join between two tables.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.inner_join.html#ibis.expr.api.TableExpr.inner_join" title="ibis.expr.api.TableExpr.inner_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.inner_join</span></code></a>(other[, predicates, ...])</p></td>
+<td><p>Join two tables.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.left_join.html#ibis.expr.api.TableExpr.left_join" title="ibis.expr.api.TableExpr.left_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.left_join</span></code></a>(other[, predicates])</p></td>
-<td><p>Perform a relational join between two tables.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.left_join.html#ibis.expr.api.TableExpr.left_join" title="ibis.expr.api.TableExpr.left_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.left_join</span></code></a>(other[, predicates, ...])</p></td>
+<td><p>Join two tables.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.outer_join.html#ibis.expr.api.TableExpr.outer_join" title="ibis.expr.api.TableExpr.outer_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.outer_join</span></code></a>(other[, predicates])</p></td>
-<td><p>Perform a relational join between two tables.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.outer_join.html#ibis.expr.api.TableExpr.outer_join" title="ibis.expr.api.TableExpr.outer_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.outer_join</span></code></a>(other[, predicates, ...])</p></td>
+<td><p>Join two tables.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.semi_join.html#ibis.expr.api.TableExpr.semi_join" title="ibis.expr.api.TableExpr.semi_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.semi_join</span></code></a>(other[, predicates])</p></td>
-<td><p>Perform a relational join between two tables.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.semi_join.html#ibis.expr.api.TableExpr.semi_join" title="ibis.expr.api.TableExpr.semi_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.semi_join</span></code></a>(other[, predicates, ...])</p></td>
+<td><p>Join two tables.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.anti_join.html#ibis.expr.api.TableExpr.anti_join" title="ibis.expr.api.TableExpr.anti_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.anti_join</span></code></a>(other[, predicates])</p></td>
-<td><p>Perform a relational join between two tables.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.expr.api.TableExpr.anti_join.html#ibis.expr.api.TableExpr.anti_join" title="ibis.expr.api.TableExpr.anti_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableExpr.anti_join</span></code></a>(other[, predicates, ...])</p></td>
+<td><p>Join two tables.</p></td>
 </tr>
 </tbody>
 </table>

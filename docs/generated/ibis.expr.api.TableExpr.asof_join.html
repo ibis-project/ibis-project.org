@@ -237,7 +237,7 @@
 <h1 id="generated-ibis-expr-api-tableexpr-asof-join--page-root">ibis.expr.api.TableExpr.asof_join<a class="headerlink" href="#generated-ibis-expr-api-tableexpr-asof-join--page-root" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ibis.expr.api.TableExpr.asof_join">
-<span class="sig-prename descclassname"><span class="pre">TableExpr.</span></span><span class="sig-name descname"><span class="pre">asof_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.expr.api.TableExpr.asof_join" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">TableExpr.</span></span><span class="sig-name descname"><span class="pre">asof_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffixes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">('_x',</span> <span class="pre">'_y')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ibis.expr.api.TableExpr.asof_join" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform an asof join between two tables.  Similar to a left join
 except that the match is done on nearest key rather than equal keys.</p>
 <p>Optionally, match keys with ‘by’ before joining with predicates.</p>
@@ -249,13 +249,9 @@ except that the match is done on nearest key rather than equal keys.</p>
 <li><p><strong>predicates</strong> (<em>join expression</em><em>(</em><em>s</em><em>)</em>) – </p></li>
 <li><p><strong>by</strong> (<em>string</em>) – column to group by before joining</p></li>
 <li><p><strong>tolerance</strong> (<em>interval</em>) – Amount of time to look behind when joining</p></li>
+<li><p><strong>suffixes</strong> – Left and right suffixes that will be used to rename overlapping
+columns.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>joined</strong> – Note that the schema is not materialized yet</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>TableExpr</p>
 </dd>
 </dl>
 </dd></dl>
