@@ -492,6 +492,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ibis-on-fugue" class="md-nav__link">
+    Ibis on Fugue
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -673,6 +680,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ibis-on-fugue" class="md-nav__link">
+    Ibis on Fugue
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -753,6 +767,41 @@ dataframe. With sql_to_ibis this is made possible.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="ibis-on-fugue">Ibis on <a href="https://github.com/fugue-project/fugue">Fugue</a></h2>
+<p><a href="https://github.com/fugue-project/fugue">Fugue</a> is a low-code abstraction layer letting users express
+the workflows in SQL or Python end-to-end. The design philosophy of Fugue and Ibis is very aligned, and
+Fugue is at a higher level of abstraction compared to Ibis. So the integration is very intuitive, Ibis
+is also able to run on all the backends Fugue supports: Pandas, Spark, Dask and DuckDB. The value Fugue
+adds to Ibis is the seamless integration of SQL semantics and scientific computing plus non-standard SQL
+operations. The detailed tutorial can be found
+<a href="https://fugue-tutorials.readthedocs.io/tutorials/integrations/ibis.html">here</a></p>
+<p>Here is an example of a distributed inference pipeline:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">fugue_ibis</span>
+<span class="kn">from</span> <span class="nn">fugue</span> <span class="kn">import</span> <span class="n">FugueWorkflow</span>
+
+<span class="c1"># schema: *,pred:double</span>
+<span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="s2">&quot;somefile&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">distributed_predict</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">dest</span><span class="p">):</span>
+    <span class="n">dag</span> <span class="o">=</span> <span class="n">FugueWorkflow</span><span class="p">()</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">dag</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file1</span><span class="p">)</span><span class="o">.</span><span class="n">as_ibis</span><span class="p">()</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">dag</span><span class="o">.</span><span class="n">df</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span><span class="o">.</span><span class="n">as_ibis</span><span class="p">()</span>
+    <span class="c1"># ibis operations (you can do more here)</span>
+    <span class="n">joined</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">inner_join</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">key</span><span class="o">==</span><span class="n">b</span><span class="o">.</span><span class="n">key</span><span class="p">)[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">f2</span><span class="p">]</span>
+    <span class="n">filtered</span> <span class="o">=</span> <span class="n">joined</span><span class="p">[</span><span class="n">joined</span><span class="o">.</span><span class="n">f1</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># back to fugue, apply predict distributedly and save</span>
+    <span class="n">filtered</span><span class="o">.</span><span class="n">as_fugue</span><span class="p">()</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">predict</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dag</span>
+
+<span class="c1"># test locally</span>
+<span class="n">distributed_predict</span><span class="p">(</span><span class="n">small_file</span><span class="p">,</span> <span class="n">pandas_df2</span><span class="p">,</span> <span class="n">temp_dest</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># run on spark when you have a SparkSession: session</span>
+<span class="n">distributed_predict</span><span class="p">(</span><span class="n">large_file</span><span class="p">,</span> <span class="n">spark_df2</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
+</code></pre></div>
 
               
             </article>
