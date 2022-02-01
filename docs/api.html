@@ -403,64 +403,73 @@
 <tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.literal.html#ibis.literal" title="ibis.literal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">literal</span></code></a>(value[, type])</p></td>
 <td><p>Create a scalar expression from a Python value.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.schema.html#ibis.schema" title="ibis.schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">schema</span></code></a>([pairs, names, types])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.array.html#ibis.array" title="ibis.array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a>(values[, type])</p></td>
+<td><p>Create an array expression.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.struct.html#ibis.struct" title="ibis.struct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">struct</span></code></a>(value[, type])</p></td>
+<td><p>Create a struct literal from a dict or other mapping.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.map.html#ibis.map" title="ibis.map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map</span></code></a>(value[, type])</p></td>
+<td><p>Create a map literal from a dict or other mapping.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.schema.html#ibis.schema" title="ibis.schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">schema</span></code></a>([pairs, names, types])</p></td>
 <td><p>Validate and return an <code class="xref py py-class docutils literal notranslate"><span class="pre">Schema</span></code> object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.table.html#ibis.table" title="ibis.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">table</span></code></a>(schema[, name])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.table.html#ibis.table" title="ibis.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">table</span></code></a>(schema[, name])</p></td>
 <td><p>Create an unbound Ibis table for creating expressions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.timestamp.html#ibis.timestamp" title="ibis.timestamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timestamp</span></code></a>(value[, timezone])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.timestamp.html#ibis.timestamp" title="ibis.timestamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timestamp</span></code></a>(value[, timezone])</p></td>
 <td><p>Returns a timestamp literal if value is likely coercible to a timestamp</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.where.html#ibis.where" title="ibis.where"><code class="xref py py-obj docutils literal notranslate"><span class="pre">where</span></code></a>(boolean_expr, true_expr, false_null_expr)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.where.html#ibis.where" title="ibis.where"><code class="xref py py-obj docutils literal notranslate"><span class="pre">where</span></code></a>(boolean_expr, true_expr, false_null_expr)</p></td>
 <td><p>Equivalent to the ternary expression: if X then Y else Z</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.ifelse.html#ibis.ifelse" title="ibis.ifelse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifelse</span></code></a>(arg, true_expr, false_expr)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.ifelse.html#ibis.ifelse" title="ibis.ifelse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifelse</span></code></a>(arg, true_expr, false_expr)</p></td>
 <td><p>Shorthand for implementing ternary expressions</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.coalesce.html#ibis.coalesce" title="ibis.coalesce"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coalesce</span></code></a>(*args)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.coalesce.html#ibis.coalesce" title="ibis.coalesce"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coalesce</span></code></a>(*args)</p></td>
 <td><p>Compute the first non-null value(s) from the passed arguments in left-to-right order.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.greatest.html#ibis.greatest" title="ibis.greatest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">greatest</span></code></a>(*args)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.greatest.html#ibis.greatest" title="ibis.greatest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">greatest</span></code></a>(*args)</p></td>
 <td><p>Compute the largest value (row-wise, if any arrays are present) among the supplied arguments.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.least.html#ibis.least" title="ibis.least"><code class="xref py py-obj docutils literal notranslate"><span class="pre">least</span></code></a>(*args)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.least.html#ibis.least" title="ibis.least"><code class="xref py py-obj docutils literal notranslate"><span class="pre">least</span></code></a>(*args)</p></td>
 <td><p>Compute the smallest value (row-wise, if any arrays are present) among the supplied arguments.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.negate.html#ibis.negate" title="ibis.negate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">negate</span></code></a>(arg)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.negate.html#ibis.negate" title="ibis.negate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">negate</span></code></a>(arg)</p></td>
 <td><p>Negate a numeric expression</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.desc.html#ibis.desc" title="ibis.desc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">desc</span></code></a>(expr)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.desc.html#ibis.desc" title="ibis.desc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">desc</span></code></a>(expr)</p></td>
 <td><p>Create a sort key (when used in sort_by) by the passed array expression or column name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.now.html#ibis.now" title="ibis.now"><code class="xref py py-obj docutils literal notranslate"><span class="pre">now</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.now.html#ibis.now" title="ibis.now"><code class="xref py py-obj docutils literal notranslate"><span class="pre">now</span></code></a>()</p></td>
 <td><p>Compute the current timestamp</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.NA.html#ibis.NA" title="ibis.NA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NA</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.NA.html#ibis.NA" title="ibis.NA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NA</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.null.html#ibis.null" title="ibis.null"><code class="xref py py-obj docutils literal notranslate"><span class="pre">null</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.null.html#ibis.null" title="ibis.null"><code class="xref py py-obj docutils literal notranslate"><span class="pre">null</span></code></a>()</p></td>
 <td><p>Create a NULL/NA scalar</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.row_number.html#ibis.row_number" title="ibis.row_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">row_number</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.row_number.html#ibis.row_number" title="ibis.row_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">row_number</span></code></a>()</p></td>
 <td><p>Analytic function for the current row number, starting at 0.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.window.html#ibis.window" title="ibis.window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window</span></code></a>([preceding, following, group_by, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.window.html#ibis.window" title="ibis.window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window</span></code></a>([preceding, following, group_by, ...])</p></td>
 <td><p>Create a window clause for use with window functions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.range_window.html#ibis.range_window" title="ibis.range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">range_window</span></code></a>([preceding, following, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.range_window.html#ibis.range_window" title="ibis.range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">range_window</span></code></a>([preceding, following, ...])</p></td>
 <td><p>Create a range-based window clause for use with window functions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.trailing_window.html#ibis.trailing_window" title="ibis.trailing_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_window</span></code></a>(preceding[, group_by, order_by])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.trailing_window.html#ibis.trailing_window" title="ibis.trailing_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_window</span></code></a>(preceding[, group_by, order_by])</p></td>
 <td><p>Create a trailing window for use with aggregate window functions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.cumulative_window.html#ibis.cumulative_window" title="ibis.cumulative_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cumulative_window</span></code></a>([group_by, order_by])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.cumulative_window.html#ibis.cumulative_window" title="ibis.cumulative_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cumulative_window</span></code></a>([group_by, order_by])</p></td>
 <td><p>Create a cumulative window for use with aggregate window functions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.trailing_range_window.html#ibis.trailing_range_window" title="ibis.trailing_range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_range_window</span></code></a>(preceding, order_by[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.trailing_range_window.html#ibis.trailing_range_window" title="ibis.trailing_range_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trailing_range_window</span></code></a>(preceding, order_by[, ...])</p></td>
 <td><p>Create a trailing time window for use with aggregate window functions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ibis.random.html#ibis.random" title="ibis.random"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ibis.random.html#ibis.random" title="ibis.random"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random</span></code></a>()</p></td>
 <td><p>Return a random floating point number in the range [0.0, 1.0).</p></td>
 </tr>
 </tbody>
