@@ -1,6 +1,0 @@
-﻿ibis.expr.api.GroupedTableExpr.size
-===================================
-
-.. currentmodule:: ibis.expr.api
-
-.. automethod:: GroupedTableExpr.size

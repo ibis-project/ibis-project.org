@@ -1,6 +1,0 @@
-﻿ibis.struct
-===========
-
-.. currentmodule:: ibis
-
-.. autofunction:: struct

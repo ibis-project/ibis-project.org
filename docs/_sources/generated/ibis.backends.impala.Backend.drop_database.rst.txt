@@ -1,6 +1,0 @@
-﻿ibis.backends.impala.Backend.drop\_database
-===========================================
-
-.. currentmodule:: ibis.backends.impala
-
-.. automethod:: Backend.drop_database

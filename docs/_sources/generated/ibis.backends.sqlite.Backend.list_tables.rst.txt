@@ -1,6 +1,0 @@
-﻿ibis.backends.sqlite.Backend.list\_tables
-=========================================
-
-.. currentmodule:: ibis.backends.sqlite
-
-.. automethod:: Backend.list_tables

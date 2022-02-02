@@ -1,6 +1,0 @@
-﻿ibis.backends.impala.hdfs\_connect
-==================================
-
-.. currentmodule:: ibis.backends.impala
-
-.. autofunction:: hdfs_connect

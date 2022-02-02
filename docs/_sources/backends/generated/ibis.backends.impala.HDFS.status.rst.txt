@@ -1,6 +1,0 @@
-﻿ibis.backends.impala.HDFS.status
-================================
-
-.. currentmodule:: ibis.backends.impala
-
-.. automethod:: HDFS.status

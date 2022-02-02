@@ -1,6 +1,0 @@
-﻿ibis.backends.clickhouse.Backend.get\_schema
-============================================
-
-.. currentmodule:: ibis.backends.clickhouse
-
-.. automethod:: Backend.get_schema

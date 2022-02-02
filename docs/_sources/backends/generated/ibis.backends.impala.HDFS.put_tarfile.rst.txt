@@ -1,6 +1,0 @@
-﻿ibis.backends.impala.HDFS.put\_tarfile
-======================================
-
-.. currentmodule:: ibis.backends.impala
-
-.. automethod:: HDFS.put_tarfile

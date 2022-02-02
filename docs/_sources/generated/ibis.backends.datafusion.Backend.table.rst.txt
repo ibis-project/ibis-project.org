@@ -1,6 +1,0 @@
-﻿ibis.backends.datafusion.Backend.table
-======================================
-
-.. currentmodule:: ibis.backends.datafusion
-
-.. automethod:: Backend.table

@@ -1,6 +1,0 @@
-﻿ibis.backends.clickhouse.Backend.list\_tables
-=============================================
-
-.. currentmodule:: ibis.backends.clickhouse
-
-.. automethod:: Backend.list_tables

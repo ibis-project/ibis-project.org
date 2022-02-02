@@ -1,6 +1,0 @@
-﻿ibis.backends.impala.Backend.sql
-================================
-
-.. currentmodule:: ibis.backends.impala
-
-.. automethod:: Backend.sql

@@ -1,6 +1,0 @@
-﻿ibis.expr.api.ValueExpr.isin
-============================
-
-.. currentmodule:: ibis.expr.api
-
-.. automethod:: ValueExpr.isin

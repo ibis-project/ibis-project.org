@@ -1,6 +1,0 @@
-﻿ibis.backends.postgres.Backend.table
-====================================
-
-.. currentmodule:: ibis.backends.postgres
-
-.. automethod:: Backend.table

@@ -1,6 +1,0 @@
-﻿ibis.backends.pyspark.Backend.table
-===================================
-
-.. currentmodule:: ibis.backends.pyspark
-
-.. automethod:: Backend.table

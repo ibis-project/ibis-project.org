@@ -1,6 +1,0 @@
-﻿ibis.table
-==========
-
-.. currentmodule:: ibis
-
-.. autofunction:: table

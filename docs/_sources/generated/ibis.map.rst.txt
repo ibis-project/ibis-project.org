@@ -1,6 +1,0 @@
-﻿ibis.map
-========
-
-.. currentmodule:: ibis
-
-.. autofunction:: map

@@ -1,6 +1,0 @@
-﻿ibis.array
-==========
-
-.. currentmodule:: ibis
-
-.. autofunction:: array

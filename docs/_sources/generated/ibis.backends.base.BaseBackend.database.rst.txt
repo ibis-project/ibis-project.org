@@ -1,6 +1,0 @@
-﻿ibis.backends.base.BaseBackend.database
-=======================================
-
-.. currentmodule:: ibis.backends.base
-
-.. automethod:: BaseBackend.database

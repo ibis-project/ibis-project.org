@@ -1,6 +1,0 @@
-﻿ibis.expr.api.GeoSpatialValue.touches
-=====================================
-
-.. currentmodule:: ibis.expr.api
-
-.. automethod:: GeoSpatialValue.touches

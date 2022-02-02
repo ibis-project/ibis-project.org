@@ -1,6 +1,0 @@
-﻿ibis.expr.api.ColumnExpr.nunique
-================================
-
-.. currentmodule:: ibis.expr.api
-
-.. automethod:: ColumnExpr.nunique

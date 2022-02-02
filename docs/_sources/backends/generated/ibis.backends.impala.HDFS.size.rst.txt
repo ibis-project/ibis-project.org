@@ -1,6 +1,0 @@
-﻿ibis.backends.impala.HDFS.size
-==============================
-
-.. currentmodule:: ibis.backends.impala
-
-.. automethod:: HDFS.size

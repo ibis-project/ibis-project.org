@@ -1,6 +1,0 @@
-﻿ibis.backends.impala.Backend.exists\_table
-==========================================
-
-.. currentmodule:: ibis.backends.impala
-
-.. automethod:: Backend.exists_table
