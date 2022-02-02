@@ -2648,8 +2648,8 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2679,32 +2679,9 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/nix/store/2kh3c4v2vf6d6xg6c9n8zvfpwf3zzwca-bash-5.1-p12/bin/bash: line 1: curl: command not found
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2744,64 +2721,6 @@ connection = ibis.sqlite.connect(os.path.join(tempfile.gettempdir(), 'geography.
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9602/2248260546.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> ibis<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">.</span>interactive <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">True</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> 
-<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>connection <span class="ansi-blue-fg">=</span> ibis<span class="ansi-blue-fg">.</span>sqlite<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span>os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>tempfile<span class="ansi-blue-fg">.</span>gettempdir<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;geography.db&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/base/__init__.py</span> in <span class="ansi-cyan-fg">connect</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    217</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    218</span>         new_backend <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>__class__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 219</span><span class="ansi-red-fg">         </span>new_backend<span class="ansi-blue-fg">.</span>reconnect<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    220</span>         <span class="ansi-green-fg">return</span> new_backend
-<span class="ansi-green-intense-fg ansi-bold">    221</span> 
-
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/base/__init__.py</span> in <span class="ansi-cyan-fg">reconnect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    222</span>     <span class="ansi-green-fg">def</span> reconnect<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-&gt;</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    223</span>         <span class="ansi-blue-fg">&#34;&#34;&#34;Reconnect to the database already configured with connect.&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">--&gt; 224</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>do_connect<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>self<span class="ansi-blue-fg">.</span>_con_args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>self<span class="ansi-blue-fg">.</span>_con_kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    225</span> 
-<span class="ansi-green-intense-fg ansi-bold">    226</span>     <span class="ansi-green-fg">def</span> do_connect<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-&gt;</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/sqlite/__init__.py</span> in <span class="ansi-cyan-fg">do_connect</span><span class="ansi-blue-fg">(self, path, create)</span>
-<span class="ansi-green-intense-fg ansi-bold">     98</span>         super<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>do_connect<span class="ansi-blue-fg">(</span>sqlalchemy<span class="ansi-blue-fg">.</span>create_engine<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;sqlite://&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     99</span>         <span class="ansi-green-fg">if</span> path <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 100</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>attach<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>database_name<span class="ansi-blue-fg">,</span> path<span class="ansi-blue-fg">,</span> create<span class="ansi-blue-fg">=</span>create<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    101</span> 
-<span class="ansi-green-intense-fg ansi-bold">    102</span>         udf<span class="ansi-blue-fg">.</span>register_all<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>con<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/sqlite/__init__.py</span> in <span class="ansi-cyan-fg">attach</span><span class="ansi-blue-fg">(self, name, path, create)</span>
-<span class="ansi-green-intense-fg ansi-bold">    128</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    129</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>exists<span class="ansi-blue-fg">(</span>path<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">and</span> <span class="ansi-green-fg">not</span> create<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 130</span><span class="ansi-red-fg">             raise FileNotFoundError(
-</span><span class="ansi-green-intense-fg ansi-bold">    131</span>                 errno<span class="ansi-blue-fg">.</span>ENOENT<span class="ansi-blue-fg">,</span> os<span class="ansi-blue-fg">.</span>strerror<span class="ansi-blue-fg">(</span>errno<span class="ansi-blue-fg">.</span>ENOENT<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> path
-<span class="ansi-green-intense-fg ansi-bold">    132</span>             )
-
-<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/tmp/nix-shell.3xb455/geography.db&#39;</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -2860,19 +2779,22 @@ countries.continent.value_counts()</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9602/1356764023.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries <span class="ansi-blue-fg">=</span> connection<span class="ansi-blue-fg">.</span>table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;countries&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> countries<span class="ansi-blue-fg">.</span>continent<span class="ansi-blue-fg">.</span>value_counts<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;connection&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>  continent  count
+0        AF     58
+1        AN      5
+2        AS     51
+3        EU     54
+4        NA     42
+5        OC     28
+6        SA     14</pre>
 </div>
+
 </div>
 
 </div>
@@ -2939,21 +2861,22 @@ freq</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9602/1520508950.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> freq = (countries.group_by(countries.continent)
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                  .aggregate([countries.count().name(&#39;# countries&#39;),
-<span class="ansi-green-intense-fg ansi-bold">      3</span>                              countries.population.sum().name(&#39;total population&#39;)]))
-<span class="ansi-green-intense-fg ansi-bold">      4</span> freq
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>  continent  # countries  total population
+0        AF           58        1021238685
+1        AN            5               170
+2        AS           51        4130584841
+3        EU           54         750724554
+4        NA           42         540204371
+5        OC           28          36067549
+6        SA           14         400143568</pre>
 </div>
+
 </div>
 
 </div>
@@ -3031,8 +2954,8 @@ freq</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3060,34 +2983,6 @@ freq</div>
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9602/3936336494.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>bucketed <span class="ansi-blue-fg">=</span> countries<span class="ansi-blue-fg">.</span>population<span class="ansi-blue-fg">.</span>bucket<span class="ansi-blue-fg">(</span>buckets<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>name<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bucket&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -3144,18 +3039,20 @@ freq</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9602/1522740655.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>bucketed<span class="ansi-blue-fg">.</span>value_counts<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;bucketed&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>  bucket  count
+0    NaN      2
+1    0.0     93
+2    1.0     76
+3    2.0     72
+4    3.0      9</pre>
 </div>
+
 </div>
 
 </div>
@@ -3222,21 +3119,20 @@ bucketed.value_counts()</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9602/56662324.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> bucketed = (countries.population
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>             <span class="ansi-blue-fg">.</span>bucket<span class="ansi-blue-fg">(</span>buckets<span class="ansi-blue-fg">,</span> include_over<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>             .name(&#39;bucket&#39;))
-<span class="ansi-green-intense-fg ansi-bold">      4</span> bucketed<span class="ansi-blue-fg">.</span>value_counts<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>  bucket  count
+0      0     93
+1      1     76
+2      2     72
+3      3      9
+4      4      2</pre>
 </div>
+
 </div>
 
 </div>
@@ -3297,18 +3193,15 @@ bucketed.value_counts()</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9602/1790454237.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>bucketed<span class="ansi-blue-fg">.</span>type<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;bucketed&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Category(cardinality=5)</pre>
 </div>
+
 </div>
 
 </div>
@@ -3386,22 +3279,20 @@ expr</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9602/3709302510.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>bucket_counts <span class="ansi-blue-fg">=</span> bucketed<span class="ansi-blue-fg">.</span>value_counts<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> 
-<span class="ansi-green-intense-fg ansi-bold">      3</span> labeled_bucket = (bucket_counts.bucket
-<span class="ansi-green-intense-fg ansi-bold">      4</span>                   <span class="ansi-blue-fg">.</span>label<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;&lt; 1M&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&gt; 1M&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&gt; 10M&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&gt; 100M&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&gt; 1B&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>                   .name(&#39;bucket_name&#39;))
 
-<span class="ansi-red-fg">NameError</span>: name &#39;bucketed&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>  bucket_name bucket  count
+0        &lt; 1M      0     93
+1        &gt; 1M      1     76
+2       &gt; 10M      2     72
+3      &gt; 100M      3      9
+4        &gt; 1B      4      2</pre>
 </div>
+
 </div>
 
 </div>

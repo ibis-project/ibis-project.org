@@ -2646,8 +2646,8 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2677,32 +2677,9 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/nix/store/2kh3c4v2vf6d6xg6c9n8zvfpwf3zzwca-bash-5.1-p12/bin/bash: line 1: curl: command not found
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2742,64 +2719,6 @@ connection = ibis.sqlite.connect(os.path.join(tempfile.gettempdir(), 'geography.
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9551/2248260546.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> ibis<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">.</span>interactive <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">True</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> 
-<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>connection <span class="ansi-blue-fg">=</span> ibis<span class="ansi-blue-fg">.</span>sqlite<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span>os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>tempfile<span class="ansi-blue-fg">.</span>gettempdir<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;geography.db&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/base/__init__.py</span> in <span class="ansi-cyan-fg">connect</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    217</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    218</span>         new_backend <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>__class__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 219</span><span class="ansi-red-fg">         </span>new_backend<span class="ansi-blue-fg">.</span>reconnect<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    220</span>         <span class="ansi-green-fg">return</span> new_backend
-<span class="ansi-green-intense-fg ansi-bold">    221</span> 
-
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/base/__init__.py</span> in <span class="ansi-cyan-fg">reconnect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    222</span>     <span class="ansi-green-fg">def</span> reconnect<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-&gt;</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    223</span>         <span class="ansi-blue-fg">&#34;&#34;&#34;Reconnect to the database already configured with connect.&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">--&gt; 224</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>do_connect<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>self<span class="ansi-blue-fg">.</span>_con_args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>self<span class="ansi-blue-fg">.</span>_con_kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    225</span> 
-<span class="ansi-green-intense-fg ansi-bold">    226</span>     <span class="ansi-green-fg">def</span> do_connect<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-&gt;</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/sqlite/__init__.py</span> in <span class="ansi-cyan-fg">do_connect</span><span class="ansi-blue-fg">(self, path, create)</span>
-<span class="ansi-green-intense-fg ansi-bold">     98</span>         super<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>do_connect<span class="ansi-blue-fg">(</span>sqlalchemy<span class="ansi-blue-fg">.</span>create_engine<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;sqlite://&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     99</span>         <span class="ansi-green-fg">if</span> path <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 100</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>attach<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>database_name<span class="ansi-blue-fg">,</span> path<span class="ansi-blue-fg">,</span> create<span class="ansi-blue-fg">=</span>create<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    101</span> 
-<span class="ansi-green-intense-fg ansi-bold">    102</span>         udf<span class="ansi-blue-fg">.</span>register_all<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>con<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/sqlite/__init__.py</span> in <span class="ansi-cyan-fg">attach</span><span class="ansi-blue-fg">(self, name, path, create)</span>
-<span class="ansi-green-intense-fg ansi-bold">    128</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    129</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>exists<span class="ansi-blue-fg">(</span>path<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">and</span> <span class="ansi-green-fg">not</span> create<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 130</span><span class="ansi-red-fg">             raise FileNotFoundError(
-</span><span class="ansi-green-intense-fg ansi-bold">    131</span>                 errno<span class="ansi-blue-fg">.</span>ENOENT<span class="ansi-blue-fg">,</span> os<span class="ansi-blue-fg">.</span>strerror<span class="ansi-blue-fg">(</span>errno<span class="ansi-blue-fg">.</span>ENOENT<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> path
-<span class="ansi-green-intense-fg ansi-bold">    132</span>             )
-
-<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/tmp/nix-shell.3xb455/geography.db&#39;</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -2888,22 +2807,22 @@ expr</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9551/1308414046.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries <span class="ansi-blue-fg">=</span> connection<span class="ansi-blue-fg">.</span>table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;countries&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> 
-<span class="ansi-green-intense-fg ansi-bold">      3</span> continent_name = (countries.continent
-<span class="ansi-green-intense-fg ansi-bold">      4</span>                            <span class="ansi-blue-fg">.</span>case<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>                            <span class="ansi-blue-fg">.</span>when<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;AF&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;Africa&#39;</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;connection&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>  continent continent_name
+0        EU         Europe
+1        AS           Asia
+2        NA  North America
+3        AF         Africa
+4        AN     Antarctica
+5        SA  South America
+6        OC        Oceania</pre>
 </div>
+
 </div>
 
 </div>
@@ -2923,8 +2842,8 @@ expr</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2952,34 +2871,6 @@ expr</div>
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9551/3672595929.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>connection<span class="ansi-blue-fg">.</span>create_table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;continents&#39;</span><span class="ansi-blue-fg">,</span> expr<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;connection&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -3026,19 +2917,22 @@ continents</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9551/489868697.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>continents <span class="ansi-blue-fg">=</span> connection<span class="ansi-blue-fg">.</span>table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;continents&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> continents
 
-<span class="ansi-red-fg">NameError</span>: name &#39;connection&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>  continent continent_name
+0        EU         Europe
+1        AS           Asia
+2        NA  North America
+3        AF         Africa
+4        AN     Antarctica
+5        SA  South America
+6        OC        Oceania</pre>
 </div>
+
 </div>
 
 </div>
@@ -3058,8 +2952,8 @@ continents</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3087,34 +2981,6 @@ continents</div>
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9551/2128496741.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>connection<span class="ansi-blue-fg">.</span>drop_table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;continents&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;connection&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>

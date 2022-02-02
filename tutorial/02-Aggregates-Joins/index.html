@@ -2639,8 +2639,8 @@ the <code>countries</code> table as we did previously.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2668,29 +2668,6 @@ the <code>countries</code> table as we did previously.</p>
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/nix/store/2kh3c4v2vf6d6xg6c9n8zvfpwf3zzwca-bash-5.1-p12/bin/bash: line 1: curl: command not found
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -2755,50 +2732,28 @@ countries['name', 'continent', 'area_km2', 'population']</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/1769529563.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> ibis<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">.</span>interactive <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">True</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> 
-<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg"> </span>connection <span class="ansi-blue-fg">=</span> ibis<span class="ansi-blue-fg">.</span>sqlite<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span>os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>tempfile<span class="ansi-blue-fg">.</span>gettempdir<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;geography.db&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span> countries <span class="ansi-blue-fg">=</span> connection<span class="ansi-blue-fg">.</span>table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;countries&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span> 
 
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/base/__init__.py</span> in <span class="ansi-cyan-fg">connect</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    217</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    218</span>         new_backend <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>__class__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 219</span><span class="ansi-red-fg">         </span>new_backend<span class="ansi-blue-fg">.</span>reconnect<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    220</span>         <span class="ansi-green-fg">return</span> new_backend
-<span class="ansi-green-intense-fg ansi-bold">    221</span> 
 
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/base/__init__.py</span> in <span class="ansi-cyan-fg">reconnect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    222</span>     <span class="ansi-green-fg">def</span> reconnect<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-&gt;</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    223</span>         <span class="ansi-blue-fg">&#34;&#34;&#34;Reconnect to the database already configured with connect.&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">--&gt; 224</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>do_connect<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>self<span class="ansi-blue-fg">.</span>_con_args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>self<span class="ansi-blue-fg">.</span>_con_kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    225</span> 
-<span class="ansi-green-intense-fg ansi-bold">    226</span>     <span class="ansi-green-fg">def</span> do_connect<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-&gt;</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>                     name continent   area_km2  population
+0                 Andorra        EU      468.0       84000
+1    United Arab Emirates        AS    82880.0     4975593
+2             Afghanistan        AS   647500.0    29121286
+3     Antigua and Barbuda        NA      443.0       86754
+4                Anguilla        NA      102.0       13254
+..                    ...       ...        ...         ...
+247                 Yemen        AS   527970.0    23495361
+248               Mayotte        AF      374.0      159042
+249          South Africa        AF  1219912.0    49000000
+250                Zambia        AF   752614.0    13460305
+251              Zimbabwe        AF   390580.0    13061000
 
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/sqlite/__init__.py</span> in <span class="ansi-cyan-fg">do_connect</span><span class="ansi-blue-fg">(self, path, create)</span>
-<span class="ansi-green-intense-fg ansi-bold">     98</span>         super<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>do_connect<span class="ansi-blue-fg">(</span>sqlalchemy<span class="ansi-blue-fg">.</span>create_engine<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;sqlite://&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     99</span>         <span class="ansi-green-fg">if</span> path <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 100</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>attach<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>database_name<span class="ansi-blue-fg">,</span> path<span class="ansi-blue-fg">,</span> create<span class="ansi-blue-fg">=</span>create<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    101</span> 
-<span class="ansi-green-intense-fg ansi-bold">    102</span>         udf<span class="ansi-blue-fg">.</span>register_all<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>con<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/work/ibis/ibis/ibis/ibis/backends/sqlite/__init__.py</span> in <span class="ansi-cyan-fg">attach</span><span class="ansi-blue-fg">(self, name, path, create)</span>
-<span class="ansi-green-intense-fg ansi-bold">    128</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    129</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>exists<span class="ansi-blue-fg">(</span>path<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">and</span> <span class="ansi-green-fg">not</span> create<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 130</span><span class="ansi-red-fg">             raise FileNotFoundError(
-</span><span class="ansi-green-intense-fg ansi-bold">    131</span>                 errno<span class="ansi-blue-fg">.</span>ENOENT<span class="ansi-blue-fg">,</span> os<span class="ansi-blue-fg">.</span>strerror<span class="ansi-blue-fg">(</span>errno<span class="ansi-blue-fg">.</span>ENOENT<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> path
-<span class="ansi-green-intense-fg ansi-bold">    132</span>             )
-
-<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/tmp/nix-shell.3xb455/geography.db&#39;</pre>
+[252 rows x 4 columns]</pre>
 </div>
+
 </div>
 
 </div>
@@ -2890,22 +2845,26 @@ continent_name</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/1988406030.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> continent_name = (countries[&#39;continent&#39;].case()
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                                         <span class="ansi-blue-fg">.</span>when<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;NA&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;North America&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>                                         <span class="ansi-blue-fg">.</span>when<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;SA&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;South America&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span>                                         <span class="ansi-blue-fg">.</span>when<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;EU&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;Europe&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>                                         <span class="ansi-blue-fg">.</span>when<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;AF&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;Africa&#39;</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0             Europe
+1               Asia
+2               Asia
+3      North America
+4      North America
+           ...      
+247             Asia
+248           Africa
+249           Africa
+250           Africa
+251           Africa
+Name: tmp, Length: 252, dtype: object</pre>
 </div>
+
 </div>
 
 </div>
@@ -2970,18 +2929,15 @@ variable, and the results are not stored. They have been computed when we printe
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/585657289.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>type<span class="ansi-blue-fg">(</span>continent_name<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;continent_name&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>ibis.expr.types.StringColumn</pre>
 </div>
+
 </div>
 
 </div>
@@ -3049,18 +3005,28 @@ has a name when being returned.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/284555881.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;name&#39;</span><span class="ansi-blue-fg">,</span> continent_name<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;area_km2&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;population&#39;</span><span class="ansi-blue-fg">]</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>                     name continent_name   area_km2  population
+0                 Andorra         Europe      468.0       84000
+1    United Arab Emirates           Asia    82880.0     4975593
+2             Afghanistan           Asia   647500.0    29121286
+3     Antigua and Barbuda  North America      443.0       86754
+4                Anguilla  North America      102.0       13254
+..                    ...            ...        ...         ...
+247                 Yemen           Asia   527970.0    23495361
+248               Mayotte         Africa      374.0      159042
+249          South Africa         Africa  1219912.0    49000000
+250                Zambia         Africa   752614.0    13460305
+251              Zimbabwe         Africa   390580.0    13061000
+
+[252 rows x 4 columns]</pre>
 </div>
+
 </div>
 
 </div>
@@ -3122,18 +3088,28 @@ when using it in the list of columns to fetch.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/3014087314.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;name&#39;</span><span class="ansi-blue-fg">,</span> continent_name<span class="ansi-blue-fg">.</span>name<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;continent&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;area_km2&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;population&#39;</span><span class="ansi-blue-fg">]</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>                     name      continent   area_km2  population
+0                 Andorra         Europe      468.0       84000
+1    United Arab Emirates           Asia    82880.0     4975593
+2             Afghanistan           Asia   647500.0    29121286
+3     Antigua and Barbuda  North America      443.0       86754
+4                Anguilla  North America      102.0       13254
+..                    ...            ...        ...         ...
+247                 Yemen           Asia   527970.0    23495361
+248               Mayotte         Africa      374.0      159042
+249          South Africa         Africa  1219912.0    49000000
+250                Zambia         Africa   752614.0    13460305
+251              Zimbabwe         Africa   390580.0    13061000
+
+[252 rows x 4 columns]</pre>
 </div>
+
 </div>
 
 </div>
@@ -3194,18 +3170,22 @@ when using it in the list of columns to fetch.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/3890615495.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">.</span>group_by<span class="ansi-blue-fg">(</span>continent_name<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>aggregate<span class="ansi-blue-fg">(</span>countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;population&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>sum<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>name<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;total_population&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>  continent_name  total_population
+0         Africa        1021238685
+1     Anctartica               170
+2           Asia        4130584841
+3         Europe         750724554
+4  North America         540204371
+5        Oceania          36067549
+6  South America         400143568</pre>
 </div>
+
 </div>
 
 </div>
@@ -3275,19 +3255,15 @@ total_population</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/2081276897.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>total_population <span class="ansi-blue-fg">=</span> countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;population&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>sum<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>name<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;total_population&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> total_population
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>6878963738</pre>
 </div>
+
 </div>
 
 </div>
@@ -3350,18 +3326,22 @@ over every group defined by the <code>group_by</code> method.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/3278312127.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">.</span>group_by<span class="ansi-blue-fg">(</span>continent_name<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>aggregate<span class="ansi-blue-fg">(</span>total_population<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>  continent_name  total_population
+0         Africa        1021238685
+1     Anctartica               170
+2           Asia        4130584841
+3         Europe         750724554
+4  North America         540204371
+5        Oceania          36067549
+6  South America         400143568</pre>
 </div>
+
 </div>
 
 </div>
@@ -3426,19 +3406,22 @@ use both column names and expressions, and also a list with any of them (e.g. <c
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/3789438790.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> countries.group_by(&#39;continent&#39;).aggregate([total_population,
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                                            countries[&#39;area_km2&#39;].mean().name(&#39;average_area&#39;)])
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>  continent  total_population  average_area
+0        AF        1021238685  5.234534e+05
+1        AN               170  2.802439e+06
+2        AS        4130584841  6.196685e+05
+3        EU         750724554  4.293017e+05
+4        NA         540204371  5.836313e+05
+5        OC          36067549  3.044157e+05
+6        SA         400143568  1.272751e+06</pre>
 </div>
+
 </div>
 
 </div>
@@ -3502,19 +3485,28 @@ gdp</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/3695892081.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>gdp <span class="ansi-blue-fg">=</span> connection<span class="ansi-blue-fg">.</span>table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;gdp&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> gdp
 
-<span class="ansi-red-fg">NameError</span>: name &#39;connection&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>     country_code  year         value
+0             ABW  1986  4.054634e+08
+1             ABW  1987  4.876025e+08
+2             ABW  1988  5.964236e+08
+3             ABW  1989  6.953044e+08
+4             ABW  1990  7.648871e+08
+...           ...   ...           ...
+9995          SVK  2002  3.513034e+10
+9996          SVK  2003  4.681659e+10
+9997          SVK  2004  5.733202e+10
+9998          SVK  2005  6.278531e+10
+9999          SVK  2006  7.070810e+10
+
+[10000 rows x 3 columns]</pre>
 </div>
+
 </div>
 
 </div>
@@ -3575,18 +3567,15 @@ gdp</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/14681879.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>gdp<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;year&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>min<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> gdp<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;year&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>max<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;gdp&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(1960, 2017)</pre>
 </div>
+
 </div>
 
 </div>
@@ -3649,18 +3638,28 @@ one matches the three letter code in the <code>gdp</code> table.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/716070189.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;iso_alpha2&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;iso_alpha3&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;iso_numeric&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;fips&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;name&#39;</span><span class="ansi-blue-fg">]</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>    iso_alpha2 iso_alpha3  iso_numeric fips                  name
+0           AD        AND           20   AN               Andorra
+1           AE        ARE          784   AE  United Arab Emirates
+2           AF        AFG            4   AF           Afghanistan
+3           AG        ATG           28   AC   Antigua and Barbuda
+4           AI        AIA          660   AV              Anguilla
+..         ...        ...          ...  ...                   ...
+247         YE        YEM          887   YM                 Yemen
+248         YT        MYT          175   MF               Mayotte
+249         ZA        ZAF          710   SF          South Africa
+250         ZM        ZMB          894   ZA                Zambia
+251         ZW        ZWE          716   ZI              Zimbabwe
+
+[252 rows x 5 columns]</pre>
 </div>
+
 </div>
 
 </div>
@@ -3728,20 +3727,41 @@ countries_and_gdp[countries, gdp]</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/1154380689.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> countries_and_gdp = countries.inner_join(gdp,
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                                          predicates=countries[&#39;iso_alpha3&#39;] == gdp[&#39;country_code&#39;])
-<span class="ansi-green-intense-fg ansi-bold">      3</span> countries_and_gdp<span class="ansi-blue-fg">[</span>countries<span class="ansi-blue-fg">,</span> gdp<span class="ansi-blue-fg">]</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>     iso_alpha2 iso_alpha3  iso_numeric fips      name           capital  \
+0            AD        AND           20   AN   Andorra  Andorra la Vella   
+1            AD        AND           20   AN   Andorra  Andorra la Vella   
+2            AD        AND           20   AN   Andorra  Andorra la Vella   
+3            AD        AND           20   AN   Andorra  Andorra la Vella   
+4            AD        AND           20   AN   Andorra  Andorra la Vella   
+...         ...        ...          ...  ...       ...               ...   
+9482         ZW        ZWE          716   ZI  Zimbabwe            Harare   
+9483         ZW        ZWE          716   ZI  Zimbabwe            Harare   
+9484         ZW        ZWE          716   ZI  Zimbabwe            Harare   
+9485         ZW        ZWE          716   ZI  Zimbabwe            Harare   
+9486         ZW        ZWE          716   ZI  Zimbabwe            Harare   
+
+      area_km2  population continent country_code  year         value  
+0        468.0       84000        EU          AND  1970  7.861921e+07  
+1        468.0       84000        EU          AND  1971  8.940982e+07  
+2        468.0       84000        EU          AND  1972  1.134082e+08  
+3        468.0       84000        EU          AND  1973  1.508201e+08  
+4        468.0       84000        EU          AND  1974  1.865587e+08  
+...        ...         ...       ...          ...   ...           ...  
+9482  390580.0    13061000        AF          ZWE  2013  1.909102e+10  
+9483  390580.0    13061000        AF          ZWE  2014  1.949552e+10  
+9484  390580.0    13061000        AF          ZWE  2015  1.996312e+10  
+9485  390580.0    13061000        AF          ZWE  2016  2.054868e+10  
+9486  390580.0    13061000        AF          ZWE  2017  2.281301e+10  
+
+[9487 rows x 12 columns]</pre>
 </div>
+
 </div>
 
 </div>
@@ -3804,19 +3824,28 @@ gdp_2017</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/116080841.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>gdp_2017 <span class="ansi-blue-fg">=</span> gdp<span class="ansi-blue-fg">.</span>filter<span class="ansi-blue-fg">(</span>gdp<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;year&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">2017</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> gdp_2017
 
-<span class="ansi-red-fg">NameError</span>: name &#39;gdp&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>    country_code  year         value
+0            ABW  2017  2.700559e+09
+1            AFG  2017  2.019176e+10
+2            AGO  2017  1.221238e+11
+3            ALB  2017  1.302506e+10
+4            AND  2017  3.013387e+09
+..           ...   ...           ...
+242          XKX  2017  7.227700e+09
+243          YEM  2017  2.681870e+10
+244          ZAF  2017  3.495541e+11
+245          ZMB  2017  2.586814e+10
+246          ZWE  2017  2.281301e+10
+
+[247 rows x 3 columns]</pre>
 </div>
+
 </div>
 
 </div>
@@ -3881,20 +3910,41 @@ countries_and_gdp[countries, gdp_2017]</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9471/2463015432.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> countries_and_gdp = countries.inner_join(gdp_2017,
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                                          predicates=countries[&#39;iso_alpha3&#39;] == gdp_2017[&#39;country_code&#39;])
-<span class="ansi-green-intense-fg ansi-bold">      3</span> countries_and_gdp<span class="ansi-blue-fg">[</span>countries<span class="ansi-blue-fg">,</span> gdp_2017<span class="ansi-blue-fg">]</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>    iso_alpha2 iso_alpha3  iso_numeric fips          name           capital  \
+0           AW        ABW          533   AA         Aruba        Oranjestad   
+1           AF        AFG            4   AF   Afghanistan             Kabul   
+2           AO        AGO           24   AO        Angola            Luanda   
+3           AL        ALB            8   AL       Albania            Tirana   
+4           AD        AND           20   AN       Andorra  Andorra la Vella   
+..         ...        ...          ...  ...           ...               ...   
+196         XK        XKX            0   KV        Kosovo          Pristina   
+197         YE        YEM          887   YM         Yemen             Sanaa   
+198         ZA        ZAF          710   SF  South Africa          Pretoria   
+199         ZM        ZMB          894   ZA        Zambia            Lusaka   
+200         ZW        ZWE          716   ZI      Zimbabwe            Harare   
+
+      area_km2  population continent country_code  year         value  
+0        193.0       71566        NA          ABW  2017  2.700559e+09  
+1     647500.0    29121286        AS          AFG  2017  2.019176e+10  
+2    1246700.0    13068161        AF          AGO  2017  1.221238e+11  
+3      28748.0     2986952        EU          ALB  2017  1.302506e+10  
+4        468.0       84000        EU          AND  2017  3.013387e+09  
+..         ...         ...       ...          ...   ...           ...  
+196    10908.0     1800000        EU          XKX  2017  7.227700e+09  
+197   527970.0    23495361        AS          YEM  2017  2.681870e+10  
+198  1219912.0    49000000        AF          ZAF  2017  3.495541e+11  
+199   752614.0    13460305        AF          ZMB  2017  2.586814e+10  
+200   390580.0    13061000        AF          ZWE  2017  2.281301e+10  
+
+[201 rows x 12 columns]</pre>
 </div>
+
 </div>
 
 </div>
