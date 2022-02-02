@@ -2798,7 +2798,7 @@ connection = ibis.sqlite.connect(os.path.join(tempfile.gettempdir(), 'geography.
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14774/2248260546.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9576/2248260546.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      5</span> ibis<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">.</span>interactive <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">True</span>
 <span class="ansi-green-intense-fg ansi-bold">      6</span> 
 <span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>connection <span class="ansi-blue-fg">=</span> ibis<span class="ansi-blue-fg">.</span>sqlite<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span>os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>tempfile<span class="ansi-blue-fg">.</span>gettempdir<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;geography.db&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
@@ -2831,7 +2831,7 @@ connection = ibis.sqlite.connect(os.path.join(tempfile.gettempdir(), 'geography.
 </span><span class="ansi-green-intense-fg ansi-bold">    131</span>                 errno<span class="ansi-blue-fg">.</span>ENOENT<span class="ansi-blue-fg">,</span> os<span class="ansi-blue-fg">.</span>strerror<span class="ansi-blue-fg">(</span>errno<span class="ansi-blue-fg">.</span>ENOENT<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> path
 <span class="ansi-green-intense-fg ansi-bold">    132</span>             )
 
-<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/tmp/nix-shell.kFxT6O/geography.db&#39;</pre>
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/tmp/nix-shell.3xb455/geography.db&#39;</pre>
 </div>
 </div>
 
@@ -2901,7 +2901,7 @@ countries.limit(5)</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14774/109495392.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9576/109495392.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries <span class="ansi-blue-fg">=</span> connection<span class="ansi-blue-fg">.</span>table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;countries&#39;</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> countries<span class="ansi-blue-fg">.</span>limit<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">)</span>
 
@@ -2974,7 +2974,7 @@ countries.limit(5)</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14774/1293566438.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9576/1293566438.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">.</span>area_km2<span class="ansi-blue-fg">.</span>mean<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
@@ -3050,7 +3050,7 @@ expr</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14774/3663544737.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9576/3663544737.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>cond <span class="ansi-blue-fg">=</span> countries<span class="ansi-blue-fg">.</span>area_km2 <span class="ansi-blue-fg">&gt;</span> countries<span class="ansi-blue-fg">.</span>area_km2<span class="ansi-blue-fg">.</span>mean<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> expr <span class="ansi-blue-fg">=</span> countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">(</span>countries<span class="ansi-blue-fg">.</span>continent <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#39;EU&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">&amp;</span> cond<span class="ansi-blue-fg">]</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> expr
@@ -3127,7 +3127,7 @@ countries[(countries.continent == 'EU') & (countries.area_km2 > conditional_avg)
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14774/2936447220.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9576/2936447220.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>conditional_avg <span class="ansi-blue-fg">=</span> countries<span class="ansi-blue-fg">[</span>countries<span class="ansi-blue-fg">.</span>continent <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#39;AF&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>area_km2<span class="ansi-blue-fg">.</span>mean<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">(</span>countries<span class="ansi-blue-fg">.</span>continent <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#39;EU&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">&amp;</span> <span class="ansi-blue-fg">(</span>countries<span class="ansi-blue-fg">.</span>area_km2 <span class="ansi-blue-fg">&gt;</span> conditional_avg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
 
@@ -3203,7 +3203,7 @@ gdp</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14774/3695892081.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9576/3695892081.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>gdp <span class="ansi-blue-fg">=</span> connection<span class="ansi-blue-fg">.</span>table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;gdp&#39;</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> gdp
 
@@ -3270,7 +3270,7 @@ countries[cond]['name']</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14774/1483747744.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9576/1483747744.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> cond = ((gdp.country_code == countries.iso_alpha3) &amp;
 </span><span class="ansi-green-intense-fg ansi-bold">      2</span>         (gdp.value &gt; 3e12)).any()
 <span class="ansi-green-intense-fg ansi-bold">      3</span> 
@@ -3385,7 +3385,7 @@ metrics = [countries.count().name('# countries'),
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14774/76108257.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9576/76108257.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> arctic = countries.name.isin([&#39;United States&#39;,
 </span><span class="ansi-green-intense-fg ansi-bold">      2</span>                               <span class="ansi-blue-fg">&#39;Canada&#39;</span><span class="ansi-blue-fg">,</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span>                               <span class="ansi-blue-fg">&#39;Finland&#39;</span><span class="ansi-blue-fg">,</span>

@@ -2728,7 +2728,7 @@ countries = connection.table('countries')</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14694/3409734129.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9496/3409734129.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> 
 <span class="ansi-green-intense-fg ansi-bold">      5</span> 
 <span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg"> </span>connection <span class="ansi-blue-fg">=</span> ibis<span class="ansi-blue-fg">.</span>sqlite<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span>os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>tempfile<span class="ansi-blue-fg">.</span>gettempdir<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;geography.db&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
@@ -2762,7 +2762,7 @@ countries = connection.table('countries')</div>
 </span><span class="ansi-green-intense-fg ansi-bold">    131</span>                 errno<span class="ansi-blue-fg">.</span>ENOENT<span class="ansi-blue-fg">,</span> os<span class="ansi-blue-fg">.</span>strerror<span class="ansi-blue-fg">(</span>errno<span class="ansi-blue-fg">.</span>ENOENT<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> path
 <span class="ansi-green-intense-fg ansi-bold">    132</span>             )
 
-<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/tmp/nix-shell.kFxT6O/geography.db&#39;</pre>
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/tmp/nix-shell.3xb455/geography.db&#39;</pre>
 </div>
 </div>
 
@@ -2836,7 +2836,7 @@ countries['name', 'continent', 'population'].limit(3)</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14694/3046386112.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9496/3046386112.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> ibis<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">.</span>interactive <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">True</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> 
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;name&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;continent&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;population&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>limit<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
@@ -2915,7 +2915,7 @@ countries['name', 'continent', 'population'].limit(3)</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14694/2845444435.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9496/2845444435.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> ibis<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">.</span>interactive <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">False</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> 
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;name&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;continent&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;population&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>limit<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
@@ -3015,7 +3015,7 @@ type(countries_expression)</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14694/2036846347.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9496/2036846347.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries_expression <span class="ansi-blue-fg">=</span> countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;name&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;continent&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;population&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>limit<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> type<span class="ansi-blue-fg">(</span>countries_expression<span class="ansi-blue-fg">)</span>
 
@@ -3092,7 +3092,7 @@ are done, we can simply request it from the database using the method <code>.exe
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14694/837780524.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9496/837780524.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries_expression<span class="ansi-blue-fg">.</span>execute<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">NameError</span>: name &#39;countries_expression&#39; is not defined</pre>
@@ -3167,7 +3167,7 @@ population_in_millions</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14694/420338612.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9496/420338612.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>population_in_millions <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;population&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">/</span> <span class="ansi-cyan-fg">1_000_000</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>name<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;population_in_millions&#39;</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> population_in_millions
 
@@ -3240,7 +3240,7 @@ population_in_millions</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14694/2022427798.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9496/2022427798.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>type<span class="ansi-blue-fg">(</span>population_in_millions<span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">NameError</span>: name &#39;population_in_millions&#39; is not defined</pre>
@@ -3312,7 +3312,7 @@ population_in_millions</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14694/2645050452.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9496/2645050452.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;name&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;continent&#39;</span><span class="ansi-blue-fg">,</span> population_in_millions<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>limit<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">NameError</span>: name &#39;countries&#39; is not defined</pre>
@@ -3391,7 +3391,7 @@ countries['name', 'continent', population_in_millions].limit(3).execute()</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14694/4000540429.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9496/4000540429.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> ibis<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">.</span>verbose <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">True</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> 
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;name&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;continent&#39;</span><span class="ansi-blue-fg">,</span> population_in_millions<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>limit<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>execute<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
@@ -3563,7 +3563,7 @@ countries['name', 'continent', population_in_millions].limit(3).execute()</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.kFxT6O/ipykernel_14694/4209671310.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.3xb455/ipykernel_9496/4209671310.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> ibis<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">.</span>verbose_log <span class="ansi-blue-fg">=</span> log_query_to_file
 <span class="ansi-green-intense-fg ansi-bold">      4</span> 
 <span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg"> </span>countries<span class="ansi-blue-fg">.</span>execute<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
