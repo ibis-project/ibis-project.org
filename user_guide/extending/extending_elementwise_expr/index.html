@@ -3097,7 +3097,7 @@ con = ibis.sqlite.connect(db_fname)</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.SJyRSL/ipykernel_10362/1402839872.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.km4gv2/ipykernel_9873/1402839872.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> db_fname <span class="ansi-blue-fg">=</span> str<span class="ansi-blue-fg">(</span>pathlib<span class="ansi-blue-fg">.</span>Path<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>resolve<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>parent<span class="ansi-blue-fg">.</span>parent<span class="ansi-blue-fg">.</span>parent <span class="ansi-blue-fg">/</span> <span class="ansi-blue-fg">&#39;tutorial_data&#39;</span> <span class="ansi-blue-fg">/</span> <span class="ansi-blue-fg">&#39;geography.db&#39;</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      5</span> 
 <span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg"> </span>con <span class="ansi-blue-fg">=</span> ibis<span class="ansi-blue-fg">.</span>sqlite<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span>db_fname<span class="ansi-blue-fg">)</span>
@@ -3200,7 +3200,7 @@ independence</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.SJyRSL/ipykernel_10362/348294214.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.km4gv2/ipykernel_9873/348294214.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>independence <span class="ansi-blue-fg">=</span> con<span class="ansi-blue-fg">.</span>table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;independence&#39;</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> independence
 
@@ -3263,7 +3263,7 @@ day</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.SJyRSL/ipykernel_10362/1631558624.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.km4gv2/ipykernel_9873/1631558624.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>day <span class="ansi-blue-fg">=</span> independence<span class="ansi-blue-fg">.</span>independence_date<span class="ansi-blue-fg">.</span>cast<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;string&#39;</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> day
 
@@ -3326,7 +3326,7 @@ julianday_expr</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.SJyRSL/ipykernel_10362/3691021987.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.km4gv2/ipykernel_9873/3691021987.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>julianday_expr <span class="ansi-blue-fg">=</span> day<span class="ansi-blue-fg">.</span>julianday<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> julianday_expr
 
@@ -3389,7 +3389,7 @@ print(sql_expr)</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.SJyRSL/ipykernel_10362/3392720956.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.km4gv2/ipykernel_9873/3392720956.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>sql_expr <span class="ansi-blue-fg">=</span> julianday_expr<span class="ansi-blue-fg">.</span>compile<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>sql_expr<span class="ansi-blue-fg">)</span>
 
@@ -3452,7 +3452,7 @@ result.head()</div>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.SJyRSL/ipykernel_10362/3852696727.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.km4gv2/ipykernel_9873/3852696727.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>result <span class="ansi-blue-fg">=</span> julianday_expr<span class="ansi-blue-fg">.</span>execute<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> result<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
@@ -3638,7 +3638,7 @@ class="
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/nix-shell.SJyRSL/ipykernel_10362/3018793693.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/nix-shell.km4gv2/ipykernel_9873/3018793693.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>con<span class="ansi-blue-fg">.</span>execute<span class="ansi-blue-fg">(</span>julianday_scalar<span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">NameError</span>: name &#39;con&#39; is not defined</pre>
