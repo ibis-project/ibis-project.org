@@ -1346,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="collections.md" class="md-nav__link">
+      <a href="collections/" class="md-nav__link">
         Collections
       </a>
     </li>
@@ -1505,7 +1505,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr" class="md-nav__link">
     Expr
   </a>
   
@@ -1513,7 +1513,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr-attributes" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr-attributes" class="md-nav__link">
     Attributes
   </a>
   
@@ -1521,14 +1521,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr._key" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr._key" class="md-nav__link">
     _key
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr._safe_name" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr._safe_name" class="md-nav__link">
     _safe_name
   </a>
   
@@ -1540,7 +1540,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr-methods" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr-methods" class="md-nav__link">
     Methods
   </a>
   
@@ -1548,49 +1548,49 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr.__call__" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr.__call__" class="md-nav__link">
     __call__()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr._find_backends" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr._find_backends" class="md-nav__link">
     _find_backends()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr.compile" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr.compile" class="md-nav__link">
     compile()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr.execute" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr.execute" class="md-nav__link">
     execute()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr.pipe" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr.pipe" class="md-nav__link">
     pipe()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr.verify" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr.verify" class="md-nav__link">
     verify()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.Expr.visualize" class="md-nav__link">
+  <a href="#ibis.expr.types.core.Expr.visualize" class="md-nav__link">
     visualize()
   </a>
   
@@ -1631,7 +1631,7 @@
 
 
 
-<h2 id="ibis.expr.types.Expr" class="doc doc-heading">
+<h2 id="ibis.expr.types.core.Expr" class="doc doc-heading">
         <code>
 Expr        </code>
 
@@ -1651,14 +1651,14 @@ Expr        </code>
 
 
 
-<h3 id="ibis.expr.types.Expr-attributes">Attributes</h3>
+<h3 id="ibis.expr.types.core.Expr-attributes">Attributes</h3>
 
 
   <div class="doc doc-object doc-attribute">
 
 
 
-<h4 id="ibis.expr.types.Expr._key" class="doc doc-heading">
+<h4 id="ibis.expr.types.core.Expr._key" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">_key</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span></code>
 
   <span class="doc doc-properties">
@@ -1697,7 +1697,7 @@ Expr        </code>
 
 
 
-<h4 id="ibis.expr.types.Expr._safe_name" class="doc doc-heading">
+<h4 id="ibis.expr.types.core.Expr._safe_name" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">_safe_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span></code>
 
   <span class="doc doc-properties">
@@ -1733,14 +1733,14 @@ Expr        </code>
 
 
 
-<h3 id="ibis.expr.types.Expr-methods">Methods</h3>
+<h3 id="ibis.expr.types.core.Expr-methods">Methods</h3>
 
 
   <div class="doc doc-object doc-method">
 
 
 
-<h4 id="ibis.expr.types.Expr.__call__" class="doc doc-heading">
+<h4 id="ibis.expr.types.core.Expr.__call__" class="doc doc-heading">
 <code class="highlight language-python"><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
@@ -1847,7 +1847,7 @@ keyword</p></td>
 
 
 
-<h4 id="ibis.expr.types.Expr._find_backends" class="doc doc-heading">
+<h4 id="ibis.expr.types.core.Expr._find_backends" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">_find_backends</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
@@ -1888,7 +1888,7 @@ keyword</p></td>
 
 
 
-<h4 id="ibis.expr.types.Expr.compile" class="doc doc-heading">
+<h4 id="ibis.expr.types.core.Expr.compile" class="doc doc-heading">
 <code class="highlight language-python"><span class="nb">compile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timecontext</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
@@ -1924,7 +1924,7 @@ keyword</p></td>
 
 
 
-<h4 id="ibis.expr.types.Expr.execute" class="doc doc-heading">
+<h4 id="ibis.expr.types.core.Expr.execute" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">timecontext</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
@@ -1993,7 +1993,7 @@ execute will result in an error.</p></td>
 
 
 
-<h4 id="ibis.expr.types.Expr.pipe" class="doc doc-heading">
+<h4 id="ibis.expr.types.core.Expr.pipe" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">pipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
@@ -2092,7 +2092,7 @@ keyword</p></td>
 
 
 
-<h4 id="ibis.expr.types.Expr.verify" class="doc doc-heading">
+<h4 id="ibis.expr.types.core.Expr.verify" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">verify</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
@@ -2112,7 +2112,7 @@ keyword</p></td>
 
 
 
-<h4 id="ibis.expr.types.Expr.visualize" class="doc doc-heading">
+<h4 id="ibis.expr.types.core.Expr.visualize" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">visualize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;svg&#39;</span><span class="p">)</span></code>
 
 
