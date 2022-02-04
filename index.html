@@ -272,40 +272,6 @@
     Comparison to other tools
   </a>
   
-    <nav class="md-nav" aria-label="Comparison to other tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-not-use-pandas" class="md-nav__link">
-    Why not use pandas?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-not-use-sql" class="md-nav__link">
-    Why not use SQL?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-not-use-sqlalchemy" class="md-nav__link">
-    Why not use SQLAlchemy?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-not-use-dask" class="md-nav__link">
-    Why not use Dask?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1379,7 +1345,7 @@
   
     <li class="md-nav__item">
       <a href="api/expressions/generic/" class="md-nav__link">
-        Generic Value Expressions
+        Generic Values
       </a>
     </li>
   
@@ -1393,7 +1359,7 @@
   
     <li class="md-nav__item">
       <a href="api/expressions/numeric/" class="md-nav__link">
-        Numbers + Booleans
+        Numeric + Boolean
       </a>
     </li>
   
@@ -1434,8 +1400,8 @@
   
   
     <li class="md-nav__item">
-      <a href="api/expressions/complex_types/" class="md-nav__link">
-        Complex Types
+      <a href="api/expressions/collections.md" class="md-nav__link">
+        Collections
       </a>
     </li>
   
@@ -1616,40 +1582,6 @@
     Comparison to other tools
   </a>
   
-    <nav class="md-nav" aria-label="Comparison to other tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-not-use-pandas" class="md-nav__link">
-    Why not use pandas?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-not-use-sql" class="md-nav__link">
-    Why not use SQL?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-not-use-sqlalchemy" class="md-nav__link">
-    Why not use SQLAlchemy?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-not-use-dask" class="md-nav__link">
-    Why not use Dask?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1693,8 +1625,7 @@ multiple engines.</p>
 <li>In memory analytics: <a href="/backends/pandas">pandas</a>, <a href="/backends/dask">Dask</a></li>
 </ul>
 <h2 id="example">Example</h2>
-<p>The next example is all the code you need to connect to a database with a
-countries database, and compute the number of citizens per squared kilometer in Asia:</p>
+<p>Here's Ibis computing the number of citizens per squared kilometer in Asia:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">db</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;geography.db&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">countries</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;countries&#39;</span><span class="p">)</span>
@@ -1703,36 +1634,234 @@ countries database, and compute the number of citizens per squared kilometer in 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">density_in_asia</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 <span class="mf">130.7019141926602</span>
 </code></pre></div>
-<p>Learn more about Ibis in <a href="/tutorial/01-Introduction-to-Ibis">our tutorial</a>.</p>
-<h2 id="comparison-to-other-tools">Comparison to other tools</h2>
 <div class="admonition tip">
-<p class="admonition-title">Coming from SQL?</p>
-<p>Check out <a href="/user_guide/sql">Ibis for SQL Programmers</a>!</p>
+<p class="admonition-title">Learn more!</p>
+<p>Learn more about Ibis in <a href="/tutorial/01-Introduction-to-Ibis">our tutorial</a>.</p>
 </div>
-<h3 id="why-not-use-pandas">Why not use <a href="https://pandas.pydata.org/">pandas</a>?</h3>
-<p>pandas is great for many use cases. But pandas loads the data into the
-memory of the local host, and performs the computations on it.</p>
-<p>Ibis instead, leaves the data in its storage, and performs the computations
-there. This means that even if your data is distributed, or it requires
-GPU accelarated speed, Ibis code will be able to benefit from your storage
-capabilities.</p>
-<h3 id="why-not-use-sql">Why not use SQL?</h3>
-<p>SQL is widely used and very convenient when writing simple queries. But as
-the complexity of operations grow, SQL can become very difficult to deal with.</p>
-<p>With Ibis, you can take fully advantage of software engineering techniques to
-keep your code readable and maintainable, while writing very complex analytics
-code.</p>
-<h3 id="why-not-use-sqlalchemy">Why not use <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>?</h3>
-<p>SQLAlchemy is very convenient as an ORM (Object Relational Mapper), providing
-a Python interface to SQL databases. Ibis uses SQLAlchemy internally, but aims
-to provide a friendlier syntax for analytics code. And Ibis is also not limited
-to SQL databases, but also can connect to distributed platforms and in-memory
-representations.</p>
-<h3 id="why-not-use-dask">Why not use <a href="https://dask.org/">Dask</a>?</h3>
-<p>Dask provides advanced parallelism, and can distribute pandas jobs. Ibis can
-process data in a similar way, but for a different number of backends. For
-example, given a Spark cluster, Ibis allows to perform analytics using it,
-with a familiar Python syntax. Ibis supports Dask as a backend.</p>
+<h2 id="comparison-to-other-tools">Comparison to other tools</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SQL</label><label for="__tabbed_1_2">SQLAlchemy</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<details class="tip"><summary>Coming from SQL?</summary><p>Check out <a href="/user_guide/sql">Ibis for SQL Programmers</a>!</p>
+</details>
+<p>Ibis gives you the benefit of a programming language. You don't need to
+sacrifice maintainability to get to those insights!</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">SQL</label><label for="__tabbed_2_2">Ibis</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">docs/example.sql</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="n">acq_ipos</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">num_investments</span><span class="p">::</span><span class="nb">float</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">acq_rate</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="k">CASE</span><span class="w"></span>
+<span class="w">      </span><span class="k">WHEN</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">investor_name</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;NO INVESTOR&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="k">ELSE</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">investor_name</span><span class="w"></span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">investor_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">permalink</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">num_investments</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="k">DISTINCT</span><span class="w"></span>
+<span class="w">        </span><span class="k">CASE</span><span class="w"></span>
+<span class="w">          </span><span class="k">WHEN</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;ipo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;acquired&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w"></span>
+<span class="w">            </span><span class="k">c</span><span class="p">.</span><span class="n">permalink</span><span class="w"></span>
+<span class="w">          </span><span class="k">ELSE</span><span class="w"> </span><span class="k">NULL</span><span class="w"></span>
+<span class="w">        </span><span class="k">END</span><span class="w"></span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">acq_ipos</span><span class="w"></span>
+<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">crunchbase_companies</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">c</span><span class="w"></span>
+<span class="w">  </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">crunchbase_investments</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">permalink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">company_permalink</span><span class="w"></span>
+<span class="w">  </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">  </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">DESC</span><span class="w"></span>
+<span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<div class="tabbed-block">
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">docs/example.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;crunchbase.db&quot;</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;companies&quot;</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;investors&quot;</span><span class="p">)</span>
+
+<span class="n">expr</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">left_join</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">permalink</span> <span class="o">==</span> <span class="n">i</span><span class="o">.</span><span class="n">company_permalink</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">investor_name</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">investor_name</span><span class="o">.</span><span class="n">ifnull</span><span class="p">(</span><span class="s2">&quot;NO INVESTOR&quot;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+        <span class="n">num_investments</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">permalink</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+        <span class="n">acq_ipos</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">isin</span><span class="p">((</span><span class="s2">&quot;ipo&quot;</span><span class="p">,</span> <span class="s2">&quot;acquired&quot;</span><span class="p">))</span>
+        <span class="o">.</span><span class="n">ifelse</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">permalink</span><span class="p">,</span> <span class="n">ibis</span><span class="o">.</span><span class="n">NA</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">acq_rate</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">acq_ipos</span> <span class="o">/</span> <span class="n">t</span><span class="o">.</span><span class="n">num_investments</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<p>Ibis aims to be more concise and composable than
+<a href="https://www.sqlalchemy.org/">SQLAlchemy</a> when writing interactive
+analytics code.</p>
+<div class="admonition success">
+<p class="admonition-title">Ibis <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" />'s SQLAlchemy</p>
+<p>Ibis generates SQLAlchemy expressions for some of our backends
+including the <a href="/backends/postgres">PostgreSQL</a> and
+<a href="/backends/sqlite">SQLite</a> backends!</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">SQLAlchemy</label><label for="__tabbed_3_2">Ibis</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">docs/sqlalchemy_example.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sqlalchemy</span> <span class="k">as</span> <span class="nn">sa</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;companies&quot;</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;investors&quot;</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">sa</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">sa</span><span class="o">.</span><span class="n">case</span><span class="p">(</span>
+                <span class="p">[(</span><span class="n">i</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">investor_name</span><span class="o">.</span><span class="n">is_</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span> <span class="s2">&quot;NO INVESTOR&quot;</span><span class="p">)],</span>
+                <span class="n">else_</span><span class="o">=</span><span class="n">i</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">investor_name</span><span class="p">,</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;investor_name&quot;</span><span class="p">),</span>
+            <span class="n">sa</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">permalink</span><span class="o">.</span><span class="n">distinct</span><span class="p">())</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;num_investments&quot;</span><span class="p">),</span>
+            <span class="n">sa</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">(</span>
+                <span class="n">sa</span><span class="o">.</span><span class="n">case</span><span class="p">(</span>
+                    <span class="p">[(</span><span class="n">c</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">in_</span><span class="p">((</span><span class="s2">&quot;ipo&quot;</span><span class="p">,</span> <span class="s2">&quot;acquired&quot;</span><span class="p">)),</span> <span class="n">c</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">permalink</span><span class="p">)]</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;acq_ipos&quot;</span><span class="p">),</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">select_from</span><span class="p">(</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="n">i</span><span class="p">,</span> <span class="n">onclause</span><span class="o">=</span><span class="n">c</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">permalink</span> <span class="o">==</span> <span class="n">i</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">company_permalink</span><span class="p">,</span> <span class="n">isouter</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">sa</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">select</span><span class="p">([(</span><span class="n">a</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">acq_ipos</span> <span class="o">/</span> <span class="n">a</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">num_investments</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;acq_rate&quot;</span><span class="p">)])</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<div class="tabbed-block">
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">docs/example.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;crunchbase.db&quot;</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;companies&quot;</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;investors&quot;</span><span class="p">)</span>
+
+<span class="n">expr</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">left_join</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">permalink</span> <span class="o">==</span> <span class="n">i</span><span class="o">.</span><span class="n">company_permalink</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">investor_name</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">investor_name</span><span class="o">.</span><span class="n">ifnull</span><span class="p">(</span><span class="s2">&quot;NO INVESTOR&quot;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+        <span class="n">num_investments</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">permalink</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+        <span class="n">acq_ipos</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">isin</span><span class="p">((</span><span class="s2">&quot;ipo&quot;</span><span class="p">,</span> <span class="s2">&quot;acquired&quot;</span><span class="p">))</span>
+        <span class="o">.</span><span class="n">ifelse</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">permalink</span><span class="p">,</span> <span class="n">ibis</span><span class="o">.</span><span class="n">NA</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">acq_rate</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">acq_ipos</span> <span class="o">/</span> <span class="n">t</span><span class="o">.</span><span class="n">num_investments</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
               
             </article>
