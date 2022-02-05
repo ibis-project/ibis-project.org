@@ -1657,9 +1657,25 @@ nix-shell
 </li>
 <li>
 <p>Create a Conda environment from a lock file in the repo:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux</label><label for="__tabbed_2_2">MacOS</label><label for="__tabbed_2_3">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> ibis
-conda create -n ibis-dev -f conda-lock/&lt;platform-64-pyver&gt;.lock
+conda create -n ibis-dev --file<span class="o">=</span>conda-lock/linux-64-3.9.lock
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ibis
+conda create -n ibis-dev --file<span class="o">=</span>conda-lock/osx-64-3.9.lock
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ibis
+conda create -n ibis-dev --file<span class="o">=</span>conda-lock/win-64-3.9.lock
+</code></pre></div>
+</div>
+</div>
+</div>
 </li>
 <li>
 <p>Activate the environment</p>
