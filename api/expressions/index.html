@@ -1548,13 +1548,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ibis.expr.types.core.Expr.__call__" class="md-nav__link">
-    __call__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.expr.types.core.Expr._find_backends" class="md-nav__link">
     _find_backends()
   </a>
@@ -1734,108 +1727,6 @@ Expr        </code>
 
 
 <h3 id="ibis.expr.types.core.Expr-methods">Methods</h3>
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h4 id="ibis.expr.types.core.Expr.__call__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-</h4>
-
-    <div class="doc doc-contents ">
-
-      <p>Compose <code>f</code> with <code>self</code>.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>f</code></td>
-        <td><code>None</code></td>
-        <td><p>If the expression needs to be passed as anything other than the
-first argument to the function, pass a tuple with the argument
-name. For example, (f, 'data') if the function f expects a 'data'
-keyword</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>args</code></td>
-        <td><code>Any</code></td>
-        <td><p>Positional arguments to <code>f</code></p></td>
-        <td><code>()</code></td>
-      </tr>
-      <tr>
-        <td><code>kwargs</code></td>
-        <td><code>Any</code></td>
-        <td><p>Keyword arguments to <code>f</code></p></td>
-        <td><code>{}</code></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">result1</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">result1</span>  <span class="c1"># doctest: +NORMALIZE_WHITESPACE</span>
-<span class="n">ref_0</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">a</span> <span class="p">:</span> <span class="n">int64</span>
-    <span class="n">b</span> <span class="p">:</span> <span class="n">string</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">Multiply</span><span class="p">[</span><span class="n">int64</span><span class="o">*</span><span class="p">]</span>
-  <span class="n">left</span><span class="p">:</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">Add</span><span class="p">[</span><span class="n">int64</span><span class="o">*</span><span class="p">]</span>
-      <span class="n">left</span><span class="p">:</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">int64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;a&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
-      <span class="n">right</span><span class="p">:</span>
-        <span class="n">Literal</span><span class="p">[</span><span class="n">int8</span><span class="p">]</span>
-          <span class="mi">1</span>
-  <span class="n">right</span><span class="p">:</span>
-    <span class="n">Literal</span><span class="p">[</span><span class="n">int8</span><span class="p">]</span>
-      <span class="mi">2</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">result2</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">))</span>  <span class="c1"># equivalent to the above</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">result1</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">result2</span><span class="p">)</span>
-<span class="kc">True</span>
-</code></pre></div>
-
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>Expr</code></td>
-      <td><p>Result type of passed function</p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
 
 
 
