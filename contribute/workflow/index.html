@@ -1726,14 +1726,18 @@ no changes added to commit <span class="o">(</span>use <span class="s2">&quot;gi
 <p>Make sure you've set up a <a href="../environment/">development environment</a>
 before proceeding</p>
 </div>
-<p>To run a subset of the ibis tests use the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># The trailing comma in {sqlite/,} is intentional!</span>
-
-<span class="nv">PYTEST_BACKENDS</span><span class="o">=</span><span class="s2">&quot;sqlite&quot;</span> pytest ibis/backends/<span class="o">{</span>sqlite/,<span class="o">}</span>/tests
+<p>Run the test suite:</p>
+<div class="highlight"><pre><span></span><code>pytest -m core
 </code></pre></div>
-<p>You can change <code>PYTEST_BACKENDS="sqlite"</code> to include one or more space-separated
-supported backends that you want to test.</p>
-<p>Setting <code>PYTEST_BACKENDS</code> unless you want to run the backend test suite</p>
+<div class="admonition tip">
+<p class="admonition-title">Each backend has a <code>pytest</code> marker</p>
+<p>You can run the tests for a specific backend using</p>
+<div class="highlight"><pre><span></span><code>pytest -m <span class="nv">$the_backend_name</span>
+</code></pre></div>
+<p>For example, to run SQLite tests:</p>
+<div class="highlight"><pre><span></span><code>pytest -m sqlite
+</code></pre></div>
+</div>
 <h2 id="commit-your-changes">Commit your changes</h2>
 <h3 id="required-dependencies_1">Required Dependencies</h3>
 <ul>

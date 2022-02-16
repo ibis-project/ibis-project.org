@@ -1759,8 +1759,7 @@ command fails wait a few seconds and try again</p>
 </ol>
 <h4 id="run-the-test-suite">Run the test suite</h4>
 <p>You're now ready to run the test suite for the postgres backend:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PYTEST_BACKENDS</span><span class="o">=</span>postgres
-pytest ibis/backends/postgres/tests ibis/backends/tests
+<div class="highlight"><pre><span></span><code>pytest -m postgres
 </code></pre></div>
 <p>Running the tests may take some time, but eventually they should finish successfully.</p>
 <p>Please report any failures upstream, even if you're not sure if the failure is bug.</p>
