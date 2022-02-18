@@ -1141,8 +1141,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#systems-that-can-be-tested-without-any-additional-infrastructure" class="md-nav__link">
-    Systems that can be tested without any additional infrastructure
+  <a href="#motivation" class="md-nav__link">
+    Motivation
   </a>
   
 </li>
@@ -1579,8 +1579,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#systems-that-can-be-tested-without-any-additional-infrastructure" class="md-nav__link">
-    Systems that can be tested without any additional infrastructure
+  <a href="#motivation" class="md-nav__link">
+    Motivation
   </a>
   
 </li>
@@ -1652,29 +1652,27 @@
 <h1 id="working-with-the-backend-test-suite">Working with the Backend Test Suite</h1>
 <div class="admonition danger">
 <p class="admonition-title">Before you start</p>
-<p>This section assumes you've already <a href="../environment/">set up a development environment</a>.</p>
+<p>This section assumes you have a working <a href="../environment/">development environment</a>.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">You may be able to skip this section</p>
-<p>If you haven't made changes to any core parts of ibis (e.g., <code>ibis/expr</code>)
+<p>If you haven't made changes to the core of ibis (e.g., <code>ibis/expr</code>)
 or any specific backends (<code>ibis/backends</code>) this material isn't necessary to
 follow to make a pull request.</p>
 </div>
-<p>One the primary challenges when working with the ibis codebase is testing.</p>
-<p>Ibis supports a execution against a number of backends with wildly varying
-deployment models:</p>
+<h2 id="motivation">Motivation</h2>
+<p>One the primary challenges when developing against the ibis codebase is testing
+backends that require non-trivial setup.</p>
+<p>Moreover, many of the backends that ibis works with have very different
+deployment deployment models:</p>
 <ul>
-<li>Single-node systems like SQLite</li>
-<li>Multi-node client-server systems like PostgreSQL and MySQL</li>
-<li>Systems that span a variety of different models like ClickHouse</li>
-<li>Systems that are designed to run on premises, like Impala</li>
+<li><strong>In-process</strong> systems like SQLite</li>
+<li><strong>Client-server</strong> systems like PostgreSQL and MySQL</li>
+<li>Systems that <strong>run the gamut</strong> of deployment models like ClickHouse</li>
+<li>Systems that run <strong>on-premises</strong>, like Impala</li>
 </ul>
-<p>This presents quite a challenge for testing. This page is all about how to work
-with the backend test suite.</p>
-<h2 id="systems-that-can-be-tested-without-any-additional-infrastructure">Systems that can be tested without any additional infrastructure</h2>
-<p>Many backends can be tested without <code>docker-compose</code>.</p>
-<p>The <code>sqlite</code>, <code>datafusion</code>, and any <code>pandas</code>-based backends can all be tested
-without needing to do anything except loading data.</p>
+<p>This section of the docs is all about how to work with the backend test suite
+infrastructure.</p>
 <h2 id="backend-testing-with-compose">Backend Testing with Compose</h2>
 <p>Here is the list of backends that can be tested using <code>docker-compose</code>.</p>
 <table>
@@ -1695,11 +1693,7 @@ without needing to do anything except loading data.</p>
 </tr>
 <tr>
 <td>impala</td>
-<td><code>impala</code></td>
-</tr>
-<tr>
-<td>kudu</td>
-<td><code>kudu</code>, <code>impala</code></td>
+<td><code>impala</code>, <code>kudu</code></td>
 </tr>
 <tr>
 <td>mysql</td>
