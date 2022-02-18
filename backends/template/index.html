@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://ibis-project.org/backends/sqlite/">
+        <link rel="canonical" href="https://ibis-project.org/backends/template/">
       
       <link rel="icon" href="../../static/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.11">
     
     
       
-        <title>SQLite - Ibis Project</title>
+        <title>[{{ backend_name }}]({{ backend_url }}) - Ibis Project</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sqlite" class="md-skip">
+        <a href="#backend_name" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SQLite
+              [{{ backend_name }}]({{ backend_url }})
             
           </span>
         </div>
@@ -646,14 +646,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
       
@@ -818,126 +816,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          SQLite
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../sqlite/" class="md-nav__link">
         SQLite
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    Install
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connect" class="md-nav__link">
-    Connect
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
-    API
-  </a>
-  
-    <nav class="md-nav" aria-label="API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend" class="md-nav__link">
-    Backend
-  </a>
-  
-    <nav class="md-nav" aria-label="Backend">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend-methods" class="md-nav__link">
-    Methods
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.attach" class="md-nav__link">
-    attach()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.do_connect" class="md-nav__link">
-    do_connect()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.list_tables" class="md-nav__link">
-    list_tables()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.table" class="md-nav__link">
-    table()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1619,73 +1502,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
-    API
-  </a>
-  
-    <nav class="md-nav" aria-label="API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend" class="md-nav__link">
-    Backend
-  </a>
-  
-    <nav class="md-nav" aria-label="Backend">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend-methods" class="md-nav__link">
-    Methods
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.attach" class="md-nav__link">
-    attach()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.do_connect" class="md-nav__link">
-    do_connect()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.list_tables" class="md-nav__link">
-    list_tables()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.table" class="md-nav__link">
-    table()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1698,310 +1514,33 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/ibis-project/ibis/edit/master/docs/backends/sqlite.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/ibis-project/ibis/edit/master/docs/backends/template.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="sqlite"><a href="https://www.sqlite.org/">SQLite</a></h1>
-<div class="admonition experimental">
-<p class="admonition-title">Experimental</p>
-<p>The SQLite is experimental and is subject to breaking changes.</p>
-</div>
+<h1 id="backend_name"><a href="{{ backend_url }}">{{ backend_name }}</a></h1>
 <h2 id="install">Install</h2>
-<p>Install dependencies for Ibis's SQLite backend:</p>
+<p>Install dependencies for Ibis's {{ backend_name }} backend:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>pip install <span class="s1">&#39;ibis-framework[sqlite]&#39;</span>
+<div class="highlight"><pre><span></span><code>pip install <span class="s1">&#39;ibis-framework[{{ backend_module }}]&#39;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>conda install -c conda-forge ibis-sqlite
+<div class="highlight"><pre><span></span><code>conda install -c conda-forge ibis-<span class="o">{{</span> backend_module <span class="o">}}</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <h2 id="connect">Connect</h2>
 <!-- prettier-ignore-start -->
-<p>Create a client by passing in a path to a SQLite database to <a href="#ibis.backends.sqlite.Backend.do_connect"><code>ibis.sqlite.connect</code></a>:</p>
+<p>Create a client by passing in {{ backend_param_style }} to [<code>ibis.{{ backend_module }}.connect</code>][ibis.backends.{{ backend_module }}.Backend.do_connect]:</p>
 <!-- prettier-ignore-end -->
 
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;path/to/my/sqlite.db&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="p">{{</span> <span class="n">backend_connection_example</span> <span class="p">}}</span>
 </code></pre></div>
-<h2 id="api">API</h2>
-<!-- prettier-ignore-start -->
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h3 id="ibis.backends.sqlite.Backend" class="doc doc-heading">
-        <code>
-Backend            (<a title="ibis.backends.base.sql.alchemy.BaseAlchemyBackend" href="../../api/backends/sqlalchemy/#ibis.backends.base.sql.alchemy.BaseAlchemyBackend">BaseAlchemyBackend</a>)
-        </code>
-
-
-
-</h3>
-
-    <div class="doc doc-contents first">
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-<h4 id="ibis.backends.sqlite.Backend-methods">Methods</h4>
-
-
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h5 id="ibis.backends.sqlite.Backend.attach" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">attach</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">create</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
-
-
-</h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Connect another SQLite database file to the current connection.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>name</code></td>
-        <td><code>str</code></td>
-        <td><p>Database name within SQLite</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>path</code></td>
-        <td><code>str | Path</code></td>
-        <td><p>Path to sqlite3 database file</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>create</code></td>
-        <td><code>bool</code></td>
-        <td><p>If the database file does not exist, create file if <code>True</code>
-otherwise raise an exception</p></td>
-        <td><code>False</code></td>
-      </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h5 id="ibis.backends.sqlite.Backend.do_connect" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">create</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
-
-
-</h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Create an Ibis client connected to a SQLite database.</p>
-<p>Multiple database files can be created using the <code>attach()</code> method</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>path</code></td>
-        <td><code>str | Path | None</code></td>
-        <td><p>File path to the SQLite database file. If None, creates an
-in-memory transient database and you can use attach() to add more
-files</p></td>
-        <td><code>None</code></td>
-      </tr>
-      <tr>
-        <td><code>create</code></td>
-        <td><code>bool</code></td>
-        <td><p>If the database file does not exist, create it</p></td>
-        <td><code>False</code></td>
-      </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h5 id="ibis.backends.sqlite.Backend.list_tables" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">list_tables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-</h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Return the list of table names in the current database.</p>
-<p>For some backends, the tables may be files in a directory,
-or other equivalent entities in a SQL database.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>like</code></td>
-        <td><code>str</code></td>
-        <td><p>A pattern in Python's regex format.</p></td>
-        <td><code>None</code></td>
-      </tr>
-      <tr>
-        <td><code>database</code></td>
-        <td><code>str</code></td>
-        <td><p>The database to list tables of, if not the current one.</p></td>
-        <td><code>None</code></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>list[str]</code></td>
-      <td><p>The list of the table names that match the pattern <code>like</code>.</p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h5 id="ibis.backends.sqlite.Backend.table" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-</h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Create a table expression from a table in the SQLite database.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>name</code></td>
-        <td><code>str</code></td>
-        <td><p>Table name</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>database</code></td>
-        <td><code>str | None</code></td>
-        <td><p>Name of the attached database that the table is located in.</p></td>
-        <td><code>None</code></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ir.TableExpr</code></td>
-      <td><p>Table expression</p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-<!-- prettier-ignore-end -->
 
               
             </article>
@@ -2011,41 +1550,6 @@ or other equivalent entities in a SQL database.</p>
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../pyspark/" class="md-footer__link md-footer__link--prev" aria-label="Previous: PySpark" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              PySpark
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../about/team/" class="md-footer__link md-footer__link--next" aria-label="Next: Team" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Team
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

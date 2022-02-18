@@ -1867,19 +1867,27 @@
 
 <h1 id="clickhouse"><a href="https://clickhouse.yandex/">ClickHouse</a></h1>
 <h2 id="install">Install</h2>
-<p>Install dependencies for Ibis's ClickHouse dialect (minimal supported version is <code>0.1.3</code>):</p>
+<p>Install dependencies for Ibis's ClickHouse backend:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>pip install <span class="s1">&#39;ibis-framework[clickhouse]&#39;</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>conda install -c conda-forge ibis-clickhouse
 </code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="connect">Connect</h2>
-<p>Create a client by passing in database connection parameters such as <code>host</code>,
-<code>port</code>, <code>database</code>, and <code>user</code> to :func:<code>ibis.clickhouse.connect</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">clickhouse</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;clickhouse&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">9000</span><span class="p">)</span>
+<!-- prettier-ignore-start -->
+<p>Create a client by passing in connection parameters to <a href="#ibis.backends.clickhouse.Backend.do_connect"><code>ibis.clickhouse.connect</code></a>:</p>
+<!-- prettier-ignore-end -->
+
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">clickhouse</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">9000</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="api">API</h2>
-<p>The ClickHouse client is accessible through the <code>ibis.clickhouse</code> namespace.</p>
-<p>Use <code>ibis.clickhouse.connect</code> to create a client.</p>
 <!-- prettier-ignore-start -->
 
 

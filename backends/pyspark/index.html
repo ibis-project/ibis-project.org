@@ -2087,17 +2087,29 @@
 </a>
 
 
-<h1 id="pyspark"><a href="https://spark.apache.org/sql/">PySpark</a></h1>
+<h1 id="pyspark"><a href="https://spark.apache.org/docs/latest/api/python/">PySpark</a></h1>
 <h2 id="install">Install</h2>
-<p>Install dependencies for Ibis's PySpark dialect:</p>
+<p>Install dependencies for Ibis's PySpark backend:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>pip install <span class="s1">&#39;ibis-framework[pyspark]&#39;</span>
 </code></pre></div>
-<p>or</p>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>conda install -c conda-forge ibis-pyspark
 </code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="connect">Connect</h2>
-<p>The PySpark client is accessible through the <code>ibis.pyspark</code> namespace.</p>
-<p>Use <code>ibis.pyspark.connect</code> to create a client.</p>
+<!-- prettier-ignore-start -->
+<p>Create a client by passing in PySpark things to <a href="#ibis.backends.pyspark.Backend.do_connect"><code>ibis.pyspark.connect</code></a>:</p>
+<!-- prettier-ignore-end -->
+
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ibis</span><span class="o">.</span><span class="n">pyspark</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="api">API</h2>
 <!-- prettier-ignore-start -->
 
