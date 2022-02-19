@@ -3056,13 +3056,13 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <span class="o">...</span>              <span class="o">.</span><span class="n">when</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a b&#39;</span><span class="p">)</span>
 <span class="o">...</span>              <span class="o">.</span><span class="n">else_</span><span class="p">(</span><span class="s1">&#39;null or (not a and not b)&#39;</span><span class="p">)</span>
 <span class="o">...</span>              <span class="o">.</span><span class="n">end</span><span class="p">())</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">case_expr</span>  <span class="c1"># doctest: +NORMALIZE_WHITESPACE</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">case_expr</span>
 <span class="n">ref_0</span>
 <span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
   <span class="n">schema</span><span class="p">:</span>
     <span class="n">string_col</span> <span class="p">:</span> <span class="n">string</span>
-<span class="o">&lt;</span><span class="n">BLANKLINE</span><span class="o">&gt;</span>
+
 <span class="n">SimpleCase</span><span class="p">[</span><span class="n">string</span><span class="o">*</span><span class="p">]</span>
   <span class="n">base</span><span class="p">:</span>
     <span class="n">string_col</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">string</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;string_col&#39;</span> <span class="kn">from</span> <span class="nn">table</span>

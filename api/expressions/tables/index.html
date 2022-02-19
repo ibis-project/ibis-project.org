@@ -2622,7 +2622,7 @@ columns.</p></td>
 <span class="o">...</span>     <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">schemas</span>
 <span class="o">...</span> <span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">joined1</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">cross_join</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">joined1</span>  <span class="c1"># doctest: +NORMALIZE_WHITESPACE</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">joined1</span>
 <span class="n">ref_0</span>
 <span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">name</span><span class="p">:</span> <span class="n">a</span>
@@ -3598,14 +3598,14 @@ columns.</p></td>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">qux</span><span class="o">=</span><span class="n">table</span><span class="o">.</span><span class="n">foo</span> <span class="o">+</span> <span class="n">table</span><span class="o">.</span><span class="n">bar</span><span class="p">,</span> <span class="n">baz</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span>  <span class="c1"># doctest: +NORMALIZE_WHITESPACE</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span>
 <span class="n">ref_0</span>
 <span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
   <span class="n">schema</span><span class="p">:</span>
     <span class="n">foo</span> <span class="p">:</span> <span class="n">float64</span>
     <span class="n">bar</span> <span class="p">:</span> <span class="n">float64</span>
-<span class="o">&lt;</span><span class="n">BLANKLINE</span><span class="o">&gt;</span>
+
 <span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">table</span><span class="p">:</span>
     <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
@@ -3690,14 +3690,14 @@ columns.</p></td>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">fields</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">projection</span><span class="p">([</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;b_plus_1&#39;</span><span class="p">)])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span>  <span class="c1"># doctest: +NORMALIZE_WHITESPACE</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span>
 <span class="n">ref_0</span>
 <span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
   <span class="n">schema</span><span class="p">:</span>
     <span class="n">a</span> <span class="p">:</span> <span class="n">int64</span>
     <span class="n">b</span> <span class="p">:</span> <span class="n">float64</span>
-<span class="o">&lt;</span><span class="n">BLANKLINE</span><span class="o">&gt;</span>
+
 <span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">table</span><span class="p">:</span>
     <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
@@ -3717,14 +3717,14 @@ columns.</p></td>
 </code></pre></div>
     <p>Aggregate projection</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">agg_proj</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;sum_a&#39;</span><span class="p">),</span> <span class="n">t</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;mean_b&#39;</span><span class="p">)]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">agg_proj</span>  <span class="c1"># doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">agg_proj</span>
 <span class="n">ref_0</span>
 <span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
   <span class="n">schema</span><span class="p">:</span>
     <span class="n">a</span> <span class="p">:</span> <span class="n">int64</span>
     <span class="n">b</span> <span class="p">:</span> <span class="n">float64</span>
-<span class="o">&lt;</span><span class="n">BLANKLINE</span><span class="o">&gt;</span>
+
 <span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">table</span><span class="p">:</span>
     <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
@@ -3951,14 +3951,14 @@ documentation for specifics.</p>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">fields</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">projection</span><span class="p">([</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;b_plus_1&#39;</span><span class="p">)])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span>  <span class="c1"># doctest: +NORMALIZE_WHITESPACE</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span>
 <span class="n">ref_0</span>
 <span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
   <span class="n">schema</span><span class="p">:</span>
     <span class="n">a</span> <span class="p">:</span> <span class="n">int64</span>
     <span class="n">b</span> <span class="p">:</span> <span class="n">float64</span>
-<span class="o">&lt;</span><span class="n">BLANKLINE</span><span class="o">&gt;</span>
+
 <span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">table</span><span class="p">:</span>
     <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
@@ -3978,14 +3978,14 @@ documentation for specifics.</p>
 </code></pre></div>
     <p>Aggregate projection</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">agg_proj</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;sum_a&#39;</span><span class="p">),</span> <span class="n">t</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;mean_b&#39;</span><span class="p">)]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">agg_proj</span>  <span class="c1"># doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">agg_proj</span>
 <span class="n">ref_0</span>
 <span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
   <span class="n">schema</span><span class="p">:</span>
     <span class="n">a</span> <span class="p">:</span> <span class="n">int64</span>
     <span class="n">b</span> <span class="p">:</span> <span class="n">float64</span>
-<span class="o">&lt;</span><span class="n">BLANKLINE</span><span class="o">&gt;</span>
+
 <span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">table</span><span class="p">:</span>
     <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
@@ -4595,7 +4595,7 @@ GroupedTableExpr        </code>
 <span class="o">...</span>          <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">))</span>
 <span class="o">...</span>          <span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">qux</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">baz</span><span class="o">.</span><span class="n">lag</span><span class="p">(),</span>
 <span class="o">...</span>                  <span class="n">qux2</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">baz</span><span class="o">.</span><span class="n">lead</span><span class="p">()))</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>  <span class="c1"># doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
 <span class="n">ref_0</span>
 <span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
   <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
