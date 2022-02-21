@@ -1279,6 +1279,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ibis.backends.impala.client.ImpalaTable" class="md-nav__link">
+    ImpalaTable
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3104,6 +3111,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ibis.backends.impala.client.ImpalaTable" class="md-nav__link">
+    ImpalaTable
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3731,9 +3745,7 @@ assemble the client using <code>ibis.impala.connect</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
 
 <span class="n">hdfs</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">hdfs_connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;impala&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50070</span><span class="p">)</span>
-<span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;impala&#39;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;ibis_testing&#39;</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span>
-<span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;impala&#39;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;ibis_testing&#39;</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span><span class="p">)</span>
 </code></pre></div>
 <p>Both method calls can take <code>auth_mechanism='GSSAPI'</code> or <code>auth_mechanism='LDAP'</code>
 to connect to Kerberos clusters. Depending on your cluster setup, this may also
@@ -5533,6 +5545,8 @@ Impala takes ownership of the Parquet file.</p></td>
 <!-- prettier-ignore-end -->
 
 <h2 id="hdfs-interaction">HDFS Interaction</h2>
+<p>Ibis delegates all HDFS interaction to the
+<a href="https://filesystem-spec.readthedocs.io/en/latest/"><code>fsspec</code></a> library.</p>
 <!-- prettier-ignore-start -->
 
 
@@ -5564,16 +5578,13 @@ are forwarded to that API.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
 
 <span class="n">hdfs</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">hdfs_connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">webhdfs_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">webhdfs_port</span><span class="p">)</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-    <span class="n">host</span><span class="o">=</span><span class="n">impala_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">impala_port</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span>
-<span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">impala_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">impala_port</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span><span class="p">)</span>
 </code></pre></div>
 <p>All examples here use the following block of code to connect to impala
 using docker:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
 
-<span class="n">host</span> <span class="o">=</span> <span class="s1">&#39;impala&#39;</span>
-<span class="n">hdfs</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">hdfs_connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">)</span>
+<span class="n">hdfs</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">hdfs_connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50070</span><span class="p">)</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span><span class="p">)</span>
 </code></pre></div>
 <p>You can accomplish many tasks directly through the client object, but we
@@ -5652,7 +5663,34 @@ that has additional Impala-specific methods. So you can use it
 interchangeably with any code expecting a <code>TableExpr</code>.</p>
 <p>Like all table expressions in Ibis, <code>ImpalaTable</code> has a <code>schema</code> method
 you can use to examine its schema:</p>
-<p>ImpalaTable.schema</p>
+<!-- prettier-ignore-start -->
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="ibis.backends.impala.client.ImpalaTable" class="doc doc-heading">
+        <code>
+ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../../api/expressions/tables/#ibis.expr.types.relations.TableExpr">TableExpr</a>)
+        </code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents first">
+
+      <p>A physical table in the Impala-Hive metastore</p>
+
+
+
+    </div>
+
+  </div>
+
+<!-- prettier-ignore-end -->
+
 <p>While the client has a <code>drop_table</code> method you can use to drop tables,
 the table itself has a method <code>drop</code> that you can use:</p>
 <div class="highlight"><pre><span></span><code><span class="n">table</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span>
@@ -5784,7 +5822,7 @@ expression.</p></td>
 
 <h3 id="creating-tables-from-a-table-expression">Creating tables from a table expression</h3>
 <p>If you pass an Ibis expression to <code>create_table</code>, Ibis issues a
-<code>CREATE TABLE .. AS SELECT</code> (CTAS) statement:</p>
+<code>CREATE TABLE ... AS SELECT</code> (CTAS) statement:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;functional_alltypes&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s1">&#39;string_col&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;string_freqs&#39;</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;parquet&#39;</span><span class="p">)</span>
@@ -7254,7 +7292,8 @@ directory. We need only do:</p>
 <div class="highlight"><pre><span></span><code>$ rm -rf parquet_dir/
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/__ibis/ibis-testing-data/parquet/functional_alltypes&#39;</span><span class="p">,</span>
-<span class="o">...</span>          <span class="s1">&#39;parquet_dir&#39;</span><span class="p">)</span>
+<span class="o">...</span>          <span class="s1">&#39;parquet_dir&#39;</span><span class="p">,</span>
+<span class="o">...</span>           <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="s1">&#39;/ibis/docs/source/tutorial/parquet_dir&#39;</span>
 </code></pre></div>
 <p>Now we have that directory locally:</p>
@@ -7265,18 +7304,16 @@ directory. We need only do:</p>
 </code></pre></div>
 <p>Files and directories can be written to HDFS just as easily using <code>put</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/__ibis/dir-write-example&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-<span class="o">...</span>    <span class="n">hdfs</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;parquet_dir&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="s1">&#39;/__ibis/dir-write-example&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">rm</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;parquet_dir&#39;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">&#39;/__ibis/dir-write-example&#39;</span><span class="p">)</span>
 <span class="p">[</span><span class="s1">&#39;9a41de519352ab07-4e76bc4d9fb5a789_1624886651_data.0.parq&#39;</span><span class="p">,</span>
  <span class="s1">&#39;9a41de519352ab07-4e76bc4d9fb5a78a_778826485_data.0.parq&#39;</span><span class="p">,</span>
  <span class="s1">&#39;9a41de519352ab07-4e76bc4d9fb5a78b_1277612014_data.0.parq&#39;</span><span class="p">]</span>
 </code></pre></div>
-<p>Delete files with <code>rm</code> or directories with <code>rmdir</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;/__ibis/dir-write-example&#39;</span><span class="p">)</span>
+<p>Delete files and directories with <code>rm</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">rm</span><span class="p">(</span><span class="s1">&#39;/__ibis/dir-write-example&#39;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>rm -rf parquet_dir/
 </code></pre></div>
@@ -7330,7 +7367,7 @@ that remains after your session, you can pass more information to
 point we'd like to build some helper tools that will infer the schema
 for you, all in good time.</p>
 <p>There's some CSV files in the test folder, so let's use those:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/__ibis/ibis-testing-data/csv&#39;</span><span class="p">,</span> <span class="s1">&#39;csv-files&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/__ibis/ibis-testing-data/csv&#39;</span><span class="p">,</span> <span class="s1">&#39;csv-files&#39;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="s1">&#39;/ibis/docs/source/tutorial/csv-files&#39;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>$ cat csv-files/0.csv
@@ -7387,7 +7424,7 @@ schema:</p>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/__ibis/ibis-testing-data/avro/tpch.region&#39;</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">create_parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">avro_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">avro_schema</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">table</span>
 <span class="n">Empty</span> <span class="n">DataFrame</span>
@@ -7444,7 +7481,7 @@ you want for the data files</p>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">con</span><span class="o">.</span><span class="n">create_database</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;/__ibis/my-test-database&#39;</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># you may or may not have to give the impala user write and execute permissions to &#39;/__ibis/my-test-database&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">chmod</span><span class="p">(</span><span class="s1">&#39;/__ibis/my-test-database&#39;</span><span class="p">,</span> <span class="s1">&#39;777&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span><span class="o">.</span><span class="n">chmod</span><span class="p">(</span><span class="s1">&#39;/__ibis/my-test-database&#39;</span><span class="p">,</span> <span class="mo">0o777</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">con</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;example_table&#39;</span><span class="p">,</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;functional_alltypes&#39;</span><span class="p">),</span>
 <span class="o">...</span>                  <span class="n">database</span><span class="o">=</span><span class="n">db</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
