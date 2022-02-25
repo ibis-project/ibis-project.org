@@ -2725,22 +2725,113 @@ countries['name', 'continent', 'area_km2', 'population']</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>                     name continent   area_km2  population
-0                 Andorra        EU      468.0       84000
-1    United Arab Emirates        AS    82880.0     4975593
-2             Afghanistan        AS   647500.0    29121286
-3     Antigua and Barbuda        NA      443.0       86754
-4                Anguilla        NA      102.0       13254
-..                    ...       ...        ...         ...
-247                 Yemen        AS   527970.0    23495361
-248               Mayotte        AF      374.0      159042
-249          South Africa        AF  1219912.0    49000000
-250                Zambia        AF   752614.0    13460305
-251              Zimbabwe        AF   390580.0    13061000
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-[252 rows x 4 columns]</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>continent</th>
+      <th>area_km2</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Andorra</td>
+      <td>EU</td>
+      <td>468.0</td>
+      <td>84000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>United Arab Emirates</td>
+      <td>AS</td>
+      <td>82880.0</td>
+      <td>4975593</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Afghanistan</td>
+      <td>AS</td>
+      <td>647500.0</td>
+      <td>29121286</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Antigua and Barbuda</td>
+      <td>NA</td>
+      <td>443.0</td>
+      <td>86754</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Anguilla</td>
+      <td>NA</td>
+      <td>102.0</td>
+      <td>13254</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>Yemen</td>
+      <td>AS</td>
+      <td>527970.0</td>
+      <td>23495361</td>
+    </tr>
+    <tr>
+      <th>248</th>
+      <td>Mayotte</td>
+      <td>AF</td>
+      <td>374.0</td>
+      <td>159042</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>South Africa</td>
+      <td>AF</td>
+      <td>1219912.0</td>
+      <td>49000000</td>
+    </tr>
+    <tr>
+      <th>250</th>
+      <td>Zambia</td>
+      <td>AF</td>
+      <td>752614.0</td>
+      <td>13460305</td>
+    </tr>
+    <tr>
+      <th>251</th>
+      <td>Zimbabwe</td>
+      <td>AF</td>
+      <td>390580.0</td>
+      <td>13061000</td>
+    </tr>
+  </tbody>
+</table>
+<p>252 rows × 4 columns</p>
+</div>
 </div>
 
 </div>
@@ -2838,20 +2929,77 @@ continent_name</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0             Europe
-1               Asia
-2               Asia
-3      North America
-4      North America
-           ...      
-247             Asia
-248           Africa
-249           Africa
-250           Africa
-251           Africa
-Name: tmp, Length: 252, dtype: object</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tmp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Europe</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Asia</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Asia</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>North America</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>North America</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>Asia</td>
+    </tr>
+    <tr>
+      <th>248</th>
+      <td>Africa</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>Africa</td>
+    </tr>
+    <tr>
+      <th>250</th>
+      <td>Africa</td>
+    </tr>
+    <tr>
+      <th>251</th>
+      <td>Africa</td>
+    </tr>
+  </tbody>
+</table>
+<p>252 rows × 1 columns</p>
+</div>
 </div>
 
 </div>
@@ -2998,22 +3146,113 @@ has a name when being returned.</p>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>                     name continent_name   area_km2  population
-0                 Andorra         Europe      468.0       84000
-1    United Arab Emirates           Asia    82880.0     4975593
-2             Afghanistan           Asia   647500.0    29121286
-3     Antigua and Barbuda  North America      443.0       86754
-4                Anguilla  North America      102.0       13254
-..                    ...            ...        ...         ...
-247                 Yemen           Asia   527970.0    23495361
-248               Mayotte         Africa      374.0      159042
-249          South Africa         Africa  1219912.0    49000000
-250                Zambia         Africa   752614.0    13460305
-251              Zimbabwe         Africa   390580.0    13061000
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-[252 rows x 4 columns]</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>continent_name</th>
+      <th>area_km2</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Andorra</td>
+      <td>Europe</td>
+      <td>468.0</td>
+      <td>84000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>United Arab Emirates</td>
+      <td>Asia</td>
+      <td>82880.0</td>
+      <td>4975593</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Afghanistan</td>
+      <td>Asia</td>
+      <td>647500.0</td>
+      <td>29121286</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Antigua and Barbuda</td>
+      <td>North America</td>
+      <td>443.0</td>
+      <td>86754</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Anguilla</td>
+      <td>North America</td>
+      <td>102.0</td>
+      <td>13254</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>Yemen</td>
+      <td>Asia</td>
+      <td>527970.0</td>
+      <td>23495361</td>
+    </tr>
+    <tr>
+      <th>248</th>
+      <td>Mayotte</td>
+      <td>Africa</td>
+      <td>374.0</td>
+      <td>159042</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>South Africa</td>
+      <td>Africa</td>
+      <td>1219912.0</td>
+      <td>49000000</td>
+    </tr>
+    <tr>
+      <th>250</th>
+      <td>Zambia</td>
+      <td>Africa</td>
+      <td>752614.0</td>
+      <td>13460305</td>
+    </tr>
+    <tr>
+      <th>251</th>
+      <td>Zimbabwe</td>
+      <td>Africa</td>
+      <td>390580.0</td>
+      <td>13061000</td>
+    </tr>
+  </tbody>
+</table>
+<p>252 rows × 4 columns</p>
+</div>
 </div>
 
 </div>
@@ -3081,22 +3320,113 @@ when using it in the list of columns to fetch.</p>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>                     name      continent   area_km2  population
-0                 Andorra         Europe      468.0       84000
-1    United Arab Emirates           Asia    82880.0     4975593
-2             Afghanistan           Asia   647500.0    29121286
-3     Antigua and Barbuda  North America      443.0       86754
-4                Anguilla  North America      102.0       13254
-..                    ...            ...        ...         ...
-247                 Yemen           Asia   527970.0    23495361
-248               Mayotte         Africa      374.0      159042
-249          South Africa         Africa  1219912.0    49000000
-250                Zambia         Africa   752614.0    13460305
-251              Zimbabwe         Africa   390580.0    13061000
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-[252 rows x 4 columns]</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>continent</th>
+      <th>area_km2</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Andorra</td>
+      <td>Europe</td>
+      <td>468.0</td>
+      <td>84000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>United Arab Emirates</td>
+      <td>Asia</td>
+      <td>82880.0</td>
+      <td>4975593</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Afghanistan</td>
+      <td>Asia</td>
+      <td>647500.0</td>
+      <td>29121286</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Antigua and Barbuda</td>
+      <td>North America</td>
+      <td>443.0</td>
+      <td>86754</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Anguilla</td>
+      <td>North America</td>
+      <td>102.0</td>
+      <td>13254</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>Yemen</td>
+      <td>Asia</td>
+      <td>527970.0</td>
+      <td>23495361</td>
+    </tr>
+    <tr>
+      <th>248</th>
+      <td>Mayotte</td>
+      <td>Africa</td>
+      <td>374.0</td>
+      <td>159042</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>South Africa</td>
+      <td>Africa</td>
+      <td>1219912.0</td>
+      <td>49000000</td>
+    </tr>
+    <tr>
+      <th>250</th>
+      <td>Zambia</td>
+      <td>Africa</td>
+      <td>752614.0</td>
+      <td>13460305</td>
+    </tr>
+    <tr>
+      <th>251</th>
+      <td>Zimbabwe</td>
+      <td>Africa</td>
+      <td>390580.0</td>
+      <td>13061000</td>
+    </tr>
+  </tbody>
+</table>
+<p>252 rows × 4 columns</p>
+</div>
 </div>
 
 </div>
@@ -3163,16 +3493,68 @@ when using it in the list of columns to fetch.</p>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>  continent_name  total_population
-0         Africa        1021238685
-1     Anctartica               170
-2           Asia        4130584841
-3         Europe         750724554
-4  North America         540204371
-5        Oceania          36067549
-6  South America         400143568</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>continent_name</th>
+      <th>total_population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Africa</td>
+      <td>1021238685</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Anctartica</td>
+      <td>170</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Asia</td>
+      <td>4130584841</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Europe</td>
+      <td>750724554</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>North America</td>
+      <td>540204371</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Oceania</td>
+      <td>36067549</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>South America</td>
+      <td>400143568</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -3319,16 +3701,68 @@ over every group defined by the <code>group_by</code> method.</p>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>  continent_name  total_population
-0         Africa        1021238685
-1     Anctartica               170
-2           Asia        4130584841
-3         Europe         750724554
-4  North America         540204371
-5        Oceania          36067549
-6  South America         400143568</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>continent_name</th>
+      <th>total_population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Africa</td>
+      <td>1021238685</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Anctartica</td>
+      <td>170</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Asia</td>
+      <td>4130584841</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Europe</td>
+      <td>750724554</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>North America</td>
+      <td>540204371</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Oceania</td>
+      <td>36067549</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>South America</td>
+      <td>400143568</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -3399,16 +3833,76 @@ use both column names and expressions, and also a list with any of them (e.g. <c
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>  continent  total_population  average_area
-0        AF        1021238685  5.234534e+05
-1        AN               170  2.802439e+06
-2        AS        4130584841  6.196685e+05
-3        EU         750724554  4.293017e+05
-4        NA         540204371  5.836313e+05
-5        OC          36067549  3.044157e+05
-6        SA         400143568  1.272751e+06</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>continent</th>
+      <th>total_population</th>
+      <th>average_area</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AF</td>
+      <td>1021238685</td>
+      <td>5.234534e+05</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AN</td>
+      <td>170</td>
+      <td>2.802439e+06</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AS</td>
+      <td>4130584841</td>
+      <td>6.196685e+05</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>EU</td>
+      <td>750724554</td>
+      <td>4.293017e+05</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NA</td>
+      <td>540204371</td>
+      <td>5.836313e+05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>OC</td>
+      <td>36067549</td>
+      <td>3.044157e+05</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>SA</td>
+      <td>400143568</td>
+      <td>1.272751e+06</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -3478,22 +3972,101 @@ gdp</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>     country_code  year         value
-0             ABW  1986  4.054634e+08
-1             ABW  1987  4.876025e+08
-2             ABW  1988  5.964236e+08
-3             ABW  1989  6.953044e+08
-4             ABW  1990  7.648871e+08
-...           ...   ...           ...
-9995          SVK  2002  3.513034e+10
-9996          SVK  2003  4.681659e+10
-9997          SVK  2004  5.733202e+10
-9998          SVK  2005  6.278531e+10
-9999          SVK  2006  7.070810e+10
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-[10000 rows x 3 columns]</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country_code</th>
+      <th>year</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ABW</td>
+      <td>1986</td>
+      <td>4.054634e+08</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ABW</td>
+      <td>1987</td>
+      <td>4.876025e+08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ABW</td>
+      <td>1988</td>
+      <td>5.964236e+08</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ABW</td>
+      <td>1989</td>
+      <td>6.953044e+08</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ABW</td>
+      <td>1990</td>
+      <td>7.648871e+08</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>9995</th>
+      <td>SVK</td>
+      <td>2002</td>
+      <td>3.513034e+10</td>
+    </tr>
+    <tr>
+      <th>9996</th>
+      <td>SVK</td>
+      <td>2003</td>
+      <td>4.681659e+10</td>
+    </tr>
+    <tr>
+      <th>9997</th>
+      <td>SVK</td>
+      <td>2004</td>
+      <td>5.733202e+10</td>
+    </tr>
+    <tr>
+      <th>9998</th>
+      <td>SVK</td>
+      <td>2005</td>
+      <td>6.278531e+10</td>
+    </tr>
+    <tr>
+      <th>9999</th>
+      <td>SVK</td>
+      <td>2006</td>
+      <td>7.070810e+10</td>
+    </tr>
+  </tbody>
+</table>
+<p>10000 rows × 3 columns</p>
+</div>
 </div>
 
 </div>
@@ -3631,22 +4204,125 @@ one matches the three letter code in the <code>gdp</code> table.</p>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>    iso_alpha2 iso_alpha3  iso_numeric fips                  name
-0           AD        AND           20   AN               Andorra
-1           AE        ARE          784   AE  United Arab Emirates
-2           AF        AFG            4   AF           Afghanistan
-3           AG        ATG           28   AC   Antigua and Barbuda
-4           AI        AIA          660   AV              Anguilla
-..         ...        ...          ...  ...                   ...
-247         YE        YEM          887   YM                 Yemen
-248         YT        MYT          175   MF               Mayotte
-249         ZA        ZAF          710   SF          South Africa
-250         ZM        ZMB          894   ZA                Zambia
-251         ZW        ZWE          716   ZI              Zimbabwe
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-[252 rows x 5 columns]</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_alpha2</th>
+      <th>iso_alpha3</th>
+      <th>iso_numeric</th>
+      <th>fips</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AD</td>
+      <td>AND</td>
+      <td>20</td>
+      <td>AN</td>
+      <td>Andorra</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AE</td>
+      <td>ARE</td>
+      <td>784</td>
+      <td>AE</td>
+      <td>United Arab Emirates</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>4</td>
+      <td>AF</td>
+      <td>Afghanistan</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AG</td>
+      <td>ATG</td>
+      <td>28</td>
+      <td>AC</td>
+      <td>Antigua and Barbuda</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AI</td>
+      <td>AIA</td>
+      <td>660</td>
+      <td>AV</td>
+      <td>Anguilla</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>YE</td>
+      <td>YEM</td>
+      <td>887</td>
+      <td>YM</td>
+      <td>Yemen</td>
+    </tr>
+    <tr>
+      <th>248</th>
+      <td>YT</td>
+      <td>MYT</td>
+      <td>175</td>
+      <td>MF</td>
+      <td>Mayotte</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>ZA</td>
+      <td>ZAF</td>
+      <td>710</td>
+      <td>SF</td>
+      <td>South Africa</td>
+    </tr>
+    <tr>
+      <th>250</th>
+      <td>ZM</td>
+      <td>ZMB</td>
+      <td>894</td>
+      <td>ZA</td>
+      <td>Zambia</td>
+    </tr>
+    <tr>
+      <th>251</th>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>716</td>
+      <td>ZI</td>
+      <td>Zimbabwe</td>
+    </tr>
+  </tbody>
+</table>
+<p>252 rows × 5 columns</p>
+</div>
 </div>
 
 </div>
@@ -3720,35 +4396,209 @@ countries_and_gdp[countries, gdp]</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>     iso_alpha2 iso_alpha3  iso_numeric fips      name           capital  \
-0            AD        AND           20   AN   Andorra  Andorra la Vella   
-1            AD        AND           20   AN   Andorra  Andorra la Vella   
-2            AD        AND           20   AN   Andorra  Andorra la Vella   
-3            AD        AND           20   AN   Andorra  Andorra la Vella   
-4            AD        AND           20   AN   Andorra  Andorra la Vella   
-...         ...        ...          ...  ...       ...               ...   
-9482         ZW        ZWE          716   ZI  Zimbabwe            Harare   
-9483         ZW        ZWE          716   ZI  Zimbabwe            Harare   
-9484         ZW        ZWE          716   ZI  Zimbabwe            Harare   
-9485         ZW        ZWE          716   ZI  Zimbabwe            Harare   
-9486         ZW        ZWE          716   ZI  Zimbabwe            Harare   
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-      area_km2  population continent country_code  year         value  
-0        468.0       84000        EU          AND  1970  7.861921e+07  
-1        468.0       84000        EU          AND  1971  8.940982e+07  
-2        468.0       84000        EU          AND  1972  1.134082e+08  
-3        468.0       84000        EU          AND  1973  1.508201e+08  
-4        468.0       84000        EU          AND  1974  1.865587e+08  
-...        ...         ...       ...          ...   ...           ...  
-9482  390580.0    13061000        AF          ZWE  2013  1.909102e+10  
-9483  390580.0    13061000        AF          ZWE  2014  1.949552e+10  
-9484  390580.0    13061000        AF          ZWE  2015  1.996312e+10  
-9485  390580.0    13061000        AF          ZWE  2016  2.054868e+10  
-9486  390580.0    13061000        AF          ZWE  2017  2.281301e+10  
-
-[9487 rows x 12 columns]</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_alpha2</th>
+      <th>iso_alpha3</th>
+      <th>iso_numeric</th>
+      <th>fips</th>
+      <th>name</th>
+      <th>capital</th>
+      <th>area_km2</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>country_code</th>
+      <th>year</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AD</td>
+      <td>AND</td>
+      <td>20</td>
+      <td>AN</td>
+      <td>Andorra</td>
+      <td>Andorra la Vella</td>
+      <td>468.0</td>
+      <td>84000</td>
+      <td>EU</td>
+      <td>AND</td>
+      <td>1970</td>
+      <td>7.861921e+07</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AD</td>
+      <td>AND</td>
+      <td>20</td>
+      <td>AN</td>
+      <td>Andorra</td>
+      <td>Andorra la Vella</td>
+      <td>468.0</td>
+      <td>84000</td>
+      <td>EU</td>
+      <td>AND</td>
+      <td>1971</td>
+      <td>8.940982e+07</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AD</td>
+      <td>AND</td>
+      <td>20</td>
+      <td>AN</td>
+      <td>Andorra</td>
+      <td>Andorra la Vella</td>
+      <td>468.0</td>
+      <td>84000</td>
+      <td>EU</td>
+      <td>AND</td>
+      <td>1972</td>
+      <td>1.134082e+08</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AD</td>
+      <td>AND</td>
+      <td>20</td>
+      <td>AN</td>
+      <td>Andorra</td>
+      <td>Andorra la Vella</td>
+      <td>468.0</td>
+      <td>84000</td>
+      <td>EU</td>
+      <td>AND</td>
+      <td>1973</td>
+      <td>1.508201e+08</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AD</td>
+      <td>AND</td>
+      <td>20</td>
+      <td>AN</td>
+      <td>Andorra</td>
+      <td>Andorra la Vella</td>
+      <td>468.0</td>
+      <td>84000</td>
+      <td>EU</td>
+      <td>AND</td>
+      <td>1974</td>
+      <td>1.865587e+08</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>9482</th>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>716</td>
+      <td>ZI</td>
+      <td>Zimbabwe</td>
+      <td>Harare</td>
+      <td>390580.0</td>
+      <td>13061000</td>
+      <td>AF</td>
+      <td>ZWE</td>
+      <td>2013</td>
+      <td>1.909102e+10</td>
+    </tr>
+    <tr>
+      <th>9483</th>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>716</td>
+      <td>ZI</td>
+      <td>Zimbabwe</td>
+      <td>Harare</td>
+      <td>390580.0</td>
+      <td>13061000</td>
+      <td>AF</td>
+      <td>ZWE</td>
+      <td>2014</td>
+      <td>1.949552e+10</td>
+    </tr>
+    <tr>
+      <th>9484</th>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>716</td>
+      <td>ZI</td>
+      <td>Zimbabwe</td>
+      <td>Harare</td>
+      <td>390580.0</td>
+      <td>13061000</td>
+      <td>AF</td>
+      <td>ZWE</td>
+      <td>2015</td>
+      <td>1.996312e+10</td>
+    </tr>
+    <tr>
+      <th>9485</th>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>716</td>
+      <td>ZI</td>
+      <td>Zimbabwe</td>
+      <td>Harare</td>
+      <td>390580.0</td>
+      <td>13061000</td>
+      <td>AF</td>
+      <td>ZWE</td>
+      <td>2016</td>
+      <td>2.054868e+10</td>
+    </tr>
+    <tr>
+      <th>9486</th>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>716</td>
+      <td>ZI</td>
+      <td>Zimbabwe</td>
+      <td>Harare</td>
+      <td>390580.0</td>
+      <td>13061000</td>
+      <td>AF</td>
+      <td>ZWE</td>
+      <td>2017</td>
+      <td>2.281301e+10</td>
+    </tr>
+  </tbody>
+</table>
+<p>9487 rows × 12 columns</p>
+</div>
 </div>
 
 </div>
@@ -3817,22 +4667,101 @@ gdp_2017</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>    country_code  year         value
-0            ABW  2017  2.700559e+09
-1            AFG  2017  2.019176e+10
-2            AGO  2017  1.221238e+11
-3            ALB  2017  1.302506e+10
-4            AND  2017  3.013387e+09
-..           ...   ...           ...
-242          XKX  2017  7.227700e+09
-243          YEM  2017  2.681870e+10
-244          ZAF  2017  3.495541e+11
-245          ZMB  2017  2.586814e+10
-246          ZWE  2017  2.281301e+10
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-[247 rows x 3 columns]</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country_code</th>
+      <th>year</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ABW</td>
+      <td>2017</td>
+      <td>2.700559e+09</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AFG</td>
+      <td>2017</td>
+      <td>2.019176e+10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AGO</td>
+      <td>2017</td>
+      <td>1.221238e+11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ALB</td>
+      <td>2017</td>
+      <td>1.302506e+10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AND</td>
+      <td>2017</td>
+      <td>3.013387e+09</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>242</th>
+      <td>XKX</td>
+      <td>2017</td>
+      <td>7.227700e+09</td>
+    </tr>
+    <tr>
+      <th>243</th>
+      <td>YEM</td>
+      <td>2017</td>
+      <td>2.681870e+10</td>
+    </tr>
+    <tr>
+      <th>244</th>
+      <td>ZAF</td>
+      <td>2017</td>
+      <td>3.495541e+11</td>
+    </tr>
+    <tr>
+      <th>245</th>
+      <td>ZMB</td>
+      <td>2017</td>
+      <td>2.586814e+10</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>ZWE</td>
+      <td>2017</td>
+      <td>2.281301e+10</td>
+    </tr>
+  </tbody>
+</table>
+<p>247 rows × 3 columns</p>
+</div>
 </div>
 
 </div>
@@ -3903,35 +4832,209 @@ countries_and_gdp[countries, gdp_2017]</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>    iso_alpha2 iso_alpha3  iso_numeric fips          name           capital  \
-0           AW        ABW          533   AA         Aruba        Oranjestad   
-1           AF        AFG            4   AF   Afghanistan             Kabul   
-2           AO        AGO           24   AO        Angola            Luanda   
-3           AL        ALB            8   AL       Albania            Tirana   
-4           AD        AND           20   AN       Andorra  Andorra la Vella   
-..         ...        ...          ...  ...           ...               ...   
-196         XK        XKX            0   KV        Kosovo          Pristina   
-197         YE        YEM          887   YM         Yemen             Sanaa   
-198         ZA        ZAF          710   SF  South Africa          Pretoria   
-199         ZM        ZMB          894   ZA        Zambia            Lusaka   
-200         ZW        ZWE          716   ZI      Zimbabwe            Harare   
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-      area_km2  population continent country_code  year         value  
-0        193.0       71566        NA          ABW  2017  2.700559e+09  
-1     647500.0    29121286        AS          AFG  2017  2.019176e+10  
-2    1246700.0    13068161        AF          AGO  2017  1.221238e+11  
-3      28748.0     2986952        EU          ALB  2017  1.302506e+10  
-4        468.0       84000        EU          AND  2017  3.013387e+09  
-..         ...         ...       ...          ...   ...           ...  
-196    10908.0     1800000        EU          XKX  2017  7.227700e+09  
-197   527970.0    23495361        AS          YEM  2017  2.681870e+10  
-198  1219912.0    49000000        AF          ZAF  2017  3.495541e+11  
-199   752614.0    13460305        AF          ZMB  2017  2.586814e+10  
-200   390580.0    13061000        AF          ZWE  2017  2.281301e+10  
-
-[201 rows x 12 columns]</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_alpha2</th>
+      <th>iso_alpha3</th>
+      <th>iso_numeric</th>
+      <th>fips</th>
+      <th>name</th>
+      <th>capital</th>
+      <th>area_km2</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>country_code</th>
+      <th>year</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AW</td>
+      <td>ABW</td>
+      <td>533</td>
+      <td>AA</td>
+      <td>Aruba</td>
+      <td>Oranjestad</td>
+      <td>193.0</td>
+      <td>71566</td>
+      <td>NA</td>
+      <td>ABW</td>
+      <td>2017</td>
+      <td>2.700559e+09</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>4</td>
+      <td>AF</td>
+      <td>Afghanistan</td>
+      <td>Kabul</td>
+      <td>647500.0</td>
+      <td>29121286</td>
+      <td>AS</td>
+      <td>AFG</td>
+      <td>2017</td>
+      <td>2.019176e+10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AO</td>
+      <td>AGO</td>
+      <td>24</td>
+      <td>AO</td>
+      <td>Angola</td>
+      <td>Luanda</td>
+      <td>1246700.0</td>
+      <td>13068161</td>
+      <td>AF</td>
+      <td>AGO</td>
+      <td>2017</td>
+      <td>1.221238e+11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AL</td>
+      <td>ALB</td>
+      <td>8</td>
+      <td>AL</td>
+      <td>Albania</td>
+      <td>Tirana</td>
+      <td>28748.0</td>
+      <td>2986952</td>
+      <td>EU</td>
+      <td>ALB</td>
+      <td>2017</td>
+      <td>1.302506e+10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AD</td>
+      <td>AND</td>
+      <td>20</td>
+      <td>AN</td>
+      <td>Andorra</td>
+      <td>Andorra la Vella</td>
+      <td>468.0</td>
+      <td>84000</td>
+      <td>EU</td>
+      <td>AND</td>
+      <td>2017</td>
+      <td>3.013387e+09</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>XK</td>
+      <td>XKX</td>
+      <td>0</td>
+      <td>KV</td>
+      <td>Kosovo</td>
+      <td>Pristina</td>
+      <td>10908.0</td>
+      <td>1800000</td>
+      <td>EU</td>
+      <td>XKX</td>
+      <td>2017</td>
+      <td>7.227700e+09</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>YE</td>
+      <td>YEM</td>
+      <td>887</td>
+      <td>YM</td>
+      <td>Yemen</td>
+      <td>Sanaa</td>
+      <td>527970.0</td>
+      <td>23495361</td>
+      <td>AS</td>
+      <td>YEM</td>
+      <td>2017</td>
+      <td>2.681870e+10</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>ZA</td>
+      <td>ZAF</td>
+      <td>710</td>
+      <td>SF</td>
+      <td>South Africa</td>
+      <td>Pretoria</td>
+      <td>1219912.0</td>
+      <td>49000000</td>
+      <td>AF</td>
+      <td>ZAF</td>
+      <td>2017</td>
+      <td>3.495541e+11</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>ZM</td>
+      <td>ZMB</td>
+      <td>894</td>
+      <td>ZA</td>
+      <td>Zambia</td>
+      <td>Lusaka</td>
+      <td>752614.0</td>
+      <td>13460305</td>
+      <td>AF</td>
+      <td>ZMB</td>
+      <td>2017</td>
+      <td>2.586814e+10</td>
+    </tr>
+    <tr>
+      <th>200</th>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>716</td>
+      <td>ZI</td>
+      <td>Zimbabwe</td>
+      <td>Harare</td>
+      <td>390580.0</td>
+      <td>13061000</td>
+      <td>AF</td>
+      <td>ZWE</td>
+      <td>2017</td>
+      <td>2.281301e+10</td>
+    </tr>
+  </tbody>
+</table>
+<p>201 rows × 12 columns</p>
+</div>
 </div>
 
 </div>

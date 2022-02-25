@@ -2806,21 +2806,100 @@ countries.limit(5)</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>  iso_alpha2 iso_alpha3  iso_numeric fips                  name  \
-0         AD        AND           20   AN               Andorra   
-1         AE        ARE          784   AE  United Arab Emirates   
-2         AF        AFG            4   AF           Afghanistan   
-3         AG        ATG           28   AC   Antigua and Barbuda   
-4         AI        AIA          660   AV              Anguilla   
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-            capital  area_km2  population continent  
-0  Andorra la Vella     468.0       84000        EU  
-1         Abu Dhabi   82880.0     4975593        AS  
-2             Kabul  647500.0    29121286        AS  
-3         St. Johns     443.0       86754        NA  
-4        The Valley     102.0       13254        NA  </pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_alpha2</th>
+      <th>iso_alpha3</th>
+      <th>iso_numeric</th>
+      <th>fips</th>
+      <th>name</th>
+      <th>capital</th>
+      <th>area_km2</th>
+      <th>population</th>
+      <th>continent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AD</td>
+      <td>AND</td>
+      <td>20</td>
+      <td>AN</td>
+      <td>Andorra</td>
+      <td>Andorra la Vella</td>
+      <td>468.0</td>
+      <td>84000</td>
+      <td>EU</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AE</td>
+      <td>ARE</td>
+      <td>784</td>
+      <td>AE</td>
+      <td>United Arab Emirates</td>
+      <td>Abu Dhabi</td>
+      <td>82880.0</td>
+      <td>4975593</td>
+      <td>AS</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>4</td>
+      <td>AF</td>
+      <td>Afghanistan</td>
+      <td>Kabul</td>
+      <td>647500.0</td>
+      <td>29121286</td>
+      <td>AS</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AG</td>
+      <td>ATG</td>
+      <td>28</td>
+      <td>AC</td>
+      <td>Antigua and Barbuda</td>
+      <td>St. Johns</td>
+      <td>443.0</td>
+      <td>86754</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AI</td>
+      <td>AIA</td>
+      <td>660</td>
+      <td>AV</td>
+      <td>Anguilla</td>
+      <td>The Valley</td>
+      <td>102.0</td>
+      <td>13254</td>
+      <td>NA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -2962,6 +3041,8 @@ expr</div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>/home/runner/work/ibis/ibis/ibis/ibis/backends/base/sql/alchemy/registry.py:76: SAWarning: implicitly coercing SELECT object to scalar subquery; please use the .scalar_subquery() method to produce a scalar subquery.
   return sa_func(*trans_args)
+/home/runner/work/ibis/ibis/ibis/ibis/backends/base/sql/alchemy/registry.py:76: SAWarning: implicitly coercing SELECT object to scalar subquery; please use the .scalar_subquery() method to produce a scalar subquery.
+  return sa_func(*trans_args)
 </pre>
 </div>
 </div>
@@ -2973,15 +3054,64 @@ expr</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>  iso_alpha2 iso_alpha3  iso_numeric fips     name capital    area_km2  \
-0         RU        RUS          643   RS   Russia  Moscow  17100000.0   
-1         UA        UKR          804   UP  Ukraine    Kyiv    603700.0   
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-   population continent  
-0   140702000        EU  
-1    45415596        EU  </pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_alpha2</th>
+      <th>iso_alpha3</th>
+      <th>iso_numeric</th>
+      <th>fips</th>
+      <th>name</th>
+      <th>capital</th>
+      <th>area_km2</th>
+      <th>population</th>
+      <th>continent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>RU</td>
+      <td>RUS</td>
+      <td>643</td>
+      <td>RS</td>
+      <td>Russia</td>
+      <td>Moscow</td>
+      <td>17100000.0</td>
+      <td>140702000</td>
+      <td>EU</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>UA</td>
+      <td>UKR</td>
+      <td>804</td>
+      <td>UP</td>
+      <td>Ukraine</td>
+      <td>Kyiv</td>
+      <td>603700.0</td>
+      <td>45415596</td>
+      <td>EU</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -3053,6 +3183,8 @@ countries[(countries.continent == 'EU') & (countries.area_km2 > conditional_avg)
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>/home/runner/work/ibis/ibis/ibis/ibis/backends/base/sql/alchemy/registry.py:76: SAWarning: implicitly coercing SELECT object to scalar subquery; please use the .scalar_subquery() method to produce a scalar subquery.
   return sa_func(*trans_args)
+/home/runner/work/ibis/ibis/ibis/ibis/backends/base/sql/alchemy/registry.py:76: SAWarning: implicitly coercing SELECT object to scalar subquery; please use the .scalar_subquery() method to produce a scalar subquery.
+  return sa_func(*trans_args)
 </pre>
 </div>
 </div>
@@ -3064,17 +3196,76 @@ countries[(countries.continent == 'EU') & (countries.area_km2 > conditional_avg)
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>  iso_alpha2 iso_alpha3  iso_numeric fips     name capital    area_km2  \
-0         FR        FRA          250   FR   France   Paris    547030.0   
-1         RU        RUS          643   RS   Russia  Moscow  17100000.0   
-2         UA        UKR          804   UP  Ukraine    Kyiv    603700.0   
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-   population continent  
-0    64768389        EU  
-1   140702000        EU  
-2    45415596        EU  </pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_alpha2</th>
+      <th>iso_alpha3</th>
+      <th>iso_numeric</th>
+      <th>fips</th>
+      <th>name</th>
+      <th>capital</th>
+      <th>area_km2</th>
+      <th>population</th>
+      <th>continent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FR</td>
+      <td>FRA</td>
+      <td>250</td>
+      <td>FR</td>
+      <td>France</td>
+      <td>Paris</td>
+      <td>547030.0</td>
+      <td>64768389</td>
+      <td>EU</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>RU</td>
+      <td>RUS</td>
+      <td>643</td>
+      <td>RS</td>
+      <td>Russia</td>
+      <td>Moscow</td>
+      <td>17100000.0</td>
+      <td>140702000</td>
+      <td>EU</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>UA</td>
+      <td>UKR</td>
+      <td>804</td>
+      <td>UP</td>
+      <td>Ukraine</td>
+      <td>Kyiv</td>
+      <td>603700.0</td>
+      <td>45415596</td>
+      <td>EU</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -3144,22 +3335,101 @@ gdp</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>     country_code  year         value
-0             ABW  1986  4.054634e+08
-1             ABW  1987  4.876025e+08
-2             ABW  1988  5.964236e+08
-3             ABW  1989  6.953044e+08
-4             ABW  1990  7.648871e+08
-...           ...   ...           ...
-9995          SVK  2002  3.513034e+10
-9996          SVK  2003  4.681659e+10
-9997          SVK  2004  5.733202e+10
-9998          SVK  2005  6.278531e+10
-9999          SVK  2006  7.070810e+10
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-[10000 rows x 3 columns]</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country_code</th>
+      <th>year</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ABW</td>
+      <td>1986</td>
+      <td>4.054634e+08</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ABW</td>
+      <td>1987</td>
+      <td>4.876025e+08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ABW</td>
+      <td>1988</td>
+      <td>5.964236e+08</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ABW</td>
+      <td>1989</td>
+      <td>6.953044e+08</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ABW</td>
+      <td>1990</td>
+      <td>7.648871e+08</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>9995</th>
+      <td>SVK</td>
+      <td>2002</td>
+      <td>3.513034e+10</td>
+    </tr>
+    <tr>
+      <th>9996</th>
+      <td>SVK</td>
+      <td>2003</td>
+      <td>4.681659e+10</td>
+    </tr>
+    <tr>
+      <th>9997</th>
+      <td>SVK</td>
+      <td>2004</td>
+      <td>5.733202e+10</td>
+    </tr>
+    <tr>
+      <th>9998</th>
+      <td>SVK</td>
+      <td>2005</td>
+      <td>6.278531e+10</td>
+    </tr>
+    <tr>
+      <th>9999</th>
+      <td>SVK</td>
+      <td>2006</td>
+      <td>7.070810e+10</td>
+    </tr>
+  </tbody>
+</table>
+<p>10000 rows × 3 columns</p>
+</div>
 </div>
 
 </div>
@@ -3220,14 +3490,52 @@ countries[cond]['name']</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0             China
-1           Germany
-2    United Kingdom
-3             Japan
-4     United States
-Name: name, dtype: object</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>China</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>United Kingdom</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Japan</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>United States</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -3334,16 +3642,84 @@ metrics = [countries.count().name('# countries'),
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>  continent  # countries  total population  population arctic countries
-0        AF           58        1021238685                          NaN
-1        AN            5               170                          NaN
-2        AS           51        4130584841                          NaN
-3        EU           54         750724554                  161092715.0
-4        NA           42         540204371                  343968238.0
-5        OC           28          36067549                          NaN
-6        SA           14         400143568                          NaN</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>continent</th>
+      <th># countries</th>
+      <th>total population</th>
+      <th>population arctic countries</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AF</td>
+      <td>58</td>
+      <td>1021238685</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AN</td>
+      <td>5</td>
+      <td>170</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AS</td>
+      <td>51</td>
+      <td>4130584841</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>EU</td>
+      <td>54</td>
+      <td>750724554</td>
+      <td>161092715.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NA</td>
+      <td>42</td>
+      <td>540204371</td>
+      <td>343968238.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>OC</td>
+      <td>28</td>
+      <td>36067549</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>SA</td>
+      <td>14</td>
+      <td>400143568</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
