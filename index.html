@@ -10,7 +10,7 @@
       
         <link rel="canonical" href="https://ibis-project.org/">
       
-      <link rel="icon" href="static/favicon.ico">
+      <link rel="icon" href="static/icons/ibis/logo.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
     
     
@@ -26,7 +26,7 @@
         
           
           
-          <meta name="theme-color" content="#000000">
+          <meta name="theme-color" content="#009485">
         
       
     
@@ -60,7 +60,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime">
   
     
     
@@ -253,8 +253,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#expressive-analytics-in-python-whatever-the-scale" class="md-nav__link">
-    Expressive analytics in Python, whatever the scale.
+  <a href="#expressive-analytics-in-python-at-any-scale" class="md-nav__link">
+    Expressive analytics in Python at any scale.
   </a>
   
 </li>
@@ -410,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting_started/" class="md-nav__link">
+      <a href="installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -432,6 +432,10 @@
       
       
       
+        
+          
+        
+          
         
           
         
@@ -494,7 +498,7 @@
   
     <li class="md-nav__item">
       <a href="tutorial/03-Expressions-Lazy-Mode-Logging/" class="md-nav__link">
-        Expressions, lazy mode and logging queries
+        Lazy Mode and Logging
       </a>
     </li>
   
@@ -522,55 +526,7 @@
   
     <li class="md-nav__item">
       <a href="tutorial/05-IO-Create-Insert-External-Data/" class="md-nav__link">
-        Creating and inserting data
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_6">
-          Advanced Topics
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Advanced Topics" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_6">
-          <span class="md-nav__icon md-icon"></span>
-          Advanced Topics
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tutorial/06-Advanced-Topics-ComplexFiltering/" class="md-nav__link">
-        Additional Filtering
+        Creating and Inserting Data
       </a>
     </li>
   
@@ -583,7 +539,21 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/07-Advanced-Topics-Analytics-Tools/" class="md-nav__link">
+      <a href="tutorial/06-ComplexFiltering/" class="md-nav__link">
+        Complex Filtering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/07-Analytics-Tools/" class="md-nav__link">
         Analytics Tools
       </a>
     </li>
@@ -598,15 +568,8 @@
   
     <li class="md-nav__item">
       <a href="tutorial/08-Geospatial-Analysis/" class="md-nav__link">
-        Ibis and Geospatial Operations
+        Geospatial Analysis
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -626,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/sql/" class="md-nav__link">
+      <a href="ibis-for-sql-programmers/" class="md-nav__link">
         Ibis for SQL Programmers
       </a>
     </li>
@@ -682,7 +645,7 @@
   
     <li class="md-nav__item">
       <a href="user_guide/configuration/" class="md-nav__link">
-        Configuration
+        Configuring Ibis
       </a>
     </li>
   
@@ -695,8 +658,8 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/topk/" class="md-nav__link">
-        TopK
+      <a href="user_guide/design/" class="md-nav__link">
+        Design
       </a>
     </li>
   
@@ -723,8 +686,8 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/udfs/" class="md-nav__link">
-        UDFs
+      <a href="user_guide/topk/" class="md-nav__link">
+        Top-K Filtering
       </a>
     </li>
   
@@ -737,8 +700,8 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/design/" class="md-nav__link">
-        Design
+      <a href="user_guide/udfs/" class="md-nav__link">
+        User Defined Functions
       </a>
     </li>
   
@@ -783,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/extending/extending_elementwise_expr/" class="md-nav__link">
+      <a href="user_guide/extending/elementwise/" class="md-nav__link">
         Adding an Elementwise Operation
       </a>
     </li>
@@ -797,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/extending/extending_reduce_expr/" class="md-nav__link">
+      <a href="user_guide/extending/reduction/" class="md-nav__link">
         Adding a Reduction Operation
       </a>
     </li>
@@ -861,7 +824,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="backends/">Backends</a>
+          <a href="backends/">Execution Backends</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -869,10 +832,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Backends" data-md-level="1">
+      <nav class="md-nav" aria-label="Execution Backends" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          Backends
+          Execution Backends
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -884,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backends/clickhouse/" class="md-nav__link">
+      <a href="backends/ClickHouse/" class="md-nav__link">
         ClickHouse
       </a>
     </li>
@@ -898,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backends/dask/" class="md-nav__link">
+      <a href="backends/Dask/" class="md-nav__link">
         Dask
       </a>
     </li>
@@ -912,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backends/datafusion/" class="md-nav__link">
+      <a href="backends/Datafusion/" class="md-nav__link">
         Datafusion
       </a>
     </li>
@@ -926,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backends/impala/" class="md-nav__link">
+      <a href="backends/Impala/" class="md-nav__link">
         Impala
       </a>
     </li>
@@ -940,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backends/mysql/" class="md-nav__link">
+      <a href="backends/MySQL/" class="md-nav__link">
         MySQL
       </a>
     </li>
@@ -954,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backends/pandas/" class="md-nav__link">
+      <a href="backends/Pandas/" class="md-nav__link">
         Pandas
       </a>
     </li>
@@ -968,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backends/postgres/" class="md-nav__link">
+      <a href="backends/PostgreSQL/" class="md-nav__link">
         PostgreSQL
       </a>
     </li>
@@ -982,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backends/pyspark/" class="md-nav__link">
+      <a href="backends/PySpark/" class="md-nav__link">
         PySpark
       </a>
     </li>
@@ -996,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backends/sqlite/" class="md-nav__link">
+      <a href="backends/SQLite/" class="md-nav__link">
         SQLite
       </a>
     </li>
@@ -1039,12 +1002,128 @@
       
       
         <label class="md-nav__link" for="__nav_7">
+          Contribute
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribute" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contribute/01_environment/" class="md-nav__link">
+        Setting Up a Development Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contribute/02_workflow/" class="md-nav__link">
+        Working on the Codebase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contribute/03_style/" class="md-nav__link">
+        Style and Formatting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contribute/04_backend_tests/" class="md-nav__link">
+        Working with the Backend Test Suite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contribute/05_maintainers_guide/" class="md-nav__link">
+        Maintaining the Codebase
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
           Community
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Community" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Community
         </label>
@@ -1059,7 +1138,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
       
       
       
@@ -1072,13 +1151,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_7_1">
+        <label class="md-nav__link" for="__nav_8_1">
           About
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="About" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_1">
+        <label class="md-nav__title" for="__nav_8_1">
           <span class="md-nav__icon md-icon"></span>
           About
         </label>
@@ -1090,8 +1169,8 @@
   
   
     <li class="md-nav__item">
-      <a href="about/team/" class="md-nav__link">
-        Team
+      <a href="about/license/" class="md-nav__link">
+        Legal
       </a>
     </li>
   
@@ -1118,8 +1197,8 @@
   
   
     <li class="md-nav__item">
-      <a href="about/license/" class="md-nav__link">
-        License
+      <a href="about/team/" class="md-nav__link">
+        Team
       </a>
     </li>
   
@@ -1183,122 +1262,6 @@
     <li class="md-nav__item">
       <a href="community/ecosystem/" class="md-nav__link">
         Ecosystem
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_8">
-          Contribute
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Contribute" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          Contribute
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="contribute/environment/" class="md-nav__link">
-        Development Environment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="contribute/workflow/" class="md-nav__link">
-        Commit Workflow
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="contribute/style/" class="md-nav__link">
-        Development Style
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="contribute/backend_test_suite/" class="md-nav__link">
-        Backend Test Suite
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="contribute/maintainers_guide/" class="md-nav__link">
-        Maintainer's Guide
       </a>
     </li>
   
@@ -1592,7 +1555,7 @@
   
     <li class="md-nav__item">
       <a href="api/backends/base/" class="md-nav__link">
-        Base Class
+        Backend Base Classes
       </a>
     </li>
   
@@ -1606,7 +1569,7 @@
   
     <li class="md-nav__item">
       <a href="api/backends/sql/" class="md-nav__link">
-        Generic SQL Backends
+        SQL Backend Base Classes
       </a>
     </li>
   
@@ -1620,7 +1583,7 @@
   
     <li class="md-nav__item">
       <a href="api/backends/sqlalchemy/" class="md-nav__link">
-        SQLAlchemy Backends
+        SQLAlchemy Backend Base Classes
       </a>
     </li>
   
@@ -1669,8 +1632,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#expressive-analytics-in-python-whatever-the-scale" class="md-nav__link">
-    Expressive analytics in Python, whatever the scale.
+  <a href="#expressive-analytics-in-python-at-any-scale" class="md-nav__link">
+    Expressive analytics in Python at any scale.
   </a>
   
 </li>
@@ -1821,6 +1784,9 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
+
+
+
                 
 <a href="https://github.com/ibis-project/ibis/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
@@ -1957,9 +1923,7 @@
   </g>
 </svg>
 </span> Ibis</h1>
-<div>
-<h2 id="expressive-analytics-in-python-whatever-the-scale">Expressive analytics in Python, whatever the scale.</h2>
-</div>
+<h2 id="expressive-analytics-in-python-at-any-scale">Expressive analytics in Python at any scale.</h2>
 <script 
     src="https://asciinema.org/a/yp5Ww4XKyjJsUCXkEz5or9rPq.js"
     data-autoplay="true"
@@ -1983,7 +1947,7 @@
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
 </code></pre></div>
 <h5 id="ibis">Ibis</h5>
-<div class="highlight"><pre><span></span><code><span class="n">t</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;f&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><span class="n">t</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;f&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -2003,7 +1967,7 @@
 <span class="k">FROM</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
 </code></pre></div>
 <h5 id="ibis_2">Ibis</h5>
-<div class="highlight"><pre><span></span><code><span class="n">t</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">avg</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><span class="n">t</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">avg</span><span class="p">())</span>
 </code></pre></div>
 </div>
 </div>
@@ -2014,24 +1978,24 @@
 </div>
 <h3 id="abstract-over-sql-dialects">Abstract Over SQL Dialects</h3>
 <h4 id="no-more-rewrites-when-scaling-up-or-down">No more rewrites when scaling up or down.</h4>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">BigQuery</label><label for="__tabbed_2_2">SQLite</label><label for="__tabbed_2_3">PostgreSQL</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">SQLite</label><label for="__tabbed_2_2">PostgreSQL</label><label for="__tabbed_2_3">BigQuery</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">project_id</span><span class="o">=...</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;my_sqlite.db&quot;</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;path/to/sqlite.db&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">postgres</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&quot;my_computer&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">9090</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">postgres</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">user</span><span class="o">=...</span><span class="p">,</span> <span class="n">host</span><span class="o">=...</span><span class="p">,</span> <span class="n">port</span><span class="o">=...</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;my_project_id&quot;</span><span class="p">,</span> <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;my_dataset_id&quot;</span><span class="p">)</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
-<span class="n">t</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">avg</span><span class="p">())</span>
+<span class="n">t</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">avg</span><span class="p">())</span>
 </code></pre></div>
 <h3 id="ecosystem">Ecosystem</h3>
 <h4 id="ibis-builds-on-top-of-and-works-with-existing-python-tools">Ibis builds on top of and works with existing Python tools.</h4>
@@ -2083,21 +2047,25 @@ sacrifice maintainability to get to those insights!</p>
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
 
 <span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;crunchbase.db&quot;</span><span class="p">)</span>
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;companies&quot;</span><span class="p">)</span>
-<span class="n">i</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;investors&quot;</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;investments&quot;</span><span class="p">)</span>
 
 <span class="n">expr</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">c</span><span class="o">.</span><span class="n">left_join</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">permalink</span> <span class="o">==</span> <span class="n">i</span><span class="o">.</span><span class="n">company_permalink</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">investor_name</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">investor_name</span><span class="o">.</span><span class="n">ifnull</span><span class="p">(</span><span class="s2">&quot;NO INVESTOR&quot;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">investor_name</span><span class="o">=</span><span class="n">ibis</span><span class="o">.</span><span class="n">coalesce</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">investor_name</span><span class="p">,</span> <span class="s2">&quot;NO INVESTOR&quot;</span><span class="p">))</span>
     <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
-        <span class="n">num_investments</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">permalink</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
-        <span class="n">acq_ipos</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">isin</span><span class="p">((</span><span class="s2">&quot;ipo&quot;</span><span class="p">,</span> <span class="s2">&quot;acquired&quot;</span><span class="p">))</span>
-        <span class="o">.</span><span class="n">ifelse</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">permalink</span><span class="p">,</span> <span class="n">ibis</span><span class="o">.</span><span class="n">NA</span><span class="p">)</span>
-        <span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+        <span class="n">num_investments</span><span class="o">=</span><span class="n">c</span><span class="o">.</span><span class="n">permalink</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+        <span class="n">acq_ipos</span><span class="o">=</span><span class="p">(</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">isin</span><span class="p">((</span><span class="s2">&quot;ipo&quot;</span><span class="p">,</span> <span class="s2">&quot;acquired&quot;</span><span class="p">))</span>
+            <span class="o">.</span><span class="n">ifelse</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">permalink</span><span class="p">,</span> <span class="n">ibis</span><span class="o">.</span><span class="n">NA</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+        <span class="p">),</span>
     <span class="p">)</span>
     <span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">acq_rate</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">acq_ipos</span> <span class="o">/</span> <span class="n">t</span><span class="o">.</span><span class="n">num_investments</span><span class="p">)</span>
     <span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
@@ -2124,33 +2092,25 @@ sacrifice maintainability to get to those insights!</p>
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
 <span class="w">       </span><span class="n">acq_ipos</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">num_investments</span><span class="p">::</span><span class="nb">float</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">acq_rate</span><span class="w"></span>
 <span class="k">FROM</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="k">CASE</span><span class="w"></span>
-<span class="w">      </span><span class="k">WHEN</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">investor_name</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;NO INVESTOR&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="k">ELSE</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">investor_name</span><span class="w"></span>
-<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">investor_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">COALESCE</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">investor_name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;NO INVESTOR&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">investor_name</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">permalink</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">num_investments</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="w"></span>
 <span class="w">      </span><span class="k">DISTINCT</span><span class="w"></span>
 <span class="w">        </span><span class="k">CASE</span><span class="w"></span>
-<span class="w">          </span><span class="k">WHEN</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;ipo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;acquired&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w"></span>
-<span class="w">            </span><span class="k">c</span><span class="p">.</span><span class="n">permalink</span><span class="w"></span>
+<span class="w">          </span><span class="k">WHEN</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;ipo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;acquired&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">permalink</span><span class="w"></span>
 <span class="w">          </span><span class="k">ELSE</span><span class="w"> </span><span class="k">NULL</span><span class="w"></span>
 <span class="w">        </span><span class="k">END</span><span class="w"></span>
 <span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">acq_ipos</span><span class="w"></span>
-<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">crunchbase_companies</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">c</span><span class="w"></span>
-<span class="w">  </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">crunchbase_investments</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">companies</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">c</span><span class="w"></span>
+<span class="w">  </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">investments</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
 <span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">permalink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">company_permalink</span><span class="w"></span>
 <span class="w">  </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 <span class="w">  </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">DESC</span><span class="w"></span>
-<span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -2188,21 +2148,25 @@ including the <a href="/backends/postgres">PostgreSQL</a> and
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
 
 <span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;crunchbase.db&quot;</span><span class="p">)</span>
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;companies&quot;</span><span class="p">)</span>
-<span class="n">i</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;investors&quot;</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;investments&quot;</span><span class="p">)</span>
 
 <span class="n">expr</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">c</span><span class="o">.</span><span class="n">left_join</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">permalink</span> <span class="o">==</span> <span class="n">i</span><span class="o">.</span><span class="n">company_permalink</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">investor_name</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">investor_name</span><span class="o">.</span><span class="n">ifnull</span><span class="p">(</span><span class="s2">&quot;NO INVESTOR&quot;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">investor_name</span><span class="o">=</span><span class="n">ibis</span><span class="o">.</span><span class="n">coalesce</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">investor_name</span><span class="p">,</span> <span class="s2">&quot;NO INVESTOR&quot;</span><span class="p">))</span>
     <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
-        <span class="n">num_investments</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">permalink</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
-        <span class="n">acq_ipos</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">isin</span><span class="p">((</span><span class="s2">&quot;ipo&quot;</span><span class="p">,</span> <span class="s2">&quot;acquired&quot;</span><span class="p">))</span>
-        <span class="o">.</span><span class="n">ifelse</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">permalink</span><span class="p">,</span> <span class="n">ibis</span><span class="o">.</span><span class="n">NA</span><span class="p">)</span>
-        <span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+        <span class="n">num_investments</span><span class="o">=</span><span class="n">c</span><span class="o">.</span><span class="n">permalink</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+        <span class="n">acq_ipos</span><span class="o">=</span><span class="p">(</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">isin</span><span class="p">((</span><span class="s2">&quot;ipo&quot;</span><span class="p">,</span> <span class="s2">&quot;acquired&quot;</span><span class="p">))</span>
+            <span class="o">.</span><span class="n">ifelse</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">permalink</span><span class="p">,</span> <span class="n">ibis</span><span class="o">.</span><span class="n">NA</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+        <span class="p">),</span>
     <span class="p">)</span>
     <span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">acq_rate</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">acq_ipos</span> <span class="o">/</span> <span class="n">t</span><span class="o">.</span><span class="n">num_investments</span><span class="p">)</span>
     <span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
@@ -2239,11 +2203,10 @@ including the <a href="/backends/postgres">PostgreSQL</a> and
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sqlalchemy</span> <span class="k">as</span> <span class="nn">sa</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sqlalchemy</span> <span class="k">as</span> <span class="nn">sa</span>
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;companies&quot;</span><span class="p">)</span>
-<span class="n">i</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;investors&quot;</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;investments&quot;</span><span class="p">)</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">sa</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
@@ -2267,7 +2230,6 @@ including the <a href="/backends/postgres">PostgreSQL</a> and
     <span class="p">)</span>
     <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">sa</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-    <span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="n">expr</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">select</span><span class="p">([(</span><span class="n">a</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">acq_ipos</span> <span class="o">/</span> <span class="n">a</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">num_investments</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;acq_rate&quot;</span><span class="p">)])</span>
 </code></pre></div>
@@ -2275,11 +2237,16 @@ including the <a href="/backends/postgres">PostgreSQL</a> and
 </div>
 </div>
 </div>
+<details class="question">
+<summary>Want the data?</summary>
+</details>
 </div>
 </div>
 </div>
+<p>Download the example SQLite database at <a href="https://storage.googleapis.com/ibis-testing-data/crunchbase.db">https://storage.googleapis.com/ibis-testing-data/crunchbase.db</a>!</p>
 
               
+
             </article>
           </div>
         </div>
@@ -2292,7 +2259,7 @@ including the <a href="/backends/postgres">PostgreSQL</a> and
       
       
         
-        <a href="getting_started/" class="md-footer__link md-footer__link--next" aria-label="Next: Installation" rel="next">
+        <a href="installation/" class="md-footer__link md-footer__link--next" aria-label="Next: Installation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -2354,7 +2321,7 @@ including the <a href="/backends/postgres">PostgreSQL</a> and
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="assets/javascripts/bundle.8aa65030.min.js"></script>

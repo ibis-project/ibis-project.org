@@ -8,7 +8,7 @@
       
       
       
-      <link rel="icon" href="/static/favicon.ico">
+      <link rel="icon" href="/static/icons/ibis/logo.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
     
     
@@ -24,7 +24,7 @@
         
           
           
-          <meta name="theme-color" content="#000000">
+          <meta name="theme-color" content="#009485">
         
       
     
@@ -58,7 +58,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime">
   
     
     
@@ -225,7 +225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/getting_started/" class="md-nav__link">
+      <a href="/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -247,6 +247,10 @@
       
       
       
+        
+          
+        
+          
         
           
         
@@ -309,7 +313,7 @@
   
     <li class="md-nav__item">
       <a href="/tutorial/03-Expressions-Lazy-Mode-Logging/" class="md-nav__link">
-        Expressions, lazy mode and logging queries
+        Lazy Mode and Logging
       </a>
     </li>
   
@@ -337,55 +341,7 @@
   
     <li class="md-nav__item">
       <a href="/tutorial/05-IO-Create-Insert-External-Data/" class="md-nav__link">
-        Creating and inserting data
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_6">
-          Advanced Topics
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Advanced Topics" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_6">
-          <span class="md-nav__icon md-icon"></span>
-          Advanced Topics
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/tutorial/06-Advanced-Topics-ComplexFiltering/" class="md-nav__link">
-        Additional Filtering
+        Creating and Inserting Data
       </a>
     </li>
   
@@ -398,7 +354,21 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial/07-Advanced-Topics-Analytics-Tools/" class="md-nav__link">
+      <a href="/tutorial/06-ComplexFiltering/" class="md-nav__link">
+        Complex Filtering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/tutorial/07-Analytics-Tools/" class="md-nav__link">
         Analytics Tools
       </a>
     </li>
@@ -413,15 +383,8 @@
   
     <li class="md-nav__item">
       <a href="/tutorial/08-Geospatial-Analysis/" class="md-nav__link">
-        Ibis and Geospatial Operations
+        Geospatial Analysis
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -441,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/user_guide/sql/" class="md-nav__link">
+      <a href="/ibis-for-sql-programmers/" class="md-nav__link">
         Ibis for SQL Programmers
       </a>
     </li>
@@ -497,7 +460,7 @@
   
     <li class="md-nav__item">
       <a href="/user_guide/configuration/" class="md-nav__link">
-        Configuration
+        Configuring Ibis
       </a>
     </li>
   
@@ -510,8 +473,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/user_guide/topk/" class="md-nav__link">
-        TopK
+      <a href="/user_guide/design/" class="md-nav__link">
+        Design
       </a>
     </li>
   
@@ -538,8 +501,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/user_guide/udfs/" class="md-nav__link">
-        UDFs
+      <a href="/user_guide/topk/" class="md-nav__link">
+        Top-K Filtering
       </a>
     </li>
   
@@ -552,8 +515,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/user_guide/design/" class="md-nav__link">
-        Design
+      <a href="/user_guide/udfs/" class="md-nav__link">
+        User Defined Functions
       </a>
     </li>
   
@@ -598,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/user_guide/extending/extending_elementwise_expr/" class="md-nav__link">
+      <a href="/user_guide/extending/elementwise/" class="md-nav__link">
         Adding an Elementwise Operation
       </a>
     </li>
@@ -612,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/user_guide/extending/extending_reduce_expr/" class="md-nav__link">
+      <a href="/user_guide/extending/reduction/" class="md-nav__link">
         Adding a Reduction Operation
       </a>
     </li>
@@ -676,7 +639,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/backends/">Backends</a>
+          <a href="/backends/">Execution Backends</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -684,10 +647,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Backends" data-md-level="1">
+      <nav class="md-nav" aria-label="Execution Backends" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          Backends
+          Execution Backends
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -699,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backends/clickhouse/" class="md-nav__link">
+      <a href="/backends/ClickHouse/" class="md-nav__link">
         ClickHouse
       </a>
     </li>
@@ -713,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backends/dask/" class="md-nav__link">
+      <a href="/backends/Dask/" class="md-nav__link">
         Dask
       </a>
     </li>
@@ -727,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backends/datafusion/" class="md-nav__link">
+      <a href="/backends/Datafusion/" class="md-nav__link">
         Datafusion
       </a>
     </li>
@@ -741,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backends/impala/" class="md-nav__link">
+      <a href="/backends/Impala/" class="md-nav__link">
         Impala
       </a>
     </li>
@@ -755,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backends/mysql/" class="md-nav__link">
+      <a href="/backends/MySQL/" class="md-nav__link">
         MySQL
       </a>
     </li>
@@ -769,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backends/pandas/" class="md-nav__link">
+      <a href="/backends/Pandas/" class="md-nav__link">
         Pandas
       </a>
     </li>
@@ -783,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backends/postgres/" class="md-nav__link">
+      <a href="/backends/PostgreSQL/" class="md-nav__link">
         PostgreSQL
       </a>
     </li>
@@ -797,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backends/pyspark/" class="md-nav__link">
+      <a href="/backends/PySpark/" class="md-nav__link">
         PySpark
       </a>
     </li>
@@ -811,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backends/sqlite/" class="md-nav__link">
+      <a href="/backends/SQLite/" class="md-nav__link">
         SQLite
       </a>
     </li>
@@ -854,12 +817,128 @@
       
       
         <label class="md-nav__link" for="__nav_7">
+          Contribute
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribute" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/contribute/01_environment/" class="md-nav__link">
+        Setting Up a Development Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/contribute/02_workflow/" class="md-nav__link">
+        Working on the Codebase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/contribute/03_style/" class="md-nav__link">
+        Style and Formatting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/contribute/04_backend_tests/" class="md-nav__link">
+        Working with the Backend Test Suite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/contribute/05_maintainers_guide/" class="md-nav__link">
+        Maintaining the Codebase
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
           Community
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Community" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Community
         </label>
@@ -874,7 +953,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
       
       
       
@@ -887,13 +966,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_7_1">
+        <label class="md-nav__link" for="__nav_8_1">
           About
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="About" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_1">
+        <label class="md-nav__title" for="__nav_8_1">
           <span class="md-nav__icon md-icon"></span>
           About
         </label>
@@ -905,8 +984,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/team/" class="md-nav__link">
-        Team
+      <a href="/about/license/" class="md-nav__link">
+        Legal
       </a>
     </li>
   
@@ -933,8 +1012,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/license/" class="md-nav__link">
-        License
+      <a href="/about/team/" class="md-nav__link">
+        Team
       </a>
     </li>
   
@@ -998,122 +1077,6 @@
     <li class="md-nav__item">
       <a href="/community/ecosystem/" class="md-nav__link">
         Ecosystem
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_8">
-          Contribute
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Contribute" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          Contribute
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/contribute/environment/" class="md-nav__link">
-        Development Environment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/contribute/workflow/" class="md-nav__link">
-        Commit Workflow
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/contribute/style/" class="md-nav__link">
-        Development Style
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/contribute/backend_test_suite/" class="md-nav__link">
-        Backend Test Suite
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/contribute/maintainers_guide/" class="md-nav__link">
-        Maintainer's Guide
       </a>
     </li>
   
@@ -1407,7 +1370,7 @@
   
     <li class="md-nav__item">
       <a href="/api/backends/base/" class="md-nav__link">
-        Base Class
+        Backend Base Classes
       </a>
     </li>
   
@@ -1421,7 +1384,7 @@
   
     <li class="md-nav__item">
       <a href="/api/backends/sql/" class="md-nav__link">
-        Generic SQL Backends
+        SQL Backend Base Classes
       </a>
     </li>
   
@@ -1435,7 +1398,7 @@
   
     <li class="md-nav__item">
       <a href="/api/backends/sqlalchemy/" class="md-nav__link">
-        SQLAlchemy Backends
+        SQLAlchemy Backend Base Classes
       </a>
     </li>
   
@@ -1522,7 +1485,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="/assets/javascripts/bundle.8aa65030.min.js"></script>

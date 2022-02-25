@@ -6,7 +6,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/getting_started/</loc>
+         <loc>None</loc>
+         <lastmod>1980-01-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ibis-project.org/ibis-for-sql-programmers/</loc>
+         <lastmod>1980-01-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ibis-project.org/installation/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -101,52 +111,47 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/backends/clickhouse/</loc>
+         <loc>https://ibis-project.org/backends/ClickHouse/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/backends/dask/</loc>
+         <loc>https://ibis-project.org/backends/Dask/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/backends/datafusion/</loc>
+         <loc>https://ibis-project.org/backends/Datafusion/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/backends/impala/</loc>
+         <loc>https://ibis-project.org/backends/Impala/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/backends/mysql/</loc>
+         <loc>https://ibis-project.org/backends/MySQL/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/backends/pandas/</loc>
+         <loc>https://ibis-project.org/backends/Pandas/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/backends/postgres/</loc>
+         <loc>https://ibis-project.org/backends/PostgreSQL/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/backends/pyspark/</loc>
+         <loc>https://ibis-project.org/backends/PySpark/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/backends/sqlite/</loc>
-         <lastmod>1980-01-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ibis-project.org/backends/template/</loc>
+         <loc>https://ibis-project.org/backends/SQLite/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -161,27 +166,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/contribute/backend_test_suite/</loc>
+         <loc>https://ibis-project.org/contribute/01_environment/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/contribute/environment/</loc>
+         <loc>https://ibis-project.org/contribute/02_workflow/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/contribute/maintainers_guide/</loc>
+         <loc>https://ibis-project.org/contribute/03_style/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/contribute/style/</loc>
+         <loc>https://ibis-project.org/contribute/04_backend_tests/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/contribute/workflow/</loc>
+         <loc>https://ibis-project.org/contribute/05_maintainers_guide/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -211,12 +216,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/tutorial/06-Advanced-Topics-ComplexFiltering/</loc>
+         <loc>https://ibis-project.org/tutorial/06-ComplexFiltering/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/tutorial/07-Advanced-Topics-Analytics-Tools/</loc>
+         <loc>https://ibis-project.org/tutorial/07-Analytics-Tools/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -241,11 +246,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/user_guide/sql/</loc>
-         <lastmod>1980-01-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://ibis-project.org/user_guide/topk/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
@@ -256,12 +256,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/user_guide/extending/extending_elementwise_expr/</loc>
+         <loc>https://ibis-project.org/user_guide/extending/elementwise/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ibis-project.org/user_guide/extending/extending_reduce_expr/</loc>
+         <loc>https://ibis-project.org/user_guide/extending/reduction/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
