@@ -2005,10 +2005,10 @@
 <h2 id="example">Example</h2>
 <p>Let's compute the number of citizens per squared kilometer in Asia:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">db</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;geography.db&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">countries</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;countries&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">asian_countries</span> <span class="o">=</span> <span class="n">countries</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">countries</span><span class="p">[</span><span class="s1">&#39;continent&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;AS&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">density_in_asia</span> <span class="o">=</span> <span class="n">asian_countries</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">asian_countries</span><span class="p">[</span><span class="s1">&#39;area_km2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">db</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;geography.db&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">countries</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;countries&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">asian_countries</span> <span class="o">=</span> <span class="n">countries</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">countries</span><span class="o">.</span><span class="n">continent</span> <span class="o">==</span> <span class="s2">&quot;AS&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">density_in_asia</span> <span class="o">=</span> <span class="n">asian_countries</span><span class="o">.</span><span class="n">population</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">asian_countries</span><span class="o">.</span><span class="n">area_km2</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">density_in_asia</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 <span class="mf">130.7019141926602</span>
 </code></pre></div>
@@ -2092,8 +2092,10 @@ sacrifice maintainability to get to those insights!</p>
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="n">acq_ipos</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">num_investments</span><span class="p">::</span><span class="nb">float</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">acq_rate</span><span class="w"></span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">  </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="k">CAST</span><span class="p">(</span><span class="n">acq_ipos</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">num_investments</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">acq_rate</span><span class="w"></span>
 <span class="k">FROM</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="k">SELECT</span><span class="w"></span>
 <span class="w">    </span><span class="k">COALESCE</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">investor_name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;NO INVESTOR&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">investor_name</span><span class="p">,</span><span class="w"></span>
@@ -2124,8 +2126,8 @@ analytics code.</p>
 <div class="admonition success">
 <p class="admonition-title">Ibis <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" />'s SQLAlchemy</p>
 <p>Ibis generates SQLAlchemy expressions for some of our backends
-including the <a href="/backends/postgres">PostgreSQL</a> and
-<a href="/backends/sqlite">SQLite</a> backends!</p>
+including the <a href="/backends/PostgreSQL">PostgreSQL</a> and
+<a href="/backends/SQLite">SQLite</a> backends!</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Ibis</label><label for="__tabbed_5_2">SQLAlchemy</label></div>
 <div class="tabbed-content">
@@ -2240,7 +2242,9 @@ including the <a href="/backends/postgres">PostgreSQL</a> and
 </div>
 </div>
 </div>
-<p>Download the example SQLite database at <a href="https://storage.googleapis.com/ibis-testing-data/crunchbase.db">https://storage.googleapis.com/ibis-testing-data/crunchbase.db</a>!</p>
+<div class="download-button">
+<p><a class="md-button md-button--primary" href="https://storage.googleapis.com/ibis-testing-data/crunchbase.db"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M144 480C64.47 480 0 415.5 0 336c0-62.8 40.17-116.2 96.2-135.9-.13-2.7-.2-5.4-.2-8.1 0-88.4 71.6-160 160-160 59.3 0 111 32.25 138.7 80.2C409.9 101.1 428.3 96 448 96c53 0 96 42.1 96 96 0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm159-87.9c9.4 10.2 24.6 10.2 33.1 0l80-80c10.2-8.5 10.2-23.7 0-33.1-8.5-9.3-23.7-9.3-33.1 0l-39 39.1V184c0-13.3-10.7-24-24-24s-24 10.7-24 24v134.1L256.1 279c-8.5-9.3-23.7-9.3-33.1 0-9.3 9.4-9.3 24.6 0 33.1l80 80z"/></svg></span> Download the example data</a></p>
+</div>
 
               
 
