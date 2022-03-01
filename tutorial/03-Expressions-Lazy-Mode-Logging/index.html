@@ -3391,7 +3391,7 @@ countries['name', 'continent', population_in_millions].limit(3).execute()</div>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>SELECT t0.name, t0.continent, t0.population / CAST(? AS REAL) AS population_in_millions 
-FROM base.countries AS t0
+FROM main.countries AS t0
  LIMIT ? OFFSET ?
 </pre>
 </div>

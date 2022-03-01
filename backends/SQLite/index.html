@@ -869,13 +869,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.list_tables" class="md-nav__link">
-    list_tables()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.sqlite.Backend.table" class="md-nav__link">
     table()
   </a>
@@ -1621,13 +1614,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.list_tables" class="md-nav__link">
-    list_tables()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.sqlite.Backend.table" class="md-nav__link">
     table()
   </a>
@@ -1726,9 +1712,7 @@ Backend            (<a title="ibis.backends.base.sql.alchemy.BaseAlchemyBackend"
 
 
 
-
 <h4 id="ibis.backends.sqlite.Backend-methods">Methods</h4>
-
 
 
 
@@ -1738,7 +1722,7 @@ Backend            (<a title="ibis.backends.base.sql.alchemy.BaseAlchemyBackend"
 
 
 <h5 id="ibis.backends.sqlite.Backend.attach" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">attach</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">create</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">attach</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code>
 
 
 </h5>
@@ -1770,13 +1754,6 @@ Backend            (<a title="ibis.backends.base.sql.alchemy.BaseAlchemyBackend"
         <td><p>Path to sqlite3 database file</p></td>
         <td><em>required</em></td>
       </tr>
-      <tr>
-        <td><code>create</code></td>
-        <td><code>bool</code></td>
-        <td><p>If the database file does not exist, create file if <code>True</code>
-otherwise raise an exception</p></td>
-        <td><code>False</code></td>
-      </tr>
   </tbody>
 </table>
     </div>
@@ -1790,7 +1767,7 @@ otherwise raise an exception</p></td>
 
 
 <h5 id="ibis.backends.sqlite.Backend.do_connect" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">create</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 </h5>
@@ -1819,74 +1796,6 @@ in-memory transient database and you can use attach() to add more
 files</p></td>
         <td><code>None</code></td>
       </tr>
-      <tr>
-        <td><code>create</code></td>
-        <td><code>bool</code></td>
-        <td><p>If the database file does not exist, create it</p></td>
-        <td><code>False</code></td>
-      </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h5 id="ibis.backends.sqlite.Backend.list_tables" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">list_tables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-</h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Return the list of table names in the current database.</p>
-<p>For some backends, the tables may be files in a directory,
-or other equivalent entities in a SQL database.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>like</code></td>
-        <td><code>str</code></td>
-        <td><p>A pattern in Python's regex format.</p></td>
-        <td><code>None</code></td>
-      </tr>
-      <tr>
-        <td><code>database</code></td>
-        <td><code>str</code></td>
-        <td><p>The database to list tables of, if not the current one.</p></td>
-        <td><code>None</code></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>list[str]</code></td>
-      <td><p>The list of the table names that match the pattern <code>like</code>.</p></td>
-    </tr>
   </tbody>
 </table>
     </div>
