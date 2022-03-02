@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://ibis-project.org/api/backends/pandas/</loc>
+         <lastmod>1980-01-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://ibis-project.org/api/backends/sql/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>

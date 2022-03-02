@@ -703,14 +703,47 @@
     Connect
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Connect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#api" class="md-nav__link">
     API
   </a>
   
-    <nav class="md-nav" aria-label="API">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-parameters" class="md-nav__link">
+    Connection Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.do_connect" class="md-nav__link">
+    do_connect()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-api" class="md-nav__link">
+    Backend API
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -749,45 +782,19 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend.Options" class="md-nav__link">
-    Options
-  </a>
-  
-    <nav class="md-nav" aria-label="Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend.Options-attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.clickhouse.Backend-methods" class="md-nav__link">
     Methods
   </a>
   
     <nav class="md-nav" aria-label="Methods">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.add_operation" class="md-nav__link">
+    add_operation()
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#ibis.backends.clickhouse.Backend.close" class="md-nav__link">
@@ -797,22 +804,85 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend.do_connect" class="md-nav__link">
-    do_connect()
+  <a href="#ibis.backends.clickhouse.Backend.compile" class="md-nav__link">
+    compile()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend.fetch_from_cursor" class="md-nav__link">
-    fetch_from_cursor()
+  <a href="#ibis.backends.clickhouse.Backend.connect" class="md-nav__link">
+    connect()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend.get_schema" class="md-nav__link">
-    get_schema()
+  <a href="#ibis.backends.clickhouse.Backend.create_database" class="md-nav__link">
+    create_database()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.create_table" class="md-nav__link">
+    create_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.create_view" class="md-nav__link">
+    create_view()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.database" class="md-nav__link">
+    database()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.drop_table" class="md-nav__link">
+    drop_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.drop_view" class="md-nav__link">
+    drop_view()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.execute" class="md-nav__link">
+    execute()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.exists_database" class="md-nav__link">
+    exists_database()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.exists_table" class="md-nav__link">
+    exists_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.explain" class="md-nav__link">
+    explain()
   </a>
   
 </li>
@@ -834,6 +904,27 @@
           <li class="md-nav__item">
   <a href="#ibis.backends.clickhouse.Backend.raw_sql" class="md-nav__link">
     raw_sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.sql" class="md-nav__link">
+    sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.table" class="md-nav__link">
+    table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.verify" class="md-nav__link">
+    verify()
   </a>
   
 </li>
@@ -1555,6 +1646,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_9_3">
@@ -1577,6 +1670,20 @@
     <li class="md-nav__item">
       <a href="../../api/backends/base/" class="md-nav__link">
         Backend Base Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/backends/pandas/" class="md-nav__link">
+        Pandas-like Backend Base Classes
       </a>
     </li>
   
@@ -1662,14 +1769,47 @@
     Connect
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Connect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#api" class="md-nav__link">
     API
   </a>
   
-    <nav class="md-nav" aria-label="API">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-parameters" class="md-nav__link">
+    Connection Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.do_connect" class="md-nav__link">
+    do_connect()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-api" class="md-nav__link">
+    Backend API
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1708,45 +1848,19 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend.Options" class="md-nav__link">
-    Options
-  </a>
-  
-    <nav class="md-nav" aria-label="Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend.Options-attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.clickhouse.Backend-methods" class="md-nav__link">
     Methods
   </a>
   
     <nav class="md-nav" aria-label="Methods">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.add_operation" class="md-nav__link">
+    add_operation()
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#ibis.backends.clickhouse.Backend.close" class="md-nav__link">
@@ -1756,22 +1870,85 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend.do_connect" class="md-nav__link">
-    do_connect()
+  <a href="#ibis.backends.clickhouse.Backend.compile" class="md-nav__link">
+    compile()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend.fetch_from_cursor" class="md-nav__link">
-    fetch_from_cursor()
+  <a href="#ibis.backends.clickhouse.Backend.connect" class="md-nav__link">
+    connect()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.clickhouse.Backend.get_schema" class="md-nav__link">
-    get_schema()
+  <a href="#ibis.backends.clickhouse.Backend.create_database" class="md-nav__link">
+    create_database()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.create_table" class="md-nav__link">
+    create_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.create_view" class="md-nav__link">
+    create_view()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.database" class="md-nav__link">
+    database()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.drop_table" class="md-nav__link">
+    drop_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.drop_view" class="md-nav__link">
+    drop_view()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.execute" class="md-nav__link">
+    execute()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.exists_database" class="md-nav__link">
+    exists_database()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.exists_table" class="md-nav__link">
+    exists_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.explain" class="md-nav__link">
+    explain()
   </a>
   
 </li>
@@ -1793,6 +1970,27 @@
           <li class="md-nav__item">
   <a href="#ibis.backends.clickhouse.Backend.raw_sql" class="md-nav__link">
     raw_sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.sql" class="md-nav__link">
+    sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.table" class="md-nav__link">
+    table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.clickhouse.Backend.verify" class="md-nav__link">
+    verify()
   </a>
   
 </li>
@@ -1835,7 +2033,7 @@
 
 <h1 id="clickhouse"><a href="https://clickhouse.yandex/">ClickHouse</a></h1>
 <h2 id="install">Install</h2>
-<p>Install dependencies for the ClickHouse backend:</p>
+<p>Install ibis and dependencies for the ClickHouse backend:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label><label for="__tabbed_1_3">mamba</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1853,13 +2051,111 @@
 </div>
 </div>
 <h2 id="connect">Connect</h2>
+<h3 id="api">API</h3>
+<p>Create a client by passing in connection parameters to <code>ibis.clickhouse.connect</code>.</p>
 <!-- prettier-ignore-start -->
-<p>Create a client by passing in connection parameters to <a href="#ibis.backends.clickhouse.Backend.do_connect"><code>ibis.clickhouse.connect</code></a>:</p>
+<p>See <a href="#ibis.backends.clickhouse.Backend.do_connect"><code>ibis.backends.clickhouse.Backend.do_connect</code></a>
+for connection parameter information.</p>
 <!-- prettier-ignore-end -->
 
-<div class="highlight"><pre><span></span><code><span class="n">ibis</span><span class="o">.</span><span class="n">clickhouse</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">9000</span><span class="p">)</span>
+<!-- prettier-ignore-start -->
+<div class="admonition info">
+<p class="admonition-title"><code>ibis.clickhouse.connect</code> is a thin wrapper around <a href="#ibis.backends.clickhouse.Backend.do_connect"><code>ibis.backends.clickhouse.Backend.do_connect</code></a>.</p>
+</div>
+<!-- prettier-ignore-end -->
+
+<h3 id="connection-parameters">Connection Parameters</h3>
+<!-- prettier-ignore-start -->
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.clickhouse.Backend.do_connect" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">9000</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">client_name</span><span class="o">=</span><span class="s1">&#39;ibis&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+
+</h4>
+
+    <div class="doc doc-contents first">
+
+      <p>Create a ClickHouse client for use with Ibis.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>host</code></td>
+        <td><code>str</code></td>
+        <td><p>Host name of the clickhouse server</p></td>
+        <td><code>&#39;localhost&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>port</code></td>
+        <td><code>int</code></td>
+        <td><p>Clickhouse server's  port</p></td>
+        <td><code>9000</code></td>
+      </tr>
+      <tr>
+        <td><code>database</code></td>
+        <td><code>str</code></td>
+        <td><p>Default database when executing queries</p></td>
+        <td><code>&#39;default&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>user</code></td>
+        <td><code>str</code></td>
+        <td><p>User to authenticate with</p></td>
+        <td><code>&#39;default&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>password</code></td>
+        <td><code>str</code></td>
+        <td><p>Password to authenticate with</p></td>
+        <td><code>&#39;&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>client_name</code></td>
+        <td><code>str</code></td>
+        <td><p>Name of client that wil appear in clickhouse server logs</p></td>
+        <td><code>&#39;ibis&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>compression</code></td>
+        <td><code>Literal[&#39;lz4&#39;, &#39;lz4hc&#39;, &#39;quicklz&#39;, &#39;zstd&#39;] | bool</code></td>
+        <td><p>Whether or not to use compression.
+Default is <code>'lz4'</code> if installed else False.
+True is equivalent to <code>'lz4'</code>.</p></td>
+        <td><code>False</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">clickhouse_host</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_CLICKHOUSE_HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">clickhouse_port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_CLICKHOUSE_PORT&#39;</span><span class="p">,</span> <span class="mi">9000</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">clickhouse</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">clickhouse_host</span><span class="p">,</span>  <span class="n">port</span><span class="o">=</span><span class="n">clickhouse_port</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">client</span>
+<span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">clickhouse</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ClickhouseClient</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
 </code></pre></div>
-<h2 id="api">API</h2>
+
+    </div>
+
+  </div>
+
+<!-- prettier-ignore-end -->
+
+<h2 id="backend-api">Backend API</h2>
 <!-- prettier-ignore-start -->
 
 
@@ -1888,6 +2184,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 <h4 id="ibis.backends.clickhouse.Backend-attributes">Attributes</h4>
+
 
   <div class="doc doc-object doc-attribute">
 
@@ -1969,91 +2266,49 @@ underlying library or application.</p>
   </div>
 
 
-<h4 id="ibis.backends.clickhouse.Backend-classes">Classes</h4>
-
-  <div class="doc doc-object doc-class">
 
 
+<h4 id="ibis.backends.clickhouse.Backend-methods">Methods</h4>
 
-<h5 id="ibis.backends.clickhouse.Backend.Options" class="doc doc-heading">
-        <code>
-Options            (<span title="ibis.config.BaseModel">BaseModel</span>)
-        </code>
 
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.add_operation" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_operation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
 </h5>
 
     <div class="doc doc-contents ">
 
+      <p>Add a translation function to the backend for a specific operation.</p>
+<p>Operations are defined in <code>ibis.expr.operations</code>, and a translation
+function receives the translator object and an expression as
+parameters, and returns a value depending on the backend. For example,
+in SQL backends, a NullLiteral operation could be translated to the
+string <code>"NULL"</code>.</p>
 
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-<h6 id="ibis.backends.clickhouse.Backend.Options-attributes">Attributes</h6>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-attribute">
-
-
-
-<h7 id="ibis.backends.clickhouse.Backend.Options.temp_db" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">temp_db</span><span class="p">:</span> <span class="nb">str</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-pydantic-field"><code>pydantic-field</code></small>
-  </span>
-
-</h7>
-
-    <div class="doc doc-contents ">
-
-      <p>Database to use for temporary objects.</p>
-    </div>
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-  </div>
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nd">@ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">add_operation</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">operations</span><span class="o">.</span><span class="n">NullLiteral</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">def</span> <span class="nf">_null_literal</span><span class="p">(</span><span class="n">translator</span><span class="p">,</span> <span class="n">expression</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="s1">&#39;NULL&#39;</span>
+</code></pre></div>
 
     </div>
 
   </div>
-
-
-
-
-<h4 id="ibis.backends.clickhouse.Backend-methods">Methods</h4>
-
-
 
 
 
@@ -2081,15 +2336,18 @@ Options            (<span title="ibis.config.BaseModel">BaseModel</span>)
 
 
 
-<h5 id="ibis.backends.clickhouse.Backend.do_connect" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">9000</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">client_name</span><span class="o">=</span><span class="s1">&#39;ibis&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<h5 id="ibis.backends.clickhouse.Backend.compile" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">compile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timecontext</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
 
 </h5>
 
     <div class="doc doc-contents ">
 
-      <p>Create a ClickHouse client for use with Ibis.</p>
+      <p>Compille an Ibis expression.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2103,143 +2361,28 @@ Options            (<span title="ibis.config.BaseModel">BaseModel</span>)
   </thead>
   <tbody>
       <tr>
-        <td><code>host</code></td>
-        <td><code>str</code></td>
-        <td><p>Host name of the clickhouse server</p></td>
-        <td><code>&#39;localhost&#39;</code></td>
-      </tr>
-      <tr>
-        <td><code>port</code></td>
-        <td><code>int</code></td>
-        <td><p>Clickhouse server's  port</p></td>
-        <td><code>9000</code></td>
-      </tr>
-      <tr>
-        <td><code>database</code></td>
-        <td><code>str</code></td>
-        <td><p>Default database when executing queries</p></td>
-        <td><code>&#39;default&#39;</code></td>
-      </tr>
-      <tr>
-        <td><code>user</code></td>
-        <td><code>str</code></td>
-        <td><p>User to authenticate with</p></td>
-        <td><code>&#39;default&#39;</code></td>
-      </tr>
-      <tr>
-        <td><code>password</code></td>
-        <td><code>str</code></td>
-        <td><p>Password to authenticate with</p></td>
-        <td><code>&#39;&#39;</code></td>
-      </tr>
-      <tr>
-        <td><code>client_name</code></td>
-        <td><code>str</code></td>
-        <td><p>This will appear in clickhouse server logs</p></td>
-        <td><code>&#39;ibis&#39;</code></td>
-      </tr>
-      <tr>
-        <td><code>compression</code></td>
-        <td><code>str | bool</code></td>
-        <td><p>Weather or not to use compression.
-Default is lz4 if installed else False.
-Possible choices: lz4, lz4hc, quicklz, zstd, True, False
-True is equivalent to 'lz4'.</p></td>
-        <td><code>False</code></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">os</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">clickhouse_host</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_CLICKHOUSE_HOST&#39;</span><span class="p">,</span>
-<span class="o">...</span>                                  <span class="s1">&#39;localhost&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">clickhouse_port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_CLICKHOUSE_PORT&#39;</span><span class="p">,</span>
-<span class="o">...</span>                                      <span class="mi">9000</span><span class="p">))</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">clickhouse</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-<span class="o">...</span>     <span class="n">host</span><span class="o">=</span><span class="n">clickhouse_host</span><span class="p">,</span>
-<span class="o">...</span>     <span class="n">port</span><span class="o">=</span><span class="n">clickhouse_port</span>
-<span class="o">...</span> <span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">client</span>
-<span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">clickhouse</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ClickhouseClient</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
-</code></pre></div>
-
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ClickhouseClient</code></td>
-      <td><p>A clickhouse client</p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h5 id="ibis.backends.clickhouse.Backend.fetch_from_cursor" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">fetch_from_cursor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cursor</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span></code>
-
-
-</h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Fetch data from cursor.</p>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h5 id="ibis.backends.clickhouse.Backend.get_schema" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-</h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Return a Schema object for the indicated table and database.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>table_name</code></td>
-        <td><code>str</code></td>
-        <td><p>May be fully qualified</p></td>
+        <td><code>expr</code></td>
+        <td><code>ir.Expr</code></td>
+        <td><p>Ibis expression</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
-        <td><code>database</code></td>
+        <td><code>limit</code></td>
         <td><code>str | None</code></td>
-        <td><p>Database name</p></td>
+        <td><p>For expressions yielding result sets; retrieve at most this number
+of values/rows. Overrides any limit already set on the expression.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>params</code></td>
+        <td><code>Mapping[ir.Expr, Any] | None</code></td>
+        <td><p>Named unbound parameters</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>timecontext</code></td>
+        <td><code>TimeContext | None</code></td>
+        <td><p>Additional information about data source time boundaries</p></td>
         <td><code>None</code></td>
       </tr>
   </tbody>
@@ -2254,8 +2397,651 @@ True is equivalent to 'lz4'.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>sch.Schema</code></td>
-      <td><p>Ibis schema</p></td>
+      <td><code>Any</code></td>
+      <td><p>The output of compilation. The type of this value depends on the
+backend.</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.connect" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Connect to the database.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>args</code></td>
+        <td><code>None</code></td>
+        <td><p>Connection parameters</p></td>
+        <td><code>()</code></td>
+      </tr>
+      <tr>
+        <td><code>kwargs</code></td>
+        <td><code>None</code></td>
+        <td><p>Additional connection parameters</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>BaseBackend</code></td>
+      <td><p>An instance of the backend</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.create_database" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Create a new database.</p>
+<p>Not all backends implement this method.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Name of the new database.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>force</code></td>
+        <td><code>bool</code></td>
+        <td><p>If <code>False</code>, an exception is raised if the database already exists.</p></td>
+        <td><code>False</code></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.create_table" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Create a new table.</p>
+<p>Not all backends implement this method.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Name of the new table.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>obj</code></td>
+        <td><code>pd.DataFrame | ir.TableExpr | None</code></td>
+        <td><p>An Ibis table expression or pandas table that will be used to
+extract the schema and the data of the new table. If not provided,
+<code>schema</code> must be given.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>schema</code></td>
+        <td><code>ibis.Schema | None</code></td>
+        <td><p>The schema for the new table. Only one of <code>schema</code> or <code>obj</code> can be
+provided.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>database</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Name of the database where the table will be created, if not the
+default.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.create_view" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Create a view.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Name for the new view.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>expr</code></td>
+        <td><code>ir.TableExpr</code></td>
+        <td><p>An Ibis table expression that will be used to extract the query
+of the view.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>database</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Name of the database where the view will be created, if not the
+default.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.database" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Return a <code>Database</code> object for the <code>name</code> database.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Name of the database to return the object for.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Database</code></td>
+      <td><p>A database object for the specified database.</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.drop_table" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">drop_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Drop a table.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Name of the table to drop.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>database</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Name of the database where the table exists, if not the default.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>force</code></td>
+        <td><code>bool</code></td>
+        <td><p>If <code>False</code>, an exception is raised if the table does not exist.</p></td>
+        <td><code>False</code></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.drop_view" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">drop_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Drop a view.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Name of the view to drop.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>database</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Name of the database where the view exists, if not the default.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>force</code></td>
+        <td><code>bool</code></td>
+        <td><p>If <code>False</code>, an exception is raised if the view does not exist.</p></td>
+        <td><code>False</code></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.execute" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Compile and execute an Ibis expression.</p>
+<p>Compile and execute Ibis expression using this backend client
+interface, returning results in-memory in the appropriate object type</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>expr</code></td>
+        <td><code>ir.Expr</code></td>
+        <td><p>Ibis expression</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>limit</code></td>
+        <td><code>str</code></td>
+        <td><p>For expressions yielding result sets; retrieve at most this number
+of values/rows. Overrides any limit already set on the expression.</p></td>
+        <td><code>&#39;default&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>params</code></td>
+        <td><code>Mapping[ir.ScalarExpr, Any] | None</code></td>
+        <td><p>Named unbound parameters</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>kwargs</code></td>
+        <td><code>Any</code></td>
+        <td><p>Backend specific arguments. For example, the clickhouse backend
+uses this to receive <code>external_tables</code> as a dictionary of pandas
+DataFrames.</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame | Series | Scalar</code></td>
+      <td><ul>
+<li><code>TableExpr</code>: pandas.DataFrame</li>
+<li><code>ColumnExpr</code>: pandas.Series</li>
+<li><code>ScalarExpr</code>: Python scalar value</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.exists_database" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">exists_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Return whether a database name exists in the current connection.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Database to check for existence</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>Whether <code>name</code> exists</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.exists_table" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">exists_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Return whether a table name exists in the database.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Table name</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>database</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Database to check if given</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>Whether <code>name</code> is a table</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.explain" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">explain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Explain an expression.</p>
+<p>Return the query plan associated with the indicated expression or SQL
+query.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code></td>
+      <td><p>Query plan</p></td>
     </tr>
   </tbody>
 </table>
@@ -2443,6 +3229,149 @@ external datasources for the query</p></td>
   </div>
 
 
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.sql" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Convert a SQL query to an Ibis table expression.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>query</code></td>
+        <td><code>str</code></td>
+        <td><p>SQL string</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.TableExpr</code></td>
+      <td><p>Table expression</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.table" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Construct a table expression.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Table name</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>database</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Database name</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.TableExpr</code></td>
+      <td><p>Table expression</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.clickhouse.Backend.verify" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">verify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Verify <code>expr</code> is an expression that can be compiled.</p>
+
+    </div>
+
+  </div>
 
 
 

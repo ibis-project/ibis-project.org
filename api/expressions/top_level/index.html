@@ -1248,7 +1248,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.types.generic.NA" class="md-nav__link">
+  <a href="#na" class="md-nav__link">
     NA
   </a>
   
@@ -1283,6 +1283,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ibis.expr.api.date" class="md-nav__link">
+    date()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ibis.expr.api.desc" class="md-nav__link">
     desc()
   </a>
@@ -1299,6 +1306,13 @@
         <li class="md-nav__item">
   <a href="#ibis.expr.api.ifelse" class="md-nav__link">
     ifelse()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ibis.expr.api.interval" class="md-nav__link">
+    interval()
   </a>
   
 </li>
@@ -1346,6 +1360,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ibis.expr.api.param" class="md-nav__link">
+    param()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ibis.expr.random.random" class="md-nav__link">
     random()
   </a>
@@ -1383,6 +1404,13 @@
         <li class="md-nav__item">
   <a href="#ibis.expr.api.table" class="md-nav__link">
     table()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ibis.expr.api.time" class="md-nav__link">
+    time()
   </a>
   
 </li>
@@ -1570,6 +1598,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_9_3">
@@ -1592,6 +1622,20 @@
     <li class="md-nav__item">
       <a href="../../backends/base/" class="md-nav__link">
         Backend Base Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backends/pandas/" class="md-nav__link">
+        Pandas-like Backend Base Classes
       </a>
     </li>
   
@@ -1666,7 +1710,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.types.generic.NA" class="md-nav__link">
+  <a href="#na" class="md-nav__link">
     NA
   </a>
   
@@ -1701,6 +1745,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ibis.expr.api.date" class="md-nav__link">
+    date()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ibis.expr.api.desc" class="md-nav__link">
     desc()
   </a>
@@ -1717,6 +1768,13 @@
         <li class="md-nav__item">
   <a href="#ibis.expr.api.ifelse" class="md-nav__link">
     ifelse()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ibis.expr.api.interval" class="md-nav__link">
+    interval()
   </a>
   
 </li>
@@ -1764,6 +1822,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ibis.expr.api.param" class="md-nav__link">
+    param()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ibis.expr.random.random" class="md-nav__link">
     random()
   </a>
@@ -1801,6 +1866,13 @@
         <li class="md-nav__item">
   <a href="#ibis.expr.api.table" class="md-nav__link">
     table()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ibis.expr.api.time" class="md-nav__link">
+    time()
   </a>
   
 </li>
@@ -1863,24 +1935,8 @@
 
 <h1 id="top-level-apis">Top-level APIs</h1>
 <p>These methods and objects are available directly in the <code>ibis</code> module.</p>
-
-
-  <div class="doc doc-object doc-attribute">
-
-
-
-<h2 id="ibis.expr.types.generic.NA" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">NA</span><span class="p">:</span> <span class="kc">None</span></code>
-
-
-</h2>
-
-    <div class="doc doc-contents first">
-
-    </div>
-
-  </div>
-
+<h2 id="na"><code>NA</code></h2>
+<p><code>NA</code> is the null scalar.</p>
 
 
   <div class="doc doc-object doc-function">
@@ -2139,6 +2195,60 @@ scalar (if the inputs are Python literals)</p></td>
 
 
 
+<h2 id="ibis.expr.api.date" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">date</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Return a date literal if <code>value</code> is coercible to a date.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>value</code></td>
+        <td><code>str</code></td>
+        <td><p>Date string</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.DateScalar</code></td>
+      <td><p>A date expression</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
 <h2 id="ibis.expr.api.desc" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">desc</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span></code>
 
@@ -2279,6 +2389,132 @@ e.g., in SQL: CASE WHEN bool_expr THEN 0 else 1 END</p>
     <tr>
       <td><code>ir.ValueExpr</code></td>
       <td><p>The value of <code>true_expr</code> if <code>arg</code> is <code>True</code> else <code>false_expr</code></p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="ibis.expr.api.interval" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">interval</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quarters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">months</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">weeks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">milliseconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">microseconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nanoseconds</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Return an interval literal expression.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>value</code></td>
+        <td><code>int | datetime.timedelta | None</code></td>
+        <td><p>Interval value. If passed, must be combined with <code>unit</code>.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>unit</code></td>
+        <td><code>str</code></td>
+        <td><p>Unit of <code>value</code></p></td>
+        <td><code>&#39;s&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>years</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of years</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>quarters</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of quarters</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>months</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of months</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>weeks</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of weeks</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>days</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of days</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>hours</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of hours</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>minutes</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of minutes</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>seconds</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of seconds</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>milliseconds</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of milliseconds</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>microseconds</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of microseconds</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>nanoseconds</code></td>
+        <td><code>int | None</code></td>
+        <td><p>Number of nanoseconds</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.IntervalScalar</code></td>
+      <td><p>An interval expression</p></td>
     </tr>
   </tbody>
 </table>
@@ -2611,6 +2847,71 @@ key/value pairs of fixed types)</p></td>
 
       <p>Create a NULL/NA scalar</p>
 
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="ibis.expr.api.param" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">param</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Create a deferred parameter of a given type.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>type</code></td>
+        <td><code>dt.DataType</code></td>
+        <td><p>The type of the unbound parameter, e.g., double, int64, date, etc.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">start</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">end</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">schema</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;timestamp_col&#39;</span><span class="p">,</span> <span class="s1">&#39;timestamp&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">predicates</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">timestamp_col</span> <span class="o">&gt;=</span> <span class="n">start</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">timestamp_col</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">predicates</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</code></pre></div>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.ScalarExpr</code></td>
+      <td><p>A scalar expression backend by a parameter</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
@@ -2961,6 +3262,60 @@ of fixed types)</p></td>
     <tr>
       <td><code>ir.TableExpr</code></td>
       <td><p>An unbound table expression</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="ibis.expr.api.time" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">time</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Return a time literal if <code>value</code> is coercible to a time.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>value</code></td>
+        <td><code>str</code></td>
+        <td><p>Time string</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.TimeScalar</code></td>
+      <td><p>A time expression</p></td>
     </tr>
   </tbody>
 </table>

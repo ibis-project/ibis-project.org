@@ -815,14 +815,47 @@
     Connect
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Connect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#api" class="md-nav__link">
     API
   </a>
   
-    <nav class="md-nav" aria-label="API">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-parameters" class="md-nav__link">
+    Connection Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.do_connect" class="md-nav__link">
+    do_connect()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-api" class="md-nav__link">
+    Backend API
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -861,52 +894,19 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.table_expr_class" class="md-nav__link">
-    table_expr_class
-  </a>
-  
-    <nav class="md-nav" aria-label="table_expr_class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.table_expr_class-methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.table_expr_class.insert--completely-overwrite-contents" class="md-nav__link">
-    Completely overwrite contents
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend-methods" class="md-nav__link">
     Methods
   </a>
   
     <nav class="md-nav" aria-label="Methods">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.add_operation" class="md-nav__link">
+    add_operation()
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend.close" class="md-nav__link">
@@ -925,6 +925,13 @@
           <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend.compute_stats" class="md-nav__link">
     compute_stats()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.connect" class="md-nav__link">
+    connect()
   </a>
   
 </li>
@@ -951,8 +958,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.do_connect" class="md-nav__link">
-    do_connect()
+  <a href="#ibis.backends.pyspark.Backend.database" class="md-nav__link">
+    database()
   </a>
   
 </li>
@@ -993,15 +1000,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.fetch_from_cursor" class="md-nav__link">
-    fetch_from_cursor()
+  <a href="#ibis.backends.pyspark.Backend.exists_database" class="md-nav__link">
+    exists_database()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.get_schema" class="md-nav__link">
-    get_schema()
+  <a href="#ibis.backends.pyspark.Backend.exists_table" class="md-nav__link">
+    exists_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.explain" class="md-nav__link">
+    explain()
   </a>
   
 </li>
@@ -1048,6 +1062,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.sql" class="md-nav__link">
+    sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend.table" class="md-nav__link">
     table()
   </a>
@@ -1057,6 +1078,13 @@
           <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend.truncate_table" class="md-nav__link">
     truncate_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.verify" class="md-nav__link">
+    verify()
   </a>
   
 </li>
@@ -1666,6 +1694,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_9_3">
@@ -1688,6 +1718,20 @@
     <li class="md-nav__item">
       <a href="../../api/backends/base/" class="md-nav__link">
         Backend Base Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/backends/pandas/" class="md-nav__link">
+        Pandas-like Backend Base Classes
       </a>
     </li>
   
@@ -1773,14 +1817,47 @@
     Connect
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Connect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#api" class="md-nav__link">
     API
   </a>
   
-    <nav class="md-nav" aria-label="API">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-parameters" class="md-nav__link">
+    Connection Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.do_connect" class="md-nav__link">
+    do_connect()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-api" class="md-nav__link">
+    Backend API
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1819,52 +1896,19 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.table_expr_class" class="md-nav__link">
-    table_expr_class
-  </a>
-  
-    <nav class="md-nav" aria-label="table_expr_class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.table_expr_class-methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.table_expr_class.insert--completely-overwrite-contents" class="md-nav__link">
-    Completely overwrite contents
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend-methods" class="md-nav__link">
     Methods
   </a>
   
     <nav class="md-nav" aria-label="Methods">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.add_operation" class="md-nav__link">
+    add_operation()
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend.close" class="md-nav__link">
@@ -1883,6 +1927,13 @@
           <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend.compute_stats" class="md-nav__link">
     compute_stats()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.connect" class="md-nav__link">
+    connect()
   </a>
   
 </li>
@@ -1909,8 +1960,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.do_connect" class="md-nav__link">
-    do_connect()
+  <a href="#ibis.backends.pyspark.Backend.database" class="md-nav__link">
+    database()
   </a>
   
 </li>
@@ -1951,15 +2002,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.fetch_from_cursor" class="md-nav__link">
-    fetch_from_cursor()
+  <a href="#ibis.backends.pyspark.Backend.exists_database" class="md-nav__link">
+    exists_database()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.pyspark.Backend.get_schema" class="md-nav__link">
-    get_schema()
+  <a href="#ibis.backends.pyspark.Backend.exists_table" class="md-nav__link">
+    exists_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.explain" class="md-nav__link">
+    explain()
   </a>
   
 </li>
@@ -2006,6 +2064,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.sql" class="md-nav__link">
+    sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend.table" class="md-nav__link">
     table()
   </a>
@@ -2015,6 +2080,13 @@
           <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend.truncate_table" class="md-nav__link">
     truncate_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.verify" class="md-nav__link">
+    verify()
   </a>
   
 </li>
@@ -2057,7 +2129,7 @@
 
 <h1 id="pyspark"><a href="https://spark.apache.org/docs/latest/api/python/">PySpark</a></h1>
 <h2 id="install">Install</h2>
-<p>Install dependencies for the PySpark backend:</p>
+<p>Install ibis and dependencies for the PySpark backend:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label><label for="__tabbed_1_3">mamba</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2075,14 +2147,70 @@
 </div>
 </div>
 <h2 id="connect">Connect</h2>
+<h3 id="api">API</h3>
+<p>Create a client by passing in PySpark things to <code>ibis.pyspark.connect</code>.</p>
 <!-- prettier-ignore-start -->
-<p>Create a client by passing in PySpark things to <a href="#ibis.backends.pyspark.Backend.do_connect"><code>ibis.pyspark.connect</code></a>:</p>
+<p>See <a href="#ibis.backends.pyspark.Backend.do_connect"><code>ibis.backends.pyspark.Backend.do_connect</code></a>
+for connection parameter information.</p>
 <!-- prettier-ignore-end -->
 
-<div class="highlight"><pre><span></span><code><span class="n">session</span> <span class="o">=</span> <span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
-<span class="n">ibis</span><span class="o">.</span><span class="n">pyspark</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
+<!-- prettier-ignore-start -->
+<div class="admonition info">
+<p class="admonition-title"><code>ibis.pyspark.connect</code> is a thin wrapper around <a href="#ibis.backends.pyspark.Backend.do_connect"><code>ibis.backends.pyspark.Backend.do_connect</code></a>.</p>
+</div>
+<!-- prettier-ignore-end -->
+
+<h3 id="connection-parameters">Connection Parameters</h3>
+<!-- prettier-ignore-start -->
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.pyspark.Backend.do_connect" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">)</span></code>
+
+
+</h4>
+
+    <div class="doc doc-contents first">
+
+      <p>Create a PySpark <code>Backend</code> for use with Ibis.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>session</code></td>
+        <td><code>pyspark.sql.SparkSession</code></td>
+        <td><p>A SparkSession instance</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pyspark</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">session</span> <span class="o">=</span> <span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ibis</span><span class="o">.</span><span class="n">pyspark</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="api">API</h2>
+
+    </div>
+
+  </div>
+
+<!-- prettier-ignore-end -->
+
+<h2 id="backend-api">Backend API</h2>
 <!-- prettier-ignore-start -->
 
 
@@ -2111,6 +2239,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 <h4 id="ibis.backends.pyspark.Backend-attributes">Attributes</h4>
+
 
   <div class="doc doc-object doc-attribute">
 
@@ -2192,259 +2321,49 @@ underlying library or application.</p>
   </div>
 
 
-<h4 id="ibis.backends.pyspark.Backend-classes">Classes</h4>
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h5 id="ibis.backends.pyspark.Backend.table_expr_class" class="doc doc-heading">
-        <code>
-table_expr_class            (<a title="ibis.expr.types.relations.TableExpr" href="../../api/expressions/tables/#ibis.expr.types.relations.TableExpr">TableExpr</a>)
-        </code>
-
-
-
-</h5>
-
-    <div class="doc doc-contents ">
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-<h6 id="ibis.backends.pyspark.Backend.table_expr_class-methods">Methods</h6>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h7 id="ibis.backends.pyspark.Backend.table_expr_class.alter" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">alter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tbl_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-
-</h7>
-
-    <div class="doc doc-contents ">
-
-      <p>Change settings and parameters of the table.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>tbl_properties</code></td>
-        <td><code>Mapping[str, str] | None</code></td>
-        <td><p>Spark table properties</p></td>
-        <td><code>None</code></td>
-      </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h7 id="ibis.backends.pyspark.Backend.table_expr_class.compute_stats" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">compute_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">noscan</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
-
-
-</h7>
-
-    <div class="doc doc-contents ">
-
-      <p>Invoke the Spark ANALYZE TABLE <tbl> COMPUTE STATISTICS command.</p>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h7 id="ibis.backends.pyspark.Backend.table_expr_class.drop" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">drop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
-
-
-</h7>
-
-    <div class="doc doc-contents ">
-
-      <p>Drop the table from the database.</p>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h7 id="ibis.backends.pyspark.Backend.table_expr_class.insert" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
-
-
-</h7>
-
-    <div class="doc doc-contents ">
-
-      <p>Insert data into the table.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>obj</code></td>
-        <td><code>ir.TableExpr | pd.DataFrame | None</code></td>
-        <td><p>Table expression or pandas DataFrame</p></td>
-        <td><code>None</code></td>
-      </tr>
-      <tr>
-        <td><code>overwrite</code></td>
-        <td><code>bool</code></td>
-        <td><p>If True, will replace existing contents of table</p></td>
-        <td><code>False</code></td>
-      </tr>
-      <tr>
-        <td><code>values</code></td>
-        <td><code>Iterable[Any] | None</code></td>
-        <td><p>Values to insert. Not implemented currently.</p></td>
-        <td><code>None</code></td>
-      </tr>
-      <tr>
-        <td><code>validate</code></td>
-        <td><code>bool</code></td>
-        <td><p>If True, do more rigorous validation that schema of table being
-inserted is compatible with the existing table</p></td>
-        <td><code>True</code></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">table_expr</span><span class="p">)</span>
-</code></pre></div>
-    <h6 id="ibis.backends.pyspark.Backend.table_expr_class.insert--completely-overwrite-contents">Completely overwrite contents</h6>
-    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">table_expr</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h7 id="ibis.backends.pyspark.Backend.table_expr_class.rename" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">rename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_name</span><span class="p">)</span></code>
-
-
-</h7>
-
-    <div class="doc doc-contents ">
-
-      <p>Rename the table inside Spark.</p>
-<p>References to the old table are no longer valid. Spark does not support
-moving tables across databases using <code>rename</code>.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>new_name</code></td>
-        <td><code>str</code></td>
-        <td><p>New table name</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>PySparkTable</code></td>
-      <td><p>Renamed spark table</p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
 
 
 <h4 id="ibis.backends.pyspark.Backend-methods">Methods</h4>
 
 
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.pyspark.Backend.add_operation" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_operation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Add a translation function to the backend for a specific operation.</p>
+<p>Operations are defined in <code>ibis.expr.operations</code>, and a translation
+function receives the translator object and an expression as
+parameters, and returns a value depending on the backend. For example,
+in SQL backends, a NullLiteral operation could be translated to the
+string <code>"NULL"</code>.</p>
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nd">@ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">add_operation</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">operations</span><span class="o">.</span><span class="n">NullLiteral</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">def</span> <span class="nf">_null_literal</span><span class="p">(</span><span class="n">translator</span><span class="p">,</span> <span class="n">expression</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="s1">&#39;NULL&#39;</span>
+</code></pre></div>
+
+    </div>
+
+  </div>
 
 
 
@@ -2532,6 +2451,69 @@ moving tables across databases using <code>rename</code>.</p>
 rows, size in bytes).</p></td>
         <td><code>False</code></td>
       </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.pyspark.Backend.connect" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Connect to the database.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>args</code></td>
+        <td><code>None</code></td>
+        <td><p>Connection parameters</p></td>
+        <td><code>()</code></td>
+      </tr>
+      <tr>
+        <td><code>kwargs</code></td>
+        <td><code>None</code></td>
+        <td><p>Additional connection parameters</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>BaseBackend</code></td>
+      <td><p>An instance of the backend</p></td>
+    </tr>
   </tbody>
 </table>
     </div>
@@ -2726,15 +2708,18 @@ schema</p></td>
 
 
 
-<h5 id="ibis.backends.pyspark.Backend.do_connect" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">)</span></code>
+<h5 id="ibis.backends.pyspark.Backend.database" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
 
 </h5>
 
     <div class="doc doc-contents ">
 
-      <p>Create a PySpark <code>Backend</code> for use with Ibis.</p>
+      <p>Return a <code>Database</code> object for the <code>name</code> database.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2748,11 +2733,26 @@ schema</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>session</code></td>
-        <td><code>pyspark.sql.SparkSession</code></td>
-        <td><p>A SparkSession instance</p></td>
-        <td><em>required</em></td>
+        <td><code>name</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Name of the database to return the object for.</p></td>
+        <td><code>None</code></td>
       </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Database</code></td>
+      <td><p>A database object for the specified database.</p></td>
+    </tr>
   </tbody>
 </table>
     </div>
@@ -2928,35 +2928,18 @@ database does not exist</p></td>
 
 
 
-<h5 id="ibis.backends.pyspark.Backend.fetch_from_cursor" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">fetch_from_cursor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cursor</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span></code>
+<h5 id="ibis.backends.pyspark.Backend.exists_database" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">exists_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
 
-
-</h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Fetch data from cursor.</p>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h5 id="ibis.backends.pyspark.Backend.get_schema" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
 
 </h5>
 
     <div class="doc doc-contents ">
 
-      <p>Return a Schema object for the indicated table and database.</p>
+      <p>Return whether a database name exists in the current connection.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2970,16 +2953,72 @@ database does not exist</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>table_name</code></td>
+        <td><code>name</code></td>
         <td><code>str</code></td>
-        <td><p>Table name. May be fully qualified</p></td>
+        <td><p>Database to check for existence</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>Whether <code>name</code> exists</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.pyspark.Backend.exists_table" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">exists_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Return whether a table name exists in the database.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Table name</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>database</code></td>
         <td><code>str | None</code></td>
-        <td><p>Spark does not have a database argument for its table() method,
-so this must be None</p></td>
+        <td><p>Database to check if given</p></td>
         <td><code>None</code></td>
       </tr>
   </tbody>
@@ -2994,8 +3033,48 @@ so this must be None</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>sch.Schema</code></td>
-      <td><p>An ibis schema</p></td>
+      <td><code>bool</code></td>
+      <td><p>Whether <code>name</code> is a table</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.pyspark.Backend.explain" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">explain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Explain an expression.</p>
+<p>Return the query plan associated with the indicated expression or SQL
+query.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code></td>
+      <td><p>Query plan</p></td>
     </tr>
   </tbody>
 </table>
@@ -3212,6 +3291,63 @@ the session in a way unknown to Ibis; be careful.</p>
 
 
 
+<h5 id="ibis.backends.pyspark.Backend.sql" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Convert a SQL query to an Ibis table expression.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>query</code></td>
+        <td><code>str</code></td>
+        <td><p>SQL string</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.TableExpr</code></td>
+      <td><p>Table expression</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
 <h5 id="ibis.backends.pyspark.Backend.table" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
@@ -3307,6 +3443,29 @@ the session in a way unknown to Ibis; be careful.</p>
       </tr>
   </tbody>
 </table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.pyspark.Backend.verify" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">verify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Verify <code>expr</code> is an expression that can be compiled.</p>
+
     </div>
 
   </div>

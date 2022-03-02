@@ -759,41 +759,28 @@
     Connect
   </a>
   
+    <nav class="md-nav" aria-label="Connect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#connection-api" class="md-nav__link">
-    Connection API
-  </a>
-  
-    <nav class="md-nav" aria-label="Connection API">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.impala.Backend" class="md-nav__link">
-    Backend
+  <a href="#connection-parameters" class="md-nav__link">
+    Connection Parameters
   </a>
   
-    <nav class="md-nav" aria-label="Backend">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.impala.Backend-methods" class="md-nav__link">
-    Methods
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods">
+    <nav class="md-nav" aria-label="Connection Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ibis.backends.impala.Backend.do_connect" class="md-nav__link">
     do_connect()
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2530,6 +2517,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_9_3">
@@ -2552,6 +2541,20 @@
     <li class="md-nav__item">
       <a href="../../api/backends/base/" class="md-nav__link">
         Backend Base Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/backends/pandas/" class="md-nav__link">
+        Pandas-like Backend Base Classes
       </a>
     </li>
   
@@ -2637,41 +2640,28 @@
     Connect
   </a>
   
+    <nav class="md-nav" aria-label="Connect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#connection-api" class="md-nav__link">
-    Connection API
-  </a>
-  
-    <nav class="md-nav" aria-label="Connection API">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.impala.Backend" class="md-nav__link">
-    Backend
+  <a href="#connection-parameters" class="md-nav__link">
+    Connection Parameters
   </a>
   
-    <nav class="md-nav" aria-label="Backend">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.impala.Backend-methods" class="md-nav__link">
-    Methods
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods">
+    <nav class="md-nav" aria-label="Connection Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ibis.backends.impala.Backend.do_connect" class="md-nav__link">
     do_connect()
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3788,7 +3778,7 @@
 without requiring you to switch back and forth between Python code and the
 Impala shell.</p>
 <h2 id="install">Install</h2>
-<p>Install dependencies for the Impala backend:</p>
+<p>Install ibis and dependencies for the Impala backend:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label><label for="__tabbed_1_3">mamba</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3806,65 +3796,34 @@ Impala shell.</p>
 </div>
 </div>
 <h2 id="connect">Connect</h2>
+<h3 id="api">API</h3>
+<p>Create a client by passing in connection parameters to <code>ibis.impala.connect</code>.</p>
 <!-- prettier-ignore-start -->
-<p>Create a client by passing in connection parameters to <a href="#ibis.backends.impala.Backend.do_connect"><code>ibis.impala.connect</code></a>:</p>
+<p>See <a href="#ibis.backends.impala.Backend.do_connect"><code>ibis.backends.impala.Backend.do_connect</code></a>
+for connection parameter information.</p>
 <!-- prettier-ignore-end -->
 
-<div class="highlight"><pre><span></span><code><span class="n">hdfs</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">hdfs_connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;impala&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50070</span><span class="p">)</span>
-<span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;impala&#39;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;ibis_testing&#39;</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="n">hdfs</span><span class="p">)</span>
-</code></pre></div>
-<p>Both method calls can take <code>auth_mechanism='GSSAPI'</code> or <code>auth_mechanism='LDAP'</code>
-to connect to Kerberos clusters. Depending on your cluster setup, this may also
-include SSL. See the <code>API reference</code> for more, along with the Impala shell
-reference, as the connection semantics are identical.</p>
-<p>These methods are available on the Impala client object after connecting to
-your HDFS cluster (<code>ibis.impala.hdfs_connect</code>) and connecting to Impala with
-<code>ibis.impala.connect</code>. See <code>backends.impala</code> for a tutorial on using this
-backend.</p>
-<h2 id="connection-api">Connection API</h2>
+<!-- prettier-ignore-start -->
+<div class="admonition info">
+<p class="admonition-title"><code>ibis.impala.connect</code> is a thin wrapper around <a href="#ibis.backends.impala.Backend.do_connect"><code>ibis.backends.impala.Backend.do_connect</code></a>.</p>
+</div>
+<!-- prettier-ignore-end -->
+
+<h3 id="connection-parameters">Connection Parameters</h3>
 <!-- prettier-ignore-start -->
 
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h3 id="ibis.backends.impala.Backend" class="doc doc-heading">
-        <code>
-Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../../api/backends/sql/#ibis.backends.base.sql.BaseSQLBackend">BaseSQLBackend</a>)
-        </code>
-
-
-
-</h3>
-
-    <div class="doc doc-contents first">
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-<h4 id="ibis.backends.impala.Backend-methods">Methods</h4>
 
   <div class="doc doc-object doc-method">
 
 
 
-<h5 id="ibis.backends.impala.Backend.do_connect" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="n">new_backend</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">21050</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">use_ssl</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ca_cert</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auth_mechanism</span><span class="o">=</span><span class="s1">&#39;NOSASL&#39;</span><span class="p">,</span> <span class="n">kerberos_service_name</span><span class="o">=</span><span class="s1">&#39;impala&#39;</span><span class="p">,</span> <span class="n">pool_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<h4 id="ibis.backends.impala.Backend.do_connect" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">21050</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">use_ssl</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ca_cert</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auth_mechanism</span><span class="o">=</span><span class="s1">&#39;NOSASL&#39;</span><span class="p">,</span> <span class="n">kerberos_service_name</span><span class="o">=</span><span class="s1">&#39;impala&#39;</span><span class="p">,</span> <span class="n">pool_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+</h4>
 
-    <div class="doc doc-contents ">
+    <div class="doc doc-contents first">
 
       <p>Create an Impala Backend for use with Ibis.</p>
 
@@ -3881,37 +3840,37 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
   <tbody>
       <tr>
         <td><code>host</code></td>
-        <td><code>None</code></td>
+        <td><code>str</code></td>
         <td><p>Host name of the impalad or HiveServer2 in Hive</p></td>
         <td><code>&#39;localhost&#39;</code></td>
       </tr>
       <tr>
         <td><code>port</code></td>
-        <td><code>None</code></td>
+        <td><code>int</code></td>
         <td><p>Impala's HiveServer2 port</p></td>
         <td><code>21050</code></td>
       </tr>
       <tr>
         <td><code>database</code></td>
-        <td><code>None</code></td>
+        <td><code>str</code></td>
         <td><p>Default database when obtaining new cursors</p></td>
         <td><code>&#39;default&#39;</code></td>
       </tr>
       <tr>
         <td><code>timeout</code></td>
-        <td><code>None</code></td>
+        <td><code>int</code></td>
         <td><p>Connection timeout in seconds when communicating with HiveServer2</p></td>
         <td><code>45</code></td>
       </tr>
       <tr>
         <td><code>use_ssl</code></td>
-        <td><code>None</code></td>
+        <td><code>bool</code></td>
         <td><p>Use SSL when connecting to HiveServer2</p></td>
         <td><code>False</code></td>
       </tr>
       <tr>
         <td><code>ca_cert</code></td>
-        <td><code>None</code></td>
+        <td><code>str | Path | None</code></td>
         <td><p>Local path to 3rd party CA certificate or copy of server
 certificate for self-signed certificates. If SSL is enabled, but
 this argument is <code>None</code>, then certificate validation is skipped.</p></td>
@@ -3919,43 +3878,63 @@ this argument is <code>None</code>, then certificate validation is skipped.</p><
       </tr>
       <tr>
         <td><code>user</code></td>
-        <td><code>None</code></td>
+        <td><code>str | None</code></td>
         <td><p>LDAP user to authenticate</p></td>
         <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>password</code></td>
-        <td><code>None</code></td>
+        <td><code>str | None</code></td>
         <td><p>LDAP password to authenticate</p></td>
         <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>auth_mechanism</code></td>
-        <td><code>None</code></td>
-        <td><p>{'NOSASL' &lt;- default, 'PLAIN', 'GSSAPI', 'LDAP'}.
-Use NOSASL for non-secured Impala connections.  Use PLAIN for
-non-secured Hive clusters.  Use LDAP for LDAP authenticated
-connections.  Use GSSAPI for Kerberos-secured clusters.</p></td>
+        <td><code>Literal[&#39;NOSASL&#39;, &#39;PLAIN&#39;, &#39;GSSAPI&#39;, &#39;LDAP&#39;]</code></td>
+        <td><table>
+<thead>
+<tr>
+<th align="center">Value</th>
+<th align="left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>'NOSASL'</code></td>
+<td align="left">insecure Impala connections</td>
+</tr>
+<tr>
+<td align="center"><code>'PLAIN'</code></td>
+<td align="left">insecure Hive clusters</td>
+</tr>
+<tr>
+<td align="center"><code>'LDAP'</code></td>
+<td align="left">LDAP authenticated connections</td>
+</tr>
+<tr>
+<td align="center"><code>'GSSAPI'</code></td>
+<td align="left">Kerberos-secured clusters</td>
+</tr>
+</tbody>
+</table></td>
         <td><code>&#39;NOSASL&#39;</code></td>
       </tr>
       <tr>
         <td><code>kerberos_service_name</code></td>
-        <td><code>None</code></td>
-        <td><p>Specify particular impalad service principal.</p></td>
+        <td><code>str</code></td>
+        <td><p>Specify a particular <code>impalad</code> service principal.</p></td>
         <td><code>&#39;impala&#39;</code></td>
       </tr>
   </tbody>
 </table>
 <p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">os</span>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs_host</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_NN_HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs_port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_NN_PORT&#39;</span><span class="p">,</span> <span class="mi">50070</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">impala_host</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_IMPALA_HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">impala_port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;IBIS_TEST_IMPALA_PORT&#39;</span><span class="p">,</span> <span class="mi">21050</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">hdfs_connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">hdfs_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">hdfs_port</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span>
-<span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">filesystems</span><span class="o">.</span><span class="n">WebHDFS</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
 <span class="o">...</span>     <span class="n">host</span><span class="o">=</span><span class="n">impala_host</span><span class="p">,</span>
 <span class="o">...</span>     <span class="n">port</span><span class="o">=</span><span class="n">impala_port</span><span class="p">,</span>
@@ -3965,37 +3944,20 @@ connections.  Use GSSAPI for Kerberos-secured clusters.</p></td>
 <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">Backend</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
 </code></pre></div>
 
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>Backend</code></td>
-      <td><p>Impala backend</p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-
-
-  </div>
-
     </div>
 
   </div>
 
 <!-- prettier-ignore-end -->
 
+<p>Both method calls can take <code>auth_mechanism='GSSAPI'</code> or <code>auth_mechanism='LDAP'</code>
+to connect to Kerberos clusters. Depending on your cluster setup, this may also
+include SSL. See the <code>API reference</code> for more, along with the Impala shell
+reference, as the connection semantics are identical.</p>
+<p>These methods are available on the Impala client object after connecting to
+your HDFS cluster (<code>ibis.impala.hdfs_connect</code>) and connecting to Impala with
+<code>ibis.impala.connect</code>. See <code>backends.impala</code> for a tutorial on using this
+backend.</p>
 <h2 id="database-methods">Database methods</h2>
 <!-- prettier-ignore-start -->
 

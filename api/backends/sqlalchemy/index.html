@@ -1361,6 +1361,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_9_3">
@@ -1383,6 +1385,20 @@
     <li class="md-nav__item">
       <a href="../base/" class="md-nav__link">
         Backend Base Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pandas/" class="md-nav__link">
+        Pandas-like Backend Base Classes
       </a>
     </li>
   
@@ -1478,66 +1494,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler" class="md-nav__link">
-    compiler
-  </a>
-  
-    <nav class="md-nav" aria-label="compiler">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.context_class" class="md-nav__link">
-    context_class
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.select_class" class="md-nav__link">
-    select_class
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.translator_class" class="md-nav__link">
-    translator_class
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend-methods" class="md-nav__link">
     Methods
   </a>
@@ -1546,8 +1502,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend._to_geodataframe" class="md-nav__link">
-    _to_geodataframe()
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.add_operation" class="md-nav__link">
+    add_operation()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compile" class="md-nav__link">
+    compile()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.connect" class="md-nav__link">
+    connect()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.create_database" class="md-nav__link">
+    create_database()
   </a>
   
 </li>
@@ -1560,8 +1537,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.do_connect" class="md-nav__link">
-    do_connect()
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.create_view" class="md-nav__link">
+    create_view()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.database" class="md-nav__link">
+    database()
   </a>
   
 </li>
@@ -1574,8 +1558,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.fetch_from_cursor" class="md-nav__link">
-    fetch_from_cursor()
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.drop_view" class="md-nav__link">
+    drop_view()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.execute" class="md-nav__link">
+    execute()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.exists_database" class="md-nav__link">
+    exists_database()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.exists_table" class="md-nav__link">
+    exists_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.explain" class="md-nav__link">
+    explain()
   </a>
   
 </li>
@@ -1609,6 +1621,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.raw_sql" class="md-nav__link">
+    raw_sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.schema" class="md-nav__link">
     schema()
   </a>
@@ -1616,8 +1635,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.sql" class="md-nav__link">
+    sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.table" class="md-nav__link">
     table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.verify" class="md-nav__link">
+    verify()
   </a>
   
 </li>
@@ -1716,66 +1749,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler" class="md-nav__link">
-    compiler
-  </a>
-  
-    <nav class="md-nav" aria-label="compiler">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.context_class" class="md-nav__link">
-    context_class
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.select_class" class="md-nav__link">
-    select_class
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.translator_class" class="md-nav__link">
-    translator_class
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend-methods" class="md-nav__link">
     Methods
   </a>
@@ -1784,8 +1757,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend._to_geodataframe" class="md-nav__link">
-    _to_geodataframe()
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.add_operation" class="md-nav__link">
+    add_operation()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compile" class="md-nav__link">
+    compile()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.connect" class="md-nav__link">
+    connect()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.create_database" class="md-nav__link">
+    create_database()
   </a>
   
 </li>
@@ -1798,8 +1792,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.do_connect" class="md-nav__link">
-    do_connect()
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.create_view" class="md-nav__link">
+    create_view()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.database" class="md-nav__link">
+    database()
   </a>
   
 </li>
@@ -1812,8 +1813,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.fetch_from_cursor" class="md-nav__link">
-    fetch_from_cursor()
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.drop_view" class="md-nav__link">
+    drop_view()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.execute" class="md-nav__link">
+    execute()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.exists_database" class="md-nav__link">
+    exists_database()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.exists_table" class="md-nav__link">
+    exists_table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.explain" class="md-nav__link">
+    explain()
   </a>
   
 </li>
@@ -1847,6 +1876,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.raw_sql" class="md-nav__link">
+    raw_sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.schema" class="md-nav__link">
     schema()
   </a>
@@ -1854,8 +1890,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.sql" class="md-nav__link">
+    sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.table" class="md-nav__link">
     table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.base.sql.alchemy.BaseAlchemyBackend.verify" class="md-nav__link">
+    verify()
   </a>
   
 </li>
@@ -1892,6 +1942,7 @@
 
 
 <h1 id="sqlalchemy-backend-base-classes">SQLAlchemy Backend Base Classes</h1>
+<!-- prettier-ignore-start -->
 
 
   <div class="doc doc-object doc-class">
@@ -1920,6 +1971,7 @@ BaseAlchemyBackend            (<a title="ibis.backends.base.sql.BaseSQLBackend" 
 
 
 <h3 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend-attributes">Attributes</h3>
+
 
 
   <div class="doc doc-object doc-attribute">
@@ -1986,351 +2038,6 @@ underlying library or application.</p>
   </div>
 
 
-<h3 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend-classes">Classes</h3>
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler" class="doc doc-heading">
-        <code>
-compiler            (<span title="ibis.backends.base.sql.compiler.query_builder.Compiler">Compiler</span>)
-        </code>
-
-
-
-</h4>
-
-    <div class="doc doc-contents ">
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-<h5 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler-classes">Classes</h5>
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h6 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.context_class" class="doc doc-heading">
-        <code>
-context_class            (<span title="ibis.backends.base.sql.compiler.translator.QueryContext">QueryContext</span>)
-        </code>
-
-
-
-</h6>
-
-    <div class="doc doc-contents ">
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-<h7 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.context_class-methods">Methods</h7>
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h8 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.context_class.collapse" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">collapse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queries</span><span class="p">)</span></code>
-
-
-</h8>
-
-    <div class="doc doc-contents ">
-
-      <p>Turn an iterable of queries into something executable.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>queries</code></td>
-        <td><code>None</code></td>
-        <td><p>Iterable of query strings</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>query</code></td>
-      <td><p>A single query string</p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h6 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.select_class" class="doc doc-heading">
-        <code>
-select_class            (<span title="ibis.backends.base.sql.compiler.query_builder.Select">Select</span>)
-        </code>
-
-
-
-</h6>
-
-    <div class="doc doc-contents ">
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-<h7 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.select_class-methods">Methods</h7>
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h8 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.select_class.compile" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">compile</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
-
-
-</h8>
-
-    <div class="doc doc-contents ">
-
-      <p>This method isn't yet idempotent; calling multiple times may yield</p>
-<p>unexpected results</p>
-
-    </div>
-
-  </div>
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h6 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.translator_class" class="doc doc-heading">
-        <code>
-translator_class            (<span title="ibis.backends.base.sql.compiler.translator.ExprTranslator">ExprTranslator</span>)
-        </code>
-
-
-
-</h6>
-
-    <div class="doc doc-contents ">
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<h7 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.translator_class-classes">Classes</h7>
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h8 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.translator_class.context_class" class="doc doc-heading">
-        <code>
-context_class            (<span title="ibis.backends.base.sql.compiler.translator.QueryContext">QueryContext</span>)
-        </code>
-
-
-
-</h8>
-
-    <div class="doc doc-contents ">
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-<h9 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.translator_class.context_class-methods">Methods</h9>
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h10 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compiler.translator_class.context_class.collapse" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">collapse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queries</span><span class="p">)</span></code>
-
-
-</h10>
-
-    <div class="doc doc-contents ">
-
-      <p>Turn an iterable of queries into something executable.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>queries</code></td>
-        <td><code>None</code></td>
-        <td><p>Iterable of query strings</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>query</code></td>
-      <td><p>A single query string</p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
 
 
 <h3 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend-methods">Methods</h3>
@@ -2340,30 +2047,232 @@ context_class            (<span title="ibis.backends.base.sql.compiler.translato
 
 
 
+
+
+
+
+
   <div class="doc doc-object doc-method">
 
 
 
-<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend._to_geodataframe" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">_to_geodataframe</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span></code>
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.add_operation" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_operation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-private"><code>private</code></small>
-      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
 </h4>
 
     <div class="doc doc-contents ">
 
-      <p>Convert <code>df</code> to a <code>GeoDataFrame</code>.</p>
-<p>Required libraries for geospatial support must be installed and a
-geospatial column is present in the dataframe.</p>
+      <p>Add a translation function to the backend for a specific operation.</p>
+<p>Operations are defined in <code>ibis.expr.operations</code>, and a translation
+function receives the translator object and an expression as
+parameters, and returns a value depending on the backend. For example,
+in SQL backends, a NullLiteral operation could be translated to the
+string <code>"NULL"</code>.</p>
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nd">@ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">add_operation</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">operations</span><span class="o">.</span><span class="n">NullLiteral</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">def</span> <span class="nf">_null_literal</span><span class="p">(</span><span class="n">translator</span><span class="p">,</span> <span class="n">expression</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="s1">&#39;NULL&#39;</span>
+</code></pre></div>
 
     </div>
 
   </div>
 
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.compile" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">compile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timecontext</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Compille an Ibis expression.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>expr</code></td>
+        <td><code>ir.Expr</code></td>
+        <td><p>Ibis expression</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>limit</code></td>
+        <td><code>str | None</code></td>
+        <td><p>For expressions yielding result sets; retrieve at most this number
+of values/rows. Overrides any limit already set on the expression.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>params</code></td>
+        <td><code>Mapping[ir.Expr, Any] | None</code></td>
+        <td><p>Named unbound parameters</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>timecontext</code></td>
+        <td><code>TimeContext | None</code></td>
+        <td><p>Additional information about data source time boundaries</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Any</code></td>
+      <td><p>The output of compilation. The type of this value depends on the
+backend.</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.connect" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Connect to the database.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>args</code></td>
+        <td><code>None</code></td>
+        <td><p>Connection parameters</p></td>
+        <td><code>()</code></td>
+      </tr>
+      <tr>
+        <td><code>kwargs</code></td>
+        <td><code>None</code></td>
+        <td><p>Additional connection parameters</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>BaseBackend</code></td>
+      <td><p>An instance of the backend</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.create_database" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Create a new database.</p>
+<p>Not all backends implement this method.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Name of the new database.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>force</code></td>
+        <td><code>bool</code></td>
+        <td><p>If <code>False</code>, an exception is raised if the database already exists.</p></td>
+        <td><code>False</code></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
 
 
 
@@ -2434,16 +2343,109 @@ geospatial column is present in the dataframe.</p>
 
 
 
-<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.do_connect" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span></code>
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.create_view" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
 
 </h4>
 
     <div class="doc doc-contents ">
 
-      <p>Connect to database specified by <code>args</code> and <code>kwargs</code>.</p>
+      <p>Create a view.</p>
 
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Name for the new view.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>expr</code></td>
+        <td><code>ir.TableExpr</code></td>
+        <td><p>An Ibis table expression that will be used to extract the query
+of the view.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>database</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Name of the database where the view will be created, if not the
+default.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.database" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return a <code>Database</code> object for the <code>name</code> database.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Name of the database to return the object for.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Database</code></td>
+      <td><p>A database object for the specified database.</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
@@ -2505,16 +2507,294 @@ geospatial column is present in the dataframe.</p>
 
 
 
-<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.fetch_from_cursor" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">fetch_from_cursor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cursor</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span></code>
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.drop_view" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">drop_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
 
 </h4>
 
     <div class="doc doc-contents ">
 
-      <p>Fetch data from cursor.</p>
+      <p>Drop a view.</p>
 
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Name of the view to drop.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>database</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Name of the database where the view exists, if not the default.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>force</code></td>
+        <td><code>bool</code></td>
+        <td><p>If <code>False</code>, an exception is raised if the view does not exist.</p></td>
+        <td><code>False</code></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.execute" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Compile and execute an Ibis expression.</p>
+<p>Compile and execute Ibis expression using this backend client
+interface, returning results in-memory in the appropriate object type</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>expr</code></td>
+        <td><code>ir.Expr</code></td>
+        <td><p>Ibis expression</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>limit</code></td>
+        <td><code>str</code></td>
+        <td><p>For expressions yielding result sets; retrieve at most this number
+of values/rows. Overrides any limit already set on the expression.</p></td>
+        <td><code>&#39;default&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>params</code></td>
+        <td><code>Mapping[ir.ScalarExpr, Any] | None</code></td>
+        <td><p>Named unbound parameters</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>kwargs</code></td>
+        <td><code>Any</code></td>
+        <td><p>Backend specific arguments. For example, the clickhouse backend
+uses this to receive <code>external_tables</code> as a dictionary of pandas
+DataFrames.</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame | Series | Scalar</code></td>
+      <td><ul>
+<li><code>TableExpr</code>: pandas.DataFrame</li>
+<li><code>ColumnExpr</code>: pandas.Series</li>
+<li><code>ScalarExpr</code>: Python scalar value</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.exists_database" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">exists_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return whether a database name exists in the current connection.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Database to check for existence</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>Whether <code>name</code> exists</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.exists_table" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">exists_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return whether a table name exists in the database.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Table name</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>database</code></td>
+        <td><code>str | None</code></td>
+        <td><p>Database to check if given</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>Whether <code>name</code> is a table</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.explain" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">explain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Explain an expression.</p>
+<p>Return the query plan associated with the indicated expression or SQL
+query.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code></td>
+      <td><p>Query plan</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
@@ -2757,6 +3037,65 @@ yet implemented</p></td>
 
 
 
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.raw_sql" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">raw_sql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Execute a query string.</p>
+<p>Could have unexpected results if the query modifies the behavior of
+the session in a way unknown to Ibis; be careful.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>query</code></td>
+        <td><code>str</code></td>
+        <td><p>DML or DDL statement</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Any</code></td>
+      <td><p>Backend cursor</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
 <h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.schema" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">schema</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
 
@@ -2798,6 +3137,63 @@ yet implemented</p></td>
     <tr>
       <td><code>sch.Schema</code></td>
       <td><p>The ibis schema of <code>name</code></p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.sql" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Convert a SQL query to an Ibis table expression.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>query</code></td>
+        <td><code>str</code></td>
+        <td><p>SQL string</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.TableExpr</code></td>
+      <td><p>Table expression</p></td>
     </tr>
   </tbody>
 </table>
@@ -2879,6 +3275,29 @@ and types of <code>table</code>.</p>
 
 
 
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="ibis.backends.base.sql.alchemy.BaseAlchemyBackend.verify" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">verify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Verify <code>expr</code> is an expression that can be compiled.</p>
+
+    </div>
+
+  </div>
+
+
+
 
 
   </div>
@@ -2886,6 +3305,8 @@ and types of <code>table</code>.</p>
     </div>
 
   </div>
+
+<!-- prettier-ignore-end -->
 
               
 
