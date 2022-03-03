@@ -1588,6 +1588,12 @@
 <ul>
 <li><a href="https://git-scm.com/"><code>git</code></a></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Python 3.10 is supported on a best-effort basis</p>
+<p>As of 2022-02-17 there is support for Python 3.10 when using <code>nix</code> for development.</p>
+<p><code>conda-forge</code> is still in <a href="https://conda-forge.org/status/#python310">the process of migrating packages to Python
+3.10</a>.</p>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Nix</label><label for="__tabbed_1_2">Conda</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1665,6 +1671,13 @@ nix-shell
 </ol>
 </div>
 <div class="tabbed-block">
+<div class="admonition info">
+<p class="admonition-title">Some optional dependencies for Windows are not available through <code>conda</code>/<code>mamba</code></p>
+<ol>
+<li><code>python-duckdb</code> and <code>duckdb-engine</code>. Required for the DuckDB backend.</li>
+<li><code>clickhouse-cityhash</code>. Required for compression support in the ClickHouse backend.</li>
+</ol>
+</div>
 <h4 id="support-matrix_1">Support Matrix</h4>
 <table>
 <thead>
@@ -1702,12 +1715,6 @@ nix-shell
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Python 3.10 is supported on a best-effort basis</p>
-<p>As of 2022-02-17 there is support for Python 3.10 when using nix for development.</p>
-<p><code>conda-forge</code> is still in <a href="https://conda-forge.org/status/#python310">the process of migrating packages to Python
-3.10</a>.</p>
-</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><code>conda</code></label><label for="__tabbed_3_2"><code>mamba</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
