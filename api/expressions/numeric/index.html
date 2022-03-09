@@ -2861,14 +2861,14 @@ IntegerValue            (<a title="ibis.expr.types.numeric.NumericValue" href="#
 
 
 <h6 id="ibis.expr.types.numeric.IntegerValue.convert_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">convert_base</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">from_base</span><span class="p">,</span> <span class="n">to_base</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">convert_base</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">from_base</span><span class="p">,</span> <span class="n">to_base</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Convert an integer or string from one base to another.</p>
+      <p>Convert an integer from one base to another.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2882,20 +2882,14 @@ IntegerValue            (<a title="ibis.expr.types.numeric.NumericValue" href="#
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.IntegerValue | ir.StringValue</code></td>
-        <td><p>Integer or string expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>from_base</code></td>
-        <td><code>ir.IntegerValue</code></td>
-        <td><p>Base of <code>arg</code></p></td>
+        <td><code>IntegerValue</code></td>
+        <td><p>Numeric base of <code>arg</code></p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>to_base</code></td>
-        <td><code>ir.IntegerValue</code></td>
+        <td><code>IntegerValue</code></td>
         <td><p>New base</p></td>
         <td><em>required</em></td>
       </tr>
@@ -2911,7 +2905,7 @@ IntegerValue            (<a title="ibis.expr.types.numeric.NumericValue" href="#
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.IntegerValue</code></td>
+      <td><code>IntegerValue</code></td>
       <td><p>Converted expression</p></td>
     </tr>
   </tbody>

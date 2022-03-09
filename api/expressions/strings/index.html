@@ -1339,8 +1339,50 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.__add__" class="md-nav__link">
+    __add__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.__mul__" class="md-nav__link">
+    __mul__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.__radd__" class="md-nav__link">
+    __radd__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.__rmul__" class="md-nav__link">
+    __rmul__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.ascii_str" class="md-nav__link">
+    ascii_str()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.expr.types.strings.StringValue.capitalize" class="md-nav__link">
     capitalize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.concat" class="md-nav__link">
+    concat()
   </a>
   
 </li>
@@ -1390,6 +1432,13 @@
           <li class="md-nav__item">
   <a href="#ibis.expr.types.strings.StringValue.ilike" class="md-nav__link">
     ilike()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.initcap" class="md-nav__link">
+    initcap()
   </a>
   
 </li>
@@ -1825,8 +1874,50 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.__add__" class="md-nav__link">
+    __add__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.__mul__" class="md-nav__link">
+    __mul__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.__radd__" class="md-nav__link">
+    __radd__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.__rmul__" class="md-nav__link">
+    __rmul__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.ascii_str" class="md-nav__link">
+    ascii_str()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.expr.types.strings.StringValue.capitalize" class="md-nav__link">
     capitalize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.concat" class="md-nav__link">
+    concat()
   </a>
   
 </li>
@@ -1876,6 +1967,13 @@
           <li class="md-nav__item">
   <a href="#ibis.expr.types.strings.StringValue.ilike" class="md-nav__link">
     ilike()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.strings.StringValue.initcap" class="md-nav__link">
+    initcap()
   </a>
   
 </li>
@@ -2155,46 +2253,22 @@ StringValue            (<span title="ibis.expr.types.generic.AnyValue">AnyValue<
 
 <h5 id="ibis.expr.types.strings.StringValue-methods">Methods</h5>
 
-
-
-
-
-
-
-
   <div class="doc doc-object doc-method">
 
 
 
-<h6 id="ibis.expr.types.strings.StringValue.capitalize" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">capitalize</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<h6 id="ibis.expr.types.strings.StringValue.__add__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span></code>
 
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Return a capitalized version of input string</p>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h6 id="ibis.expr.types.strings.StringValue.contains" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">contains</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">substr</span><span class="p">)</span></code>
-
-
-</h6>
-
-    <div class="doc doc-contents ">
-
-      <p>Determine if <code>arg</code> contains <code>substr</code>.</p>
+      <p>Concatenate strings.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2208,15 +2282,366 @@ StringValue            (<span title="ibis.expr.types.generic.AnyValue">AnyValue<
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>String value expression</p></td>
+        <td><code>other</code></td>
+        <td><code>str | StringValue</code></td>
+        <td><p>String to concatenate</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>All strings concatenated</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.strings.StringValue.__mul__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Repeat a string <code>n</code> times.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>n</code></td>
+        <td><code>int | ir.IntegerValue</code></td>
+        <td><p>Number of repetitions</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>Repeated string</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.strings.StringValue.__radd__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__radd__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Concatenate strings.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>other</code></td>
+        <td><code>str | StringValue</code></td>
+        <td><p>String to concatenate</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>All strings concatenated</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.strings.StringValue.__rmul__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__rmul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Repeat a string <code>n</code> times.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>n</code></td>
+        <td><code>int | ir.IntegerValue</code></td>
+        <td><p>Number of repetitions</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>Repeated string</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.strings.StringValue.ascii_str" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ascii_str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Return the numeric ASCII code of the first character of a string.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.IntegerValue</code></td>
+      <td><p>ASCII code of the first character of the input</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.strings.StringValue.capitalize" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">capitalize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Capitalize the input string.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>Capitalized string</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.strings.StringValue.concat" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">concat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+
+</h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Concatenate strings.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>other</code></td>
+        <td><code>str | StringValue</code></td>
+        <td><p>String to concatenate</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
+        <td><code>args</code></td>
+        <td><code>str | StringValue</code></td>
+        <td><p>Additional strings to concatenate</p></td>
+        <td><code>()</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>All strings concatenated</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.strings.StringValue.contains" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">substr</span><span class="p">)</span></code>
+
+
+</h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Return whether the expression contains <code>substr</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
         <td><code>substr</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>Substring to check <code>arg</code> for</p></td>
+        <td><code>str | StringValue</code></td>
+        <td><p>Substring for which to check</p></td>
         <td><em>required</em></td>
       </tr>
   </tbody>
@@ -2232,7 +2657,7 @@ StringValue            (<span title="ibis.expr.types.generic.AnyValue">AnyValue<
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Boolean value indicating the presence of <code>substr</code> in <code>arg</code></p></td>
+      <td><p>Boolean indicating the presence of <code>substr</code> in the expression</p></td>
     </tr>
   </tbody>
 </table>
@@ -2247,14 +2672,14 @@ StringValue            (<span title="ibis.expr.types.generic.AnyValue">AnyValue<
 
 
 <h6 id="ibis.expr.types.strings.StringValue.convert_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">convert_base</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">from_base</span><span class="p">,</span> <span class="n">to_base</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">convert_base</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">from_base</span><span class="p">,</span> <span class="n">to_base</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Convert an integer or string from one base to another.</p>
+      <p>Convert a string representing an integer from one base to another.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2268,20 +2693,14 @@ StringValue            (<span title="ibis.expr.types.generic.AnyValue">AnyValue<
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.IntegerValue | ir.StringValue</code></td>
-        <td><p>Integer or string expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>from_base</code></td>
-        <td><code>ir.IntegerValue</code></td>
-        <td><p>Base of <code>arg</code></p></td>
+        <td><code>int | ir.IntegerValue</code></td>
+        <td><p>Numeric base of the expression</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>to_base</code></td>
-        <td><code>ir.IntegerValue</code></td>
+        <td><code>int | ir.IntegerValue</code></td>
         <td><p>New base</p></td>
         <td><em>required</em></td>
       </tr>
@@ -2334,14 +2753,8 @@ StringValue            (<span title="ibis.expr.types.generic.AnyValue">AnyValue<
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>end</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>str | StringValue</code></td>
         <td><p>Suffix to check for</p></td>
         <td><em>required</em></td>
       </tr>
@@ -2400,14 +2813,8 @@ StringValue            (<span title="ibis.expr.types.generic.AnyValue">AnyValue<
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>substr</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>str | StringValue</code></td>
         <td><p>Substring to search for</p></td>
         <td><em>required</em></td>
       </tr>
@@ -2460,7 +2867,7 @@ implemented.</p></td>
     <div class="doc doc-contents ">
 
       <p>Find the first occurence of <code>str_list</code> within a list of strings.</p>
-<p>No string in list can have a comma.</p>
+<p>No string in <code>str_list</code> can have a comma.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2473,12 +2880,6 @@ implemented.</p></td>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
-        <td><p>String expression to search</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>str_list</code></td>
         <td><code>Sequence[str]</code></td>
@@ -2504,8 +2905,8 @@ implemented.</p></td>
   <tbody>
     <tr>
       <td><code>ir.IntegerValue</code></td>
-      <td><p>Position of <code>str_list</code> in <code>arg</code>. Returns -1 if <code>arg</code> isn't found or if
-<code>arg</code> contains <code>','</code>.</p></td>
+      <td><p>Position of <code>str_list</code> in <code>self</code>. Returns -1 if <code>self</code> isn't found
+or if <code>self</code> contains <code>','</code>.</p></td>
     </tr>
   </tbody>
 </table>
@@ -2520,14 +2921,14 @@ implemented.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.hashbytes" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">hashbytes</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;sha256&#39;</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">hashbytes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;sha256&#39;</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Compute the binary hash value of <code>arg</code>.</p>
+      <p>Compute the binary hash value of the input.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2540,12 +2941,6 @@ implemented.</p></td>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.BinaryValue | ir.StringValue</code></td>
-        <td><p>Expression to hash</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>how</code></td>
         <td><code>Literal[&#39;md5&#39;, &#39;sha1&#39;, &#39;sha256&#39;, &#39;sha512&#39;]</code></td>
@@ -2588,7 +2983,7 @@ implemented.</p></td>
     <div class="doc doc-contents ">
 
       <p>Match <code>patterns</code> against <code>self</code>, case-insensitive.</p>
-<p>This function is modeled after the SQL <code>ILIKE</code> directive. Use <code>%</code> as a
+<p>This function is modeled after SQL's <code>ILIKE</code> directive. Use <code>%</code> as a
 multiple-character wildcard or <code>_</code> as a single-character wildcard.</p>
 <p>Use <code>re_search</code> or <code>rlike</code> for regular expression-based matching.</p>
 
@@ -2604,14 +2999,8 @@ multiple-character wildcard or <code>_</code> as a single-character wildcard.</p
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>patterns</code></td>
-        <td><code>str | ir.StringValue | Sequence[str | ir.StringValue]</code></td>
+        <td><code>str | StringValue | Iterable[str | StringValue]</code></td>
         <td><p>If <code>pattern</code> is a list, then if any pattern matches the input then
 the corresponding row in the output is <code>True</code>.</p></td>
         <td><em>required</em></td>
@@ -2643,6 +3032,41 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 
+<h6 id="ibis.expr.types.strings.StringValue.initcap" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initcap</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Capitalize the input string.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>Capitalized string</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
 <h6 id="ibis.expr.types.strings.StringValue.join" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strings</span><span class="p">)</span></code>
 
@@ -2651,7 +3075,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Join a list of strings using the <code>self</code> as the separator.</p>
+      <p>Join a list of strings using <code>self</code> as the separator.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2666,13 +3090,13 @@ the corresponding row in the output is <code>True</code>.</p></td>
   <tbody>
       <tr>
         <td><code>self</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>None</code></td>
         <td><p>String expression</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>strings</code></td>
-        <td><code>Sequence[str]</code></td>
+        <td><code>Sequence[str | StringValue]</code></td>
         <td><p>Strings to join with <code>arg</code></p></td>
         <td><em>required</em></td>
       </tr>
@@ -2694,7 +3118,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
+      <td><code>StringValue</code></td>
       <td><p>Joined string</p></td>
     </tr>
   </tbody>
@@ -2717,7 +3141,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Return the <code>nchars</code> left-most characters each string in <code>arg</code>.</p>
+      <p>Return the <code>nchars</code> left-most characters.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2730,12 +3154,6 @@ the corresponding row in the output is <code>True</code>.</p></td>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>nchars</code></td>
         <td><code>int | ir.IntegerValue</code></td>
@@ -2754,8 +3172,8 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
-      <td><p>Characters</p></td>
+      <td><code>StringValue</code></td>
+      <td><p>Characters from the start</p></td>
     </tr>
   </tbody>
 </table>
@@ -2770,7 +3188,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.length" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">length</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">length</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 </h6>
@@ -2779,6 +3197,21 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
       <p>Compute the length of a string.</p>
 
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.IntegerValue</code></td>
+      <td><p>The length of the input</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
@@ -2814,14 +3247,8 @@ multiple-character wildcard or <code>_</code> as a single-character wildcard.</p
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>patterns</code></td>
-        <td><code>str | ir.StringValue | Sequence[str | ir.StringValue]</code></td>
+        <td><code>str | StringValue | Iterable[str | StringValue]</code></td>
         <td><p>If <code>pattern</code> is a list, then if any pattern matches the input then
 the corresponding row in the output is <code>True</code>.</p></td>
         <td><em>required</em></td>
@@ -2854,15 +3281,30 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.lower" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">lower</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">lower</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Convert string to all lowercase</p>
+      <p>Convert string to all lowercase.</p>
 
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>Lowercase string</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
@@ -2895,12 +3337,6 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
-        <td><p>String to pad</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>length</code></td>
         <td><code>int | ir.IntegerValue</code></td>
         <td><p>Length of output string</p></td>
@@ -2908,7 +3344,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
       </tr>
       <tr>
         <td><code>pad</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>str | StringValue</code></td>
         <td><p>Pad character</p></td>
         <td><code>&#39; &#39;</code></td>
       </tr>
@@ -2932,7 +3368,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
+      <td><code>StringValue</code></td>
       <td><p>Padded string</p></td>
     </tr>
   </tbody>
@@ -2948,15 +3384,30 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.lstrip" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">lstrip</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">lstrip</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Remove whitespace from left side of string</p>
+      <p>Remove whitespace from the left side of string.</p>
 
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>Left-stripped string</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
@@ -2968,7 +3419,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.parse_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">parse_url</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">extract</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">parse_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extract</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 </h6>
@@ -2989,12 +3440,6 @@ the corresponding row in the output is <code>True</code>.</p></td>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>URL to extract from</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>extract</code></td>
         <td><code>Literal[&#39;PROTOCOL&#39;, &#39;HOST&#39;, &#39;PATH&#39;, &#39;REF&#39;, &#39;AUTHORITY&#39;, &#39;FILE&#39;, &#39;USERINFO&#39;, &#39;QUERY&#39;]</code></td>
@@ -3025,7 +3470,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
+      <td><code>StringValue</code></td>
       <td><p>Extracted string value</p></td>
     </tr>
   </tbody>
@@ -3041,14 +3486,14 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.re_extract" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">re_extract</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">re_extract</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Return the specified match from a regular expression <code>pattern</code>.</p>
+      <p>Return the specified match at <code>index</code> from a regex <code>pattern</code>.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3062,14 +3507,8 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>pattern</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>str | StringValue</code></td>
         <td><p>Reguar expression string</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3091,7 +3530,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
+      <td><code>StringValue</code></td>
       <td><p>Extracted match</p></td>
     </tr>
   </tbody>
@@ -3107,7 +3546,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.re_replace" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">re_replace</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">replacement</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">re_replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">replacement</span><span class="p">)</span></code>
 
 
 </h6>
@@ -3115,7 +3554,6 @@ the corresponding row in the output is <code>True</code>.</p></td>
     <div class="doc doc-contents ">
 
       <p>Replace match found by regex <code>pattern</code> with <code>replacement</code>.</p>
-<p><code>replacement</code> can also be a regex</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3129,21 +3567,15 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>pattern</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>str | StringValue</code></td>
         <td><p>Regular expression string</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>replacement</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>Replacement string; can be a regular expression</p></td>
+        <td><code>str | StringValue</code></td>
+        <td><p>Replacement string or regular expression</p></td>
         <td><em>required</em></td>
       </tr>
   </tbody>
@@ -3164,7 +3596,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
+      <td><code>StringValue</code></td>
       <td><p>Modified string</p></td>
     </tr>
   </tbody>
@@ -3180,14 +3612,14 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.re_search" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">re_search</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">re_search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Return whether the values in <code>arg</code> match <code>pattern</code>.</p>
+      <p>Return whether the values match <code>pattern</code>.</p>
 <p>Returns <code>True</code> if the regex matches a string and <code>False</code> otherwise.</p>
 
 <p><strong>Parameters:</strong></p>
@@ -3202,14 +3634,8 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>String expression to check for matches</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>pattern</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>str | StringValue</code></td>
         <td><p>Regular expression use for searching</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3248,7 +3674,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Repeat the string <code>self</code> <code>n</code> times.</p>
+      <p>Repeat a string <code>n</code> times.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3261,12 +3687,6 @@ the corresponding row in the output is <code>True</code>.</p></td>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
-        <td><p>String to repeat</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>n</code></td>
         <td><code>int | ir.IntegerValue</code></td>
@@ -3285,7 +3705,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
+      <td><code>StringValue</code></td>
       <td><p>Repeated string</p></td>
     </tr>
   </tbody>
@@ -3301,7 +3721,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.replace" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">replace</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">replacement</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">replacement</span><span class="p">)</span></code>
 
 
 </h6>
@@ -3309,8 +3729,6 @@ the corresponding row in the output is <code>True</code>.</p></td>
     <div class="doc doc-contents ">
 
       <p>Replace each exact match of <code>pattern</code> with <code>replacement</code>.</p>
-<p>string.</p>
-<p>Like Python built-in <a href="https://docs.python.org/3/library/stdtypes.html#str.replace"><code>str.replace</code></a></p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3324,20 +3742,14 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>pattern</code></td>
-        <td><code>ir.StringValue</code></td>
+        <td><code>StringValue</code></td>
         <td><p>String pattern</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>replacement</code></td>
-        <td><code>ir.StringValue</code></td>
+        <td><code>StringValue</code></td>
         <td><p>String replacement</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3359,7 +3771,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
+      <td><code>StringValue</code></td>
       <td><p>Replaced string</p></td>
     </tr>
   </tbody>
@@ -3375,15 +3787,30 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.reverse" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">reverse</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Reverse string</p>
+      <p>Reverse the characters of a string.</p>
 
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>Reversed string</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
@@ -3402,7 +3829,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Return up to <code>nchars</code> from the end of each string in <code>arg</code>.</p>
+      <p>Return up to <code>nchars</code> from the end of each string.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3415,12 +3842,6 @@ the corresponding row in the output is <code>True</code>.</p></td>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>nchars</code></td>
         <td><code>int | ir.IntegerValue</code></td>
@@ -3439,8 +3860,8 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
-      <td><p>Characters</p></td>
+      <td><code>StringValue</code></td>
+      <td><p>Characters from the end</p></td>
     </tr>
   </tbody>
 </table>
@@ -3455,14 +3876,14 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.rlike" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">rlike</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">rlike</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Return whether the values in <code>arg</code> match <code>pattern</code>.</p>
+      <p>Return whether the values match <code>pattern</code>.</p>
 <p>Returns <code>True</code> if the regex matches a string and <code>False</code> otherwise.</p>
 
 <p><strong>Parameters:</strong></p>
@@ -3477,14 +3898,8 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>String expression to check for matches</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>pattern</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>str | StringValue</code></td>
         <td><p>Regular expression use for searching</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3538,7 +3953,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
   <tbody>
       <tr>
         <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
+        <td><code>None</code></td>
         <td><p>String to pad</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3550,7 +3965,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
       </tr>
       <tr>
         <td><code>pad</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>str | StringValue</code></td>
         <td><p>Pad character</p></td>
         <td><code>&#39; &#39;</code></td>
       </tr>
@@ -3574,7 +3989,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
+      <td><code>StringValue</code></td>
       <td><p>Padded string</p></td>
     </tr>
   </tbody>
@@ -3590,15 +4005,30 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.rstrip" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">rstrip</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">rstrip</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Remove whitespace from right side of string</p>
+      <p>Remove whitespace from the right side of string.</p>
 
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>Right-stripped string</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
@@ -3610,14 +4040,14 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.split" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">split</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">delimiter</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delimiter</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Split <code>arg</code> on <code>delimiter</code>.</p>
+      <p>Split as string on <code>delimiter</code>.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3631,14 +4061,8 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>String value to split</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>delimiter</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>str | StringValue</code></td>
         <td><p>Value to split by</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3655,7 +4079,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
   <tbody>
     <tr>
       <td><code>ir.ArrayValue</code></td>
-      <td><p>The string <code>arg</code> split by <code>delimiter</code></p></td>
+      <td><p>The string split by <code>delimiter</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -3691,14 +4115,8 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>str | ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>start</code></td>
-        <td><code>str | ir.StringValue</code></td>
+        <td><code>str | StringValue</code></td>
         <td><p>prefix to check for</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3736,15 +4154,30 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.strip" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">strip</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">strip</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Remove whitespace from left and right sides of string</p>
+      <p>Remove whitespace from left and right sides of a string.</p>
 
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>Stripped string</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
@@ -3763,7 +4196,7 @@ the corresponding row in the output is <code>True</code>.</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Pull substrings out by position and maximum length.</p>
+      <p>Extract a substring.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3777,12 +4210,6 @@ the corresponding row in the output is <code>True</code>.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>start</code></td>
         <td><code>int | ir.IntegerValue</code></td>
         <td><p>First character to start splitting, indices start at 0</p></td>
@@ -3791,8 +4218,8 @@ the corresponding row in the output is <code>True</code>.</p></td>
       <tr>
         <td><code>length</code></td>
         <td><code>int | ir.IntegerValue | None</code></td>
-        <td><p>Maximum length of each substring. If not supplied, searches the entire
-string</p></td>
+        <td><p>Maximum length of each substring. If not supplied, searches the
+entire string</p></td>
         <td><code>None</code></td>
       </tr>
   </tbody>
@@ -3807,7 +4234,7 @@ string</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
+      <td><code>StringValue</code></td>
       <td><p>Found substring</p></td>
     </tr>
   </tbody>
@@ -3823,7 +4250,7 @@ string</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.to_timestamp" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">to_timestamp</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">format_str</span><span class="p">,</span> <span class="n">timezone</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">to_timestamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">format_str</span><span class="p">,</span> <span class="n">timezone</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 </h6>
@@ -3897,7 +4324,8 @@ string</p></td>
     <div class="doc doc-contents ">
 
       <p>Replace <code>from_str</code> characters in <code>self</code> characters in <code>to_str</code>.</p>
-<p>To avoid unexpected behavior, <code>from_str</code> should be shorter than <code>to_str</code>.</p>
+<p>To avoid unexpected behavior, <code>from_str</code> should be shorter than
+<code>to_str</code>.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3911,20 +4339,14 @@ string</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>ir.StringValue</code></td>
-        <td><p>String expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>from_str</code></td>
-        <td><code>ir.StringValue</code></td>
+        <td><code>StringValue</code></td>
         <td><p>Characters in <code>arg</code> to replace</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>to_str</code></td>
-        <td><code>ir.StringValue</code></td>
+        <td><code>StringValue</code></td>
         <td><p>Characters to use for replacement</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3947,7 +4369,7 @@ string</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.StringValue</code></td>
+      <td><code>StringValue</code></td>
       <td><p>Translated string</p></td>
     </tr>
   </tbody>
@@ -3963,15 +4385,30 @@ string</p></td>
 
 
 <h6 id="ibis.expr.types.strings.StringValue.upper" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">upper</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">upper</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Convert string to all uppercase</p>
+      <p>Convert string to all uppercase.</p>
 
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StringValue</code></td>
+      <td><p>Uppercase string</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
