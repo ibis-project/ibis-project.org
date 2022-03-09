@@ -1437,6 +1437,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.expr.types.relations.TableExpr.prevent_rewrite" class="md-nav__link">
+    prevent_rewrite()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.expr.types.relations.TableExpr.projection" class="md-nav__link">
     projection()
   </a>
@@ -2045,6 +2052,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.expr.types.relations.TableExpr.prevent_rewrite" class="md-nav__link">
+    prevent_rewrite()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.expr.types.relations.TableExpr.projection" class="md-nav__link">
     projection()
   </a>
@@ -2312,8 +2326,8 @@ TableExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
 
 
 
-
 <h5 id="ibis.expr.types.relations.TableExpr-methods">Methods</h5>
+
 
 
 
@@ -2333,7 +2347,7 @@ TableExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.aggregate" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">aggregate</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">having</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">aggregate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">having</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
 </h6>
@@ -2353,12 +2367,6 @@ TableExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>table</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table to compute aggregates from</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>metrics</code></td>
         <td><code>Sequence[ir.ScalarExpr] | None</code></td>
@@ -2395,7 +2403,7 @@ TableExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>An aggregate table expression</p></td>
     </tr>
   </tbody>
@@ -2422,8 +2430,8 @@ TableExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
     <div class="doc doc-contents ">
 
       <p>Perform an "as-of" join between <code>left</code> and <code>right</code>.</p>
-<p>Similar to a left join except that the match is done on nearest key rather
-than equal keys.</p>
+<p>Similar to a left join except that the match is done on nearest key
+rather than equal keys.</p>
 <p>Optionally, match keys with <code>by</code> before joining with <code>predicates</code>.</p>
 
 <p><strong>Parameters:</strong></p>
@@ -2439,13 +2447,13 @@ than equal keys.</p>
   <tbody>
       <tr>
         <td><code>left</code></td>
-        <td><code>ir.TableExpr</code></td>
+        <td><code>TableExpr</code></td>
         <td><p>Table expression</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>right</code></td>
-        <td><code>ir.TableExpr</code></td>
+        <td><code>TableExpr</code></td>
         <td><p>Table expression</p></td>
         <td><em>required</em></td>
       </tr>
@@ -2486,7 +2494,7 @@ columns.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>Table expression</p></td>
     </tr>
   </tbody>
@@ -2509,27 +2517,8 @@ columns.</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Compute the number of rows in <code>self</code>.</p>
+      <p>Compute the number of rows in the table.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>self</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -2541,7 +2530,7 @@ columns.</p></td>
   <tbody>
     <tr>
       <td><code>ir.IntegerScalar</code></td>
-      <td><p>Count of the number of rows in <code>self</code></p></td>
+      <td><p>Number of rows in the table</p></td>
     </tr>
   </tbody>
 </table>
@@ -2578,19 +2567,19 @@ columns.</p></td>
   <tbody>
       <tr>
         <td><code>left</code></td>
-        <td><code>ir.TableExpr</code></td>
+        <td><code>TableExpr</code></td>
         <td><p>Left table</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>right</code></td>
-        <td><code>ir.TableExpr</code></td>
+        <td><code>TableExpr</code></td>
         <td><p>Right table</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>rest</code></td>
-        <td><code>ir.TableExpr</code></td>
+        <td><code>TableExpr</code></td>
         <td><p>Additional tables to cross join</p></td>
         <td><code>()</code></td>
       </tr>
@@ -2665,7 +2654,7 @@ columns.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>Cross join of <code>left</code>, <code>right</code> and <code>rest</code></p></td>
     </tr>
   </tbody>
@@ -2681,7 +2670,7 @@ columns.</p></td>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.difference" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">difference</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">difference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 </h6>
@@ -2703,12 +2692,6 @@ columns.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
         <td><code>TableExpr</code></td>
         <td><p>Table expression</p></td>
@@ -2726,7 +2709,7 @@ columns.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>The rows present in <code>left</code> that are not present in <code>right</code>.</p></td>
     </tr>
   </tbody>
@@ -2783,12 +2766,6 @@ columns.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>fields</code></td>
         <td><code>str | Sequence[str]</code></td>
         <td><p>Fields to drop</p></td>
@@ -2806,7 +2783,7 @@ columns.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>Expression without <code>fields</code></p></td>
     </tr>
   </tbody>
@@ -2877,7 +2854,7 @@ Options are 'any' or 'all'. Default is 'any'.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>Table expression</p></td>
     </tr>
   </tbody>
@@ -2914,12 +2891,6 @@ Options are 'any' or 'all'. Default is 'any'.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>replacements</code></td>
         <td><code>ir.ScalarExpr | Mapping[str, ir.ScalarExpr]</code></td>
         <td><p>Value with which to fill the nulls. If passed as a mapping, the keys
@@ -2946,7 +2917,7 @@ as a scalar, all columns are filled with that value.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>Table expression</p></td>
     </tr>
   </tbody>
@@ -2962,7 +2933,7 @@ as a scalar, all columns are filled with that value.</p></td>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.filter" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">predicates</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">predicates</span><span class="p">)</span></code>
 
 
 </h6>
@@ -2983,12 +2954,6 @@ as a scalar, all columns are filled with that value.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>table</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>predicates</code></td>
         <td><code>ir.BooleanValue | Sequence[ir.BooleanValue]</code></td>
         <td><p>Boolean value expressions used to select rows in <code>table</code>.</p></td>
@@ -3006,7 +2971,7 @@ as a scalar, all columns are filled with that value.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>Filtered table expression</p></td>
     </tr>
   </tbody>
@@ -3242,7 +3207,7 @@ as a scalar, all columns are filled with that value.</p></td>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.head" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">head</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">head</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></code>
 
 
 </h6>
@@ -3250,6 +3215,7 @@ as a scalar, all columns are filled with that value.</p></td>
     <div class="doc doc-contents ">
 
       <p>Select the first <code>n</code> rows of a table.</p>
+<p>The result set is not deterministic without a sort.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3262,12 +3228,6 @@ as a scalar, all columns are filled with that value.</p></td>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>table</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>n</code></td>
         <td><code>int</code></td>
@@ -3286,7 +3246,7 @@ as a scalar, all columns are filled with that value.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p><code>table</code> limited to <code>n</code> rows</p></td>
     </tr>
   </tbody>
@@ -3309,8 +3269,7 @@ as a scalar, all columns are filled with that value.</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Show column names, types, and null counts.</p>
-<p>Output to stdout by default.</p>
+      <p>Show column names, types and null counts.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3324,15 +3283,9 @@ as a scalar, all columns are filled with that value.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>self</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>buf</code></td>
         <td><code>IO[str] | None</code></td>
-        <td><p>A writable buffer</p></td>
+        <td><p>A writable buffer, defaults to stdout</p></td>
         <td><code>None</code></td>
       </tr>
   </tbody>
@@ -3349,7 +3302,7 @@ as a scalar, all columns are filled with that value.</p></td>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.intersect" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">intersect</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">intersect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 </h6>
@@ -3371,14 +3324,8 @@ as a scalar, all columns are filled with that value.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.TableExpr</code></td>
+        <td><code>TableExpr</code></td>
         <td><p>Table expression</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3394,7 +3341,7 @@ as a scalar, all columns are filled with that value.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>The rows common amongst <code>left</code> and <code>right</code>.</p></td>
     </tr>
   </tbody>
@@ -3432,13 +3379,13 @@ as a scalar, all columns are filled with that value.</p></td>
   <tbody>
       <tr>
         <td><code>left</code></td>
-        <td><code>ir.TableExpr</code></td>
+        <td><code>TableExpr</code></td>
         <td><p>Left table to join</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>right</code></td>
-        <td><code>ir.TableExpr</code></td>
+        <td><code>TableExpr</code></td>
         <td><p>Right table to join</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3475,7 +3422,7 @@ columns.</p></td>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.limit" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">limit</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">limit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
 
 
 </h6>
@@ -3495,12 +3442,6 @@ columns.</p></td>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>table</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>n</code></td>
         <td><code>int</code></td>
@@ -3525,7 +3466,7 @@ columns.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>The first <code>n</code> rows of <code>table</code> starting at <code>offset</code></p></td>
     </tr>
   </tbody>
@@ -3541,7 +3482,7 @@ columns.</p></td>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.mutate" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">mutate</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">exprs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">mutations</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exprs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">mutations</span><span class="p">)</span></code>
 
 
 </h6>
@@ -3562,12 +3503,6 @@ columns.</p></td>
   </thead>
   <tbody>
       <tr>
-        <td><code>table</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression to add columns to</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>exprs</code></td>
         <td><code>Sequence[ir.Expr] | None</code></td>
         <td><p>List of named expressions to add as columns</p></td>
@@ -3584,7 +3519,10 @@ columns.</p></td>
 <p><strong>Examples:</strong></p>
     <p>Using keywords arguments to name the new columns</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">(</span>
+<span class="o">...</span>     <span class="p">[(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)],</span>
+<span class="o">...</span>     <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span>
+<span class="o">...</span> <span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">qux</span><span class="o">=</span><span class="n">table</span><span class="o">.</span><span class="n">foo</span> <span class="o">+</span> <span class="n">table</span><span class="o">.</span><span class="n">bar</span><span class="p">,</span> <span class="n">baz</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span>
 <span class="n">ref_0</span>
@@ -3609,7 +3547,8 @@ columns.</p></td>
         <span class="n">bar</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;bar&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
           <span class="n">ref_0</span>
 </code></pre></div>
-    <p>Using the :meth:<code>ibis.expr.types.Expr.name</code> method to name the new columns</p>
+    <p>Use the [<code>Expr.name</code>][ibis.expr.types.Expr.name] method to name the new
+columns.</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;baz&#39;</span><span class="p">,),</span>
 <span class="o">...</span>                <span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">foo</span> <span class="o">+</span> <span class="n">table</span><span class="o">.</span><span class="n">bar</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;qux&#39;</span><span class="p">)]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr2</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">new_columns</span><span class="p">)</span>
@@ -3627,7 +3566,7 @@ columns.</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>Table expression with additional columns</p></td>
     </tr>
   </tbody>
@@ -3643,8 +3582,50 @@ columns.</p></td>
 
 
 
+<h6 id="ibis.expr.types.relations.TableExpr.prevent_rewrite" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">prevent_rewrite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+
+</h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Prevent optimization from happening below this expression.</p>
+<p>Only valid on SQL-string generating backends.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>client</code></td>
+        <td><code>None</code></td>
+        <td><p>A client to use to create the SQLQueryResult operation. This is
+useful if you're compiling an expression that derives from an
+[<code>UnboundTable</code>][ibis.expr.operations.UnboundTable] operation.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
 <h6 id="ibis.expr.types.relations.TableExpr.projection" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">projection</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">exprs</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">projection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exprs</span><span class="p">)</span></code>
 
 
 </h6>
@@ -3652,6 +3633,10 @@ columns.</p></td>
     <div class="doc doc-contents ">
 
       <p>Compute a new table expression using <code>exprs</code>.</p>
+<p>Passing an aggregate function to this method will broadcast the
+aggregate's value over the number of rows in the table and
+automatically constructs a window function expression. See the examples
+section for more details.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3667,7 +3652,8 @@ columns.</p></td>
       <tr>
         <td><code>exprs</code></td>
         <td><code>ir.ValueExpr | str | Sequence[ir.ValueExpr | str]</code></td>
-        <td><p>Column expression, string, or list of column expressions and strings.</p></td>
+        <td><p>Column expression, string, or list of column expressions and
+strings.</p></td>
         <td><em>required</em></td>
       </tr>
   </tbody>
@@ -3732,12 +3718,13 @@ columns.</p></td>
           <span class="kc">None</span>
       <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
 </code></pre></div>
-    <p>Note the <code>&lt;ibis.expr.window.Window&gt;</code> objects here, their existence means
-that the result of the aggregation will be broadcast across the number of
-rows in the input column. The purpose of this expression rewrite is to make
-it easy to write column/scalar-aggregate operations like</p>
-<p>.. code-block:: python</p>
-<p>t[(t.a - t.a.mean()).name('demeaned_a')]</p>
+    <p>Note the [<code>Window</code>][ibis.expr.window.Window] objects here.</p>
+<p>Their existence means that the result of the aggregation will be
+broadcast across the number of rows in the input column.
+The purpose of this expression rewrite is to make it easy to write
+column/scalar-aggregate operations like</p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[(</span><span class="n">t</span><span class="o">.</span><span class="n">a</span> <span class="o">-</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;demeaned_a&#39;</span><span class="p">)]</span>
+</code></pre></div>
 
 <p><strong>Returns:</strong></p>
 <table>
@@ -3749,7 +3736,7 @@ it easy to write column/scalar-aggregate operations like</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>Table expression</p></td>
     </tr>
   </tbody>
@@ -3765,7 +3752,7 @@ it easy to write column/scalar-aggregate operations like</p>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.relabel" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">relabel</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">substitutions</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">relabel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">substitutions</span><span class="p">)</span></code>
 
 
 </h6>
@@ -3786,12 +3773,6 @@ it easy to write column/scalar-aggregate operations like</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>table</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>substitutions</code></td>
         <td><code>Mapping[str, str]</code></td>
         <td><p>Name mapping</p></td>
@@ -3809,7 +3790,7 @@ it easy to write column/scalar-aggregate operations like</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>A relabeled table expression</p></td>
     </tr>
   </tbody>
@@ -3833,7 +3814,7 @@ it easy to write column/scalar-aggregate operations like</p>
 
     <div class="doc doc-contents ">
 
-      <p>An autonumbering expression representing the row number of the results.</p>
+      <p>A numbering expression representing the row number of the results.</p>
 <p>It can be 0 or 1 indexed depending on the backend. Check the backend
 documentation for specifics.</p>
 
@@ -3905,7 +3886,7 @@ documentation for specifics.</p>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.select" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">select</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">exprs</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">select</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exprs</span><span class="p">)</span></code>
 
 
 </h6>
@@ -3913,6 +3894,10 @@ documentation for specifics.</p>
     <div class="doc doc-contents ">
 
       <p>Compute a new table expression using <code>exprs</code>.</p>
+<p>Passing an aggregate function to this method will broadcast the
+aggregate's value over the number of rows in the table and
+automatically constructs a window function expression. See the examples
+section for more details.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3928,7 +3913,8 @@ documentation for specifics.</p>
       <tr>
         <td><code>exprs</code></td>
         <td><code>ir.ValueExpr | str | Sequence[ir.ValueExpr | str]</code></td>
-        <td><p>Column expression, string, or list of column expressions and strings.</p></td>
+        <td><p>Column expression, string, or list of column expressions and
+strings.</p></td>
         <td><em>required</em></td>
       </tr>
   </tbody>
@@ -3993,12 +3979,13 @@ documentation for specifics.</p>
           <span class="kc">None</span>
       <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
 </code></pre></div>
-    <p>Note the <code>&lt;ibis.expr.window.Window&gt;</code> objects here, their existence means
-that the result of the aggregation will be broadcast across the number of
-rows in the input column. The purpose of this expression rewrite is to make
-it easy to write column/scalar-aggregate operations like</p>
-<p>.. code-block:: python</p>
-<p>t[(t.a - t.a.mean()).name('demeaned_a')]</p>
+    <p>Note the [<code>Window</code>][ibis.expr.window.Window] objects here.</p>
+<p>Their existence means that the result of the aggregation will be
+broadcast across the number of rows in the input column.
+The purpose of this expression rewrite is to make it easy to write
+column/scalar-aggregate operations like</p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[(</span><span class="n">t</span><span class="o">.</span><span class="n">a</span> <span class="o">-</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;demeaned_a&#39;</span><span class="p">)]</span>
+</code></pre></div>
 
 <p><strong>Returns:</strong></p>
 <table>
@@ -4010,7 +3997,7 @@ it easy to write column/scalar-aggregate operations like</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>Table expression</p></td>
     </tr>
   </tbody>
@@ -4027,7 +4014,7 @@ it easy to write column/scalar-aggregate operations like</p>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.set_column" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">set_column</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">expr</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">set_column</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">expr</span><span class="p">)</span></code>
 
 
 </h6>
@@ -4049,7 +4036,7 @@ it easy to write column/scalar-aggregate operations like</p>
   <tbody>
       <tr>
         <td><code>table</code></td>
-        <td><code>ir.TableExpr</code></td>
+        <td><code>None</code></td>
         <td><p>Table expression</p></td>
         <td><em>required</em></td>
       </tr>
@@ -4093,14 +4080,14 @@ it easy to write column/scalar-aggregate operations like</p>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.sort_by" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sort_by</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">sort_exprs</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">sort_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sort_exprs</span><span class="p">)</span></code>
 
 
 </h6>
 
     <div class="doc doc-contents ">
 
-      <p>Sort <code>table</code> by <code>sort_exprs</code></p>
+      <p>Sort table by <code>sort_exprs</code></p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -4113,12 +4100,6 @@ it easy to write column/scalar-aggregate operations like</p>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>table</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>sort_exprs</code></td>
         <td><code>str | ir.ColumnExpr | ir.SortKey | tuple[str | ir.ColumnExpr, bool] | Sequence[tuple[str | ir.ColumnExpr, bool]]</code></td>
@@ -4143,8 +4124,8 @@ it easy to write column/scalar-aggregate operations like</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
-      <td><p>Sorted <code>table</code></p></td>
+      <td><code>TableExpr</code></td>
+      <td><p>Sorted table</p></td>
     </tr>
   </tbody>
 </table>
@@ -4168,25 +4149,6 @@ it easy to write column/scalar-aggregate operations like</p>
 
       <p>View a single column table as an array.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>self</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -4213,7 +4175,7 @@ it easy to write column/scalar-aggregate operations like</p>
 
 
 <h6 id="ibis.expr.types.relations.TableExpr.union" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">union</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">distinct</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">union</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">distinct</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
 </h6>
@@ -4235,14 +4197,8 @@ it easy to write column/scalar-aggregate operations like</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.TableExpr</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.TableExpr</code></td>
+        <td><code>TableExpr</code></td>
         <td><p>Table expression</p></td>
         <td><em>required</em></td>
       </tr>
@@ -4265,8 +4221,8 @@ can be very expensive, be careful)</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
-      <td><p>Union of <code>left</code> and <code>right</code></p></td>
+      <td><code>TableExpr</code></td>
+      <td><p>Union of table and <code>right</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -4288,27 +4244,9 @@ can be very expensive, be careful)</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Create a new table expression distinct from the current one..</p>
+      <p>Create a new table expression distinct from the current one.</p>
+<p>Use this API for any self-referencing operations like a self-join.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>self</code></td>
-        <td><code>None</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -4319,7 +4257,7 @@ can be very expensive, be careful)</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.TableExpr</code></td>
+      <td><code>TableExpr</code></td>
       <td><p>Table expression</p></td>
     </tr>
   </tbody>
@@ -4337,6 +4275,8 @@ can be very expensive, be careful)</p></td>
     </div>
 
   </div>
+
+
 
 
 
