@@ -1272,7 +1272,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.api.coalesce" class="md-nav__link">
+  <a href="#ibis.expr.types.generic.coalesce" class="md-nav__link">
     coalesce()
   </a>
   
@@ -1300,7 +1300,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.api.greatest" class="md-nav__link">
+  <a href="#ibis.expr.types.generic.greatest" class="md-nav__link">
     greatest()
   </a>
   
@@ -1321,7 +1321,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.api.least" class="md-nav__link">
+  <a href="#ibis.expr.types.generic.least" class="md-nav__link">
     least()
   </a>
   
@@ -1734,7 +1734,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.api.coalesce" class="md-nav__link">
+  <a href="#ibis.expr.types.generic.coalesce" class="md-nav__link">
     coalesce()
   </a>
   
@@ -1762,7 +1762,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.api.greatest" class="md-nav__link">
+  <a href="#ibis.expr.types.generic.greatest" class="md-nav__link">
     greatest()
   </a>
   
@@ -1783,7 +1783,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.api.least" class="md-nav__link">
+  <a href="#ibis.expr.types.generic.least" class="md-nav__link">
     least()
   </a>
   
@@ -2076,15 +2076,15 @@ scalar (if the inputs are Python literals)</p></td>
 
 
 
-<h2 id="ibis.expr.api.coalesce" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">coalesce</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<h2 id="ibis.expr.types.generic.coalesce" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">coalesce</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
 
 </h2>
 
     <div class="doc doc-contents first">
 
-      <p>Compute the first non-null value(s) from the passed arguments.</p>
+      <p>Return the first non-null value from <code>args</code>.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2099,8 +2099,8 @@ scalar (if the inputs are Python literals)</p></td>
   <tbody>
       <tr>
         <td><code>args</code></td>
-        <td><code>ir.ValueExpr</code></td>
-        <td><p>Arguments to choose from</p></td>
+        <td><code>ValueExpr</code></td>
+        <td><p>Arguments from which to choose the first non-null value</p></td>
         <td><code>()</code></td>
       </tr>
   </tbody>
@@ -2122,7 +2122,7 @@ scalar (if the inputs are Python literals)</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.ValueExpr</code></td>
+      <td><code>ValueExpr</code></td>
       <td><p>Coalesced expression</p></td>
     </tr>
   </tbody>
@@ -2312,8 +2312,8 @@ scalar (if the inputs are Python literals)</p></td>
 
 
 
-<h2 id="ibis.expr.api.greatest" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">greatest</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<h2 id="ibis.expr.types.generic.greatest" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">greatest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
 
 </h2>
@@ -2531,8 +2531,8 @@ e.g., in SQL: CASE WHEN bool_expr THEN 0 else 1 END</p>
 
 
 
-<h2 id="ibis.expr.api.least" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">least</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<h2 id="ibis.expr.types.generic.least" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">least</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
 
 </h2>
