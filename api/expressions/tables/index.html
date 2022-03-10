@@ -631,6 +631,8 @@
         
           
         
+          
+        
       
       
         
@@ -787,6 +789,20 @@
     <li class="md-nav__item">
       <a href="../../../backends/SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backends/support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -2270,7 +2286,7 @@
 
 
 
-<h1 id="table-expressions">Table Expressions</h1>
+<h1 id="table-expressions">Table Expressions<a class="headerlink" href="#table-expressions" title="Anchor link to this section for reference">&para;</a></h1>
 <p>Table expressions form the basis for most Ibis expressions.</p>
 
 
@@ -2283,7 +2299,7 @@
 
 
 
-</h2>
+<a href="#ibis.expr.types.relations" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2296,7 +2312,7 @@
 
 
 
-<h3 id="ibis.expr.types.relations-classes">Classes</h3>
+<h3 id="ibis.expr.types.relations-classes">Classes<a href="#ibis.expr.types.relations-classes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
   <div class="doc doc-object doc-class">
 
@@ -2309,7 +2325,7 @@ TableExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
 
 
 
-</h4>
+<a href="#ibis.expr.types.relations.TableExpr" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2326,7 +2342,7 @@ TableExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
 
 
 
-<h5 id="ibis.expr.types.relations.TableExpr-methods">Methods</h5>
+<h5 id="ibis.expr.types.relations.TableExpr-methods">Methods<a href="#ibis.expr.types.relations.TableExpr-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
 
 
@@ -2350,7 +2366,7 @@ TableExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
 <code class="highlight language-python"><span class="n">aggregate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">having</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.aggregate" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2425,7 +2441,7 @@ TableExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
 <code class="highlight language-python"><span class="n">asof_join</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">predicates</span><span class="o">=</span><span class="p">(),</span> <span class="n">by</span><span class="o">=</span><span class="p">(),</span> <span class="n">tolerance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;_x&#39;</span><span class="p">,</span> <span class="s1">&#39;_y&#39;</span><span class="p">))</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.asof_join" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2513,7 +2529,7 @@ columns.</p></td>
 <code class="highlight language-python"><span class="n">count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.count" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2548,7 +2564,7 @@ columns.</p></td>
 <code class="highlight language-python"><span class="n">cross_join</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="o">*</span><span class="n">rest</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;_x&#39;</span><span class="p">,</span> <span class="s1">&#39;_y&#39;</span><span class="p">))</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.cross_join" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2673,7 +2689,7 @@ columns.</p></td>
 <code class="highlight language-python"><span class="n">difference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.difference" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2728,7 +2744,7 @@ columns.</p></td>
 <code class="highlight language-python"><span class="n">distinct</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.distinct" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2748,7 +2764,7 @@ columns.</p></td>
 <code class="highlight language-python"><span class="n">drop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fields</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.drop" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2802,7 +2818,7 @@ columns.</p></td>
 <code class="highlight language-python"><span class="n">dropna</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.dropna" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2873,7 +2889,7 @@ Options are 'any' or 'all'. Default is 'any'.</p></td>
 <code class="highlight language-python"><span class="n">fillna</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">replacements</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.fillna" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2936,7 +2952,7 @@ as a scalar, all columns are filled with that value.</p></td>
 <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">predicates</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.filter" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2990,7 +3006,7 @@ as a scalar, all columns are filled with that value.</p></td>
 <code class="highlight language-python"><span class="n">get_column</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.get_column" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3025,7 +3041,7 @@ as a scalar, all columns are filled with that value.</p></td>
 <code class="highlight language-python"><span class="n">get_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterable</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.get_columns" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3074,7 +3090,7 @@ as a scalar, all columns are filled with that value.</p></td>
 <code class="highlight language-python"><span class="n">group_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">additional_grouping_expressions</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.group_by" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3142,7 +3158,7 @@ as a scalar, all columns are filled with that value.</p></td>
 <code class="highlight language-python"><span class="n">groupby</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">additional_grouping_expressions</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.groupby" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3210,7 +3226,7 @@ as a scalar, all columns are filled with that value.</p></td>
 <code class="highlight language-python"><span class="n">head</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.head" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3265,7 +3281,7 @@ as a scalar, all columns are filled with that value.</p></td>
 <code class="highlight language-python"><span class="n">info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">buf</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.info" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3305,7 +3321,7 @@ as a scalar, all columns are filled with that value.</p></td>
 <code class="highlight language-python"><span class="n">intersect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.intersect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3360,7 +3376,7 @@ as a scalar, all columns are filled with that value.</p></td>
 <code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">predicates</span><span class="o">=</span><span class="p">(),</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;_x&#39;</span><span class="p">,</span> <span class="s1">&#39;_y&#39;</span><span class="p">))</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.join" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3425,7 +3441,7 @@ columns.</p></td>
 <code class="highlight language-python"><span class="n">limit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.limit" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3485,7 +3501,7 @@ columns.</p></td>
 <code class="highlight language-python"><span class="n">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exprs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">mutations</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.mutate" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3586,7 +3602,7 @@ columns.</p>
 <code class="highlight language-python"><span class="n">prevent_rewrite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.prevent_rewrite" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3628,7 +3644,7 @@ useful if you're compiling an expression that derives from an
 <code class="highlight language-python"><span class="n">projection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exprs</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.projection" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3755,7 +3771,7 @@ column/scalar-aggregate operations like</p>
 <code class="highlight language-python"><span class="n">relabel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">substitutions</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.relabel" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3810,7 +3826,7 @@ column/scalar-aggregate operations like</p>
 <code class="highlight language-python"><span class="n">rowid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.rowid" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3854,7 +3870,7 @@ documentation for specifics.</p>
 <code class="highlight language-python"><span class="n">schema</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.schema" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3889,7 +3905,7 @@ documentation for specifics.</p>
 <code class="highlight language-python"><span class="n">select</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exprs</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.select" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4017,7 +4033,7 @@ column/scalar-aggregate operations like</p>
 <code class="highlight language-python"><span class="n">set_column</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">expr</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.set_column" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4083,7 +4099,7 @@ column/scalar-aggregate operations like</p>
 <code class="highlight language-python"><span class="n">sort_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sort_exprs</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.sort_by" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4143,7 +4159,7 @@ column/scalar-aggregate operations like</p>
 <code class="highlight language-python"><span class="n">to_array</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.to_array" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4178,7 +4194,7 @@ column/scalar-aggregate operations like</p>
 <code class="highlight language-python"><span class="n">union</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">distinct</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.union" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4240,7 +4256,7 @@ can be very expensive, be careful)</p></td>
 <code class="highlight language-python"><span class="n">view</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.relations.TableExpr.view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4303,7 +4319,7 @@ can be very expensive, be careful)</p></td>
 
 
 
-</h2>
+<a href="#ibis.expr.types.groupby" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -4318,7 +4334,7 @@ can be very expensive, be careful)</p></td>
 
 
 
-<h3 id="ibis.expr.types.groupby-classes">Classes</h3>
+<h3 id="ibis.expr.types.groupby-classes">Classes<a href="#ibis.expr.types.groupby-classes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
 
 
@@ -4332,7 +4348,7 @@ GroupedTableExpr        </code>
 
 
 
-</h4>
+<a href="#ibis.expr.types.groupby.GroupedTableExpr" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -4349,7 +4365,7 @@ GroupedTableExpr        </code>
 
 
 
-<h5 id="ibis.expr.types.groupby.GroupedTableExpr-methods">Methods</h5>
+<h5 id="ibis.expr.types.groupby.GroupedTableExpr-methods">Methods<a href="#ibis.expr.types.groupby.GroupedTableExpr-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
 
 
@@ -4365,7 +4381,7 @@ GroupedTableExpr        </code>
 <code class="highlight language-python"><span class="n">count</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metric_name</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.groupby.GroupedTableExpr.count" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4419,7 +4435,7 @@ GroupedTableExpr        </code>
 <code class="highlight language-python"><span class="n">having</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.groupby.GroupedTableExpr.having" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4473,7 +4489,7 @@ GroupedTableExpr        </code>
 <code class="highlight language-python"><span class="n">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exprs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.groupby.GroupedTableExpr.mutate" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4585,7 +4601,7 @@ GroupedTableExpr        </code>
 <code class="highlight language-python"><span class="n">order_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.groupby.GroupedTableExpr.order_by" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4639,7 +4655,7 @@ GroupedTableExpr        </code>
 <code class="highlight language-python"><span class="n">over</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.groupby.GroupedTableExpr.over" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4693,7 +4709,7 @@ GroupedTableExpr        </code>
 <code class="highlight language-python"><span class="n">projection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exprs</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.groupby.GroupedTableExpr.projection" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4713,7 +4729,7 @@ GroupedTableExpr        </code>
 <code class="highlight language-python"><span class="n">size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metric_name</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.groupby.GroupedTableExpr.size" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -4873,7 +4889,7 @@ GroupedTableExpr        </code>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>

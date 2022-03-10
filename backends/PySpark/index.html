@@ -633,6 +633,8 @@
         
           
         
+          
+        
       
       
         
@@ -1124,6 +1126,20 @@
     <li class="md-nav__item">
       <a href="../SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -2130,8 +2146,8 @@
 
 
 
-<h1 id="pyspark"><a href="https://spark.apache.org/docs/latest/api/python/">PySpark</a></h1>
-<h2 id="install">Install</h2>
+<h1 id="pyspark"><a href="https://spark.apache.org/docs/latest/api/python/">PySpark</a><a class="headerlink" href="#pyspark" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Install ibis and dependencies for the PySpark backend:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label><label for="__tabbed_1_3">mamba</label></div>
 <div class="tabbed-content">
@@ -2149,8 +2165,8 @@
 </div>
 </div>
 </div>
-<h2 id="connect">Connect</h2>
-<h3 id="api">API</h3>
+<h2 id="connect">Connect<a class="headerlink" href="#connect" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="api">API<a class="headerlink" href="#api" title="Anchor link to this section for reference">&para;</a></h3>
 <p>Create a client by passing in PySpark things to <code>ibis.pyspark.connect</code>.</p>
 <!-- prettier-ignore-start -->
 <p>See <a href="#ibis.backends.pyspark.Backend.do_connect"><code>ibis.backends.pyspark.Backend.do_connect</code></a>
@@ -2163,7 +2179,7 @@ for connection parameter information.</p>
 </div>
 <!-- prettier-ignore-end -->
 
-<h3 id="connection-parameters">Connection Parameters</h3>
+<h3 id="connection-parameters">Connection Parameters<a class="headerlink" href="#connection-parameters" title="Anchor link to this section for reference">&para;</a></h3>
 <!-- prettier-ignore-start -->
 
 
@@ -2175,7 +2191,7 @@ for connection parameter information.</p>
 <code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.pyspark.Backend.do_connect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents first">
 
@@ -2213,7 +2229,7 @@ for connection parameter information.</p>
 
 <!-- prettier-ignore-end -->
 
-<h2 id="backend-api">Backend API</h2>
+<h2 id="backend-api">Backend API<a class="headerlink" href="#backend-api" title="Anchor link to this section for reference">&para;</a></h2>
 <!-- prettier-ignore-start -->
 
 
@@ -2228,7 +2244,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-</h3>
+<a href="#ibis.backends.pyspark.Backend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -2241,7 +2257,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-<h4 id="ibis.backends.pyspark.Backend-attributes">Attributes</h4>
+<h4 id="ibis.backends.pyspark.Backend-attributes">Attributes<a href="#ibis.backends.pyspark.Backend-attributes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
 
   <div class="doc doc-object doc-attribute">
@@ -2256,7 +2272,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.current_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2296,7 +2312,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.version" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2326,7 +2342,7 @@ underlying library or application.</p>
 
 
 
-<h4 id="ibis.backends.pyspark.Backend-methods">Methods</h4>
+<h4 id="ibis.backends.pyspark.Backend-methods">Methods<a href="#ibis.backends.pyspark.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
 
 
@@ -2347,7 +2363,7 @@ underlying library or application.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.add_operation" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2378,7 +2394,7 @@ string <code>"NULL"</code>.</p>
 <code class="highlight language-python"><span class="n">close</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.close" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2398,7 +2414,7 @@ string <code>"NULL"</code>.</p>
 <code class="highlight language-python"><span class="nb">compile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">timecontext</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.compile" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2418,7 +2434,7 @@ string <code>"NULL"</code>.</p>
 <code class="highlight language-python"><span class="n">compute_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">noscan</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.compute_stats" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2473,7 +2489,7 @@ rows, size in bytes).</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.connect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2533,7 +2549,7 @@ rows, size in bytes).</p></td>
 <code class="highlight language-python"><span class="n">create_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.create_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2578,7 +2594,7 @@ rows, size in bytes).</p></td>
 <code class="highlight language-python"><span class="n">create_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;parquet&#39;</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.create_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2652,7 +2668,7 @@ schema</p></td>
 <code class="highlight language-python"><span class="n">create_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">can_exist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">temporary</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.create_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2718,7 +2734,7 @@ schema</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2772,7 +2788,7 @@ schema</p></td>
 <code class="highlight language-python"><span class="n">drop_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.drop_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2818,7 +2834,7 @@ database does not exist</p></td>
 <code class="highlight language-python"><span class="n">drop_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.drop_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2838,7 +2854,7 @@ database does not exist</p></td>
 <code class="highlight language-python"><span class="n">drop_table_or_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.drop_table_or_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2895,7 +2911,7 @@ database does not exist</p></td>
 <code class="highlight language-python"><span class="n">drop_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.drop_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2915,7 +2931,7 @@ database does not exist</p></td>
 <code class="highlight language-python"><span class="n">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">timecontext</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.execute" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2938,7 +2954,7 @@ database does not exist</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.exists_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2995,7 +3011,7 @@ database does not exist</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.exists_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3058,7 +3074,7 @@ database does not exist</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.explain" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3095,7 +3111,7 @@ query.</p>
 <code class="highlight language-python"><span class="n">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.insert" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3105,7 +3121,7 @@ query.</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;my_table&#39;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">con</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">table_expr</span><span class="p">)</span>
 </code></pre></div>
-    <h6 id="ibis.backends.pyspark.Backend.insert--completely-overwrite-contents">Completely overwrite contents</h6>
+    <h6 id="ibis.backends.pyspark.Backend.insert--completely-overwrite-contents">Completely overwrite contents<a class="headerlink" href="#ibis.backends.pyspark.Backend.insert--completely-overwrite-contents" title="Anchor link to this section for reference">&para;</a></h6>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">con</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">table_expr</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 
@@ -3123,7 +3139,7 @@ query.</p>
 <code class="highlight language-python"><span class="n">list_databases</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.list_databases" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3179,7 +3195,7 @@ the <code>like</code> pattern if provided.</p></td>
 <code class="highlight language-python"><span class="n">list_tables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.list_tables" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3241,7 +3257,7 @@ or other equivalent entities in a SQL database.</p>
 <code class="highlight language-python"><span class="n">raw_sql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.raw_sql" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3301,7 +3317,7 @@ the session in a way unknown to Ibis; be careful.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.sql" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3355,7 +3371,7 @@ the session in a way unknown to Ibis; be careful.</p>
 <code class="highlight language-python"><span class="n">table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3415,7 +3431,7 @@ the session in a way unknown to Ibis; be careful.</p>
 <code class="highlight language-python"><span class="n">truncate_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.truncate_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3463,7 +3479,7 @@ the session in a way unknown to Ibis; be careful.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pyspark.Backend.verify" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3576,7 +3592,7 @@ the session in a way unknown to Ibis; be careful.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>

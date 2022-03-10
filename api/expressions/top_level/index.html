@@ -631,6 +631,8 @@
         
           
         
+          
+        
       
       
         
@@ -787,6 +789,20 @@
     <li class="md-nav__item">
       <a href="../../../backends/SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backends/support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -1307,7 +1323,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.api.ifelse" class="md-nav__link">
+  <a href="#ibis.expr.types.logical.ifelse" class="md-nav__link">
     ifelse()
   </a>
   
@@ -1769,7 +1785,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ibis.expr.api.ifelse" class="md-nav__link">
+  <a href="#ibis.expr.types.logical.ifelse" class="md-nav__link">
     ifelse()
   </a>
   
@@ -1936,9 +1952,9 @@
 
 
 
-<h1 id="top-level-apis">Top-level APIs</h1>
+<h1 id="top-level-apis">Top-level APIs<a class="headerlink" href="#top-level-apis" title="Anchor link to this section for reference">&para;</a></h1>
 <p>These methods and objects are available directly in the <code>ibis</code> module.</p>
-<h2 id="na"><code>NA</code></h2>
+<h2 id="na"><code>NA</code><a class="headerlink" href="#na" title="Anchor link to this section for reference">&para;</a></h2>
 <p><code>NA</code> is the null scalar.</p>
 
 
@@ -1950,7 +1966,7 @@
 <code class="highlight language-python"><span class="n">array</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.types.arrays.array" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2034,7 +2050,7 @@ scalar (if the inputs are Python literals)</p></td>
 <code class="highlight language-python"><span class="k">case</span><span class="p">()</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.case" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2080,7 +2096,7 @@ scalar (if the inputs are Python literals)</p></td>
 <code class="highlight language-python"><span class="n">coalesce</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.types.generic.coalesce" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2141,7 +2157,7 @@ scalar (if the inputs are Python literals)</p></td>
 <code class="highlight language-python"><span class="n">cumulative_window</span><span class="p">(</span><span class="n">group_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">order_by</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.window.cumulative_window" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2202,7 +2218,7 @@ scalar (if the inputs are Python literals)</p></td>
 <code class="highlight language-python"><span class="n">date</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.date" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2256,7 +2272,7 @@ scalar (if the inputs are Python literals)</p></td>
 <code class="highlight language-python"><span class="n">desc</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.desc" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2316,7 +2332,7 @@ scalar (if the inputs are Python literals)</p></td>
 <code class="highlight language-python"><span class="n">greatest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.types.generic.greatest" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2366,19 +2382,49 @@ scalar (if the inputs are Python literals)</p></td>
 
 
 
-<h2 id="ibis.expr.api.ifelse" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">ifelse</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">true_expr</span><span class="p">,</span> <span class="n">false_expr</span><span class="p">)</span></code>
+<h2 id="ibis.expr.types.logical.ifelse" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ifelse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">true_expr</span><span class="p">,</span> <span class="n">false_expr</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.types.logical.ifelse" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
       <p>Construct a ternary conditional expression.</p>
 
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>true_expr</code></td>
+        <td><code>ir.ValueExpr</code></td>
+        <td><p>Expression to return if <code>self</code> evaluates to <code>True</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>false_expr</code></td>
+        <td><code>ir.ValueExpr</code></td>
+        <td><p>Expression to return if <code>self</code> evaluates to <code>False</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
 <p><strong>Examples:</strong></p>
-    <p>bool_expr.ifelse(0, 1)
-e.g., in SQL: CASE WHEN bool_expr THEN 0 else 1 END</p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s2">&quot;is_person&quot;</span><span class="p">,</span> <span class="s2">&quot;boolean&quot;</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">is_person</span><span class="o">.</span><span class="n">ifelse</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">,</span> <span class="s2">&quot;no&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">expr</span><span class="p">))</span>
+<span class="n">SELECT</span> <span class="n">CASE</span> <span class="n">WHEN</span> <span class="n">t0</span><span class="o">.</span><span class="n">is_person</span> <span class="n">THEN</span> <span class="p">:</span><span class="n">param_1</span> <span class="n">ELSE</span> <span class="p">:</span><span class="n">param_2</span> <span class="n">END</span> <span class="n">AS</span> <span class="n">tmp</span>
+<span class="n">FROM</span> <span class="n">t</span> <span class="n">AS</span> <span class="n">t0</span>
+</code></pre></div>
 
 <p><strong>Returns:</strong></p>
 <table>
@@ -2409,7 +2455,7 @@ e.g., in SQL: CASE WHEN bool_expr THEN 0 else 1 END</p>
 <code class="highlight language-python"><span class="n">interval</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quarters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">months</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">weeks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">milliseconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">microseconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nanoseconds</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.interval" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2535,7 +2581,7 @@ e.g., in SQL: CASE WHEN bool_expr THEN 0 else 1 END</p>
 <code class="highlight language-python"><span class="n">least</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.types.generic.least" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2589,7 +2635,7 @@ e.g., in SQL: CASE WHEN bool_expr THEN 0 else 1 END</p>
 <code class="highlight language-python"><span class="n">literal</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.types.generic.literal" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2683,7 +2729,7 @@ the type of <code>value</code>.</p></td>
 <code class="highlight language-python"><span class="nb">map</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.types.maps.map" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2755,7 +2801,7 @@ key/value pairs of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">negate</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.negate" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2809,7 +2855,7 @@ key/value pairs of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">now</span><span class="p">()</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.now" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2844,7 +2890,7 @@ key/value pairs of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">null</span><span class="p">()</span></code>
 
 
-</h2>
+<a href="#ibis.expr.types.generic.null" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2864,7 +2910,7 @@ key/value pairs of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">param</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.param" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2929,7 +2975,7 @@ key/value pairs of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">random</span><span class="p">()</span></code>
 
 
-</h2>
+<a href="#ibis.expr.random.random" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2965,7 +3011,7 @@ key/value pairs of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">range_window</span><span class="p">(</span><span class="n">preceding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">following</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">order_by</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.window.range_window" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3040,7 +3086,7 @@ value of the order-by expression.</p>
 <code class="highlight language-python"><span class="n">row_number</span><span class="p">()</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.row_number" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3075,7 +3121,7 @@ value of the order-by expression.</p>
 <code class="highlight language-python"><span class="n">schema</span><span class="p">(</span><span class="n">pairs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">types</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.schema" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3151,7 +3197,7 @@ and <code>types</code>.</p></td>
 <code class="highlight language-python"><span class="n">struct</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.types.structs.struct" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3222,7 +3268,7 @@ of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">table</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3282,7 +3328,7 @@ of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">time</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.time" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3336,7 +3382,7 @@ of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">timestamp</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">timezone</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.timestamp" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3396,7 +3442,7 @@ of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">trailing_range_window</span><span class="p">(</span><span class="n">preceding</span><span class="p">,</span> <span class="n">order_by</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.window.trailing_range_window" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3462,7 +3508,7 @@ of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">trailing_window</span><span class="p">(</span><span class="n">preceding</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">order_by</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.window.trailing_window" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3528,7 +3574,7 @@ of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">where</span><span class="p">(</span><span class="n">boolean_expr</span><span class="p">,</span> <span class="n">true_expr</span><span class="p">,</span> <span class="n">false_null_expr</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.api.where" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3594,7 +3640,7 @@ of fixed types)</p></td>
 <code class="highlight language-python"><span class="n">window</span><span class="p">(</span><span class="n">preceding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">following</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">order_by</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h2>
+<a href="#ibis.expr.window.window" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -3751,7 +3797,7 @@ of fixed types)</p></td>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>

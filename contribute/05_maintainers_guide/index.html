@@ -631,6 +631,8 @@
         
           
         
+          
+        
       
       
         
@@ -787,6 +789,20 @@
     <li class="md-nav__item">
       <a href="../../backends/SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backends/support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -1610,13 +1626,13 @@
 
 
 
-<h1 id="maintaining-the-codebase">Maintaining the Codebase</h1>
+<h1 id="maintaining-the-codebase">Maintaining the Codebase<a class="headerlink" href="#maintaining-the-codebase" title="Anchor link to this section for reference">&para;</a></h1>
 <p>Ibis maintainers are expected to handle the following tasks as they arise:</p>
 <ul>
 <li>Reviewing and merging pull requests</li>
 <li>Triaging new issues</li>
 </ul>
-<h2 id="dependencies">Dependencies</h2>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Anchor link to this section for reference">&para;</a></h2>
 <p>A number of tasks that are typically associated with maintenance are partially or fully automated.</p>
 <table>
 <thead>
@@ -1645,7 +1661,7 @@
 done by running</p>
 <div class="highlight"><pre><span></span><code>poetry lock --no-update
 </code></pre></div>
-<h3 id="automatic-dependency-updates">Automatic Dependency Updates</h3>
+<h3 id="automatic-dependency-updates">Automatic Dependency Updates<a class="headerlink" href="#automatic-dependency-updates" title="Anchor link to this section for reference">&para;</a></h3>
 <p><a href="https://www.whitesourcesoftware.com/free-developer-tools/renovate/">WhiteSource
 Renovate</a>
 will run at some cadence (outside of traditional business hours) and submit PRs
@@ -1654,7 +1670,7 @@ that update dependencies.</p>
 increase the upper bound of a dependency's version range.</p>
 <p>The PRs it generates will regenerate a number of other files so that in most
 cases contributors do not have to remember to generate and commit these files.</p>
-<h3 id="adding-or-changing-dependencies">Adding or Changing Dependencies</h3>
+<h3 id="adding-or-changing-dependencies">Adding or Changing Dependencies<a class="headerlink" href="#adding-or-changing-dependencies" title="Anchor link to this section for reference">&para;</a></h3>
 <ol>
 <li>Edit <code>pyproject.toml</code> as needed.</li>
 <li>Run <code>poetry lock --no-update</code></li>
@@ -1691,10 +1707,10 @@ branch</a> of
 </ol>
 <p>Updates of minor and patch versions of dependencies are handled automatically by
 <a href="https://github.com/renovatebot/renovate"><code>renovate</code></a>.</p>
-<h2 id="merging-prs">Merging PRs</h2>
+<h2 id="merging-prs">Merging PRs<a class="headerlink" href="#merging-prs" title="Anchor link to this section for reference">&para;</a></h2>
 <p>PRs can be merged using the <a href="https://github.com/cli/cli"><code>gh</code> command line tool</a>
 or with the GitHub web UI.</p>
-<h2 id="release">Release</h2>
+<h2 id="release">Release<a class="headerlink" href="#release" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis is released on <a href="https://pypi.org/project/ibis-framework/">PyPI</a> and <a href="https://github.com/conda-forge/ibis-framework-feedstock">Conda Forge</a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">PyPI</label><label for="__tabbed_2_2"><code>conda-forge</code></label></div>
 <div class="tabbed-content">
@@ -1802,7 +1818,7 @@ package.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>

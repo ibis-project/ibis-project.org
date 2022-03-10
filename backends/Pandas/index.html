@@ -633,6 +633,8 @@
         
           
         
+          
+        
       
       
         
@@ -1096,6 +1098,20 @@
     <li class="md-nav__item">
       <a href="../SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -2074,9 +2090,9 @@
 
 
 
-<h1 id="pandas"><a href="https://pandas.pydata.org/">Pandas</a></h1>
+<h1 id="pandas"><a href="https://pandas.pydata.org/">Pandas</a><a class="headerlink" href="#pandas" title="Anchor link to this section for reference">&para;</a></h1>
 <p>Ibis's pandas backend is available in core Ibis.</p>
-<h2 id="install">Install</h2>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Install ibis and dependencies for the Pandas backend:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label><label for="__tabbed_1_3">mamba</label></div>
 <div class="tabbed-content">
@@ -2094,8 +2110,8 @@
 </div>
 </div>
 </div>
-<h2 id="connect">Connect</h2>
-<h3 id="api">API</h3>
+<h2 id="connect">Connect<a class="headerlink" href="#connect" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="api">API<a class="headerlink" href="#api" title="Anchor link to this section for reference">&para;</a></h3>
 <p>Create a client by passing in a dictionary of paths to <code>ibis.pandas.connect</code>.</p>
 <!-- prettier-ignore-start -->
 <p>See <a href="#ibis.backends.pandas.Backend.do_connect"><code>ibis.backends.pandas.Backend.do_connect</code></a>
@@ -2108,7 +2124,7 @@ for connection parameter information.</p>
 </div>
 <!-- prettier-ignore-end -->
 
-<h3 id="connection-parameters">Connection Parameters</h3>
+<h3 id="connection-parameters">Connection Parameters<a class="headerlink" href="#connection-parameters" title="Anchor link to this section for reference">&para;</a></h3>
 <!-- prettier-ignore-start -->
 
 
@@ -2120,7 +2136,7 @@ for connection parameter information.</p>
 <code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.pandas.Backend.do_connect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents first">
 
@@ -2156,7 +2172,7 @@ for connection parameter information.</p>
 
 <!-- prettier-ignore-end -->
 
-<h2 id="backend-api">Backend API</h2>
+<h2 id="backend-api">Backend API<a class="headerlink" href="#backend-api" title="Anchor link to this section for reference">&para;</a></h2>
 <!-- prettier-ignore-start -->
 
 
@@ -2171,7 +2187,7 @@ Backend            (<a title="ibis.backends.pandas.BasePandasBackend" href="../.
 
 
 
-</h3>
+<a href="#ibis.backends.pandas.Backend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -2184,7 +2200,7 @@ Backend            (<a title="ibis.backends.pandas.BasePandasBackend" href="../.
 
 
 
-<h4 id="ibis.backends.pandas.Backend-attributes">Attributes</h4>
+<h4 id="ibis.backends.pandas.Backend-attributes">Attributes<a href="#ibis.backends.pandas.Backend-attributes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
 
   <div class="doc doc-object doc-attribute">
@@ -2200,7 +2216,7 @@ Backend            (<a title="ibis.backends.pandas.BasePandasBackend" href="../.
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.current_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2241,7 +2257,7 @@ Backend            (<a title="ibis.backends.pandas.BasePandasBackend" href="../.
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.version" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2271,7 +2287,7 @@ underlying library or application.</p>
 
 
 
-<h4 id="ibis.backends.pandas.Backend-methods">Methods</h4>
+<h4 id="ibis.backends.pandas.Backend-methods">Methods<a href="#ibis.backends.pandas.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
 
 
@@ -2290,7 +2306,7 @@ underlying library or application.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.add_operation" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2324,7 +2340,7 @@ string <code>"NULL"</code>.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.compile" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2347,7 +2363,7 @@ string <code>"NULL"</code>.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.connect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2410,7 +2426,7 @@ string <code>"NULL"</code>.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.create_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2459,7 +2475,7 @@ string <code>"NULL"</code>.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.create_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2482,7 +2498,7 @@ string <code>"NULL"</code>.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.create_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2538,7 +2554,7 @@ default.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2595,7 +2611,7 @@ default.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.drop_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2649,7 +2665,7 @@ default.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.drop_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2700,7 +2716,7 @@ default.</p></td>
 <code class="highlight language-python"><span class="n">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.execute" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2723,7 +2739,7 @@ default.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.exists_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2780,7 +2796,7 @@ default.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.exists_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2843,7 +2859,7 @@ default.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.from_dataframe" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2913,7 +2929,7 @@ if not provided a new client is created</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.list_databases" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2972,7 +2988,7 @@ the <code>like</code> pattern if provided.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.list_tables" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3038,7 +3054,7 @@ or other equivalent entities in a SQL database.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3061,7 +3077,7 @@ or other equivalent entities in a SQL database.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.pandas.Backend.verify" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3083,11 +3099,11 @@ or other equivalent entities in a SQL database.</p>
 
 <!-- prettier-ignore-end -->
 
-<h2 id="user-defined-functions-udf">User Defined functions (UDF)</h2>
+<h2 id="user-defined-functions-udf">User Defined functions (UDF)<a class="headerlink" href="#user-defined-functions-udf" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis supports defining three kinds of user-defined functions for operations on
 expressions targeting the pandas backend: <strong>element-wise</strong>, <strong>reduction</strong>, and
 <strong>analytic</strong>.</p>
-<h3 id="elementwise-functions">Elementwise Functions</h3>
+<h3 id="elementwise-functions">Elementwise Functions<a class="headerlink" href="#elementwise-functions" title="Anchor link to this section for reference">&para;</a></h3>
 <p>An <strong>element-wise</strong> function is a function that takes N rows as input and
 produces N rows of output. <code>log</code>, <code>exp</code>, and <code>floor</code> are examples of
 element-wise functions.</p>
@@ -3099,7 +3115,7 @@ element-wise functions.</p>
 <span class="k">def</span> <span class="nf">add_one</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">1.0</span>
 </code></pre></div>
-<h3 id="reduction-functions">Reduction Functions</h3>
+<h3 id="reduction-functions">Reduction Functions<a class="headerlink" href="#reduction-functions" title="Anchor link to this section for reference">&para;</a></h3>
 <p>A <strong>reduction</strong> is a function that takes N rows as input and produces 1 row
 as output. <code>sum</code>, <code>mean</code> and <code>count</code> are examples of reductions. In
 the context of a <code>GROUP BY</code>, reductions produce 1 row of output <em>per
@@ -3112,7 +3128,7 @@ group</em>.</p>
 <span class="k">def</span> <span class="nf">double_mean</span><span class="p">(</span><span class="n">series</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">series</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </code></pre></div>
-<h3 id="analytic-functions">Analytic Functions</h3>
+<h3 id="analytic-functions">Analytic Functions<a class="headerlink" href="#analytic-functions" title="Anchor link to this section for reference">&para;</a></h3>
 <p>An <strong>analytic</strong> function is like an <strong>element-wise</strong> function in that it takes
 N rows as input and produces N rows of output. The key difference is that
 analytic functions can be applied <em>per group</em> using window functions. Z-score
@@ -3125,7 +3141,7 @@ is an example of an analytic function.</p>
 <span class="k">def</span> <span class="nf">zscore</span><span class="p">(</span><span class="n">series</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">series</span> <span class="o">-</span> <span class="n">series</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">series</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
 </code></pre></div>
-<h3 id="details-of-pandas-udfs">Details of Pandas UDFs</h3>
+<h3 id="details-of-pandas-udfs">Details of Pandas UDFs<a class="headerlink" href="#details-of-pandas-udfs" title="Anchor link to this section for reference">&para;</a></h3>
 <ul>
 <li>Element-wise provide support
   for applying your UDF to any combination of scalar values and columns.</li>
@@ -3271,7 +3287,7 @@ optionally accept specific keyword arguments.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>

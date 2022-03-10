@@ -736,6 +736,8 @@
         
           
         
+          
+        
       
       
         
@@ -892,6 +894,20 @@
     <li class="md-nav__item">
       <a href="../../backends/SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backends/support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -1666,15 +1682,15 @@
 
 
 
-<h1 id="design">Design</h1>
-<h2 id="primary-goals">Primary Goals</h2>
+<h1 id="design">Design<a class="headerlink" href="#design" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="primary-goals">Primary Goals<a class="headerlink" href="#primary-goals" title="Anchor link to this section for reference">&para;</a></h2>
 <ol>
 <li>Type safety</li>
 <li>Expressiveness</li>
 <li>Composability</li>
 <li>Familiarity</li>
 </ol>
-<h2 id="flow-of-execution">Flow of Execution</h2>
+<h2 id="flow-of-execution">Flow of Execution<a class="headerlink" href="#flow-of-execution" title="Anchor link to this section for reference">&para;</a></h2>
 <ol>
 <li>User writes expression</li>
 <li>Each method or function call builds a new expression</li>
@@ -1687,19 +1703,19 @@
 <li>The database returns some data that is then turned into a pandas DataFrame
    by ibis</li>
 </ol>
-<h2 id="expressions">Expressions</h2>
+<h2 id="expressions">Expressions<a class="headerlink" href="#expressions" title="Anchor link to this section for reference">&para;</a></h2>
 <p>The main user-facing component of ibis is expressions. The base class of all
 expressions in ibis is the <a href="../../api/expressions/#ibis.expr.types.core.Expr">ibis.expr.types.Expr</a> class.</p>
 <p>Expressions provide the user facing API, most of which is defined in
 <code>ibis/expr/api.py</code>.</p>
-<h3 id="type-system">Type System</h3>
+<h3 id="type-system">Type System<a class="headerlink" href="#type-system" title="Anchor link to this section for reference">&para;</a></h3>
 <p>Ibis's type system consists of a set of rules for specifying the types of
 inputs to <code>ibis.expr.types.Node</code> subclasses. Upon construction of a <code>Node</code>
 subclass, ibis performs validation of every input to the node based on the rule
 that was used to declare the input.</p>
 <p>Rules are defined in <code>ibis.expr.rules</code></p>
 <!-- prettier-ignore-start -->
-<h3 id="the-expr-class">The <a href="../../../../api/expressions/#ibis.expr.types.core.Expr"><code>Expr</code></a> class</h3>
+<h3 id="the-expr-class">The <a href="../../../../api/expressions/#ibis.expr.types.core.Expr"><code>Expr</code></a> class<a class="headerlink" href="#the-expr-class" title="Anchor link to this section for reference">&para;</a></h3>
 <!-- prettier-ignore-end -->
 
 <p>Expressions are a thin but important abstraction over operations, containing
@@ -1712,7 +1728,7 @@ columns, or scalars.</p>
 <!-- prettier-ignore-end -->
 
 <!-- prettier-ignore-start -->
-<h3 id="the-ibisexprtypesnode-class">The <code>ibis.expr.types.Node</code> Class</h3>
+<h3 id="the-ibisexprtypesnode-class">The <code>ibis.expr.types.Node</code> Class<a class="headerlink" href="#the-ibisexprtypesnode-class" title="Anchor link to this section for reference">&para;</a></h3>
 <!-- prettier-ignore-end -->
 
 <p><code>Node</code> subclasses make up the core set of operations of ibis. Each node
@@ -1743,7 +1759,7 @@ underlying database does.</p>
 <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 <span class="n">log_1p</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">log</span><span class="p">()</span>  <span class="c1"># an Add and a Log are instantiated here</span>
 </code></pre></div>
-<h3 id="expressions-vs-operations-why-are-they-different">Expressions vs Operations: Why are they different?</h3>
+<h3 id="expressions-vs-operations-why-are-they-different">Expressions vs Operations: Why are they different?<a class="headerlink" href="#expressions-vs-operations-why-are-they-different" title="Anchor link to this section for reference">&para;</a></h3>
 <p>Separating expressions from their underlying operations makes it easy to
 generically describe and validate the inputs to particular nodes. In the log
 example, it doesn't matter what <em>operation</em> (node) the double-valued arguments
@@ -1760,7 +1776,7 @@ expressions determine the output type of the expression.</p>
 type, even when an operation yields a different output type depending on its
 input. Concretely, this means that you cannot perform operations that don't
 make sense, like computing the average of a string column.</p>
-<h2 id="compilation">Compilation</h2>
+<h2 id="compilation">Compilation<a class="headerlink" href="#compilation" title="Anchor link to this section for reference">&para;</a></h2>
 <p>The next major component of ibis is the compilers.</p>
 <p>The first few versions of ibis directly generated strings, but the compiler
 infrastructure was generalized to support compilation of
@@ -1786,7 +1802,7 @@ that will perform this translation.</p>
 <p>While ibis was designed with an explicit goal of first-class SQL support,
 ibis can target other systems such as pandas.</p>
 </div>
-<h2 id="execution">Execution</h2>
+<h2 id="execution">Execution<a class="headerlink" href="#execution" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Presumably we want to <em>do</em> something with our compiled expressions. This is
 where execution comes in.</p>
 <p>This is least complex part of ibis, mostly only requiring ibis to correctly
@@ -1890,7 +1906,7 @@ necessary after the database returns results to the client.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>

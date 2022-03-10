@@ -631,6 +631,8 @@
         
           
         
+          
+        
       
       
         
@@ -787,6 +789,20 @@
     <li class="md-nav__item">
       <a href="../../../backends/SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backends/support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -2196,7 +2212,7 @@
 
 
 
-<h1 id="generic-expression-apis">Generic Expression APIs</h1>
+<h1 id="generic-expression-apis">Generic Expression APIs<a class="headerlink" href="#generic-expression-apis" title="Anchor link to this section for reference">&para;</a></h1>
 <p>These expressions are available on scalars and columns of any element type.</p>
 <!-- prettier-ignore-start -->
 
@@ -2210,7 +2226,7 @@
 
 
 
-</h2>
+<a href="#ibis.expr.types.generic" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -2224,7 +2240,7 @@
 
 
 
-<h3 id="ibis.expr.types.generic-classes">Classes</h3>
+<h3 id="ibis.expr.types.generic-classes">Classes<a href="#ibis.expr.types.generic-classes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
   <div class="doc doc-object doc-class">
 
@@ -2237,7 +2253,7 @@ AnyColumn            (<a title="ibis.expr.types.generic.ColumnExpr" href="#ibis.
 
 
 
-</h4>
+<a href="#ibis.expr.types.generic.AnyColumn" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2253,7 +2269,7 @@ AnyColumn            (<a title="ibis.expr.types.generic.ColumnExpr" href="#ibis.
 
 
 
-<h5 id="ibis.expr.types.generic.AnyColumn-methods">Methods</h5>
+<h5 id="ibis.expr.types.generic.AnyColumn-methods">Methods<a href="#ibis.expr.types.generic.AnyColumn-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
 
 
@@ -2265,7 +2281,7 @@ AnyColumn            (<a title="ibis.expr.types.generic.ColumnExpr" href="#ibis.
 <code class="highlight language-python"><span class="n">arbitrary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyColumn.arbitrary" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2327,7 +2343,7 @@ algorithm. Heavy is only supported by Clickhouse backend.</p></td>
 <code class="highlight language-python"><span class="n">count</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyColumn.count" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2384,7 +2400,7 @@ algorithm. Heavy is only supported by Clickhouse backend.</p></td>
 <code class="highlight language-python"><span class="n">distinct</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyColumn.distinct" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2427,7 +2443,7 @@ same context.</p>
 <code class="highlight language-python"><span class="n">nth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyColumn.nth" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2485,7 +2501,7 @@ same context.</p>
 <code class="highlight language-python"><span class="n">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exact_nunique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyColumn.summary" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2552,7 +2568,7 @@ same context.</p>
 <code class="highlight language-python"><span class="n">topk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyColumn.topk" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2612,7 +2628,7 @@ same context.</p>
 <code class="highlight language-python"><span class="n">value_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metric_name</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyColumn.value_counts" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2661,7 +2677,7 @@ AnyValue            (<a title="ibis.expr.types.generic.ValueExpr" href="#ibis.ex
 
 
 
-</h4>
+<a href="#ibis.expr.types.generic.AnyValue" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2677,7 +2693,7 @@ AnyValue            (<a title="ibis.expr.types.generic.ValueExpr" href="#ibis.ex
 
 
 
-<h5 id="ibis.expr.types.generic.AnyValue-methods">Methods</h5>
+<h5 id="ibis.expr.types.generic.AnyValue-methods">Methods<a href="#ibis.expr.types.generic.AnyValue-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
 
 
@@ -2694,7 +2710,7 @@ AnyValue            (<a title="ibis.expr.types.generic.ValueExpr" href="#ibis.ex
 <code class="highlight language-python"><span class="n">between</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.between" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2754,7 +2770,7 @@ AnyValue            (<a title="ibis.expr.types.generic.ValueExpr" href="#ibis.ex
 <code class="highlight language-python"><span class="k">case</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.case" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2826,7 +2842,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">cases</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">case_result_pairs</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.cases" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2886,7 +2902,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">cast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_type</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.cast" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -2940,7 +2956,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">coalesce</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.coalesce" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3001,7 +3017,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">collect</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.collect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3021,7 +3037,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">fillna</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fill_value</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.fillna" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3082,7 +3098,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">greatest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.greatest" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3136,7 +3152,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">group_concat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.group_concat" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3196,7 +3212,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;fnv&#39;</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.hash" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3250,7 +3266,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">identical_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.identical_to" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3305,7 +3321,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">isin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.isin" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3367,7 +3383,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">isnull</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.isnull" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3387,7 +3403,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">least</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.least" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3441,7 +3457,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">notin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.notin" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3495,7 +3511,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">notnull</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.notnull" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3515,7 +3531,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">over</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.over" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3569,7 +3585,7 @@ comparable with this column expression. Conclude by calling <code>.end()</code><
 <code class="highlight language-python"><span class="n">substitute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">replacement</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">else_</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.substitute" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3636,7 +3652,7 @@ passed.</p></td>
 <code class="highlight language-python"><span class="n">typeof</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.AnyValue.typeof" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3685,7 +3701,7 @@ ColumnExpr            (<a title="ibis.expr.types.generic.ValueExpr" href="#ibis.
 
 
 
-</h4>
+<a href="#ibis.expr.types.generic.ColumnExpr" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -3701,7 +3717,7 @@ ColumnExpr            (<a title="ibis.expr.types.generic.ValueExpr" href="#ibis.
 
 
 
-<h5 id="ibis.expr.types.generic.ColumnExpr-methods">Methods</h5>
+<h5 id="ibis.expr.types.generic.ColumnExpr-methods">Methods<a href="#ibis.expr.types.generic.ColumnExpr-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
 
 
@@ -3714,7 +3730,7 @@ ColumnExpr            (<a title="ibis.expr.types.generic.ValueExpr" href="#ibis.
 <code class="highlight language-python"><span class="n">to_projection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.ColumnExpr.to_projection" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3751,7 +3767,7 @@ ScalarExpr            (<a title="ibis.expr.types.generic.ValueExpr" href="#ibis.
 
 
 
-</h4>
+<a href="#ibis.expr.types.generic.ScalarExpr" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -3767,7 +3783,7 @@ ScalarExpr            (<a title="ibis.expr.types.generic.ValueExpr" href="#ibis.
 
 
 
-<h5 id="ibis.expr.types.generic.ScalarExpr-methods">Methods</h5>
+<h5 id="ibis.expr.types.generic.ScalarExpr-methods">Methods<a href="#ibis.expr.types.generic.ScalarExpr-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
 
 
@@ -3779,7 +3795,7 @@ ScalarExpr            (<a title="ibis.expr.types.generic.ValueExpr" href="#ibis.
 <code class="highlight language-python"><span class="n">to_projection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h6>
+<a href="#ibis.expr.types.generic.ScalarExpr.to_projection" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
@@ -3812,7 +3828,7 @@ ValueExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
 
 
 
-</h4>
+<a href="#ibis.expr.types.generic.ValueExpr" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -3951,7 +3967,7 @@ ValueExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>

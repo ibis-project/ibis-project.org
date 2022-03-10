@@ -633,6 +633,8 @@
         
           
         
+          
+        
       
       
         
@@ -1947,6 +1949,20 @@
     <li class="md-nav__item">
       <a href="../SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -3776,11 +3792,11 @@
 
 
 
-<h1 id="impala"><a href="https://impala.apache.org/">Impala</a></h1>
+<h1 id="impala"><a href="https://impala.apache.org/">Impala</a><a class="headerlink" href="#impala" title="Anchor link to this section for reference">&para;</a></h1>
 <p>One goal of Ibis is to provide an integrated Python API for an Impala cluster
 without requiring you to switch back and forth between Python code and the
 Impala shell.</p>
-<h2 id="install">Install</h2>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Install ibis and dependencies for the Impala backend:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label><label for="__tabbed_1_3">mamba</label></div>
 <div class="tabbed-content">
@@ -3798,8 +3814,8 @@ Impala shell.</p>
 </div>
 </div>
 </div>
-<h2 id="connect">Connect</h2>
-<h3 id="api">API</h3>
+<h2 id="connect">Connect<a class="headerlink" href="#connect" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="api">API<a class="headerlink" href="#api" title="Anchor link to this section for reference">&para;</a></h3>
 <p>Create a client by passing in connection parameters to <code>ibis.impala.connect</code>.</p>
 <!-- prettier-ignore-start -->
 <p>See <a href="#ibis.backends.impala.Backend.do_connect"><code>ibis.backends.impala.Backend.do_connect</code></a>
@@ -3812,7 +3828,7 @@ for connection parameter information.</p>
 </div>
 <!-- prettier-ignore-end -->
 
-<h3 id="connection-parameters">Connection Parameters</h3>
+<h3 id="connection-parameters">Connection Parameters<a class="headerlink" href="#connection-parameters" title="Anchor link to this section for reference">&para;</a></h3>
 <!-- prettier-ignore-start -->
 
 
@@ -3824,7 +3840,7 @@ for connection parameter information.</p>
 <code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">21050</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">use_ssl</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ca_cert</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auth_mechanism</span><span class="o">=</span><span class="s1">&#39;NOSASL&#39;</span><span class="p">,</span> <span class="n">kerberos_service_name</span><span class="o">=</span><span class="s1">&#39;impala&#39;</span><span class="p">,</span> <span class="n">pool_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">hdfs_client</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.impala.Backend.do_connect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents first">
 
@@ -3961,7 +3977,7 @@ reference, as the connection semantics are identical.</p>
 your HDFS cluster (<code>ibis.impala.hdfs_connect</code>) and connecting to Impala with
 <code>ibis.impala.connect</code>. See <code>backends.impala</code> for a tutorial on using this
 backend.</p>
-<h2 id="database-methods">Database methods</h2>
+<h2 id="database-methods">Database methods<a class="headerlink" href="#database-methods" title="Anchor link to this section for reference">&para;</a></h2>
 <!-- prettier-ignore-start -->
 
 
@@ -3976,7 +3992,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-</h3>
+<a href="#ibis.backends.impala.Backend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -3992,7 +4008,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-<h4 id="ibis.backends.impala.Backend-methods">Methods</h4>
+<h4 id="ibis.backends.impala.Backend-methods">Methods<a href="#ibis.backends.impala.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -4002,7 +4018,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 <code class="highlight language-python"><span class="n">create_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.create_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4054,7 +4070,7 @@ default</p></td>
 <code class="highlight language-python"><span class="n">drop_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.drop_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4100,7 +4116,7 @@ IntegrityError</p></td>
 <code class="highlight language-python"><span class="n">list_databases</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.list_databases" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4159,7 +4175,7 @@ the <code>like</code> pattern if provided.</p></td>
 
 <!-- prettier-ignore-end -->
 
-<h2 id="table-methods">Table methods</h2>
+<h2 id="table-methods">Table methods<a class="headerlink" href="#table-methods" title="Anchor link to this section for reference">&para;</a></h2>
 <p>The <code>Backend</code> object itself has many helper utility methods. You'll
 find the most methods on <code>ImpalaTable</code>.</p>
 <!-- prettier-ignore-start -->
@@ -4176,7 +4192,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-</h3>
+<a href="#ibis.backends.impala.Backend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -4192,7 +4208,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-<h4 id="ibis.backends.impala.Backend-methods">Methods</h4>
+<h4 id="ibis.backends.impala.Backend-methods">Methods<a href="#ibis.backends.impala.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -4202,7 +4218,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 <code class="highlight language-python"><span class="n">cache_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pool</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.cache_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4260,7 +4276,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 <code class="highlight language-python"><span class="n">create_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">external</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;parquet&#39;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">like_parquet</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.create_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4362,7 +4378,7 @@ expression.</p></td>
 <code class="highlight language-python"><span class="n">drop_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.drop_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4419,7 +4435,7 @@ expression.</p></td>
 <code class="highlight language-python"><span class="n">get_options</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.get_options" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4439,7 +4455,7 @@ expression.</p></td>
 <code class="highlight language-python"><span class="n">get_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.get_schema" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4499,7 +4515,7 @@ expression.</p></td>
 <code class="highlight language-python"><span class="n">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.insert" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4530,7 +4546,7 @@ for parameters.</p>
 <code class="highlight language-python"><span class="n">invalidate_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.invalidate_metadata" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4576,7 +4592,7 @@ for parameters.</p>
 <code class="highlight language-python"><span class="n">list_tables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.list_tables" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4638,7 +4654,7 @@ or other equivalent entities in a SQL database.</p>
 <code class="highlight language-python"><span class="n">load_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.load_data" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4660,7 +4676,7 @@ or other equivalent entities in a SQL database.</p>
 <code class="highlight language-python"><span class="n">truncate_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.truncate_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4723,7 +4739,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-</h3>
+<a href="#ibis.backends.impala.client.ImpalaTable" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -4737,7 +4753,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-<h4 id="ibis.backends.impala.client.ImpalaTable-attributes">Attributes</h4>
+<h4 id="ibis.backends.impala.client.ImpalaTable-attributes">Attributes<a href="#ibis.backends.impala.client.ImpalaTable-attributes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-attribute">
 
@@ -4751,7 +4767,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.is_partitioned" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4763,7 +4779,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods</h4>
+<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods<a href="#ibis.backends.impala.client.ImpalaTable-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -4773,7 +4789,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 <code class="highlight language-python"><span class="n">add_partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.add_partition" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4796,7 +4812,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">alter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tbl_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">serde_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.alter" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4853,7 +4869,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">alter_partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tbl_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">serde_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.alter_partition" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4916,7 +4932,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">column_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.column_stats" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4951,7 +4967,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">compute_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incremental</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.compute_stats" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4971,7 +4987,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">describe_formatted</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.describe_formatted" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -4991,7 +5007,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">drop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.drop" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5011,7 +5027,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">drop_partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.drop_partition" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5031,7 +5047,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">files</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.files" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5051,7 +5067,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.insert" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5121,7 +5137,7 @@ inserted is compatible with the existing table</p></td>
 <code class="highlight language-python"><span class="n">load_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.load_data" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5173,7 +5189,7 @@ partition</p></td>
 <code class="highlight language-python"><span class="n">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.metadata" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5193,7 +5209,7 @@ partition</p></td>
 <code class="highlight language-python"><span class="n">partition_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.partition_schema" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5213,7 +5229,7 @@ partition</p></td>
 <code class="highlight language-python"><span class="n">partitions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.partitions" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5235,7 +5251,7 @@ partition</p></td>
 <code class="highlight language-python"><span class="n">rename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.rename" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5256,7 +5272,7 @@ partition</p></td>
 <code class="highlight language-python"><span class="n">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.stats" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5294,7 +5310,7 @@ partition</p></td>
 
 <!-- prettier-ignore-end -->
 
-<h2 id="creating-views">Creating views</h2>
+<h2 id="creating-views">Creating views<a class="headerlink" href="#creating-views" title="Anchor link to this section for reference">&para;</a></h2>
 <!-- prettier-ignore-start -->
 
 
@@ -5309,7 +5325,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-</h3>
+<a href="#ibis.backends.impala.Backend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -5325,7 +5341,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-<h4 id="ibis.backends.impala.Backend-methods">Methods</h4>
+<h4 id="ibis.backends.impala.Backend-methods">Methods<a href="#ibis.backends.impala.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -5335,7 +5351,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 <code class="highlight language-python"><span class="n">create_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.create_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5386,7 +5402,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 <code class="highlight language-python"><span class="n">drop_table_or_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.drop_table_or_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5408,7 +5424,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 <!-- prettier-ignore-end -->
 
-<h2 id="accessing-data-formats-in-hdfs">Accessing data formats in HDFS</h2>
+<h2 id="accessing-data-formats-in-hdfs">Accessing data formats in HDFS<a class="headerlink" href="#accessing-data-formats-in-hdfs" title="Anchor link to this section for reference">&para;</a></h2>
 <!-- prettier-ignore-start -->
 
 
@@ -5423,7 +5439,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-</h3>
+<a href="#ibis.backends.impala.Backend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -5439,7 +5455,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-<h4 id="ibis.backends.impala.Backend-methods">Methods</h4>
+<h4 id="ibis.backends.impala.Backend-methods">Methods<a href="#ibis.backends.impala.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -5449,7 +5465,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 <code class="highlight language-python"><span class="n">avro_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hdfs_dir</span><span class="p">,</span> <span class="n">avro_schema</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">external</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">persist</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.avro_file" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5533,7 +5549,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 <code class="highlight language-python"><span class="n">delimited_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hdfs_dir</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">na_rep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">escapechar</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">external</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">persist</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.delimited_file" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5641,7 +5657,7 @@ table object</p></td>
 <code class="highlight language-python"><span class="n">parquet_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hdfs_dir</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">external</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">like_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">like_table</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">persist</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.parquet_file" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -5750,7 +5766,7 @@ Impala takes ownership of the Parquet file.</p></td>
 
 <!-- prettier-ignore-end -->
 
-<h2 id="hdfs-interaction">HDFS Interaction</h2>
+<h2 id="hdfs-interaction">HDFS Interaction<a class="headerlink" href="#hdfs-interaction" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis delegates all HDFS interaction to the
 <a href="https://filesystem-spec.readthedocs.io/en/latest/"><code>fsspec</code></a> library.</p>
 <!-- prettier-ignore-start -->
@@ -5764,7 +5780,7 @@ Impala takes ownership of the Parquet file.</p></td>
 <code class="highlight language-python"><span class="n">hdfs_connect</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="s1">&#39;webhdfs&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
-</h3>
+<a href="#ibis.backends.impala.hdfs.hdfs_connect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -5778,7 +5794,7 @@ are forwarded to that API.</p>
 
 <!-- prettier-ignore-end -->
 
-<h2 id="the-impala-client-object">The Impala client object</h2>
+<h2 id="the-impala-client-object">The Impala client object<a class="headerlink" href="#the-impala-client-object" title="Anchor link to this section for reference">&para;</a></h2>
 <p>To use Ibis with Impala, you first must connect to a cluster using the
 <code>ibis.impala.connect</code> function, optionally supplying an HDFS connection:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
@@ -5796,7 +5812,7 @@ using docker:</p>
 <p>You can accomplish many tasks directly through the client object, but we
 additionally provide APIs to streamline tasks involving a single Impala
 table or database.</p>
-<h2 id="table-objects">Table objects</h2>
+<h2 id="table-objects">Table objects<a class="headerlink" href="#table-objects" title="Anchor link to this section for reference">&para;</a></h2>
 <!-- prettier-ignore-start -->
 
 
@@ -5808,7 +5824,7 @@ table or database.</p>
 <code class="highlight language-python"><span class="n">table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h3>
+<a href="#ibis.backends.base.sql.Backend.table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -5883,7 +5899,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-</h3>
+<a href="#ibis.backends.impala.client.ImpalaTable" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -5901,7 +5917,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 the table itself has a method <code>drop</code> that you can use:</p>
 <div class="highlight"><pre><span></span><code><span class="n">table</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="expression-execution">Expression execution</h2>
+<h2 id="expression-execution">Expression execution<a class="headerlink" href="#expression-execution" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis expressions have an <code>execute</code> method with compiles and runs the
 expressions on Impala or whichever backend is being referenced.</p>
 <p>For example:</p>
@@ -5912,7 +5928,7 @@ expressions on Impala or whichever backend is being referenced.</p>
 </code></pre></div>
 <p>For longer-running queries, Ibis will attempt to cancel the query in
 progress if an interrupt is received.</p>
-<h2 id="creating-tables">Creating tables</h2>
+<h2 id="creating-tables">Creating tables<a class="headerlink" href="#creating-tables" title="Anchor link to this section for reference">&para;</a></h2>
 <p>There are several ways to create new Impala tables:</p>
 <ul>
 <li>From an Ibis table expression</li>
@@ -5932,7 +5948,7 @@ top-level client connection or a database object.</p>
 <code class="highlight language-python"><span class="n">create_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">external</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;parquet&#39;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">like_parquet</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h3>
+<a href="#ibis.backends.impala.Backend.create_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -6026,7 +6042,7 @@ expression.</p></td>
 
 <!-- prettier-ignore-end -->
 
-<h3 id="creating-tables-from-a-table-expression">Creating tables from a table expression</h3>
+<h3 id="creating-tables-from-a-table-expression">Creating tables from a table expression<a class="headerlink" href="#creating-tables-from-a-table-expression" title="Anchor link to this section for reference">&para;</a></h3>
 <p>If you pass an Ibis expression to <code>create_table</code>, Ibis issues a
 <code>CREATE TABLE ... AS SELECT</code> (CTAS) statement:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;functional_alltypes&#39;</span><span class="p">)</span>
@@ -6056,7 +6072,7 @@ expression.</p></td>
 </code></pre></div>
 <p>You can also choose to create an empty table and use <code>insert</code> (see
 below).</p>
-<h3 id="creating-an-empty-table">Creating an empty table</h3>
+<h3 id="creating-an-empty-table">Creating an empty table<a class="headerlink" href="#creating-an-empty-table" title="Anchor link to this section for reference">&para;</a></h3>
 <p>To create an empty table, you must declare an Ibis schema that will be
 translated to the appopriate Impala schema and data types.</p>
 <p>As Ibis types are simplified compared with Impala types, this may expand
@@ -6099,7 +6115,7 @@ You can force a particular path with the <code>location</code> option.</p>
   <span class="n">month</span>            <span class="n">int32</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="creating-a-partitioned-table">Creating a partitioned table</h3>
+<h3 id="creating-a-partitioned-table">Creating a partitioned table<a class="headerlink" href="#creating-a-partitioned-table" title="Anchor link to this section for reference">&para;</a></h3>
 <p>To create an empty partitioned table, include a list of columns to be
 used as the partition keys.</p>
 <div class="highlight"><pre><span></span><code><span class="n">schema</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">schema</span><span class="p">([(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
@@ -6108,7 +6124,7 @@ used as the partition keys.</p>
 <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;new_table&#39;</span>
 <span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">])</span>
 </code></pre></div>
-<h2 id="partitioned-tables">Partitioned tables</h2>
+<h2 id="partitioned-tables">Partitioned tables<a class="headerlink" href="#partitioned-tables" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis enables you to manage partitioned tables in various ways. Since
 each partition behaves as its own \"subtable\" sharing a common schema,
 each partition can have its own file format, directory path,
@@ -6130,7 +6146,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-</h3>
+<a href="#ibis.backends.impala.client.ImpalaTable" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -6144,7 +6160,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-<h4 id="ibis.backends.impala.client.ImpalaTable-attributes">Attributes</h4>
+<h4 id="ibis.backends.impala.client.ImpalaTable-attributes">Attributes<a href="#ibis.backends.impala.client.ImpalaTable-attributes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-attribute">
 
@@ -6158,7 +6174,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.is_partitioned" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6170,7 +6186,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods</h4>
+<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods<a href="#ibis.backends.impala.client.ImpalaTable-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -6180,7 +6196,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 <code class="highlight language-python"><span class="n">add_partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.add_partition" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6203,7 +6219,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">drop_partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.drop_partition" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6223,7 +6239,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">partition_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.partition_schema" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6243,7 +6259,7 @@ use <code>alter_partition</code> to set them after the fact.</p>
 <code class="highlight language-python"><span class="n">partitions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.partitions" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6284,7 +6300,7 @@ values, or pass a list of the partition values:</p>
 <span class="n">table</span><span class="o">.</span><span class="n">drop_partition</span><span class="p">([</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 </code></pre></div>
 <p>We'll cover partition metadata management and data loading below.</p>
-<h2 id="inserting-data-into-tables">Inserting data into tables</h2>
+<h2 id="inserting-data-into-tables">Inserting data into tables<a class="headerlink" href="#inserting-data-into-tables" title="Anchor link to this section for reference">&para;</a></h2>
 <p>If the schemas are compatible, you can insert into a table directly from
 an Ibis table expression:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">functional_alltypes</span>
@@ -6316,10 +6332,10 @@ inserting into:</p>
 <div class="highlight"><pre><span></span><code><span class="n">part</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2007</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
 <span class="n">table</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="n">part</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="managing-table-metadata">Managing table metadata</h2>
+<h2 id="managing-table-metadata">Managing table metadata<a class="headerlink" href="#managing-table-metadata" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis has functions that wrap many of the DDL commands for Impala table
 metadata.</p>
-<h3 id="detailed-table-metadata-describe-formatted">Detailed table metadata: <code>DESCRIBE FORMATTED</code></h3>
+<h3 id="detailed-table-metadata-describe-formatted">Detailed table metadata: <code>DESCRIBE FORMATTED</code><a class="headerlink" href="#detailed-table-metadata-describe-formatted" title="Anchor link to this section for reference">&para;</a></h3>
 <p>To get a handy wrangled version of <code>DESCRIBE FORMATTED</code> use the
 <code>metadata</code> method.</p>
 <!-- prettier-ignore-start -->
@@ -6333,7 +6349,7 @@ metadata.</p>
 <code class="highlight language-python"><span class="n">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h3>
+<a href="#ibis.backends.impala.client.ImpalaTable.metadata" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -6408,7 +6424,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-</h3>
+<a href="#ibis.backends.impala.client.ImpalaTable" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -6425,7 +6441,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods</h4>
+<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods<a href="#ibis.backends.impala.client.ImpalaTable-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -6435,7 +6451,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 <code class="highlight language-python"><span class="n">files</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.files" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6474,7 +6490,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 <span class="mi">3</span>  <span class="n">ss_sold_date_sk</span><span class="o">=</span><span class="mi">2451789</span>
 <span class="mi">4</span>  <span class="n">ss_sold_date_sk</span><span class="o">=</span><span class="mi">2451741</span>
 </code></pre></div>
-<h3 id="modifying-table-metadata">Modifying table metadata</h3>
+<h3 id="modifying-table-metadata">Modifying table metadata<a class="headerlink" href="#modifying-table-metadata" title="Anchor link to this section for reference">&para;</a></h3>
 <p>For unpartitioned tables, you can use the <code>alter</code> method to change its
 location, file format, and other properties. For partitioned tables, to
 change partition-specific metadata use <code>alter_partition</code>.</p>
@@ -6492,7 +6508,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-</h3>
+<a href="#ibis.backends.impala.client.ImpalaTable" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -6509,7 +6525,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods</h4>
+<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods<a href="#ibis.backends.impala.client.ImpalaTable-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -6519,7 +6535,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 <code class="highlight language-python"><span class="n">alter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tbl_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">serde_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.alter" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6576,7 +6592,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 <code class="highlight language-python"><span class="n">alter_partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tbl_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">serde_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.alter_partition" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6662,8 +6678,8 @@ particular partition:</p>
     <span class="n">serde_properties</span><span class="o">=</span><span class="n">csv_props</span>
 <span class="p">)</span>
 </code></pre></div>
-<h2 id="table-statistics">Table statistics</h2>
-<h3 id="computing-table-and-partition-statistics">Computing table and partition statistics</h3>
+<h2 id="table-statistics">Table statistics<a class="headerlink" href="#table-statistics" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="computing-table-and-partition-statistics">Computing table and partition statistics<a class="headerlink" href="#computing-table-and-partition-statistics" title="Anchor link to this section for reference">&para;</a></h3>
 <!-- prettier-ignore-start -->
 
 
@@ -6678,7 +6694,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-</h3>
+<a href="#ibis.backends.impala.client.ImpalaTable" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -6695,7 +6711,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods</h4>
+<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods<a href="#ibis.backends.impala.client.ImpalaTable-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -6705,7 +6721,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 <code class="highlight language-python"><span class="n">compute_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incremental</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.compute_stats" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6737,7 +6753,7 @@ after creating a table or loading new data:</p>
 <code>COMPUTE INCREMENTAL STATS</code> DDL command:</p>
 <div class="highlight"><pre><span></span><code><span class="n">table</span><span class="o">.</span><span class="n">compute_stats</span><span class="p">(</span><span class="n">incremental</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="seeing-table-and-column-statistics">Seeing table and column statistics</h3>
+<h3 id="seeing-table-and-column-statistics">Seeing table and column statistics<a class="headerlink" href="#seeing-table-and-column-statistics" title="Anchor link to this section for reference">&para;</a></h3>
 <!-- prettier-ignore-start -->
 
 
@@ -6752,7 +6768,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-</h3>
+<a href="#ibis.backends.impala.client.ImpalaTable" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -6769,7 +6785,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods</h4>
+<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods<a href="#ibis.backends.impala.client.ImpalaTable-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -6779,7 +6795,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 <code class="highlight language-python"><span class="n">column_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.column_stats" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6814,7 +6830,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 <code class="highlight language-python"><span class="n">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.stats" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -6907,7 +6923,7 @@ output will depend, of course, on the last <code>COMPUTE STATS</code> call.</p>
 <span class="mi">21</span>          <span class="n">ss_net_profit</span>  <span class="n">DECIMAL</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>            <span class="mi">122436</span>      <span class="o">-</span><span class="mi">1</span>       <span class="n">NaN</span>         <span class="mi">4</span>
 <span class="mi">22</span>        <span class="n">ss_sold_date_sk</span>        <span class="n">BIGINT</span>               <span class="mi">120</span>       <span class="mi">0</span>       <span class="n">NaN</span>         <span class="mi">8</span>
 </code></pre></div>
-<h3 id="refresh-and-invalidate-metadata"><code>REFRESH</code> and <code>INVALIDATE METADATA</code></h3>
+<h3 id="refresh-and-invalidate-metadata"><code>REFRESH</code> and <code>INVALIDATE METADATA</code><a class="headerlink" href="#refresh-and-invalidate-metadata" title="Anchor link to this section for reference">&para;</a></h3>
 <p>These DDL commands are available as table-level and client-level
 methods:</p>
 <!-- prettier-ignore-start -->
@@ -6924,7 +6940,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-</h3>
+<a href="#ibis.backends.impala.Backend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -6940,7 +6956,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-<h4 id="ibis.backends.impala.Backend-methods">Methods</h4>
+<h4 id="ibis.backends.impala.Backend-methods">Methods<a href="#ibis.backends.impala.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -6950,7 +6966,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 <code class="highlight language-python"><span class="n">invalidate_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.invalidate_metadata" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -7012,7 +7028,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-</h3>
+<a href="#ibis.backends.impala.client.ImpalaTable" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -7056,7 +7072,7 @@ tables using <code>invalidate_metadata</code>, and similarly invoke
 <p>These methods are often used in conjunction with the <code>LOAD DATA</code>
 commands and <code>COMPUTE STATS</code>. See the Impala documentation for full
 details.</p>
-<h2 id="issuing-load-data-commands">Issuing <code>LOAD DATA</code> commands</h2>
+<h2 id="issuing-load-data-commands">Issuing <code>LOAD DATA</code> commands<a class="headerlink" href="#issuing-load-data-commands" title="Anchor link to this section for reference">&para;</a></h2>
 <p>The <code>LOAD DATA</code> DDL physically moves a single data file or a directory
 of files into the correct location for a table or table partition. It is
 especially useful for partitioned tables as you do not have to construct
@@ -7077,7 +7093,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-</h3>
+<a href="#ibis.backends.impala.Backend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -7093,7 +7109,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-<h4 id="ibis.backends.impala.Backend-methods">Methods</h4>
+<h4 id="ibis.backends.impala.Backend-methods">Methods<a href="#ibis.backends.impala.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -7103,7 +7119,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 <code class="highlight language-python"><span class="n">load_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.load_data" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -7139,7 +7155,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-</h3>
+<a href="#ibis.backends.impala.client.ImpalaTable" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -7156,7 +7172,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 
 
 
-<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods</h4>
+<h4 id="ibis.backends.impala.client.ImpalaTable-methods">Methods<a href="#ibis.backends.impala.client.ImpalaTable-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -7166,7 +7182,7 @@ ImpalaTable            (<a title="ibis.expr.types.relations.TableExpr" href="../
 <code class="highlight language-python"><span class="n">load_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.client.ImpalaTable.load_data" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -7231,7 +7247,7 @@ into a particular partition with the <code>partition</code> keyword argument:</p
 <div class="highlight"><pre><span></span><code><span class="n">part</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">table</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">partition</span><span class="o">=</span><span class="n">part</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="parquet-and-other-session-options">Parquet and other session options</h2>
+<h2 id="parquet-and-other-session-options">Parquet and other session options<a class="headerlink" href="#parquet-and-other-session-options" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis gives you access to Impala session-level variables that affect
 query execution:</p>
 <!-- prettier-ignore-start -->
@@ -7248,7 +7264,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-</h3>
+<a href="#ibis.backends.impala.Backend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -7264,7 +7280,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 
 
 
-<h4 id="ibis.backends.impala.Backend-methods">Methods</h4>
+<h4 id="ibis.backends.impala.Backend-methods">Methods<a href="#ibis.backends.impala.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
   <div class="doc doc-object doc-method">
 
@@ -7274,7 +7290,7 @@ Backend            (<a title="ibis.backends.base.sql.BaseSQLBackend" href="../..
 <code class="highlight language-python"><span class="n">disable_codegen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.disable_codegen" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -7314,7 +7330,7 @@ codegen, pass False.</p></td>
 <code class="highlight language-python"><span class="n">get_options</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.impala.Backend.get_options" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -7395,7 +7411,7 @@ codegen, pass False.</p></td>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">client</span><span class="o">.</span><span class="n">get_options</span><span class="p">()[</span><span class="s1">&#39;COMPRESSION_CODEC&#39;</span><span class="p">]</span>
 <span class="s1">&#39;SNAPPY&#39;</span>
 </code></pre></div>
-<h2 id="ingesting-data-from-pandas">Ingesting data from pandas</h2>
+<h2 id="ingesting-data-from-pandas">Ingesting data from pandas<a class="headerlink" href="#ingesting-data-from-pandas" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Overall interoperability between the Hadoop / Spark ecosystems and
 pandas / the PyData stack is poor, but it will improve in time (this is
 a major part of the Ibis roadmap).</p>
@@ -7462,7 +7478,7 @@ a major part of the Ibis roadmap).</p>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">to_insert</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="uploading-downloading-data-from-hdfs">Uploading / downloading data from HDFS</h2>
+<h2 id="uploading-downloading-data-from-hdfs">Uploading / downloading data from HDFS<a class="headerlink" href="#uploading-downloading-data-from-hdfs" title="Anchor link to this section for reference">&para;</a></h2>
 <p>If you've set up an HDFS connection, you can use the Ibis HDFS interface
 to look through your data and read and write files to and from HDFS:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hdfs</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">hdfs</span>
@@ -7523,7 +7539,7 @@ directory. We need only do:</p>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>rm -rf parquet_dir/
 </code></pre></div>
-<h2 id="queries-on-parquet-avro-and-delimited-files-in-hdfs">Queries on Parquet, Avro, and Delimited files in HDFS</h2>
+<h2 id="queries-on-parquet-avro-and-delimited-files-in-hdfs">Queries on Parquet, Avro, and Delimited files in HDFS<a class="headerlink" href="#queries-on-parquet-avro-and-delimited-files-in-hdfs" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis can easily create temporary or persistent Impala tables that
 reference data in the following formats:</p>
 <ul>
@@ -7637,7 +7653,7 @@ schema:</p>
 <span class="n">Columns</span><span class="p">:</span> <span class="p">[</span><span class="n">r_regionkey</span><span class="p">,</span> <span class="n">r_name</span><span class="p">,</span> <span class="n">r_comment</span><span class="p">]</span>
 <span class="n">Index</span><span class="p">:</span> <span class="p">[]</span>
 </code></pre></div>
-<h2 id="other-helper-functions-for-interacting-with-the-database">Other helper functions for interacting with the database</h2>
+<h2 id="other-helper-functions-for-interacting-with-the-database">Other helper functions for interacting with the database<a class="headerlink" href="#other-helper-functions-for-interacting-with-the-database" title="Anchor link to this section for reference">&para;</a></h2>
 <p>We're adding a growing list of useful utility functions for interacting
 with an Impala cluster on the client object. The idea is that you should
 be able to do any database-admin-type work with Ibis and not have to
@@ -7700,7 +7716,7 @@ you want for the data files</p>
 <code>drop_database</code> with <code>force=True</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">con</span><span class="o">.</span><span class="n">drop_database</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="faster-queries-on-small-data-in-impala">Faster queries on small data in Impala</h2>
+<h2 id="faster-queries-on-small-data-in-impala">Faster queries on small data in Impala<a class="headerlink" href="#faster-queries-on-small-data-in-impala" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Since Impala internally uses LLVM to compile parts of queries (aka
 "codegen") to make them faster on large data sets there is a certain
 amount of overhead with running many kinds of queries, even on small
@@ -7721,12 +7737,12 @@ may significantly speed up queries on smaller datasets:</p>
 </code></pre></div>
 <p>It's important to remember that codegen is a fixed overhead and will
 significantly speed up queries on big data</p>
-<h2 id="user-defined-functions-udf">User Defined functions (UDF)</h2>
+<h2 id="user-defined-functions-udf">User Defined functions (UDF)<a class="headerlink" href="#user-defined-functions-udf" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Impala currently supports user-defined scalar functions (known
 henceforth as <em>UDFs</em>) and aggregate functions (respectively <em>UDAs</em>) via
 a C++ extension API.</p>
 <p>Initial support for using C++ UDFs in Ibis came in version 0.4.0.</p>
-<h3 id="using-scalar-functions-udfs">Using scalar functions (UDFs)</h3>
+<h3 id="using-scalar-functions-udfs">Using scalar functions (UDFs)<a class="headerlink" href="#using-scalar-functions-udfs" title="Anchor link to this section for reference">&para;</a></h3>
 <p>Let's take an example to illustrate how to make a C++ UDF available to
 Ibis. Here is a function that computes an approximate equality between
 floating point values:</p>
@@ -7882,7 +7898,7 @@ your Ibis session to plug in all your own functions.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>

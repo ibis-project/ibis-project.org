@@ -823,6 +823,8 @@
         
           
         
+          
+        
       
       
         
@@ -979,6 +981,20 @@
     <li class="md-nav__item">
       <a href="backends/SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backends/support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -1970,8 +1986,8 @@
        id="path4543" />
   </g>
 </svg>
-</span> Ibis</h1>
-<h2 id="expressive-analytics-in-python-at-any-scale">Expressive analytics in Python at any scale.</h2>
+</span> Ibis<a class="headerlink" href="#imagesvgxml-ibis" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="expressive-analytics-in-python-at-any-scale">Expressive analytics in Python at any scale.<a class="headerlink" href="#expressive-analytics-in-python-at-any-scale" title="Anchor link to this section for reference">&para;</a></h2>
 <script 
     src="https://asciinema.org/a/yp5Ww4XKyjJsUCXkEz5or9rPq.js"
     data-autoplay="true"
@@ -1983,7 +1999,7 @@
     async>
 </script>
 
-<h2 id="installation">Installation</h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Anchor link to this section for reference">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label><label for="__tabbed_1_3">mamba</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2003,38 +2019,38 @@
 <p>Try it out!</p>
 <div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;import ibis; print(ibis.__version__)&#39;</span>
 </code></pre></div>
-<h2 id="features">Features</h2>
-<h3 id="sql-coverage">SQL Coverage</h3>
-<h4 id="anything-you-can-write-in-a-select-statement-you-can-write-in-ibis">Anything you can write in a <code>SELECT</code> statement you can write in Ibis.</h4>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="sql-coverage">SQL Coverage<a class="headerlink" href="#sql-coverage" title="Anchor link to this section for reference">&para;</a></h3>
+<h4 id="anything-you-can-write-in-a-select-statement-you-can-write-in-ibis">Anything you can write in a <code>SELECT</code> statement you can write in Ibis.<a class="headerlink" href="#anything-you-can-write-in-a-select-statement-you-can-write-in-ibis" title="Anchor link to this section for reference">&para;</a></h4>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Group By</label><label for="__tabbed_2_2">Join</label><label for="__tabbed_2_3">Window Functions</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<h5 id="sql">SQL</h5>
+<h5 id="sql">SQL<a class="headerlink" href="#sql" title="Anchor link to this section for reference">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
 </code></pre></div>
-<h5 id="ibis">Ibis</h5>
+<h5 id="ibis">Ibis<a class="headerlink" href="#ibis" title="Anchor link to this section for reference">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><span class="n">t</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;f&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<h5 id="sql_1">SQL</h5>
+<h5 id="sql_1">SQL<a class="headerlink" href="#sql_1" title="Anchor link to this section for reference">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
 <span class="k">LEFT</span><span class="w"> </span><span class="n">SEMI</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">s</span><span class="w"></span>
 <span class="w">  </span><span class="k">ON</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">y</span><span class="w"></span>
 </code></pre></div>
-<h5 id="ibis_1">Ibis</h5>
+<h5 id="ibis_1">Ibis<a class="headerlink" href="#ibis_1" title="Anchor link to this section for reference">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><span class="n">t</span><span class="o">.</span><span class="n">semi_join</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="n">t</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">exp</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">)])</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<h5 id="sql_2">SQL</h5>
+<h5 id="sql_2">SQL<a class="headerlink" href="#sql_2" title="Anchor link to this section for reference">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">OVER</span><span class="w"> </span><span class="p">(</span><span class="n">PARTITION</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">z</span><span class="w"></span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
 </code></pre></div>
-<h5 id="ibis_2">Ibis</h5>
+<h5 id="ibis_2">Ibis<a class="headerlink" href="#ibis_2" title="Anchor link to this section for reference">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><span class="n">t</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">avg</span><span class="p">())</span>
 </code></pre></div>
 </div>
@@ -2044,8 +2060,8 @@
 <p class="admonition-title">Coming from SQL?</p>
 <p>Check out <a href="/ibis-for-sql-programmers/">Ibis for SQL Programmers</a></p>
 </div>
-<h3 id="abstract-over-sql-dialects">Abstract Over SQL Dialects</h3>
-<h4 id="no-more-rewrites-when-scaling-up-or-down">No more rewrites when scaling up or down.</h4>
+<h3 id="abstract-over-sql-dialects">Abstract Over SQL Dialects<a class="headerlink" href="#abstract-over-sql-dialects" title="Anchor link to this section for reference">&para;</a></h3>
+<h4 id="no-more-rewrites-when-scaling-up-or-down">No more rewrites when scaling up or down.<a class="headerlink" href="#no-more-rewrites-when-scaling-up-or-down" title="Anchor link to this section for reference">&para;</a></h4>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">SQLite</label><label for="__tabbed_3_2">PostgreSQL</label><label for="__tabbed_3_3">BigQuery</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2065,12 +2081,12 @@
 <div class="highlight"><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
 <span class="n">t</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">avg</span><span class="p">())</span>
 </code></pre></div>
-<h3 id="ecosystem">Ecosystem</h3>
-<h4 id="ibis-builds-on-top-of-and-works-with-existing-python-tools">Ibis builds on top of and works with existing Python tools.</h4>
+<h3 id="ecosystem">Ecosystem<a class="headerlink" href="#ecosystem" title="Anchor link to this section for reference">&para;</a></h3>
+<h4 id="ibis-builds-on-top-of-and-works-with-existing-python-tools">Ibis builds on top of and works with existing Python tools.<a class="headerlink" href="#ibis-builds-on-top-of-and-works-with-existing-python-tools" title="Anchor link to this section for reference">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="n">t</span><span class="o">.</span><span class="n">semi_join</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="n">t</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">exp</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">)])</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>  <span class="c1"># a pandas DataFrame!</span>
 </code></pre></div>
-<h2 id="example">Example</h2>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Let's compute the number of citizens per squared kilometer in Asia:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">db</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;geography.db&quot;</span><span class="p">)</span>
@@ -2084,7 +2100,7 @@
 <p class="admonition-title">Learn more!</p>
 <p>Learn more about Ibis in <a href="/tutorial/01-Introduction-to-Ibis">our tutorial</a>.</p>
 </div>
-<h2 id="comparison-to-other-tools">Comparison to other tools</h2>
+<h2 id="comparison-to-other-tools">Comparison to other tools<a class="headerlink" href="#comparison-to-other-tools" title="Anchor link to this section for reference">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">SQL</label><label for="__tabbed_4_2">SQLAlchemy</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2313,7 +2329,7 @@ including the <a href="/backends/PostgreSQL">PostgreSQL</a> and
 <div class="download-button">
 <p><a class="md-button md-button--primary" href="https://storage.googleapis.com/ibis-testing-data/crunchbase.db"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M144 480C64.47 480 0 415.5 0 336c0-62.8 40.17-116.2 96.2-135.9-.13-2.7-.2-5.4-.2-8.1 0-88.4 71.6-160 160-160 59.3 0 111 32.25 138.7 80.2C409.9 101.1 428.3 96 448 96c53 0 96 42.1 96 96 0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm159-87.9c9.4 10.2 24.6 10.2 33.1 0l80-80c10.2-8.5 10.2-23.7 0-33.1-8.5-9.3-23.7-9.3-33.1 0l-39 39.1V184c0-13.3-10.7-24-24-24s-24 10.7-24 24v134.1L256.1 279c-8.5-9.3-23.7-9.3-33.1 0-9.3 9.4-9.3 24.6 0 33.1l80 80z"/></svg></span> Download the example data</a></p>
 </div>
-<h2 id="whats-next">What's Next?</h2>
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Anchor link to this section for reference">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Need a specific backend?</p>
 <p>Take a look at the <a href="/backends">backends</a> documentation!</p>
@@ -2399,7 +2415,7 @@ including the <a href="/backends/PostgreSQL">PostgreSQL</a> and
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="assets/javascripts/bundle.467223ff.min.js"></script>

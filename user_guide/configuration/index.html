@@ -709,6 +709,8 @@
         
           
         
+          
+        
       
       
         
@@ -865,6 +867,20 @@
     <li class="md-nav__item">
       <a href="../../backends/SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backends/support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -1612,11 +1628,11 @@
 
 
 
-<h1 id="configuring-ibis">Configuring Ibis</h1>
-<h2 id="global-configuration">Global Configuration</h2>
+<h1 id="configuring-ibis">Configuring Ibis<a class="headerlink" href="#configuring-ibis" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="global-configuration">Global Configuration<a class="headerlink" href="#global-configuration" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis global configuration happens through the <code>ibis.options</code> attribute.
 Attributes can be get and set like class attributes.</p>
-<h2 id="interactive-mode">Interactive mode</h2>
+<h2 id="interactive-mode">Interactive mode<a class="headerlink" href="#interactive-mode" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis out of the box is in <em>developer mode</em>. Expressions display their internal
 details when printed to the console. For a better interactive experience, set
 the <code>interactive</code> option:</p>
@@ -1624,7 +1640,7 @@ the <code>interactive</code> option:</p>
 </code></pre></div>
 <p>This will cause expressions to be executed immediately when printed to the
 console.</p>
-<h2 id="sql-query-execution">SQL Query Execution</h2>
+<h2 id="sql-query-execution">SQL Query Execution<a class="headerlink" href="#sql-query-execution" title="Anchor link to this section for reference">&para;</a></h2>
 <p>If an Ibis table expression has no row limit set using the <code>limit</code> API, a
 default one is applied to prevent too much data from being retrieved from the
 query engine. The default is currently 10000 rows, but this can be configured
@@ -1639,7 +1655,7 @@ coming back to the client from the backend.</p>
 </div>
 <div class="highlight"><pre><span></span><code><span class="n">ibis</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">default_limit</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
-<h2 id="verbose-option-and-logging">Verbose option and Logging</h2>
+<h2 id="verbose-option-and-logging">Verbose option and Logging<a class="headerlink" href="#verbose-option-and-logging" title="Anchor link to this section for reference">&para;</a></h2>
 <p>To see all internal Ibis activity (like queries being executed) set
 <code>ibis.options.verbose</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">ibis</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kc">True</span>
@@ -1652,7 +1668,7 @@ other logging function:</p>
 
 <span class="n">ibis</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">verbose_log</span> <span class="o">=</span> <span class="n">cowsay</span>
 </code></pre></div>
-<h2 id="working-with-secure-clusters-kerberos">Working with secure clusters (Kerberos)</h2>
+<h2 id="working-with-secure-clusters-kerberos">Working with secure clusters (Kerberos)<a class="headerlink" href="#working-with-secure-clusters-kerberos" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Ibis is compatible with Hadoop clusters that are secured with Kerberos (as well
 as SSL and LDAP). Just like the Impala shell and ODBC/JDBC connectors, Ibis
 connects to Impala through the HiveServer2 interface (using the impyla client).
@@ -1674,7 +1690,7 @@ certificates (which may be helpful in testing). Ibis will assume <code>https</co
 when connecting to a Kerberized cluster. Because some Ibis commands create HDFS
 directories as well as new Impala databases and/or tables, your user will
 require the necessary privileges.</p>
-<h2 id="default-configuation-values-for-cdh-components">Default Configuation Values for CDH Components</h2>
+<h2 id="default-configuation-values-for-cdh-components">Default Configuation Values for CDH Components<a class="headerlink" href="#default-configuation-values-for-cdh-components" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Cloudera CDH ships with HDFS, Impala, Hive and many other components.
 Sometimes it's not obvious what default configuration values these tools are
 using or should be using.</p>
@@ -1773,7 +1789,7 @@ to see the default configuration values for every component of CDH.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>

@@ -631,6 +631,8 @@
         
           
         
+          
+        
       
       
         
@@ -787,6 +789,20 @@
     <li class="md-nav__item">
       <a href="../../backends/SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backends/support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -1798,15 +1814,15 @@
 
 
 
-<h1 id="roadmap">Roadmap</h1>
+<h1 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Anchor link to this section for reference">&para;</a></h1>
 <p>This document is an outline of the next set of major efforts within ibis.</p>
-<h2 id="long-term-goals">Long Term Goals</h2>
+<h2 id="long-term-goals">Long Term Goals<a class="headerlink" href="#long-term-goals" title="Anchor link to this section for reference">&para;</a></h2>
 <p>This section outlines broader, longer-term goals for the project alongside a
 few short-term goals and provides information and direction for a few key areas
 of focus over the next 1-2 years, possibly longer depending on the amount of
 time the developers of Ibis can devote to the project.</p>
-<h3 id="compiler-structure">Compiler Structure</h3>
-<h4 id="separation-of-concerns">Separation of Concerns</h4>
+<h3 id="compiler-structure">Compiler Structure<a class="headerlink" href="#compiler-structure" title="Anchor link to this section for reference">&para;</a></h3>
+<h4 id="separation-of-concerns">Separation of Concerns<a class="headerlink" href="#separation-of-concerns" title="Anchor link to this section for reference">&para;</a></h4>
 <p>The current architecture of the ibis compiler has a few key problems that need
 to be addressed to ensure longevity and maintainability of the project going
 forward.</p>
@@ -1820,16 +1836,16 @@ optimization, maps clearly to SQL constructs.</p>
 optimize whole expression trees.</p>
 <p>This approach lets us optimize queries piece by piece, as opposed to having to
 provide all optimization implementations in a single pull request.</p>
-<h4 id="unifying-table-and-column-compilation">Unifying Table and Column Compilation</h4>
+<h4 id="unifying-table-and-column-compilation">Unifying Table and Column Compilation<a class="headerlink" href="#unifying-table-and-column-compilation" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Right now, it is very difficult to customize the way the operations underlying
 table expressions are compiled. The logic to compile them is hard-coded in each
 backend (or the compiler’s parent class). This needs to be addressed, if only
 to ease the burden of implementing the UNNEST operation and make the codebase
 easier to understand and maintain.</p>
-<h3 id="depth">Depth</h3>
+<h3 id="depth">Depth<a class="headerlink" href="#depth" title="Anchor link to this section for reference">&para;</a></h3>
 <p>"Depth" goals relate to enhancing Ibis to provide better support for
 backend-specific functionality.</p>
-<h4 id="backend-specific-operations">Backend-Specific Operations</h4>
+<h4 id="backend-specific-operations">Backend-Specific Operations<a class="headerlink" href="#backend-specific-operations" title="Anchor link to this section for reference">&para;</a></h4>
 <p>As the number of ibis users and use cases grows there will be an increasing
 need for individual backends to support more exotic operations. Many SQL
 databases have features that are unique only to themselves and often this is
@@ -1847,14 +1863,14 @@ operations polluting the namespace of the main API.</p>
 define operations with a backend-specific spelling (presumably in the name of
 expediency) that may actually be easily generalizable to or useful for other
 backends. This behavior should be discouraged to the extent possible.</p>
-<h4 id="standardize-udfs-user-defined-functions">Standardize UDFs (User Defined Functions)</h4>
+<h4 id="standardize-udfs-user-defined-functions">Standardize UDFs (User Defined Functions)<a class="headerlink" href="#standardize-udfs-user-defined-functions" title="Anchor link to this section for reference">&para;</a></h4>
 <p>A few backends have support for UDFs. Impala, Pandas and BigQuery all have at
 least some level of support for user-defined functions. This mechanism should
 be extended to other backends where possible. We outline different approaches
 to adding UDFs to the backends that are well-supported but currently do not
 have a UDF implementation. Development of a standard interface for UDFs is
 ideal, so that it’s easy for new backends to implement the interface.</p>
-<h3 id="breadth">Breadth</h3>
+<h3 id="breadth">Breadth<a class="headerlink" href="#breadth" title="Anchor link to this section for reference">&para;</a></h3>
 <p>The major breadth-related question ibis is facing is how to grow the number of
 backends in ibis in a scalable, minimum-maintenance way is an open question.</p>
 <p>Currently there is a test suite that runs across all backends that xfails tests
@@ -1862,20 +1878,20 @@ when a backend doesn’t implement a particular operation.</p>
 <p>At minimum we need a way to display which backends implement which operations.
 With the ability to provide custom operations we also need a way to display the
 custom operations that each backend provides.</p>
-<h2 id="backend-specific-goals">Backend-Specific Goals</h2>
+<h2 id="backend-specific-goals">Backend-Specific Goals<a class="headerlink" href="#backend-specific-goals" title="Anchor link to this section for reference">&para;</a></h2>
 <p>These goals relate to specific backends</p>
-<h3 id="pandas">pandas</h3>
-<h4 id="speed-up-grouped-rolling-and-simple-aggregations-using-numba">Speed up grouped, rolling, and simple aggregations using numba</h4>
+<h3 id="pandas">pandas<a class="headerlink" href="#pandas" title="Anchor link to this section for reference">&para;</a></h3>
+<h4 id="speed-up-grouped-rolling-and-simple-aggregations-using-numba">Speed up grouped, rolling, and simple aggregations using numba<a class="headerlink" href="#speed-up-grouped-rolling-and-simple-aggregations-using-numba" title="Anchor link to this section for reference">&para;</a></h4>
 <p>pandas aggregations are quite slow relative to an equivalent numba
 implementation, for various reasons. Since ibis hides the implementation
 details of a particular expression we can experiment with using different
 aggregation implementations.</p>
-<h3 id="dask">Dask</h3>
-<h4 id="implement-a-dask-backend">Implement a Dask backend</h4>
+<h3 id="dask">Dask<a class="headerlink" href="#dask" title="Anchor link to this section for reference">&para;</a></h3>
+<h4 id="implement-a-dask-backend">Implement a Dask backend<a class="headerlink" href="#implement-a-dask-backend" title="Anchor link to this section for reference">&para;</a></h4>
 <p>There is currently no way in ibis to easily parallelize a computation on a
 single machine, let alone distribute a computation across machines.</p>
 <p>Dask provides APIs for doing such things.</p>
-<h3 id="spark">Spark</h3>
+<h3 id="spark">Spark<a class="headerlink" href="#spark" title="Anchor link to this section for reference">&para;</a></h3>
 <p>Implement a SparkSQL backend</p>
 <p>SparkSQL provides a way to execute distributed SQL queries similar to other
 backends supported by ibis such as Impala and BigQuery.</p>
@@ -1971,7 +1987,7 @@ backends supported by ibis such as Impala and BigQuery.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>

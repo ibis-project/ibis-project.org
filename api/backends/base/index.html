@@ -631,6 +631,8 @@
         
           
         
+          
+        
       
       
         
@@ -787,6 +789,20 @@
     <li class="md-nav__item">
       <a href="../../../backends/SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backends/support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -1547,6 +1563,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.base.BaseBackend.has_operation" class="md-nav__link">
+    has_operation()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.base.BaseBackend.list_databases" class="md-nav__link">
     list_databases()
   </a>
@@ -1809,6 +1832,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.base.BaseBackend.has_operation" class="md-nav__link">
+    has_operation()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.base.BaseBackend.list_databases" class="md-nav__link">
     list_databases()
   </a>
@@ -1874,7 +1904,7 @@
 
 
 
-<h1 id="backend-base-classes">Backend Base Classes</h1>
+<h1 id="backend-base-classes">Backend Base Classes<a class="headerlink" href="#backend-base-classes" title="Anchor link to this section for reference">&para;</a></h1>
 <!-- prettier-ignore-start -->
 
 
@@ -1889,7 +1919,7 @@ BaseBackend            (<a title="abc.ABC" href="https://docs.python.org/3/libra
 
 
 
-</h2>
+<a href="#ibis.backends.base.BaseBackend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -1905,7 +1935,7 @@ methods.</p>
 
 
 
-<h3 id="ibis.backends.base.BaseBackend-attributes">Attributes</h3>
+<h3 id="ibis.backends.base.BaseBackend-attributes">Attributes<a href="#ibis.backends.base.BaseBackend-attributes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
 
   <div class="doc doc-object doc-attribute">
@@ -1920,7 +1950,7 @@ methods.</p>
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.current_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -1959,7 +1989,7 @@ methods.</p>
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.version" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -1989,7 +2019,7 @@ underlying library or application.</p>
 
 
 
-<h3 id="ibis.backends.base.BaseBackend-methods">Methods</h3>
+<h3 id="ibis.backends.base.BaseBackend-methods">Methods<a href="#ibis.backends.base.BaseBackend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
 
 
@@ -2003,7 +2033,7 @@ underlying library or application.</p>
 <code class="highlight language-python"><span class="n">add_operation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.add_operation" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2034,7 +2064,7 @@ string <code>"NULL"</code>.</p>
 <code class="highlight language-python"><span class="nb">compile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.compile" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2054,7 +2084,7 @@ string <code>"NULL"</code>.</p>
 <code class="highlight language-python"><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.connect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2114,7 +2144,7 @@ string <code>"NULL"</code>.</p>
 <code class="highlight language-python"><span class="n">create_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.create_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2160,7 +2190,7 @@ string <code>"NULL"</code>.</p>
 <code class="highlight language-python"><span class="n">create_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.create_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2222,7 +2252,7 @@ default.</p></td>
 <code class="highlight language-python"><span class="n">create_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.create_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2275,7 +2305,7 @@ default.</p></td>
 <code class="highlight language-python"><span class="n">database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2329,7 +2359,7 @@ default.</p></td>
 <code class="highlight language-python"><span class="n">drop_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.drop_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2380,7 +2410,7 @@ default.</p></td>
 <code class="highlight language-python"><span class="n">drop_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.drop_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2431,7 +2461,7 @@ default.</p></td>
 <code class="highlight language-python"><span class="n">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.execute" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2451,7 +2481,7 @@ default.</p></td>
 <code class="highlight language-python"><span class="n">exists_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.exists_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2505,7 +2535,7 @@ default.</p></td>
 <code class="highlight language-python"><span class="n">exists_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.exists_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2561,11 +2591,77 @@ default.</p></td>
 
 
 
+<h4 id="ibis.backends.base.BaseBackend.has_operation" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">has_operation</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#ibis.backends.base.BaseBackend.has_operation" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return whether the backend implements support for <code>operation</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>operation</code></td>
+        <td><code>type[ops.ValueOp]</code></td>
+        <td><p>A class corresponding to an operation.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.operations</span> <span class="k">as</span> <span class="nn">ops</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">has_operation</span><span class="p">(</span><span class="n">ops</span><span class="o">.</span><span class="n">ArrayIndex</span><span class="p">)</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ibis</span><span class="o">.</span><span class="n">postgres</span><span class="o">.</span><span class="n">has_operation</span><span class="p">(</span><span class="n">ops</span><span class="o">.</span><span class="n">ArrayIndex</span><span class="p">)</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>Whether the backend implements the operation.</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
 <h4 id="ibis.backends.base.BaseBackend.list_databases" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">list_databases</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.list_databases" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2621,7 +2717,7 @@ the <code>like</code> pattern if provided.</p></td>
 <code class="highlight language-python"><span class="n">list_tables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.list_tables" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2686,7 +2782,7 @@ or other equivalent entities in a SQL database.</p>
       <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
   </span>
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.register_options" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2706,7 +2802,7 @@ or other equivalent entities in a SQL database.</p>
 <code class="highlight language-python"><span class="n">table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2726,7 +2822,7 @@ or other equivalent entities in a SQL database.</p>
 <code class="highlight language-python"><span class="n">verify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.base.BaseBackend.verify" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents ">
 
@@ -2839,7 +2935,7 @@ or other equivalent entities in a SQL database.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>

@@ -631,6 +631,8 @@
         
           
         
+          
+        
       
       
         
@@ -787,6 +789,20 @@
     <li class="md-nav__item">
       <a href="../../backends/SQLite/" class="md-nav__link">
         SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backends/support_matrix/" class="md-nav__link">
+        Operation Support Matrix
       </a>
     </li>
   
@@ -1636,7 +1652,7 @@
 
 
 
-<h1 id="working-with-the-backend-test-suite">Working with the Backend Test Suite</h1>
+<h1 id="working-with-the-backend-test-suite">Working with the Backend Test Suite<a class="headerlink" href="#working-with-the-backend-test-suite" title="Anchor link to this section for reference">&para;</a></h1>
 <div class="admonition danger">
 <p class="admonition-title">Before you start</p>
 <p>This section assumes you have a working <a href="../01_environment/">development environment</a>.</p>
@@ -1647,7 +1663,7 @@
 or any specific backends (<code>ibis/backends</code>) this material isn't necessary to
 follow to make a pull request.</p>
 </div>
-<h2 id="motivation">Motivation</h2>
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Anchor link to this section for reference">&para;</a></h2>
 <p>One the primary challenges when developing against the ibis codebase is testing
 backends that require non-trivial setup.</p>
 <p>Moreover, many of the backends that ibis works with have very different
@@ -1659,7 +1675,7 @@ deployment deployment models:</p>
 <li>Systems that run <strong>on-premises</strong>, like Impala</li>
 </ul>
 <p>This section of the docs is describes how to work with the backend test suite.</p>
-<h2 id="backend-testing-with-compose">Backend Testing with Compose</h2>
+<h2 id="backend-testing-with-compose">Backend Testing with Compose<a class="headerlink" href="#backend-testing-with-compose" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Here is the list of backends that can be tested using <code>docker-compose</code>.</p>
 <table>
 <thead>
@@ -1687,13 +1703,13 @@ deployment deployment models:</p>
 </tr>
 </tbody>
 </table>
-<h3 id="testing-a-compose-service">Testing a Compose Service</h3>
+<h3 id="testing-a-compose-service">Testing a Compose Service<a class="headerlink" href="#testing-a-compose-service" title="Anchor link to this section for reference">&para;</a></h3>
 <div class="admonition check">
 <p class="admonition-title">Check your current directory</p>
 <p>Make sure you're inside of your clone of the ibis GitHub repository</p>
 </div>
 <p>Let's fire up a PostgreSQL server and run tests against it.</p>
-<h4 id="start-the-postgres-service">Start the <code>postgres</code> Service</h4>
+<h4 id="start-the-postgres-service">Start the <code>postgres</code> Service<a class="headerlink" href="#start-the-postgres-service" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Open a new shell and run</p>
 <div class="highlight"><pre><span></span><code>docker-compose up --build postgres
 </code></pre></div>
@@ -1710,7 +1726,7 @@ psql -t -A -h localhost -U postgres -d ibis_testing -c <span class="s2">&quot;se
 command fails wait a few seconds and try again</p>
 </div>
 <p>Congrats, you now have a PostgreSQL server running and are ready to run tests!</p>
-<h4 id="load-data">Load Data</h4>
+<h4 id="load-data">Load Data<a class="headerlink" href="#load-data" title="Anchor link to this section for reference">&para;</a></h4>
 <p>The backend needs to be populated with test data:</p>
 <ol>
 <li>
@@ -1725,7 +1741,7 @@ command fails wait a few seconds and try again</p>
 <p>You should see a bit of logging, and the command should complete shortly thereafter.</p>
 </li>
 </ol>
-<h4 id="run-the-test-suite">Run the test suite</h4>
+<h4 id="run-the-test-suite">Run the test suite<a class="headerlink" href="#run-the-test-suite" title="Anchor link to this section for reference">&para;</a></h4>
 <p>You're now ready to run the test suite for the postgres backend:</p>
 <div class="highlight"><pre><span></span><code>pytest -m postgres
 </code></pre></div>
@@ -1823,7 +1839,7 @@ test suite fails for any reason.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>

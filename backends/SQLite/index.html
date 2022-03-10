@@ -633,6 +633,8 @@
         
           
         
+          
+        
       
       
         
@@ -1098,6 +1100,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support_matrix/" class="md-nav__link">
+        Operation Support Matrix
+      </a>
     </li>
   
 
@@ -2076,8 +2092,8 @@
 
 
 
-<h1 id="sqlite"><a href="https://www.sqlite.org/">SQLite</a></h1>
-<h2 id="install">Install</h2>
+<h1 id="sqlite"><a href="https://www.sqlite.org/">SQLite</a><a class="headerlink" href="#sqlite" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Install ibis and dependencies for the SQLite backend:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">conda</label><label for="__tabbed_1_3">mamba</label></div>
 <div class="tabbed-content">
@@ -2095,8 +2111,8 @@
 </div>
 </div>
 </div>
-<h2 id="connect">Connect</h2>
-<h3 id="api">API</h3>
+<h2 id="connect">Connect<a class="headerlink" href="#connect" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="api">API<a class="headerlink" href="#api" title="Anchor link to this section for reference">&para;</a></h3>
 <p>Create a client by passing in a path to a SQLite database to <code>ibis.sqlite.connect</code>.</p>
 <!-- prettier-ignore-start -->
 <p>See <a href="#ibis.backends.sqlite.Backend.do_connect"><code>ibis.backends.sqlite.Backend.do_connect</code></a>
@@ -2109,7 +2125,7 @@ for connection parameter information.</p>
 </div>
 <!-- prettier-ignore-end -->
 
-<h3 id="connection-parameters">Connection Parameters</h3>
+<h3 id="connection-parameters">Connection Parameters<a class="headerlink" href="#connection-parameters" title="Anchor link to this section for reference">&para;</a></h3>
 <!-- prettier-ignore-start -->
 
 
@@ -2121,7 +2137,7 @@ for connection parameter information.</p>
 <code class="highlight language-python"><span class="n">do_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h4>
+<a href="#ibis.backends.sqlite.Backend.do_connect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
     <div class="doc doc-contents first">
 
@@ -2160,7 +2176,7 @@ files</p></td>
 
 <!-- prettier-ignore-end -->
 
-<h2 id="backend-api">Backend API</h2>
+<h2 id="backend-api">Backend API<a class="headerlink" href="#backend-api" title="Anchor link to this section for reference">&para;</a></h2>
 <!-- prettier-ignore-start -->
 
 
@@ -2175,7 +2191,7 @@ Backend            (<a title="ibis.backends.base.sql.alchemy.BaseAlchemyBackend"
 
 
 
-</h3>
+<a href="#ibis.backends.sqlite.Backend" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
     <div class="doc doc-contents first">
 
@@ -2188,7 +2204,7 @@ Backend            (<a title="ibis.backends.base.sql.alchemy.BaseAlchemyBackend"
 
 
 
-<h4 id="ibis.backends.sqlite.Backend-attributes">Attributes</h4>
+<h4 id="ibis.backends.sqlite.Backend-attributes">Attributes<a href="#ibis.backends.sqlite.Backend-attributes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
 
 
@@ -2205,7 +2221,7 @@ Backend            (<a title="ibis.backends.base.sql.alchemy.BaseAlchemyBackend"
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.current_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2231,7 +2247,7 @@ Backend            (<a title="ibis.backends.base.sql.alchemy.BaseAlchemyBackend"
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.version" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2261,7 +2277,7 @@ underlying library or application.</p>
 
 
 
-<h4 id="ibis.backends.sqlite.Backend-methods">Methods</h4>
+<h4 id="ibis.backends.sqlite.Backend-methods">Methods<a href="#ibis.backends.sqlite.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
 
 
 
@@ -2284,7 +2300,7 @@ underlying library or application.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.add_operation" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2315,7 +2331,7 @@ string <code>"NULL"</code>.</p>
 <code class="highlight language-python"><span class="n">attach</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.attach" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2364,7 +2380,7 @@ string <code>"NULL"</code>.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.compile" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2441,7 +2457,7 @@ backend.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.connect" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2504,7 +2520,7 @@ backend.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.create_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2553,7 +2569,7 @@ backend.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.create_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2619,7 +2635,7 @@ backend.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.create_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2675,7 +2691,7 @@ default.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2732,7 +2748,7 @@ default.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.drop_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2786,7 +2802,7 @@ default.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.drop_view" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2840,7 +2856,7 @@ default.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.execute" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2924,7 +2940,7 @@ DataFrames.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.exists_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -2981,7 +2997,7 @@ DataFrames.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.exists_table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3044,7 +3060,7 @@ DataFrames.</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.explain" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3084,7 +3100,7 @@ query.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.insert" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3163,7 +3179,7 @@ query.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.list_databases" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3187,7 +3203,7 @@ query.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.list_tables" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3252,7 +3268,7 @@ or other equivalent entities in a SQL database.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.load_data" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3328,7 +3344,7 @@ yet implemented</p></td>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.raw_sql" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3387,7 +3403,7 @@ the session in a way unknown to Ibis; be careful.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.schema" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3444,7 +3460,7 @@ the session in a way unknown to Ibis; be careful.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.sql" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3498,7 +3514,7 @@ the session in a way unknown to Ibis; be careful.</p>
 <code class="highlight language-python"><span class="n">table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.table" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3562,7 +3578,7 @@ the session in a way unknown to Ibis; be careful.</p>
       <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
   </span>
 
-</h5>
+<a href="#ibis.backends.sqlite.Backend.verify" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
@@ -3613,13 +3629,13 @@ the session in a way unknown to Ibis; be careful.</p>
       
       
         
-        <a href="../../contribute/01_environment/" class="md-footer__link md-footer__link--next" aria-label="Next: Setting Up a Development Environment" rel="next">
+        <a href="../support_matrix/" class="md-footer__link md-footer__link--next" aria-label="Next: Operation Support Matrix" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Setting Up a Development Environment
+              Operation Support Matrix
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3675,7 +3691,7 @@ the session in a way unknown to Ibis; be careful.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
       <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
