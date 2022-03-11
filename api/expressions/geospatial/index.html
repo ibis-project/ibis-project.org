@@ -2492,7 +2492,7 @@ GeoSpatialColumn            (<a title="ibis.expr.types.numeric.NumericColumn" hr
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialColumn.unary_union" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">unary_union</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">unary_union</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialColumn.unary_union" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -2504,25 +2504,6 @@ GeoSpatialColumn            (<a title="ibis.expr.types.numeric.NumericColumn" hr
 We give it a different name (following the corresponding method
 in GeoPandas) to avoid name conflicts with the non-aggregate version.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression column</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -2589,7 +2570,7 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.area" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">area</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">area</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.area" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -2598,25 +2579,6 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
       <p>Compute the area of a geospatial value.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -2628,7 +2590,7 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
   <tbody>
     <tr>
       <td><code>ir.FloatingValue</code></td>
-      <td><p>The area of <code>arg</code></p></td>
+      <td><p>The area of <code>self</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -2643,7 +2605,7 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.as_binary" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">as_binary</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">as_binary</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.as_binary" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -2652,25 +2614,6 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
       <p>Get the geometry as well-known bytes (WKB) without the SRID data.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -2697,7 +2640,7 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.as_ewkb" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">as_ewkb</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">as_ewkb</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.as_ewkb" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -2706,25 +2649,6 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
       <p>Get the geometry as well-known bytes (WKB) with the SRID data.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -2751,7 +2675,7 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.as_ewkt" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">as_ewkt</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">as_ewkt</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.as_ewkt" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -2760,25 +2684,6 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
       <p>Get the geometry as well-known text (WKT) with the SRID data.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -2805,7 +2710,7 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.as_text" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">as_text</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">as_text</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.as_text" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -2814,25 +2719,6 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
       <p>Get the geometry as well-known text (WKT) without the SRID data.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -2859,7 +2745,7 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.azimuth" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">azimuth</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">azimuth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.azimuth" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -2867,7 +2753,7 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
     <div class="doc doc-contents ">
 
       <p>Return the angle in radians from the horizontal of the vector defined by</p>
-<p><code>left</code> and <code>right</code>.</p>
+<p><code>self</code> and <code>right</code>.</p>
 <p>Angle is computed clockwise from down-to-up on the clock:
 12=0; 3=PI/2; 6=PI; 9=3PI/2.</p>
 
@@ -2883,14 +2769,8 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -2922,7 +2802,7 @@ GeoSpatialValue            (<a title="ibis.expr.types.numeric.NumericValue" href
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.buffer" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">buffer</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">buffer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.buffer" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -2945,12 +2825,6 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>radius</code></td>
         <td><code>float | ir.FloatingValue</code></td>
         <td><p>Floating expression</p></td>
@@ -2968,7 +2842,7 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.GeoSpatialValue</code></td>
+      <td><code>GeoSpatialValue</code></td>
       <td><p>Geometry expression</p></td>
     </tr>
   </tbody>
@@ -2984,7 +2858,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.centroid" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">centroid</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">centroid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.centroid" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -2993,25 +2867,6 @@ Spatial Reference System of this Geometry.</p>
 
       <p>Returns the centroid of the geometry.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -3022,7 +2877,7 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.PointValue</code></td>
+      <td><code>PointValue</code></td>
       <td><p>The centroid</p></td>
     </tr>
   </tbody>
@@ -3038,14 +2893,14 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.contains" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">contains</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.contains" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
-      <p>Check if the <code>left</code> geometry contains the <code>right</code> one.</p>
+      <p>Check if the geometry contains the <code>right</code>.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3059,14 +2914,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3083,7 +2932,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether left contains right</p></td>
+      <td><p>Whether <code>self</code> contains <code>right</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -3098,15 +2947,15 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.contains_properly" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">contains_properly</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">contains_properly</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.contains_properly" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
-      <p>Check if the first geometry contains the second one,</p>
-<p>with no common border points.</p>
+      <p>Check if the first geometry contains the second one.</p>
+<p>Excludes common border points.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3120,14 +2969,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3144,7 +2987,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether left contains right, properly.</p></td>
+      <td><p>Whether self contains right excluding border points.</p></td>
     </tr>
   </tbody>
 </table>
@@ -3159,7 +3002,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.covered_by" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">covered_by</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">covered_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.covered_by" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3180,14 +3023,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3204,7 +3041,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether <code>left</code> is covered by <code>right</code></p></td>
+      <td><p>Whether <code>self</code> is covered by <code>right</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -3219,7 +3056,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.covers" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">covers</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">covers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.covers" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3240,14 +3077,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3264,7 +3095,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether <code>left</code> covers <code>right</code></p></td>
+      <td><p>Whether <code>self</code> covers <code>right</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -3279,7 +3110,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.crosses" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">crosses</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">crosses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.crosses" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3300,14 +3131,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3324,7 +3149,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether <code>left</code> and <code>right</code> have at least one common interior point.</p></td>
+      <td><p>Whether <code>self</code> and <code>right</code> have at least one common interior point.</p></td>
     </tr>
   </tbody>
 </table>
@@ -3339,14 +3164,14 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.d_fully_within" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">d_fully_within</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">d_fully_within</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.d_fully_within" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
-      <p>Check if the <code>left</code> is entirely within <code>distance</code> from <code>right</code>.</p>
+      <p>Check if <code>self</code> is entirely within <code>distance</code> from <code>right</code>.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3360,14 +3185,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3390,7 +3209,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether <code>left</code> is within a specified distance from <code>right</code>.</p></td>
+      <td><p>Whether <code>self</code> is within a specified distance from <code>right</code>.</p></td>
     </tr>
   </tbody>
 </table>
@@ -3405,14 +3224,14 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.d_within" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">d_within</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">d_within</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.d_within" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
-      <p>Check if <code>left</code> is partially within <code>distance</code> from <code>right</code>.</p>
+      <p>Check if <code>self</code> is partially within <code>distance</code> from <code>right</code>.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3426,14 +3245,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3456,7 +3269,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether <code>left</code> is partially within <code>distance</code> from <code>right</code>.</p></td>
+      <td><p>Whether <code>self</code> is partially within <code>distance</code> from <code>right</code>.</p></td>
     </tr>
   </tbody>
 </table>
@@ -3471,7 +3284,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.difference" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">difference</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">difference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.difference" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3492,14 +3305,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3515,8 +3322,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.GeoSpatialValue</code></td>
-      <td><p>Difference of <code>left</code> and <code>right</code></p></td>
+      <td><code>GeoSpatialValue</code></td>
+      <td><p>Difference of <code>self</code> and <code>right</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -3531,7 +3338,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.disjoint" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">disjoint</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">disjoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.disjoint" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3552,14 +3359,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3576,7 +3377,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether <code>left</code> and <code>right</code> are disjoin</p></td>
+      <td><p>Whether <code>self</code> and <code>right</code> are disjoint</p></td>
     </tr>
   </tbody>
 </table>
@@ -3591,7 +3392,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.distance" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">distance</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.distance" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3612,14 +3413,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry or geography</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3636,7 +3431,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.FloatingValue</code></td>
-      <td><p>Distance between <code>left</code> and <code>right</code></p></td>
+      <td><p>Distance between <code>self</code> and <code>right</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -3651,7 +3446,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.end_point" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">end_point</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">end_point</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.end_point" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3659,27 +3454,8 @@ Spatial Reference System of this Geometry.</p>
     <div class="doc doc-contents ">
 
       <p>Return the last point of a <code>LINESTRING</code> geometry as a <code>POINT</code>.</p>
-<p>Return NULL if the input parameter is not a LINESTRING</p>
+<p>Return <code>NULL</code> if the input parameter is not a <code>LINESTRING</code></p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -3690,7 +3466,7 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.PointValue</code></td>
+      <td><code>PointValue</code></td>
       <td><p>End point</p></td>
     </tr>
   </tbody>
@@ -3706,34 +3482,15 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.envelope" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">envelope</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">envelope</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.envelope" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
-      <p>Returns a geometry representing the bounding box of the arg.</p>
+      <p>Returns a geometry representing the bounding box of <code>self</code>.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -3760,7 +3517,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.geo_equals" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">geo_equals</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">geo_equals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.geo_equals" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3781,14 +3538,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3805,7 +3556,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether <code>left</code> equals <code>right</code></p></td>
+      <td><p>Whether <code>self</code> equals <code>right</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -3820,7 +3571,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.geometry_n" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">geometry_n</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">geometry_n</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.geometry_n" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3841,12 +3592,6 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>n</code></td>
         <td><code>int | ir.IntegerValue</code></td>
         <td><p>Nth geometry index</p></td>
@@ -3864,7 +3609,7 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.GeoSpatialValue</code></td>
+      <td><code>GeoSpatialValue</code></td>
       <td><p>Geometry value</p></td>
     </tr>
   </tbody>
@@ -3880,7 +3625,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.geometry_type" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">geometry_type</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">geometry_type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.geometry_type" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3889,25 +3634,6 @@ Spatial Reference System of this Geometry.</p>
 
       <p>Get the type of a geometry.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -3919,7 +3645,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.StringValue</code></td>
-      <td><p>String representing the type of <code>arg</code>.</p></td>
+      <td><p>String representing the type of <code>self</code>.</p></td>
     </tr>
   </tbody>
 </table>
@@ -3934,7 +3660,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.intersection" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">intersection</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">intersection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.intersection" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -3955,14 +3681,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3978,8 +3698,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.GeoSpatialValue</code></td>
-      <td><p>Intersection of <code>left</code> and <code>right</code></p></td>
+      <td><code>GeoSpatialValue</code></td>
+      <td><p>Intersection of <code>self</code> and <code>right</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -3994,7 +3714,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.intersects" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">intersects</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">intersects</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.intersects" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4015,14 +3735,8 @@ Spatial Reference System of this Geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -4039,7 +3753,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether <code>left</code> intersects <code>right</code></p></td>
+      <td><p>Whether <code>self</code> intersects <code>right</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -4054,7 +3768,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.is_valid" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">is_valid</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">is_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.is_valid" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4063,25 +3777,6 @@ Spatial Reference System of this Geometry.</p>
 
       <p>Check if the geometry is valid.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -4093,7 +3788,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether <code>arg</code> is valid</p></td>
+      <td><p>Whether <code>self</code> is valid</p></td>
     </tr>
   </tbody>
 </table>
@@ -4108,7 +3803,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.length" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">length</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">length</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.length" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4117,25 +3812,6 @@ Spatial Reference System of this Geometry.</p>
 
       <p>Compute the length of a geospatial expression.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -4147,7 +3823,7 @@ Spatial Reference System of this Geometry.</p>
   <tbody>
     <tr>
       <td><code>ir.FloatingValue</code></td>
-      <td><p>Length of <code>arg</code></p></td>
+      <td><p>Length of <code>self</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -4162,7 +3838,7 @@ Spatial Reference System of this Geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.line_locate_point" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">line_locate_point</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">line_locate_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.line_locate_point" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4171,8 +3847,8 @@ Spatial Reference System of this Geometry.</p>
 
       <p>Locate the distance a point falls along the length of a line.</p>
 <p>Returns a float between zero and one representing the location of the
-closest point on the linestring to the given point, as a fraction of the
-total 2d line length.</p>
+closest point on the linestring to the given point, as a fraction of
+the total 2d line length.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -4186,14 +3862,8 @@ total 2d line length.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.LineStringValue</code></td>
-        <td><p>Linestring geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.PointValue</code></td>
+        <td><code>PointValue</code></td>
         <td><p>Point geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -4225,7 +3895,7 @@ total 2d line length.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.line_merge" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">line_merge</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">line_merge</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.line_merge" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4238,25 +3908,6 @@ constituent line work of a MultiLineString. If a geometry other than
 a LineString or MultiLineString is given, this will return an empty
 geometry collection.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Multiline string</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -4267,7 +3918,7 @@ geometry collection.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.GeoSpatialValue</code></td>
+      <td><code>ir.LineStringValue</code></td>
       <td><p>Merged linestrings</p></td>
     </tr>
   </tbody>
@@ -4283,7 +3934,7 @@ geometry collection.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.line_substring" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">line_substring</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">line_substring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.line_substring" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4307,12 +3958,6 @@ This only works with linestrings.</p>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.LineStringValue</code></td>
-        <td><p>Linestring value</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>start</code></td>
         <td><code>ir.FloatingValue</code></td>
@@ -4353,7 +3998,7 @@ This only works with linestrings.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.max_distance" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">max_distance</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">max_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.max_distance" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4362,8 +4007,8 @@ This only works with linestrings.</p>
 
       <p>Returns the 2-dimensional maximum distance between two geometries in</p>
 <p>projected units.</p>
-<p>If <code>left</code> and <code>right</code> are the same geometry the function will return the
-distance between the two vertices most far from each other in that
+<p>If <code>self</code> and <code>right</code> are the same geometry the function will return
+the distance between the two vertices most far from each other in that
 geometry.</p>
 
 <p><strong>Parameters:</strong></p>
@@ -4378,14 +4023,8 @@ geometry.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -4417,7 +4056,7 @@ geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.n_points" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">n_points</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">n_points</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.n_points" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4426,25 +4065,6 @@ geometry.</p>
 
       <p>Return the number of points in a geometry. Works for all geometries</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -4471,7 +4091,7 @@ geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.n_rings" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">n_rings</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">n_rings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.n_rings" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4481,25 +4101,6 @@ geometry.</p>
       <p>Return the number of rings for polygons and multipolygons.</p>
 <p>Outer rings are counted as well.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -4526,7 +4127,7 @@ geometry.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.ordering_equals" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">ordering_equals</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">ordering_equals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.ordering_equals" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4549,14 +4150,8 @@ are in the same order.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -4588,7 +4183,7 @@ are in the same order.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.overlaps" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">overlaps</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">overlaps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.overlaps" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4610,14 +4205,8 @@ are in the same order.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -4649,7 +4238,7 @@ are in the same order.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.perimeter" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">perimeter</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">perimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.perimeter" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4658,25 +4247,6 @@ are in the same order.</p>
 
       <p>Compute the perimeter of a geospatial expression.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry or geography</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -4688,7 +4258,7 @@ are in the same order.</p>
   <tbody>
     <tr>
       <td><code>ir.FloatingValue</code></td>
-      <td><p>Perimeter of <code>arg</code></p></td>
+      <td><p>Perimeter of <code>self</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -4703,7 +4273,7 @@ are in the same order.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.point_n" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">point_n</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">point_n</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.point_n" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4727,12 +4297,6 @@ the geometry</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>n</code></td>
         <td><code>ir.IntegerValue</code></td>
         <td><p>Nth point index</p></td>
@@ -4750,8 +4314,8 @@ the geometry</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.PointValue</code></td>
-      <td><p>Nth point in <code>arg</code></p></td>
+      <td><code>PointValue</code></td>
+      <td><p>Nth point in <code>self</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -4766,14 +4330,14 @@ the geometry</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.set_srid" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">set_srid</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">srid</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">set_srid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">srid</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.set_srid" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
-      <p>Set the spatial reference identifier for the ST_Geometry</p>
+      <p>Set the spatial reference identifier for the <code>ST_Geometry</code>.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -4786,12 +4350,6 @@ the geometry</p>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>srid</code></td>
         <td><code>ir.IntegerValue</code></td>
@@ -4810,8 +4368,8 @@ the geometry</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.GeoSpatialValue</code></td>
-      <td><p><code>arg</code> with SRID set to <code>srid</code></p></td>
+      <td><code>GeoSpatialValue</code></td>
+      <td><p><code>self</code> with SRID set to <code>srid</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -4826,7 +4384,7 @@ the geometry</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.simplify" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">simplify</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">tolerance</span><span class="p">,</span> <span class="n">preserve_collapsed</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">simplify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tolerance</span><span class="p">,</span> <span class="n">preserve_collapsed</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.simplify" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4846,12 +4404,6 @@ the geometry</p>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>tolerance</code></td>
         <td><code>ir.FloatingValue</code></td>
@@ -4876,7 +4428,7 @@ the geometry</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.GeoSpatialValue</code></td>
+      <td><code>GeoSpatialValue</code></td>
       <td><p>Simplified geometry</p></td>
     </tr>
   </tbody>
@@ -4892,7 +4444,7 @@ the geometry</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.srid" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">srid</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">srid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.srid" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4901,25 +4453,6 @@ the geometry</p>
 
       <p>Return the spatial reference identifier for the ST_Geometry.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -4946,7 +4479,7 @@ the geometry</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.start_point" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">start_point</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">start_point</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.start_point" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4954,27 +4487,8 @@ the geometry</p>
     <div class="doc doc-contents ">
 
       <p>Return the first point of a <code>LINESTRING</code> geometry as a <code>POINT</code>.</p>
-<p>Return NULL if the input parameter is not a <code>LINESTRING</code></p>
+<p>Return <code>NULL</code> if the input parameter is not a <code>LINESTRING</code></p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -4985,7 +4499,7 @@ the geometry</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.PointValue</code></td>
+      <td><code>PointValue</code></td>
       <td><p>Start point</p></td>
     </tr>
   </tbody>
@@ -5001,7 +4515,7 @@ the geometry</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.touches" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">touches</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">touches</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.touches" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -5023,14 +4537,8 @@ the geometry</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -5047,7 +4555,7 @@ the geometry</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether left and right are touching</p></td>
+      <td><p>Whether self and right are touching</p></td>
     </tr>
   </tbody>
 </table>
@@ -5062,7 +4570,7 @@ the geometry</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.transform" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">transform</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">srid</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">srid</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.transform" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -5083,12 +4591,6 @@ the geometry</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>srid</code></td>
         <td><code>ir.IntegerValue</code></td>
         <td><p>Integer expression</p></td>
@@ -5106,7 +4608,7 @@ the geometry</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.GeoSpatialValue</code></td>
+      <td><code>GeoSpatialValue</code></td>
       <td><p>Transformed geometry</p></td>
     </tr>
   </tbody>
@@ -5122,7 +4624,7 @@ the geometry</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.union" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">union</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">union</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.union" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -5145,14 +4647,8 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -5168,7 +4664,7 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.GeoSpatialValue</code></td>
+      <td><code>GeoSpatialValue</code></td>
       <td><p>Union of geometries</p></td>
     </tr>
   </tbody>
@@ -5184,7 +4680,7 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.within" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">within</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">within</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.within" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -5205,14 +4701,8 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
   </thead>
   <tbody>
       <tr>
-        <td><code>left</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Left geometry</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
         <td><code>right</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
+        <td><code>GeoSpatialValue</code></td>
         <td><p>Right geometry</p></td>
         <td><em>required</em></td>
       </tr>
@@ -5229,7 +4719,7 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
   <tbody>
     <tr>
       <td><code>ir.BooleanValue</code></td>
-      <td><p>Whether <code>left</code> is in <code>right</code>.</p></td>
+      <td><p>Whether <code>self</code> is in <code>right</code>.</p></td>
     </tr>
   </tbody>
 </table>
@@ -5244,35 +4734,16 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.x" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">x</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">x</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.x" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
-      <p>Return the X coordinate of <code>arg</code>, or NULL if not available.</p>
+      <p>Return the X coordinate of <code>self</code>, or NULL if not available.</p>
 <p>Input must be a point.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -5284,7 +4755,7 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
   <tbody>
     <tr>
       <td><code>ir.FloatingValue</code></td>
-      <td><p>X coordinate of <code>arg</code></p></td>
+      <td><p>X coordinate of <code>self</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -5299,7 +4770,7 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.x_max" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">x_max</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">x_max</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.x_max" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -5308,25 +4779,6 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
       <p>Return the X maxima of a geometry.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -5353,7 +4805,7 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.x_min" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">x_min</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">x_min</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.x_min" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -5362,25 +4814,6 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
       <p>Return the X minima of a geometry.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -5407,35 +4840,16 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.y" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">y</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">y</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.y" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
 
     <div class="doc doc-contents ">
 
-      <p>Return the Y coordinate of <code>arg</code>, or NULL if not available.</p>
+      <p>Return the Y coordinate of <code>self</code>, or NULL if not available.</p>
 <p>Input must be a point.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -5447,7 +4861,7 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
   <tbody>
     <tr>
       <td><code>ir.FloatingValue</code></td>
-      <td><p>Y coordinate of <code>arg</code></p></td>
+      <td><p>Y coordinate of <code>self</code></p></td>
     </tr>
   </tbody>
 </table>
@@ -5462,7 +4876,7 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.y_max" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">y_max</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">y_max</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.y_max" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -5471,25 +4885,6 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
       <p>Return the Y maxima of a geometry.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>
@@ -5516,7 +4911,7 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
 
 <h6 id="ibis.expr.types.geospatial.GeoSpatialValue.y_min" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">y_min</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">y_min</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.types.geospatial.GeoSpatialValue.y_min" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -5525,25 +4920,6 @@ This corresponds to the non-aggregate version the PostGIS ST_Union.</p>
 
       <p>Return the Y minima of a geometry.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>arg</code></td>
-        <td><code>ir.GeoSpatialValue</code></td>
-        <td><p>Geometry expression</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
 <p><strong>Returns:</strong></p>
 <table>
   <thead>

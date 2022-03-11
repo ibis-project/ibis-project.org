@@ -1898,6 +1898,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.expr.types.numeric.NumericValue.point" class="md-nav__link">
+    point()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.expr.types.numeric.NumericValue.pow" class="md-nav__link">
     pow()
   </a>
@@ -2904,6 +2911,13 @@
           <li class="md-nav__item">
   <a href="#ibis.expr.types.numeric.NumericValue.nullifzero" class="md-nav__link">
     nullifzero()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.numeric.NumericValue.point" class="md-nav__link">
+    point()
   </a>
   
 </li>
@@ -5372,6 +5386,62 @@ NumericValue            (<a title="ibis.expr.types.generic.AnyValue" href="../ge
 
       <p>Return <code>NULL</code> if an expression is zero.</p>
 
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.numeric.NumericValue.point" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span></code>
+
+
+<a href="#ibis.expr.types.numeric.NumericValue.point" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Return a point constructed from the coordinate values.</p>
+<p>Constant coordinates result in construction of a <code>POINT</code> literal or
+column.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>right</code></td>
+        <td><code>int | float | NumericValue</code></td>
+        <td><p>Y coordinate</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.PointValue</code></td>
+      <td><p>Points</p></td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
   </div>
