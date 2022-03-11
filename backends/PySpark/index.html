@@ -1067,6 +1067,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.set_database" class="md-nav__link">
+    set_database()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend.sql" class="md-nav__link">
     sql()
   </a>
@@ -2083,6 +2090,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.pyspark.Backend.set_database" class="md-nav__link">
+    set_database()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.pyspark.Backend.sql" class="md-nav__link">
     sql()
   </a>
@@ -2739,6 +2753,9 @@ schema</p></td>
     <div class="doc doc-contents ">
 
       <p>Return a <code>Database</code> object for the <code>name</code> database.</p>
+<div class="admonition warning">
+<p class="admonition-title">DEPRECATED: <code>database</code> is deprecated; use equivalent methods in the backend.</p>
+</div>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2959,6 +2976,9 @@ database does not exist</p></td>
     <div class="doc doc-contents ">
 
       <p>Return whether a database name exists in the current connection.</p>
+<div class="admonition warning">
+<p class="admonition-title">DEPRECATED: <code>exists_database</code> is deprecated as of v2.0; use <code>name in client.list_databases()</code>.</p>
+</div>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3016,6 +3036,9 @@ database does not exist</p></td>
     <div class="doc doc-contents ">
 
       <p>Return whether a table name exists in the database.</p>
+<div class="admonition warning">
+<p class="admonition-title">DEPRECATED: <code>exists_table</code> is deprecated as of v2.0; use <code>name in client.list_tables()</code>.</p>
+</div>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3305,6 +3328,27 @@ the session in a way unknown to Ibis; be careful.</p>
 
 
 
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.pyspark.Backend.set_database" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+
+
+<a href="#ibis.backends.pyspark.Backend.set_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
+
+    <div class="doc doc-contents ">
+
+      <div class="admonition warning">
+<p class="admonition-title">DEPRECATED: <code>set_database</code> is deprecated as of v2.0; use a new connection to database.</p>
+</div>
+
+    </div>
+
+  </div>
+
+
 
   <div class="doc doc-object doc-method">
 
@@ -3484,6 +3528,9 @@ the session in a way unknown to Ibis; be careful.</p>
     <div class="doc doc-contents ">
 
       <p>Verify <code>expr</code> is an expression that can be compiled.</p>
+<div class="admonition warning">
+<p class="admonition-title">DEPRECATED: <code>verify</code> is deprecated as of v2.0; use <code>compile</code> and capture <code>TranslationError</code> instead.</p>
+</div>
 
     </div>
 

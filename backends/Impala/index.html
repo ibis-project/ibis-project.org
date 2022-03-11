@@ -844,6 +844,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ibis.backends.impala.Backend.set_database" class="md-nav__link">
+    set_database()
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2739,6 +2746,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ibis.backends.impala.Backend.set_database" class="md-nav__link">
+    set_database()
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4162,6 +4176,27 @@ the <code>like</code> pattern if provided.</p></td>
 
   </div>
 
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.impala.Backend.set_database" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+
+
+<a href="#ibis.backends.impala.Backend.set_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
+
+    <div class="doc doc-contents ">
+
+      <div class="admonition warning">
+<p class="admonition-title">DEPRECATED: <code>set_database</code> is deprecated as of v2.0; use a new connection to database.</p>
+</div>
+
+    </div>
+
+  </div>
 
 
 
@@ -5785,6 +5820,9 @@ Impala takes ownership of the Parquet file.</p></td>
     <div class="doc doc-contents first">
 
       <p>Connect to HDFS using <code>fsspec</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">DEPRECATED: <code>hdfs_connect</code> is deprecated as of v3.0.0; use Use fsspec.filesystem("webhdfs", ...) directly.</p>
+</div>
 <p>This function is a thing wrapper around <code>fsspec.filesystem</code>. All arguments
 are forwarded to that API.</p>
 
