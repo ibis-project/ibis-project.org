@@ -1615,6 +1615,39 @@
     ValueExpr
   </a>
   
+    <nav class="md-nav" aria-label="ValueExpr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.generic.ValueExpr-methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.generic.ValueExpr.name" class="md-nav__link">
+    name()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.generic.ValueExpr.type" class="md-nav__link">
+    type()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2178,6 +2211,39 @@
   <a href="#ibis.expr.types.generic.ValueExpr" class="md-nav__link">
     ValueExpr
   </a>
+  
+    <nav class="md-nav" aria-label="ValueExpr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.generic.ValueExpr-methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.generic.ValueExpr.name" class="md-nav__link">
+    name()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.generic.ValueExpr.type" class="md-nav__link">
+    type()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3846,11 +3912,107 @@ ValueExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
 
 
 
+<h5 id="ibis.expr.types.generic.ValueExpr-methods">Methods<a href="#ibis.expr.types.generic.ValueExpr-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
 
 
 
 
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.generic.ValueExpr.name" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+
+
+<a href="#ibis.expr.types.generic.ValueExpr.name" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Change the name of the expression to <code>name</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>New expression name.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="s2">&quot;int64&quot;</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">UnboundTable</span><span class="p">[</span><span class="n">r0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">unbound_table_0</span><span class="p">]</span>
+  <span class="n">a</span> <span class="n">int64</span>
+</code></pre></div>
+    
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ValueExpr</code></td>
+      <td><p><code>self</code> with name <code>name</code></p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.generic.ValueExpr.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#ibis.expr.types.generic.ValueExpr.type" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Return the element type of the expression.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>dt.DataType</code></td>
+      <td><p>Element type of <code>self</code></p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
 
 
 
@@ -3971,6 +4133,12 @@ ValueExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.t
     
     
       <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

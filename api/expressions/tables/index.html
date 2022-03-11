@@ -3563,8 +3563,8 @@ columns.</p></td>
         <span class="n">bar</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;bar&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
           <span class="n">ref_0</span>
 </code></pre></div>
-    <p>Use the [<code>Expr.name</code>][ibis.expr.types.Expr.name] method to name the new
-columns.</p>
+    <p>Use the <a href="../generic/#ibis.expr.types.generic.ValueExpr.name"><code>ValueExpr.name</code></a>
+method to name the new columns.</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;baz&#39;</span><span class="p">,),</span>
 <span class="o">...</span>                <span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">foo</span> <span class="o">+</span> <span class="n">table</span><span class="o">.</span><span class="n">bar</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;qux&#39;</span><span class="p">)]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr2</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">new_columns</span><span class="p">)</span>
@@ -3623,11 +3623,26 @@ columns.</p>
       <tr>
         <td><code>client</code></td>
         <td><code>None</code></td>
-        <td><p>A client to use to create the SQLQueryResult operation. This is
+        <td><p>A client to use to create the SQLQueryResult operation. This can be
 useful if you're compiling an expression that derives from an
-[<code>UnboundTable</code>][ibis.expr.operations.UnboundTable] operation.</p></td>
+<code>UnboundTable</code> operation.</p></td>
         <td><code>None</code></td>
       </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>TableExpr</code></td>
+      <td><p>A table expression with <code>self</code> as an opaque SQL query</p></td>
+    </tr>
   </tbody>
 </table>
     </div>
@@ -3734,7 +3749,7 @@ strings.</p></td>
           <span class="kc">None</span>
       <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
 </code></pre></div>
-    <p>Note the [<code>Window</code>][ibis.expr.window.Window] objects here.</p>
+    <p>Note the <code>Window</code> objects here.</p>
 <p>Their existence means that the result of the aggregation will be
 broadcast across the number of rows in the input column.
 The purpose of this expression rewrite is to make it easy to write
@@ -3995,7 +4010,7 @@ strings.</p></td>
           <span class="kc">None</span>
       <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
 </code></pre></div>
-    <p>Note the [<code>Window</code>][ibis.expr.window.Window] objects here.</p>
+    <p>Note the <code>Window</code> objects here.</p>
 <p>Their existence means that the result of the aggregation will be
 broadcast across the number of rows in the input column.
 The purpose of this expression rewrite is to make it easy to write
@@ -4050,12 +4065,6 @@ column/scalar-aggregate operations like</p>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><code>table</code></td>
-        <td><code>None</code></td>
-        <td><p>Table expression</p></td>
-        <td><em>required</em></td>
-      </tr>
       <tr>
         <td><code>name</code></td>
         <td><code>str</code></td>
@@ -4893,6 +4902,12 @@ GroupedTableExpr        </code>
     
     
       <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
