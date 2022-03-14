@@ -1470,6 +1470,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ibis.expr.datatypes.DataType._hash" class="md-nav__link">
+    _hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.datatypes.DataType._pretty" class="md-nav__link">
+    _pretty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.expr.datatypes.DataType.name" class="md-nav__link">
     name
   </a>
@@ -2238,6 +2252,13 @@
           <li class="md-nav__item">
   <a href="#ibis.expr.datatypes.infer_struct" class="md-nav__link">
     infer_struct()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.datatypes.parse_type" class="md-nav__link">
+    parse_type()
   </a>
   
 </li>
@@ -2514,6 +2535,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ibis.expr.datatypes.DataType._hash" class="md-nav__link">
+    _hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.datatypes.DataType._pretty" class="md-nav__link">
+    _pretty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.expr.datatypes.DataType.name" class="md-nav__link">
     name
   </a>
@@ -3287,6 +3322,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.expr.datatypes.parse_type" class="md-nav__link">
+    parse_type()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.expr.datatypes.same_kind_both_null" class="md-nav__link">
     same_kind_both_null()
   </a>
@@ -3532,7 +3574,6 @@ Array            (<a title="ibis.expr.datatypes.Variadic" href="#ibis.expr.datat
 
 
 
-
   </div>
 
     </div>
@@ -3657,6 +3698,52 @@ DataType        </code>
 
 
 
+<h6 id="ibis.expr.datatypes.DataType._hash" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">_hash</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-private"><code>private</code></small>
+  </span>
+
+<a href="#ibis.expr.datatypes.DataType._hash" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Hash of the datatype.</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="ibis.expr.datatypes.DataType._pretty" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">_pretty</span><span class="p">:</span> <span class="nb">str</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-private"><code>private</code></small>
+  </span>
+
+<a href="#ibis.expr.datatypes.DataType._pretty" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Pretty representation of the datatype.</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
 <h6 id="ibis.expr.datatypes.DataType.name" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">name</span><span class="p">:</span> <span class="nb">str</span></code>
 
@@ -3697,6 +3784,7 @@ DataType        </code>
 
 
 <h5 id="ibis.expr.datatypes.DataType-methods">Methods<a href="#ibis.expr.datatypes.DataType-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
+
 
 
 
@@ -3941,7 +4029,6 @@ Decimal            (<a title="ibis.expr.datatypes.DataType" href="#ibis.expr.dat
     </div>
 
   </div>
-
 
 
 
@@ -4340,7 +4427,7 @@ GeoSpatial            (<a title="ibis.expr.datatypes.DataType" href="#ibis.expr.
 
 
 <h6 id="ibis.expr.datatypes.GeoSpatial.srid" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">srid</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>
+<code class="highlight language-python"><span class="n">srid</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span></code>
 
 
 <a href="#ibis.expr.datatypes.GeoSpatial.srid" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -4388,14 +4475,14 @@ GeoSpatial            (<a title="ibis.expr.datatypes.DataType" href="#ibis.expr.
   <tbody>
       <tr>
         <td><code>geotype</code></td>
-        <td><code>Optional[Literal[&#39;geography&#39;, &#39;geometry&#39;]]</code></td>
+        <td><code>Literal[&#39;geography&#39;, &#39;geometry&#39;] | None</code></td>
         <td><p>Specification of geospatial type which could be <code>geography</code> or
 <code>geometry</code>.</p></td>
         <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>srid</code></td>
-        <td><code>Optional[int]</code></td>
+        <td><code>int | None</code></td>
         <td><p>Spatial Reference System Identifier</p></td>
         <td><code>None</code></td>
       </tr>
@@ -4410,7 +4497,6 @@ GeoSpatial            (<a title="ibis.expr.datatypes.DataType" href="#ibis.expr.
     </div>
 
   </div>
-
 
 
 
@@ -4459,7 +4545,6 @@ Geography            (<a title="ibis.expr.datatypes.GeoSpatial" href="#ibis.expr
 
 
 
-
   </div>
 
     </div>
@@ -4489,7 +4574,6 @@ Geometry            (<a title="ibis.expr.datatypes.GeoSpatial" href="#ibis.expr.
 
 
   <div class="doc doc-children">
-
 
 
 
@@ -4900,7 +4984,6 @@ Interval            (<a title="ibis.expr.datatypes.DataType" href="#ibis.expr.da
 
 
 
-
   </div>
 
     </div>
@@ -5140,7 +5223,6 @@ Map            (<a title="ibis.expr.datatypes.Variadic" href="#ibis.expr.datatyp
     </div>
 
   </div>
-
 
 
 
@@ -5446,7 +5528,6 @@ Primitive            (<a title="ibis.expr.datatypes.DataType" href="#ibis.expr.d
 
 
 
-
   </div>
 
     </div>
@@ -5499,7 +5580,6 @@ Set            (<a title="ibis.expr.datatypes.Variadic" href="#ibis.expr.datatyp
     </div>
 
   </div>
-
 
 
 
@@ -5618,7 +5698,7 @@ Struct            (<a title="ibis.expr.datatypes.DataType" href="#ibis.expr.data
 
 
 <h6 id="ibis.expr.datatypes.Struct.names" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+<code class="highlight language-python"><span class="n">names</span><span class="p">:</span> <span class="nb">list</span></code>
 
 
 <a href="#ibis.expr.datatypes.Struct.names" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
@@ -5732,7 +5812,6 @@ multiple columns.</p>
 <h5 id="ibis.expr.datatypes.Struct-methods">Methods<a href="#ibis.expr.datatypes.Struct-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
 
-
   <div class="doc doc-object doc-method">
 
 
@@ -5770,7 +5849,7 @@ struct.</p></td>
       </tr>
       <tr>
         <td><code>types</code></td>
-        <td><code>Iterable[ibis.expr.datatypes.DataType]</code></td>
+        <td><code>Iterable[DataType]</code></td>
         <td><p>Sequence of strings or :class:<code>~ibis.expr.datatypes.DataType</code>
 instances, one for each field</p></td>
         <td><em>required</em></td>
@@ -5889,7 +5968,6 @@ Timestamp            (<a title="ibis.expr.datatypes.DataType" href="#ibis.expr.d
     </div>
 
   </div>
-
 
 
 
@@ -6366,6 +6444,62 @@ Variadic            (<a title="ibis.expr.datatypes.DataType" href="#ibis.expr.da
 
 
 
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h4 id="ibis.expr.datatypes.parse_type" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">parse_type</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></code>
+
+
+<a href="#ibis.expr.datatypes.parse_type" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Parse a type from a <a href="https://docs.python.org/3/library/stdtypes.html#str"><code>str</code></a> <code>text</code>.</p>
+<p>The default <code>maxsize</code> parameter for caching is chosen to cache the most
+commonly used types--there are about 30--along with some capacity for less
+common but repeatedly-used complex types.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>str</code></td>
+        <td><p>The type string to parse</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+    <p>Parse an array type from a string</p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dt</span><span class="o">.</span><span class="n">parse_type</span><span class="p">(</span><span class="s2">&quot;array&lt;int64&gt;&quot;</span><span class="p">)</span>
+<span class="n">Array</span><span class="p">(</span><span class="n">value_type</span><span class="o">=</span><span class="n">int64</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+    <p>You can avoid parsing altogether by constructing objects directly</p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ty</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">parse_type</span><span class="p">(</span><span class="s2">&quot;array&lt;int64&gt;&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ty</span> <span class="o">==</span> <span class="n">dt</span><span class="o">.</span><span class="n">Array</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+    </div>
+
+  </div>
 
 
 
