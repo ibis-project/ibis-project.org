@@ -886,33 +886,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend-attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-    <nav class="md-nav" aria-label="Attributes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.current_database" class="md-nav__link">
-    current_database
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.version" class="md-nav__link">
-    version
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.sqlite.Backend-methods" class="md-nav__link">
     Methods
   </a>
@@ -1033,13 +1006,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.list_schemas" class="md-nav__link">
-    list_schemas()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.sqlite.Backend.list_tables" class="md-nav__link">
     list_tables()
   </a>
@@ -1054,22 +1020,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.raw_sql" class="md-nav__link">
-    raw_sql()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.sqlite.Backend.schema" class="md-nav__link">
     schema()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.sql" class="md-nav__link">
-    sql()
   </a>
   
 </li>
@@ -1868,33 +1820,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend-attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-    <nav class="md-nav" aria-label="Attributes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.current_database" class="md-nav__link">
-    current_database
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.version" class="md-nav__link">
-    version
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.sqlite.Backend-methods" class="md-nav__link">
     Methods
   </a>
@@ -2015,13 +1940,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.list_schemas" class="md-nav__link">
-    list_schemas()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.sqlite.Backend.list_tables" class="md-nav__link">
     list_tables()
   </a>
@@ -2036,22 +1954,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.raw_sql" class="md-nav__link">
-    raw_sql()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ibis.backends.sqlite.Backend.schema" class="md-nav__link">
     schema()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.backends.sqlite.Backend.sql" class="md-nav__link">
-    sql()
   </a>
   
 </li>
@@ -2218,90 +2122,10 @@ Backend            (<a title="ibis.backends.base.sql.alchemy.BaseAlchemyBackend"
 
 
 
-<h4 id="ibis.backends.sqlite.Backend-attributes">Attributes<a href="#ibis.backends.sqlite.Backend-attributes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
-
-
-
-  <div class="doc doc-object doc-attribute">
-
-
-
-<h5 id="ibis.backends.sqlite.Backend.current_database" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">current_database</span><span class="p">:</span> <span class="nb">str</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
-      <small class="doc doc-property doc-property-property"><code>property</code></small>
-      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
-  </span>
-
-<a href="#ibis.backends.sqlite.Backend.current_database" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
-
-    <div class="doc doc-contents ">
-
-      <p>The name of the current database this client is connected to.</p>
-    </div>
-
-  </div>
-
-
-
-
-
-  <div class="doc doc-object doc-attribute">
-
-
-
-<h5 id="ibis.backends.sqlite.Backend.version" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">version</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
-      <small class="doc doc-property doc-property-property"><code>property</code></small>
-      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
-  </span>
-
-<a href="#ibis.backends.sqlite.Backend.version" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Return the version of the backend engine.</p>
-<p>For database servers, return the server version.</p>
-<p>For others such as SQLite and pandas return the version of the
-underlying library or application.</p>
-
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>str</code></td>
-      <td><p>The backend version</p></td>
-    </tr>
-  </tbody>
-</table>    </div>
-
-  </div>
-
 
 
 
 <h4 id="ibis.backends.sqlite.Backend-methods">Methods<a href="#ibis.backends.sqlite.Backend-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
-
-
-
-
-
-
-
-
-
-
 
   <div class="doc doc-object doc-method">
 
@@ -2379,7 +2203,6 @@ string <code>"NULL"</code>.</p>
     </div>
 
   </div>
-
 
 
 
@@ -3218,31 +3041,6 @@ query.</p>
 
 
 
-<h5 id="ibis.backends.sqlite.Backend.list_schemas" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">list_schemas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
-  </span>
-
-<a href="#ibis.backends.sqlite.Backend.list_schemas" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
-
-    <div class="doc doc-contents ">
-
-      <div class="admonition warning">
-<p class="admonition-title">DEPRECATED: <code>list_schemas</code> is deprecated as of v2.0; use <code>list_databases</code>.</p>
-</div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
 <h5 id="ibis.backends.sqlite.Backend.list_tables" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">list_tables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">like</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
@@ -3384,65 +3182,6 @@ yet implemented</p></td>
 
 
 
-<h5 id="ibis.backends.sqlite.Backend.raw_sql" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">raw_sql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
-  </span>
-
-<a href="#ibis.backends.sqlite.Backend.raw_sql" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Execute a query string.</p>
-<p>Could have unexpected results if the query modifies the behavior of
-the session in a way unknown to Ibis; be careful.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>query</code></td>
-        <td><code>str</code></td>
-        <td><p>DML or DDL statement</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>Any</code></td>
-      <td><p>Backend cursor</p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
 <h5 id="ibis.backends.sqlite.Backend.schema" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">schema</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
 
@@ -3487,63 +3226,6 @@ the session in a way unknown to Ibis; be careful.</p>
     <tr>
       <td><code>sch.Schema</code></td>
       <td><p>The ibis schema of <code>name</code></p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h5 id="ibis.backends.sqlite.Backend.sql" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
-  </span>
-
-<a href="#ibis.backends.sqlite.Backend.sql" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
-
-    <div class="doc doc-contents ">
-
-      <p>Convert a SQL query to an Ibis table expression.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>query</code></td>
-        <td><code>str</code></td>
-        <td><p>SQL string</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ir.TableExpr</code></td>
-      <td><p>Table expression</p></td>
     </tr>
   </tbody>
 </table>
@@ -3610,7 +3292,6 @@ the session in a way unknown to Ibis; be careful.</p>
     </div>
 
   </div>
-
 
 
 
