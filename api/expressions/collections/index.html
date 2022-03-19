@@ -2357,7 +2357,7 @@ structs.</p>
 
 <h4 id="ibis.expr.types.arrays.ArrayValue" class="doc doc-heading">
         <code>
-ArrayValue            (<a title="ibis.expr.types.generic.AnyValue" href="../generic/#ibis.expr.types.generic.AnyValue">AnyValue</a>)
+ArrayValue            (<a class="autorefs autorefs-internal" title="ibis.expr.types.generic.AnyValue" href="../generic/#ibis.expr.types.generic.AnyValue">AnyValue</a>)
         </code>
 
 
@@ -2519,10 +2519,10 @@ ArrayValue            (<a title="ibis.expr.types.generic.AnyValue" href="../gene
     <tr>
       <td><code>ir.ValueExpr</code></td>
       <td><ul>
-<li>If <code>index</code> is an <a href="https://docs.python.org/3/library/functions.html#int"><code>int</code></a> or
-  <a href="../numeric/#ibis.expr.types.numeric.IntegerValue"><code>IntegerValue</code></a> then the return
+<li>If <code>index</code> is an <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int"><code>int</code></a> or
+  <a class="autorefs autorefs-internal" href="../numeric/#ibis.expr.types.numeric.IntegerValue"><code>IntegerValue</code></a> then the return
   type is the element type of <code>self</code>.</li>
-<li>If <code>index</code> is a <a href="https://docs.python.org/3/library/functions.html#slice"><code>slice</code></a> then the return type is the same
+<li>If <code>index</code> is a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#slice"><code>slice</code></a> then the return type is the same
   type as the input.</li>
 </ul></td>
     </tr>
@@ -2918,7 +2918,7 @@ scalar (if the inputs are Python literals)</p></td>
 
 <h4 id="ibis.expr.types.maps.MapValue" class="doc doc-heading">
         <code>
-MapValue            (<a title="ibis.expr.types.generic.AnyValue" href="../generic/#ibis.expr.types.generic.AnyValue">AnyValue</a>)
+MapValue            (<a class="autorefs autorefs-internal" title="ibis.expr.types.generic.AnyValue" href="../generic/#ibis.expr.types.generic.AnyValue">AnyValue</a>)
         </code>
 
 
@@ -3394,7 +3394,7 @@ the query.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a map literal from a <a href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> or other mapping.</p>
+      <p>Create a map literal from a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> or other mapping.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3496,7 +3496,7 @@ key/value pairs of fixed types)</p></td>
 
 <h4 id="ibis.expr.types.structs.StructColumn" class="doc doc-heading">
         <code>
-StructColumn            (<a title="ibis.expr.types.generic.AnyColumn" href="../generic/#ibis.expr.types.generic.AnyColumn">AnyColumn</a>, <a title="ibis.expr.types.structs.StructValue" href="#ibis.expr.types.structs.StructValue">StructValue</a>)
+StructColumn            (<a class="autorefs autorefs-internal" title="ibis.expr.types.generic.AnyColumn" href="../generic/#ibis.expr.types.generic.AnyColumn">AnyColumn</a>, <a class="autorefs autorefs-internal" title="ibis.expr.types.structs.StructValue" href="#ibis.expr.types.structs.StructValue">StructValue</a>)
         </code>
 
 
@@ -3572,7 +3572,7 @@ multiple columns.</p>
 
 <h4 id="ibis.expr.types.structs.StructScalar" class="doc doc-heading">
         <code>
-StructScalar            (<span title="ibis.expr.types.generic.AnyScalar">AnyScalar</span>, <a title="ibis.expr.types.structs.StructValue" href="#ibis.expr.types.structs.StructValue">StructValue</a>)
+StructScalar            (<span title="ibis.expr.types.generic.AnyScalar">AnyScalar</span>, <a class="autorefs autorefs-internal" title="ibis.expr.types.structs.StructValue" href="#ibis.expr.types.structs.StructValue">StructValue</a>)
         </code>
 
 
@@ -3648,7 +3648,7 @@ multiple columns.</p>
 
 <h4 id="ibis.expr.types.structs.StructValue" class="doc doc-heading">
         <code>
-StructValue            (<a title="ibis.expr.types.generic.AnyValue" href="../generic/#ibis.expr.types.generic.AnyValue">AnyValue</a>)
+StructValue            (<a class="autorefs autorefs-internal" title="ibis.expr.types.generic.AnyValue" href="../generic/#ibis.expr.types.generic.AnyValue">AnyValue</a>)
         </code>
 
 
@@ -3799,7 +3799,7 @@ multiple columns.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a struct literal from a <a href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> or other mapping.</p>
+      <p>Create a struct literal from a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> or other mapping.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3828,11 +3828,11 @@ the ibis type of <code>value</code>.</p></td>
   </tbody>
 </table>
 <p><strong>Examples:</strong></p>
-    <p>Create a struct literal from a <a href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> with the type inferred</p>
+    <p>Create a struct literal from a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> with the type inferred</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">struct</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">))</span>
 </code></pre></div>
-    <p>Create a struct literal from a <a href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> with a specified type</p>
+    <p>Create a struct literal from a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> with a specified type</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">struct</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;struct&lt;a: float, b: string&gt;&#39;</span><span class="p">)</span>
 </code></pre></div>
 

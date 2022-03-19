@@ -2645,9 +2645,9 @@ scalar (if the inputs are Python literals)</p></td>
 <p>Ibis supports literal construction of arrays using the following
 functions:</p>
 <ol>
-<li><a href="#ibis.expr.types.arrays.array"><code>ibis.array</code></a></li>
-<li><a href="#ibis.expr.types.structs.struct"><code>ibis.struct</code></a></li>
-<li><a href="#ibis.expr.types.maps.map"><code>ibis.map</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#ibis.expr.types.arrays.array"><code>ibis.array</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#ibis.expr.types.structs.struct"><code>ibis.struct</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#ibis.expr.types.maps.map"><code>ibis.map</code></a></li>
 </ol>
 <p>Constructing these types using <code>literal</code> will be deprecated in a future
 release.</p>
@@ -2673,7 +2673,7 @@ release.</p>
       <tr>
         <td><code>type</code></td>
         <td><code>dt.DataType | str | None</code></td>
-        <td><p>An instance of <a href="../../datatypes/#ibis.expr.datatypes.DataType"><code>DataType</code></a> or a string
+        <td><p>An instance of <a class="autorefs autorefs-internal" href="../../datatypes/#ibis.expr.datatypes.DataType"><code>DataType</code></a> or a string
 indicating the ibis type of <code>value</code>. This parameter can be used
 in cases where ibis's type inference isn't sufficient for discovering
 the type of <code>value</code>.</p></td>
@@ -2733,7 +2733,7 @@ the type of <code>value</code>.</p></td>
 
     <div class="doc doc-contents first">
 
-      <p>Create a map literal from a <a href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> or other mapping.</p>
+      <p>Create a map literal from a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> or other mapping.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2961,7 +2961,7 @@ key/value pairs of fixed types)</p></td>
     <div class="doc doc-contents first">
 
       <p>Return a random floating point number in the range [0.0, 1.0).</p>
-<p>Similar to <a href="https://docs.python.org/3/library/random.html#random.random"><code>random.random</code></a> in the Python standard library.</p>
+<p>Similar to <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/random.html#random.random"><code>random.random</code></a> in the Python standard library.</p>
 
 <p><strong>Returns:</strong></p>
 <table>
@@ -3182,7 +3182,7 @@ and <code>types</code>.</p></td>
 
     <div class="doc doc-contents first">
 
-      <p>Create a struct literal from a <a href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> or other mapping.</p>
+      <p>Create a struct literal from a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> or other mapping.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -3211,11 +3211,11 @@ the ibis type of <code>value</code>.</p></td>
   </tbody>
 </table>
 <p><strong>Examples:</strong></p>
-    <p>Create a struct literal from a <a href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> with the type inferred</p>
+    <p>Create a struct literal from a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> with the type inferred</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">struct</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">))</span>
 </code></pre></div>
-    <p>Create a struct literal from a <a href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> with a specified type</p>
+    <p>Create a struct literal from a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a> with a specified type</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">struct</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;struct&lt;a: float, b: string&gt;&#39;</span><span class="p">)</span>
 </code></pre></div>
 

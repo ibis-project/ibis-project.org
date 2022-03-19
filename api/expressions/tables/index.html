@@ -2320,7 +2320,7 @@
 
 <h4 id="ibis.expr.types.relations.TableExpr" class="doc doc-heading">
         <code>
-TableExpr            (<a title="ibis.expr.types.core.Expr" href="../#ibis.expr.types.core.Expr">Expr</a>)
+TableExpr            (<a class="autorefs autorefs-internal" title="ibis.expr.types.core.Expr" href="../#ibis.expr.types.core.Expr">Expr</a>)
         </code>
 
 
@@ -3563,7 +3563,7 @@ columns.</p></td>
         <span class="n">bar</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;bar&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
           <span class="n">ref_0</span>
 </code></pre></div>
-    <p>Use the <a href="../generic/#ibis.expr.types.generic.ValueExpr.name"><code>ValueExpr.name</code></a>
+    <p>Use the <a class="autorefs autorefs-internal" href="../generic/#ibis.expr.types.generic.ValueExpr.name"><code>ValueExpr.name</code></a>
 method to name the new columns.</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;baz&#39;</span><span class="p">,),</span>
 <span class="o">...</span>                <span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">foo</span> <span class="o">+</span> <span class="n">table</span><span class="o">.</span><span class="n">bar</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;qux&#39;</span><span class="p">)]</span>
