@@ -1020,6 +1020,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.backends.sqlite.Backend.raw_sql" class="md-nav__link">
+    raw_sql()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.backends.sqlite.Backend.schema" class="md-nav__link">
     schema()
   </a>
@@ -1965,6 +1972,13 @@
           <li class="md-nav__item">
   <a href="#ibis.backends.sqlite.Backend.load_data" class="md-nav__link">
     load_data()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.backends.sqlite.Backend.raw_sql" class="md-nav__link">
+    raw_sql()
   </a>
   
 </li>
@@ -3186,6 +3200,65 @@ or other equivalent entities in a SQL database.</p>
         <td><p>Loading data to a table from a different database is not
 yet implemented</p></td>
       </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="ibis.backends.sqlite.Backend.raw_sql" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">raw_sql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-inherited"><code>inherited</code></small>
+  </span>
+
+<a href="#ibis.backends.sqlite.Backend.raw_sql" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Execute a query string.</p>
+<p>Could have unexpected results if the query modifies the behavior of
+the session in a way unknown to Ibis; be careful.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>query</code></td>
+        <td><code>str</code></td>
+        <td><p>DML or DDL statement</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Any</code></td>
+      <td><p>Backend cursor</p></td>
+    </tr>
   </tbody>
 </table>
     </div>
