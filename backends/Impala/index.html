@@ -1883,6 +1883,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#working-with-secure-clusters-kerberos" class="md-nav__link">
+    Working with secure clusters (Kerberos)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-configuation-values-for-cdh-components" class="md-nav__link">
+    Default Configuation Values for CDH Components
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2320,6 +2334,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_9">
@@ -2617,6 +2633,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/config/" class="md-nav__link">
+        Configuration
+      </a>
     </li>
   
 
@@ -3782,6 +3812,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-secure-clusters-kerberos" class="md-nav__link">
+    Working with secure clusters (Kerberos)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-configuation-values-for-cdh-components" class="md-nav__link">
+    Default Configuation Values for CDH Components
+  </a>
   
 </li>
       
@@ -7844,6 +7888,35 @@ This must take place each time you load your Ibis session.</p>
 you use Ibis. If you have a lot of UDFs, I suggest you create a file
 with all of your wrapper declarations and user APIs that you load with
 your Ibis session to plug in all your own functions.</p>
+<h2 id="working-with-secure-clusters-kerberos">Working with secure clusters (Kerberos)<a class="headerlink" href="#working-with-secure-clusters-kerberos" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Ibis is compatible with Hadoop clusters that are secured with Kerberos (as well
+as SSL and LDAP). Just like the Impala shell and ODBC/JDBC connectors, Ibis
+connects to Impala through the HiveServer2 interface (using the impyla client).
+Therefore, the connection semantics are similar to the other access methods for
+working with secure clusters.</p>
+<p>Specifically, after authenticating yourself against Kerberos (e.g., by issuing
+the appropriate <code>kinit</code> commmand), simply pass <code>auth_mechanism='GSSAPI'</code> or
+<code>auth_mechanism='LDAP'</code> (and set <code>kerberos_service_name</code> if necessary along
+with <code>user</code> and <code>password</code> if necessary) to the
+<code>ibis.impala_connect(...)</code> method when instantiating an <code>ImpalaConnection</code>.
+This method also takes arguments to configure SSL (<code>use_ssl</code>, <code>ca_cert</code>).
+See the documentation for the Impala shell for more details.</p>
+<p>Ibis also includes functionality that communicates directly with HDFS, using
+the WebHDFS REST API. When calling <code>ibis.impala.hdfs_connect(...)</code>, also pass
+<code>auth_mechanism='GSSAPI'</code> or <code>auth_mechanism='LDAP'</code>, and ensure that you
+are connecting to the correct port, which may likely be an SSL-secured WebHDFS
+port. Also note that you can pass <code>verify=False</code> to avoid verifying SSL
+certificates (which may be helpful in testing). Ibis will assume <code>https</code>
+when connecting to a Kerberized cluster. Because some Ibis commands create HDFS
+directories as well as new Impala databases and/or tables, your user will
+require the necessary privileges.</p>
+<h2 id="default-configuation-values-for-cdh-components">Default Configuation Values for CDH Components<a class="headerlink" href="#default-configuation-values-for-cdh-components" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Cloudera CDH ships with HDFS, Impala, Hive and many other components.
+Sometimes it's not obvious what default configuration values these tools are
+using or should be using.</p>
+<p>Check out <a href="https://www.cloudera.com/documentation/enterprise/latest/topics/cdh_ig_ports_cdh5.html#topic_9_1">this
+link</a>
+to see the default configuration values for every component of CDH.</p>
 
               
 

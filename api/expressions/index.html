@@ -1155,6 +1155,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_9">
@@ -1459,6 +1461,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1506,20 +1522,6 @@
   
     <nav class="md-nav" aria-label="Methods">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ibis.expr.types.core.Expr.__hash__" class="md-nav__link">
-    __hash__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.expr.types.core.Expr._type_check" class="md-nav__link">
-    _type_check()
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#ibis.expr.types.core.Expr.compile" class="md-nav__link">
@@ -1619,62 +1621,7 @@ Expr            (<span title="ibis.util.EqMixin">EqMixin</span>)
 
 
 
-
 <h3 id="ibis.expr.types.core.Expr-methods">Methods<a href="#ibis.expr.types.core.Expr-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h4 id="ibis.expr.types.core.Expr.__hash__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-<a href="#ibis.expr.types.core.Expr.__hash__" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
-
-    <div class="doc doc-contents ">
-
-      <p>Return hash(self).</p>
-
-    </div>
-
-  </div>
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h4 id="ibis.expr.types.core.Expr._type_check" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">_type_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-private"><code>private</code></small>
-  </span>
-
-<a href="#ibis.expr.types.core.Expr._type_check" class="headerlink" title="Anchor link to this section for reference">&para;</a></h4>
-
-    <div class="doc doc-contents ">
-
-      <p>Check whether <code>self</code> can be compared with <code>other</code>.</p>
-
-    </div>
-
-  </div>
-
-
 
 
   <div class="doc doc-object doc-method">
@@ -1689,27 +1636,49 @@ Expr            (<span title="ibis.util.EqMixin">EqMixin</span>)
 
     <div class="doc doc-contents ">
 
-      <p>Compile expression to whatever execution target, to verify</p>
+      <p>Compile to an execution target.</p>
 
-<p><strong>Returns:</strong></p>
+<p><strong>Parameters:</strong></p>
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
+      <th>Default</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><code>value or list</code></td>
-      <td><p>query representation or list thereof</p></td>
-    </tr>
+      <tr>
+        <td><code>limit</code></td>
+        <td><code>int | None</code></td>
+        <td><p>An integer to effect a specific row limit. A value of <code>None</code> means
+"no limit". The default is in <code>ibis/config.py</code>.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>timecontext</code></td>
+        <td><code>TimeContext | None</code></td>
+        <td><p>Defines a time range of <code>(begin, end)</code>. When defined, the execution
+will only compute result for data inside the time range. The time
+range is inclusive of both endpoints. This is conceptually same as
+a time filter.
+The time column must be named <code>'time'</code> and should preserve
+across the expression. For example, if that column is dropped then
+execute will result in an error.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>params</code></td>
+        <td><code>Mapping[ValueExpr, Any] | None</code></td>
+        <td><p>Mapping of scalar parameter expressions to value</p></td>
+        <td><code>None</code></td>
+      </tr>
   </tbody>
 </table>
     </div>
 
   </div>
-
 
 
 
@@ -1725,8 +1694,7 @@ Expr            (<span title="ibis.util.EqMixin">EqMixin</span>)
 
     <div class="doc doc-contents ">
 
-      <p>If this expression is based on physical tables in a database backend,</p>
-<p>execute it against that backend.</p>
+      <p>Execute an expression against its backend if one exists.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1743,36 +1711,27 @@ Expr            (<span title="ibis.util.EqMixin">EqMixin</span>)
         <td><code>limit</code></td>
         <td><code>int | str | None</code></td>
         <td><p>An integer to effect a specific row limit. A value of <code>None</code> means
-"no limit". The default is whatever is in <code>ibis/config.py</code>.</p></td>
+"no limit". The default is in <code>ibis/config.py</code>.</p></td>
         <td><code>&#39;default&#39;</code></td>
       </tr>
       <tr>
         <td><code>timecontext</code></td>
         <td><code>TimeContext | None</code></td>
-        <td><p>Defines a time range of (begin, end). When defined, the execution
+        <td><p>Defines a time range of <code>(begin, end)</code>. When defined, the execution
 will only compute result for data inside the time range. The time
 range is inclusive of both endpoints. This is conceptually same as
 a time filter.
-The time column must be named as 'time' and should preserve
-across the expression. e.g. If that column is dropped then
+The time column must be named <code>'time'</code> and should preserve
+across the expression. For example, if that column is dropped then
 execute will result in an error.</p></td>
         <td><code>None</code></td>
       </tr>
-  </tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>expression-dependent</code></td>
-      <td><p>Result of compiling expression and executing in backend</p></td>
-    </tr>
+      <tr>
+        <td><code>params</code></td>
+        <td><code>Mapping[ValueExpr, Any] | None</code></td>
+        <td><p>Mapping of scalar parameter expressions to value</p></td>
+        <td><code>None</code></td>
+      </tr>
   </tbody>
 </table>
     </div>
@@ -1893,9 +1852,9 @@ keyword</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Returns True if expression can be compiled to its attached client</p>
+      <p>Return True if expression can be compiled to its attached client.</p>
 <div class="admonition warning">
-<p class="admonition-title">DEPRECATED: <code>verify</code> is deprecated as of v2.0; use compile &amp; catch TranslationError.</p>
+<p class="admonition-title">DEPRECATED: <code>verify</code> is deprecated as of v2.0; use <a class="autorefs autorefs-internal" href="#ibis.expr.types.core.Expr.compile"><code>Expr.compile</code></a> and catch TranslationError.</p>
 </div>
 
     </div>
