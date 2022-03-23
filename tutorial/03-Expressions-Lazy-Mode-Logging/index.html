@@ -2881,7 +2881,7 @@ countries['name', 'continent', 'population'].limit(3)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>AlchemyTable[r0, name=countries]
+<pre>r0 := AlchemyTable[countries]
   iso_alpha2  string
   iso_alpha3  string
   iso_numeric int32
@@ -2892,21 +2892,13 @@ countries['name', 'continent', 'population'].limit(3)</div>
   population  int32
   continent   string
 
-Selection[r1]
-  table:
-    ref: r0
+r1 := Selection[r0]
   selections:
-    name: string = r0.name
-    continent: string = r0.continent
-    population: int32 = r0.population
+    name:       r0.name
+    continent:  r0.continent
+    population: r0.population
 
-Limit
-  table:
-    ref: r1
-  n:
-    3
-  offset:
-    0</pre>
+Limit[r1, n=3]</pre>
 </div>
 
 </div>
@@ -3189,7 +3181,7 @@ population_in_millions</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>AlchemyTable[r0, name=countries]
+<pre>r0 := AlchemyTable[countries]
   iso_alpha2  string
   iso_alpha3  string
   iso_numeric int32
@@ -3200,11 +3192,7 @@ population_in_millions</div>
   population  int32
   continent   string
 
-population_in_millions: float64 = Divide
-  left:
-    population: int32 = r0.population
-  right:
-    value: int32 = 1000000</pre>
+population_in_millions: r0.population / 1000000</pre>
 </div>
 
 </div>
@@ -3342,7 +3330,7 @@ population_in_millions: float64 = Divide
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>AlchemyTable[r0, name=countries]
+<pre>r0 := AlchemyTable[countries]
   iso_alpha2  string
   iso_alpha3  string
   iso_numeric int32
@@ -3353,25 +3341,13 @@ population_in_millions: float64 = Divide
   population  int32
   continent   string
 
-Selection[r1]
-  table:
-    ref: r0
+r1 := Selection[r0]
   selections:
-    name: string = r0.name
-    continent: string = r0.continent
-    population_in_millions: float64 = Divide
-      left:
-        population: int32 = r0.population
-      right:
-        value: int32 = 1000000
+    name:                   r0.name
+    continent:              r0.continent
+    population_in_millions: r0.population / 1000000
 
-Limit
-  table:
-    ref: r1
-  n:
-    3
-  offset:
-    0</pre>
+Limit[r1, n=3]</pre>
 </div>
 
 </div>

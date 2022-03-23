@@ -2940,11 +2940,10 @@ t.string_col.julianday()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>UnboundTable[r0, name=t]
+<pre>r0 := UnboundTable[t]
   string_col string
 
-float32 = JulianDay
-  string_col: string = r0.string_col</pre>
+JulianDay(r0.string_col)</pre>
 </div>
 
 </div>
@@ -3168,7 +3167,7 @@ independence</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>AlchemyTable[r0, name=independence]
+<pre>AlchemyTable[independence]
   country_code      string
   independence_date date
   independence_from string</pre>
@@ -3230,15 +3229,12 @@ day</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>AlchemyTable[r0, name=independence]
+<pre>r0 := AlchemyTable[independence]
   country_code      string
   independence_date date
   independence_from string
 
-cast(independence_date, string): string = Cast
-  independence_date: date = r0.independence_date
-  to:
-    string</pre>
+cast(independence_date, string): Cast(r0.independence_date, to=string)</pre>
 </div>
 
 </div>
@@ -3297,16 +3293,12 @@ julianday_expr</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>AlchemyTable[r0, name=independence]
+<pre>r0 := AlchemyTable[independence]
   country_code      string
   independence_date date
   independence_from string
 
-float32 = JulianDay
-  cast(independence_date, string): string = Cast
-    independence_date: date = r0.independence_date
-    to:
-      string</pre>
+JulianDay(Cast(r0.independence_date, to=string))</pre>
 </div>
 
 </div>
@@ -3499,7 +3491,7 @@ scalar</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>value: string = &#39;2010-03-14&#39;</pre>
+<pre>&#39;2010-03-14&#39;</pre>
 </div>
 
 </div>

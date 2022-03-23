@@ -3023,15 +3023,12 @@ DateColumn.last_date = last_date</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>UnboundTable[r0, name=people]
+<pre>r0 := UnboundTable[people]
   name          string
   country       string
   date_of_birth date
 
-date = LastDate
-  date_of_birth: date = r0.date_of_birth
-  where:
-    None</pre>
+LastDate(r0.date_of_birth)</pre>
 </div>
 
 </div>
@@ -3088,19 +3085,12 @@ date = LastDate
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>UnboundTable[r0, name=people]
+<pre>r0 := UnboundTable[people]
   name          string
   country       string
   date_of_birth date
 
-date = LastDate
-  date_of_birth: date = r0.date_of_birth
-  where:
-    boolean = Equals
-      left:
-        country: string = r0.country
-      right:
-        value: string = &#39;Indonesia&#39;</pre>
+LastDate(r0.date_of_birth, where=r0.country == &#39;Indonesia&#39;)</pre>
 </div>
 
 </div>
@@ -3334,7 +3324,7 @@ independence</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>AlchemyTable[r0, name=independence]
+<pre>AlchemyTable[independence]
   country_code      string
   independence_date date
   independence_from string</pre>
@@ -3408,15 +3398,12 @@ expr</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>AlchemyTable[r0, name=independence]
+<pre>r0 := AlchemyTable[independence]
   country_code      string
   independence_date date
   independence_from string
 
-date = LastDate
-  independence_date: date = r0.independence_date
-  where:
-    None</pre>
+LastDate(r0.independence_date)</pre>
 </div>
 
 </div>
@@ -3602,19 +3589,12 @@ expr</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>AlchemyTable[r0, name=independence]
+<pre>r0 := AlchemyTable[independence]
   country_code      string
   independence_date date
   independence_from string
 
-date = LastDate
-  independence_date: date = r0.independence_date
-  where:
-    boolean = Equals
-      left:
-        independence_from: string = r0.independence_from
-      right:
-        value: string = &#39;Spanish Empire&#39;</pre>
+LastDate(r0.independence_date, where=r0.independence_from == &#39;Spanish Empire&#39;)</pre>
 </div>
 
 </div>
