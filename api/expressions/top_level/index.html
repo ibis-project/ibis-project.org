@@ -2253,7 +2253,7 @@ scalar (if the inputs are Python literals)</p></td>
   <tbody>
       <tr>
         <td><code>value</code></td>
-        <td><code>str</code></td>
+        <td><code>None</code></td>
         <td><p>Date string</p></td>
         <td><em>required</em></td>
       </tr>
@@ -2269,7 +2269,7 @@ scalar (if the inputs are Python literals)</p></td>
   </thead>
   <tbody>
     <tr>
-      <td><code>ir.DateScalar</code></td>
+      <td><code>DateValue</code></td>
       <td><p>A date expression</p></td>
     </tr>
   </tbody>
@@ -3329,42 +3329,7 @@ of fixed types)</p></td>
 
     <div class="doc doc-contents first">
 
-      <p>Return a time literal if <code>value</code> is coercible to a time.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>value</code></td>
-        <td><code>str</code></td>
-        <td><p>Time string</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ir.TimeScalar</code></td>
-      <td><p>A time expression</p></td>
-    </tr>
-  </tbody>
-</table>
     </div>
 
   </div>
@@ -3376,7 +3341,7 @@ of fixed types)</p></td>
 
 
 <h2 id="ibis.expr.api.timestamp" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">timestamp</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">timezone</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">timestamp</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">timezone</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 <a href="#ibis.expr.api.timestamp" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
@@ -3398,7 +3363,7 @@ of fixed types)</p></td>
   <tbody>
       <tr>
         <td><code>value</code></td>
-        <td><code>str | numbers.Integral</code></td>
+        <td><code>None</code></td>
         <td><p>The value to use for constructing the timestamp</p></td>
         <td><em>required</em></td>
       </tr>
