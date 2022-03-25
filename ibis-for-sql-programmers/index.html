@@ -3407,10 +3407,10 @@ a <em>projection</em>.</p>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">)],</span> <span class="s1">&#39;my_data&#39;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">)],</span> <span class="s1">&#39;my_data&#39;</span><span class="p">)</span>
 <span class="n">t</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">t = ibis.table([('one', 'string'), ('two', 'double'), ('three', 'int32')], 'my_data')
+<div id="cell-2" class="clipboard-copy-txt">t = ibis.table([('one', 'string'), ('two', 'float'), ('three', 'int32')], 'my_data')
 t</div>
     
         </div>
@@ -4086,9 +4086,9 @@ FROM my_data
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">t2</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)],</span> <span class="s1">&#39;dim_table&#39;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">t2</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">)],</span> <span class="s1">&#39;dim_table&#39;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-13" class="clipboard-copy-txt">t2 = ibis.table([('key', 'string'), ('value', 'double')], 'dim_table')</div>
+<div id="cell-13" class="clipboard-copy-txt">t2 = ibis.table([('key', 'string'), ('value', 'float')], 'dim_table')</div>
     
         </div>
     </div>
@@ -5772,12 +5772,12 @@ expressions from one Ibis type to another. For example:</p>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">one</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s1">&#39;timestamp&#39;</span><span class="p">),</span>
-                <span class="n">four</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">three</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s1">&#39;double&#39;</span><span class="p">))</span>
+                <span class="n">four</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">three</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">expr</span><span class="p">))</span>
 </pre></div>
 <div id="cell-38" class="clipboard-copy-txt">expr = t.mutate(date=t.one.cast('timestamp'),
-                four=t.three.cast('double'))
+                four=t.three.cast('float'))
 
 print(ibis.impala.compile(expr))</div>
     
@@ -6283,13 +6283,13 @@ value (whether a Python string or number) to an Ibis expression using
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">t3</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;column1&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
-                 <span class="p">(</span><span class="s1">&#39;column2&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;column3&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)],</span>
+                 <span class="p">(</span><span class="s1">&#39;column2&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;column3&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">)],</span>
                 <span class="s1">&#39;data&#39;</span><span class="p">)</span>
 
 <span class="n">value</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-44" class="clipboard-copy-txt">t3 = ibis.table([('column1', 'string'),
-                 ('column2', 'string'), ('column3', 'double')],
+                 ('column2', 'string'), ('column3', 'float')],
                 'data')
 
 value = ibis.literal('foo')</div>
@@ -6661,18 +6661,18 @@ explicit join type in your query engine.</li>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">),</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">),</span>
                  <span class="p">(</span><span class="s1">&#39;key1&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;key2&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">)],</span>
                 <span class="s1">&#39;table1&#39;</span><span class="p">)</span>
 
-<span class="n">t2</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;value2&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;key3&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;key4&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">)],</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;value2&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;key3&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;key4&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">)],</span>
                 <span class="s1">&#39;table2&#39;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-49" class="clipboard-copy-txt">t1 = ibis.table([('value1', 'double'),
+<div id="cell-49" class="clipboard-copy-txt">t1 = ibis.table([('value1', 'float'),
                  ('key1', 'string'), ('key2', 'string')],
                 'table1')
 
-t2 = ibis.table([('value2', 'double'), ('key3', 'string'), ('key4', 'string')],
+t2 = ibis.table([('value2', 'float'), ('key3', 'string'), ('key4', 'string')],
                 'table2')</div>
     
         </div>
@@ -7075,7 +7075,7 @@ address any of the above concerns.</p>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">t3</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;value3&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">),</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">t3</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;value3&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">),</span>
                  <span class="p">(</span><span class="s1">&#39;key5&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">)],</span> <span class="s1">&#39;table3&#39;</span><span class="p">)</span>
 
 <span class="n">total</span> <span class="o">=</span> <span class="p">(</span><span class="n">t1</span><span class="o">.</span><span class="n">value1</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">value2</span> <span class="o">+</span> <span class="n">t3</span><span class="o">.</span><span class="n">value3</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -7085,7 +7085,7 @@ address any of the above concerns.</p>
         <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">total</span><span class="o">=</span><span class="n">total</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">expr</span><span class="p">))</span>
 </pre></div>
-<div id="cell-55" class="clipboard-copy-txt">t3 = ibis.table([('value3', 'double'),
+<div id="cell-55" class="clipboard-copy-txt">t3 = ibis.table([('value3', 'float'),
                  ('key5', 'string')], 'table3')
 
 total = (t1.value1 + t2.value2 + t3.value3).sum()
@@ -7264,22 +7264,22 @@ expressions have the same name. Consider this example:</p>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">t4</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;key1&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
                  <span class="p">(</span><span class="s1">&#39;key2&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
                  <span class="p">(</span><span class="s1">&#39;key3&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
-                 <span class="p">(</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)],</span> <span class="s1">&#39;table4&#39;</span><span class="p">)</span>
+                 <span class="p">(</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">)],</span> <span class="s1">&#39;table4&#39;</span><span class="p">)</span>
 
 <span class="n">t5</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;key1&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
                  <span class="p">(</span><span class="s1">&#39;key2&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
                  <span class="p">(</span><span class="s1">&#39;key3&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
-                 <span class="p">(</span><span class="s1">&#39;value2&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)],</span> <span class="s1">&#39;table5&#39;</span><span class="p">)</span>
+                 <span class="p">(</span><span class="s1">&#39;value2&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">)],</span> <span class="s1">&#39;table5&#39;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-57" class="clipboard-copy-txt">t4 = ibis.table([('key1', 'string'),
                  ('key2', 'string'),
                  ('key3', 'string'),
-                 ('value1', 'double')], 'table4')
+                 ('value1', 'float')], 'table4')
 
 t5 = ibis.table([('key1', 'string'),
                  ('key2', 'string'),
                  ('key3', 'string'),
-                 ('value2', 'double')], 'table5')</div>
+                 ('value2', 'float')], 'table5')</div>
     
         </div>
     </div>
@@ -7611,7 +7611,7 @@ purchases:</p>
 
 <span class="n">purchases</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span>
                         <span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span>
-                        <span class="p">(</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">),</span>
+                        <span class="p">(</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">),</span>
                         <span class="p">(</span><span class="s1">&#39;ts&#39;</span><span class="p">,</span> <span class="s1">&#39;timestamp&#39;</span><span class="p">)],</span> <span class="s1">&#39;purchases&#39;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-62" class="clipboard-copy-txt">events = ibis.table([('session_id', 'int64'), 
@@ -7621,7 +7621,7 @@ purchases:</p>
 
 purchases = ibis.table([('item_id', 'int64'),
                         ('user_id', 'int64'),
-                        ('price', 'double'),
+                        ('price', 'float'),
                         ('ts', 'timestamp')], 'purchases')</div>
     
         </div>
@@ -9071,7 +9071,7 @@ involving joining an aggregated table on itself after filtering:</p>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">purchases</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;region&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
                         <span class="p">(</span><span class="s1">&#39;kind&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">),</span>
                         <span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span>
-                        <span class="p">(</span><span class="s1">&#39;amount&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)],</span> <span class="s1">&#39;purchases&#39;</span><span class="p">)</span>
+                        <span class="p">(</span><span class="s1">&#39;amount&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">)],</span> <span class="s1">&#39;purchases&#39;</span><span class="p">)</span>
 
 <span class="n">metric</span> <span class="o">=</span> <span class="n">purchases</span><span class="o">.</span><span class="n">amount</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;total&#39;</span><span class="p">)</span>
 <span class="n">agged</span> <span class="o">=</span> <span class="p">(</span><span class="n">purchases</span><span class="o">.</span><span class="n">group_by</span><span class="p">([</span><span class="s1">&#39;region&#39;</span><span class="p">,</span> <span class="s1">&#39;kind&#39;</span><span class="p">])</span>
@@ -9086,7 +9086,7 @@ involving joining an aggregated table on itself after filtering:</p>
 <div id="cell-81" class="clipboard-copy-txt">purchases = ibis.table([('region', 'string'),
                         ('kind', 'string'),
                         ('user', 'int64'),
-                        ('amount', 'double')], 'purchases')
+                        ('amount', 'float')], 'purchases')
 
 metric = purchases.amount.sum().name('total')
 agged = (purchases.group_by(['region', 'kind'])

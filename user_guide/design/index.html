@@ -1772,7 +1772,7 @@ argument is <code>None</code> by default so that the expression will behave as t
 underlying database does.</p>
 <p>Similar objects are instantiated when you use ibis APIs:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ibis</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 <span class="n">log_1p</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">log</span><span class="p">()</span>  <span class="c1"># an Add and a Log are instantiated here</span>
 </code></pre></div>
 <h3 id="expressions-vs-operations-why-are-they-different">Expressions vs Operations: Why are they different?<a class="headerlink" href="#expressions-vs-operations-why-are-they-different" title="Anchor link to this section for reference">&para;</a></h3>
