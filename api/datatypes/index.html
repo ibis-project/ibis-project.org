@@ -2501,6 +2501,7 @@ value is <a class="autorefs autorefs-external" href="https://docs.python.org/3/l
 
 
 
+
 <h5 id="ibis.expr.datatypes.core-classes">Classes<a href="#ibis.expr.datatypes.core-classes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
 
   <div class="doc doc-object doc-class">
@@ -2518,15 +2519,7 @@ Any            (<a class="autorefs autorefs-internal" title="ibis.expr.datatypes
 
     <div class="doc doc-contents ">
 
-      <p>Values of any type.  Actual values must be of a concrete type.</p>
-<div class="admonition info">
-<p class="admonition-title">Instances of type <code>Any</code> should never be constructed directly.</p>
-<p>The use of <code>Any</code> is limited to <code>isinstance</code> and <code>issubclass</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">Any</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">Any</span><span class="p">)</span>
-</code></pre></div>
-</div>
+      <p>Values of any type.</p>
 
 
 
@@ -2564,53 +2557,6 @@ Array            (<a class="autorefs autorefs-internal" title="ibis.expr.datatyp
 
 
 
-<h7 id="ibis.expr.datatypes.core.Array-methods">Methods<a href="#ibis.expr.datatypes.core.Array-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h7>
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h8 id="ibis.expr.datatypes.core.Array.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_type</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-<a href="#ibis.expr.datatypes.core.Array.__init__" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
-
-    <div class="doc doc-contents ">
-
-      <p>Construct an Array data type.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>value_type</code></td>
-        <td><code>str | DataType</code></td>
-        <td><p>The array's element type</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>nullable</code></td>
-        <td><code>bool</code></td>
-        <td><p>Whether the array type can hold null values</p></td>
-        <td><code>True</code></td>
-      </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
 
 
 
@@ -2630,7 +2576,7 @@ Array            (<a class="autorefs autorefs-internal" title="ibis.expr.datatyp
 
 <h6 id="ibis.expr.datatypes.core.Binary" class="doc doc-heading">
         <code>
-Binary            (<a class="autorefs autorefs-internal" title="ibis.expr.datatypes.core.Variadic" href="#ibis.expr.datatypes.core.Variadic">Variadic</a>)
+Binary            (<span title="ibis.common.grounds.Singleton">Singleton</span>, <a class="autorefs autorefs-internal" title="ibis.expr.datatypes.core.Variadic" href="#ibis.expr.datatypes.core.Variadic">Variadic</a>)
         </code>
 
 
@@ -2723,7 +2669,7 @@ Bounds            (<a class="autorefs autorefs-external" title="tuple" href="htt
 
 <h6 id="ibis.expr.datatypes.core.DataType" class="doc doc-heading">
         <code>
-DataType            (<span title="ibis.util.Comparable">Comparable</span>)
+DataType            (<span title="ibis.common.grounds.Annotable">Annotable</span>, <span title="ibis.common.grounds.Comparable">Comparable</span>)
         </code>
 
 
@@ -2735,14 +2681,6 @@ DataType            (<span title="ibis.util.Comparable">Comparable</span>)
       <p>Base class for all data types.</p>
 <p><a class="autorefs autorefs-internal" href="#ibis.expr.datatypes.core.DataType"><code>DataType</code></a> instances are
 immutable.</p>
-<div class="admonition info">
-<p class="admonition-title">Instances of type <code>DataType</code> should never be constructed directly.</p>
-<p>The use of <code>DataType</code> is limited to <code>isinstance</code> and <code>issubclass</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">DataType</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">DataType</span><span class="p">)</span>
-</code></pre></div>
-</div>
 
 
 
@@ -2778,8 +2716,8 @@ immutable.</p>
 
 
 
-<h7 id="ibis.expr.datatypes.core.DataType-methods">Methods<a href="#ibis.expr.datatypes.core.DataType-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h7>
 
+<h7 id="ibis.expr.datatypes.core.DataType-methods">Methods<a href="#ibis.expr.datatypes.core.DataType-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h7>
 
   <div class="doc doc-object doc-method">
 
@@ -2967,6 +2905,44 @@ Decimal            (<a class="autorefs autorefs-internal" title="ibis.expr.datat
 
 
 
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h8 id="ibis.expr.datatypes.core.Decimal.precision" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">precision</span></code>
+
+
+<a href="#ibis.expr.datatypes.core.Decimal.precision" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
+
+    <div class="doc doc-contents ">
+
+      <p>The number of values after the decimal point.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h8 id="ibis.expr.datatypes.core.Decimal.scale" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">scale</span></code>
+
+
+<a href="#ibis.expr.datatypes.core.Decimal.scale" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
+
+    <div class="doc doc-contents ">
+
+      <p>The number of decimal places values of this type can hold.</p>
+    </div>
+
+  </div>
+
+
+
 
 
 
@@ -3009,59 +2985,7 @@ Enum            (<a class="autorefs autorefs-internal" title="ibis.expr.datatype
 
 
 
-<h7 id="ibis.expr.datatypes.core.Enum-methods">Methods<a href="#ibis.expr.datatypes.core.Enum-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h7>
 
-  <div class="doc doc-object doc-method">
-
-
-
-<h8 id="ibis.expr.datatypes.core.Enum.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rep_type</span><span class="p">,</span> <span class="n">value_type</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-<a href="#ibis.expr.datatypes.core.Enum.__init__" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
-
-    <div class="doc doc-contents ">
-
-      <p>Construct an Enum data type.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>rep_type</code></td>
-        <td><code>str | DataType</code></td>
-        <td><p>The type of the key of the enumeration.</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>value_type</code></td>
-        <td><code>str | DataType</code></td>
-        <td><p>The type of the elements of the enumeration.</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>nullable</code></td>
-        <td><code>bool</code></td>
-        <td><p>Whether the enum type can hold null values</p></td>
-        <td><code>True</code></td>
-      </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
 
 
 
@@ -3166,14 +3090,6 @@ Floating            (<a class="autorefs autorefs-internal" title="ibis.expr.data
     <div class="doc doc-contents ">
 
       <p>Floating point values.</p>
-<div class="admonition info">
-<p class="admonition-title">Instances of type <code>Floating</code> should never be constructed directly.</p>
-<p>The use of <code>Floating</code> is limited to <code>isinstance</code> and <code>issubclass</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">Floating</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">Floating</span><span class="p">)</span>
-</code></pre></div>
-</div>
 
 
 
@@ -3246,6 +3162,43 @@ GeoSpatial            (<a class="autorefs autorefs-internal" title="ibis.expr.da
 
 
 
+<h7 id="ibis.expr.datatypes.core.GeoSpatial-attributes">Attributes<a href="#ibis.expr.datatypes.core.GeoSpatial-attributes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h7>
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h8 id="ibis.expr.datatypes.core.GeoSpatial.geotype" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">geotype</span></code>
+
+
+<a href="#ibis.expr.datatypes.core.GeoSpatial.geotype" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
+
+    <div class="doc doc-contents ">
+
+      <p>The specific geospatial type</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h8 id="ibis.expr.datatypes.core.GeoSpatial.srid" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">srid</span></code>
+
+
+<a href="#ibis.expr.datatypes.core.GeoSpatial.srid" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
+
+    <div class="doc doc-contents ">
+
+      <p>The spatial reference identifier.</p>
+    </div>
+
+  </div>
 
 
 
@@ -3485,14 +3438,6 @@ Integer            (<a class="autorefs autorefs-internal" title="ibis.expr.datat
     <div class="doc doc-contents ">
 
       <p>Integer values.</p>
-<div class="admonition info">
-<p class="admonition-title">Instances of type <code>Integer</code> should never be constructed directly.</p>
-<p>The use of <code>Integer</code> is limited to <code>isinstance</code> and <code>issubclass</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">Integer</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">Integer</span><span class="p">)</span>
-</code></pre></div>
-</div>
 
 
 
@@ -3551,6 +3496,43 @@ Interval            (<a class="autorefs autorefs-internal" title="ibis.expr.data
 
   </div>
 
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h8 id="ibis.expr.datatypes.core.Interval.unit" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">unit</span></code>
+
+
+<a href="#ibis.expr.datatypes.core.Interval.unit" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
+
+    <div class="doc doc-contents ">
+
+      <p>The time unit of the interval.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h8 id="ibis.expr.datatypes.core.Interval.value_type" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">value_type</span></code>
+
+
+<a href="#ibis.expr.datatypes.core.Interval.value_type" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
+
+    <div class="doc doc-contents ">
+
+      <p>The underlying type of the stored values.</p>
+    </div>
+
+  </div>
 
 
 
@@ -3697,59 +3679,7 @@ Map            (<a class="autorefs autorefs-internal" title="ibis.expr.datatypes
 
 
 
-<h7 id="ibis.expr.datatypes.core.Map-methods">Methods<a href="#ibis.expr.datatypes.core.Map-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h7>
 
-  <div class="doc doc-object doc-method">
-
-
-
-<h8 id="ibis.expr.datatypes.core.Map.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_type</span><span class="p">,</span> <span class="n">value_type</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-<a href="#ibis.expr.datatypes.core.Map.__init__" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
-
-    <div class="doc doc-contents ">
-
-      <p>Construct a Map data type.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>key_type</code></td>
-        <td><code>str | DataType</code></td>
-        <td><p>The type of the key of the map.</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>value_type</code></td>
-        <td><code>str | DataType</code></td>
-        <td><p>The type of the values of the map.</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>nullable</code></td>
-        <td><code>bool</code></td>
-        <td><p>Whether the map type can hold null values</p></td>
-        <td><code>True</code></td>
-      </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
 
 
 
@@ -3844,7 +3774,7 @@ MultiPolygon            (<a class="autorefs autorefs-internal" title="ibis.expr.
 
 <h6 id="ibis.expr.datatypes.core.Null" class="doc doc-heading">
         <code>
-Null            (<a class="autorefs autorefs-internal" title="ibis.expr.datatypes.core.DataType" href="#ibis.expr.datatypes.core.DataType">DataType</a>)
+Null            (<span title="ibis.common.grounds.Singleton">Singleton</span>, <a class="autorefs autorefs-internal" title="ibis.expr.datatypes.core.DataType" href="#ibis.expr.datatypes.core.DataType">DataType</a>)
         </code>
 
 
@@ -3921,7 +3851,7 @@ represent holes in that shape (internal rings).</p>
 
 <h6 id="ibis.expr.datatypes.core.Primitive" class="doc doc-heading">
         <code>
-Primitive            (<a class="autorefs autorefs-internal" title="ibis.expr.datatypes.core.DataType" href="#ibis.expr.datatypes.core.DataType">DataType</a>)
+Primitive            (<span title="ibis.common.grounds.Singleton">Singleton</span>, <a class="autorefs autorefs-internal" title="ibis.expr.datatypes.core.DataType" href="#ibis.expr.datatypes.core.DataType">DataType</a>)
         </code>
 
 
@@ -3931,14 +3861,6 @@ Primitive            (<a class="autorefs autorefs-internal" title="ibis.expr.dat
     <div class="doc doc-contents ">
 
       <p>Values with known size.</p>
-<div class="admonition info">
-<p class="admonition-title">Instances of type <code>Primitive</code> should never be constructed directly.</p>
-<p>The use of <code>Primitive</code> is limited to <code>isinstance</code> and <code>issubclass</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">Primitive</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">Primitive</span><span class="p">)</span>
-</code></pre></div>
-</div>
 
 
 
@@ -3976,53 +3898,6 @@ Set            (<a class="autorefs autorefs-internal" title="ibis.expr.datatypes
 
 
 
-<h7 id="ibis.expr.datatypes.core.Set-methods">Methods<a href="#ibis.expr.datatypes.core.Set-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h7>
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h8 id="ibis.expr.datatypes.core.Set.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_type</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-<a href="#ibis.expr.datatypes.core.Set.__init__" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
-
-    <div class="doc doc-contents ">
-
-      <p>Construct a Set data type.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>value_type</code></td>
-        <td><code>DataType</code></td>
-        <td><p>The set's element type</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>nullable</code></td>
-        <td><code>bool</code></td>
-        <td><p>Whether the set type can hold null values</p></td>
-        <td><code>True</code></td>
-      </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
 
 
 
@@ -4052,14 +3927,6 @@ SignedInteger            (<a class="autorefs autorefs-internal" title="ibis.expr
     <div class="doc doc-contents ">
 
       <p>Signed integer values.</p>
-<div class="admonition info">
-<p class="admonition-title">Instances of type <code>SignedInteger</code> should never be constructed directly.</p>
-<p>The use of <code>SignedInteger</code> is limited to <code>isinstance</code> and <code>issubclass</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">SignedInteger</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">SignedInteger</span><span class="p">)</span>
-</code></pre></div>
-</div>
 
 
 
@@ -4114,7 +3981,7 @@ SignedInteger            (<a class="autorefs autorefs-internal" title="ibis.expr
 
 <h6 id="ibis.expr.datatypes.core.String" class="doc doc-heading">
         <code>
-String            (<a class="autorefs autorefs-internal" title="ibis.expr.datatypes.core.Variadic" href="#ibis.expr.datatypes.core.Variadic">Variadic</a>)
+String            (<span title="ibis.common.grounds.Singleton">Singleton</span>, <a class="autorefs autorefs-internal" title="ibis.expr.datatypes.core.Variadic" href="#ibis.expr.datatypes.core.Variadic">Variadic</a>)
         </code>
 
 
@@ -4160,6 +4027,7 @@ Struct            (<a class="autorefs autorefs-internal" title="ibis.expr.dataty
 
 <h7 id="ibis.expr.datatypes.core.Struct-attributes">Attributes<a href="#ibis.expr.datatypes.core.Struct-attributes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h7>
 
+
   <div class="doc doc-object doc-attribute">
 
 
@@ -4199,55 +4067,8 @@ Struct            (<a class="autorefs autorefs-internal" title="ibis.expr.dataty
 
 
 
+
 <h7 id="ibis.expr.datatypes.core.Struct-methods">Methods<a href="#ibis.expr.datatypes.core.Struct-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h7>
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h8 id="ibis.expr.datatypes.core.Struct.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">types</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-<a href="#ibis.expr.datatypes.core.Struct.__init__" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
-
-    <div class="doc doc-contents ">
-
-      <p>Construct a <code>Struct</code> data type instance.</p>
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>names</code></td>
-        <td><code>Iterable[str]</code></td>
-        <td><p>Field names</p></td>
-        <td><em>required</em></td>
-      </tr>
-      <tr>
-        <td><code>types</code></td>
-        <td><code>Iterable[str | DataType]</code></td>
-        <td><p>Types of the fields of the struct</p></td>
-        <td><em>required</em></td>
-      </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
-
-
 
   <div class="doc doc-object doc-method">
 
@@ -4423,6 +4244,24 @@ Timestamp            (<a class="autorefs autorefs-internal" title="ibis.expr.dat
 
 
 
+<h7 id="ibis.expr.datatypes.core.Timestamp-attributes">Attributes<a href="#ibis.expr.datatypes.core.Timestamp-attributes" class="headerlink" title="Anchor link to this section for reference">&para;</a></h7>
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h8 id="ibis.expr.datatypes.core.Timestamp.timezone" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">timezone</span></code>
+
+
+<a href="#ibis.expr.datatypes.core.Timestamp.timezone" class="headerlink" title="Anchor link to this section for reference">&para;</a></h8>
+
+    <div class="doc doc-contents ">
+
+      <p>The timezone of values of this type.</p>
+    </div>
+
+  </div>
 
 
 
@@ -4580,14 +4419,6 @@ UnsignedInteger            (<a class="autorefs autorefs-internal" title="ibis.ex
     <div class="doc doc-contents ">
 
       <p>Unsigned integer values.</p>
-<div class="admonition info">
-<p class="admonition-title">Instances of type <code>UnsignedInteger</code> should never be constructed directly.</p>
-<p>The use of <code>UnsignedInteger</code> is limited to <code>isinstance</code> and <code>issubclass</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">UnsignedInteger</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">UnsignedInteger</span><span class="p">)</span>
-</code></pre></div>
-</div>
 
 
 
@@ -4652,14 +4483,6 @@ Variadic            (<a class="autorefs autorefs-internal" title="ibis.expr.data
     <div class="doc doc-contents ">
 
       <p>Values with unknown size.</p>
-<div class="admonition info">
-<p class="admonition-title">Instances of type <code>Variadic</code> should never be constructed directly.</p>
-<p>The use of <code>Variadic</code> is limited to <code>isinstance</code> and <code>issubclass</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">Variadic</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">Variadic</span><span class="p">)</span>
-</code></pre></div>
-</div>
 
 
 
