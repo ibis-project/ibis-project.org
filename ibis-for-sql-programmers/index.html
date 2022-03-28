@@ -4991,7 +4991,7 @@ stats = (events.group_by(keys)
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>SELECT extract(`ts`, &#39;year&#39;) AS `year`, extract(`ts`, &#39;month&#39;) AS `month`,
-       count(DISTINCT `session_id`) AS `sessions`, count(*) AS `total`
+       count(*) AS `total`, count(DISTINCT `session_id`) AS `sessions`
 FROM web_events
 GROUP BY 1, 2
 </pre>
@@ -5186,10 +5186,9 @@ the SQL expression that is correct for your query engine.</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>SELECT `country`, avg(`age`) AS `avg_age`,
-       avg(CASE WHEN `gender` = &#39;F&#39; THEN `age` ELSE NULL END) AS `avg_female`,
+<pre>SELECT `country`, count(*) AS `num_persons`, avg(`age`) AS `avg_age`,
        avg(CASE WHEN `gender` = &#39;M&#39; THEN `age` ELSE NULL END) AS `avg_male`,
-       count(*) AS `num_persons`
+       avg(CASE WHEN `gender` = &#39;F&#39; THEN `age` ELSE NULL END) AS `avg_female`
 FROM population
 GROUP BY 1
 </pre>
