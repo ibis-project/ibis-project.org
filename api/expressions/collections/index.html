@@ -2302,8 +2302,7 @@ ArrayValue            (<a class="autorefs autorefs-internal" title="ibis.expr.ty
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">length</span><span class="p">()</span>
-<span class="n">int64</span> <span class="o">=</span> <span class="n">ArrayLength</span>
-  <span class="n">value</span><span class="p">:</span> <span class="n">array</span><span class="o">&lt;</span><span class="n">int8</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">ArrayLength</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -2531,26 +2530,11 @@ MapValue            (<a class="autorefs autorefs-internal" title="ibis.expr.type
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
-<span class="n">int8</span> <span class="o">=</span> <span class="n">MapValueOrDefaultForKey</span>
-  <span class="n">value</span><span class="p">:</span> <span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">int8</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
-  <span class="n">key</span><span class="p">:</span>
-    <span class="n">value</span><span class="p">:</span> <span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
-  <span class="n">default</span><span class="p">:</span>
-    <span class="n">value</span><span class="p">:</span> <span class="n">null</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">MapValueOrDefaultForKey</span><span class="p">(</span><span class="n">frozendict</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}),</span> <span class="n">key</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">int8</span> <span class="o">=</span> <span class="n">MapValueOrDefaultForKey</span>
-  <span class="n">value</span><span class="p">:</span> <span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">int8</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
-  <span class="n">key</span><span class="p">:</span>
-    <span class="n">value</span><span class="p">:</span> <span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span>
-  <span class="n">default</span><span class="p">:</span>
-    <span class="n">value</span><span class="p">:</span> <span class="n">int8</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">MapValueOrDefaultForKey</span><span class="p">(</span><span class="n">frozendict</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}),</span> <span class="n">key</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">)</span>
-<span class="n">int8</span> <span class="o">=</span> <span class="n">MapValueOrDefaultForKey</span>
-  <span class="n">value</span><span class="p">:</span> <span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">int8</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
-  <span class="n">key</span><span class="p">:</span>
-    <span class="n">value</span><span class="p">:</span> <span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;d&#39;</span>
-  <span class="n">default</span><span class="p">:</span>
-    <span class="n">value</span><span class="p">:</span> <span class="n">null</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">MapValueOrDefaultForKey</span><span class="p">(</span><span class="n">frozendict</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}),</span> <span class="n">key</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -2592,8 +2576,7 @@ MapValue            (<a class="autorefs autorefs-internal" title="ibis.expr.type
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-<span class="n">array</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">MapKeys</span>
-  <span class="n">value</span><span class="p">:</span> <span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">int8</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">MapKeys</span><span class="p">(</span><span class="n">frozendict</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}))</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -2635,8 +2618,7 @@ MapValue            (<a class="autorefs autorefs-internal" title="ibis.expr.type
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">length</span><span class="p">()</span>
-<span class="n">int64</span> <span class="o">=</span> <span class="n">MapLength</span>
-  <span class="n">value</span><span class="p">:</span> <span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">int8</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">MapLength</span><span class="p">(</span><span class="n">frozendict</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}))</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -2678,8 +2660,7 @@ MapValue            (<a class="autorefs autorefs-internal" title="ibis.expr.type
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-<span class="n">array</span><span class="o">&lt;</span><span class="n">int8</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">MapValues</span>
-  <span class="n">value</span><span class="p">:</span> <span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">int8</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">MapKeys</span><span class="p">(</span><span class="n">frozendict</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}))</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -3044,10 +3025,7 @@ StructValue            (<a class="autorefs autorefs-internal" title="ibis.expr.t
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">struct</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">fruit</span><span class="o">=</span><span class="s2">&quot;pear&quot;</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;fruit&#39;</span><span class="p">]</span>
-<span class="n">fruit</span><span class="p">:</span> <span class="n">string</span> <span class="o">=</span> <span class="n">StructField</span>
-  <span class="n">value</span><span class="p">:</span> <span class="n">struct</span><span class="o">&lt;</span><span class="n">fruit</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">weight</span><span class="p">:</span> <span class="n">int8</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="s1">&#39;fruit&#39;</span><span class="p">,</span> <span class="s1">&#39;pear&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;weight&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)])</span>
-  <span class="n">field</span><span class="p">:</span>
-    <span class="n">fruit</span>
+<span class="n">fruit</span><span class="p">:</span> <span class="n">StructField</span><span class="p">(</span><span class="n">frozendict</span><span class="p">({</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;pear&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}),</span> <span class="n">field</span><span class="o">=</span><span class="s1">&#39;fruit&#39;</span><span class="p">)</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>

@@ -2438,8 +2438,8 @@ scalar (if the inputs are Python literals)</p></td>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s2">&quot;is_person&quot;</span><span class="p">,</span> <span class="s2">&quot;boolean&quot;</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">is_person</span><span class="o">.</span><span class="n">ifelse</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">,</span> <span class="s2">&quot;no&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">impala</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">expr</span><span class="p">))</span>
-<span class="n">SELECT</span> <span class="n">CASE</span> <span class="n">WHEN</span> <span class="n">t0</span><span class="o">.</span><span class="n">is_person</span> <span class="n">THEN</span> <span class="p">:</span><span class="n">param_1</span> <span class="n">ELSE</span> <span class="p">:</span><span class="n">param_2</span> <span class="n">END</span> <span class="n">AS</span> <span class="n">tmp</span>
-<span class="n">FROM</span> <span class="n">t</span> <span class="n">AS</span> <span class="n">t0</span>
+<span class="n">SELECT</span> <span class="n">CASE</span> <span class="n">WHEN</span> <span class="err">`</span><span class="n">is_person</span><span class="err">`</span> <span class="n">THEN</span> <span class="s1">&#39;yes&#39;</span> <span class="n">ELSE</span> <span class="s1">&#39;no&#39;</span> <span class="n">END</span> <span class="n">AS</span> <span class="err">`</span><span class="n">tmp</span><span class="err">`</span>
+<span class="n">FROM</span> <span class="n">t</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -2702,12 +2702,12 @@ the type of <code>value</code>.</p></td>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span><span class="p">()</span>
-<span class="n">int8</span>
+<span class="n">Int8</span><span class="p">(</span><span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
     <p>Construct a <code>float64</code> literal from an <code>int</code></p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;double&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">type</span><span class="p">()</span>
-<span class="n">float64</span>
+<span class="n">Float64</span><span class="p">(</span><span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
     <p>Ibis checks for invalid types</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>

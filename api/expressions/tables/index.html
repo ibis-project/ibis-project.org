@@ -2631,48 +2631,20 @@ columns.</p></td>
 <span class="o">...</span> <span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">joined1</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">cross_join</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">joined1</span>
-<span class="n">ref_0</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">a</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">a</span> <span class="p">:</span> <span class="n">int64</span>
-<span class="n">ref_1</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">b</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">b</span> <span class="p">:</span> <span class="n">int64</span>
-<span class="n">ref_2</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">c</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">c</span> <span class="p">:</span> <span class="n">int64</span>
-<span class="n">ref_3</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">d</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">d</span> <span class="p">:</span> <span class="n">int64</span>
-<span class="n">ref_4</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">e</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">e</span> <span class="p">:</span> <span class="n">int64</span>
-<span class="n">CrossJoin</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">left</span><span class="p">:</span>
-    <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
-  <span class="n">right</span><span class="p">:</span>
-    <span class="n">CrossJoin</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-      <span class="n">left</span><span class="p">:</span>
-        <span class="n">CrossJoin</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-          <span class="n">left</span><span class="p">:</span>
-            <span class="n">CrossJoin</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-              <span class="n">left</span><span class="p">:</span>
-                <span class="n">Table</span><span class="p">:</span> <span class="n">ref_1</span>
-              <span class="n">right</span><span class="p">:</span>
-                <span class="n">Table</span><span class="p">:</span> <span class="n">ref_2</span>
-          <span class="n">right</span><span class="p">:</span>
-            <span class="n">Table</span><span class="p">:</span> <span class="n">ref_3</span>
-      <span class="n">right</span><span class="p">:</span>
-        <span class="n">Table</span><span class="p">:</span> <span class="n">ref_4</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">e</span><span class="p">]</span>
+  <span class="n">e</span> <span class="n">int64</span>
+<span class="n">r1</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">d</span><span class="p">]</span>
+  <span class="n">d</span> <span class="n">int64</span>
+<span class="n">r2</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+  <span class="n">c</span> <span class="n">int64</span>
+<span class="n">r3</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+  <span class="n">b</span> <span class="n">int64</span>
+<span class="n">r4</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+  <span class="n">a</span> <span class="n">int64</span>
+<span class="n">r5</span> <span class="o">:=</span> <span class="n">CrossJoin</span><span class="p">[</span><span class="n">r3</span><span class="p">,</span> <span class="n">r2</span><span class="p">]</span>
+<span class="n">r6</span> <span class="o">:=</span> <span class="n">CrossJoin</span><span class="p">[</span><span class="n">r5</span><span class="p">,</span> <span class="n">r1</span><span class="p">]</span>
+<span class="n">r7</span> <span class="o">:=</span> <span class="n">CrossJoin</span><span class="p">[</span><span class="n">r6</span><span class="p">,</span> <span class="n">r0</span><span class="p">]</span>
+<span class="n">CrossJoin</span><span class="p">[</span><span class="n">r4</span><span class="p">,</span> <span class="n">r7</span><span class="p">]</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -2933,9 +2905,19 @@ as a scalar, all columns are filled with that value.</p></td>
 </table>
 <p><strong>Examples:</strong></p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis.expr.datatypes</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">([(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">)])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>  <span class="c1"># Replace nulls in all columns with 0.0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">fillna</span><span class="p">({</span><span class="n">c</span><span class="p">:</span> <span class="mf">0.0</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">schema</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="n">dt</span><span class="o">.</span><span class="n">float64</span><span class="p">})</span>  <span class="c1"># Replace all na values in all columns of a given type with the same value  # noqa: E501</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">fillna</span><span class="p">({</span><span class="n">c</span><span class="p">:</span> <span class="mf">0.0</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">schema</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="n">dt</span><span class="o">.</span><span class="n">float64</span><span class="p">})</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">unbound_table_</span><span class="o">...</span><span class="p">]</span>
+  <span class="n">a</span> <span class="n">int64</span>
+  <span class="n">b</span> <span class="n">string</span>
+<span class="n">r1</span> <span class="o">:=</span> <span class="n">FillNa</span><span class="p">[</span><span class="n">r0</span><span class="p">]</span>
+  <span class="n">replacements</span><span class="p">:</span>
+    <span class="mf">0.0</span>
+<span class="n">FillNa</span><span class="p">[</span><span class="n">r1</span><span class="p">]</span>
+  <span class="n">replacements</span><span class="p">:</span>
+    <span class="n">frozendict</span><span class="p">({})</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -3578,27 +3560,14 @@ columns.</p></td>
 <span class="o">...</span> <span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">qux</span><span class="o">=</span><span class="n">table</span><span class="o">.</span><span class="n">foo</span> <span class="o">+</span> <span class="n">table</span><span class="o">.</span><span class="n">bar</span><span class="p">,</span> <span class="n">baz</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span>
-<span class="n">ref_0</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">foo</span> <span class="p">:</span> <span class="n">float64</span>
-    <span class="n">bar</span> <span class="p">:</span> <span class="n">float64</span>
-
-<span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">table</span><span class="p">:</span>
-    <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+  <span class="n">foo</span> <span class="n">float64</span>
+  <span class="n">bar</span> <span class="n">float64</span>
+<span class="n">Selection</span><span class="p">[</span><span class="n">r0</span><span class="p">]</span>
   <span class="n">selections</span><span class="p">:</span>
-    <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
-    <span class="n">baz</span> <span class="o">=</span> <span class="n">Literal</span><span class="p">[</span><span class="n">int8</span><span class="p">]</span>
-      <span class="mi">5</span>
-    <span class="n">qux</span> <span class="o">=</span> <span class="n">Add</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span>
-      <span class="n">left</span><span class="p">:</span>
-        <span class="n">foo</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;foo&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
-      <span class="n">right</span><span class="p">:</span>
-        <span class="n">bar</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;bar&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
+    <span class="n">r0</span>
+    <span class="n">baz</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="n">qux</span><span class="p">:</span> <span class="n">r0</span><span class="o">.</span><span class="n">foo</span> <span class="o">+</span> <span class="n">r0</span><span class="o">.</span><span class="n">bar</span>
 </code></pre></div>
     <p>Use the <a class="autorefs autorefs-internal" href="../generic/#ibis.expr.types.generic.ValueExpr.name"><code>ValueExpr.name</code></a>
 method to name the new columns.</p>
@@ -3733,26 +3702,13 @@ strings.</p></td>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">projection</span><span class="p">([</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;b_plus_1&#39;</span><span class="p">)])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span>
-<span class="n">ref_0</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">a</span> <span class="p">:</span> <span class="n">int64</span>
-    <span class="n">b</span> <span class="p">:</span> <span class="n">float64</span>
-
-<span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">table</span><span class="p">:</span>
-    <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+  <span class="n">a</span> <span class="n">int64</span>
+  <span class="n">b</span> <span class="n">float64</span>
+<span class="n">Selection</span><span class="p">[</span><span class="n">r0</span><span class="p">]</span>
   <span class="n">selections</span><span class="p">:</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">int64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;a&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-      <span class="n">ref_0</span>
-    <span class="n">b_plus_1</span> <span class="o">=</span> <span class="n">Add</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span>
-      <span class="n">left</span><span class="p">:</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;b&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
-      <span class="n">right</span><span class="p">:</span>
-        <span class="n">Literal</span><span class="p">[</span><span class="n">int8</span><span class="p">]</span>
-          <span class="mi">1</span>
+    <span class="n">a</span><span class="p">:</span>        <span class="n">r0</span><span class="o">.</span><span class="n">a</span>
+    <span class="n">b_plus_1</span><span class="p">:</span> <span class="n">r0</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">proj2</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;b_plus_1&#39;</span><span class="p">)]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">proj2</span><span class="p">)</span>
 <span class="kc">True</span>
@@ -3760,31 +3716,13 @@ strings.</p></td>
     <p>Aggregate projection</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">agg_proj</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;sum_a&#39;</span><span class="p">),</span> <span class="n">t</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;mean_b&#39;</span><span class="p">)]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">agg_proj</span>
-<span class="n">ref_0</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">a</span> <span class="p">:</span> <span class="n">int64</span>
-    <span class="n">b</span> <span class="p">:</span> <span class="n">float64</span>
-
-<span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">table</span><span class="p">:</span>
-    <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+  <span class="n">a</span> <span class="n">int64</span>
+  <span class="n">b</span> <span class="n">float64</span>
+<span class="n">Selection</span><span class="p">[</span><span class="n">r0</span><span class="p">]</span>
   <span class="n">selections</span><span class="p">:</span>
-    <span class="n">sum_a</span> <span class="o">=</span> <span class="n">WindowOp</span><span class="p">[</span><span class="n">int64</span><span class="o">*</span><span class="p">]</span>
-      <span class="n">sum_a</span> <span class="o">=</span> <span class="n">Sum</span><span class="p">[</span><span class="n">int64</span><span class="p">]</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">int64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;a&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
-        <span class="n">where</span><span class="p">:</span>
-          <span class="kc">None</span>
-      <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
-    <span class="n">mean_b</span> <span class="o">=</span> <span class="n">WindowOp</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span>
-      <span class="n">mean_b</span> <span class="o">=</span> <span class="n">Mean</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;b&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
-        <span class="n">where</span><span class="p">:</span>
-          <span class="kc">None</span>
-      <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
+    <span class="n">sum_a</span><span class="p">:</span>  <span class="n">WindowOp</span><span class="p">(</span><span class="n">Sum</span><span class="p">(</span><span class="n">r0</span><span class="o">.</span><span class="n">a</span><span class="p">),</span> <span class="n">window</span><span class="o">=</span><span class="n">Window</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;rows&#39;</span><span class="p">))</span>
+    <span class="n">mean_b</span><span class="p">:</span> <span class="n">WindowOp</span><span class="p">(</span><span class="n">Mean</span><span class="p">(</span><span class="n">r0</span><span class="o">.</span><span class="n">b</span><span class="p">),</span> <span class="n">window</span><span class="o">=</span><span class="n">Window</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;rows&#39;</span><span class="p">))</span>
 </code></pre></div>
     <p>Note the <code>Window</code> objects here.</p>
 <p>Their existence means that the result of the aggregation will be
@@ -3792,6 +3730,12 @@ broadcast across the number of rows in the input column.
 The purpose of this expression rewrite is to make it easy to write
 column/scalar-aggregate operations like</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[(</span><span class="n">t</span><span class="o">.</span><span class="n">a</span> <span class="o">-</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;demeaned_a&#39;</span><span class="p">)]</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+  <span class="n">a</span> <span class="n">int64</span>
+  <span class="n">b</span> <span class="n">float64</span>
+<span class="n">Selection</span><span class="p">[</span><span class="n">r0</span><span class="p">]</span>
+  <span class="n">selections</span><span class="p">:</span>
+    <span class="n">demeaned_a</span><span class="p">:</span> <span class="n">r0</span><span class="o">.</span><span class="n">a</span> <span class="o">-</span> <span class="n">WindowOp</span><span class="p">(</span><span class="n">Mean</span><span class="p">(</span><span class="n">r0</span><span class="o">.</span><span class="n">a</span><span class="p">),</span> <span class="n">window</span><span class="o">=</span><span class="n">Window</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;rows&#39;</span><span class="p">))</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -3994,26 +3938,13 @@ strings.</p></td>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">projection</span><span class="p">([</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;b_plus_1&#39;</span><span class="p">)])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span>
-<span class="n">ref_0</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">a</span> <span class="p">:</span> <span class="n">int64</span>
-    <span class="n">b</span> <span class="p">:</span> <span class="n">float64</span>
-
-<span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">table</span><span class="p">:</span>
-    <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+  <span class="n">a</span> <span class="n">int64</span>
+  <span class="n">b</span> <span class="n">float64</span>
+<span class="n">Selection</span><span class="p">[</span><span class="n">r0</span><span class="p">]</span>
   <span class="n">selections</span><span class="p">:</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">int64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;a&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-      <span class="n">ref_0</span>
-    <span class="n">b_plus_1</span> <span class="o">=</span> <span class="n">Add</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span>
-      <span class="n">left</span><span class="p">:</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;b&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
-      <span class="n">right</span><span class="p">:</span>
-        <span class="n">Literal</span><span class="p">[</span><span class="n">int8</span><span class="p">]</span>
-          <span class="mi">1</span>
+    <span class="n">a</span><span class="p">:</span>        <span class="n">r0</span><span class="o">.</span><span class="n">a</span>
+    <span class="n">b_plus_1</span><span class="p">:</span> <span class="n">r0</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">proj2</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;b_plus_1&#39;</span><span class="p">)]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">proj</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">proj2</span><span class="p">)</span>
 <span class="kc">True</span>
@@ -4021,31 +3952,13 @@ strings.</p></td>
     <p>Aggregate projection</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">agg_proj</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;sum_a&#39;</span><span class="p">),</span> <span class="n">t</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;mean_b&#39;</span><span class="p">)]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">agg_proj</span>
-<span class="n">ref_0</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">a</span> <span class="p">:</span> <span class="n">int64</span>
-    <span class="n">b</span> <span class="p">:</span> <span class="n">float64</span>
-
-<span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">table</span><span class="p">:</span>
-    <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+  <span class="n">a</span> <span class="n">int64</span>
+  <span class="n">b</span> <span class="n">float64</span>
+<span class="n">Selection</span><span class="p">[</span><span class="n">r0</span><span class="p">]</span>
   <span class="n">selections</span><span class="p">:</span>
-    <span class="n">sum_a</span> <span class="o">=</span> <span class="n">WindowOp</span><span class="p">[</span><span class="n">int64</span><span class="o">*</span><span class="p">]</span>
-      <span class="n">sum_a</span> <span class="o">=</span> <span class="n">Sum</span><span class="p">[</span><span class="n">int64</span><span class="p">]</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">int64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;a&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
-        <span class="n">where</span><span class="p">:</span>
-          <span class="kc">None</span>
-      <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
-    <span class="n">mean_b</span> <span class="o">=</span> <span class="n">WindowOp</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span>
-      <span class="n">mean_b</span> <span class="o">=</span> <span class="n">Mean</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;b&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
-        <span class="n">where</span><span class="p">:</span>
-          <span class="kc">None</span>
-      <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
+    <span class="n">sum_a</span><span class="p">:</span>  <span class="n">WindowOp</span><span class="p">(</span><span class="n">Sum</span><span class="p">(</span><span class="n">r0</span><span class="o">.</span><span class="n">a</span><span class="p">),</span> <span class="n">window</span><span class="o">=</span><span class="n">Window</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;rows&#39;</span><span class="p">))</span>
+    <span class="n">mean_b</span><span class="p">:</span> <span class="n">WindowOp</span><span class="p">(</span><span class="n">Mean</span><span class="p">(</span><span class="n">r0</span><span class="o">.</span><span class="n">b</span><span class="p">),</span> <span class="n">window</span><span class="o">=</span><span class="n">Window</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;rows&#39;</span><span class="p">))</span>
 </code></pre></div>
     <p>Note the <code>Window</code> objects here.</p>
 <p>Their existence means that the result of the aggregation will be
@@ -4053,6 +3966,12 @@ broadcast across the number of rows in the input column.
 The purpose of this expression rewrite is to make it easy to write
 column/scalar-aggregate operations like</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[(</span><span class="n">t</span><span class="o">.</span><span class="n">a</span> <span class="o">-</span> <span class="n">t</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;demeaned_a&#39;</span><span class="p">)]</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+  <span class="n">a</span> <span class="n">int64</span>
+  <span class="n">b</span> <span class="n">float64</span>
+<span class="n">Selection</span><span class="p">[</span><span class="n">r0</span><span class="p">]</span>
+  <span class="n">selections</span><span class="p">:</span>
+    <span class="n">demeaned_a</span><span class="p">:</span> <span class="n">r0</span><span class="o">.</span><span class="n">a</span> <span class="o">-</span> <span class="n">WindowOp</span><span class="p">(</span><span class="n">Mean</span><span class="p">(</span><span class="n">r0</span><span class="o">.</span><span class="n">a</span><span class="p">),</span> <span class="n">window</span><span class="o">=</span><span class="n">Window</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;rows&#39;</span><span class="p">))</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -4568,47 +4487,24 @@ GroupedTableExpr        </code>
 <span class="o">...</span>     <span class="p">(</span><span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="s1">&#39;double&#39;</span><span class="p">),</span>
 <span class="o">...</span> <span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">foo</span> <span class="p">:</span> <span class="n">string</span>
-    <span class="n">bar</span> <span class="p">:</span> <span class="n">string</span>
-    <span class="n">baz</span> <span class="p">:</span> <span class="n">float64</span>
+<span class="n">UnboundTable</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+  <span class="n">foo</span> <span class="n">string</span>
+  <span class="n">bar</span> <span class="n">string</span>
+  <span class="n">baz</span> <span class="n">float64</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
 <span class="o">...</span>          <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">))</span>
 <span class="o">...</span>          <span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">qux</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">baz</span><span class="o">.</span><span class="n">lag</span><span class="p">(),</span>
 <span class="o">...</span>                  <span class="n">qux2</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">baz</span><span class="o">.</span><span class="n">lead</span><span class="p">()))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
-<span class="n">ref_0</span>
-<span class="n">UnboundTable</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">t</span>
-  <span class="n">schema</span><span class="p">:</span>
-    <span class="n">foo</span> <span class="p">:</span> <span class="n">string</span>
-    <span class="n">bar</span> <span class="p">:</span> <span class="n">string</span>
-    <span class="n">baz</span> <span class="p">:</span> <span class="n">float64</span>
-<span class="n">Selection</span><span class="p">[</span><span class="n">table</span><span class="p">]</span>
-  <span class="n">table</span><span class="p">:</span>
-    <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">UnboundTable</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+  <span class="n">foo</span> <span class="n">string</span>
+  <span class="n">bar</span> <span class="n">string</span>
+  <span class="n">baz</span> <span class="n">float64</span>
+<span class="n">Selection</span><span class="p">[</span><span class="n">r0</span><span class="p">]</span>
   <span class="n">selections</span><span class="p">:</span>
-    <span class="n">Table</span><span class="p">:</span> <span class="n">ref_0</span>
-    <span class="n">qux</span> <span class="o">=</span> <span class="n">WindowOp</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span>
-      <span class="n">qux</span> <span class="o">=</span> <span class="n">Lag</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span>
-        <span class="n">baz</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;baz&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
-        <span class="n">offset</span><span class="p">:</span>
-          <span class="kc">None</span>
-        <span class="n">default</span><span class="p">:</span>
-          <span class="kc">None</span>
-      <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
-    <span class="n">qux2</span> <span class="o">=</span> <span class="n">WindowOp</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span>
-      <span class="n">qux2</span> <span class="o">=</span> <span class="n">Lead</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span>
-        <span class="n">baz</span> <span class="o">=</span> <span class="n">Column</span><span class="p">[</span><span class="n">float64</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;baz&#39;</span> <span class="kn">from</span> <span class="nn">table</span>
-          <span class="n">ref_0</span>
-        <span class="n">offset</span><span class="p">:</span>
-          <span class="kc">None</span>
-        <span class="n">default</span><span class="p">:</span>
-          <span class="kc">None</span>
-      <span class="o">&lt;</span><span class="n">ibis</span><span class="o">.</span><span class="n">expr</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
+    <span class="n">r0</span>
+    <span class="n">qux</span><span class="p">:</span>  <span class="n">WindowOp</span><span class="p">(</span><span class="n">Lag</span><span class="p">(</span><span class="n">r0</span><span class="o">.</span><span class="n">baz</span><span class="p">),</span> <span class="n">window</span><span class="o">=</span><span class="n">Window</span><span class="p">(</span><span class="n">group_by</span><span class="o">=</span><span class="p">[</span><span class="n">r0</span><span class="o">.</span><span class="n">foo</span><span class="p">],</span> <span class="n">order_by</span><span class="o">=</span><span class="p">[</span><span class="n">desc</span><span class="o">|</span><span class="n">r0</span><span class="o">.</span><span class="n">bar</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;rows&#39;</span><span class="p">))</span>
+    <span class="n">qux2</span><span class="p">:</span> <span class="n">WindowOp</span><span class="p">(</span><span class="n">Lead</span><span class="p">(</span><span class="n">r0</span><span class="o">.</span><span class="n">baz</span><span class="p">),</span> <span class="n">window</span><span class="o">=</span><span class="n">Window</span><span class="p">(</span><span class="n">group_by</span><span class="o">=</span><span class="p">[</span><span class="n">r0</span><span class="o">.</span><span class="n">foo</span><span class="p">],</span> <span class="n">order_by</span><span class="o">=</span><span class="p">[</span><span class="n">desc</span><span class="o">|</span><span class="n">r0</span><span class="o">.</span><span class="n">bar</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;rows&#39;</span><span class="p">))</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
